@@ -1,0 +1,116 @@
+MapFormat: 11
+
+RequiresMod: dr
+
+Title: Shellmap 1
+
+Author: Dark Reign
+
+Tileset: BARREN
+
+MapSize: 48,30
+
+Bounds: 1,1,46,28
+
+Visibility: Lobby, Shellmap
+
+Categories: Map
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: fguard
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: fguard
+	PlayerReference@Imperium:
+		Name: Imperium
+		Faction: imperium
+		Color: FE1100
+		Allies: Imperium
+		Enemies: FreedomGuard
+	PlayerReference@Freedom Guard:
+		Name: Freedom Guard
+		Faction: fguard
+		Color: 5D98F7
+		Allies: FreedomGuard
+		Enemies: Imperium
+
+Actors:
+	Actor10: aotre000.spr
+		Owner: Neutral
+		Location: 16,22
+	Actor11: aotre002.spr
+		Owner: Neutral
+		Location: 12,20
+	Actor12: aotre001.spr
+		Owner: Neutral
+		Location: 8,23
+	Actor14: aorub000.spr
+		Owner: Neutral
+		Location: 19,15
+	Actor16: aoroc002.spr
+		Owner: Neutral
+		Location: 18,18
+	Actor18: aoroc004.spr
+		Owner: Neutral
+		Location: 15,24
+	Actor19: aopln002.spr
+		Owner: Neutral
+		Location: 34,9
+	Actor20: aopln001.spr
+		Owner: Neutral
+		Location: 33,8
+	Actor21: aopln000.spr
+		Owner: Neutral
+		Location: 34,11
+	Actor22: aopln000.spr
+		Owner: Neutral
+		Location: 34,7
+	Actor23: aoroc005.spr
+		Owner: Neutral
+		Location: 38,18
+	Actor24: aoroc001.spr
+		Owner: Neutral
+		Location: 37,16
+	Actor25: aorub002.spr
+		Owner: Neutral
+		Location: 36,14
+	Actor26: aorub001.spr
+		Owner: Neutral
+		Location: 35,16
+	Actor47: aotre000.spr
+		Owner: Neutral
+		Location: 9,7
+	Actor50: aotre001.spr
+		Owner: Neutral
+		Location: 10,8
+	Actor51: aotre005.spr
+		Owner: Neutral
+		Location: 9,9
+	Actor56: aotre002.spr
+		Owner: Neutral
+		Location: 7,10
+	Actor57: aorub002.spr
+		Owner: Neutral
+		Location: 18,8
+	Actor58: aopln001.spr
+		Owner: Neutral
+		Location: 17,7
+	Actor60: aotre000.spr
+		Owner: Neutral
+		Location: 39,20
+	Actor61: aotre003.spr
+		Owner: Neutral
+		Location: 40,21
+	Actor62: aotre005.spr
+		Owner: Neutral
+		Location: 39,22
+	Actor63: aotre002.spr
+		Owner: Neutral
+		Location: 40,23
+
+Rules: rules.yaml

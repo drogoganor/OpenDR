@@ -12,13 +12,33 @@ Terrain:
 		TargetTypes: Ground
 		Color: D09764
 		RestrictPlayerColor: true
-	TerrainType@Muddy:
-		Type: Muddy
+	TerrainType@Normal2:
+		Type: Normal2
+		TargetTypes: Ground
+		Color: D09764
+		RestrictPlayerColor: true
+	TerrainType@Normal3:
+		Type: Normal3
+		TargetTypes: Ground
+		Color: D09764
+		RestrictPlayerColor: true
+	TerrainType@Muddy1:
+		Type: Muddy1
 		TargetTypes: Ground
 		Color: 906439
 		RestrictPlayerColor: true
-	TerrainType@Rough:
-		Type: Rough
+	TerrainType@Muddy2:
+		Type: Muddy2
+		TargetTypes: Ground
+		Color: 906439
+		RestrictPlayerColor: true
+	TerrainType@Rough1:
+		Type: Rough1
+		TargetTypes: Ground
+		Color: 889073
+		RestrictPlayerColor: true
+	TerrainType@Rough2:
+		Type: Rough2
 		TargetTypes: Ground
 		Color: 889073
 		RestrictPlayerColor: true
@@ -32,23 +52,43 @@ Terrain:
 		TargetTypes: Ground
 		Color: 814F15
 		RestrictPlayerColor: true
-	TerrainType@HillSlope:
-		Type: HillSlope
+	TerrainType@HillSlope1:
+		Type: HillSlope1
 		TargetTypes: Ground
 		Color: A58881
 		RestrictPlayerColor: true
-	TerrainType@Cliff:
-		Type: Cliff
+	TerrainType@HillSlope2:
+		Type: HillSlope2
+		TargetTypes: Ground
+		Color: A58881
+		RestrictPlayerColor: true
+	TerrainType@Cliff1:
+		Type: Cliff1
 		TargetTypes: Ground
 		Color: 642B00
 		RestrictPlayerColor: true
-	TerrainType@Gems:
-		Type: Gems
+	TerrainType@Cliff2:
+		Type: Cliff2
 		TargetTypes: Ground
-		Color: 8470FF
+		Color: 642B00
+		RestrictPlayerColor: true
+	TerrainType@Cliff3:
+		Type: Cliff3
+		TargetTypes: Ground
+		Color: 642B00
+		RestrictPlayerColor: true
+	TerrainType@Cliff4:
+		Type: Cliff4
+		TargetTypes: Ground
+		Color: 642B00
 		RestrictPlayerColor: true
 	TerrainType@Ore:
 		Type: Ore
+		TargetTypes: Ground
+		Color: 8470FF
+		RestrictPlayerColor: true
+	TerrainType@Gems:
+		Type: Gems
 		TargetTypes: Ground
 		Color: 948060
 		RestrictPlayerColor: true
@@ -61,9 +101,10 @@ Terrain:
 Templates:
 	Template@1:
 		Id: 1
-		Images: auralien/01.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 8, 9, 10, 11, 12, 13, 14, 15
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -76,99 +117,106 @@ Templates:
 			7: Clear
 	Template@2:
 		Id: 2
-		Images: auralien/02.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 16, 17, 18, 19, 20, 21, 22, 23
 		Categories: Terrain
 		Tiles:
-			0: Clear
-			1: Clear
-			2: Clear
-			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
+			0: Normal2
+			1: Normal2
+			2: Normal2
+			3: Normal2
+			4: Normal2
+			5: Normal2
+			6: Normal2
+			7: Normal2
 	Template@3:
 		Id: 3
-		Images: auralien/03.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 24, 25, 26, 27, 28, 29, 30, 31
 		Categories: Terrain
 		Tiles:
-			0: Clear
-			1: Clear
-			2: Clear
-			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
+			0: Normal3
+			1: Normal3
+			2: Normal3
+			3: Normal3
+			4: Normal3
+			5: Normal3
+			6: Normal3
+			7: Normal3
 	Template@4:
 		Id: 4
-		Images: auralien/04.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 32, 33, 34, 35, 36, 37, 38, 39
 		Categories: Terrain
 		Tiles:
-			0: Muddy
-			1: Muddy
-			2: Muddy
-			3: Muddy
-			4: Muddy
-			5: Muddy
-			6: Muddy
-			7: Muddy
+			0: Muddy1
+			1: Muddy1
+			2: Muddy1
+			3: Muddy1
+			4: Muddy1
+			5: Muddy1
+			6: Muddy1
+			7: Muddy1
 	Template@5:
 		Id: 5
-		Images: auralien/05.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 40, 41, 42, 43, 44, 45, 46, 47
 		Categories: Terrain
 		Tiles:
-			0: Muddy
-			1: Muddy
-			2: Muddy
-			3: Muddy
-			4: Muddy
-			5: Muddy
-			6: Muddy
-			7: Muddy
+			0: Muddy2
+			1: Muddy2
+			2: Muddy2
+			3: Muddy2
+			4: Muddy2
+			5: Muddy2
+			6: Muddy2
+			7: Muddy2
 	Template@6:
 		Id: 6
-		Images: auralien/06.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 48, 49, 50, 51, 52, 53, 54, 55
 		Categories: Terrain
 		Tiles:
-			0: Rough
-			1: Rough
-			2: Rough
-			3: Rough
-			4: Rough
-			5: Rough
-			6: Rough
-			7: Rough
+			0: Rough1
+			1: Rough1
+			2: Rough1
+			3: Rough1
+			4: Rough1
+			5: Rough1
+			6: Rough1
+			7: Rough1
 	Template@7:
 		Id: 7
-		Images: auralien/07.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 56, 57, 58, 59, 60, 61, 62, 63
 		Categories: Terrain
 		Tiles:
-			0: Rough
-			1: Rough
-			2: Rough
-			3: Rough
-			4: Rough
-			5: Rough
-			6: Rough
-			7: Rough
+			0: Rough2
+			1: Rough2
+			2: Rough2
+			3: Rough2
+			4: Rough2
+			5: Rough2
+			6: Rough2
+			7: Rough2
 	Template@8:
 		Id: 8
-		Images: auralien/08.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 64, 65, 66, 67, 68, 69, 70, 71
 		Categories: Terrain
 		Tiles:
 			0: Road
@@ -181,9 +229,10 @@ Templates:
 			7: Road
 	Template@9:
 		Id: 9
-		Images: auralien/09.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 72, 73, 74, 75, 76, 77, 78, 79
 		Categories: Terrain
 		Tiles:
 			0: RoadBase
@@ -196,97 +245,103 @@ Templates:
 			7: RoadBase
 	Template@10:
 		Id: 10
-		Images: auralien/10.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 80, 81, 82, 83, 84, 85, 86, 87
 		Categories: Terrain
 		Tiles:
-			0: HillSlope
-			1: HillSlope
-			2: HillSlope
-			3: HillSlope
-			4: HillSlope
-			5: HillSlope
-			6: HillSlope
-			7: HillSlope
+			0: HillSlope1
+			1: HillSlope1
+			2: HillSlope1
+			3: HillSlope1
+			4: HillSlope1
+			5: HillSlope1
+			6: HillSlope1
+			7: HillSlope1
 	Template@11:
 		Id: 11
-		Images: auralien/11.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 88, 89, 90, 91, 92, 93, 94, 95
 		Categories: Terrain
 		Tiles:
-			0: HillSlope
-			1: HillSlope
-			2: HillSlope
-			3: HillSlope
-			4: HillSlope
-			5: HillSlope
-			6: HillSlope
-			7: HillSlope
+			0: HillSlope2
+			1: HillSlope2
+			2: HillSlope2
+			3: HillSlope2
+			4: HillSlope2
+			5: HillSlope2
+			6: HillSlope2
+			7: HillSlope2
 	Template@12:
 		Id: 12
-		Images: auralien/12.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 96, 97, 98, 99, 100, 101, 102, 103
 		Categories: Terrain
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
-			4: Cliff
-			5: Cliff
-			6: Cliff
-			7: Cliff
+			0: Cliff1
+			1: Cliff1
+			2: Cliff1
+			3: Cliff1
+			4: Cliff1
+			5: Cliff1
+			6: Cliff1
+			7: Cliff1
 	Template@13:
 		Id: 13
-		Images: auralien/13.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 104, 105, 106, 107, 108, 109, 110, 111
 		Categories: Terrain
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
-			4: Cliff
-			5: Cliff
-			6: Cliff
-			7: Cliff
+			0: Cliff2
+			1: Cliff2
+			2: Cliff2
+			3: Cliff2
+			4: Cliff2
+			5: Cliff2
+			6: Cliff2
+			7: Cliff2
 	Template@14:
 		Id: 14
-		Images: auralien/14.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 112, 113, 114, 115, 116, 117, 118, 119
 		Categories: Terrain
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
-			4: Cliff
-			5: Cliff
-			6: Cliff
-			7: Cliff
+			0: Cliff3
+			1: Cliff3
+			2: Cliff3
+			3: Cliff3
+			4: Cliff3
+			5: Cliff3
+			6: Cliff3
+			7: Cliff3
 	Template@15:
 		Id: 15
-		Images: auralien/15.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 120, 121, 122, 123, 124, 125, 126, 127
 		Categories: Terrain
 		Tiles:
-			0: Cliff
-			1: Cliff
-			2: Cliff
-			3: Cliff
-			4: Cliff
-			5: Cliff
-			6: Cliff
-			7: Cliff
+			0: Cliff4
+			1: Cliff4
+			2: Cliff4
+			3: Cliff4
+			4: Cliff4
+			5: Cliff4
+			6: Cliff4
+			7: Cliff4
 	Template@0:
 		Id: 0
-		Images: auralien/00.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
 		Categories: Terrain
@@ -299,88 +354,14 @@ Templates:
 			5: Water
 			6: Water
 			7: Water
-	Template@16:
-		Id: 16
-		Images: auralien/T__.shp
+# Sea edge/corner types Order
+# 128: BRI, BLI, B, TLI, TR/BL-O, L, TRO, TRI, R, TL/BR-O, TLO, T, BLO, BRO
+	Template@27:
+		Id: 27
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
-		Categories: Terrain
-		Tiles:
-			0: Clear
-			1: Clear
-			2: Clear
-			3: Clear
-	Template@17:
-		Id: 17
-		Images: auralien/R__.shp
-		Size: 1,1
-		PickAny: True
-		Categories: Terrain
-		Tiles:
-			0: Clear
-			1: Clear
-			2: Clear
-			3: Clear
-	Template@18:
-		Id: 18
-		Images: auralien/B__.shp
-		Size: 1,1
-		PickAny: True
-		Categories: Terrain
-		Tiles:
-			0: Clear
-			1: Clear
-			2: Clear
-			3: Clear
-	Template@19:
-		Id: 19
-		Images: auralien/L__.shp
-		Size: 1,1
-		PickAny: True
-		Categories: Terrain
-		Tiles:
-			0: Clear
-			1: Clear
-			2: Clear
-			3: Clear
-	Template@20:
-		Id: 20
-		Images: auralien/TLI.shp
-		Size: 1,1
-		PickAny: True
-		Categories: Terrain
-		Tiles:
-			0: Clear
-			1: Clear
-			2: Clear
-			3: Clear
-	Template@21:
-		Id: 21
-		Images: auralien/TRI.shp
-		Size: 1,1
-		PickAny: True
-		Categories: Terrain
-		Tiles:
-			0: Clear
-			1: Clear
-			2: Clear
-			3: Clear
-	Template@22:
-		Id: 22
-		Images: auralien/BRI.shp
-		Size: 1,1
-		PickAny: True
-		Categories: Terrain
-		Tiles:
-			0: Clear
-			1: Clear
-			2: Clear
-			3: Clear
-	Template@23:
-		Id: 23
-		Images: auralien/BLI.shp
-		Size: 1,1
-		PickAny: True
+		Frames: 139, 153, 167, 181 # T
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -389,20 +370,82 @@ Templates:
 			3: Clear
 	Template@24:
 		Id: 24
-		Images: auralien/TLO.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 136, 150, 164, 178 # R
 		Categories: Terrain
 		Tiles:
 			0: Clear
 			1: Clear
 			2: Clear
 			3: Clear
-	Template@25:
-		Id: 25
-		Images: auralien/TRO.shp
+	Template@18:
+		Id: 18
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 130, 144, 158, 172 # B
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@21:
+		Id: 21
+		Images: auralien/auralien.til
+		Size: 1,1
+		PickAny: True
+		Frames: 133, 147, 161, 175 # L
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@19:
+		Id: 19
+		Images: auralien/auralien.til
+		Size: 1,1
+		PickAny: True
+		Frames: 131, 145, 159, 173 # TLI
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@23:
+		Id: 23
+		Images: auralien/auralien.til
+		Size: 1,1
+		PickAny: True
+		Frames: 135, 149, 163, 177 # TRI
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@16:
+		Id: 16
+		Images: auralien/auralien.til
+		Size: 1,1
+		PickAny: True
+		Frames: 128, 142, 156, 170 # BRI
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@17:
+		Id: 17
+		Images: auralien/auralien.til
+		Size: 1,1
+		PickAny: True
+		Frames: 129, 143, 157, 171 # BLI
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -411,20 +454,70 @@ Templates:
 			3: Clear
 	Template@26:
 		Id: 26
-		Images: auralien/BLO.shp
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 138, 152, 166, 180 # TLO
 		Categories: Terrain
 		Tiles:
 			0: Clear
 			1: Clear
 			2: Clear
 			3: Clear
-	Template@27:
-		Id: 27
-		Images: auralien/BRO.shp
+	Template@22:
+		Id: 22
+		Images: auralien/auralien.til
 		Size: 1,1
 		PickAny: True
+		Frames: 134, 148, 162, 176 # TRO
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@29:
+		Id: 29
+		Images: auralien/auralien.til
+		Size: 1,1
+		PickAny: True
+		Frames: 141, 155, 169, 183 # BRO
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@28:
+		Id: 28
+		Images: auralien/auralien.til
+		Size: 1,1
+		PickAny: True
+		Frames: 140, 154, 168, 182 # BLO
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@20:
+		Id: 20
+		Images: auralien/auralien.til
+		Size: 1,1
+		PickAny: True
+		Frames: 132, 146, 160, 174 # TR/BL-O
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@25:
+		Id: 25
+		Images: auralien/auralien.til
+		Size: 1,1
+		PickAny: True
+		Frames: 137, 151, 165, 179 # TL/BR-O
 		Categories: Terrain
 		Tiles:
 			0: Clear

@@ -1,0 +1,243 @@
+MapFormat: 11
+
+RequiresMod: dr
+
+Title: Mission Test
+
+Author: Your name here
+
+Tileset: JUNGLE
+
+MapSize: 82,70
+
+Bounds: 1,1,80,68
+
+Visibility: MissionSelector
+
+Categories: Conquest
+
+Players:
+	PlayerReference@Imperium:
+		Name: Imperium
+		Faction: imperium
+		Color: FE1100
+		Allies: Imperium
+		Enemies: FreedomGuard
+	PlayerReference@Freedom Guard:
+		Name: Freedom Guard
+		AllowBots: False
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: fguard
+		LockColor: True
+		Color: F5D378
+		LockSpawn: True
+		LockTeam: True
+		Allies: FreedomGuard
+		Enemies: Imperium
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: fguard
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: fguard
+
+Actors:
+	Actor12: aotre000.spr
+		Owner: Neutral
+		Location: 22,48
+	Actor13: aotre001.spr
+		Owner: Neutral
+		Location: 24,47
+	Actor14: aotre003.spr
+		Owner: Neutral
+		Location: 25,49
+	Actor15: aorub000.spr
+		Owner: Neutral
+		Location: 23,50
+	Actor16: aorub002.spr
+		Owner: Neutral
+		Location: 26,48
+	Actor17: aotre003.spr
+		Owner: Neutral
+		Location: 47,29
+	Actor18: aotre002.spr
+		Owner: Neutral
+		Location: 50,46
+	Actor19: aotre000.spr
+		Owner: Neutral
+		Location: 31,35
+	Actor21: aotre000.spr
+		Owner: Neutral
+		Location: 64,29
+	Actor22: aorub000.spr
+		Owner: Neutral
+		Location: 63,31
+	Actor23: aoroc000.spr
+		Owner: Neutral
+		Location: 60,30
+	Actor24: aorub002.spr
+		Owner: Neutral
+		Location: 59,28
+	Actor25: aotre004.spr
+		Owner: Neutral
+		Location: 62,25
+	Actor20: hq.human
+		Owner: Freedom Guard
+		Location: 16,58
+	Actor26: waterlaunchpad
+		Owner: Freedom Guard
+		Location: 7,58
+	Actor27: power
+		Owner: Freedom Guard
+		Location: 25,63
+	Actor28: trainingfacility.fguard
+		Owner: Freedom Guard
+		Location: 22,53
+	Actor29: assemblyplant.human
+		Owner: Freedom Guard
+		Location: 30,57
+	Actor30: power
+		Owner: Imperium
+		Location: 73,13
+	Actor31: waterlaunchpad
+		Owner: Imperium
+		Location: 65,3
+	Actor32: hq.cyborg
+		Owner: Imperium
+		Location: 70,7
+	Actor33: trainingfacility.imperium
+		Owner: Imperium
+		Location: 62,8
+	Actor34: assemblyplant.imperium
+		Owner: Imperium
+		Location: 65,13
+	Actor35: guardian
+		Owner: Imperium
+		Location: 55,14
+		Facing: 92
+	Actor36: guardian
+		Owner: Imperium
+		Location: 56,15
+		Facing: 92
+	Actor37: guardian
+		Owner: Imperium
+		Location: 60,17
+		Facing: 92
+	Actor38: guardian
+		Owner: Imperium
+		Location: 62,17
+		Facing: 92
+	Actor39: bion
+		Owner: Imperium
+		Location: 61,16
+		Facing: 92
+	Actor40: bion
+		Owner: Imperium
+		Location: 55,12
+		Facing: 92
+	Actor41: bion
+		Owner: Imperium
+		Location: 73,23
+		Facing: 92
+	Actor42: guardian
+		Owner: Imperium
+		Location: 71,23
+		Facing: 92
+	Actor43: guardian
+		Owner: Imperium
+		Location: 72,25
+		Facing: 92
+	Actor44: tachiontank
+		Owner: Imperium
+		Location: 58,13
+		Facing: 92
+	Actor45: plasmatank
+		Owner: Imperium
+		Location: 62,15
+		Facing: 92
+		TurretFacing: 92
+	Actor46: plasmatank
+		Owner: Imperium
+		Location: 76,24
+		Facing: 92
+		TurretFacing: 92
+	Actor47: raider
+		Owner: Freedom Guard
+		Location: 41,53
+		Facing: 92
+	Actor48: raider
+		Owner: Freedom Guard
+		Location: 42,52
+		Facing: 92
+	Actor49: raider
+		Owner: Freedom Guard
+		Location: 40,51
+		Facing: 92
+	Actor50: raider
+		Owner: Freedom Guard
+		Location: 37,49
+		Facing: 92
+	Actor51: raider
+		Owner: Freedom Guard
+		Location: 32,48
+		Facing: 92
+	Actor52: raider
+		Owner: Freedom Guard
+		Location: 30,47
+		Facing: 92
+	Actor53: raider
+		Owner: Freedom Guard
+		Location: 29,49
+		Facing: 92
+	Actor54: raider
+		Owner: Freedom Guard
+		Location: 32,50
+		Facing: 92
+	Actor55: mercenary
+		Owner: Freedom Guard
+		Location: 30,49
+		Facing: 92
+	Actor56: mercenary
+		Owner: Freedom Guard
+		Location: 39,52
+		Facing: 92
+	Actor57: mercenary
+		Owner: Freedom Guard
+		Location: 40,54
+		Facing: 92
+	Actor58: triplerailhovertank
+		Owner: Freedom Guard
+		Location: 29,51
+		Facing: 92
+		TurretFacing: 92
+	Actor59: triplerailhovertank
+		Owner: Freedom Guard
+		Location: 37,53
+		Facing: 92
+		TurretFacing: 92
+	Actor60: skirmishtank
+		Owner: Freedom Guard
+		Location: 31,46
+		Facing: 92
+		TurretFacing: 92
+	Actor61: skirmishtank
+		Owner: Freedom Guard
+		Location: 35,47
+		Facing: 92
+		TurretFacing: 92
+	Actor62: skirmishtank
+		Owner: Freedom Guard
+		Location: 43,54
+		Facing: 92
+		TurretFacing: 92
+	Actor63: spiderbike
+		Owner: Freedom Guard
+		Location: 43,50
+		Facing: 92
+
+Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, dr|rules/campaign-palettes.yaml, rules.yaml

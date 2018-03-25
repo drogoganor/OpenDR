@@ -1,135 +1,589 @@
-^DrCannon:
-	ReloadDelay: 12
-	Range: 5c0
-	Report: gxfgtwc0.wav
-	Projectile: Bullet
-		Speed: 600
-		Image: eolaspr2.spr
-		Shadow: False
+
+# Dark Reign weapons
+# These values come from the darkreign.ws release which includes raw unit & building data, and also a compilation by dr_zaphod.
+# These files are at: 
+# Dark Reign 1.7\DARK\DEFTXT\*.txt (Original game)
+# Dark Reign 1.7\DARK\deftxtEx\*.txt (Expansion)
+# Dark Reign 1.7\manuals\Unit and Building Tables\english.txt
+
+# Anything to do with size must be multiplied by (1024 / 24), the WPos cell size divided by the tile size.
+# Speed and Spread are calculated using this formula.
+
+
+^E1: #  Rail Gun: Mercenary,SpiderBike,HoverTank,HeavyRailPlatform
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
+		Spread: 512
+		Damage: 11
+		Versus:
+			Infantry: 100
+			Tank: 200
+			Building: 70
+			Aircraft: 0
+			Animal: 150
+		DamageTypes: DefaultDeath
+
+^E2: # LaserGun: Raider,HoverFreighter,PhaseTank,LaserTurret,Guardian,ScoutTank,TroopTransport
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 8
+		Versus:
+			Infantry: 100
+			Tank: 50
+			Building: 50
+			Aircraft: 50
+			Animal: 100
+		DamageTypes: DefaultDeath
+
+^E3: # plasma: Martyr,Bion,PlasmaTank,PlasmaTower,NeutronTower,SkyFortress,Tach.SelfDestruct,SHGemini
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 100
+		Versus:
+			Infantry: 100
+			Tank: 75
+			Building: 40
+			Aircraft: 50
+			Animal: 110
+		DamageTypes: DefaultDeath
+ 
+^E4: # TachyonTank, SHFury
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
 		Damage: 30
 		Versus:
-			None: 30
-			Wood: 75
-			Light: 75
-			Concrete: 50
+			Infantry: 100
+			Tank: 100
+			Building: 40
+			Aircraft: 0
+			Animal: 100
 		DamageTypes: DefaultDeath
+
+^E5: # Elecktro: TankHunter
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 60
+		Versus:
+			Infantry: 100
+			Tank: 150
+			Building: 40
+			Aircraft: 0
+			Animal: 100
+		DamageTypes: DefaultDeath
+
+^A1: # AirLaser: SkyBike , AntiAirSites, IMP-MAD
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 10
+		Versus:
+			Infantry: 50
+			Tank: 50
+			Building: 25
+			Aircraft: 100
+			Animal: 50
+		DamageTypes: DefaultDeath
+
+^C1: # FGFlak
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 8
+		Versus:
+			Infantry: 0
+			Tank: 100
+			Building: 0
+			Aircraft: 100
+			Animal: 0
+		DamageTypes: DefaultDeath
+
+^S1: # Sniper
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 150
+		Versus:
+			Infantry: 100
+			Tank: 10
+			Building: 10
+			Aircraft: 0
+			Animal: 100
+		DamageTypes: DefaultDeath
+
+^M1: # or - missile: outrider,  FXAvenger
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 100
+		Versus:
+			Infantry: 100
+			Tank: 100
+			Building: 50
+			Aircraft: 0
+			Animal: 100
+		DamageTypes: DefaultDeath
+
+^M2: # missile:  SkirmishTank
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 100
+		Versus:
+			Infantry: 100
+			Tank: 100
+			Building: 50
+			Aircraft: 100
+			Animal: 100
+		DamageTypes: DefaultDeath
+
+^M3: # polyacid: Exterminator
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 100
+		Versus:
+			Infantry: 100
+			Tank: 250
+			Building: 50
+			Aircraft: 0
+			Animal: 100
+		DamageTypes: DefaultDeath
+
+^G1: # Cyclone, SHReaper
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 24
+		Versus:
+			Infantry: 100
+			Tank: 150
+			Building: 50
+			Aircraft: 100
+			Animal: 170
+		DamageTypes: DefaultDeath
+
+^K2: # Artillery
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 30
+		Versus:
+			Infantry: 100
+			Tank: 75
+			Building: 50
+			Aircraft: 0
+			Animal: 100
+		DamageTypes: DefaultDeath
+
+^H1:
+	Warhead@1Dam: SpreadDamage
+		Spread: 20
+		Damage: -10
+		Versus:
+			Infantry: 100
+			Tank: 0
+			Building: 0
+			Aircraft: 0
+			Animal: 100
+		DamageTypes: DefaultDeath
+
+GenericExplode:
+	Range: 8c0
+	Report: gxflkwc0.wav
+	Warhead@1Dam: SpreadDamage
+		Spread: 5
+		Damage: 2
 	Warhead@3Eff: CreateEffect
-		Explosions: laser_exp1
+		Explosions: ecexpmd0,ecexpmd1
 		ValidTargets: Ground, Ship, Trees
 
-LaserRifle:
-	Inherits: ^DrCannon
-	ReloadDelay: 12
-	Range: 5c0
-	Report: gxfgtwc0.wav
+FlakJackWeapon: #Chaff
+	Inherits: ^C1
+	ReloadDelay: 30
+	Range: 8c0
+	Report: gxflkwc0.wav
+	ValidTargets: Air
 	Projectile: Bullet
-		Speed: 600
-		Image: eolaspr2.spr
+		Speed: 554 # 13
+		Image: eochfpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Damage: 30
-		Versus:
-			None: 30
-			Wood: 75
-			Light: 75
-			Concrete: 50
+		ValidTargets: Air
+		Spread: 2133 # 50
+		Damage: 8
+	Warhead@3Eff: CreateEffect
+		Explosions: eochfex0
+		ValidTargets: Air, Trees
+	Warhead@4Eff: CreateEffect
+		Explosions: eochfex1
+		ValidTargets: Air, Trees
+	Warhead@4Eff: CreateEffect
+		Explosions: eochfex2
+		ValidTargets: Air, Trees
+
+LaserRifle:
+	Inherits: ^E2
+	ReloadDelay: 16 # x2 definition value Weapon.txt
+	Range: 4c0
+	Report: gxfgtwc0.wav
+	ValidTargets: Air, Ground
+	Projectile: Bullet
+		Speed: 853 # 20
+		Image: eolaspr2.spr
+		Shadow: False
+		ValidTargets: Air, Ground
+	Warhead@1Dam: SpreadDamage
+		Spread: 341 # 8
+		Damage: 11
+	Warhead@3Eff: CreateEffect
+		Explosions: eolasex0
+		ValidTargets: Air, Ground, Ship, Trees
 
 MercWeapon:
-	Inherits: ^DrCannon
-	ReloadDelay: 16
+	Inherits: ^E1
+	ReloadDelay: 22 # x2 definition value Weapon.txt
 	Range: 5c0
 	Report: gxmrcwc0.wav
 	Projectile: Bullet
-		Speed: 600
+		Speed: 853 # 20
+		Image: eorgnpr5.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 341 # 8
+		Damage: 11
+	Warhead@3Eff: CreateEffect
+		Explosions: eorgnex2
+		ValidTargets: Ground, Ship, Trees
+
+SpiderBikeWeapon:
+	Inherits: ^E1
+	ReloadDelay: 26
+	Range: 5c0
+	Report: gxspbwc0.wav
+	Projectile: Bullet
+		Speed: 853 # 20
+		Image: eorgnpr3.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 341 # 8 (english.txt value) * (1024 / 24)
+		Damage: 10
+	Warhead@3Eff: CreateEffect
+		Explosions: eorgnex1
+		ValidTargets: Ground, Ship, Trees
+		
+TripleRailTankWeapon: #TripleRailGun
+	Inherits: ^E1
+	ReloadDelay: 40
+	Range: 8c0
+	Report: gxtrtwc0.wav
+	Projectile: Bullet
+		Speed: 853 # 20
+		Image: eorgnpr2.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 853 # 20 (english.txt value) * (1024 / 24)
+		Damage: 24
+	Warhead@3Eff: CreateEffect
+		Explosions: eorgnex0
+		ValidTargets: Ground, Ship, Trees
+
+SkirmishTankWeapon:
+	Inherits: ^M2
+	ReloadDelay: 40
+	Range: 6c0
+	Report: gxsktwc0.wav
+	ValidTargets: Air, Ground
+	Projectile: Bullet
+		Speed: 384 # 9 (4-10)
+		Image: eomispr4.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 426 # 10 (english.txt value) * (1024 / 24)
+		Damage: 14
+	Warhead@3Eff: CreateEffect
+		Explosions: eoblatr0,eoblatr1
+		ValidTargets: Air, Ground, Ship, Trees
+	Warhead@3Eff: CreateEffect
+		Explosions: eosmosm0
+		ValidTargets: Air, Ground, Ship, Trees
+
+SniperRifle:
+	Inherits: ^S1
+	ReloadDelay: 28
+	Range: 8c0
+	Report: gxsnpwc0.wav
+	Projectile: Bullet
+		Speed: 853 # 20
 		Image: eorgnpr1.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Damage: 50
-		Versus:
-			None: 30
-			Wood: 75
-			Light: 75
-			Concrete: 50
+		Spread: 341 # 8 (english.txt value) * (1024 / 24)
+		Damage: 150
 	Warhead@3Eff: CreateEffect
-		Explosions: rocket_exp1
+		Explosions: eorgnex1
 		ValidTargets: Ground, Ship, Trees
 
-SniperRifle:
-	Inherits: ^DrCannon
-	ReloadDelay: 28
-	Range: 12c0
-	Report: gxsnpwc0.wav
+PlasmaTankWeapon:
+	Inherits: ^E3
+	ReloadDelay: 30
+	Range: 5c0
+	Report: gxpltwc0.wav
 	Projectile: Bullet
-		Speed: 1000
-		Image: eorgnpr0.spr
+		Speed: 853 # 20
+		Image: eoplspr1.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Damage: 150
-		Versus:
-			None: 150
-			Wood: 125
-			Light: 125
-			Concrete: 50
+		Spread: 341 # 8 (english.txt value) * (1024 / 24)
+		Damage: 19
 	Warhead@3Eff: CreateEffect
-		Explosions: rocket_exp1
+		Explosions: eoplsex2
 		ValidTargets: Ground, Ship, Trees
 
-MiniNuke:
+PlasmaRifle: # Bion
+	Inherits: ^E3
+	ReloadDelay: 16
+	Range: 4c0
+	Report: gxbonwc0.wav
+	ValidTargets: Air, Ground
+	Projectile: Bullet
+		Speed: 725 # 17
+		Image: eoplspr0.spr # wrong
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air, Ground
+		Spread: 341 # 8 (english.txt value) * (1024 / 24)
+		Damage: 18
+	Warhead@3Eff: CreateEffect
+		Explosions: eoplsex0
+		ValidTargets: Air, Ground, Ship, Trees
+
+TachionTankWeapon:
+	Inherits: ^E4
+	ReloadDelay: 40
+	Range: 8c0
+	Report: gxtctwc0.wav
+	Projectile: Bullet
+		Speed: 1493 # 35
+		Image: eotacpr0.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 853 # 20
+		Damage: 30
+	Warhead@3Eff: CreateEffect
+		Explosions: eotacex0
+		ValidTargets: Ground, Ship, Trees
+
+SkyFortressWeapon: #FortressCannon
+	Inherits: ^E3
+	ReloadDelay: 800 # 40 if charged
+	Range: 7c0
+	Report: gxskywc0.wav
+	Projectile: Bullet
+		Speed: 1493 # 35
+		Image: eoskypr0.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 1536 # 36 (english.txt value) * (1024 / 24)
+		Damage: 650
+	Warhead@3Eff: CreateEffect
+		Explosions: eoplsex4 # eoplsex0, eoplsex2
+		ValidTargets: Ground, Ship, Trees
+	Warhead@4Eff: CreateEffect
+		Explosions: eoplsex0
+		ValidTargets: Ground, Ship, Trees
+	Warhead@4Eff: CreateEffect
+		Explosions: eoplsex2
+		ValidTargets: Ground, Ship, Trees
+
+CycloneWeapon: # CycloneCannon
+	Inherits: ^G1
+	#Ammo 5
+	ReloadDelay: 20
+	Range: 6c0
+	Report: gxcycwc0.wav
+	ValidTargets: Air, Ground
+	Projectile: Bullet
+		Speed: 853 # 20
+		Image: eoncnpr0.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air, Ground
+		Spread: 426 # 10 (english.txt value) * (1024 / 24)
+		Damage: 24
+	Warhead@3Eff: CreateEffect
+		Explosions: eoncnex0
+		ValidTargets: Air, Ground, Ship, Trees
+
+MartyrWeapon: # SuicideNuke
+	Inherits: ^E3
+	Range: 2c0
 	ValidTargets: Ground, Trees, Water, Underwater, Air
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1c0
-		Damage: 15000
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Spread: 4266 # 100 (english.txt value) * (1024 / 24)
+		Damage: 180
 		ValidTargets: Ground, Trees, Water, Air
-		Versus:
-			Wood: 25
-			Concrete: 25
 		AffectsParent: true
 	Warhead@3Eff_impact: CreateEffect
-		Explosions: rocket_exp1
-		ImpactSounds: gxmrcwc0.wav
+		Explosions: ecexpsp1 # eoexpsp1
+		ImpactSounds: gxmtrwc0.wav
 		ImpactActors: false
-	Warhead@4Dam_areanuke1: SpreadDamage
-		Spread: 2c0
-		Damage: 6000
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 5
-		ValidTargets: Ground, Trees, Water, Underwater, Air
-		Versus:
-			Wood: 50
-			Concrete: 25
-		AffectsParent: true
-	Warhead@7Dam_areanuke2: SpreadDamage
-		Spread: 3c0
-		Damage: 6000
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 10
-		ValidTargets: Ground, Water, Underwater, Air
-		Versus:
-			Wood: 50
-			Concrete: 25
-		AffectsParent: true
-	Warhead@8Dam_areanuke2: SpreadDamage
-		Spread: 3c0
-		Damage: 12000
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 10
-		ValidTargets: Trees
-	Warhead@10Dam_areanuke3: SpreadDamage
-		Spread: 4c0
-		Damage: 6000
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 15
-		ValidTargets: Ground, Water, Underwater
-		Versus:
-			Concrete: 25
-		AffectsParent: true
-	Warhead@11Dam_areanuke3: SpreadDamage
-		Spread: 4c0
-		Damage: 18000
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 15
-		ValidTargets: Trees
-		DamageTypes: Incendiary
+
+PhaseTankWeapon: #PhaseTankCannon
+	Inherits: ^E2
+	ReloadDelay: 26
+	Range: 6c0
+	Report: gxphtwc0.wav
+	Projectile: Bullet
+		Speed: 853 # 20
+		Image: eolaspr4.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 426 # 10 (english.txt value) * (1024 / 24)
+		Damage: 30
+	Warhead@3Eff: CreateEffect
+		Explosions: eolasex0
+		ValidTargets: Ground, Ship, Trees
+
+ScoutRunnerWeapon: # LaserCannon
+	Inherits: ^E2
+	ReloadDelay: 26
+	Range: 6c0
+	Report: gxsttwc0.wav
+	Projectile: Bullet
+		Speed: 853 # 20
+		Image: eolaspr3.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 426 # 10 (english.txt value) * (1024 / 24)
+		Damage: 10
+	Warhead@3Eff: CreateEffect
+		Explosions: eolasex1
+		ValidTargets: Ground, Ship, Trees
+
+MADWeapon: # GroundToAirLaser
+	Inherits: ^A1
+	ReloadDelay: 40
+	Range: 8c0
+	ValidTargets: Air
+	Report: gxmadwc0.wav
+	Projectile: Bullet
+		Speed: 1706 # 40
+		Image: eoorbpr0.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air
+		Spread: 341 # 8 (english.txt value) * (1024 / 24)
+		Damage: 48
+	Warhead@3Eff: CreateEffect
+		Explosions: eoblatr0
+		ValidTargets: Air, Trees
+
+SkyBikeWeapon:
+	Inherits: ^A1
+	#Ammo 20
+	ReloadDelay: 14
+	Range: 5c0
+	Report: gxskbwc0.wav
+	ValidTargets: Air, Ground
+	Projectile: Bullet
+		Speed: 1280 # 30 (1-60)
+		Image: eomispr0.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air, Ground
+		Spread: 426 # 10 (english.txt value) * (1024 / 24)
+		Damage: 10
+	Warhead@3Eff: CreateEffect
+		Explosions: eosmosm2
+		ValidTargets: Air, Ground, Ship, Trees
+
+ExterminatorWeapon: #PolyAcid
+	Inherits: ^M3
+	ReloadDelay: 40
+	Range: 5c0
+	Report: gxextwc1.wav
+	Projectile: Bullet
+		Speed: 213 # 5
+		Image: eorfgpr0.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 1024 # 24 (english.txt value) * (1024 / 24)
+		Damage: 15
+	Warhead@3Eff: CreateEffect
+		Explosions: eorfgex0
+		ValidTargets: Ground, Ship, Trees
+
+TankHunterWeapon: #TankHunterGun
+	Inherits: ^E5
+	ReloadDelay: 40
+	Range: 3c0
+	Report: gxthnwc0.wav
+	Projectile: Bullet
+		Speed: 426 # 10
+		Image: eothnpr0.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 341 # 8 (english.txt value) * (1024 / 24)
+		Damage: 60
+	Warhead@3Eff: CreateEffect
+		Explosions: eothnex0
+		ValidTargets: Ground, Ship, Trees
+
+OutriderWeapon: #OutriderMissile
+	Inherits: ^M1
+	ReloadDelay: 20
+	#Ammo 10
+	Range: 5c0
+	Report: gxoutwc0.wav
+	Projectile: Bullet
+		Speed: 426 # 10 (.5-15)
+		Image: eomispr1.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 1706 # 40 (english.txt value) * (1024 / 24)
+		Damage: 20
+	Warhead@3Eff: CreateEffect
+		Explosions: eooutex0
+		ValidTargets: Ground, Ship, Trees
+
+HellstormArtilleryWeapon: #ArtilleryShell
+	Inherits: ^K2
+	ReloadDelay: 160
+	Range: 45c0
+	#MinRange: 3
+	Report: gxfarwc0.wav
+	Projectile: Bullet
+		Speed: 426 # 10
+		Image: eofarpr0.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 4266 # 100 (english.txt value) * (1024 / 24)
+		Damage: 30
+	Warhead@3Eff: CreateEffect
+		ImpactSounds: gxex1oc0.wav
+		Explosions: eofarex0
+		ValidTargets: Ground, Ship, Trees
+
+ScarabWeapon: # IMPArtilleryShell
+	Inherits: ^K2
+	ReloadDelay: 160
+	Range: 45c0
+	Report: gxiarwc0.wav
+	Projectile: Bullet
+		Speed: 298 # 7
+		Image: eoiarpr0.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 4266 # 100 (english.txt value) * (1024 / 24)
+		Damage: 30
+	Warhead@3Eff: CreateEffect
+		ImpactSounds: gxex1oc0.wav
+		Explosions: eoiarex0
+		ValidTargets: Ground, Ship, Trees
+
+AmperWeapon: #AmperAmp
+	Inherits: ^H1
+	ReloadDelay: 20
+	Range: 5c0
+	Report: gxampwc0.wav
+	Projectile: Bullet
+		Speed: 853 # 20
+		Image: eolaspr0.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 298 # 7 * (1024 / 24) (actually doesn't have any spread)
+		Damage: 100
+	Warhead@3Eff: CreateEffect
+		Explosions: eopamex0
+		ValidTargets: Ground, Ship, Trees

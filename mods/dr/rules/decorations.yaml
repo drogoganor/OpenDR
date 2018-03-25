@@ -193,6 +193,13 @@ aoclf000.spr:
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
+	HitShape@LAYER1:
+		Type: Rectangle
+			TopLeft: -512, -512
+			BottomRight: 512, 512
+	WithIdleOverlay@LAYER1:
+		Palette: shadow
+		Sequence: shadow
 
 aoclf001.spr:
 	Inherits: ^DrRock

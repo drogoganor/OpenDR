@@ -1,19 +1,26 @@
 drorig: Dark Reign (Disc, English)
+	IDFiles:
+		INSTALL/DATA/DARK/GRAPHICS/SPRITES.FTG: 5f96e0dbdab314271ef20a1c9a7c11a319c2e813
 	Install:
 		copy: .
-			^Content/dr/SPRITES.FTG: Dark Reign 1.7/DARK/GRAPHICS/SPRITES.FTG
-			^Content/dr/SOUNDS.FTG: Dark Reign 1.7/DARK/sndfx/SOUNDS.FTG
-			^Content/dr/shell/SOUNDS.FTG: Dark Reign 1.7/DARK/SHELL/SOUNDS.FTG
+			^Content/dr/SPRITES.FTG: INSTALL/DATA/DARK/GRAPHICS/SPRITES.FTG
+			^Content/dr/SOUNDS.FTG: INSTALL/DATA/DARK/SNDFX/SOUNDS.FTG
+			^Content/dr/shell/SOUNDS.FTG: INSTALL/DATA/DARK/SHELL/SOUNDS.FTG
+			^Content/dr/SNOW/SNOW.TIL: INSTALL/DATA/DARK/GRAPHICS/SNOW/SNOW.TIL
+			^Content/dr/SNOW/SPRITES.FTG: INSTALL/DATA/DARK/GRAPHICS/SNOW/SPRITES.FTG
+			^Content/dr/BARREN/BARREN.TIL: INSTALL/DATA/DARK/GRAPHICS/BARREN/BARREN.TIL
+			^Content/dr/BARREN/SPRITES.FTG: INSTALL/DATA/DARK/GRAPHICS/BARREN/SPRITES.FTG
+			^Content/dr/JUNGLE/JUNGLE.TIL: INSTALL/DATA/DARK/GRAPHICS/JUNGLE/JUNGLE.TIL
+			^Content/dr/JUNGLE/SPRITES.FTG: INSTALL/DATA/DARK/GRAPHICS/JUNGLE/SPRITES.FTG
 drexp: Dark Reign Expansion (Disc, English)
+	IDFiles:
+		Install/Data/Dark/graphics/spriteEx.ftg: 429667e2fa8c6fa7da727cc64c9d5512ae2c832d
 	Install:
 		copy: .
-			^Content/dr/spriteEx.ftg: Dark Reign 1.7/DARK/GRAPHICS/spriteEx.ftg
-			^Content/dr/soundsEx.ftg: Dark Reign 1.7/DARK/sndfx/soundsEx.ftg
-drmus: Music
-	Install:
-		copy: .
-			^Content/dr/music.zip: music.zip
-drtiles: Tilesets
-	Install:
-		copy: .
-			^Content/dr/tilesets.zip: tilesets.zip
+			^Content/dr/spriteEx.ftg: Install/Data/Dark/graphics/spriteEx.ftg
+			^Content/dr/soundsEx.ftg: Install/Data/Dark/sndfx/soundsEx.ftg
+			^Content/dr/ALIEN/ALIEN.TIL: INSTALL/DATA/DARK/GRAPHICS/ALIEN/ALIEN.TIL
+			^Content/dr/ALIEN/SPRITEEX.FTG: INSTALL/DATA/DARK/GRAPHICS/ALIEN/SPRITEEX.FTG
+			^Content/dr/BARREN/spriteEx.ftg: INSTALL/DATA/DARK/GRAPHICS/BARREN/spriteEx.ftg
+			^Content/dr/JUNGLE/spriteEx.ftg: INSTALL/DATA/DARK/GRAPHICS/JUNGLE/spriteEx.ftg
+			^Content/dr/SNOW/spriteEx.ftg: INSTALL/DATA/DARK/GRAPHICS/SNOW/spriteEx.ftg

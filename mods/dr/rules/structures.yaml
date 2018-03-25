@@ -1,393 +1,1173 @@
 
+^BasicBuilding:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Inherits@shape: ^1x1Shape
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Priority: 3
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		TerrainTypes: Clear,Road
+		RequiresBaseProvider: True
+	RequiresBuildableArea:
+		AreaTypes: building
+	SoundOnDamageTransition:
+		DamagedSounds: gxexpoc2.wav
+		DestroyedSounds: gxexpoc1.wav
+	WithSpriteBody:
+	CaptureNotification:
+	ShakeOnDeath:
+	ProximityCaptor:
+		Types: Building
+	Guardable:
+		Range: 3c0
+	FrozenUnderFog:
+	Tooltip:
+		GenericName: Structure
+	Demolishable:
+	EditorTilesetFilter:
+		Categories: Building
+	CommandBarBlacklist:
+
 ^DrBuilding:
-	Inherits: ^Building
-	-RequiresBuildableArea:
+	Inherits: ^BasicBuilding
+	Huntable:
+	UpdatesPlayerStatistics:
+	Buildable:
+		BuildDurationModifier: 360 # DR original: 2486, set to 360 for testing sanity
+	RequiresBuildableArea:
+		AreaTypes: building
+		Adjacent: 12
+	RepairableBuilding:
+		RepairStep: 20
+		PlayerExperience: 25
+	EngineerRepairable:
+	AcceptsDeliveredCash:
+	#WithMakeAnimation:
+	#ExternalCapturable:
+	#ExternalCapturableBar:
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Sellable:
+		SellSounds: cashturn.aud
+	HitShape@LAYER1:
+		Type: Rectangle
+			TopLeft: -512, -1536
+			BottomRight: 512, -512
+	HitShape@LAYER2:
+		Type: Rectangle
+			TopLeft: -512, -1536
+			BottomRight: 512, -512
+	HitShape@LAYER3:
+		Type: Rectangle
+			TopLeft: -512, -1536
+			BottomRight: 512, -512
 
 ^DrHeadquarters:
 	Inherits: ^DrBuilding
-	Building:
-		Footprint: xxX xxx XxX
-		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
-	Buildable:
-		Queue: Building
-		BuildPaletteOrder: 1000
-#		Prerequisites: ~disabled
-		Description: Produces structures.
-	ProvidesPrerequisite@fguard:
-		Factions: fguard
-		Prerequisite: structures.fguard
-	ProvidesPrerequisite@imperium:
-		Factions: imperium
-		Prerequisite: structures.imperium
-	Health:
-		HP: 150000
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
-	Production:
-		Produces: Building,Defense
-	Valued:
-		Cost: 2500
+	Inherits@shape: ^5x4Shape
 	Tooltip:
-		Name: Construction Yard
-	CustomSellValue:
-		Value: 2500
-	BaseBuilding:
-	RallyPoint:
-	Transforms:
-		IntoActor: ucfcnst0.spr
-		Offset: 1,1
-		Facing: 96
-		RequiresCondition: factundeploy
-	GrantConditionOnPrerequisite@GLOBALFACTUNDEPLOY:
-		Condition: factundeploy
-		Prerequisites: global-factundeploy
-	ProductionBar@Building:
-		ProductionType: Building
-	ProductionBar@Defense:
-		ProductionType: Defense
-		Color: 8A8A8A
-	WithBuildingPlacedAnimation:
-	Power:
-		Amount: 0
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
-	ProvidesPrerequisite@buildingname:
+		Name: Headquarters
+	Building:
+		Footprint: ===== Xxxxx xxxxx =xxxX
+		Dimensions: 5,4
+		LocalCenterOffset: 256,-768,0
 	HitShape:
 		TargetableOffsets: 1273,939,0, -980,-640,0, -980,640,0
 		Type: Rectangle
 			TopLeft: -1536, -1536
-			BottomRight: 1536, 1536
-
-^DrPower:
-	Inherits: ^DrBuilding
-	Inherits@shape: ^2x2Shape
-	HitShape:
+			BottomRight: 1536, 1536	
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 10
-		Prerequisites: ~techlevel.infonly
-		Description: Provides power for other structures.
-	Valued:
-		Cost: 300
-	Tooltip:
-		Name: Power Plant
+		BuildPaletteOrder: 0
+		BuildDuration: 22
+		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
+	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
-		Prerequisite: anypower
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 40000
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 4c0
-	Power:
-		Amount: 200
-	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
-	ScalePowerWithHealth:
+		Prerequisite: hq
+	ProvidesPrerequisite@human:
+		Factions: fguard, xenite
+		Prerequisite: hq.human
+	ProvidesPrerequisite@cyborg:
+		Factions: imperium, shadowhand
+		Prerequisite: hq.cyborg
+	ProvidesPrerequisite@fguard:
+		Factions: fguard
+		Prerequisite: hq.fguard
+	ProvidesPrerequisite@imperium:
+		Factions: imperium
+		Prerequisite: hq.imperium
+	ProvidesPrerequisite@xenite:
+		Factions: xenite
+		Prerequisite: hq.xenite
+	ProvidesPrerequisite@shadowhand:
+		Factions: shadowhand
+		Prerequisite: hq.shadowhand
+	Production:
+		Produces: Building,Upgrade,Economy
+	PrimaryBuilding:
+		PrimaryCondition: primary
+	BaseBuilding:
+	RallyPoint:
+		Offset: 2,4
+	Exit@1:
+		SpawnOffset: -42,810,0
+		ExitCell: 2,3
+		ProductionTypes: Economy,Upgrade
+	ProductionBar@Building:
+		ProductionType: Building
+	ProductionBar@Upgrade:
+		ProductionType: Upgrade
+		Color: 8A8A8A
+	ProductionBar@Economy:
+		ProductionType: Economy
+		Color: 8A8A8A
+	WithBuildingPlacedAnimation:
 	WithDeathAnimation:
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
+	Valued:
+		Cost: 750
+	CustomSellValue:
+		Value: 800
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: 100
+	Armor:
+		Type: Building
+	ProvidesRadar:
+		RequiresCondition: !jammed && !disabled
+	GrantConditionOnPrerequisite@con1:
+		Prerequisites: upgrade.hq1
+		Condition: dec1
+	GrantConditionOnPrerequisite@con2:
+		Prerequisites: upgrade.hq2
+		Condition: dec2
+	WithDecoration@upgraded:
+		RequiresSelection: true
+		Image: pips
+		Sequence: pip-blue
+		ReferencePoint: Bottom, Left
+		ZOffset: 256
+		RequiresCondition: dec1
+	WithDecoration@upgraded2:
+		RequiresSelection: true
+		Image: pips
+		Sequence: pip-red
+		ReferencePoint: Bottom, Left
+		ZOffset: 256
+		RequiresCondition: dec2
 
-^DrTrainingFacility
+^Upgrade:
+	AlwaysVisible:
+	Interactable:
+	ScriptTriggers:
+	Buildable:
+		BuildPaletteOrder: 50
+		Queue: Upgrade
+		BuildLimit: 1
+		BuildDurationModifier: 40
+		Description: Unlocks additional construction options
+		BuildDuration: 52
+
+
+upgrade.hq1:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Headquarters 2
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~hq, ~barracks, ~vehicles
+		Description: Unlocks additional construction options
+		BuildDuration: 52
+	Valued:
+		Cost: 2050
+	RenderSprites:
+		Image: bfhqtmn1.spr
+	ProvidesPrerequisite@upgradename:
+
+upgrade.hq2:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Headquarters 3
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~hq, ~upgrade.hq1, ~vehicles, ~barracks, ~upgrade.barracks1, ~upgrade.assemblyplant1
+		Description: Unlocks additional construction options
+		BuildDuration: 89
+	Valued:
+		Cost: 3300
+	RenderSprites:
+		Image: bfhqtmn2.spr
+	ProvidesPrerequisite@upgradename:
+
+upgrade.barracks1:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Advanced Training Facility
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~hq, ~upgrade.hq1, ~barracks
+		Description: Unlocks additional construction options
+		BuildDuration: 68
+	Valued:
+		Cost: 2550
+	RenderSprites:
+		Image: bfutfmn1.spr
+	ProvidesPrerequisite@upgradename:
+
+upgrade.assemblyplant1:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Advanced Assembly Plant
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~hq, ~upgrade.hq1, ~vehicles
+		BuildDuration: 141
+		Description: Unlocks additional construction options
+	Valued:
+		Cost: 5000
+	RenderSprites:
+		Image: bfvcymn1.spr
+	ProvidesPrerequisite@upgradename:
+
+upgrade.phasing:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Advanced Phasing Facility Upgrade
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~hq, ~upgrade.hq1, ~phasing
+		BuildDuration: 72
+		Description: Unlocks additional construction options
+	Valued:
+		Cost: 2700
+	RenderSprites:
+		Image: bfphfmn1.spr
+	ProvidesPrerequisite@upgradename:
+
+
+^DrGenericBuilding
 	Inherits: ^DrBuilding
-	Inherits@shape: ^2x2Shape
+	Inherits@shape: ^3x3Shape
+	Buildable:
+		Queue: Building
+		Description: Generic
+		Prerequisites: hq
+		BuildPaletteOrder: 30
+		BuildDuration: 45
+	Valued:
+		Cost: 1500
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
+	Building:
+		Footprint: Xxx xxx xxX
+		Dimensions: 3,3
+		LocalCenterOffset: 384,-256,0
 	HitShape:
 		UseTargetableCellsOffsets: false
 		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
-	Buildable:
-		Queue: Building
-		BuildPaletteOrder: 20
-		Prerequisites: anypower, ~structures.fguard, ~techlevel.infonly
-		Description: Trains infantry.
-	Valued:
-		Cost: 500
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+
+^DrTrainingFacility
+	Inherits: ^DrBuilding
 	Tooltip:
 		Name: Training Facility
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 60000
-	Armor:
-		Type: Wood
-	RallyPoint:
+	Inherits@shape: ^5x5Shape
+	Buildable:
+		Queue: Building
+		Description: Trains infantry.
+		Prerequisites: hq
+		BuildPaletteOrder: 30
+		BuildDuration: 45
+	Valued:
+		Cost: 1500
 	RevealsShroud:
-		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
+		Range: 8c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
+	Building:
+		Footprint: _xxx_ Xxxxx xxxxx xxxxX =====
+		Dimensions: 5,5
+		LocalCenterOffset: 384,-256,0
+	HitShape:
+		UseTargetableCellsOffsets: false
+		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
+	RallyPoint:
+		Offset: 1,4
 	Exit@1:
 		SpawnOffset: -42,810,0
-		ExitCell: 1,2
+		ExitCell: 2,3
 		ProductionTypes: Soldier, Infantry
 	Exit@2:
 		SpawnOffset: -725,640,0
-		ExitCell: 0,2
+		ExitCell: 4,3
 		ProductionTypes: Soldier, Infantry
 	Production:
-		Produces: Infantry, Soldier
+		Produces: Infantry, Soldier, DrSoldier
 	PrimaryBuilding:
 		PrimaryCondition: primary
 	ProductionBar:
 	ProvidesPrerequisite@barracks:
 		Prerequisite: barracks
+	ProvidesPrerequisite@human:
+		Factions: fguard, xenite
+		Prerequisite: infantry.human
+	ProvidesPrerequisite@cyborg:
+		Factions: imperium, shadowhand
+		Prerequisite: infantry.cyborg
 	ProvidesPrerequisite@fguard:
 		Factions: fguard
 		Prerequisite: infantry.fguard
 	ProvidesPrerequisite@imperium:
 		Factions: imperium
 		Prerequisite: infantry.imperium
-	Power:
-		Amount: -20
+	ProvidesPrerequisite@xenite:
+		Factions: xenite
+		Prerequisite: infantry.xenite
+	ProvidesPrerequisite@shadowhand:
+		Factions: shadowhand
+		Prerequisite: infantry.shadowhand
 	ProvidesPrerequisite@buildingname:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+	GrantConditionOnPrerequisite:
+		Prerequisites: upgrade.barracks1
+		Condition: stardecoration
+	WithDecoration@upgraded:
+		RequiresSelection: true
+		Image: pips
+		Sequence: pip-red
+		ReferencePoint: Bottom, Left
+		ZOffset: 256
+		RequiresCondition: stardecoration
 
 ^DrAssemblyPlant:
 	Inherits: ^DrBuilding
-	Inherits@shape: ^3x2Shape
-	Buildable:
-		Queue: Building
-		BuildPaletteOrder: 80
-		Prerequisites: ~techlevel.low
-		Description: Produces vehicles.
-	Valued:
-		Cost: 2000
 	Tooltip:
 		Name: Assembly Plant
+	Inherits@shape: ^5x5Shape
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 40
+		BuildDuration: 66
+		Description: Produces vehicles.
 	Building:
-		Footprint: xxx xxx
-		Dimensions: 3,2
-		LocalCenterOffset: 0,-512,0
-	Health:
-		HP: 150000
-	Armor:
-		Type: Wood
+		Footprint: =Xxx= xxxxx xxxxx xxxxx xxxX=
+		Dimensions: 5,5
+		LocalCenterOffset: 256,-256,0
+	Valued:
+		Cost: 2200
 	RevealsShroud:
-		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
+		Range: 8c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
 	Exit@1:
 		SpawnOffset: 213,-128,0
-		ExitCell: 1,2
+		ExitCell: 0,4
 	Production:
-		Produces: Vehicle
+		Produces: Vehicle, DrVehicle, DrAnimatedVehicle
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@vehicles:
+		Prerequisite: vehicles
+	ProvidesPrerequisite@human:
+		Factions: fguard, xenite
+		Prerequisite: vehicles.human
+	ProvidesPrerequisite@cyborg:
+		Factions: imperium, shadowhand
+		Prerequisite: vehicles.cyborg
 	ProvidesPrerequisite@fguard:
 		Factions: fguard
 		Prerequisite: vehicles.fguard
 	ProvidesPrerequisite@imperium:
 		Factions: imperium
 		Prerequisite: vehicles.imperium
+	ProvidesPrerequisite@xenite:
+		Factions: xenite
+		Prerequisite: vehicles.xenite
+	ProvidesPrerequisite@shadowhand:
+		Factions: shadowhand
+		Prerequisite: vehicles.shadowhand
 	PrimaryBuilding:
 		PrimaryCondition: primary
 	ProductionBar:
-	Power:
-		Amount: -30
-	ProvidesPrerequisite@buildingname:
 	RallyPoint:
+		Offset: 1,5
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+	GrantConditionOnPrerequisite:
+		Prerequisites: upgrade.assemblyplant1
+		Condition: stardecoration
+	WithDecoration@upgraded:
+		RequiresSelection: true
+		Image: pips
+		Sequence: pip-red
+		ReferencePoint: Bottom, Left
+		ZOffset: 256
+		RequiresCondition: stardecoration
 
-^DrRefinery:
+^Defense:
 	Inherits: ^DrBuilding
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	Targetable:
+		TargetTypes: Ground, C4, Structure, Defense
+	EditorTilesetFilter:
+		Categories: Defense
+	-CommandBarBlacklist:
+	-AcceptsDeliveredCash:
+
+Power:
+	Inherits: ^DrBuilding
+	RenderSprites:
+		Image: ncpow1l0.spr
+	Tooltip:
+		Name: Taelon Power Generator
+	Inherits@shape: ^4x4Shape
+	HitShape:
+	Buildable:
+		Prerequisites: ~techlevel.infonly
+		Queue: Building
+		Description: Provides power for other structures.
+		BuildPaletteOrder: 20
+		BuildDuration: 30
+	Building:
+		Footprint: _=x_ =Xx= =xX= ====
+		Dimensions: 4,4
+		LocalCenterOffset: 0,-512,0
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Valued:
+		Cost: 2000
+	Health:
+		HP: 1450
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: 500
+	ScalePowerWithHealth:
+	Armor:
+		Type: Building
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	Refinery:
+		DockAngle: 64
+		DockOffset: 1,3
+	StoresResources:
+		PipCount: 17
+		Capacity: 2000
+	FreeActor:
+		Actor: Freighter
+		SpawnOffset: 0,3
+		Facing: 64
+	WithIdleOverlay@LAYER1:
+		Palette: barren
+		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
+	WithDeathAnimation:
+		DeathSequence: dead
+		UseDeathTypeSuffix: false
+
+WaterLaunchPad:
+	Inherits: ^DrBuilding
+	RenderSprites:
+		Image: nclnc1l0.spr
+	Tooltip:
+		Name: Water Launch Pad
+	Inherits@shape: ^5x3Shape
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 10
 		Prerequisites: ~techlevel.infonly
 		Description: Refines Ore and Gems\ninto credits.
-	Valued:
-		Cost: 1400
-	Tooltip:
-		Name: Ore Refinery
+		BuildDuration: 37
 	Building:
-		Footprint: _X_ xxx X==
-		Dimensions: 3,3
-		LocalCenterOffset: 0,-512,0
+		Footprint: _Xxx= xxxX= ====_
+		Dimensions: 5,3
+		LocalCenterOffset: -256,-512,0
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	Selectable:
 		Bounds: 72,50,0,12
 		DecorationBounds: 72,70,0,-2
-	SelectionDecorations:
-	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	HitShape:
+		Type: Rectangle
+			TopLeft: -1536, -512
+			BottomRight: 1536, 598
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite:
+		Prerequisite: waterlaunch
+	Valued:
+		Cost: 2500
+	CustomSellValue:
+		Value: 600
 	Health:
-		HP: 90000
-	Armor:
-		Type: Wood
+		HP: 1300
 	RevealsShroud:
-		Range: 5c0
-		RevealGeneratedShroud: False
-	RevealsShroud@GAPGEN:
-		Range: 4c0
+		Range: 8c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
 	Refinery:
 		DockAngle: 64
 		DockOffset: 1,2
 	StoresResources:
 		PipCount: 17
 		Capacity: 2000
-	CustomSellValue:
-		Value: 600
 	FreeActor:
-		Actor: ucfrgst0.spr
+		Actor: Freighter
 		SpawnOffset: 1,2
 		Facing: 64
-	Power:
-		Amount: -30
+	WithIdleOverlay@LAYER1:
+		Palette: barren
+		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 	WithDeathAnimation:
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
-	ProvidesPrerequisite@buildingname:
-	HitShape:
-		Type: Rectangle
-			TopLeft: -1536, -512
-			BottomRight: 1536, 598
-	HitShape@TOP:
-		TargetableOffsets: 1680,0,0
-		Type: Rectangle
-			TopLeft: -512, -1536
-			BottomRight: 512, -512
-	HitShape@BOTTOMLEFT:
-		TargetableOffsets: -1260,-1024,0
-		Type: Rectangle
-			TopLeft: -1536, 598
-			BottomRight: -512, 1280
 
-tfhqt1l0.spr:
+HQ.human:
 	Inherits: ^DrHeadquarters
+	RenderSprites:
+		Image: nfhqt1l0.spr
 	Tooltip:
-		Name: Freedom Guard Headquarters
+		Name: Headquarters
 	Buildable:
-		Description: 
-		Prerequisites: ~structures.fguard
-		BuildPaletteOrder: 0
-	ProvidesRadar:
-		RequiresCondition: !jammed && !disabled
-	Valued:
-		Cost: 250 # 2500
+		Prerequisites: ~rig.human
+	Health:
+		HP: 1200
+	WithIdleOverlay@LAYER1:
+		Palette: barren
+		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 
-tihqt1l0.spr:
+HQ.cyborg:
 	Inherits: ^DrHeadquarters
+	RenderSprites:
+		Image: nihqt1l0.spr
 	Tooltip:
-		Name: Imperium Headquarters
+		Name: Headquarters
 	Buildable:
-		Description: 
-		Prerequisites: ~structures.imperium
-		BuildPaletteOrder: 0
-	ProvidesRadar:
-		RequiresCondition: !jammed && !disabled
-	Valued:
-		Cost: 250 # 2500
-
-tclnc1l0.spr:
-	Inherits: ^DrRefinery
-	Tooltip:
-		Name: Water Launch Pad
-	Buildable:
-		Description: 
-		BuildPaletteOrder: 10
-	#BuildTime: 37 ?
-	Valued:
-		Cost: 250 # 2500
+		Prerequisites: ~rig.cyborg
 	Health:
-		HP: 1300
+		HP: 1440
+	WithIdleOverlay@LAYER1:
+		Palette: barren
+		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 
-tcpow1l0.spr:
-	Inherits: ^DrPower
-	Tooltip:
-		Name: Taelon Power Generator
-	Buildable:
-		Description: 
-		BuildPaletteOrder: 20
-	#BuildTime: 30 ?
-	Valued:
-		Cost: 200 # 2000
-	Health:
-		HP: 1450
-
-nfutf1l0.spr:
+TrainingFacility.fguard:
 	Inherits: ^DrTrainingFacility
+	RenderSprites:
+		Image: nfutf1l0.spr
 	Tooltip:
 		Name: Training Facility
 	Buildable:
-		Description: 
-		Prerequisites: ~structures.fguard
-		BuildPaletteOrder: 30
-	#BuildTime: 45 ?
-	Valued:
-		Cost: 150 # 1500
+		Prerequisites: ~rig.fguard, hq.fguard
 	Health:
 		HP: 750
-	WithIdleOverlay@TOP:
+	WithIdleOverlay@LAYER1:
+		Palette: barren
+		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
+
+TrainingFacility.imperium
+	Inherits: ^DrTrainingFacility
+	RenderSprites:
+		Image: niutf1l0.spr
+	Tooltip:
+		Name: Training Facility
+	Buildable:
+		Prerequisites: ~rig.imperium, hq.imperium
+	Health:
+		HP: 900
+	WithIdleOverlay@LAYER1:
+		Palette: barren
+		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
+	WithIdleOverlay@LAYER3:
+		Sequence: idle-top3
+	WithIdleOverlay@LAYER4:
+		Sequence: idle-top4
+
+TrainingFacility.xenite:
+	Inherits: TrainingFacility.fguard
+	RenderSprites:
+		Image: nfnes1l0.spr
+	Buildable:
+		Prerequisites: ~rig.xenite, hq.xenite
+
+AssemblyPlant.human:
+	Inherits: ^DrAssemblyPlant
+	RenderSprites:
+		Image: nfvcy1l0.spr
+	Tooltip:
+		Name: Assembly Plant
+	Buildable:
+		Prerequisites: ~rig.human, hq.human
+	Health:
+		HP: 1000
+	WithIdleOverlay@LAYER1:
+		Palette: barren
+		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
+
+AssemblyPlant.imperium:
+	Inherits: ^DrAssemblyPlant
+	RenderSprites:
+		Image: nivcy1l0.spr
+	Tooltip:
+		Name: Assembly Plant
+	Buildable:
+		Prerequisites: ~rig.imperium, hq.imperium
+	Health:
+		HP: 1200
+	WithIdleOverlay@LAYER1:
+		Palette: barren
+		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
+	WithIdleOverlay@LAYER3:
+		Sequence: idle-top3
+	WithIdleOverlay@LAYER4:
+		Sequence: idle-top4
+
+^SmallTurret:
+	Inherits: ^Defense
+	Inherits@shape: ^2x2Shape
+	Building:
+		Footprint: Xx xX
+		Dimensions: 2,2
+		#LocalCenterOffset: 384,-256,0
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -50
+	Armor:
+		Type: Building
+	WithSpriteTurret:
+	AttackTurreted:
+	WithMuzzleOverlay:
+	DetectCloaked:
+		Range: 6c0
+	WithIdleOverlay@LAYER1:
+		Palette: barren
+		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
+
+# FG laser turret
+LaserTurret:
+	Inherits: ^SmallTurret
+	RenderSprites:
+		Image: nfgdt1l0.spr
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Tooltip:
+		Name: Laser Turret
+	Buildable:
+		Prerequisites: ~rig.human
+		Queue: Building
+		Description: Laser Defense Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 22
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: LaserRifle
+		LocalOffset: 512,0,112
+
+# Imperium plasma turret
+PlasmaTurret:
+	Inherits: ^SmallTurret
+	RenderSprites:
+		Image: nigdt1l0.spr
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Tooltip:
+		Name: Plasma Turret
+	Buildable:
+		Prerequisites: ~rig.cyborg
+		Queue: Building
+		Description: Plasma Defense Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 22
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: PlasmaRifle
+		LocalOffset: 512,0,112
+
+# FG heavy rail turret
+HeavyRailTurret:
+	Inherits: ^Defense
+	RenderSprites:
+		Image: nfagt1l0.spr
+	Inherits@shape: ^3x3Shape
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Building:
+		Footprint: Xxx xxx xxX
+		Dimensions: 3,3
+		#LocalCenterOffset: 384,-256,0
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	Tooltip:
+		Name: Heavy Rail Turret
+	Buildable:
+		Prerequisites: ~hq.human, upgrade.hq1, vehicles, barracks
+		Queue: Building
+		Description: Heavy Rail Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 51
+	Valued:
+		Cost: 1700
+	Health:
+		HP: 550
+	RevealsShroud:
+		Range: 12c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: LaserRifle
+		LocalOffset: 512,0,112
+	WithSpriteTurret:
+	AttackTurreted:
+	WithMuzzleOverlay:
+	DetectCloaked:
+		Range: 6c0
+	WithIdleOverlay@LAYER1:
 		Sequence: idle-top
 
-niutf1l0.spr:
-	Inherits: ^DrTrainingFacility
+# Imperium neutron accelerator
+NeutronAccelerator:
+	Inherits: ^Defense
+	RenderSprites:
+		Image: niagt1l0.spr
+	Inherits@shape: ^3x3Shape
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Building:
+		Footprint: Xxx xxx xxX
+		Dimensions: 3,3
+		#LocalCenterOffset: 384,-256,0
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
 	Tooltip:
-		Name: Training Facility
+		Name: Neutron Accelerator
 	Buildable:
-		Description: 
-		Prerequisites: ~structures.imperium
-		BuildPaletteOrder: 30
-	#BuildTime: 45 ?
-	Valued:
-		Cost: 150 # 1500
-	Health:
-		HP: 750
-	WithIdleOverlay@TOP:
-		Sequence: idle-top2
-	WithIdleOverlay@TOP:
-		Sequence: idle-top3
-
-nfvcy1l0.spr:
-	Inherits: ^DrAssemblyPlant
-	Tooltip:
-		Name: Assembly Plant
-	Buildable:
-		Description: 
-		Prerequisites: ~structures.fguard
-		BuildPaletteOrder: 40
-	#BuildTime: 66 ?
-	Valued:
-		Cost: 220 # 2200
-	Health:
-		HP: 1000
-
-nivcy1l0.spr:
-	Inherits: ^DrAssemblyPlant
-	Tooltip:
-		Name: Assembly Plant
-	Buildable:
-		Description: 
-		Prerequisites: ~structures.imperium
-		BuildPaletteOrder: 40
-	#BuildTime: 66 ?
-	Valued:
-		Cost: 220 # 2200
-	Health:
-		HP: 1000
-
-nfgdt1l0.spr:
-	Inherits: ^DrPower
-	Tooltip:
-		Name: Laser Defense Turret
-	Buildable:
-		Description: 
-		Prerequisites: ~structures.fguard
+		Prerequisites: ~hq.cyborg, upgrade.hq1, vehicles, barracks
+		Queue: Building
+		Description: Neutron Accelerator
 		BuildPaletteOrder: 50
-	#BuildTime: 66 ?
+		BuildDuration: 51
 	Valued:
-		Cost: 220 # 2200
+		Cost: 1700
+	Health:
+		HP: 550
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: PlasmaRifle
+		LocalOffset: 512,0,112
+	WithSpriteTurret:
+	AttackTurreted:
+	WithMuzzleOverlay:
+	DetectCloaked:
+		Range: 6c0
+	WithIdleOverlay@LAYER1:
+		Sequence: idle-top
+
+# FG anti-air turret
+AntiAirTurret.human:
+	Inherits: ^SmallTurret
+	RenderSprites:
+		Image: nfaar1l0.spr
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Tooltip:
+		Name: Anti-Air Turret
+	Buildable:
+		Prerequisites: ~hq.human, upgrade.hq1, vehicles, barracks
+		Queue: Building
+		Description: Anti-Air Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 30
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 12c0
+	Power:
+		Amount: -50
+	Armor:
+		Type: Building
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: LaserRifle
+		LocalOffset: 512,0,112
+
+# Imperium anti-air turret
+AntiAirTurret.cyborg:
+	Inherits: ^SmallTurret
+	RenderSprites:
+		Image: niaar1l0.spr
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	Tooltip:
+		Name: Anti-Air Turret
+	Buildable:
+		Prerequisites: ~hq.cyborg, upgrade.hq1, vehicles, barracks
+		Queue: Building
+		Description: Anti-Air Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 30
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 720
+	RevealsShroud:
+		Range: 12c0
+	Power:
+		Amount: -50
+	Armor:
+		Type: Building
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: PlasmaRifle
+		LocalOffset: 512,0,112
+
+# Camera tower
+CameraTower:
+	Inherits: ^DrBuilding
+	RenderSprites:
+		Image: nccam1l0.spr
+	Tooltip:
+		Name: Camera Tower
+	Buildable:
+		Prerequisites: ~hq, upgrade.hq1, vehicles, barracks
+		Queue: Building
+		Description: Camera Tower
+		BuildPaletteOrder: 50
+		BuildDuration: 6
+	Valued:
+		Cost: 200
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 16c0
+	Power:
+		Amount: -50
+	Armor:
+		Type: Building
+	WithIdleOverlay@LAYER1:
+		Sequence: idle-top
+
+# FG field hospital
+Hospital.human:
+	Inherits: ^DrGenericBuilding
+	RenderSprites:
+		Image: nfhsp1l0.spr
+	Inherits@shape: ^5x4Shape
+	Building:
+		Footprint: _xxxX xxxxx xxxxx Xxxx_
+		Dimensions: 5,4
+		#LocalCenterOffset: 384,-256,0
+	Tooltip:
+		Name: Field Hospital
+	Buildable:
+		Prerequisites: ~hq.human, barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 15
+	ProvidesPrerequisite@hospital:
+		Prerequisite: hospital
+	Valued:
+		Cost: 500
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
+	WithIdleOverlay@LAYER1:
+		Sequence: idle-top
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+
+		
+# Imperium field hospital
+Hospital.cyborg:
+	Inherits: ^DrGenericBuilding
+	RenderSprites:
+		Image: nihsp1l0.spr
+	Inherits@shape: ^5x4Shape
+	Building:
+		Footprint: _xxxX xxxxx xxxxx Xxxx_
+		Dimensions: 5,4
+		#LocalCenterOffset: 384,-256,0
+	Tooltip:
+		Name: Field Hospital
+	Buildable:
+		Prerequisites: ~hq.cyborg, barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 15
+	ProvidesPrerequisite@hospital:
+		Prerequisite: hospital
+	Valued:
+		Cost: 500
+	Health:
+		HP: 720
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
+	WithIdleOverlay@LAYER1:
+		Sequence: idle-top
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+
+# FG repair pad
+Repair.human:
+	Inherits: ^DrAssemblyPlant
+	RenderSprites:
+		Image: nfrep1l0.spr
+	Tooltip:
+		Name: Repair Station
+	Buildable:
+		Prerequisites: ~hq.human, vehicles
+		BuildPaletteOrder: 50
+		BuildDuration: 24
+	ProvidesPrerequisite@repair:
+		Prerequisite: repair
+	Valued:
+		Cost: 800
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
+	WithIdleOverlay@LAYER1:
+		Sequence: idle-top
+
+# Imperium repair pad
+Repair.cyborg:
+	Inherits: ^DrAssemblyPlant
+	RenderSprites:
+		Image: nirep1l0.spr
+	Tooltip:
+		Name: Repair Station
+	Buildable:
+		Prerequisites: ~hq.cyborg, vehicles
+		BuildPaletteOrder: 50
+		BuildDuration: 24
+	ProvidesPrerequisite@repair:
+		Prerequisite: repair
+	Valued:
+		Cost: 800
+	Health:
+		HP: 720
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
+	WithIdleOverlay@LAYER1:
+		Sequence: idle-top
+
+# Phasing facility
+PhasingFacility:
+	Inherits: ^DrAssemblyPlant
+	RenderSprites:
+		Image: nfphf1l0.spr
+	Tooltip:
+		Name: Phasing Facility
+	Buildable:
+		Prerequisites: hq
+		BuildPaletteOrder: 50
+		BuildDuration: 36
+	ProvidesPrerequisite@phasing:
+		Prerequisite: phasing
+	Valued:
+		Cost: 1200
 	Health:
 		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
+	WithIdleOverlay@LAYER1:
+		Sequence: idle-top
+	GrantConditionOnPrerequisite:
+		Prerequisites: upgrade.phasing
+		Condition: stardecoration
+	WithDecoration@upgraded:
+		RequiresSelection: true
+		Image: pips
+		Sequence: pip-red
+		ReferencePoint: Bottom, Left
+		ZOffset: 256
+		RequiresCondition: stardecoration
+
+# FG rearming deck
+RearmingDeck.human:
+	Inherits: ^DrAssemblyPlant
+	RenderSprites:
+		Image: nfrrm1l0.spr
+	Tooltip:
+		Name: Rearming Deck
+	Buildable:
+		Prerequisites: ~hq.human, upgrade.hq2, vehicles, barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 30
+	ProvidesPrerequisite@air:
+		Prerequisite: air
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -120
+	Armor:
+		Type: Building  # TODO
+	WithIdleOverlay@LAYER1:
+		Sequence: idle-top
+
+# Imperium rearming deck
+RearmingDeck.cyborg:
+	Inherits: ^DrAssemblyPlant
+	RenderSprites:
+		Image: nirrm1l0.spr
+	Tooltip:
+		Name: Rearming Deck
+	Buildable:
+		Prerequisites: ~hq.cyborg, upgrade.hq2, vehicles, barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 30
+	ProvidesPrerequisite@air:
+		Prerequisite: air
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 960
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
+	WithIdleOverlay@LAYER1:
+		Sequence: idle-top
+
+# Imperium temporal gate
+TemporalGate:
+	Inherits: ^DrAssemblyPlant
+	RenderSprites:
+		Image: nitgt1l0.spr
+	Tooltip:
+		Name: Temporal Gate
+	Buildable:
+		Prerequisites: ~hq.cyborg, upgrade.hq2, vehicles, barracks
+		BuildPaletteOrder: 60
+		BuildDuration: 54
+	ProvidesPrerequisite@temporal:
+		Prerequisite: temporal
+	Valued:
+		Cost: 1800
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -200
+	Armor:
+		Type: Building
+	WithIdleOverlay@LAYER1:
+		Sequence: idle-top
+
+# Imperium temporal rift creator
+TemporalRiftCreator:
+	Inherits: ^DrAssemblyPlant
+	RenderSprites:
+		Image: nitrc1l0.spr
+	Tooltip:
+		Name: Temporal Rift Creator
+	Buildable:
+		Prerequisites: ~hq.cyborg, upgrade.hq2, vehicles, barracks
+		BuildPaletteOrder: 60
+		BuildDuration: 240
+	ProvidesPrerequisite@temporal:
+		Prerequisite: temporal
+	Valued:
+		Cost: 8000
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -200
+	Armor:
+		Type: Building
+	WithIdleOverlay@LAYER1:
+		Sequence: idle-top

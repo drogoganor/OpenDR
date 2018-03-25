@@ -5,15 +5,14 @@
 	ActorMap:
 	LoadWidgetAtGameStart:
 	MusicPlaylist:
-		VictoryMusic: win1
-		DefeatMusic: nod_map1
+		VictoryMusic: acid
+		DefeatMusic: acid
 	DebugVisualizations:
 	TerrainGeometryOverlay:
-#	ShroudRenderer:
-#		ShroudVariants: typea, typeb, typec, typed
-#		FogVariants: typea, typeb, typec, typed
-#		OverrideFullShroud: full
-#		OverrideFullFog: full
+	ShroudRenderer:
+		FogVariants: shroud
+		Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
+		UseExtendedIndex: true
 	Faction@0:
 		Name: Freedom Guard
 		InternalName: freedom
@@ -46,7 +45,7 @@
 		Description: 
 	Faction@6:
 		Name: Shadowhand
-		InternalName: shand
+		InternalName: shadowhand
 		Side: Expansion
 		Description: 
 	Faction@7:
@@ -92,7 +91,7 @@ World:
 	DomainIndex:
 	ResourceLayer:
 	ResourceClaimLayer:
-#	WarheadDebugOverlay:
+	WarheadDebugOverlay:
 	CustomTerrainDebugOverlay:
 	MapCreeps:
 		CheckboxVisible: False
@@ -101,6 +100,7 @@ World:
 		AllyBuildRadiusCheckboxDisplayOrder: 4
 		BuildRadiusCheckboxDisplayOrder: 5
 	MapOptions:
+		GameSpeed: fast
 		ShortGameCheckboxDisplayOrder: 2
 		TechLevelDropdownDisplayOrder: 2
 		GameSpeedDropdownDisplayOrder: 3
@@ -108,10 +108,15 @@ World:
 	CreateMPPlayers:
 	MPStartUnits@mcvonly:
 		Class: none
+		ClassName: One Rig
+		Factions: fguard, imperium, togran, xenite, shadowhand
+		BaseActor: ConstructionRig
+	MPStartUnits@threerigs:
+		Class: light
 		ClassName: Three Rigs
-		Factions: fguard, imperium, togran, xenite, shand
-		BaseActor: ucfcnst0.spr
-		SupportActors: ucfcnst0.spr,ucfcnst0.spr
+		Factions: fguard, imperium, togran, xenite, shadowhand
+		BaseActor: ConstructionRig
+		SupportActors: ConstructionRig,ConstructionRig
 		InnerSupportRadius: 3
 		OuterSupportRadius: 5
 	SpawnMPUnits:
@@ -129,8 +134,9 @@ EditorWorld:
 	Inherits: ^BaseWorld
 	EditorActorLayer:
 	EditorResourceLayer:
-#	EditorSelectionLayer:
+	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
+	MapOptions:
 
 
 Player:
@@ -158,15 +164,24 @@ Player:
 		Type: Infantry
 		LowPowerSlowdown: 3
 		SpeedUp: True
-	ClassicProductionQueue@Aircraft:
-		Type: Aircraft
-		LowPowerSlowdown: 3
+	ClassicProductionQueue@Upgrade:
+		Type: Upgrade
+		#BuildDurationModifier: 250
+		#LowPowerSlowdown: 1
+		QueuedAudio: Upgrading
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: Upgrading
+	ClassicProductionQueue@Economy:
+		Type: Economy
+		#BuildDurationModifier: 250
+		#LowPowerSlowdown: 1
 		QueuedAudio: Building
-		SpeedUp: True
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: NoRoom
 	Shroud:
 		FogCheckboxDisplayOrder: 3
 		ExploredMapCheckboxEnabled: True
-		FogCheckboxEnabled: False
+		FogCheckboxEnabled: True
 	PlaceBuilding:
 	SupportPowerManager:
 	ScriptTriggers:
@@ -175,6 +190,8 @@ Player:
 	PowerManager:
 	AllyRepair:
 	PlayerResources:
+		SelectableCash: 15000, 20000, 30000, 45000, 60000, 90000
+		DefaultCash: 15000
 		InsufficientFundsNotification: InsufficientFunds
 	DeveloperMode:
 		CheckboxDisplayOrder: 8

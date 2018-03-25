@@ -1,0 +1,359 @@
+Dark Reign units an buildings table
+Created by Zaphod
+
+comments to dr_zaphod@gmx.net please
+
+Printing this document: load in word processor (f.e. ms-word),
+choose a small font (courier new 8) , adjust page wraps manually
+
+Page 1 : Buildings
+Page 2 : Units
+Page 3 : Units + Weapons
+Page 4 : Expansion Set Units
+Page 5 : Projectile types an damage values
+Page 6 : Resources + Productions
+
+****************************************************************************************
+Page 1 : Buildings
+
+Name                            Cost Build hits see  energy  max    sell  hit/   hit
+                                     time       range        repair       cost   constr
+Small_Bridge                     100   3   400               Cost  =p*3/8 4,00   667
+Small_Centre_Bridge              150   5   400              =h*0.8        2,67   400
+Camera_Tower                     200   6   150  16    50       120    75  0,75   125
+Water_Launch_Pad                2800  37  1300   8   100      1040   938  0,46   176
+Taelon_Power_Generator          2300  30  1450   8 -500..1000 1160   750  0,63   242
+
+FG_Headquarters_1               1050  22  1200   8   100       960   281  1,14   273
+FG_Headquarters_2               2050  52  2400   8   200      1920   656  1,17
+FG_Headquarters_3               3300  89  3600  16   300      2880  1125  1,09
+FG_Training_Facility            1800  45   750   8   100       600   563  0,42    83
+FG_Advanced_Training_Facility   2550  68  1500   8   200      1200   844  0,59
+FG_Assembly_Plant               2500  66  1000   8   100       800   825  0,40    76
+FG_Advanced_Assembly_Plant      5000 141  2000   8   200      1600  1763  0,40
+FG_Laser_Turret                  800  22   400   8    50       320   188  0,50    91
+FG_Heavy_Laser_Platform         2000  51   550  12   100       440   638  0,28    54
+Air_Defense_Site                1300  30   600  12    50       480   375  0,46   100
+Rearming_Deck                   1300  30   600   8   120       480   375  0,46   100
+Field_Hospital                   800  15   600   8   100       480   188  0,75   200
+Repair_Station                  1100  24   600   8   100       480   300  0,55   125
+FG_Phasing_Facility             1500  36  1000   8   100       800   450  0,67   139
+FG_Advanced_Phasing_Facility    2700  72  2000   8   200      1600   900  0,74
+Decoys                           200   6   200   8     0              75  1,00   167
+
+Imp_Headquarters_1              1050  22  1440   8   100      1152   281  1,37   327
+Imp_Headquarters_2              2050  52  2880   8   200      2304   656  1,40
+Imp_Headquarters_3              3300  89  4330  16   300      3464  1125  1,31
+Imp_Training_Facility           1800  45   900   8   100       720   563  0,50   100
+Imp_Advanced_Training_Facility  2550  68  1800   8   200      1440   844  0,71
+Imp_Assembly_Plant              2500  66  1200   8   100       960   825  0,48    91
+Imp_Advanced_Assembly_Plant     5000 141  2400   8   200      1920  1763  0,48
+Imp_Plasma_Turret                800  22   400   8    50       320   188  0,50    91
+Imp_Neutron_Accelerator         2000  51   550  12   100       440   638  0,28    54
+Air_Defense_Site                1300  30   720  12    50       576   375  0,55   120
+Rearming_Deck                   1300  30   960   8   100       768   375  0,74   160
+Field_Hospital                   800  15   720   8   100       576   188  0,90   240
+Repair_Station                  1100  24   720   8   100       576   300  0,65   150
+Imp_Temporal_Gate               2100  54  1000   8   100       800   675  0,48    93
+Imp_Temporal_Rift_Creator       8300 240  1000   8   200       800  3000  0,12    21
+
+  costs include 300cr for CRig or for upgraded buildings price of the base buildig
+  Build Time is mostly 33cr/20frames; pp and lp double speed , small turrets slower
+  lp has slower build time for imperium (45 instead of 37)
+  Selling gives 3/8 money back (halved when max.damaged); u retain the freigter of pp/lp
+  Sell time is half build time
+  Repair: 10 hits cost 8 cr in 20 frames
+  After upgrading the buildings have full hitpoints
+  Energy supply: 100; stage2 builds 200; HQ3: 300; Camera, sm.Turret, air defence = 50
+  EnergyEfficiency nearly all Builds: 90%TL -> 100%efficiency; 0TL->10%efficiency
+  HQ have allways >= 50% efficiency ; Temp.Gate + Rift need >=50%energy to recharge
+  seeing range allways 8; Big Turr. + Air Defense = 12; Camera + HQ3 = 16
+  Imp Buildings 1,2 * Hitpoints of FG Buildings except Turrets
+
+  Pack/unpack: 30/15pz ; Stage2+3 : 60/30 pc; No Turrets + pp possible
+  BaseMover : 500 Hits , Speed 6tl / 100fr; Damage proportional building damage.
+  LoadTime:  Rift 5000 , TGate 1200 ,Phase Transp 25fr/unit , move 8tl/100fr
+  Rearm. Deck: 1Flyer/2pz ; Repair/Hospital : 15hits/pc
+  tf/ap , turrets + rearm deck cannot be built near hostile buildings except
+    turrets , camtower and decoys
+
+
+****************************************************************************************
+Page 2: Units
+
+                      move seeing   Hit range   attak attk attak
+                cost    speed  hits size   area inf   tank build air
+Crig              300 f   6  9  100  5
+Freighter        1000 w  10  9  750 15                             loads 750cr or 50tl
+HovFreighter     1500 h  16  9  500 15   4   8  122   61   61   61 s.a; weapon turnable
+Contaminator    10000 t   4  9  166  8   1                         duration: 300fr;
+Infiltrator      1000 f  12  9   66  5                             spy :300-1200; bust: 500
+
+Scout             300 f  12 12   66  5                             can morph
+Raider            150 f   8  8  100  5   4   8  122   61   61
+Mercenary         300 f   8  8  125  5   5   8   92  183   64
+Martyr            600 f  16  8  100  5   2 100  180  135   72      once
+Sniper            700 f  12 12  100  5   8   8  294   29   29      morph; 1shot inf = 150
+Saboteur          800 f  12  9  100  5                   max50%    sabotage 120 fr; morph
+Medic             500 f   8  8   66  5   1   0
+Mechanic          500 f  12  8   66  5   1   0
+RATransport       450 w2 18  9  200 18                             loads 5 inf,crig,flak
+SpiderBike        500 w1 24  9  133 10   5   8   71  143   50         ^swimms speed 20%
+SkirmishTank      600 t  16  9  133 15   6  10  133  133   67  133 turnable
+TankHunter        700 t  20  9  150 15   3   8  286  429  114
+PhaseTank         600 t  12  9  166 15   6  10  214  107  107
+HoverTank        1300 h  12  9  200 15   8  20  114  229   80      turnable
+Artillery        1100 t   8  9  133 15  45 100   37   28   19       1 shot = 30/23/15
+Flak              500 f  12  9  100  5   8  50    0    0    0 50..238  duration 50 fr
+Sky-Bike          800 a  28  9  100 16   5  10   63   63   31  125  160fr = 100/100/50/200
+Outrider         1400 a  24  9  200 16   5  40  182  182   91       110fr = 200/200/100/0
+Shockwave        4000 w   8  9  166 10  24 10*24tl       115/tl     once; ignition 19fr
+laser Turret      800        9  400 2x2  5   8  250  125  125  125
+Heavy Turret     2000       12  550 3x3  9  16  236  473  165
+Air Defense      1300       12  600 2x2 10  10                 267
+
+Guardian          150 f   8  8  100  5   4   8  122   61   61
+Bion              350 f   6  8  150  5   4   8  200  150   80  100
+Exterminator      500 hf 16  8   75  5   5  24   71  179   36
+Zombie                f   6  8  100  5   2 100  180  135   72      once
+Amper             500 f   8  9   66  8   5   0                     200fr + maxhits * 2fr
+HostageTaker      600 w  20  9  450  9                             duration: 300fr
+Shredder          700 h  20  9  100 10   1   1  500    0    0      armor vs. e1 = 125
+TroopTransp       600 h  20  9  150 10   4   8  122   61   61      loads 5. turnable
+ScoutTank         500 h  20 13  150 11   6  10   71   36   36
+PlasmaTank        700 h  16  9  250 15   5   8  119   89   48      turnable
+TachyonTank      1500 h  12  9  410 15   8  20  143  143   57      turnable
+Tachyon SelfDestruct                     1  70   90   90   30      once
+SCARAB           1300 h   6  9 133(0) 15 45 100  37   28   19       +33% in 50fr
+MAD               800 h  16  9  150 15   8   8    0    0    0  229
+Drone             400 a  16  9   66 12
+Cyclone          1500 a  24  9  150 16   6  10  218  327  109  218  55fr = 120/180/60/120
+SkyFortress      2500 a  10  9  266 10   7  36  650  488  260      once every 700fr
+PlasmaTurret      800        8  400 2x2  5   8  250  188  100  125
+NeutronTurret    2000       12  550 3x3  9  12  486  365  195       1 shot = 180/135/72
+Air Defense      1300       12  720 3x3 10  10                 280  rift:ca.180-400 fr
+RiftGen          8300        8 1000 4x4 350 4tl 500  500 250/t 500 reload 5000 fr
+Decoys          100-200 orig 8 75-100 orig                         duration: 9000fr
+
+speed = tiles / 100 frames (normal ground). Screen = 18.7 tl
+attack values: hits / 100 frames (also for flyers) , or once if noticed
+seeing range and weapon range in tiles; hitsize + area effect in pixel
+hits inside the hitradius count full. Areaeffect. 100% in middle and 50% at border
+Min. Range: FgHoverTank , ImpTachTank , Cyclone:1; Artillery 3.
+Build time proportional to cost: 33cr / 20 fr; Raider 6pz Mercen. 11pz Bion 12pz
+Repair: Build: 50h/100fr, cost 40cr; Units: 75h/100fr; with med:70h/100fr , mech:45
+Phase Tranporter : Speed 8; loadtime 25fr/unit; no Shockwave + Transports
+For every units with area <= 20, and Outrider, area effect does not affect own units
+
+****************************************************************************************
+Page 3 : Units and Weapons
+
+  weapo delay init      shot   shot                          build                prereq
+     streng     st/del  durat  speed                          time
+                                                                 9  Crig             hq1
+                                        Load/unload in pc:      30  Freighter        ap1
+  e2  11   8  1  1,22      5   20       Water 6/6; TL 10/4      45  HovFreighter     ap2
+  r2   5   2  1  1,67      1   20                              150  Contaminator     ap2,hq3
+                                                                30  Infiltrator      tf2
+
+                                                                 9  Scout            tf1
+  e2  11   8  1  1,22      5   20                                6  Raider           tf1
+  e1  11  11  1  0,92      6   20                               11  Mercenary        tf1
+  e3 180      2  1,80                                           18  Martyr           tf1
+  s1 150  50  1  2,94     10   20                               21  Sniper           tf2
+                                                                24  Saboteur         tf2
+          10  1                                                 15  Medic            tf1,fh
+          10  1                                                 15  Mechanic         tf1,rs
+                                          swimms,speed=20%      14  RATransport      ap1
+  e1  10  13  1  0,71      6   20         elevation 9           15  SpiderBike       ap1
+  m2  28  20  1  1,33     17    9 (4-10)                        18  SkirmishTank     ap1
+  e5  60  20  1  2,86      8   10                               21  TankHunter       ap1
+  e2  30  13  1  2,14      8   20                               18  PhaseTank        ap1,ph1
+  e1  24  20  1  1,14     10   20                               39  HoverTank        ap2
+  k2  30  80  1  0,37    113   10                               33  Artillery        ap2
+  c1   8  15  1  0,50     15   13          +persistent 30       15  Flak             ap1,hq2
+  a1  10   7  1  1,25 20   4   30 (1-60)                        24  Sky-Bike         ap1,rd
+  m1  20  10  1  1,82 10  13   10 (.5-15)                       42  Outrider         ap1,rd
+  w1  17     19          300    2                              120  Shockwave        ap1,hq3,ph2
+  e2  10   3  1  2,50      6   20                               22  Laser Turret     hq1
+  e1  26  10  1  2,36     11   20                               51  Heavy Turret     hq1
+  a1  40  14  1  2,67      6   40                               30  Air Defense      hq2
+                 0,00
+  e2  11   8  1  1,22      5   20                                 6 Guardian         tf1
+  e3  18   8  1  2,00      6   17                                12 Bion             tf1
+  m3  15  20  1  0,71     25    5                                15 Exterminator     tf2
+  e3 180      2  1,80                                               Zombie           -
+  h1   0  10  1            6   20                                15 Amper            ap1,fh
+                                                                 18 HostageTaker     ap2
+  s2  10   1  1  5,00                                            21 Shredder         ap1
+  e2  11   8  1  1,22      5   20                                18 TroopTransp      ap1
+  e2  10  13  1  0,71      8   20                                15 ScoutTank        ap1
+  e3  19  15  1  1,19      6   20                                21 PlasmaTank       ap1
+  e4  30  20  1  1,43      6   35                                45 TachyonTank      ap2
+  e4  90      1  0,90                                               Tachyon SelfDestruct
+  k2  30  80  1  0,37    161    7          +persistent 10        39 SCARAB           ap2
+  a1  48  20  1  2,29      6   40                                24 MAD              ap1,hq2
+                                                                 12 Drone            ap1,hq2
+  g1  24  10  1  2,18  5   8   20                                45 Cyclone          ap1,hq3,rd
+  e3 650      1  6,50      5   35                                75 SkyFortress      ap1,hq3,rd
+  e3  10   3  1  2,50      6   20                                22 PlasmaTurret     hq1
+  e3 180  32  5  4,86      6   35                                51 NeutronTurret    hq2
+  a1  42  14  1  2,80      6   40                                30 Air Defense      hq2
+                         180-400                                240 RiftGen          hq3,tg
+                                                               3..6 Decoys           orig
+
+  Speed in Terrain            shot duration = frames at max. distance (=range)
+     nor mud roug stre elev   shot speed in pix/frame (==4tl/100fr)
+  f  100  50  50 150   9       build time in pc(=20fr).
+  w  100  25  25 200   6       Rotation speed. grad/fr: inf 30, else 10, PzJäg 30
+  t  100  50  25 150   6          FGRAT 12 , PlasmaT: 8.
+  h  100 100  25 100   3       RotSpeed shot: all 0, SkirmT 12, SkyBike + OutR 10
+
+
+
+****************************************************************************************
+Page 4: Expansion set units:
+
+                     move  seeing   hit range   attak attk attk
+                 cost  speed   hits size   area inf   tank bui air
+TFRoad            400 f   8  9  100   5                             radius 5
+TFMarsh           600 f   8  9  100   5                             radius 5
+
+Gant              250 f  14  8  150   6   2   8  375  250   63      Selfheal 30 1300
+Trainer           300 f  12  8  100  18                             radius 8
+Grendel          1100 f  10  9  250   6   7  10  238  310+  71  
+    selfheal 30 1400; (tplwet=)
+GrRider          1700 f  10  9  300  10   7  10  238  310+  71      selfheal 30 1400 (->405)
+RAT2              450 w2 18  9  200  18   4   8  122   61   61      turnable
+PowerSpiker      2800 f   8  8  100   5                             delay 30; reload:1800
+Avenger          2200 a  18  9  115  16  12   8  400  400  200      one shot
+
+Reaper            400 f   8  8  175   5   5   8  143  214   71      vs. animal: 243
+Shredder2         700 h  20  9  115  10   0   1  500    0    0      vs. animal only 40%
+Gemini            700 h  10  9  340  15   5   8  180  135   72      turnable
+GeminiFast            h  20  9  170  15   5   8  100   75   40      turnable
+Fury             1600 f  10  9  400  15   8  20  238  238   95      minrange: 2; turnable 90°
+Furygun2                                  1   8  440  440  176
+Hades            2200 a  20  9  150  10   7  80  394  295  197      80fr = 315/236/158;+15%
+Emp              2600 a  12  9  150   5   4                         tankplating; del 15,750
+
+
+
+  weap   del init        shot shot            rotation      build time  name    prereq
+    stren        st/del  dur  speed
+                                                          30     12 TFRoad      hq2
+                                                          30     18 TFMarsh     hq2
+
+  e7  25   9  1  2,50      2   30            20/40/55             8 Gant        tf1
+                                                          12      9 Trainer     tf1
+  e6  50  20  1  2,38      9   20            10//25/45           33 Grendel     tf2
+  e6  50  20  1  2,38      9   20            10//25/45           51 GrRider     tf2
+  e2  11   8  1  1,22      5   20            12//12              14 RAT2        ap1
+                                                          30     84 PowerSpiker ap2; hq3
+  m1 400  99  1  4,00     12   25 (20-30)                  5     66 Avenger     ap1; rd
+
+  g1  30  20  1  1,43      5   25                         30     13 Reaper      tf1; nexus
+  s2  10   1  1  5,00                                     10     21 Shredder2   tf1
+  e3   9   4  1  1,80      6   20            8//10               21 Gemini      ap1; nexus
+  e3   9   8  1  1,00      6   20            8//10               21 GeminiFast
+  e4  50  20  1  2,38     10   20            10//10/90           48 Fury        ap2; nexus
+  e4  22   4  1  4,40     25    1            10//10/90              Furygun2
+  k2  63  15  1  3,94 Pe  13   13                         10     66 Hades       ap1,hq3,rd
+                                                          30     78 Emp         ap2;hq3
+
+  s1 170   3  1 42,50      4   40                         30        Radec
+
+
+Buildings:       cost    btime hits    energy
+FgBiotech1       2200    57     750    100
+FgBiotech2       3700   102     750    100
+ShNexus          1300    30    1400    100
+cost incl 300 for CRig
+ShHq2  needs Nexus but no tf/ap
+
+****************************************************************************************
+Page 5 : Projectile Types and Damage Values
+
+                            inf tan bui air        animal
+         Rail Gun        e1 100 200  70              150
+         LaserGun        e2 100  50  50  50          100
+         plasma          e3 100  75  40  50          110
+         tachyon         e4 100 100  40              100
+         Elecktro        e5 100 150  40              100
+         or - missile    m1 100 100  50              100
+         missile         m2 100 100  50 100          100
+         polyacid        m3 100 250  50              100
+         Artillery       k2 100  75  50              100
+         Sniper          s1 100  10  10              100
+         shredder        s2 100   0   0               40
+         AirLaser        a1  50  50  25 100           50
+         Flak            c1   0 100   0 100            0
+         Cyclone         g1 100 150  50 100          170
+
+         Electroblast    e6 100 130  30              100
+         Claws           e7 150 100  25 100          100
+
+         All values>0:  + random = +/- 10%
+         e1 vs Shredder only 125
+         e6 vs tankplatingwet: 170
+
+
+         Is used by:
+  e1     Mercenary,SpiderBike,HoverTank,HeavyRailPlatform
+  e2     Raider,HoverFreighter,PhaseTank,LaserTurret,Guardian,ScoutTank,TroopTransport
+  e3     Martyr,Bion,PlasmaTank,PlasmaTower,NeutronTower,SkyFortress,Tach.SelfDestruct,SHGemini
+  e4     TachyonTank, SHFury
+  e5     TankHunter
+  m1     Outrider,  FXAvenger
+  m2     SkirmishTank
+  m3     Exterminator
+  k2     Artillery , SHHadesBomber
+  s1     Sniper
+  s2     Shredder , SHShredder2
+  a1     SkyBike , AntiAirSites, IMP-MAD
+  c1     FGFlak
+  g1     Zyklon, SHReaper
+  e6     FXGrendel , FXGrendelRider
+  e7     FXGant
+
+
+****************************************************************************************
+Page 6: Resources:
+
+        Reserv Reserv   rate  load   load  unload
+	start    max    /pc   amount time  time        times in pc
+Water   10000  10000    20    750      6    6          1pz == 20fr
+Tealon     40    500     1     50     10    4
+
+Examples for Water rates
+Distance Freigters time/load  cr/pc
+   3       2           8       94    <- maximum
+   3       1          14       54
+   10      1          26       29
+   20      1          36       20    <-
+   55      2          36       20    <- just enought to earn the refilling rate
+
+  to compare: one assembly plant needs about 30 cr/pc for continous production
+
+
+Productions:
+  here is listed how much faster the units production works , if more than one
+  factory works (for some example units).
+
+		Time	1	2	3	4	5	6	7	8	9
+Raider            6	1,00	1,60	2,00	2,00	2,00	2,67	2,67	2,67	2,67
+Scout	          9	1,00	1,57	2,20	2,20	2,75	2,75	2,75	2,75	3,67
+Mercenary        11	1,00	1,63	2,17	2,60	2,60	3,25	3,25	3,25	3,25
+SkirmishTank     18	1,00	1,82	2,50	2,86	3,33	4,00	4,00	4,00	5,00
+HoverTank        39	1,00	1,86	2,73	3,42	4,10	4,56	5,13	5,86	5,86
+Shockwave       120	1,00	1,97	2,90	3,81	4,69	5,55	6,10	7,18	7,63
+
+
+
+
+
+
+--------------------------------------------------------------------------------
+
+
+

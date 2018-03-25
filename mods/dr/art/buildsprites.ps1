@@ -1,1 +1,1 @@
-D:\Development\DarkReign\engine\OpenRA.Utility.exe ra --shp "D:\Development\DarkReign\mods\dr\waypoint.png"
+D:\Development\DarkReign\engine\OpenRA.Utility.exe ra --shp "D:\Development\DarkReign\mods\dr\art\overlay.png" "D:\Development\DarkReign\mods\dr\art\overlay2.png"

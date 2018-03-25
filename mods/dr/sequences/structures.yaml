@@ -3,7 +3,7 @@
 # Buildings
 
 # Taelon Power Generator
-tcpow1l0.spr:
+ncpow1l0.spr:
 	Defaults:
 		AddExtension: False
 	idle:
@@ -21,33 +21,43 @@ tcpow1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
+	idle-top: barren|ncpow1l0.spr
+		ZOffset: -1023
+		Start: 1
+	idle-top2: tcpow1l0.spr
+		Start: 1
 	icon: bcpowmn0.spr
 	fake-icon: bcpowmn0.spr
 
 # Water Launch Pad
-tclnc1l0.spr:
+nclnc1l0.spr:
 	Defaults:
 		AddExtension: False
 	idle:
-		Start: 0
+		Start: 1
 	make:
-		Start: 0
+		Start: 1
 	build:
-		Start: 0
+		Start: 1
 		Length: 1
 	damaged-idle:
-		Start: 0
+		Start: 1
 	damaged-build:
-		Start: 0
+		Start: 1
 		Length: 1
 	dead:
-		Start: 0
+		Start: 1
 		Tick: 800
+	idle-top: barren|nclnc1l0.spr
+		ZOffset: -1023
+		Start: 1
+	idle-top2: tclnc1l0.spr
+		Start: 1
 	icon: bclncmn0.spr
 	fake-icon: bclncmn0.spr
 
 # Freedom Guard HQ
-tfhqt1l0.spr:
+nfhqt1l0.spr:
 	Defaults:
 		AddExtension: False
 	idle:
@@ -65,33 +75,67 @@ tfhqt1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
+	idle-top: barren|nfhqt1l0.spr
+		ZOffset: -1023
+		Start: 1
+	idle-top2: tfhqt1l0.spr
+		Start: 1
 	icon: bfhqtmn0.spr
 	fake-icon: bfhqtmn0.spr
+
+bfhqtmn1.spr:
+	Defaults:
+		AddExtension: False
+	icon:
+		Start: 0
 		
+bfhqtmn2.spr:
+	Defaults:
+		AddExtension: False
+	icon:
+		Start: 0
+
+# Phasing facility upgrade icon
+bfphfmn1.spr:
+	Defaults:
+		AddExtension: False
+	icon:
+		Start: 0
+
+
 # Freedom Guard Training Facility
 nfutf1l0.spr:
 	Defaults:
 		AddExtension: False
 	idle:
-		Start: 0
+		Start: 1
 	make:
-		Start: 0
+		Start: 1
 	build:
-		Start: 0
-		Length: 0
+		Start: 1
+		Length: 1
 	damaged-idle:
-		Start: 0
+		Start: 1
 	damaged-build:
-		Start: 0
-		Length: 0
+		Start: 1
+		Length: 1
 	dead:
-		Start: 0
+		Start: 1
 		Tick: 800
-	idle-top:
+	idle-top: barren|nfutf1l0.spr
+		ZOffset: -1023
+		Start: 1
+	idle-top2: tfutf1l0.spr
 		Start: 1
 	icon: bfutfmn0.spr
 	fake-icon: bfutfmn0.spr
-		
+
+bfutfmn1.spr:
+	Defaults:
+		AddExtension: False
+	icon:
+		Start: 0
+
 # Freedom Guard Assembly Plant
 nfvcy1l0.spr:
 	Defaults:
@@ -111,12 +155,23 @@ nfvcy1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
+	idle-top: barren|nfvcy1l0.spr
+		ZOffset: -1023
+		Start: 1
+	idle-top2: tfvcy1l0.spr
+		Start: 1
 	icon: bfvcymn0.spr
 	fake-icon: bfvcymn0.spr
-		
-		
+
+bfvcymn1.spr:
+	Defaults:
+		AddExtension: False
+	icon:
+		Start: 0
+
 # Imperium HQ
-tihqt1l0.spr:
+#tihqt1l0.spr:
+nihqt1l0.spr:
 	Defaults:
 		AddExtension: False
 	idle:
@@ -134,9 +189,26 @@ tihqt1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
+	idle-top: barren|nihqt1l0.spr
+		ZOffset: -1023
+		Start: 1
+	idle-top2: tihqt1l0.spr
+		Start: 1
 	icon: bihqtmn0.spr
 	fake-icon: bihqtmn0.spr
+
+bihqtmn1.spr:
+	Defaults:
+		AddExtension: False
+	icon:
+		Start: 0
 		
+bihqtmn2.spr:
+	Defaults:
+		AddExtension: False
+	icon:
+		Start: 0
+
 # Imperium Training Facility
 niutf1l0.spr:
 	Defaults:
@@ -156,39 +228,62 @@ niutf1l0.spr:
 	dead:
 		Start: 0
 		Tick: 800
-	idle-top: niutf1l0.spr
+	idle-top: barren|niutf1l0.spr
+		ZOffset: -1023
 		Start: 1
-	idle-top2: tiutf1l0.spr
-		Start: 0
+	idle-top2: niutf1l0.spr
+		Start: 1
 	idle-top3: tiutf1l0.spr
+		Start: 0
+	idle-top4: tiutf1l0.spr
 		Start: 1
 	icon: biutfmn0.spr
 	fake-icon: biutfmn0.spr
-		
+
+biutfmn1.spr:
+	Defaults:
+		AddExtension: False
+	icon:
+		Start: 0
+
 # Imperium Assembly Plant
 nivcy1l0.spr:
 	Defaults:
 		AddExtension: False
 	idle:
-		Start: 1
+		Start: 0
 	make:
-		Start: 1
+		Start: 0
 	build:
-		Start: 1
+		Start: 0
 		Length: 1
 	damaged-idle:
-		Start: 1
+		Start: 0
 	damaged-build:
-		Start: 1
+		Start: 0
 		Length: 1
 	dead:
-		Start: 1
+		Start: 0
 		Tick: 800
+	idle-top: barren|nivcy1l0.spr
+		ZOffset: -1023
+		Start: 1
+	idle-top2: nivcy1l0.spr
+		Start: 1
+	idle-top3: tivcy1l0.spr
+		Start: 0
+	idle-top4: tivcy1l0.spr
+		Start: 1
 	icon: bivcymn0.spr
 	fake-icon: bivcymn0.spr
 
+bivcymn1.spr:
+	Defaults:
+		AddExtension: False
+	icon:
+		Start: 0
 
-# Laser turret
+# FG Laser turret
 nfgdt1l0.spr:
 	Defaults:
 		AddExtension: False
@@ -204,9 +299,442 @@ nfgdt1l0.spr:
 	damaged-build:
 		Start: 1
 		Length: 1
+	recoil: bfgdtsp0.spr
+		Start: 0
+		Facings: 16
+	turret: bfgdtsp0.spr
+		Start: 0
+		Facings: 16
 	dead:
 		Start: 1
 		Tick: 800
+	idle-top: barren|nfgdt1l0.spr
+		ZOffset: -1023
+		Start: 1
+	idle-top2: tfgdt1l0.spr
+		Start: 1
 	icon: bfgdtmn0.spr
 	fake-icon: bfgdtmn0.spr
 
+# Imperium Plasma turret
+nigdt1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	recoil: bigdtsp0.spr
+		Start: 0
+		Facings: 16
+	turret: bigdtsp0.spr
+		Start: 0
+		Facings: 16
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: barren|nigdt1l0.spr
+		ZOffset: -1023
+		Start: 1
+	idle-top2: tigdt1l0.spr
+		Start: 1
+	icon: bigdtmn0.spr
+	fake-icon: bigdtmn0.spr
+
+# FG Anti-air turret
+nfaar1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	recoil: bfaarsp0.spr
+		Start: 0
+		Facings: 16
+	turret: bfaarsp0.spr
+		Start: 0
+		Facings: 16
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: barren|nfaar1l0.spr
+		ZOffset: -1023
+		Start: 1
+	idle-top2: tfaar1l0.spr
+		Start: 1
+	icon: bfaarmn0.spr
+	fake-icon: bfaarmn0.spr
+
+# Imperium  Anti-air turret
+niaar1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	recoil: biaarsp0.spr
+		Start: 0
+		Length: 1
+	turret: biaarsp0.spr
+		Start: 0
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: barren|niaar1l0.spr
+		ZOffset: -1023
+		Start: 1
+	idle-top2: tiaar1l0.spr
+		Start: 1
+	icon: biaarmn0.spr
+	fake-icon: biaarmn0.spr
+
+# FG Heavy rail
+nfagt1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	recoil: bfagtsp0.spr
+		Start: 0
+		Facings: 16
+	turret: bfagtsp0.spr
+		Start: 0
+		Facings: 16
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: tfagt1l0.spr
+		Start: 1
+	icon: bfagtmn0.spr
+	fake-icon: bfagtmn0.spr
+
+# Imperium neutron accelerator
+niagt1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	recoil: biagtsp0.spr
+		Start: 0
+		Facings: 16
+	turret: biagtsp0.spr
+		Start: 0
+		Facings: 16
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: tiagt1l0.spr
+		Start: 1
+	icon: biagtmn0.spr
+	fake-icon: biagtmn0.spr
+
+# Camera tower
+nccam1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: tccam1l0.spr
+		Start: 1
+	icon: bccammn0.spr
+	fake-icon: bccammn0.spr
+
+# FG Field hospital
+nfhsp1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: tfhsp1l0.spr
+		Start: 1
+	icon: bfhspmn0.spr
+	fake-icon: bfhspmn0.spr
+
+# Imperium field hospital
+nihsp1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: tihsp1l0.spr
+		Start: 1
+	icon: bihspmn0.spr
+	fake-icon: bihspmn0.spr
+
+# FG Repair
+nfrep1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: tfrep1l0.spr
+		Start: 1
+	icon: bfrepmn0.spr
+	fake-icon: bfrepmn0.spr
+
+# Imperium repair
+nirep1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: tirep1l0.spr
+		Start: 1
+	icon: birepmn0.spr
+	fake-icon: birepmn0.spr
+
+# Phasing facility
+nfphf1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: tfphf1l0.spr
+		Start: 1
+	icon: bfphfmn0.spr
+	fake-icon: bfphfmn0.spr
+
+# FG Rearming deck
+nfrrm1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: tfrrm1l0.spr
+		Start: 1
+	icon: bfrrmmn0.spr
+	fake-icon: bfrrmmn0.spr
+
+# Imperium rearming deck
+nirrm1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: tirrm1l0.spr
+		Start: 1
+	icon: birrmmn0.spr
+	fake-icon: birrmmn0.spr
+
+# Imperium temporal gate
+nitgt1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: titgt1l0.spr
+		Start: 1
+	icon: bitgtmn0.spr
+	fake-icon: bitgtmn0.spr
+
+# Imperium temporal rift creator
+nitrc1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: titrc1l0.spr
+		Start: 1
+	icon: bitrcmn0.spr
+	fake-icon: bitrcmn0.spr
+
+# Xenite biotech compound
+nfnes1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: tfnes1l0.spr
+		Start: 1
+	icon: bfnesmn0.spr
+	fake-icon: bfnesmn0.spr

@@ -38,6 +38,48 @@
 			TopLeft: -1536, -1024
 			BottomRight: 1536, 1024
 
+^2x3Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1024, -1536
+			BottomRight: 1024, 1536
+
+^3x3Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1536, -1536
+			BottomRight: 1536, 1536
+
+^4x4Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -2048
+			BottomRight: 2048, 2048
+
+^5x4Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2560, -2048
+			BottomRight: 2560, 2048
+
+^5x5Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2560, -2560
+			BottomRight: 2560, 2560
+
+^5x3Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2560, -1536
+			BottomRight: 2560, 1536
+
 ^GainsExperience:
 	GainsExperience:
 		Conditions:
@@ -163,225 +205,6 @@
 	AttackMove:
 		AssaultMoveScanCondition: assault-move
 
-^Vehicle:
-	Inherits@1: ^ExistsInWorld
-	Inherits@3: ^SpriteActor
-	Huntable:
-	UpdatesPlayerStatistics:
-	Mobile:
-		Crushes: mine, crate
-		TerrainSpeeds:
-			Clear: 80
-			Rough: 40
-			Road: 100
-			Bridge: 100
-			Ore: 70
-			Gems: 70
-			Beach: 40
-		TurnSpeed: 5
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
-	Selectable:
-		Bounds: 24, 24
-	Targetable:
-		TargetTypes: Ground, Repair, Vehicle
-		RequiresCondition: !parachute
-	Repairable:
-	Passenger:
-		CargoType: Vehicle
-	AttackMove:
-	HiddenUnderFog:
-	ActorLostNotification:
-	ProximityCaptor:
-		Types: Vehicle
-	Guard:
-	Guardable:
-	Tooltip:
-		GenericName: Vehicle
-	Capturable:
-		Types: vehicle
-		CaptureThreshold: 100
-		CancelActivity: True
-	CaptureNotification:
-		Notification: UnitStolen
-	MustBeDestroyed:
-	Voiced:
-		VoiceSet: VehicleVoice
-	Parachutable:
-		FallRate: 26
-		KilledOnImpassableTerrain: true
-		GroundCorpseSequence:
-		GroundCorpsePalette:
-		WaterCorpseSequence:
-		WaterCorpsePalette:
-		ParachutingCondition: parachute
-	WithFacingSpriteBody:
-	BodyOrientation:
-		UseClassicFacingFudge: True
-	HitShape:
-	EditorTilesetFilter:
-		Categories: Vehicle
-
-^TrackedVehicle:
-	Inherits: ^Vehicle
-	Mobile:
-		Crushes: wall, mine, crate
-		TerrainSpeeds:
-			Clear: 80
-			Rough: 70
-			Road: 100
-			Bridge: 100
-			Ore: 70
-			Gems: 70
-			Beach: 70
-
-^Infantry:
-	Inherits@1: ^ExistsInWorld
-	Inherits@2: ^GainsExperience
-	Inherits@3: ^SpriteActor
-	Huntable:
-	Health:
-		HP: 2500
-	Armor:
-		Type: None
-	RevealsShroud:
-		Range: 4c0
-	Mobile:
-		Speed: 56
-		Crushes: mine, crate
-		SharesCell: true
-		TerrainSpeeds:
-			Clear: 90
-			Rough: 80
-			Road: 100
-			Bridge: 100
-			Ore: 80
-			Gems: 80
-			Beach: 80
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
-	Selectable:
-		Bounds: 18,20,0,-6
-		DecorationBounds: 12,18,0,-8
-	Targetable:
-		TargetTypes: Ground, Infantry, Disguise
-		RequiresCondition: !parachute
-	QuantizeFacingsFromSequence:
-		Sequence: stand
-	WithInfantryBody:
-	WithDeathAnimation:
-		DeathTypes:
-			DefaultDeath: 1
-			BulletDeath: 2
-			SmallExplosionDeath: 3
-			ExplosionDeath: 4
-			FireDeath: 5
-			ElectricityDeath: 6
-		CrushedSequence: die-crushed
-	AttackMove:
-	Passenger:
-		CargoType: Infantry
-	HiddenUnderFog:
-	ActorLostNotification:
-	Crushable:
-		CrushSound: squishy2.aud
-	Guard:
-	Guardable:
-	Tooltip:
-		GenericName: Soldier
-	DeathSounds@NORMAL:
-		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath
-	DeathSounds@BURNED:
-		Voice: Burned
-		DeathTypes: FireDeath
-	DeathSounds@ZAPPED:
-		Voice: Zapped
-		DeathTypes: ElectricityDeath
-	Parachutable:
-		FallRate: 26
-		KilledOnImpassableTerrain: true
-		GroundImpactSound: squishy2.aud
-		WaterImpactSound: splash9.aud
-		WaterCorpseSequence: small_splash
-		ParachutingCondition: parachute
-	Voiced:
-		VoiceSet: GenericVoice
-	HitShape:
-		Type: Circle
-			Radius: 128
-	EditorTilesetFilter:
-		Categories: Infantry
-
-^Soldier:
-	Inherits: ^Infantry
-	UpdatesPlayerStatistics:
-	MustBeDestroyed:
-	ProximityCaptor:
-		Types: Infantry
-	TakeCover:
-		DamageModifiers:
-			Prone50Percent: 50
-		DamageTriggers: TriggerProne
-	WithInfantryBody:
-		IdleSequences: idle1,idle2
-		StandSequences: stand,stand2
-	DetectCloaked:
-		CloakTypes: Hijacker
-
-^BasicBuilding:
-	Inherits@1: ^ExistsInWorld
-	Inherits@3: ^SpriteActor
-	Inherits@shape: ^1x1Shape
-	SelectionDecorations:
-	WithSpriteControlGroupDecoration:
-	Selectable:
-		Priority: 3
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	Building:
-		Dimensions: 1,1
-		Footprint: x
-		TerrainTypes: Clear,Road
-		RequiresBaseProvider: True
-	RequiresBuildableArea:
-		AreaTypes: building
-	SoundOnDamageTransition:
-		DamagedSounds: kaboom1.aud
-		DestroyedSounds: kaboom22.aud
-	WithSpriteBody:
-	CaptureNotification:
-	ShakeOnDeath:
-	ProximityCaptor:
-		Types: Building
-	Guardable:
-		Range: 3c0
-	FrozenUnderFog:
-	Tooltip:
-		GenericName: Structure
-	Demolishable:
-	EditorTilesetFilter:
-		Categories: Building
-	CommandBarBlacklist:
-
-^Building:
-	Inherits: ^BasicBuilding
-	Huntable:
-	UpdatesPlayerStatistics:
-	GivesBuildableArea:
-		AreaTypes: building
-	RepairableBuilding:
-		RepairStep: 700
-		PlayerExperience: 25
-	EngineerRepairable:
-	AcceptsDeliveredCash:
-	WithMakeAnimation:
-	ExternalCapturable:
-	ExternalCapturableBar:
-	MustBeDestroyed:
-		RequiredForShortGame: true
-	Sellable:
-		SellSounds: cashturn.aud
-
 ^Tree:
 	Inherits@1: ^SpriteActor
 	Inherits@shape: ^1x1Shape
@@ -398,7 +221,7 @@
 	Health:
 		HP: 50000
 	Armor:
-		Type: Wood
+		Type: Building
 	Targetable:
 		TargetTypes: Trees
 	HiddenUnderShroud:

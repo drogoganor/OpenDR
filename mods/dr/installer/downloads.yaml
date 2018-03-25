@@ -1,28 +1,20 @@
-quickinstall: Quick Install Package
-	MirrorList: http://drogoganor.net/dr/dr-quickinstall-mirrors.txt
+drdemo: Dark Reign Demo
+	MirrorList: http://drogoganor.net/dr/dr-demo-mirrors.txt
 	Extract:
-		^Content/dr/tilesets.zip: tilesets.zip
-		^Content/dr/SPRITES.FTG: SPRITES.FTG
-		^Content/dr/SOUNDS.FTG: SOUNDS.FTG
-		^Content/dr/shell/SOUNDS.FTG: shell/SOUNDS.FTG
-		^Content/dr/spriteEx.ftg: spriteEx.ftg
-		^Content/dr/soundsEx.ftg: soundsEx.ftg
-drtilesets: Tilesets
+		^Content/dr/SPRITES.FTG: Dark Reign/DATA/DARK/GRAPHICS/SPRITES.FTG
+		^Content/dr/BARREN/BARREN.TIL: Dark Reign/DATA/DARK/GRAPHICS/BARREN/BARREN.TIL
+		^Content/dr/BARREN/SPRITES.FTG: Dark Reign/DATA/DARK/GRAPHICS/BARREN/SPRITES.FTG
+		^Content/dr/JUNGLE/JUNGLE.TIL: Dark Reign/DATA/DARK/GRAPHICS/JUNGLE/JUNGLE.TIL
+		^Content/dr/JUNGLE/SPRITES.FTG: Dark Reign/DATA/DARK/GRAPHICS/JUNGLE/SPRITES.FTG
+		^Content/dr/SOUNDS.FTG: Dark Reign/DATA/DARK/sndfx/SOUNDS.FTG
+		^Content/dr/shell/SOUNDS.FTG: Dark Reign/DATA/DARK/SHELL/SOUNDS.FTG
+drtilesets: Extra Tilesets
 	MirrorList: http://drogoganor.net/dr/dr-tileset-mirrors.txt
 	Extract:
-		^Content/dr/tilesets.zip: tilesets.zip
-droriginal: Dark Reign Original
-	MirrorList: http://drogoganor.net/dr/dr-quickinstall-mirrors.txt
-	Extract:
-		^Content/dr/SPRITES.FTG: Dark Reign 1.7/DARK/GRAPHICS/SPRITES.FTG
-		^Content/dr/SOUNDS.FTG: Dark Reign 1.7/DARK/sndfx/SOUNDS.FTG
-		^Content/dr/shell/SOUNDS.FTG: Dark Reign 1.7/DARK/SHELL/SOUNDS.FTG
-drexpansion: Dark Reign Expansion
-	MirrorList: http://drogoganor.net/dr/dr-quickinstall-mirrors.txt
-	Extract:
-		^Content/dr/spriteEx.ftg: Dark Reign 1.7/DARK/GRAPHICS/spriteEx.ftg
-		^Content/dr/soundsEx.ftg: Dark Reign 1.7/DARK/sndfx/soundsEx.ftg
-drmusic: Music
+		^Content/dr/aust/AUST.FTG: aust/AUST.FTG
+		^Content/dr/volcanic/VOLCANIC.FTG: volcanic/VOLCANIC.FTG
+		^Content/dr/auralien/AURALIEN.FTG: auralien/AURALIEN.FTG
+drmusic: Music Packages
 	MirrorList: http://drogoganor.net/dr/dr-music-mirrors.txt
 	Extract:
 		^Content/dr/music.zip: music.zip

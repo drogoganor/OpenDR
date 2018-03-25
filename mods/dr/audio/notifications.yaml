@@ -1,61 +1,63 @@
 Speech:
+	DefaultVariant: .wav
 	Notifications:
-		Variants: .wav, .aud
-		BaseAttack: gvwrncl0.wav # gvwrnclb.wav  # Enemy engaged
-		Building: gvstscl2.wav
+		BaseAttack: gvwrncl0 # gvwrnclb  # Enemy engaged
+		Building: gvstscl2
 		BuildingCannotPlaceAudio: 
 		BuildingCaptured: 
-		BuildingInfiltrated: gvstscl9.wav
-		BuildingInProgress: gvstscl3.wav
+		BuildingInfiltrated: gvstscl9
+		BuildingInProgress: gvstscl3
 		BuildingProgress: 
-		Cancelled: gvstscl4.wav
-		ConstructionComplete: gvstscl0.wav # gvstscl5.wav # Unit complete
+		Cancelled: gvstscl4
+		ConstructionComplete: gvstscl0 # gvstscl5 # Unit complete
 		ConvoyApproaching: 
 		ConvoyUnitLost: 
 		CreditsStolen: 
 		EnemyUnitsApproaching: 
-		EnemyDetected: gvwrncl1.wav # infiltrator detected
+		EnemyDetected: gvwrncl1 # infiltrator detected
 		HarvesterAttack:
-		InsufficientFunds: gvwrncl6.wav
-		InsufficientPower: gvwrncl5.wav # Power critical
-		Leave: gvintcl2.wav
+		InsufficientFunds: gvwrncl6
+		InsufficientPower: gvwrncl5 # Power critical
+		Leave: gvintcl2
 		Lose: 
-		LowPower: gvwrncl4.wav
-		MissionAccomplished: gvintcl5.wav
-		MissionFailed: gvintcl6.wav
-		MissionLoaded: gvintcl1.wav
-		MissionSaved: gvintcl0.wav
+		LowPower: gvwrncl4
+		MissionAccomplished: gvintcl5
+		MissionFailed: gvintcl6
+		MissionLoaded: gvintcl1
+		MissionSaved: gvintcl0
 		MissionTimerInitialised: 
 		NavalUnitLost: 
-		NewOptions: gvstscl1.wav # gvstsclf.wav # Upgrade available
+		NewOptions: gvstscl1 # gvstsclf # Upgrade available
 		NoBuild: 
-		ObjectiveMet: gvintcl3.wav
-		ObjectiveNotMet: gvintcl4.wav
+		ObjectiveMet: gvintcl3
+		ObjectiveNotMet: gvintcl4
 		ObjectiveNotReached: 
 		ObjectiveReached: 
 		OnHold: 
-		PrimaryBuildingSelected: gvstscld.wav
+		PrimaryBuildingSelected: gvstscld
 		ReinforcementsArrived: 
-		Repairing: gvstsclk.wav
+		Repairing: gvstsclk
 		SelectTarget: 
-		StartGame: gvintcl1.wav
+		StartGame: gvintcl1
 		StructureDestroyed: 
 		StructureSold: 
 		TargetFreed: 
 		TargetRescued: 
-		TimerStarted: gvwrncl9.wav
-		Training: gvstscl3.wav
+		TimerStarted: gvwrncl9
+		Training: gvstscl3
 		UnitFull: 
-		UnitLost: gvstscl7.wav # gvstscl8.wav # building destroyed
-		UnitReady: gvstscl5.wav
-		UnitRepaired: gvstscll.wav
+		UnitLost: gvstscl7 # gvstscl8 # building destroyed
+		UnitReady: gvstscl5
+		UnitRepaired: gvstscll
 		UnitSold: 
 		UnitStolen: 
+		Upgrading: gvstscl2
+		NoRoom: 
 		Win: 
 
 Sounds:
+	DefaultVariant: .wav
 	Notifications:
-		Variants: .wav, .aud
 		RadarUp: 
 		RadarDown: 
 		CashTickUp: 
@@ -64,7 +66,7 @@ Sounds:
 		DisablePower:
 		EnablePower: 
 		ChatLine: 
-		ClickSound: gxclkoc1.wav
+		ClickSound: gxclkoc1
 		ClickDisabledSound:
 		Beacon: 
 		AlertBuzzer: 

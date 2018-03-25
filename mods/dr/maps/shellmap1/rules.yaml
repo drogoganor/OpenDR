@@ -1,0 +1,12 @@
+Player:
+	-ConquestVictoryConditions:
+
+World:
+	-SpawnMPUnits:
+	-MPStartLocations:
+	MusicPlaylist:
+		DisableWorldSounds: true
+	ResourceType@water:
+		ValuePerUnit: 0
+	LuaScript:
+		Scripts: script.lua

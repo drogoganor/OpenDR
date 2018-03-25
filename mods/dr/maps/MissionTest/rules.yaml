@@ -1,0 +1,11 @@
+World:
+	LuaScript:
+		Scripts: map.lua
+	MusicPlaylist:
+		StartingMusic: track1
+	MissionData:
+		Briefing: Test mission
+
+Player:
+	PlayerResources:
+		DefaultCash: 10000

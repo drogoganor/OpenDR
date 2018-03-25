@@ -40,15 +40,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AudioLoaders\WavLoader.cs" />
-    <Compile Include="FileFormats\WavReader.cs" />
     <Compile Include="FileSystem\Ftg.cs" />
-    <Compile Include="Traits\World\PaletteFromCurrentTileset.cs" />
-    <Compile Include="Traits\World\PaletteFromGimpOrJascFile.cs" />
+    <Compile Include="Graphics\HackySpriteSequence.cs" />
+    <Compile Include="SpriteLoaders\DrTilLoader.cs" />
     <Compile Include="SpriteLoaders\DrSprLoader.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Widgets\Logic\Editor\" />
+    <Folder Include="Traits\World\" />
+    <Folder Include="Widgets\Logic\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">

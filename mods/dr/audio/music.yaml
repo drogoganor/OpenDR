@@ -6,3 +6,6 @@ track5: Rush for Water
 track6: Freedom Rise
 track7: Triumph of the Togran
 track8: Taelon Dawn
+acid: Victory
+	Extension: wav
+	Hidden: true

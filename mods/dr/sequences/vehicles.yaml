@@ -12,6 +12,9 @@ ucfcnst0.spr:
 	stand:
 		Start: 48
 		Facings: 8
+	idle:
+		Start: 48
+		Facings: 8
 	icon: ucfcnmn0.spr
 
 # Freighter
@@ -34,17 +37,17 @@ ucfrgst0.spr:
 		Length: 3
 		Tick: 100
 	harvest:
-		Start: 16
+		Start: 48
 		Facings: 1
-		Length: 16
+		Length: 15
 		Tick: 100
 	dock:
-		Start: 16
+		Start: 48
 		Facings: 1
 		Length: 15
 		Tick: 100
 	dock-loop:
-		Start: 16
+		Start: 48
 		Facings: 1
 		Length: 15
 		Tick: 100
@@ -58,6 +61,9 @@ uchfrst0.spr:
 		Start: 0
 		Facings: 16
 	idle:
+		Start: 0
+		Facings: 16
+	stand:
 		Start: 0
 		Facings: 16
 	harvest:
@@ -81,6 +87,9 @@ uchfrst0.spr:
 ufspbst0.spr:
 	Defaults:
 		AddExtension: False
+	idle:
+		Start: 64
+		Facings: 16
 	run:
 		Start: 0
 		Facings: 16
@@ -89,7 +98,7 @@ ufspbst0.spr:
 	shoot:
 		Start: 48
 		Facings: 16
-		Length: 2
+		Length: 1
 		Tick: 100
 	stand:
 		Start: 64
@@ -105,6 +114,11 @@ ufratst0.spr:
 		Facings: 16
 		Length: 3
 		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
 	stand:
 		Start: 0
 		Facings: 16
@@ -112,18 +126,64 @@ ufratst0.spr:
 		Tick: 100
 	icon: ufratmn0.spr
 
+# Rapid Armored Transport mk2
+ufrt2st0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	turret: ufrt2ac0.spr
+		Start: 0
+		Facings: 16
+		AddExtension: False
+	icon: ufrt2mn0.spr
+
 # Skirmish Tank
 ufsktst0.spr:
 	Defaults:
 		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
 	idle:
 		Start: 0
 		Facings: 16
-		Length: 1
-#actually 3 frames, but just 1 as a hack for Vehicle behavior
+		Length: 3
+		Tick: 100
 	turret: ufsktac0.spr
 		Start: 0
 		Facings: 16
+		AddExtension: False
 	icon: ufsktmn0.spr
 
 # Tank Hunter
@@ -133,34 +193,47 @@ ufthnst0.spr:
 	run:
 		Start: 0
 		Facings: 16
-#actually 3 frames, but just 1 as a hack for Vehicle behavior
+		Length: 3
+		Tick: 100
 	shoot:
-		Start: 0
+		Start: 48
 		Facings: 16
 		Length: 4
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
 		Tick: 100
 	idle:
 		Start: 0
 		Facings: 16
+		Length: 3
+		Tick: 100
 	icon: ufthnmn0.spr
 
 # Phase Tank
 ufphtst0.spr:
 	Defaults:
 		AddExtension: False
-	idle:
-		Start: 64
+	run:
+		Start: 0
 		Facings: 16
+		Length: 3
+		Tick: 100
 	shoot:
 		Start: 48
 		Facings: 16
 		Length: 1
 		Tick: 100
-	run2:
+	stand:
 		Start: 0
 		Facings: 16
 		Length: 3
 		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
 	icon: ufphtmn0.spr
 
 # Flak Jack
@@ -177,18 +250,31 @@ ufflkst0.spr:
 		Facings: 8
 		Length: 3
 		Tick: 100
-	idle:
-		Start: 0
-		Facings: 8
 	stand:
 		Start: 0
 		Facings: 8
+		Length: 8
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
 	icon: ufflkmn0.spr
 
 # Triple Rail Hover Tank
 uftrtst0.spr:
 	Defaults:
 		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 0
+		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
 	idle:
 		Start: 0
 		Facings: 16
@@ -201,14 +287,25 @@ uftrtst0.spr:
 uffarst0.spr:
 	Defaults:
 		AddExtension: False
-	idle:
+	run:
 		Start: 0
 		Facings: 16
-#actually 3 frames, but just 1 as a hack for Vehicle behavior
+		Length: 3
+		Tick: 100
 	shoot:
 		Start: 16
 		Facings: 16
 		Length: 2
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3
 		Tick: 100
 	icon: uffarmn0.spr
 
@@ -220,6 +317,9 @@ ufskbst0.spr:
 		Start: 0
 		Facings: 16
 	shoot:
+		Start: 0
+		Facings: 16
+	stand:
 		Start: 0
 		Facings: 16
 	idle:
@@ -237,6 +337,9 @@ ufoutst0.spr:
 	shoot:
 		Start: 0
 		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
 	idle:
 		Start: 0
 		Facings: 16
@@ -246,9 +349,26 @@ ufoutst0.spr:
 ufswvst0.spr:
 	Defaults:
 		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
 	idle:
 		Start: 0
 		Facings: 16
+		Length: 3
+		Tick: 100
 	turret: ufswvac0.spr
 		Start: 0
 		Facings: 16
@@ -258,10 +378,22 @@ ufswvst0.spr:
 ucwcost0.spr:
 	Defaults:
 		AddExtension: False
-	idle:
-		Start: 64
+	run:
+		Start: 0
 		Facings: 16
-	run2:
+		Length: 4
+		Tick: 100
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	idle:
 		Start: 0
 		Facings: 16
 		Length: 4
@@ -274,42 +406,66 @@ ucwcost0.spr:
 uisttst0.spr:
 	Defaults:
 		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 1
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
 	idle:
 		Start: 0
 		Facings: 16
-#	shoot:
-#		Start: 0
-#		Facings: 16
-#		Length: 2
-#		Tick: 100
 	icon: uisttmn0.spr
 
 # Invader Troop Transport
 uiittst0.spr:
 	Defaults:
 		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
 	idle:
 		Start: 0
 		Facings: 16
-#	shoot:
-#		Start: 0
-#		Facings: 16
-#		Length: 2
-#		Tick: 100
-	icon: uiittmn0.spr
-
-# Plasma Tank
-uipltac0.spr:
-	Defaults:
-		AddExtension: False
-	idle:
+	stand:
 		Start: 0
 		Facings: 16
 	shoot:
-		Start: 16
+		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
 		Tick: 100
+	icon: uiittmn0.spr
+
+# Plasma Tank
+uipltst0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 0
+		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
+	idle:
+		Start: 0
+		Facings: 16
+	turret: uipltac0.spr
+		Start: 0
+		Facings: 16
+	#shoot:
+	#	Start: 16
+	#	Facings: 16
+	#	Length: 3
+	#	Tick: 100
 	icon: uipltmn0.spr
 
 # Amper
@@ -348,6 +504,12 @@ uimadst0.spr:
 	idle:
 		Start: 0
 		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
+	run:
+		Start: 0
+		Facings: 16
 	shoot:
 		Start: 0
 		Facings: 16
@@ -358,6 +520,12 @@ uirdrst0.spr:
 	Defaults:
 		AddExtension: False
 	idle:
+		Start: 0
+		Facings: 12
+	stand:
+		Start: 0
+		Facings: 12
+	run:
 		Start: 0
 		Facings: 12
 	shoot:
@@ -371,10 +539,22 @@ uirdrst0.spr:
 uishrst0.spr:
 	Defaults:
 		AddExtension: False
-	idle:
+	run:
 		Start: 0
 		Facings: 16
+		Length: 4
+		Tick: 100
 	shoot:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	idle:
 		Start: 0
 		Facings: 16
 		Length: 4
@@ -385,11 +565,23 @@ uishrst0.spr:
 uihosst0.spr:
 	Defaults:
 		AddExtension: False
-	idle:
+	run:
 		Start: 0
 		Facings: 16
+		Length: 3
+		Tick: 100
 	shoot:
 		Start: 48
+		Facings: 16
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 0
 		Facings: 16
 		Length: 3
 		Tick: 100
@@ -402,6 +594,12 @@ uitctst0.spr:
 	idle:
 		Start: 0
 		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
+	run:
+		Start: 0
+		Facings: 16
 	shoot:
 		Start: 0
 		Facings: 16
@@ -412,6 +610,12 @@ uiiarst0.spr:
 	Defaults:
 		AddExtension: False
 	idle:
+		Start: 0
+		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
+	run:
 		Start: 0
 		Facings: 16
 	shoot:
@@ -428,6 +632,12 @@ uicycst0.spr:
 	idle:
 		Start: 0
 		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
+	run:
+		Start: 0
+		Facings: 16
 	shoot:
 		Start: 16
 		Facings: 16
@@ -440,6 +650,12 @@ uiskyst0.spr:
 	Defaults:
 		AddExtension: False
 	idle:
+		Start: 0
+		Facings: 8
+	stand:
+		Start: 0
+		Facings: 8
+	run:
 		Start: 0
 		Facings: 8
 	shoot:

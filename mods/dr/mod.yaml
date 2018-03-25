@@ -9,12 +9,26 @@ Packages:
 	.
 	$dr: dr
 	./mods/common: common
+	~barren/BARREN.TIL
+	~barren/SPRITES.FTG: barren
+	~barren/spriteEx.ftg: barrenEx
+	~jungle/JUNGLE.TIL
+	~jungle/SPRITES.FTG: jungle
+	~jungle/spriteEx.ftg: jungleEx
+	~snow/SNOW.TIL
+	~snow/SPRITES.FTG: snow
+	~snow/spriteEx.ftg: snowEx
+	~alien/ALIEN.TIL
+	~alien/spriteEx.ftg: alienEx
+	~aust/AUST.FTG: aust
+	~volcanic/volcanic.ftg: volcanic
+	~auralien/auralien.ftg: auralien
 	~SPRITES.FTG
 	~spriteEx.ftg
 	~SOUNDS.FTG
 	~soundsEx.ftg
-	~tilesets.zip
 	~music.zip
+	dr|palettes
 	dr|bits
 	dr|uibits
 
@@ -26,8 +40,9 @@ Rules:
 	dr|rules.yaml
 	dr|rules/defaults.yaml
 	dr|rules/misc.yaml
-	dr|rules/ai.yaml
 	dr|rules/structures.yaml
+	dr|rules/ai.yaml
+	dr|rules/aircraft.yaml
 	dr|rules/vehicles.yaml
 	dr|rules/infantry.yaml
 	dr|rules/decorations.yaml
@@ -165,9 +180,9 @@ SupportsMapsFrom: dr
 
 SoundFormats: Aud, Wav
 
-SpriteFormats: DrSpr, ShpTD, TmpRA, TmpTD, ShpTS
+SpriteFormats: DrSpr, DrTil, ShpTD, TmpRA, TmpTD, ShpTS
 
-SpriteSequenceFormat: DefaultSpriteSequence
+SpriteSequenceFormat: HackySpriteSequence
 
 ModelSequenceFormat: PlaceholderModelSequence
 
@@ -176,29 +191,42 @@ GameSpeeds:
 		Name: Normal
 		Timestep: 40
 		OrderLatency: 3
+	fast:
+		Name: Fast
+		Timestep: 32
+		OrderLatency: 4
+	faster:
+		Name: Faster
+		Timestep: 24
+		OrderLatency: 4
+	fastest:
+		Name: Fastest
+		Timestep: 16
+		OrderLatency: 6
+
+ColorValidator:
+	TeamColorPresets: ffc9ca, f50606, 98331f, f57606, f7bb06, f861a4, da06f3, ddb8ff, 06f739, cef7b2, 200738, 280df6, 2f86f2, 76d2f8, 34ba93, 000000
 
 ModContent:
-	InstallPromptMessage: Dark Reign requires artwork and audio from the original game.\n\nQuick Install will automatically download this content (without music\nor videos) from a mirror of the darkreign.ws release.\n\nAdvanced Install includes options for downloading the music and for\ncopying the videos and other content from an original game disc.
-	QuickDownload: quickinstall
-	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting digital install. OpenRA can also download the base game\nfiles from an online mirror of the darkreign.ws release.
+	InstallPromptMessage: Dark Reign requires artwork and audio from the original game.\n\nQuick Install will automatically download this content (without music\nor videos) from a mirror of the demo release.\n\nAdvanced Install includes options for downloading the music and for\ncopying the videos and other content from an original game disc.
+	QuickDownload: drdemo
+	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting digital install. OpenRA can also download the base game\nfiles from an online mirror of the demo release.
 	Packages:
-		base: Base Game Files
-			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG
-			Sources: drorig
+		demo: Demo Game Files
+			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/barren/BARREN.TIL, ^Content/dr/jungle/JUNGLE.TIL
+			Download: drdemo
 			Required: true
-			Download: droriginal
+		base: Original Game Files
+			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/barren/BARREN.TIL, ^Content/dr/jungle/JUNGLE.TIL, ^Content/dr/snow/SNOW.TIL
+			Sources: drorig
 		expansion: Expansion Files
 			TestFiles: ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg
 			Sources: drexp
-			Download: drexpansion
-		tilesets: Tilesets
-			TestFiles: ^Content/dr/tilesets.zip
-			Sources: drtiles
-			Required: true
+		tilesets: Extra Tilesets
+			TestFiles: ^Content/dr/aust/AUST.FTG
 			Download: drtilesets
 		music: Music
 			TestFiles: ^Content/dr/music.zip
-			Sources: drmus
 			Download: drmusic
 	Downloads:
 		dr|installer/downloads.yaml

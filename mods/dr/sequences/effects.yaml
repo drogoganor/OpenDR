@@ -1,4 +1,22 @@
 
+# Animated dual red bolt
+eolaspr0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+# Non-Animated dual red bolt
+eolaspr1.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+
 # Small red bolt (laser rifle)
 eolaspr2.spr:
 	Defaults:
@@ -8,9 +26,9 @@ eolaspr2.spr:
 		Facings: 24
 		Length: 3
 		Tick: 40
-		
-# Small white bolt (Sniper weapon)
-eorgnpr0.spr:
+
+# Large red bolt
+eolaspr3.spr:
 	Defaults:
 		AddExtension: false
 	idle:
@@ -18,15 +36,33 @@ eorgnpr0.spr:
 		Facings: 24
 		Length: 3
 		Tick: 40
+
+# Non-Animated dual red bolt, stubby
+eolaspr4.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+
+# Small white bolt 
+eorgnpr0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3 # Bugged - crashes if shooting north north east
+		Tick: 40
 	
-# Medium white bolt (Merc weapon)
+# Medium white bolt (Sniper weapon)
 eorgnpr1.spr:
 	Defaults:
 		AddExtension: false
 	idle:
 		Start: 0
 		Facings: 24
-		Length: 4
+		Length: 4 # Bugged - crashes if shooting north north east
 		Tick: 40
 
 # Triple white bolt
@@ -44,7 +80,7 @@ eorgnpr3.spr:
 	idle:
 		Start: 0
 		Facings: 24
-		Length: 2
+		Length: 3 # Bugged - crashes if shooting north north east
 		Tick: 40
 
 # Tiny white bolt
@@ -54,18 +90,286 @@ eorgnpr4.spr:
 	idle:
 		Start: 0
 		Facings: 24
-		Length: 3
+		Length: 3 # Bugged - crashes if shooting north north east
 		Tick: 40
 
-# Large white bolt (A lot like Merc weapon eorgnpr1)
+# Large white bolt (Merc weapon)
 eorgnpr5.spr:
 	Defaults:
 		AddExtension: false
 	idle:
 		Start: 0
 		Facings: 24
+		Length: 4 # Bugged - crashes if shooting north north east
+		Tick: 40
+
+# MAD projectile
+eomadpr0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 16
 		Length: 4
 		Tick: 40
+
+# missile
+eomispr0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+# missile, dual
+eomispr1.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3 # Bugged - crashes if shooting north north east
+		Tick: 40
+
+# missile, large grey
+eomispr2.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3 # Bugged - crashes if shooting north north east
+		Tick: 40
+
+# missile, medium turqoise
+eomispr3.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3 # Bugged - crashes if shooting north north east
+		Tick: 40
+
+# missile, stumpy
+eomispr4.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3 # Bugged - crashes if shooting north north east
+		Tick: 40
+
+# NCN projectile, blue fireball. Cyclone?
+eoncnpr0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 4 # Bugged - crashes if shooting north north east
+		Tick: 40
+
+# NCN projectile, blue spark
+eoncnpr1.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 1
+		Length: 6 # Bugged - crashes if shooting north north east
+		Tick: 40
+
+# orb projectile?
+eoorbpr0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 4 # Bugged - crashes if shooting north north east
+		Tick: 40
+
+# small green booger with wiggly tail
+eoplspr0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 4 # Bugged - crashes if shooting north north east
+		Tick: 40
+
+# medium green booger with wiggly tail
+eoplspr1.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 4 # Bugged - crashes if shooting north north east
+		Tick: 40
+
+# large green booger with wiggly tail
+eoplspr2.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 4 # Bugged - crashes if shooting north north east
+		Tick: 40
+
+# freighter projectile? small green-eyed probe
+eorfgpr0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+
+# dual rockets 2
+eochfpr0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+# big honkin rocket
+eofarpr0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+# cool fireball
+eoiarpr0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 5
+		Tick: 40
+
+# generic red greenish orb
+ecprj000.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+# cool white blue laser bolt
+ecprj001.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+
+# small purple bolt
+ecprj003.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+
+# blue teardrop bolt
+ecprj004.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+
+# explosion effect: bullet ricochet, marked as projectile for some reason. Flak?
+ecprj005.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 1
+		Length: 6
+		Tick: 40
+
+# large purple bolt
+ecprj006.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+
+# arrow
+ecprj007.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 24 # hacked
+		Facings: 24
+		#Length: 3
+		#Tick: 40
+
+# chicken nugget
+ecprjsp0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 5 # Bugged - crashes if shooting north north east
+		Tick: 40
+
+# sparkly electric explosion that's not really a projectile
+ecprjsp1.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 8
+		Tick: 40
+
+# smaller greenish electric explosion that's not really a projectile
+ecprjsp2.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 8
+		Tick: 40
+
+# small blue bolt
+ecprjsp3.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 6
+		Tick: 40
+
+# big widely spaced dual bolts
+ecprjsp5.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Facings: 24
 
 # Explosions
 
@@ -123,7 +427,7 @@ eoskyex0.spr:
 		Length: 10
 		Tick: 20
 
-# Same as above, eoskyex0
+# Same as above, eoskyex0 Sky fortress
 eoskypr0.spr:
 	Defaults:
 		AddExtension: false
@@ -277,3 +581,76 @@ eosmopf9.spr:
 		Start: 0
 		Length: 10 # Should be 13 but this is rectangular
 		Tick: 20
+
+# Smoke move 0
+eosmosm0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Length: 15 # Should be 15 but this is rectangular
+		Tick: 20
+
+# Smoke move 1
+eosmosm1.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Length: 16 # Should be 16 but this is rectangular
+		Tick: 20
+
+# Smoke move 2
+eosmosm2.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Length: 20 # Should be 22 but this is rectangular
+		Tick: 20
+
+# Tachion explosion?
+eotacex0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Length: 17 # Should be 17 but this is rectangular
+		Tick: 20
+
+# Tachion bolt?
+eotacpr0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Length: 6
+		Tick: 20
+
+# TCN explosion?
+eotcnex0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Length: 17 # Should be 17 but this is rectangular
+		Tick: 20
+
+# THN explosion?
+eothnex0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Length: 31 # Should be 31 but this is rectangular
+		Tick: 20
+
+# THN bolt?
+eothnpr0.spr:
+	Defaults:
+		AddExtension: false
+	idle:
+		Start: 0
+		Length: 7
+		Tick: 20
+

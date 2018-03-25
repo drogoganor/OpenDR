@@ -37,6 +37,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			public int OffAnims;
 			public int OffPicoffs;
 			public int OffBits;
+			public bool IsShadow = false;
 		}
 
 		class SprFrameInfo
@@ -100,16 +101,27 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 							cnt &= 0x7f;
 						if ((step & 1) != 0)
 						{
-							// if (!is_shadow)
-							for (i = 0; i < cnt; ++i, ++curr)
+							if (!sph.IsShadow)
 							{
-								int newIndex = pixindex(currx + i, l);
-								Data[newIndex] = tempData[curr];
+								for (i = 0; i < cnt; ++i, ++curr)
+								{
+									int newIndex = pixindex(currx + i, l);
+									if (tempData[curr] > 167)
+										newIndex = newIndex;
+
+									Data[newIndex] = tempData[curr];
+								}
+							}
+							else
+							{
+								for (i = 0; i < cnt; ++i)
+								{
+									int newIndex = pixindex(currx + i, l);
+									Data[newIndex] = 2;
+								}
+
 							}
 
-							// else
-							//	for (i = 0; i < cnt; ++i)
-							//		mem_bits[pixindex(currx + i, l)] = 1;
 						}
 
 						currx += cnt;
@@ -155,6 +167,11 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			{
 				s.Position = start;
 				return false;
+			}
+
+			if (h.Magic1 == "SSPR")
+			{
+				h.IsShadow = true;
 			}
 
 			if (h.Version != 0x0210)

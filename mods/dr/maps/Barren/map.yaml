@@ -1,0 +1,89 @@
+MapFormat: 11
+
+RequiresMod: dr
+
+Title: Barren
+
+Author: Dark Reign
+
+Tileset: BARREN
+
+MapSize: 88,66
+
+Bounds: 1,1,86,64
+
+Visibility: Lobby
+
+Categories: Map
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: fguard
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: fguard
+		Enemies: Multi0, Multi1
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor0: mpspawn
+		Owner: Neutral
+		Location: 17,49
+	Actor1: mpspawn
+		Owner: Neutral
+		Location: 65,17
+	Actor2: aotre000.spr
+		Owner: Neutral
+		Location: 24,23
+	Actor3: aotre001.spr
+		Owner: Neutral
+		Location: 26,22
+	Actor4: aotre002.spr
+		Owner: Neutral
+		Location: 22,27
+	Actor5: aotre001.spr
+		Owner: Neutral
+		Location: 56,41
+	Actor6: aotre003.spr
+		Owner: Neutral
+		Location: 58,43
+	Actor7: aotre002.spr
+		Owner: Neutral
+		Location: 51,45
+	Actor8: aotre000.spr
+		Owner: Neutral
+		Location: 55,43
+	Actor9: aotre004.spr
+		Owner: Neutral
+		Location: 57,47
+	Actor10: aorub000.spr
+		Owner: Neutral
+		Location: 53,30
+	Actor11: aoroc002.spr
+		Owner: Neutral
+		Location: 52,31
+	Actor12: aorub001.spr
+		Owner: Neutral
+		Location: 29,37
+	Actor13: aoroc001.spr
+		Owner: Neutral
+		Location: 27,38
+	Actor14: aoclf000.spr
+		Owner: Neutral
+		Location: 23,33
+	Actor15: aoclf000.spr
+		Owner: Neutral
+		Location: 47,21

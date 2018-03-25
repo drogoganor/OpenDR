@@ -36,7 +36,6 @@ GenericVehicleVoice:
 	DefaultVariant: .wav
 	Voices:
 		Die: gxexpoc2
-		
 
 CivilianVoice:
 	Inherits: GenericHumanVoice
@@ -176,7 +175,7 @@ HostageTakerVoice:
 		Select: gvhosal0,gvhossl0,gvhossl1
 		Action: gvhosrl0,gvhosrl2
 
-CommandMeIObey:
+SuicideZombieVoice:
 	Inherits: ImperiumVoice
 	Voices:
 		Select: gvszmsl0

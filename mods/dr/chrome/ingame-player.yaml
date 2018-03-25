@@ -506,17 +506,33 @@ Container@PLAYER_WIDGETS:
 									X: 6
 									Y: 6
 									ImageCollection: production-icons
-						ProductionTypeButton@DEFENSE:
+						ProductionTypeButton@UPGRADE:
 							Logic: AddFactionSuffixLogic
 							Y: 31
 							Width: 28
 							Height: 28
 							VisualHeight: 0
 							Background: sidebar-button
-							TooltipText: Defense
+							TooltipText: Upgrade
 							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: Defense
-							Key: ProductionTypeDefense
+							ProductionGroup: Upgrade
+							Key: ProductionTypeUpgrade
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@ECONOMY:
+							Logic: AddFactionSuffixLogic
+							Y: 62
+							Width: 28
+							Height: 28
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: Economy
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Economy
+							Key: ProductionTypeEconomy
 							Children:
 								Image@ICON:
 									X: 6
@@ -524,7 +540,7 @@ Container@PLAYER_WIDGETS:
 									ImageCollection: production-icons
 						ProductionTypeButton@INFANTRY:
 							Logic: AddFactionSuffixLogic
-							Y: 62
+							Y: 93
 							Width: 28
 							Height: 28
 							VisualHeight: 0
@@ -540,7 +556,7 @@ Container@PLAYER_WIDGETS:
 									ImageCollection: production-icons
 						ProductionTypeButton@VEHICLE:
 							Logic: AddFactionSuffixLogic
-							Y: 93
+							Y: 124
 							Width: 28
 							Height: 28
 							VisualHeight: 0
@@ -549,38 +565,6 @@ Container@PLAYER_WIDGETS:
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Vehicle
 							Key: ProductionTypeVehicle
-							Children:
-								Image@ICON:
-									X: 6
-									Y: 6
-									ImageCollection: production-icons
-						ProductionTypeButton@AIRCRAFT:
-							Logic: AddFactionSuffixLogic
-							Y: 124
-							Width: 28
-							Height: 28
-							VisualHeight: 0
-							Background: sidebar-button
-							TooltipText: Aircraft
-							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: Aircraft
-							Key: ProductionTypeAircraft
-							Children:
-								Image@ICON:
-									X: 6
-									Y: 6
-									ImageCollection: production-icons
-						ProductionTypeButton@NAVAL:
-							Logic: AddFactionSuffixLogic
-							Y: 155
-							Width: 28
-							Height: 28
-							VisualHeight: 0
-							Background: sidebar-button
-							TooltipText: Naval
-							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: Ship
-							Key: ProductionTypeNaval
 							Children:
 								Image@ICON:
 									X: 6

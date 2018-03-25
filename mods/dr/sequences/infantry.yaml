@@ -329,3 +329,58 @@ uiextst0.spr:
 		Start: 0
 		Facings: 16
 	icon: uiextmn0.spr
+
+
+# Xenite
+
+uftrast0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 60
+	shoot:
+		Start: 56
+		Facings: 8
+		Length: 10
+		Tick: 100
+	idle:
+		Start: 48
+		Facings: 8
+	stand:
+		Start: 48
+		Facings: 8
+	icon: uftramn0.spr
+
+ufganst0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	shoot:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	idle:
+		Start: 160
+		Facings: 8
+		Length: 10
+		Tick: 60
+	stand:
+		Start: 160
+		Facings: 8
+		Length: 10
+		Tick: 60
+	turret: ufganac0.spr
+		Start: 0
+		Facings: 8
+		AddExtension: False
+	icon: ufganmn0.spr

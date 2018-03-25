@@ -51,6 +51,18 @@
 		Name: colorpicker
 		Filename: units.pal
 		AllowModifiers: false
+	ShroudPalette@shroud:
+		Name: shroud
+		Type: Shroud
+	ShroudPalette@fog:
+		Name: fog
+		Fog: true
+	PaletteFromRGBA@shadow:
+		Name: shadow
+		R: 0
+		G: 0
+		B: 0
+		A: 140
 	PaletteFromRGBA@moveflash:
 		Name: moveflash
 		R: 255
