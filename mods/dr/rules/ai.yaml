@@ -1,0 +1,64 @@
+Player:
+	HackyAI@TestAI:
+		Name: Test AI
+		Type: normal
+		MinimumExcessPower: 60
+		BuildingCommonNames:
+			ConstructionYard: tfhqt1l0.spr
+			Refinery: tclnc1l0.spr
+			Power: tcpow1l0.spr
+			Barracks: nfutf1l0.spr
+			VehiclesFactory: nfvcy1l0.spr
+			Production: nfutf1l0.spr,nfvcy1l0.spr
+		UnitsCommonNames:
+			Mcv: ucfcnst0.spr
+		BuildingLimits:
+			tfhqt1l0.spr: 4
+			nfutf1l0.spr: 1
+			nfvcy1l0.spr: 1
+		BuildingFractions:
+			tclnc1l0.spr: 10%
+			tcpow1l0.spr: 31%
+			nfutf1l0.spr: 1%
+			nfvcy1l0.spr: 6%
+		UnitsToBuild:
+			ufradst0.spr: 65%
+			uigrdst0.spr: 65%
+			ufmrcst0.spr: 25%
+			uibonst0.spr: 25%
+			ufsnpst0.spr: 15%
+			uiextst0.spr: 15%
+			ufsctst0.spr: 1%
+			ufmedst0.spr: 1%
+			ufsabmn0.spr: 1%
+			ufmecst0.spr: 1%
+			ufmtrst0.spr: 1%
+			ucinfst0.spr: 1%
+			ufspbst0.spr: 15%
+			harv: 10%
+			ufratst0.spr: 30%
+			ufsktst0.spr: 40%
+			ufthnst0.spr: 15%
+			ufphtst0.spr: 1%
+			ufflkst0.spr: 50%
+			uftrtst0.spr: 70%
+			uffarst0.spr: 40%
+			ufskbst0.spr: 10%
+			ufoutst0.spr: 15%
+			ufswvst0.spr: 1%
+			ucwcost0.spr: 1%
+			uisttst0.spr: 10%
+			uiittst0.spr: 30%
+			uipltac0.spr: 30%
+			uiampst0.spr: 30%
+			uimadst0.spr: 15%
+			uirdrst0.spr: 5%
+			uishrst0.spr: 30%
+			uihosst0.spr: 15%
+			uitctst0.spr: 50%
+			uiiarst0.spr: 35%
+			uicycst0.spr: 15%
+			uiskyst0.spr: 5%
+		UnitLimits:
+			harv: 4
+		SquadSize: 40

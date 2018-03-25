@@ -1,0 +1,452 @@
+# DR
+
+# Construction Rig
+ucfcnst0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 100
+	stand:
+		Start: 48
+		Facings: 8
+	icon: ucfcnmn0.spr
+
+# Freighter
+ucfrgst0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	harvest:
+		Start: 16
+		Facings: 1
+		Length: 16
+		Tick: 100
+	dock:
+		Start: 16
+		Facings: 1
+		Length: 15
+		Tick: 100
+	dock-loop:
+		Start: 16
+		Facings: 1
+		Length: 15
+		Tick: 100
+	icon: ucfrgmn0.spr
+
+# Hover Freighter
+uchfrst0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+	idle:
+		Start: 0
+		Facings: 16
+	harvest:
+		Start: 16
+		Facings: 1
+		Length: 16
+		Tick: 100
+	dock:
+		Start: 16
+		Facings: 1
+		Length: 16
+		Tick: 100
+	dock-loop:
+		Start: 16
+		Facings: 1
+		Length: 16
+		Tick: 100
+	icon: uchfrmn0.spr
+
+# Spider Bike
+ufspbst0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	shoot:
+		Start: 48
+		Facings: 16
+		Length: 2
+		Tick: 100
+	stand:
+		Start: 64
+		Facings: 16
+	icon: ufspbmn0.spr
+
+# Rapid Armored Transport
+ufratst0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	icon: ufratmn0.spr
+
+# Skirmish Tank
+ufsktst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 1
+#actually 3 frames, but just 1 as a hack for Vehicle behavior
+	turret: ufsktac0.spr
+		Start: 0
+		Facings: 16
+	icon: ufsktmn0.spr
+
+# Tank Hunter
+ufthnst0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+#actually 3 frames, but just 1 as a hack for Vehicle behavior
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
+	icon: ufthnmn0.spr
+
+# Phase Tank
+ufphtst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 64
+		Facings: 16
+	shoot:
+		Start: 48
+		Facings: 16
+		Length: 1
+		Tick: 100
+	run2:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	icon: ufphtmn0.spr
+
+# Flak Jack
+ufflkst0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 8
+	stand:
+		Start: 0
+		Facings: 8
+	icon: ufflkmn0.spr
+
+# Triple Rail Hover Tank
+uftrtst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+	turret: uftrtac0.spr
+		Start: 0
+		Facings: 16
+	icon: uftrtmn0.spr
+
+# Hellstorm Artillery
+uffarst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+#actually 3 frames, but just 1 as a hack for Vehicle behavior
+	shoot:
+		Start: 16
+		Facings: 16
+		Length: 2
+		Tick: 100
+	icon: uffarmn0.spr
+
+# Sky Bike
+ufskbst0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 0
+		Facings: 16
+	idle:
+		Start: 0
+		Facings: 16
+	icon: ufskbmn0.spr
+
+# Outrider
+ufoutst0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 0
+		Facings: 16
+	idle:
+		Start: 0
+		Facings: 16
+	icon: ufoutmn0.spr
+
+# Shock Wave
+ufswvst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+	turret: ufswvac0.spr
+		Start: 0
+		Facings: 16
+	icon: ufswvmn0.spr
+
+# Water Contaminator
+ucwcost0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 64
+		Facings: 16
+	run2:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	icon: ucwcomn0.spr
+
+# Infiltrator
+
+# Scout Runner
+uisttst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+#	shoot:
+#		Start: 0
+#		Facings: 16
+#		Length: 2
+#		Tick: 100
+	icon: uisttmn0.spr
+
+# Invader Troop Transport
+uiittst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+#	shoot:
+#		Start: 0
+#		Facings: 16
+#		Length: 2
+#		Tick: 100
+	icon: uiittmn0.spr
+
+# Plasma Tank
+uipltac0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 16
+		Facings: 16
+		Length: 3
+		Tick: 100
+	icon: uipltmn0.spr
+
+# Amper
+uiampst0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 100
+	shoot:
+		Start: 48
+		Facings: 8
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 72
+		Facings: 8
+		Length: 3
+		Tick: 100
+	idle2:
+		Start: 96
+		Facings: 8
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 120
+		Facings: 8
+	icon: uiampmn0.spr
+
+# Mobile Air Defense
+uimadst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 0
+		Facings: 16
+	icon: uimadmn0.spr
+
+# Recon Drone
+uirdrst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 12
+	shoot:
+		Start: 12
+		Facings: 12
+		Length: 7
+		Tick: 100
+	icon: uirdrmn0.spr
+
+# Shredder
+uishrst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	icon: uishrmn0.spr
+
+# Hostage Taker
+uihosst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 48
+		Facings: 16
+		Length: 3
+		Tick: 100
+	icon: uihosmn0.spr
+
+# Tachion Tank
+uitctst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 0
+		Facings: 16
+	icon: uitctmn0.spr
+
+# S.C.A.R.A.B.
+uiiarst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	icon: uiiarmn0.spr
+
+# Cyclone
+uicycst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 16
+		Facings: 16
+		Length: 1
+		Tick: 100
+	icon: uicycmn0.spr
+
+# Sky Fortress
+uiskyst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 8
+	shoot:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+	icon: uiskymn0.spr
+
+# Water contaminator

@@ -1,0 +1,331 @@
+
+# Generic human death
+humansplat:
+	die1: splata.spr
+		Start: 0
+		Length: 15
+		Tick: 100
+	die2: splatc.spr
+		Start: 0
+		Length: 13
+		Tick: 100
+
+# Generic alien death
+aliensplat:
+	die1: splatb.spr
+		Start: 0
+		Length: 15
+		Tick: 100
+	die2: splatd.spr
+		Start: 0
+		Length: 12
+		Tick: 100
+
+# Civilian
+uocvmst0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 60
+	idle:
+		Start: 48
+		Facings: 8
+		Length: 7
+		Tick: 100
+	idle2:
+		Start: 104
+		Facings: 8
+		Length: 9
+		Tick: 100
+	stand:
+		Start: 176
+		Facings: 8
+	icon: uocvmmn0.spr
+
+# Raider
+ufradst0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+		Length: 6
+		Tick: 60
+	shoot:
+		Start: 96
+		Facings: 16
+		Length: 2
+		Tick: 100
+	idle:
+		Start: 128
+		Facings: 16
+		Length: 7
+		Tick: 100
+	stand:
+		Start: 240
+		Facings: 16
+	icon: ufradmn0.spr
+
+# Mercenary
+ufmrcst0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+		Length: 6
+		Tick: 100
+	shoot:
+		Start: 96
+		Facings: 16
+		Length: 2
+		Tick: 100
+	idle:
+		Start: 128
+		Facings: 16
+		Length: 5
+		Tick: 100
+	idle2:
+		Start: 208
+		Facings: 16
+		Length: 5
+		Tick: 100
+	stand:
+		Start: 288
+		Facings: 16
+	icon: ufmrcmn0.spr
+
+# Sniper
+ufsnpst0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 24
+		Length: 6
+		Tick: 100
+	shoot:
+		Start: 144
+		Facings: 24
+		Length: 4
+		Tick: 100
+	idle2:
+		Start: 240
+		Facings: 24
+		Length: 10
+		Tick: 100
+	stand:
+		Start: 480
+		Facings: 24
+	icon: ufsnpmn0.spr
+
+# Scout
+ufsctst0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 88
+		Facings: 8
+		Length: 8
+		Tick: 100
+	stand:
+		Start: 152
+		Facings: 8
+	icon: ufsctmn0.spr
+
+# Field Medic
+ufmedst0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 100
+	shoot:
+		Start: 48
+		Facings: 8
+		Length: 10
+		Tick: 100
+	idle:
+		Start: 128
+		Facings: 8
+		Length: 6
+		Tick: 100
+	stand:
+		Start: 176
+		Facings: 8
+	icon: ufmedmn0.spr
+
+#Saboteur
+ufsabmn0.spr:
+
+
+# Mechanic
+ufmecst0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 8
+		Tick: 100
+	shoot2:
+		Start: 128
+		Facings: 8
+		Length: 8
+		Tick: 100
+	idle:
+		Start: 192
+		Facings: 8
+	stand:
+		Start: 192
+		Facings: 8
+	icon: ufmecmn0.spr
+	icon-saboteur: ufsabmn0.spr
+
+# Martyr
+ufmtrst0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 100
+	shoot:
+		Start: 48
+		Facings: 8
+		Length: 16
+		Tick: 100
+	idle:
+		Start: 176
+		Facings: 8
+		Length: 4
+		Tick: 100
+	stand:
+		Start: 202
+		Facings: 8
+	icon: ufmtrmn0.spr
+
+# Infiltrator
+ucinfst0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	idle:
+		Start: 64
+		Facings: 8
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 64
+		Facings: 8
+	icon: ucinfmn0.spr
+
+# Imperium
+
+# Guardian
+uigrdst0.spr:
+	Inherits: aliensplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 100
+	shoot:
+		Start: 48
+		Facings: 8
+		Length: 2
+		Tick: 100
+	idle:
+		Start: 64
+		Facings: 8
+	stand:
+		Start: 64
+		Facings: 8
+	icon: uigrdmn0.spr
+
+# Bion
+uibonst0.spr:
+	Inherits: aliensplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 88
+		Facings: 8
+		Length: 8
+		Tick: 100
+	idle2:
+		Start: 152
+		Facings: 8
+		Length: 6
+		Tick: 100
+	stand:
+		Start: 200
+		Facings: 8
+	icon: uibonmn0.spr
+
+# Exterminator
+uiextst0.spr:
+	Inherits: aliensplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 16
+		Facings: 16
+		Length: 2
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
+	icon: uiextmn0.spr

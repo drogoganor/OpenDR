@@ -1,0 +1,354 @@
+
+^DrSoldier:
+	Inherits: ^Soldier
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Infantry
+		BuildAtProductionType: Soldier
+		BuildPaletteOrder: 10
+		Prerequisites: ~barracks, ~techlevel.infonly
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Selectable:
+		Class: E1
+	Valued:
+		Cost: 100
+	Health:
+		HP: 500
+	Armament@PRIMARY:
+		Weapon: LaserRifle
+	Armament@GARRISONED:
+		Name: garrisoned
+		Weapon: LaserRifle
+		MuzzleSequence: garrison-muzzle
+	AttackFrontal:
+	Crushable:
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	Selectable:
+		DecorationBounds: 24,24
+	Mobile:
+		Speed: 56
+		SharesCell: false
+	WithDeathAnimation:
+		DeathSequence: die
+		DeathTypes:
+			DefaultDeath: 1
+			BulletDeath: 1
+			SmallExplosionDeath: 1
+			ExplosionDeath: 2
+			FireDeath: 2
+			ElectricityDeath: 2
+		CrushedSequence: die
+
+uocvmst0.spr:
+	Inherits: ^DrSoldier
+	Tooltip:
+		Name: Civilian
+	Voiced:
+		VoiceSet: CivilianVoice
+	-Buildable:
+
+ufradst0.spr:
+	Inherits: ^DrSoldier
+	Tooltip:
+		Name: Raider
+	Buildable:
+		Description: Stalwart of the Freedom Guard cause, the Raider is\narmed with a laser rifle. Once the Phasing Facility\nis constructed, the Raider gains the ability to\nphase underground. 
+		Prerequisites: ~infantry.fguard
+		BuildPaletteOrder: 10
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Valued:
+		Cost: 150
+	#BuildTime: 6
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 100
+	Armor:
+		Type: None
+	Armament@PRIMARY:
+		Weapon: LaserRifle
+
+ufmrcst0.spr:
+	Inherits: ^DrSoldier
+	Tooltip:
+		Name: Mercenary
+	Buildable:
+		Description: Recruited from outside the Freedom Guard ranks,\nthese paid guns carry a massive shoulder-mounted\nrail gun. Highly trained and ruthless, the Mercenary\nis tougher and deadlier than the Raider.
+		Prerequisites: ~infantry.fguard
+		BuildPaletteOrder: 10
+	Voiced:
+		VoiceSet: MercVoice
+	Valued:
+		Cost: 300
+	#BuildTime: 11
+	Health:
+		HP: 125
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 80
+	Armor:
+		Type: None
+	Armament@PRIMARY:
+		Weapon: MercWeapon
+
+ufsnpst0.spr:
+	Inherits: ^DrSoldier
+	Tooltip:
+		Name: Sniper
+	Buildable:
+		Description: With a long range electro magnetic needle gun, the\nSniper is lethal against infantry targets. Like the\nScout, the Sniper can morph into objects for\ncamouflage.
+		Prerequisites: ~infantry.fguard
+		BuildPaletteOrder: 10
+	Voiced:
+		VoiceSet: SniperVoice
+	Valued:
+		Cost: 700
+	#BuildTime: 21
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 12c0
+	Mobile:
+		Speed: 120
+	Armor:
+		Type: None
+	Armament@PRIMARY:
+		Weapon: SniperRifle
+
+ufsctst0.spr:
+	Inherits: ^DrSoldier
+	Tooltip:
+		Name: Scout
+	Buildable:
+		Description: Used mainly for front line surveillance, the Scout\nis able to morph into inanimate objects such as\ntrees and rocks to conceal her position. The Scout\nis relatively fast but wears no body armour, so\ncombat is not her speciality.
+		Prerequisites: ~infantry.fguard
+		BuildPaletteOrder: 20
+	Voiced:
+		VoiceSet: ScoutVoice
+	Valued:
+		Cost: 300
+	#BuildTime: 9
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 12c0
+	Mobile:
+		Speed: 120
+	Armor:
+		Type: None
+	-Armament@PRIMARY:
+
+ufmedst0.spr:
+	Inherits: ^DrSoldier
+	Tooltip:
+		Name: Field Medic
+	Buildable:
+		Description: The Field Medic can restore the health of wounded\ninfantry units and administer an antitoxin to\ncounteract the effects of the Amper. The Field Medic\nwill automatically heal damaged units that are nearby\nor can be directed to heal a specific unit. The\nField Medic has no attack capability and does not\nwear body armour.
+		Prerequisites: ~infantry.fguard
+		BuildPaletteOrder: 20
+	Voiced:
+		VoiceSet: MedicVoice
+	Valued:
+		Cost: 500
+	#BuildTime: 15
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 80
+	Armor:
+		Type: None
+	Armament:
+		Weapon: Heal
+		Cursor: heal
+		OutsideRangeCursor: heal
+		TargetStances: Ally
+		ForceTargetStances: None
+	AutoTarget:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry
+
+ufsabmn0.spr:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: ufmecst0.spr
+	Buildable:
+		Icon: icon-saboteur
+	Tooltip:
+		Name: Saboteur
+	Buildable:
+		Description: The Saboteur can damage any building to half its\nmaximum health.
+		Prerequisites: ~infantry.fguard
+		BuildPaletteOrder: 20
+	Voiced:
+		VoiceSet: MechanicVoice
+	Valued:
+		Cost: 800
+	#BuildTime: 24
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 120
+	Armor:
+		Type: None
+	-Armament@PRIMARY:
+	EngineerRepair:
+	RepairsBridges:
+	Captures:
+		CaptureTypes: building
+		PlayerExperience: 50
+
+ufmecst0.spr:
+	Inherits: ^DrSoldier
+	Tooltip:
+		Name: Mechanic
+	Buildable:
+		Description: The Mechanic functions similarly to the Field Medic,\nrepairing damaged vehicles in the field. The Mechanic\nhas no attack capability.
+		Prerequisites: ~infantry.fguard
+		BuildPaletteOrder: 30
+	Voiced:
+		VoiceSet: MechanicVoice
+	Valued:
+		Cost: 500
+	#BuildTime: 15
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 120
+	Armor:
+		Type: None
+	Armament:
+		Weapon: Repair
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetStances: Ally
+		ForceTargetStances: None
+	AutoTarget:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Vehicle
+
+ufmtrst0.spr:
+	Inherits: ^DrSoldier
+	Tooltip:
+		Name: Martyr
+	Buildable:
+		Description: Freedom Guard soldiers who are approaching their\n25th birthday, and therefore certain death, are\noutfitted with a high-powered explosive device and\nthen sent screaming into the enemy to die for the\ncause. Sometimes soldiers not popular with their\ncommanding officers are "volunteered" for this service\nbefore their 25th birthday.
+		Prerequisites: ~infantry.fguard
+		BuildPaletteOrder: 30
+	Voiced:
+		VoiceSet: MartyrVoice
+	Valued:
+		Cost: 600
+	#BuildTime: 18
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: None
+	-Armament@PRIMARY:
+	Explodes:
+		Weapon: MiniNuke
+		EmptyWeapon: MiniNuke
+	AttackSuicides:
+
+uigrdst0.spr:
+	Inherits: ^DrSoldier
+	Tooltip:
+		Name: Guardian
+	Buildable:
+		Description: Known as the Guardians of Order in the peaceful era\nbefore the Freedom Guard uprising, the basic Imperium\ninfantry unit is armed with a laser rifle and wears\na powered armour suit.
+		Prerequisites: ~infantry.imperium
+		BuildPaletteOrder: 10
+	Voiced:
+		VoiceSet: ImperiumVoice
+	#BuildTime: 6
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 80
+	Armor:
+		Type: None
+
+uibonst0.spr:
+	Inherits: ^DrSoldier
+	Tooltip:
+		Name: Bion
+	Buildable:
+		Description: A fearless mechanical killer, the Bion is armoured\nlike a walking tank. This one-man cyborg death\nsquad carries a massive plasma rifle, and can fire\nat both ground and air units.
+		Prerequisites: ~infantry.imperium
+		BuildPaletteOrder: 10
+	Voiced:
+		VoiceSet: ImperiumBionVoice
+	#BuildTime: 12
+	Valued:
+		Cost: 350
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 60
+	Armor:
+		Type: None
+
+uiextst0.spr:
+	Inherits: ^DrSoldier
+	Tooltip:
+		Name: Exterminator
+	Buildable:
+		Description: These infantry units are equipped with anti-gravity\ngenerators which allow them to hover over water.\nAs infantry, they can also move over steep gradients\nthat are generally inaccessible to hover vehicles.\nExterminators are armed with chemical grenades that\ndissolve metal. They are very effective at attacking\narmour.
+		Prerequisites: ~infantry.imperium
+		BuildPaletteOrder: 10
+	Voiced:
+		VoiceSet: ExterminatorVoice
+	#BuildTime: 15
+	Valued:
+		Cost: 500
+	Health:
+		HP: 75
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: None
+
+ucinfst0.spr:
+	Inherits: ^DrSoldier
+	Tooltip:
+		Name: Infiltrator
+	Buildable:
+		Description: The Infiltrator can morph into enemy infantry and\nis able to steal plans for enemy units and buildings.\nThe unit can also observe the opponent’s Minimap\nat the HQ building. Plans for units are obtained\nat the building where that unit is produced. The\nInfiltrator must return safely to his own HQ with\nall stolen plans.
+		BuildPaletteOrder: 40
+	Voiced:
+		VoiceSet: InfiltratorVoice
+	#BuildTime: 30
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 120
+	Armor:
+		Type: None

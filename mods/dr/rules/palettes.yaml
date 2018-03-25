@@ -1,0 +1,70 @@
+^Palettes:
+	PaletteFromGimpOrJascFile@barren:
+		Name: barren
+		Filename: barren.pal
+		ShadowIndex: 3,4
+	PaletteFromGimpOrJascFile@aust:
+		Name: aust
+		Filename: aust.pal
+		ShadowIndex: 3,4
+	PaletteFromGimpOrJascFile@asteroid:
+		Name: asteroid
+		Filename: asteroid.pal
+		ShadowIndex: 3,4
+	PaletteFromGimpOrJascFile@alien:
+		Name: alien
+		Filename: alien.pal
+		ShadowIndex: 3,4
+	PaletteFromGimpOrJascFile@auralien:
+		Name: auralien
+		Filename: auralien.pal
+		ShadowIndex: 3,4
+	PaletteFromGimpOrJascFile@snow:
+		Name: snow
+		Filename: snow.pal
+		ShadowIndex: 3,4
+	PaletteFromGimpOrJascFile@volcanic:
+		Name: volcanic
+		Filename: volcanic.pal
+		ShadowIndex: 3,4
+	PaletteFromGimpOrJascFile@jungle:
+		Name: jungle
+		Filename: jungle.pal
+		ShadowIndex: 3,4
+	PaletteFromGimpOrJascFile@player:
+		Name: player
+		Filename: units.pal
+		ShadowIndex: 4
+	PaletteFromCurrentTileset:
+		Name: terrain
+		ShadowIndex: 3,4
+	PaletteFromGimpOrJascFile@chrome:
+		Name: chrome
+		Filename: units.pal
+		ShadowIndex: 3
+		AllowModifiers: false
+	PaletteFromGimpOrJascFile@effect:
+		Name: effect
+		Filename: units.pal
+		ShadowIndex: 4
+	PaletteFromGimpOrJascFile@colorpicker:
+		Name: colorpicker
+		Filename: units.pal
+		AllowModifiers: false
+	PaletteFromRGBA@moveflash:
+		Name: moveflash
+		R: 255
+		G: 255
+		B: 255
+		A: 64
+	PaletteFromRGBA@highlight:
+		Name: highlight
+		R: 255
+		G: 255
+		B: 255
+		A: 128
+	PlayerColorPalette:
+		BasePalette: player
+		RemapIndex: 39, 38, 37, 36, 35, 34, 33, 32
+	PlayerHighlightPalette:
+	MenuPaletteEffect:

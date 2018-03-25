@@ -1,0 +1,207 @@
+^BaseWorld:
+	AlwaysVisible:
+	Inherits: ^Palettes
+	ScreenMap:
+	ActorMap:
+	LoadWidgetAtGameStart:
+	MusicPlaylist:
+		VictoryMusic: win1
+		DefeatMusic: nod_map1
+	DebugVisualizations:
+	TerrainGeometryOverlay:
+#	ShroudRenderer:
+#		ShroudVariants: typea, typeb, typec, typed
+#		FogVariants: typea, typeb, typec, typed
+#		OverrideFullShroud: full
+#		OverrideFullFog: full
+	Faction@0:
+		Name: Freedom Guard
+		InternalName: freedom
+		Side: Original
+		Selectable: False
+	Faction@1:
+		Name: Imperium
+		InternalName: imp
+		Side: Original
+		Selectable: False
+	Faction@2:
+		Name: Freedom Guard
+		InternalName: fguard
+		Side: Original
+		Description: 
+	Faction@4:
+		Name: Imperium
+		InternalName: imperium
+		Side: Original
+		Description: 
+	Faction@3:
+		Name: Togran
+		InternalName: togran
+		Side: Original
+		Description: 
+	Faction@5:
+		Name: Xenite
+		InternalName: xenite
+		Side: Expansion
+		Description: 
+	Faction@6:
+		Name: Shadowhand
+		InternalName: shand
+		Side: Expansion
+		Description: 
+	Faction@7:
+		Name: Any
+		InternalName: Random
+		RandomFactionMembers: fguard, imperium
+		Description: Random Faction\nA random faction will be chosen when the game starts.
+	ResourceType@water:
+		Type: Ore
+		Name: Water Spring
+		PipColor: Blue
+		ResourceType: 1
+		TerrainType: Ore
+		Palette: player
+		Sequences: water1
+		MaxDensity: 12000
+		ValuePerUnit: 25
+		AllowedTerrainTypes: Clear,Road
+		AllowUnderActors: true
+	ResourceType@taelon:
+		Type: Ore
+		Name: Taelon
+		PipColor: Green
+		ResourceType: 2
+		TerrainType: Ore
+		Palette: player
+		Sequences: taelon1
+		MaxDensity: 12000
+		ValuePerUnit: 25
+		AllowedTerrainTypes: Clear,Road
+		AllowUnderActors: true
+World:
+	Inherits: ^BaseWorld
+	ChatCommands:
+	DevCommands:
+	DebugVisualizationCommands:
+	PlayerCommands:
+	HelpCommand:
+	ScreenShaker:
+	BuildingInfluence:
+	ProductionQueueFromSelection:
+		ProductionTabsWidget: PRODUCTION_TABS
+	DomainIndex:
+	ResourceLayer:
+	ResourceClaimLayer:
+#	WarheadDebugOverlay:
+	CustomTerrainDebugOverlay:
+	MapCreeps:
+		CheckboxVisible: False
+	SpawnMapActors:
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxDisplayOrder: 4
+		BuildRadiusCheckboxDisplayOrder: 5
+	MapOptions:
+		ShortGameCheckboxDisplayOrder: 2
+		TechLevelDropdownDisplayOrder: 2
+		GameSpeedDropdownDisplayOrder: 3
+	MPStartLocations:
+	CreateMPPlayers:
+	MPStartUnits@mcvonly:
+		Class: none
+		ClassName: Three Rigs
+		Factions: fguard, imperium, togran, xenite, shand
+		BaseActor: ucfcnst0.spr
+		SupportActors: ucfcnst0.spr,ucfcnst0.spr
+		InnerSupportRadius: 3
+		OuterSupportRadius: 5
+	SpawnMPUnits:
+		StartingUnitsClass: none
+		DropdownDisplayOrder: 0
+	PathFinder:
+	ValidateOrder:
+	DebugPauseState:
+	ObjectivesPanel:
+		PanelName: SKIRMISH_STATS
+	RadarPings:
+	LoadWidgetAtGameStart:
+
+EditorWorld:
+	Inherits: ^BaseWorld
+	EditorActorLayer:
+	EditorResourceLayer:
+#	EditorSelectionLayer:
+	LoadWidgetAtGameStart:
+
+
+Player:
+	AlwaysVisible:
+	TechTree:
+	ClassicProductionQueue@Building:
+		Type: Building
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		SpeedUp: True
+	ClassicProductionQueue@Defense:
+		Type: Defense
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		SpeedUp: True
+	ClassicProductionQueue@Vehicle:
+		Type: Vehicle
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 75, 60, 50
+	ClassicProductionQueue@Infantry:
+		Type: Infantry
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@Aircraft:
+		Type: Aircraft
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		SpeedUp: True
+	Shroud:
+		FogCheckboxDisplayOrder: 3
+		ExploredMapCheckboxEnabled: True
+		FogCheckboxEnabled: False
+	PlaceBuilding:
+	SupportPowerManager:
+	ScriptTriggers:
+	MissionObjectives:
+	ConquestVictoryConditions:
+	PowerManager:
+	AllyRepair:
+	PlayerResources:
+		InsufficientFundsNotification: InsufficientFunds
+	DeveloperMode:
+		CheckboxDisplayOrder: 8
+	FrozenActorLayer:
+	BaseAttackNotifier:
+	PlayerStatistics:
+	PlaceBeacon:
+	ProvidesTechPrerequisite@infonly:
+		Name: Infantry Only
+		Prerequisites: techlevel.infonly
+		Id: infantryonly
+	ProvidesTechPrerequisite@low:
+		Name: Low
+		Prerequisites: techlevel.infonly, techlevel.low
+		Id: low
+	ProvidesTechPrerequisite@medium:
+		Name: Medium
+		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium
+		Id: medium
+	ProvidesTechPrerequisite@high:
+		Name: No Superweapons
+		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium, techlevel.high
+		Id: nosuperweapons
+	ProvidesTechPrerequisite@unrestricted:
+		Name: Unrestricted
+		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium, techlevel.high, techlevel.unrestricted
+		Id: unrestricted
+	GrantConditionOnPrerequisiteManager:
+	EnemyWatcher:
+	PlayerExperience:

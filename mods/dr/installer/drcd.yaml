@@ -1,0 +1,19 @@
+drorig: Dark Reign (Disc, English)
+	Install:
+		copy: .
+			^Content/dr/SPRITES.FTG: Dark Reign 1.7/DARK/GRAPHICS/SPRITES.FTG
+			^Content/dr/SOUNDS.FTG: Dark Reign 1.7/DARK/sndfx/SOUNDS.FTG
+			^Content/dr/shell/SOUNDS.FTG: Dark Reign 1.7/DARK/SHELL/SOUNDS.FTG
+drexp: Dark Reign Expansion (Disc, English)
+	Install:
+		copy: .
+			^Content/dr/spriteEx.ftg: Dark Reign 1.7/DARK/GRAPHICS/spriteEx.ftg
+			^Content/dr/soundsEx.ftg: Dark Reign 1.7/DARK/sndfx/soundsEx.ftg
+drmus: Music
+	Install:
+		copy: .
+			^Content/dr/music.zip: music.zip
+drtiles: Tilesets
+	Install:
+		copy: .
+			^Content/dr/tilesets.zip: tilesets.zip

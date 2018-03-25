@@ -1,0 +1,754 @@
+
+# DR
+
+^DrAnimatedVehicle:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 80
+		Prerequisites: ~barracks, ~techlevel.infonly
+	Huntable:
+	Valued:
+		Cost: 900
+	Health:
+		HP: 2500
+	Armor:
+		Type: None
+	RevealsShroud:
+		Range: 4c0
+	Mobile:
+		Speed: 56
+		Crushes: mine, crate
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 40
+			Road: 100
+			Bridge: 100
+			Ore: 70
+			Gems: 70
+			Beach: 40
+		TurnSpeed: 5
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 28, 28
+		DecorationBounds: 28,28
+	Targetable:
+		TargetTypes: Ground, Repair, Vehicle
+		RequiresCondition: !parachute
+	Repairable:
+	Passenger:
+		CargoType: Infantry
+	HiddenUnderFog:
+	ActorLostNotification:
+	ProximityCaptor:
+		Types: Vehicle
+	Guard:
+	Guardable:
+	Tooltip:
+		GenericName: Vehicle
+	DeathSounds@NORMAL:
+		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath
+	Capturable:
+		Types: vehicle
+		CaptureThreshold: 100
+		CancelActivity: True
+	CaptureNotification:
+		Notification: UnitStolen
+	MustBeDestroyed:
+	Armament:
+		Weapon: LaserRifle
+	AttackFrontal:
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithInfantryBody:
+	HitShape:
+	EditorTilesetFilter:
+		Categories: Vehicle
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+^DrVehicle:
+	Inherits: ^Vehicle
+	Inherits@3: ^SpriteActor
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 80
+		Prerequisites: ~barracks, ~techlevel.infonly
+		Description: Builds structures.
+	Valued:
+		Cost: 900
+	Health:
+		HP: 20000
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 85
+	RevealsShroud:
+		Range: 5c0
+		RevealGeneratedShroud: False
+	RevealsShroud@GAPGEN:
+		Range: 4c0
+	Armament:
+		Weapon: LaserRifle
+	AttackFrontal:
+	SelectionDecorations:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	Selectable:
+		DecorationBounds: 28,28
+
+ucfcnst0.spr:
+	Inherits: ^DrAnimatedVehicle
+	Tooltip:
+		Name: Construction Rig
+	Buildable:
+		Description: The workhorse of any military operation, this unit\nconstructs all buildings and bridges.
+		BuildPaletteOrder: 80
+	Voiced:
+		VoiceSet: ConstructionVoice
+	Valued:
+		Cost: 300
+	#BuildTime: 9
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 60
+	Armor:
+		Type: Light
+	Transforms:
+		IntoActor: tfhqt1l0.spr
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds: 
+		NoTransformNotification: BuildingCannotPlaceAudio
+	MustBeDestroyed:
+		RequiredForShortGame: true
+
+ucfrgst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Freighter
+	Buildable:
+		Description: These vehicles haul the vital resources that feed\nthe ravenous war machine. The multi-purpose\nFreighter is able to carry fresh water or Taelon.
+		BuildPaletteOrder: 80
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Valued:
+		Cost: 1000
+	#BuildTime: 30
+	Health:
+		HP: 750
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 100
+	Armor:
+		Type: Heavy
+	WithDockingAnimation:
+	Harvester:
+		Capacity: 20
+		Resources: Ore,Gems
+		BaleUnloadDelay: 1
+		SearchFromProcRadius: 30
+		SearchFromOrderRadius: 11
+
+uchfrst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Hover Freighter
+	Buildable:
+		Description: Serves the same function as the Freighter, but its\nhover drive allows movement over a broader range of\nterrain types. It is armed with a laser cannon.
+		BuildPaletteOrder: 80
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Valued:
+		Cost: 1500
+	#BuildTime: 45
+	Health:
+		HP: 500
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: Heavy
+	WithDockingAnimation:
+	Harvester:
+		Capacity: 20
+		Resources: Ore,Gems
+		BaleUnloadDelay: 1
+		SearchFromProcRadius: 30
+		SearchFromOrderRadius: 11
+
+ufspbst0.spr:
+	Inherits: ^DrAnimatedVehicle
+	Tooltip:
+		Name: Spider Bike
+	Buildable:
+		Description: This all-terrain vehicle is the cornerstone of the\nFreedom Guard ground force. Fast and inexpensive,\nit is able to tackle all types of terrain. Armed\nwith a double rail gun, it is fairly effective\nagainst armour but somewhat vulnerable to infantry.
+		Prerequisites: ~vehicles.fguard
+		BuildPaletteOrder: 90
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Valued:
+		Cost: 500
+	#BuildTime: 15
+	Health:
+		HP: 133
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 240
+	Armor:
+		Type: Light
+
+ufratst0.spr:
+	Inherits: ^DrAnimatedVehicle
+	Tooltip:
+		Name: Rapid Armored Transport
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Buildable:
+		Description: The Freedom Guard troop transport has the ability\nto camouflage itself to match the surrounding terrain.\nThe R.A.T. is unarmed, but is able to carry up to\nfive infantry units at a time and can move over water,\nalthough at a considerably reduced speed.
+		Prerequisites: ~vehicles.fguard
+		BuildPaletteOrder: 90
+	Valued:
+		Cost: 450
+	#BuildTime: 14
+	Health:
+		HP: 200
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 180
+	Armor:
+		Type: Light
+
+ufsktst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Skirmish Tank
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Buildable:
+		Description: The Skirmish Tank is the foundation upon which any\nsuccessful military outfit is built. Properly\naccessorised, the Skirmish Tank can make a splash at\nan intimate midnight raid, a small summer skirmish,\nor even a full-scale gala massacre.
+		Prerequisites: ~vehicles.fguard
+		BuildPaletteOrder: 90
+	Turreted:
+		TurnSpeed: 5
+	Armament:
+		Weapon: LaserRifle
+		Recoil: 128
+		RecoilRecovery: 38
+		LocalOffset: 720,0,80
+		MuzzleSequence: muzzle
+	-AttackFrontal:
+	-WithFacingSpriteBody:
+	AttackTurreted:
+	WithSpriteTurret:
+	Valued:
+		Cost: 600
+	#BuildTime: 18
+	Health:
+		HP: 133
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: Light
+
+ufthnst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Tank Hunter
+	Buildable:
+		Description: This quick, deadly vehicle emits a massive short\nrange electric discharge. The Tank Hunter is\ndevastating in close combat but has no ranged weapon\nand is vulnerable in situations where it cannot close\non its prey.
+		Prerequisites: ~vehicles.fguard
+		BuildPaletteOrder: 100
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Valued:
+		Cost: 700
+	#BuildTime: 21
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 200
+	Armor:
+		Type: Light
+
+ufphtst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Phase Tank
+	Buildable:
+		Description: Using limited phasing technology, the Phase Tank\ncan bury itself underground in order to ambush\nenemy units. However, the Phase Tank must surface\nto move or fire and can be fired upon and take damage\nwhile submerged. Although the phased energy shield\nsurrounding the vehicle serves to protect it and\nminimise damage, the Phase Tank is essentially\ndefenceless while underground.
+		Prerequisites: ~vehicles.fguard
+		BuildPaletteOrder: 100
+	Voiced:
+		VoiceSet: PhaseTankVoice
+	Valued:
+		Cost: 600
+	#BuildTime: 18
+	Health:
+		HP: 166
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 120
+	Armor:
+		Type: Light
+
+ufflkst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Flak Jack
+	Buildable:
+		Description: A revamped Construction Rig outfitted with two\nshoulder-mounted particle launchers. The Flak Jack\nsalvages metal from the battlefield and converts\nit into microscopic metallic particles that it fires\nin clouds which cause sustained damage to air units.\nThe unit has no defensive capability against ground\nattack, and should be protected at all times.
+		Prerequisites: ~vehicles.fguard
+		BuildPaletteOrder: 100
+	Voiced:
+		VoiceSet: FlakJackVoice
+	Valued:
+		Cost: 500
+	#BuildTime: 15
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 120
+	Armor:
+		Type: Light
+
+uftrtst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Triple Rail Hover Tank
+	Buildable:
+		Description: The pinnacle of Freedom Guard armour, the Triple\nRail uses hover technology stolen from the Imperium\nto allow movement over a broader range of terrain\ntypes. Hauling three electro magnetic projectile\naccelerator cannons, or rail guns, this tank is a\nsavage consumer of Imperium armour.
+		Prerequisites: ~vehicles.fguard
+		BuildPaletteOrder: 110
+	Voiced:
+		VoiceSet: TripleRailTankVoice
+	Turreted:
+		TurnSpeed: 5
+	Armament:
+		Weapon: LaserRifle
+		Recoil: 128
+		RecoilRecovery: 38
+		LocalOffset: 720,0,80
+		MuzzleSequence: muzzle
+	-AttackFrontal:
+	-WithFacingSpriteBody:
+	AttackTurreted:
+	WithSpriteTurret:
+	Valued:
+		Cost: 1300
+	#BuildTime: 39
+	Health:
+		HP: 200
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 120
+	Armor:
+		Type: Light
+
+uffarst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Hellstorm Artillery
+	Buildable:
+		Description: The Hellstorm Artillery fires a long-range,\narea-effect explosive. Its range is more than four\ntimes longer than any other unit. A battery of\nArtillery is capable of single-handedly destroying\nan enemy base, but, the vehicle is slow and lightly\narmoured, so undefended Artillery is fodder in\nclose combat.
+		Prerequisites: ~vehicles.fguard
+		BuildPaletteOrder: 110
+	Voiced:
+		VoiceSet: HellstormArtilleryVoice
+	Valued:
+		Cost: 1100
+	#BuildTime: 33
+	Health:
+		HP: 133
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 80
+	Armor:
+		Type: Light
+
+ufskbst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Sky Bike
+	Buildable:
+		Description: Using a modified Spider Bike chassis, the Freedom\nGuard were able to produce cheap, fast aerial units\nwhich could attack enemy ground troops and other\nflyers. Although quicker than the Imperium Cyclone,\nthe Sky Bike is not as heavily armoured and is\noutgunned in even combat. The speed of the Sky Bike,\nhowever, allows it to dictate the circumstance of\nconflict. This unit fires high-velocity mini-missiles\nand, like the Outrider, must re-arm at the Re-Arming\nDeck. 
+		Prerequisites: ~vehicles.fguard
+		BuildPaletteOrder: 110
+	Voiced:
+		VoiceSet: AirUnitVoice
+	Valued:
+		Cost: 800
+	#BuildTime: 24
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 280
+	Armor:
+		Type: Light
+
+ufoutst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Outrider
+	Buildable:
+		Description: This ground attack aerial unit is slower and less\nmanoeuvrable than the Sky Bike, but considerably\ntougher and fires air to ground missiles. Deadly\neffective against Imperium armour, it cannot engage\nother air units and should be escorted by air defence\nunits. The Outrider has limited ammunition and must\nre-arm at the Re-Arming Deck.
+		Prerequisites: ~vehicles.fguard
+		BuildPaletteOrder: 120
+	Voiced:
+		VoiceSet: AirUnitVoice
+	Valued:
+		Cost: 1400
+	#BuildTime: 42
+	Health:
+		HP: 200
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 240
+	Armor:
+		Type: Light
+
+ufswvst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Shock Wave
+	Buildable:
+		Description: A single-use unit that creates an immense earth wave\nthat travels across the map, causing severe damage\nto everything in its wake. The unit is armed by\ndouble-clicking on it and then fired at an enemy\ntarget to determine the direction of the wave. The\nShock Wave unit then embeds in the ground and\ndetonates, self-destructing in the discharge. The\nShock Wave is expensive and slow to build but well\nworth the wait.
+		Prerequisites: ~vehicles.fguard
+		BuildPaletteOrder: 200
+	Voiced:
+		VoiceSet: ShockWaveVoice
+	Turreted:
+		TurnSpeed: 5
+	Armament:
+		Weapon: LaserRifle
+		Recoil: 128
+		RecoilRecovery: 38
+		LocalOffset: 720,0,80
+		MuzzleSequence: muzzle
+	-AttackFrontal:
+	-WithFacingSpriteBody:
+	AttackTurreted:
+	WithSpriteTurret:
+	Valued:
+		Cost: 4000
+	#BuildTime: 120
+	Health:
+		HP: 166
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 80
+	Armor:
+		Type: Light
+
+ucwcost0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Water Contaminator
+	Buildable:
+		Description: This vehicle can pollute and permanently destroy\nfreshwater springs. It is slow and extremely expensive,\nbut once you have cut off your enemies’ resources,\ntheir ruin is inevitable.
+		BuildPaletteOrder: 200
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Valued:
+		Cost: 10000
+	#BuildTime: 150
+	Health:
+		HP: 166
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 40
+	Armor:
+		Type: Light
+
+# Imperium
+
+uisttst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Scout Runner
+	Buildable:
+		Description: This fast moving hover vehicle is armed with a\nlaser and is fairly effective against both infantry\nand armour. However, it is not very sturdy, and is\nused primarily for front line reconnaissance.
+		Prerequisites: ~vehicles.imperium
+		BuildPaletteOrder: 130
+	Voiced:
+		VoiceSet: ImperiumVoice
+	Valued:
+		Cost: 500
+	#BuildTime: 15
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 200
+	Armor:
+		Type: Light
+
+uiittst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Invader Troop Transport
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.imperium
+		BuildPaletteOrder: 130
+	Voiced:
+		VoiceSet: ImperiumVoice
+	Valued:
+		Cost: 600
+	#BuildTime: 18
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 200
+	Armor:
+		Type: Light
+
+uipltac0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Plasma Tank
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.imperium
+		BuildPaletteOrder: 130
+	Voiced:
+		VoiceSet: ImperiumVoice
+	Valued:
+		Cost: 700
+	#BuildTime: 21
+	Health:
+		HP: 250
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: Light
+
+uiampst0.spr:
+	Inherits: ^DrAnimatedVehicle
+	Tooltip:
+		Name: Amper
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.imperium
+		BuildPaletteOrder: 140
+	Voiced:
+		VoiceSet: AmperVoice
+	Valued:
+		Cost: 500
+	#BuildTime: 15
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 80
+	Armor:
+		Type: Light
+
+uimadst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Mobile Air Defense
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.imperium
+		BuildPaletteOrder: 140
+	Voiced:
+		VoiceSet: ImperiumVoice
+	Valued:
+		Cost: 800
+	#BuildTime: 24
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: Light
+
+uirdrst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Recon Drone
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.imperium
+		BuildPaletteOrder: 140
+	Voiced:
+		VoiceSet: ReconDroneVoice
+	Valued:
+		Cost: 400
+	#BuildTime: 12
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: Light
+
+uishrst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Shredder
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.imperium
+		BuildPaletteOrder: 150
+	Voiced:
+		VoiceSet: ShredderVoice
+	Valued:
+		Cost: 700
+	#BuildTime: 21
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 200
+	Armor:
+		Type: Light
+
+uihosst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Hostage Taker
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.imperium
+		BuildPaletteOrder: 150
+	Voiced:
+		VoiceSet: HostageTakerVoice
+	Valued:
+		Cost: 600
+	#BuildTime: 18
+	Health:
+		HP: 450
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 200
+	Armor:
+		Type: Light
+
+uitctst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Tachion Tank
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.imperium
+		BuildPaletteOrder: 150
+	Voiced:
+		VoiceSet: TachionTankVoice
+	Valued:
+		Cost: 1500
+	#BuildTime: 45
+	Health:
+		HP: 410
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 120
+	Armor:
+		Type: Light
+
+uiiarst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: S.C.A.R.A.B.
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.imperium
+		BuildPaletteOrder: 160
+	Voiced:
+		VoiceSet: ImperiumVoice
+	Valued:
+		Cost: 1300
+	#BuildTime: 39
+	Health:
+		HP: 133
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 60
+	Armor:
+		Type: Light
+
+uicycst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Cyclone
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.imperium
+		BuildPaletteOrder: 160
+	Voiced:
+		VoiceSet: CycloneVoice
+	Valued:
+		Cost: 1500
+	#BuildTime: 45
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 240
+	Armor:
+		Type: Light
+
+uiskyst0.spr:
+	Inherits: ^DrVehicle
+	Tooltip:
+		Name: Sky Fortress
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.imperium
+		BuildPaletteOrder: 160
+	Voiced:
+		VoiceSet: SkyFortressVoice
+	Valued:
+		Cost: 2500
+	#BuildTime: 75
+	Health:
+		HP: 266
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 100
+	Armor:
+		Type: Light

@@ -1,0 +1,433 @@
+General:
+	Name: Snow
+	Id: SNOW
+	Palette: snow
+	SheetSize: 1024
+	EditorTemplateOrder: Terrain
+	HeightDebugColors: AA0000
+
+Terrain:
+	TerrainType@Clear:
+		Type: Clear
+		TargetTypes: Ground
+		Color: 64562B
+		RestrictPlayerColor: true
+	TerrainType@Muddy:
+		Type: Muddy
+		TargetTypes: Ground
+		Color: FFFFFF
+		RestrictPlayerColor: true
+	TerrainType@Rough:
+		Type: Rough
+		TargetTypes: Ground
+		Color: 9E9073
+		RestrictPlayerColor: true
+	TerrainType@Road:
+		Type: Road
+		TargetTypes: Ground
+		Color: 9E9073
+		RestrictPlayerColor: true
+	TerrainType@RoadBase:
+		Type: RoadBase
+		TargetTypes: Ground
+		Color: 817364
+		RestrictPlayerColor: true
+	TerrainType@HillSlope:
+		Type: HillSlope
+		TargetTypes: Ground
+		Color: 64481C
+		RestrictPlayerColor: true
+	TerrainType@Cliff:
+		Type: Cliff
+		TargetTypes: Ground
+		Color: A58164
+		RestrictPlayerColor: true
+	TerrainType@Gems:
+		Type: Gems
+		TargetTypes: Ground
+		Color: 8470FF
+		RestrictPlayerColor: true
+	TerrainType@Ore:
+		Type: Ore
+		TargetTypes: Ground
+		Color: 948060
+		RestrictPlayerColor: true
+	TerrainType@Water:
+		Type: Water
+		TargetTypes: Water
+		Color: 2B2B39
+		RestrictPlayerColor: true
+
+Templates:
+	Template@1:
+		Id: 1
+		Images: snow/01.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@2:
+		Id: 2
+		Images: snow/02.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@3:
+		Id: 3
+		Images: snow/03.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@4:
+		Id: 4
+		Images: snow/04.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Muddy
+			1: Muddy
+			2: Muddy
+			3: Muddy
+			4: Muddy
+			5: Muddy
+			6: Muddy
+			7: Muddy
+	Template@5:
+		Id: 5
+		Images: snow/05.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Muddy
+			1: Muddy
+			2: Muddy
+			3: Muddy
+			4: Muddy
+			5: Muddy
+			6: Muddy
+			7: Muddy
+	Template@6:
+		Id: 6
+		Images: snow/06.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Rough
+			1: Rough
+			2: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			6: Rough
+			7: Rough
+	Template@7:
+		Id: 7
+		Images: snow/07.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Rough
+			1: Rough
+			2: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			6: Rough
+			7: Rough
+	Template@8:
+		Id: 8
+		Images: snow/08.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+			6: Road
+			7: Road
+	Template@9:
+		Id: 9
+		Images: snow/09.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: RoadBase
+			1: RoadBase
+			2: RoadBase
+			3: RoadBase
+			4: RoadBase
+			5: RoadBase
+			6: RoadBase
+			7: RoadBase
+	Template@10:
+		Id: 10
+		Images: snow/10.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: HillSlope
+			1: HillSlope
+			2: HillSlope
+			3: HillSlope
+			4: HillSlope
+			5: HillSlope
+			6: HillSlope
+			7: HillSlope
+	Template@11:
+		Id: 11
+		Images: snow/11.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: HillSlope
+			1: HillSlope
+			2: HillSlope
+			3: HillSlope
+			4: HillSlope
+			5: HillSlope
+			6: HillSlope
+			7: HillSlope
+	Template@12:
+		Id: 12
+		Images: snow/12.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Cliff
+			4: Cliff
+			5: Cliff
+			6: Cliff
+			7: Cliff
+	Template@13:
+		Id: 13
+		Images: snow/13.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Cliff
+			4: Cliff
+			5: Cliff
+			6: Cliff
+			7: Cliff
+	Template@14:
+		Id: 14
+		Images: snow/14.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Cliff
+			4: Cliff
+			5: Cliff
+			6: Cliff
+			7: Cliff
+	Template@15:
+		Id: 15
+		Images: snow/15.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Cliff
+			4: Cliff
+			5: Cliff
+			6: Cliff
+			7: Cliff
+	Template@0:
+		Id: 0
+		Images: snow/00.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Water
+			1: Water
+			2: Water
+			3: Water
+			4: Water
+			5: Water
+			6: Water
+			7: Water
+	Template@16:
+		Id: 16
+		Images: snow/T__.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@17:
+		Id: 17
+		Images: snow/R__.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@18:
+		Id: 18
+		Images: snow/B__.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@19:
+		Id: 19
+		Images: snow/L__.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@20:
+		Id: 20
+		Images: snow/TLI.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@21:
+		Id: 21
+		Images: snow/TRI.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@22:
+		Id: 22
+		Images: snow/BRI.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@23:
+		Id: 23
+		Images: snow/BLI.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@24:
+		Id: 24
+		Images: snow/TLO.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@25:
+		Id: 25
+		Images: snow/TRO.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@26:
+		Id: 26
+		Images: snow/BLO.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@27:
+		Id: 27
+		Images: snow/BRO.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear

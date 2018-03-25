@@ -1,0 +1,225 @@
+
+^DrRock:
+	Inherits: ^Tree
+	EditorTilesetFilter:
+		Categories: Rocks
+
+^DrCrater:
+	Inherits: ^Tree
+	EditorTilesetFilter:
+		Categories: Craters
+
+^DrPlant:
+	Inherits: ^Tree
+	EditorTilesetFilter:
+		Categories: Plant
+
+^DrMisc:
+	Inherits: ^Tree
+	EditorTilesetFilter:
+		Categories: Misc
+
+aotre000.spr:
+	Inherits: ^Tree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aotre001.spr:
+	Inherits: ^Tree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aotre002.spr:
+	Inherits: ^Tree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aotre003.spr:
+	Inherits: ^Tree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aotre004.spr:
+	Inherits: ^Tree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aotre005.spr:
+	Inherits: ^Tree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+# Crashed space ship
+aospc000.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+# Rubble
+aorub000.spr:
+	Inherits: ^Tree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aorub001.spr:
+	Inherits: ^Tree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aorub002.spr:
+	Inherits: ^Tree
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+# Rocks
+aoroc000.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoroc001.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoroc002.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoroc003.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoroc004.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoroc005.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+# Plant
+aopln000.spr:
+	Inherits: ^DrPlant
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aopln001.spr:
+	Inherits: ^DrPlant
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aopln002.spr:
+	Inherits: ^DrPlant
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+# Scoring
+aomsc000.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aomsc001.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aomsc002.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+# Crater
+aoctr000.spr:
+	Inherits: ^DrCrater
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoctr001.spr:
+	Inherits: ^DrCrater
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoctr002.spr:
+	Inherits: ^DrCrater
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoctr003.spr:
+	Inherits: ^DrCrater
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoctr004.spr:
+	Inherits: ^DrCrater
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+# Cliff
+aoclf000.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoclf001.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoclf002.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoclf003.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoclf004.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2
+
+aoclf005.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: __ x_
+		Dimensions: 2,2

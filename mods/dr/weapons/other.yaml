@@ -1,0 +1,21 @@
+Heal:
+	ReloadDelay: 80
+	Range: 4c0
+	Report: gxheaoc0.wav
+	ValidTargets: Infantry
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 213
+		Damage: -5000
+		ValidStances: Ally
+		ValidTargets: Infantry
+		DebugOverlayColor: 00FF00
+
+Repair:
+	Inherits: Heal
+	Report: gxrepoc0.wav
+	ValidTargets: Repair
+	Warhead@1Dam: SpreadDamage
+		Damage: -2000
+		ValidTargets: Repair

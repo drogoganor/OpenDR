@@ -1,0 +1,213 @@
+
+GenericHumanVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: gvcivsl0,gvcivsl1,gvcivsl2
+		Action: gvcivrl0,gvcivrl1,gvcivrl2
+		Die: gvmaldc1,gvmaldc2
+		Burned: gvmaldc1,gvmaldc2
+		Zapped: gvmaldc1,gvmaldc2
+		
+GenericHumanFemaleVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: gvfg4sl0,gvfg4sl1,gvfg4sl2
+		Action: gvfg4rl0,gvfg4rl1,gvfg4rl2
+		Die: gvfemdc0,gvfemdc1,gvfemdc2
+		Burned: gvfemdc3
+		Zapped: gvfemdc3
+		
+FreedomGuardVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: gvfg2sl0,gvfg2sl1,gvfg2sl2,gvfg2sl3
+		Action: gvfg2rl0,gvfg2rl1,gvfg2rl2,gvfg2rl4
+
+ImperiumVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: gvig1sl0,gvig1sl1,gvig1sl2,gvig1sl3,gvig1sl5
+		Action: gvig1rl0,gvig1rl1,gvig1rl2,gvig1rl3,gvig1rl6
+		Die: gxscmdc0
+		Burned: gxscmdc0
+		Zapped: gxscmdc0
+
+GenericVehicleVoice:
+	DefaultVariant: .wav
+	Voices:
+		Die: gxexpoc2
+		
+
+CivilianVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: gvcivsl0,gvcivsl1,gvcivsl2
+		Action: gvcivrl0,gvcivrl1,gvcivrl2
+
+ConstructionVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: gvfg1sl0,gvfg1sl1,gvfg1sl2
+		Action: gvfg1rl0,gvfg1rl1,gvfg1rl2
+
+RaiderVoice:
+	Inherits: FreedomGuardVoice
+
+MercVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: gvmrcsl0,gvmrcsl1,gvmrcsl2,gvmrcsl3
+		Action: gvmrcrl0,gvmrcrl1,gvmrcrl2,gvmrcrl4
+
+SniperVoice:
+	Inherits: GenericHumanFemaleVoice
+	Voices:
+		Select: gvfg4sl0,gvfg4sl1,gvfg4sl2,gvsnpsl0
+		Action: gvfg4rl0,gvfg4rl1,gvfg4rl2,gvsnprl0
+
+ScoutVoice:
+	Inherits: GenericHumanFemaleVoice
+	Voices:
+		Select: gvfg4sl0,gvfg4sl1,gvfg4sl2
+		Action: gvfg4rl0,gvfg4rl1,gvfg4rl2
+
+MedicVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: gvmedsl0,gvmedsl1,gvmedsl2,gvmedsl3
+		Action: gvmedrl0,gvmedrl1,gvmedrl2
+
+MechanicVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: gvfg5sl0,gvfg5sl1,gvfg5sl2,gvfg5sl3
+		Action: gvfg5rl0,gvfg5rl1,gvfg5rl2,gvfg5rl4,gvfg5rl5
+
+MartyrVoice:
+	DefaultVariant: .wav
+	Voices:
+		Select: gvmtrsl0,gvmtrsl1,gvmtrsl2,gvmtrsl3
+		Action: gvmtral0,gvmtral4,gvmtral5,gvmtral6
+		Die: gxmtrwc0
+		Burned: gxmtrwc0
+		Zapped: gxmtrwc0
+
+InfiltratorVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: gvfinsl0,gvfinsl1,gvfinsl2
+		Action: gvfinrl0,gvfinrl1,gvfinrl2
+
+PhaseTankVoice:
+	Inherits: GenericVehicleVoice
+	Voices:
+		Select: gxphrsc0,gxphrsc1
+		Action: gxphrrc0,gxphrrc1
+
+FlakJackVoice:
+	Inherits: GenericVehicleVoice
+	Voices:
+		Select: gvflksl0,gvflksl1,gvflksl3,gvflksl4
+		Action: gvflkrl0,gvflkrl1,gvflkrl4,gvflkrl5
+
+TripleRailTankVoice:
+	Inherits: GenericVehicleVoice
+	Voices:
+		Select: gvtrtal0,gvtrtsl1,gvtrtsl2,gvtrtsl3
+		Action: gvtrtrl0,gvtrtrl1,gvtrtrl2,gvtrtrl3
+		Die: gvmaldc1,gvmaldc2
+		Burned: gvmaldc1,gvmaldc2
+		Zapped: gvmaldc1,gvmaldc2
+
+HellstormArtilleryVoice:
+	Inherits: GenericVehicleVoice
+	Voices:
+		Select: gvfarsl0,gvfarsl1,gvfarsl2,gvfarsl3
+		Action: gvfarrl0,gvfarrl1,gvfarrl2,gvfarrl3
+		Die: gvmaldc1,gvmaldc2
+		Burned: gvmaldc1,gvmaldc2
+		Zapped: gvmaldc1,gvmaldc2
+
+AirUnitVoice:
+	Inherits: GenericVehicleVoice
+	Voices:
+		Select: gvfg3sl0,gvfg3sl1,gvfg3sl2,gvfg3sl3
+		Action: gvfg3rl0,gvfg3rl1,gvfg3rl2,gvfg3rl3,gvfg3rl4
+
+ShockWaveVoice:
+	Inherits: GenericVehicleVoice
+	Voices:
+		Select: gvswvsl1,gvswvsl2,gvswvsl3
+		Action: gvswvrl0,gvswvrl1,gvswvrl3,gvswvrl4
+
+ImperiumRigVoice:
+	Inherits: GenericVehicleVoice
+	Voices:
+		Select: gvicnsl0,gvicnsl1,gvicnsl2
+		Action: gvicnrl0,gvicnrl1,gvicnrl2
+
+ImperiumBionVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gxbonsc0,gxbonsc1
+		Action: gxbonrc0,gxbonrc1
+
+CycloneVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvcycsl0,gvcycsl1,gvcycsl2
+		Action: gvcycrl0,gvcycrl1,gvcycrl2,gvcycrl3
+
+SkyFortressVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvskyal3,gvskyal4,gvskysl0,gvskysl2
+		Action: gvskyrl0,gvskyrl1,gvskyrl2,gvskyrl3
+
+ExterminatorVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvextal3,gvextsl0,gvextsl1,gvextsl2
+		Action: gvextrl0,gvextrl1,gvextrl2
+
+HostageTakerVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvhosal0,gvhossl0,gvhossl1
+		Action: gvhosrl0,gvhosrl2
+
+CommandMeIObey:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvszmsl0
+		Action: gvszmrl0
+
+TachionTankVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvtctal2,gvtctsl0,gvtctsl1,gvtctsl2
+		Action: gvtctrl0,gvtctrl2,gvtctrl3
+
+AmperVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvampsl1,gvampsl2,gvampsl3
+		Action: gvampal0,gvamprl0,gvamprl2
+
+ExpansionHumanVoiceMaybe:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvsabal0,gvsabal2
+		Action: gvsabal1,gvsabal3
+
+ReconDroneVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gxrdrsc0,gxrdrsc1,gxrdrsc2
+		Action: gxrdrrc0,gxrdrrc1,gxrdrrc2
+
+ShredderVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gxshrsc0,gxshrsc1,gxshrsc2
+		Action: gxshrrc0,gxshrrc1

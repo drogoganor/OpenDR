@@ -1,0 +1,274 @@
+Palettes:
+	cursor: template.pal
+
+Cursors:
+	mouse.shp: cursor
+		default:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-t:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-tr:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-r:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-br:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-b:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-bl:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-l:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-tl:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-t-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-tr-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-r-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-br-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-b-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-bl-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-l-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		scroll-tl-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		select:
+			Start: 0
+			X: -16
+			Y: -12
+		default-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		generic-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		generic-blocked-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		move:
+			Start: 0
+			X: -16
+			Y: -12
+		move-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		move-rough:
+			Start: 0
+			X: -16
+			Y: -12
+		move-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		move-blocked-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		attack:
+			Start: 0
+			X: -16
+			Y: -12
+		attack-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		attackoutsiderange:
+			Start: 0
+			X: -16
+			Y: -12
+		attackoutsiderange-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		harvest:
+			Start: 0
+			X: -16
+			Y: -12
+		harvest-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		enter:
+			Start: 0
+			X: -16
+			Y: -12
+		enter-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		enter-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		enter-blocked-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		c4:
+			Start: 0
+			X: -16
+			Y: -12
+		c4-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		guard:
+			Start: 0
+			X: -16
+			Y: -12
+		guard-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		capture:
+			Start: 0
+			X: -16
+			Y: -12
+		capture-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		heal:
+			Start: 0
+			X: -16
+			Y: -12
+		heal-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		ability:
+			Start: 0
+			X: -16
+			Y: -12
+		ability-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		joystick-all:
+			Start: 0
+			X: -16
+			Y: -12
+		joystick-t-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		joystick-tr-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		joystick-r-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		joystick-br-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		joystick-b-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		joystick-bl-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		joystick-l-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		joystick-tl-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+# Cursors that need minimap variants
+		deploy:
+			Start: 0
+			X: -16
+			Y: -12
+		deploy-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		goldwrench:
+			Start: 0
+			X: -16
+			Y: -12
+		goldwrench-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		nuke:
+			Start: 0
+			X: -16
+			Y: -12
+		chrono-select:
+			Start: 0
+			X: -16
+			Y: -12
+		chrono-target:
+			Start: 0
+			X: -16
+			Y: -12
+		sell:
+			Start: 0
+			X: -16
+			Y: -12
+		sell-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		repair:
+			Start: 0
+			X: -16
+			Y: -12
+		repair-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		sell2:
+			Start: 0
+			X: -16
+			Y: -12

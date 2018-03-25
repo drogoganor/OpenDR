@@ -1,0 +1,433 @@
+General:
+	Name: Asteroid
+	Id: ASTEROID
+	Palette: asteroid
+	SheetSize: 1024
+	EditorTemplateOrder: Terrain
+	HeightDebugColors: AA0000
+
+Terrain:
+	TerrainType@Clear:
+		Type: Clear
+		TargetTypes: Ground
+		Color: AC9E56
+		RestrictPlayerColor: true
+	TerrainType@Muddy:
+		Type: Muddy
+		TargetTypes: Ground
+		Color: 90815D
+		RestrictPlayerColor: true
+	TerrainType@Rough:
+		Type: Rough
+		TargetTypes: Ground
+		Color: 6C6C6C
+		RestrictPlayerColor: true
+	TerrainType@Road:
+		Type: Road
+		TargetTypes: Ground
+		Color: BB9E56
+		RestrictPlayerColor: true
+	TerrainType@RoadBase:
+		Type: RoadBase
+		TargetTypes: Ground
+		Color: BB9E56
+		RestrictPlayerColor: true
+	TerrainType@HillSlope:
+		Type: HillSlope
+		TargetTypes: Ground
+		Color: BBAC64
+		RestrictPlayerColor: true
+	TerrainType@Cliff:
+		Type: Cliff
+		TargetTypes: Ground
+		Color: 242424
+		RestrictPlayerColor: true
+	TerrainType@Gems:
+		Type: Gems
+		TargetTypes: Ground
+		Color: 8470FF
+		RestrictPlayerColor: true
+	TerrainType@Ore:
+		Type: Ore
+		TargetTypes: Ground
+		Color: 948060
+		RestrictPlayerColor: true
+	TerrainType@Water:
+		Type: Water
+		TargetTypes: Water
+		Color: 000000
+		RestrictPlayerColor: true
+
+Templates:
+	Template@1:
+		Id: 1
+		Images: asteroid/01.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@2:
+		Id: 2
+		Images: asteroid/02.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@3:
+		Id: 3
+		Images: asteroid/03.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@4:
+		Id: 4
+		Images: asteroid/04.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Muddy
+			1: Muddy
+			2: Muddy
+			3: Muddy
+			4: Muddy
+			5: Muddy
+			6: Muddy
+			7: Muddy
+	Template@5:
+		Id: 5
+		Images: asteroid/05.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Muddy
+			1: Muddy
+			2: Muddy
+			3: Muddy
+			4: Muddy
+			5: Muddy
+			6: Muddy
+			7: Muddy
+	Template@6:
+		Id: 6
+		Images: asteroid/06.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Rough
+			1: Rough
+			2: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			6: Rough
+			7: Rough
+	Template@7:
+		Id: 7
+		Images: asteroid/07.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Rough
+			1: Rough
+			2: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			6: Rough
+			7: Rough
+	Template@8:
+		Id: 8
+		Images: asteroid/08.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+			6: Road
+			7: Road
+	Template@9:
+		Id: 9
+		Images: asteroid/09.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: RoadBase
+			1: RoadBase
+			2: RoadBase
+			3: RoadBase
+			4: RoadBase
+			5: RoadBase
+			6: RoadBase
+			7: RoadBase
+	Template@10:
+		Id: 10
+		Images: asteroid/10.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: HillSlope
+			1: HillSlope
+			2: HillSlope
+			3: HillSlope
+			4: HillSlope
+			5: HillSlope
+			6: HillSlope
+			7: HillSlope
+	Template@11:
+		Id: 11
+		Images: asteroid/11.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: HillSlope
+			1: HillSlope
+			2: HillSlope
+			3: HillSlope
+			4: HillSlope
+			5: HillSlope
+			6: HillSlope
+			7: HillSlope
+	Template@12:
+		Id: 12
+		Images: asteroid/12.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Cliff
+			4: Cliff
+			5: Cliff
+			6: Cliff
+			7: Cliff
+	Template@13:
+		Id: 13
+		Images: asteroid/13.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Cliff
+			4: Cliff
+			5: Cliff
+			6: Cliff
+			7: Cliff
+	Template@14:
+		Id: 14
+		Images: asteroid/14.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Cliff
+			4: Cliff
+			5: Cliff
+			6: Cliff
+			7: Cliff
+	Template@15:
+		Id: 15
+		Images: asteroid/15.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Cliff
+			4: Cliff
+			5: Cliff
+			6: Cliff
+			7: Cliff
+	Template@0:
+		Id: 0
+		Images: asteroid/00.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Water
+			1: Water
+			2: Water
+			3: Water
+			4: Water
+			5: Water
+			6: Water
+			7: Water
+	Template@16:
+		Id: 16
+		Images: asteroid/T__.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@17:
+		Id: 17
+		Images: asteroid/R__.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@18:
+		Id: 18
+		Images: asteroid/B__.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@19:
+		Id: 19
+		Images: asteroid/L__.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@20:
+		Id: 20
+		Images: asteroid/TLI.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@21:
+		Id: 21
+		Images: asteroid/TRI.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@22:
+		Id: 22
+		Images: asteroid/BRI.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@23:
+		Id: 23
+		Images: asteroid/BLI.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@24:
+		Id: 24
+		Images: asteroid/TLO.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@25:
+		Id: 25
+		Images: asteroid/TRO.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@26:
+		Id: 26
+		Images: asteroid/BLO.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@27:
+		Id: 27
+		Images: asteroid/BRO.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear

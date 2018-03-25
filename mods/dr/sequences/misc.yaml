@@ -1,0 +1,87 @@
+
+overlay:
+	build-valid-snow:
+		Start: 2
+	build-valid-barren:
+	build-valid-aust:
+	build-valid-alien:
+	build-valid-asteroid:
+	build-valid-auralien:
+	build-valid-volcanic:
+	build-valid-snow:
+	build-valid-jungle:
+	build-invalid:
+		Start: 1
+	target-select:
+		Start: 2
+	target-valid-temperat:
+	target-valid-barren:
+	target-valid-aust:
+	target-valid-alien:
+	target-valid-asteroid:
+	target-valid-auralien:
+	target-valid-volcanic:
+	target-valid-snow:
+	target-valid-jungle:
+	target-invalid:
+		Start: 1
+
+editor-overlay:
+	copy: overlay
+		Start: 0
+	paste: overlay
+		Start: 1
+
+resources:
+	Defaults:
+		AddExtension: False
+	water1: ncwel1l0.spr
+		Length: *
+	taelon1: ncmin1l0.spr
+		Length: *
+
+mpspawn:
+	idle: mpspawn.shp
+		Length: *
+
+waypoint:
+	idle: waypoint.shp
+		Length: *
+
+clock:
+	idle: clock.shp
+		Length: *
+
+moveflsh:
+	idle: mpspawn.shp
+		Length: *
+
+explosion:
+	Defaults:
+		Length: *
+		ZOffset: 2047
+	laser_exp1: eolasex0.spr
+		AddExtension: False
+	laser_exp2: eolasex1.spr
+		AddExtension: False
+	rocket_exp1: eochfex3.spr
+		AddExtension: False
+	#existing
+	large_explosion: eochfex3.spr
+		AddExtension: False
+	napalm: eochfex3.spr
+		AddExtension: False
+
+allyrepair:
+	repair: repricon.spr
+		Length: 8
+		Tick: 300
+		ZOffset: 2047
+
+rallypoint:
+	flag: mpspawn.shp
+		Length: *
+		ZOffset: 2535
+	circles: mpspawn.shp
+		Length: *
+		ZOffset: 2047

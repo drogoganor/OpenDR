@@ -1,0 +1,407 @@
+^ExistsInWorld:
+	AppearsOnRadar:
+	CombatDebugOverlay:
+	ScriptTriggers:
+	ConditionManager:
+	RenderDebugState:
+
+^SpriteActor:
+	BodyOrientation:
+	QuantizeFacingsFromSequence:
+	RenderSprites:
+
+^1x1Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -512, -512
+			BottomRight: 512, 512
+
+^2x1Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1024, -512
+			BottomRight: 1024, 512
+
+^2x2Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1024, -1024
+			BottomRight: 1024, 1024
+
+^3x2Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -1536, -1024
+			BottomRight: 1536, 1024
+
+^GainsExperience:
+	GainsExperience:
+		Conditions:
+			200: rank-veteran
+			400: rank-veteran
+			800: rank-veteran
+			1600: rank-veteran
+	GrantCondition@RANK-ELITE:
+		RequiresCondition: rank-veteran >= 4
+		Condition: rank-elite
+	DamageMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 95
+	DamageMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 90
+	DamageMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 85
+	DamageMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 75
+	FirepowerMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 105
+	FirepowerMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 110
+	FirepowerMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 120
+	FirepowerMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 130
+	SpeedMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 105
+	SpeedMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 110
+	SpeedMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 120
+	SpeedMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 140
+	ReloadDelayMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 95
+	ReloadDelayMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 90
+	ReloadDelayMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 85
+	ReloadDelayMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 75
+	InaccuracyMultiplier@RANK-1:
+		RequiresCondition: rank-veteran == 1
+		Modifier: 90
+	InaccuracyMultiplier@RANK-2:
+		RequiresCondition: rank-veteran == 2
+		Modifier: 80
+	InaccuracyMultiplier@RANK-3:
+		RequiresCondition: rank-veteran == 3
+		Modifier: 70
+	InaccuracyMultiplier@RANK-ELITE:
+		RequiresCondition: rank-elite
+		Modifier: 50
+	SelfHealing@ELITE:
+		Step: 200
+		Delay: 100
+		HealIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: rank-elite
+
+^AutoTargetGround:
+	AutoTarget:
+		AttackAnythingCondition: stance-attackanything
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything
+		ValidTargets: Infantry, Vehicle, Water, Underwater, Defense
+		InvalidTargets: NoAutoTarget, WaterStructure
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: stance-attackanything
+		ValidTargets: Infantry, Vehicle, Water, Underwater, Structure, Defense
+		InvalidTargets: NoAutoTarget
+
+^AutoTargetGroundAssaultMove:
+	Inherits: ^AutoTargetGround
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: stance-attackanything || assault-move
+	AttackMove:
+		AssaultMoveScanCondition: assault-move
+
+^AutoTargetAir:
+	AutoTarget:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Air
+		InvalidTargets: NoAutoTarget
+
+^AutoTargetAll:
+	AutoTarget:
+		AttackAnythingCondition: stance-attackanything
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything
+		ValidTargets: Infantry, Vehicle, Water, Underwater, Air, Defense
+		InvalidTargets: NoAutoTarget, WaterStructure
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: stance-attackanything
+		ValidTargets: Infantry, Vehicle, Water, Underwater, Air, Structure, Defense
+		InvalidTargets: NoAutoTarget
+
+^AutoTargetAllAssaultMove:
+	Inherits: ^AutoTargetAll
+	AutoTargetPriority@DEFAULT:
+		RequiresCondition: !stance-attackanything && !assault-move
+	AutoTargetPriority@ATTACKANYTHING:
+		RequiresCondition: stance-attackanything || assault-move
+	AttackMove:
+		AssaultMoveScanCondition: assault-move
+
+^Vehicle:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Huntable:
+	UpdatesPlayerStatistics:
+	Mobile:
+		Crushes: mine, crate
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 40
+			Road: 100
+			Bridge: 100
+			Ore: 70
+			Gems: 70
+			Beach: 40
+		TurnSpeed: 5
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 24, 24
+	Targetable:
+		TargetTypes: Ground, Repair, Vehicle
+		RequiresCondition: !parachute
+	Repairable:
+	Passenger:
+		CargoType: Vehicle
+	AttackMove:
+	HiddenUnderFog:
+	ActorLostNotification:
+	ProximityCaptor:
+		Types: Vehicle
+	Guard:
+	Guardable:
+	Tooltip:
+		GenericName: Vehicle
+	Capturable:
+		Types: vehicle
+		CaptureThreshold: 100
+		CancelActivity: True
+	CaptureNotification:
+		Notification: UnitStolen
+	MustBeDestroyed:
+	Voiced:
+		VoiceSet: VehicleVoice
+	Parachutable:
+		FallRate: 26
+		KilledOnImpassableTerrain: true
+		GroundCorpseSequence:
+		GroundCorpsePalette:
+		WaterCorpseSequence:
+		WaterCorpsePalette:
+		ParachutingCondition: parachute
+	WithFacingSpriteBody:
+	BodyOrientation:
+		UseClassicFacingFudge: True
+	HitShape:
+	EditorTilesetFilter:
+		Categories: Vehicle
+
+^TrackedVehicle:
+	Inherits: ^Vehicle
+	Mobile:
+		Crushes: wall, mine, crate
+		TerrainSpeeds:
+			Clear: 80
+			Rough: 70
+			Road: 100
+			Bridge: 100
+			Ore: 70
+			Gems: 70
+			Beach: 70
+
+^Infantry:
+	Inherits@1: ^ExistsInWorld
+	Inherits@2: ^GainsExperience
+	Inherits@3: ^SpriteActor
+	Huntable:
+	Health:
+		HP: 2500
+	Armor:
+		Type: None
+	RevealsShroud:
+		Range: 4c0
+	Mobile:
+		Speed: 56
+		Crushes: mine, crate
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 90
+			Rough: 80
+			Road: 100
+			Bridge: 100
+			Ore: 80
+			Gems: 80
+			Beach: 80
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 18,20,0,-6
+		DecorationBounds: 12,18,0,-8
+	Targetable:
+		TargetTypes: Ground, Infantry, Disguise
+		RequiresCondition: !parachute
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithInfantryBody:
+	WithDeathAnimation:
+		DeathTypes:
+			DefaultDeath: 1
+			BulletDeath: 2
+			SmallExplosionDeath: 3
+			ExplosionDeath: 4
+			FireDeath: 5
+			ElectricityDeath: 6
+		CrushedSequence: die-crushed
+	AttackMove:
+	Passenger:
+		CargoType: Infantry
+	HiddenUnderFog:
+	ActorLostNotification:
+	Crushable:
+		CrushSound: squishy2.aud
+	Guard:
+	Guardable:
+	Tooltip:
+		GenericName: Soldier
+	DeathSounds@NORMAL:
+		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath
+	DeathSounds@BURNED:
+		Voice: Burned
+		DeathTypes: FireDeath
+	DeathSounds@ZAPPED:
+		Voice: Zapped
+		DeathTypes: ElectricityDeath
+	Parachutable:
+		FallRate: 26
+		KilledOnImpassableTerrain: true
+		GroundImpactSound: squishy2.aud
+		WaterImpactSound: splash9.aud
+		WaterCorpseSequence: small_splash
+		ParachutingCondition: parachute
+	Voiced:
+		VoiceSet: GenericVoice
+	HitShape:
+		Type: Circle
+			Radius: 128
+	EditorTilesetFilter:
+		Categories: Infantry
+
+^Soldier:
+	Inherits: ^Infantry
+	UpdatesPlayerStatistics:
+	MustBeDestroyed:
+	ProximityCaptor:
+		Types: Infantry
+	TakeCover:
+		DamageModifiers:
+			Prone50Percent: 50
+		DamageTriggers: TriggerProne
+	WithInfantryBody:
+		IdleSequences: idle1,idle2
+		StandSequences: stand,stand2
+	DetectCloaked:
+		CloakTypes: Hijacker
+
+^BasicBuilding:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Inherits@shape: ^1x1Shape
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Priority: 3
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		TerrainTypes: Clear,Road
+		RequiresBaseProvider: True
+	RequiresBuildableArea:
+		AreaTypes: building
+	SoundOnDamageTransition:
+		DamagedSounds: kaboom1.aud
+		DestroyedSounds: kaboom22.aud
+	WithSpriteBody:
+	CaptureNotification:
+	ShakeOnDeath:
+	ProximityCaptor:
+		Types: Building
+	Guardable:
+		Range: 3c0
+	FrozenUnderFog:
+	Tooltip:
+		GenericName: Structure
+	Demolishable:
+	EditorTilesetFilter:
+		Categories: Building
+	CommandBarBlacklist:
+
+^Building:
+	Inherits: ^BasicBuilding
+	Huntable:
+	UpdatesPlayerStatistics:
+	GivesBuildableArea:
+		AreaTypes: building
+	RepairableBuilding:
+		RepairStep: 700
+		PlayerExperience: 25
+	EngineerRepairable:
+	AcceptsDeliveredCash:
+	WithMakeAnimation:
+	ExternalCapturable:
+	ExternalCapturableBar:
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Sellable:
+		SellSounds: cashturn.aud
+
+^Tree:
+	Inherits@1: ^SpriteActor
+	Inherits@shape: ^1x1Shape
+	Interactable:
+	Tooltip:
+		Name: Tree
+		ShowOwnerRow: false
+	RenderSprites:
+	WithSpriteBody:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	AppearsOnRadar:
+	Health:
+		HP: 50000
+	Armor:
+		Type: Wood
+	Targetable:
+		TargetTypes: Trees
+	HiddenUnderShroud:
+	ScriptTriggers:
+	EditorTilesetFilter:
+		Categories: Tree

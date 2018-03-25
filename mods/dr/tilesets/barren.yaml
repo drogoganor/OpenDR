@@ -1,0 +1,433 @@
+General:
+	Name: Barren
+	Id: BARREN
+	Palette: barren
+	SheetSize: 1024
+	EditorTemplateOrder: Terrain
+	HeightDebugColors: AA0000
+
+Terrain:
+	TerrainType@Clear:
+		Type: Clear
+		TargetTypes: Ground
+		Color: FFD8B4
+		RestrictPlayerColor: true
+	TerrainType@Muddy:
+		Type: Muddy
+		TargetTypes: Ground
+		Color: A57339
+		RestrictPlayerColor: true
+	TerrainType@Rough:
+		Type: Rough
+		TargetTypes: Ground
+		Color: C99073
+		RestrictPlayerColor: true
+	TerrainType@Road:
+		Type: Road
+		TargetTypes: Ground
+		Color: D8AC90
+		RestrictPlayerColor: true
+	TerrainType@RoadBase:
+		Type: RoadBase
+		TargetTypes: Ground
+		Color: AC907A
+		RestrictPlayerColor: true
+	TerrainType@HillSlope:
+		Type: HillSlope
+		TargetTypes: Ground
+		Color: C2815D
+		RestrictPlayerColor: true
+	TerrainType@Cliff:
+		Type: Cliff
+		TargetTypes: Ground
+		Color: 885640
+		RestrictPlayerColor: true
+	TerrainType@Gems:
+		Type: Gems
+		TargetTypes: Ground
+		Color: 8470FF
+		RestrictPlayerColor: true
+	TerrainType@Ore:
+		Type: Ore
+		TargetTypes: Ground
+		Color: 948060
+		RestrictPlayerColor: true
+	TerrainType@Water:
+		Type: Water
+		TargetTypes: Water
+		Color: 2B8164
+		RestrictPlayerColor: true
+
+Templates:
+	Template@1:
+		Id: 1
+		Images: barren/01.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@2:
+		Id: 2
+		Images: barren/02.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@3:
+		Id: 3
+		Images: barren/03.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+			4: Clear
+			5: Clear
+			6: Clear
+			7: Clear
+	Template@4:
+		Id: 4
+		Images: barren/04.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Muddy
+			1: Muddy
+			2: Muddy
+			3: Muddy
+			4: Muddy
+			5: Muddy
+			6: Muddy
+			7: Muddy
+	Template@5:
+		Id: 5
+		Images: barren/05.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Muddy
+			1: Muddy
+			2: Muddy
+			3: Muddy
+			4: Muddy
+			5: Muddy
+			6: Muddy
+			7: Muddy
+	Template@6:
+		Id: 6
+		Images: barren/06.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Rough
+			1: Rough
+			2: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			6: Rough
+			7: Rough
+	Template@7:
+		Id: 7
+		Images: barren/07.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Rough
+			1: Rough
+			2: Rough
+			3: Rough
+			4: Rough
+			5: Rough
+			6: Rough
+			7: Rough
+	Template@8:
+		Id: 8
+		Images: barren/08.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+			4: Road
+			5: Road
+			6: Road
+			7: Road
+	Template@9:
+		Id: 9
+		Images: barren/09.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: RoadBase
+			1: RoadBase
+			2: RoadBase
+			3: RoadBase
+			4: RoadBase
+			5: RoadBase
+			6: RoadBase
+			7: RoadBase
+	Template@10:
+		Id: 10
+		Images: barren/10.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: HillSlope
+			1: HillSlope
+			2: HillSlope
+			3: HillSlope
+			4: HillSlope
+			5: HillSlope
+			6: HillSlope
+			7: HillSlope
+	Template@11:
+		Id: 11
+		Images: barren/11.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: HillSlope
+			1: HillSlope
+			2: HillSlope
+			3: HillSlope
+			4: HillSlope
+			5: HillSlope
+			6: HillSlope
+			7: HillSlope
+	Template@12:
+		Id: 12
+		Images: barren/12.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Cliff
+			4: Cliff
+			5: Cliff
+			6: Cliff
+			7: Cliff
+	Template@13:
+		Id: 13
+		Images: barren/13.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Cliff
+			4: Cliff
+			5: Cliff
+			6: Cliff
+			7: Cliff
+	Template@14:
+		Id: 14
+		Images: barren/14.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Cliff
+			4: Cliff
+			5: Cliff
+			6: Cliff
+			7: Cliff
+	Template@15:
+		Id: 15
+		Images: barren/15.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Cliff
+			1: Cliff
+			2: Cliff
+			3: Cliff
+			4: Cliff
+			5: Cliff
+			6: Cliff
+			7: Cliff
+	Template@0:
+		Id: 0
+		Images: barren/00.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Water
+			1: Water
+			2: Water
+			3: Water
+			4: Water
+			5: Water
+			6: Water
+			7: Water
+	Template@16:
+		Id: 16
+		Images: barren/T__.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@17:
+		Id: 17
+		Images: barren/R__.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@18:
+		Id: 18
+		Images: barren/B__.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@19:
+		Id: 19
+		Images: barren/L__.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@20:
+		Id: 20
+		Images: barren/TLI.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@21:
+		Id: 21
+		Images: barren/TRI.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@22:
+		Id: 22
+		Images: barren/BRI.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@23:
+		Id: 23
+		Images: barren/BLI.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@24:
+		Id: 24
+		Images: barren/TLO.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@25:
+		Id: 25
+		Images: barren/TRO.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@26:
+		Id: 26
+		Images: barren/BLO.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@27:
+		Id: 27
+		Images: barren/BRO.shp
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear

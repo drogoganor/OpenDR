@@ -1,0 +1,1 @@
+D:\Development\DarkReign\engine\OpenRA.Utility.exe ra --shp "D:\Development\DarkReign\mods\dr\waypoint.png"

@@ -1,0 +1,17 @@
+^Palettes:
+	-PlayerColorPalette:
+	IndexedPlayerPalette:
+		BasePalette: player
+		BaseName: player
+		RemapIndex: 32, 33, 34, 35, 36, 37, 38, 39
+		PlayerIndex:
+			FreedomGuard: 48, 49, 50, 51, 52, 53, 54, 55
+			Imperium: 32, 33, 34, 35, 36, 37, 38, 39
+			Neutral: 32, 33, 34, 35, 36, 37, 38, 39
+			Creeps: 56, 57, 58, 59, 60, 61, 62, 63
+			GoodGuy: 48, 49, 50, 51, 52, 53, 54, 55
+			BadGuy: 32, 33, 34, 35, 36, 37, 38, 39
+	PaletteFromPlayerPaletteWithAlpha@Cloak:
+		BaseName: cloak
+		BasePalette: player
+		Alpha: 0.55

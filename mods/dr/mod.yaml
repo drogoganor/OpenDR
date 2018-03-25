@@ -1,0 +1,206 @@
+Metadata:
+	Title: Dark Reign
+	Version: {DEV_VERSION}
+
+PackageFormats: FtgFile
+
+Packages:
+	~^Content/dr/
+	.
+	$dr: dr
+	./mods/common: common
+	~SPRITES.FTG
+	~spriteEx.ftg
+	~SOUNDS.FTG
+	~soundsEx.ftg
+	~tilesets.zip
+	~music.zip
+	dr|bits
+	dr|uibits
+
+MapFolders:
+	dr|maps: System
+
+Rules:
+	dr|rules/palettes.yaml
+	dr|rules.yaml
+	dr|rules/defaults.yaml
+	dr|rules/misc.yaml
+	dr|rules/ai.yaml
+	dr|rules/structures.yaml
+	dr|rules/vehicles.yaml
+	dr|rules/infantry.yaml
+	dr|rules/decorations.yaml
+
+Sequences:
+	dr|sequences/misc.yaml
+	dr|sequences/structures.yaml
+	dr|sequences/vehicles.yaml
+	dr|sequences/infantry.yaml
+	dr|sequences/effects.yaml
+	dr|sequences/decorations.yaml
+
+TileSets:
+	dr|tilesets/alien.yaml
+	dr|tilesets/asteroid.yaml
+	dr|tilesets/auralien.yaml
+	dr|tilesets/aust.yaml
+	dr|tilesets/barren.yaml
+	dr|tilesets/jungle.yaml
+	dr|tilesets/snow.yaml
+	dr|tilesets/volcanic.yaml
+
+Cursors:
+	dr|cursor.yaml
+
+Chrome:
+	dr|chrome.yaml
+	dr|chrome-common.yaml
+	dr|chrome-ingame.yaml
+
+Assemblies:
+	dr|OpenRA.Mods.Dr.dll
+	common|OpenRA.Mods.Common.dll
+
+ChromeLayout:
+	dr|chrome/mainmenu.yaml
+	dr|chrome/ingame-observer.yaml
+	dr|chrome/ingame-player.yaml
+	dr|chrome/color-picker.yaml
+	common|chrome/ingame-menu.yaml
+	common|chrome/dropdowns.yaml
+	common|chrome/settings.yaml
+	common|chrome/ingame.yaml
+	common|chrome/ingame-chat.yaml
+	common|chrome/ingame-fmvplayer.yaml
+	common|chrome/ingame-info.yaml
+	common|chrome/ingame-infoscripterror.yaml
+	common|chrome/ingame-infobriefing.yaml
+	common|chrome/ingame-infoobjectives.yaml
+	common|chrome/ingame-infostats.yaml
+	common|chrome/ingame-observerstats.yaml
+	common|chrome/ingame-perf.yaml
+	common|chrome/ingame-debug.yaml
+	common|chrome/ingame-infochat.yaml
+	common|chrome/connection.yaml
+	common|chrome/lobby.yaml
+	common|chrome/lobby-mappreview.yaml
+	common|chrome/lobby-players.yaml
+	common|chrome/lobby-options.yaml
+	common|chrome/lobby-music.yaml
+	common|chrome/lobby-servers.yaml
+	common|chrome/lobby-kickdialogs.yaml
+	common|chrome/map-chooser.yaml
+	common|chrome/multiplayer-browser.yaml
+	common|chrome/multiplayer-browserpanels.yaml
+	common|chrome/multiplayer-createserver.yaml
+	common|chrome/multiplayer-directconnect.yaml
+	common|chrome/tooltips.yaml
+	common|chrome/editor.yaml
+	common|chrome/missionbrowser.yaml
+	common|chrome/confirmation-dialogs.yaml
+	common|chrome/replaybrowser.yaml
+	common|chrome/musicplayer.yaml
+	common|chrome/assetbrowser.yaml
+	common|chrome/credits.yaml
+	
+Weapons:
+	dr|weapons/weapons.yaml
+	dr|weapons/other.yaml
+	
+Voices:
+	dr|audio/voices.yaml
+
+Notifications:
+	dr|audio/notifications.yaml
+
+Music:
+	dr|audio/music.yaml
+
+Translations:
+	dr|english.yaml
+
+Hotkeys:
+	common|hotkeys/game.yaml
+
+LoadScreen: LogoStripeLoadScreen
+	Image: dr|uibits/loadscreen.png
+	Text: TEST..., TEST2...
+
+ServerTraits:
+	LobbyCommands
+	PlayerPinger
+	MasterServerPinger
+	LobbySettingsNotification
+
+ChromeMetrics:
+	common|metrics.yaml
+	dr|metrics.yaml
+
+Fonts:
+	Tiny:
+		Font: common|FreeSansBold.ttf
+		Size:8
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size:8
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size:10
+	Small:
+		Font: common|FreeSansBold.ttf
+		Size:10
+	Regular:
+		Font: common|FreeSansBold.ttf
+		Size:12
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size:14
+
+MapGrid:
+	TileSize: 24, 24
+	Type: Rectangular
+
+SupportsMapsFrom: dr
+
+SoundFormats: Aud, Wav
+
+SpriteFormats: DrSpr, ShpTD, TmpRA, TmpTD, ShpTS
+
+SpriteSequenceFormat: DefaultSpriteSequence
+
+ModelSequenceFormat: PlaceholderModelSequence
+
+GameSpeeds:
+	default:
+		Name: Normal
+		Timestep: 40
+		OrderLatency: 3
+
+ModContent:
+	InstallPromptMessage: Dark Reign requires artwork and audio from the original game.\n\nQuick Install will automatically download this content (without music\nor videos) from a mirror of the darkreign.ws release.\n\nAdvanced Install includes options for downloading the music and for\ncopying the videos and other content from an original game disc.
+	QuickDownload: quickinstall
+	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting digital install. OpenRA can also download the base game\nfiles from an online mirror of the darkreign.ws release.
+	Packages:
+		base: Base Game Files
+			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG
+			Sources: drorig
+			Required: true
+			Download: droriginal
+		expansion: Expansion Files
+			TestFiles: ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg
+			Sources: drexp
+			Download: drexpansion
+		tilesets: Tilesets
+			TestFiles: ^Content/dr/tilesets.zip
+			Sources: drtiles
+			Required: true
+			Download: drtilesets
+		music: Music
+			TestFiles: ^Content/dr/music.zip
+			Sources: drmus
+			Download: drmusic
+	Downloads:
+		dr|installer/downloads.yaml
+	Sources:
+		dr|installer/drcd.yaml

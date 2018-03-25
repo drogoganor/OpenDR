@@ -1,0 +1,34 @@
+
+mpspawn:
+	Interactable:
+	EditorOnlyTooltip:
+		Name: (multiplayer player starting point)
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+	BodyOrientation:
+		QuantizedFacings: 1
+	EditorTilesetFilter:
+		Categories: System
+
+waypoint:
+	Interactable:
+	EditorOnlyTooltip:
+		Name: (waypoint for scripted behavior)
+	AlwaysVisible:
+	Immobile:
+		OccupiesSpace: false
+	WithSpriteBody:
+	RenderSpritesEditorOnly:
+	BodyOrientation:
+		QuantizedFacings: 1
+	EditorTilesetFilter:
+		Categories: System
+
+^ucfrgst0.spr.colorpicker:
+	Inherits: ucfrgst0.spr
+	RenderSprites:
+		Image: ucfrgst0.spr
+		Palette: colorpicker

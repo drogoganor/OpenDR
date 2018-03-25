@@ -1,0 +1,212 @@
+
+
+# Buildings
+
+# Taelon Power Generator
+tcpow1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	icon: bcpowmn0.spr
+	fake-icon: bcpowmn0.spr
+
+# Water Launch Pad
+tclnc1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+	make:
+		Start: 0
+	build:
+		Start: 0
+		Length: 1
+	damaged-idle:
+		Start: 0
+	damaged-build:
+		Start: 0
+		Length: 1
+	dead:
+		Start: 0
+		Tick: 800
+	icon: bclncmn0.spr
+	fake-icon: bclncmn0.spr
+
+# Freedom Guard HQ
+tfhqt1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	icon: bfhqtmn0.spr
+	fake-icon: bfhqtmn0.spr
+		
+# Freedom Guard Training Facility
+nfutf1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+	make:
+		Start: 0
+	build:
+		Start: 0
+		Length: 0
+	damaged-idle:
+		Start: 0
+	damaged-build:
+		Start: 0
+		Length: 0
+	dead:
+		Start: 0
+		Tick: 800
+	idle-top:
+		Start: 1
+	icon: bfutfmn0.spr
+	fake-icon: bfutfmn0.spr
+		
+# Freedom Guard Assembly Plant
+nfvcy1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	icon: bfvcymn0.spr
+	fake-icon: bfvcymn0.spr
+		
+		
+# Imperium HQ
+tihqt1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	icon: bihqtmn0.spr
+	fake-icon: bihqtmn0.spr
+		
+# Imperium Training Facility
+niutf1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+	make:
+		Start: 0
+	build:
+		Start: 0
+		Length: 0
+	damaged-idle:
+		Start: 0
+	damaged-build:
+		Start: 0
+		Length: 0
+	dead:
+		Start: 0
+		Tick: 800
+	idle-top: niutf1l0.spr
+		Start: 1
+	idle-top2: tiutf1l0.spr
+		Start: 0
+	idle-top3: tiutf1l0.spr
+		Start: 1
+	icon: biutfmn0.spr
+	fake-icon: biutfmn0.spr
+		
+# Imperium Assembly Plant
+nivcy1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	icon: bivcymn0.spr
+	fake-icon: bivcymn0.spr
+
+
+# Laser turret
+nfgdt1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	icon: bfgdtmn0.spr
+	fake-icon: bfgdtmn0.spr
+

@@ -1,0 +1,28 @@
+quickinstall: Quick Install Package
+	MirrorList: http://drogoganor.net/dr/dr-quickinstall-mirrors.txt
+	Extract:
+		^Content/dr/tilesets.zip: tilesets.zip
+		^Content/dr/SPRITES.FTG: SPRITES.FTG
+		^Content/dr/SOUNDS.FTG: SOUNDS.FTG
+		^Content/dr/shell/SOUNDS.FTG: shell/SOUNDS.FTG
+		^Content/dr/spriteEx.ftg: spriteEx.ftg
+		^Content/dr/soundsEx.ftg: soundsEx.ftg
+drtilesets: Tilesets
+	MirrorList: http://drogoganor.net/dr/dr-tileset-mirrors.txt
+	Extract:
+		^Content/dr/tilesets.zip: tilesets.zip
+droriginal: Dark Reign Original
+	MirrorList: http://drogoganor.net/dr/dr-quickinstall-mirrors.txt
+	Extract:
+		^Content/dr/SPRITES.FTG: Dark Reign 1.7/DARK/GRAPHICS/SPRITES.FTG
+		^Content/dr/SOUNDS.FTG: Dark Reign 1.7/DARK/sndfx/SOUNDS.FTG
+		^Content/dr/shell/SOUNDS.FTG: Dark Reign 1.7/DARK/SHELL/SOUNDS.FTG
+drexpansion: Dark Reign Expansion
+	MirrorList: http://drogoganor.net/dr/dr-quickinstall-mirrors.txt
+	Extract:
+		^Content/dr/spriteEx.ftg: Dark Reign 1.7/DARK/GRAPHICS/spriteEx.ftg
+		^Content/dr/soundsEx.ftg: Dark Reign 1.7/DARK/sndfx/soundsEx.ftg
+drmusic: Music
+	MirrorList: http://drogoganor.net/dr/dr-music-mirrors.txt
+	Extract:
+		^Content/dr/music.zip: music.zip

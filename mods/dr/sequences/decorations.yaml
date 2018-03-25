@@ -1,0 +1,205 @@
+
+aotre000.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aotre001.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aotre002.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aotre003.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aotre004.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aotre005.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+# Crashed space ship
+aospc000.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+# Rubble
+aorub000.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aorub001.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aorub002.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+# Rocks
+aoroc000.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoroc001.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoroc002.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoroc003.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoroc004.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoroc005.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+# Plant
+aopln000.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aopln001.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aopln002.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+# Scoring
+aomsc000.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aomsc001.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aomsc002.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+# Crater
+aoctr000.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoctr001.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoctr002.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoctr003.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoctr004.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+# Cliff
+aoclf000.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoclf001.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoclf002.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoclf003.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoclf004.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aoclf005.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
