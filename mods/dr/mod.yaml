@@ -20,9 +20,10 @@ Packages:
 	~snow/spriteEx.ftg: snowEx
 	~alien/ALIEN.TIL
 	~alien/spriteEx.ftg: alienEx
-	~aust/AUST.FTG: aust
-	~volcanic/volcanic.ftg: volcanic
-	~auralien/auralien.ftg: auralien
+	~asteroid/ASTEROID.FTG
+	~aust/AUST.FTG
+	~volcanic/volcanic.ftg
+	~auralien/auralien.ftg
 	~SPRITES.FTG
 	~spriteEx.ftg
 	~SOUNDS.FTG

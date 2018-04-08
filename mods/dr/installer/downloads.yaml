@@ -14,6 +14,7 @@ drtilesets: Extra Tilesets
 		^Content/dr/aust/AUST.FTG: aust/AUST.FTG
 		^Content/dr/volcanic/VOLCANIC.FTG: volcanic/VOLCANIC.FTG
 		^Content/dr/auralien/AURALIEN.FTG: auralien/AURALIEN.FTG
+		^Content/dr/asteroid/ASTEROID.FTG: asteroid/ASTEROID.FTG
 drmusic: Music Packages
 	MirrorList: http://drogoganor.net/dr/dr-music-mirrors.txt
 	Extract:

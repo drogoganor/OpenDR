@@ -101,7 +101,7 @@ Terrain:
 Templates:
 	Template@1:
 		Id: 1
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 8, 9, 10, 11, 12, 13, 14, 15
@@ -117,7 +117,7 @@ Templates:
 			7: Clear
 	Template@2:
 		Id: 2
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 16, 17, 18, 19, 20, 21, 22, 23
@@ -133,7 +133,7 @@ Templates:
 			7: Normal2
 	Template@3:
 		Id: 3
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 24, 25, 26, 27, 28, 29, 30, 31
@@ -149,7 +149,7 @@ Templates:
 			7: Normal3
 	Template@4:
 		Id: 4
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 32, 33, 34, 35, 36, 37, 38, 39
@@ -165,7 +165,7 @@ Templates:
 			7: Muddy1
 	Template@5:
 		Id: 5
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 40, 41, 42, 43, 44, 45, 46, 47
@@ -181,7 +181,7 @@ Templates:
 			7: Muddy2
 	Template@6:
 		Id: 6
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 48, 49, 50, 51, 52, 53, 54, 55
@@ -197,7 +197,7 @@ Templates:
 			7: Rough1
 	Template@7:
 		Id: 7
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 56, 57, 58, 59, 60, 61, 62, 63
@@ -213,7 +213,7 @@ Templates:
 			7: Rough2
 	Template@8:
 		Id: 8
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 64, 65, 66, 67, 68, 69, 70, 71
@@ -229,7 +229,7 @@ Templates:
 			7: Road
 	Template@9:
 		Id: 9
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 72, 73, 74, 75, 76, 77, 78, 79
@@ -245,7 +245,7 @@ Templates:
 			7: RoadBase
 	Template@10:
 		Id: 10
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 80, 81, 82, 83, 84, 85, 86, 87
@@ -261,7 +261,7 @@ Templates:
 			7: HillSlope1
 	Template@11:
 		Id: 11
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 88, 89, 90, 91, 92, 93, 94, 95
@@ -277,7 +277,7 @@ Templates:
 			7: HillSlope2
 	Template@12:
 		Id: 12
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 96, 97, 98, 99, 100, 101, 102, 103
@@ -293,7 +293,7 @@ Templates:
 			7: Cliff1
 	Template@13:
 		Id: 13
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 104, 105, 106, 107, 108, 109, 110, 111
@@ -309,7 +309,7 @@ Templates:
 			7: Cliff2
 	Template@14:
 		Id: 14
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 112, 113, 114, 115, 116, 117, 118, 119
@@ -325,7 +325,7 @@ Templates:
 			7: Cliff3
 	Template@15:
 		Id: 15
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 120, 121, 122, 123, 124, 125, 126, 127
@@ -341,7 +341,7 @@ Templates:
 			7: Cliff4
 	Template@0:
 		Id: 0
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Categories: Terrain
@@ -358,7 +358,7 @@ Templates:
 # 128: BRI, BLI, B, TLI, TR/BL-O, L, TRO, TRI, R, TL/BR-O, TLO, T, BLO, BRO
 	Template@27:
 		Id: 27
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 139, 153, 167, 181 # T
@@ -370,7 +370,7 @@ Templates:
 			3: Clear
 	Template@24:
 		Id: 24
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 136, 150, 164, 178 # R
@@ -382,7 +382,7 @@ Templates:
 			3: Clear
 	Template@18:
 		Id: 18
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 130, 144, 158, 172 # B
@@ -394,7 +394,7 @@ Templates:
 			3: Clear
 	Template@21:
 		Id: 21
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 133, 147, 161, 175 # L
@@ -406,7 +406,7 @@ Templates:
 			3: Clear
 	Template@19:
 		Id: 19
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 131, 145, 159, 173 # TLI
@@ -418,7 +418,7 @@ Templates:
 			3: Clear
 	Template@23:
 		Id: 23
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 135, 149, 163, 177 # TRI
@@ -430,7 +430,7 @@ Templates:
 			3: Clear
 	Template@16:
 		Id: 16
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 128, 142, 156, 170 # BRI
@@ -442,7 +442,7 @@ Templates:
 			3: Clear
 	Template@17:
 		Id: 17
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 129, 143, 157, 171 # BLI
@@ -454,7 +454,7 @@ Templates:
 			3: Clear
 	Template@26:
 		Id: 26
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 138, 152, 166, 180 # TLO
@@ -466,7 +466,7 @@ Templates:
 			3: Clear
 	Template@22:
 		Id: 22
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 134, 148, 162, 176 # TRO
@@ -478,7 +478,7 @@ Templates:
 			3: Clear
 	Template@29:
 		Id: 29
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 141, 155, 169, 183 # BRO
@@ -490,7 +490,7 @@ Templates:
 			3: Clear
 	Template@28:
 		Id: 28
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 140, 154, 168, 182 # BLO
@@ -502,7 +502,7 @@ Templates:
 			3: Clear
 	Template@20:
 		Id: 20
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 132, 146, 160, 174 # TR/BL-O
@@ -514,7 +514,7 @@ Templates:
 			3: Clear
 	Template@25:
 		Id: 25
-		Images: auralien/auralien.til
+		Images: auralien.til
 		Size: 1,1
 		PickAny: True
 		Frames: 137, 151, 165, 179 # TL/BR-O
