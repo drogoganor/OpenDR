@@ -466,7 +466,7 @@ Gant:
 		Description: The Gant can....
 		BuildPaletteOrder: 20
 		BuildDuration: 30
-		Prerequisites: hq.xenite, barracks
+		Prerequisites: ~hq.xenite, ~barracks
 	Voiced:
 		VoiceSet: ScoutVoice
 	Valued:
@@ -490,7 +490,7 @@ Ranger:
 		Description: The Ranger can....
 		BuildPaletteOrder: 20
 		BuildDuration: 30
-		Prerequisites: hq.xenite, barracks
+		Prerequisites: ~hq.xenite, ~barracks
 	Voiced:
 		VoiceSet: ScoutVoice
 	Valued:

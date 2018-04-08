@@ -12,7 +12,7 @@
 	Building:
 		Dimensions: 1,1
 		Footprint: x
-		TerrainTypes: Clear,Road
+		TerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		RequiresBaseProvider: True
 	RequiresBuildableArea:
 		AreaTypes: building
