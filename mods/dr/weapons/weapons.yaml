@@ -214,9 +214,9 @@ FlakJackWeapon: #Chaff
 
 LaserRifle:
 	Inherits: ^E2
-	ReloadDelay: 16 # x2 definition value Weapon.txt
+	ReloadDelay: 8
 	Range: 4c0
-	Report: gxfgtwc0.wav
+	Report: gxlgnwc0.wav
 	ValidTargets: Air, Ground
 	Projectile: Bullet
 		Speed: 853 # 20
@@ -232,7 +232,7 @@ LaserRifle:
 
 MercWeapon:
 	Inherits: ^E1
-	ReloadDelay: 22 # x2 definition value Weapon.txt
+	ReloadDelay: 11
 	Range: 5c0
 	Report: gxmrcwc0.wav
 	Projectile: Bullet
@@ -248,7 +248,7 @@ MercWeapon:
 
 SpiderBikeWeapon:
 	Inherits: ^E1
-	ReloadDelay: 26
+	ReloadDelay: 13
 	Range: 5c0
 	Report: gxspbwc0.wav
 	Projectile: Bullet
@@ -264,7 +264,7 @@ SpiderBikeWeapon:
 		
 TripleRailTankWeapon: #TripleRailGun
 	Inherits: ^E1
-	ReloadDelay: 40
+	ReloadDelay: 20
 	Range: 8c0
 	Report: gxtrtwc0.wav
 	Projectile: Bullet
@@ -280,7 +280,7 @@ TripleRailTankWeapon: #TripleRailGun
 
 SkirmishTankWeapon:
 	Inherits: ^M2
-	ReloadDelay: 40
+	ReloadDelay: 40 # TODO: HALVE FROM HERE AND BELOW, INCLUSIVE
 	Range: 6c0
 	Report: gxsktwc0.wav
 	ValidTargets: Air, Ground

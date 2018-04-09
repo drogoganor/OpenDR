@@ -30,17 +30,17 @@ uocvmst0.spr:
 		Start: 0
 		Facings: 8
 		Length: 6
-		Tick: 60
+		Tick: 40
 	idle:
 		Start: 48
 		Facings: 8
 		Length: 7
-		Tick: 100
+		Tick: 60
 	idle2:
 		Start: 104
 		Facings: 8
 		Length: 9
-		Tick: 100
+		Tick: 60
 	stand:
 		Start: 176
 		Facings: 8
@@ -55,7 +55,7 @@ ufradst0.spr:
 		Start: 0
 		Facings: 16
 		Length: 6
-		Tick: 60
+		Tick: 40
 	shoot:
 		Start: 96
 		Facings: 16
@@ -65,7 +65,7 @@ ufradst0.spr:
 		Start: 128
 		Facings: 16
 		Length: 7
-		Tick: 100
+		Tick: 60
 	stand:
 		Start: 240
 		Facings: 16
@@ -80,7 +80,7 @@ ufmrcst0.spr:
 		Start: 0
 		Facings: 16
 		Length: 6
-		Tick: 100
+		Tick: 40
 	shoot:
 		Start: 96
 		Facings: 16
@@ -90,12 +90,12 @@ ufmrcst0.spr:
 		Start: 128
 		Facings: 16
 		Length: 5
-		Tick: 100
+		Tick: 60
 	idle2:
 		Start: 208
 		Facings: 16
 		Length: 5
-		Tick: 100
+		Tick: 60
 	stand:
 		Start: 288
 		Facings: 16

@@ -19,8 +19,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 {
 	public class DrTilLoader : ISpriteLoader
 	{
-		const int HeaderSize = 32;
-
 		TilHeader header;
 
 		class TilHeader
@@ -36,14 +34,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			public float2 Offset { get; private set; }
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
-
-			private static int offsetX = 0;
 			
-			public int Growto4(int x)
-			{
-				return x + 3 & ~3;
-			}
-
 			public DrTilFrame(Stream s)
 			{
 				int tileSize = 24;
@@ -59,9 +50,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				}
 
 				Offset = new float2(0, 0);
-
-				offsetX += tileSize;
-
 				FrameSize = new Size(tileSize, tileSize);
 				Size = FrameSize;
 			}

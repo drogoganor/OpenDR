@@ -27,7 +27,7 @@ waypoint:
 	EditorTilesetFilter:
 		Categories: System
 
-Freighter.colorpicker:
+freighter.colorpicker:
 	Inherits: Freighter
 	RenderSprites:
 		Image: ucfrgst0.spr
