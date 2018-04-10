@@ -2,7 +2,9 @@
 
 A Dark Reign mod for the [OpenRA](https://github.com/OpenRA/OpenRA) engine. Created using the [OpenRAModSDK](https://github.com/OpenRA/OpenRAModSDK).
 
-Currently a WIP made available for testing purposes. Please be aware that this mod is incomplete and the game might crash. I don't recommend trying to play it as it currently stands. Most [Dark Reign features](https://github.com/drogoganor/DarkReign/wiki/Dark-Reign-features) are missing. Basic unit values for cost, health and damage are in place but certain values like movement and attack speed, and view range are currently being worked on.
+Currently a WIP made available for testing purposes. Please be aware that this mod is incomplete and the game might crash. I don't recommend trying to play it as it currently stands.
+
+Most [Dark Reign features](https://github.com/drogoganor/DarkReign/wiki/Dark-Reign-features) are missing. Basic unit values for cost, health and damage are in place but certain values like movement and attack speed, and view range are currently being worked on.
 
 This mod uses assets from the freely available Dark Reign demo, or alternatively you can install assets from an original game disc.
 
