@@ -1,55 +1,55 @@
 ^Palettes:
-	PaletteFromGimpOrJascFile@barren:
+	PaletteFromDrFile@barren:
 		Name: barren
-		Filename: barren.pal
+		Filename: barren/barren.pal
 		ShadowIndex: 3,4
-	PaletteFromGimpOrJascFile@aust:
+	PaletteFromDrFile@aust:
 		Name: aust
 		Filename: aust.pal
 		ShadowIndex: 3,4
-	PaletteFromGimpOrJascFile@asteroid:
+	PaletteFromDrFile@asteroid:
 		Name: asteroid
 		Filename: asteroid.pal
 		ShadowIndex: 3,4
-	PaletteFromGimpOrJascFile@alien:
+	PaletteFromDrFile@alien:
 		Name: alien
-		Filename: alien.pal
+		Filename: alien/alien.pal
 		ShadowIndex: 3,4
-	PaletteFromGimpOrJascFile@auralien:
+	PaletteFromDrFile@auralien:
 		Name: auralien
 		Filename: auralien.pal
 		ShadowIndex: 3,4
-	PaletteFromGimpOrJascFile@snow:
+	PaletteFromDrFile@snow:
 		Name: snow
-		Filename: snow.pal
+		Filename: snow/snow.pal
 		ShadowIndex: 3,4
-	PaletteFromGimpOrJascFile@volcanic:
+	PaletteFromDrFile@volcanic:
 		Name: volcanic
 		Filename: volcanic.pal
 		ShadowIndex: 3,4
-	PaletteFromGimpOrJascFile@jungle:
+	PaletteFromDrFile@jungle:
 		Name: jungle
-		Filename: jungle.pal
+		Filename: jungle/jungle.pal
 		ShadowIndex: 3,4
-	PaletteFromGimpOrJascFile@player:
+	PaletteFromDrFile@player:
 		Name: player
-		Filename: units.pal
+		Filename: barren/barren.pal
 		ShadowIndex: 4
 	PaletteFromCurrentTileset:
 		Name: terrain
 		ShadowIndex: 3,4
-	PaletteFromGimpOrJascFile@chrome:
+	PaletteFromDrFile@chrome:
 		Name: chrome
-		Filename: units.pal
+		Filename: barren/barren.pal
 		ShadowIndex: 3
 		AllowModifiers: false
-	PaletteFromGimpOrJascFile@effect:
+	PaletteFromDrFile@effect:
 		Name: effect
-		Filename: units.pal
+		Filename: barren/barren.pal
 		ShadowIndex: 4
-	PaletteFromGimpOrJascFile@colorpicker:
+	PaletteFromDrFile@colorpicker:
 		Name: colorpicker
-		Filename: units.pal
+		Filename: barren/barren.pal
 		AllowModifiers: false
 	ShroudPalette@shroud:
 		Name: shroud

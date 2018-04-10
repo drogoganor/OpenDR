@@ -10,15 +10,19 @@ Packages:
 	$dr: dr
 	./mods/common: common
 	~barren/BARREN.TIL
+	~barren/BARREN.PAL
 	~barren/SPRITES.FTG: barren
 	~barren/spriteEx.ftg: barrenEx
 	~jungle/JUNGLE.TIL
+	~jungle/JUNGLE.PAL
 	~jungle/SPRITES.FTG: jungle
 	~jungle/spriteEx.ftg: jungleEx
 	~snow/SNOW.TIL
+	~snow/SNOW.PAL
 	~snow/SPRITES.FTG: snow
 	~snow/spriteEx.ftg: snowEx
 	~alien/ALIEN.TIL
+	~alien/ALIEN.PAL
 	~alien/spriteEx.ftg: alienEx
 	~asteroid/ASTEROID.FTG
 	~aust/AUST.FTG
@@ -29,7 +33,6 @@ Packages:
 	~SOUNDS.FTG
 	~soundsEx.ftg
 	~music.zip
-	dr|palettes
 	dr|bits
 	dr|uibits
 
@@ -214,14 +217,14 @@ ModContent:
 	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting digital install. OpenRA can also download the base game\nfiles from an online mirror of the demo release.
 	Packages:
 		demo: Demo Game Files
-			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/barren/BARREN.TIL, ^Content/dr/jungle/JUNGLE.TIL, ^Content/dr/barren/SPRITES.FTG, ^Content/dr/jungle/SPRITES.FTG
+			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/barren/BARREN.PAL, ^Content/dr/jungle/JUNGLE.PAL, ^Content/dr/barren/BARREN.TIL, ^Content/dr/jungle/JUNGLE.TIL, ^Content/dr/barren/SPRITES.FTG, ^Content/dr/jungle/SPRITES.FTG
 			Download: drdemo
 			Required: true
 		base: Original Game Files
-			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/barren/BARREN.TIL, ^Content/dr/jungle/JUNGLE.TIL, ^Content/dr/snow/SNOW.TIL, ^Content/dr/barren/SPRITES.FTG, ^Content/dr/jungle/SPRITES.FTG, ^Content/dr/snow/SPRITES.FTG
+			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/barren/BARREN.PAL, ^Content/dr/jungle/JUNGLE.PAL, ^Content/dr/snow/SNOW.PAL, ^Content/dr/barren/BARREN.TIL, ^Content/dr/jungle/JUNGLE.TIL, ^Content/dr/snow/SNOW.TIL, ^Content/dr/barren/SPRITES.FTG, ^Content/dr/jungle/SPRITES.FTG, ^Content/dr/snow/SPRITES.FTG
 			Sources: drorig
 		expansion: Expansion Files
-			TestFiles: ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg, ^Content/dr/ALIEN/ALIEN.TIL, ^Content/dr/ALIEN/SPRITEEX.FTG, ^Content/dr/BARREN/spriteEx.ftg, ^Content/dr/JUNGLE/spriteEx.ftg, ^Content/dr/SNOW/spriteEx.ftg
+			TestFiles: ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg, ^Content/dr/ALIEN/ALIEN.TIL, ^Content/dr/ALIEN/ALIEN.PAL, ^Content/dr/ALIEN/SPRITEEX.FTG, ^Content/dr/BARREN/spriteEx.ftg, ^Content/dr/JUNGLE/spriteEx.ftg, ^Content/dr/SNOW/spriteEx.ftg
 			Sources: drexp
 		tilesets: Extra Tilesets
 			TestFiles: ^Content/dr/aust/AUST.FTG, ^Content/dr/volcanic/VOLCANIC.FTG, ^Content/dr/auralien/AURALIEN.FTG, ^Content/dr/asteroid/ASTEROID.FTG
