@@ -384,3 +384,63 @@ ufganst0.spr:
 		Facings: 8
 		AddExtension: False
 	icon: ufganmn0.spr
+
+ufgrest0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	shoot:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	turret: ufgreac0.spr # ufgreac1
+		Start: 0
+		Facings: 8
+		AddExtension: False
+	icon: ufgremn0.spr
+
+ufridst0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	shoot:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	turret: ufridac0.spr
+		Start: 0
+		Facings: 8
+		AddExtension: False
+	icon: ufridmn0.spr

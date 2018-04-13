@@ -503,3 +503,51 @@ Ranger:
 		Speed: 120
 	Armor:
 		Type: Infantry
+
+Grendel:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: ufgrest0.spr
+	Tooltip:
+		Name: Grendel
+	Buildable:
+		Description: The Grendel can....
+		BuildPaletteOrder: 20
+		BuildDuration: 30
+		Prerequisites: ~hq.xenite, ~barracks
+	Voiced:
+		VoiceSet: ScoutVoice
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 120
+	Armor:
+		Type: Infantry
+
+GrendelRider:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: ufridst0.spr
+	Tooltip:
+		Name: Grendel
+	Buildable:
+		Description: The Grendel Rider can....
+		BuildPaletteOrder: 20
+		BuildDuration: 30
+		Prerequisites: ~hq.xenite, ~barracks
+	Voiced:
+		VoiceSet: ScoutVoice
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 120
+	Armor:
+		Type: Infantry
