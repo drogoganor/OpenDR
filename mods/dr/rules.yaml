@@ -138,9 +138,15 @@ EditorWorld:
 	LoadWidgetAtGameStart:
 	MapOptions:
 
+^BasePlayer:
+	AlwaysVisible:
+	Shroud:
+
+EditorPlayer:
+	Inherits: ^BasePlayer
 
 Player:
-	AlwaysVisible:
+	Inherits: ^BasePlayer
 	TechTree:
 	ClassicProductionQueue@Building:
 		Type: Building

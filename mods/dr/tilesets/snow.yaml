@@ -1,7 +1,6 @@
 General:
 	Name: Snow
 	Id: SNOW
-	Palette: snow
 	SheetSize: 1024
 	EditorTemplateOrder: Terrain
 	HeightDebugColors: AA0000

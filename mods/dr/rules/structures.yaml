@@ -478,7 +478,7 @@ Power:
 		SpawnOffset: 0,3
 		Facing: 64
 	WithIdleOverlay@LAYER1:
-		Palette: barren
+		Palette: terrain
 		Sequence: idle-top
 	WithIdleOverlay@LAYER2:
 		Sequence: idle-top2
@@ -538,7 +538,7 @@ WaterLaunchPad:
 		SpawnOffset: 1,2
 		Facing: 64
 	WithIdleOverlay@LAYER1:
-		Palette: barren
+		Palette: terrain
 		Sequence: idle-top
 	WithIdleOverlay@LAYER2:
 		Sequence: idle-top2
@@ -557,7 +557,7 @@ HQ.human:
 	Health:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
-		Palette: barren
+		Palette: terrain
 		Sequence: idle-top
 	WithIdleOverlay@LAYER2:
 		Sequence: idle-top2
@@ -573,7 +573,7 @@ HQ.cyborg:
 	Health:
 		HP: 1440
 	WithIdleOverlay@LAYER1:
-		Palette: barren
+		Palette: terrain
 		Sequence: idle-top
 	WithIdleOverlay@LAYER2:
 		Sequence: idle-top2
@@ -589,7 +589,7 @@ TrainingFacility.fguard:
 	Health:
 		HP: 750
 	WithIdleOverlay@LAYER1:
-		Palette: barren
+		Palette: terrain
 		Sequence: idle-top
 	WithIdleOverlay@LAYER2:
 		Sequence: idle-top2
@@ -605,7 +605,7 @@ TrainingFacility.imperium
 	Health:
 		HP: 900
 	WithIdleOverlay@LAYER1:
-		Palette: barren
+		Palette: terrain
 		Sequence: idle-top
 	WithIdleOverlay@LAYER2:
 		Sequence: idle-top2
@@ -632,7 +632,7 @@ AssemblyPlant.human:
 	Health:
 		HP: 1000
 	WithIdleOverlay@LAYER1:
-		Palette: barren
+		Palette: terrain
 		Sequence: idle-top
 	WithIdleOverlay@LAYER2:
 		Sequence: idle-top2
@@ -648,7 +648,7 @@ AssemblyPlant.imperium:
 	Health:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
-		Palette: barren
+		Palette: terrain
 		Sequence: idle-top
 	WithIdleOverlay@LAYER2:
 		Sequence: idle-top2
@@ -682,7 +682,7 @@ AssemblyPlant.imperium:
 	DetectCloaked:
 		Range: 6c0
 	WithIdleOverlay@LAYER1:
-		Palette: barren
+		Palette: terrain
 		Sequence: idle-top
 	WithIdleOverlay@LAYER2:
 		Sequence: idle-top2

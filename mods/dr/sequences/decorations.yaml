@@ -172,12 +172,16 @@ aoclf000.spr:
 	Defaults:
 		AddExtension: False
 	idle:
-		Start: 0
 		Length: 1
-	shadow: aoclf0sh.spr
-		Start: 0
-		Length: 1
-		Offset: 13, 12
+		ShadowStart: 1
+		Combine:
+			aoclf000.spr:
+				Start: 0
+				Length: 1
+			aoclf0sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 13, 12
 
 aoclf001.spr:
 	Defaults:

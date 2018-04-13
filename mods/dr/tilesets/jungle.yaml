@@ -1,7 +1,6 @@
 General:
 	Name: Jungle
 	Id: JUNGLE
-	Palette: jungle
 	SheetSize: 1024
 	EditorTemplateOrder: Terrain
 	HeightDebugColors: AA0000

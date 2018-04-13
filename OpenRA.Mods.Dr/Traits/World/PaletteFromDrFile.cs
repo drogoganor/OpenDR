@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -24,22 +23,18 @@ namespace OpenRA.Mods.Dr.Traits
 	class PaletteFromDrFileInfo : ITraitInfo
 	{
 		[FieldLoader.Require, PaletteDefinition]
-		[Desc("Palette name used internally.")]
+		[Desc("internal palette name")]
 		public readonly string Name = null;
 
-		[Desc("Defines for which tileset IDs this palette should be loaded.",
-			"If none specified, it applies to all tileset IDs not explicitly excluded.")]
-		public readonly HashSet<string> Tilesets = new HashSet<string>();
-
-		[Desc("Don't load palette for these tileset IDs.")]
-		public readonly HashSet<string> ExcludeTilesets = new HashSet<string>();
+		[Desc("If defined, load the palette only for this tileset.")]
+		public readonly string Tileset = null;
 
 		[FieldLoader.Require]
-		[Desc("Name of the file to load.")]
+		[Desc("filename to load")]
 		public readonly string Filename = null;
 
-		[Desc("Premultiply colors with their alpha values.")]
-		public readonly bool Premultiply = true;
+		[Desc("Map listed indices to shadow. Ignores previous color.")]
+		public readonly int[] ShadowIndex = { };
 
 		public readonly bool AllowModifiers = true;
 
@@ -50,7 +45,6 @@ namespace OpenRA.Mods.Dr.Traits
 	{
 		readonly World world;
 		readonly PaletteFromDrFileInfo info;
-
 		public PaletteFromDrFile(World world, PaletteFromDrFileInfo info)
 		{
 			this.world = world;
@@ -59,6 +53,8 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public void LoadPalettes(WorldRenderer wr)
 		{
+			//wr.AddPalette(info.Name, new ImmutablePalette(world.Map.Open(info.Filename), info.ShadowIndex), info.AllowModifiers);
+
 			var colors = new uint[Palette.Size];
 			using (var s = world.Map.Open(info.Filename))
 			{
@@ -87,7 +83,7 @@ namespace OpenRA.Mods.Dr.Traits
 				var rList = list.Take(256).ToList();
 				var gList = list.Skip(256).Take(256).ToList();
 				var bList = list.Skip(512).Take(256).ToList();
-				
+
 				int standardMultiplier = 4;
 				int terrainMultiplier = 4; // 6: jungle, barren   5 possibly: aust, auralien, asteroid   4: all others
 
@@ -110,7 +106,8 @@ namespace OpenRA.Mods.Dr.Traits
 				}
 			}
 
-			wr.AddPalette(info.Name, new ImmutablePalette(colors), info.AllowModifiers);
+			if (info.Tileset == null || info.Tileset.ToLowerInvariant() == world.Map.Tileset.ToLowerInvariant())
+				wr.AddPalette(info.Name, new ImmutablePalette(colors), info.AllowModifiers);
 		}
 
 		public IEnumerable<string> PaletteNames
@@ -118,8 +115,7 @@ namespace OpenRA.Mods.Dr.Traits
 			get
 			{
 				// Only expose the palette if it is available for the shellmap's tileset (which is a requirement for its use).
-				if ((info.Tilesets.Count == 0 || info.Tilesets.Contains(world.Map.Rules.TileSet.Id))
-					&& !info.ExcludeTilesets.Contains(world.Map.Rules.TileSet.Id))
+				if (info.Tileset == null || info.Tileset == world.Map.Rules.TileSet.Id)
 					yield return info.Name;
 			}
 		}

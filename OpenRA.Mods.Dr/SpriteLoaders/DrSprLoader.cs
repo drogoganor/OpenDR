@@ -106,9 +106,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 								for (i = 0; i < cnt; ++i, ++curr)
 								{
 									int newIndex = pixindex(currx + i, l);
-									if (tempData[curr] > 167)
-										newIndex = newIndex;
-
 									Data[newIndex] = tempData[curr];
 								}
 							}
@@ -117,7 +114,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 								for (i = 0; i < cnt; ++i)
 								{
 									int newIndex = pixindex(currx + i, l);
-									Data[newIndex] = 2;
+									Data[newIndex] = 110;
 								}
 
 							}

@@ -1,52 +1,57 @@
 ^Palettes:
-	PaletteFromDrFile@barren:
-		Name: barren
+	PaletteFromDrFile@terrain-barren:
+		Name: terrain
 		Filename: barren/barren.pal
-		ShadowIndex: 3,4
-	PaletteFromDrFile@aust:
-		Name: aust
+		Tileset: BARREN
+		ShadowIndex: 110
+	PaletteFromDrFile@terrain-aust:
+		Name: terrain
 		Filename: aust.pal
+		Tileset: AUST
 		ShadowIndex: 3,4
-	PaletteFromDrFile@asteroid:
-		Name: asteroid
+	PaletteFromDrFile@terrain-asteroid:
+		Name: terrain
 		Filename: asteroid.pal
+		Tileset: ASTEROID
 		ShadowIndex: 3,4
-	PaletteFromDrFile@alien:
-		Name: alien
+	PaletteFromDrFile@terrain-alien:
+		Name: terrain
 		Filename: alien/alien.pal
+		Tileset: ALIEN
 		ShadowIndex: 3,4
-	PaletteFromDrFile@auralien:
-		Name: auralien
+	PaletteFromDrFile@terrain-auralien:
+		Name: terrain
 		Filename: auralien.pal
+		Tileset: AURALIEN
 		ShadowIndex: 3,4
-	PaletteFromDrFile@snow:
-		Name: snow
+	PaletteFromDrFile@terrain-snow:
+		Name: terrain
 		Filename: snow/snow.pal
+		Tileset: SNOW
 		ShadowIndex: 3,4
-	PaletteFromDrFile@volcanic:
-		Name: volcanic
+	PaletteFromDrFile@terrain-volcanic:
+		Name: terrain
 		Filename: volcanic.pal
+		Tileset: VOLCANIC
 		ShadowIndex: 3,4
-	PaletteFromDrFile@jungle:
-		Name: jungle
+	PaletteFromDrFile@terrain-jungle:
+		Name: terrain
 		Filename: jungle/jungle.pal
+		Tileset: JUNGLE
 		ShadowIndex: 3,4
 	PaletteFromDrFile@player:
 		Name: player
 		Filename: barren/barren.pal
-		ShadowIndex: 4
-	PaletteFromCurrentTileset:
-		Name: terrain
-		ShadowIndex: 3,4
+		ShadowIndex: 110
 	PaletteFromDrFile@chrome:
 		Name: chrome
 		Filename: barren/barren.pal
-		ShadowIndex: 3
+		ShadowIndex: 110
 		AllowModifiers: false
 	PaletteFromDrFile@effect:
 		Name: effect
 		Filename: barren/barren.pal
-		ShadowIndex: 4
+		ShadowIndex: 110
 	PaletteFromDrFile@colorpicker:
 		Name: colorpicker
 		Filename: barren/barren.pal

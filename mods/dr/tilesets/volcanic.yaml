@@ -1,7 +1,6 @@
 General:
 	Name: Volcanic
 	Id: VOLCANIC
-	Palette: volcanic
 	SheetSize: 1024
 	EditorTemplateOrder: Terrain
 	HeightDebugColors: AA0000

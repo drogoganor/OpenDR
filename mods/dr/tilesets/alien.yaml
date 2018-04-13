@@ -1,7 +1,6 @@
 General:
 	Name: Alien
 	Id: ALIEN
-	Palette: alien
 	SheetSize: 1024
 	EditorTemplateOrder: Terrain
 	HeightDebugColors: AA0000

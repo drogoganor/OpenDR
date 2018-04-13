@@ -5,30 +5,30 @@ Player:
 		MinimumExcessPower: 60
 		BuildingCommonNames:
 			ConstructionYard: constructionrig
-			HQ: hq.fguard,hq.imperium
+			HQ: hq.human,hq.cyborg,hq.xenite
 			Refinery: waterlaunchpad
 			Power: power
 			Barracks: trainingfacility.fguard, trainingfacility.imperium
-			VehiclesFactory: assemblyplant.fguard, assemblyplant.imperium
-			Production: trainingfacility.fguard, trainingfacility.imperium,assemblyplant.fguard, assemblyplant.imperium
+			VehiclesFactory: assemblyplant.human, assemblyplant.imperium
+			Production: trainingfacility.fguard, trainingfacility.imperium,assemblyplant.human, assemblyplant.imperium
 		UnitsCommonNames:
 			Mcv: constructionrig
 		BuildingLimits:
-			hq.fguard: 1
-			trainingfacility.fguard: 1
-			assemblyplant.fguard: 1
-			hq.imperium: 1
-			trainingfacility.imperium: 1
+			hq.human: 1
+			hq.cyborg: 1
+			trainingfacility.fguard: 2
+			trainingfacility.imperium: 2
+			assemblyplant.human: 1
 			assemblyplant.imperium: 1
 		BuildingFractions:
-			hq.fguard: 100%
-			hq.imperium: 100%
-			waterlaunchpad: 10%
-			power: 31%
-			trainingfacility.fguard: 1%
-			assemblyplant.fguard: 6%
-			trainingfacility.imperium: 1%
-			assemblyplant.imperium: 6%
+			waterlaunchpad: 40%
+			power: 10%
+			hq.human: 100%
+			hq.cyborg: 100%
+			trainingfacility.fguard: 70%
+			trainingfacility.imperium: 70%
+			assemblyplant.human: 60%
+			assemblyplant.imperium: 60%
 		UnitsToBuild:
 			raider: 65%
 			guardian: 65%
@@ -36,36 +36,36 @@ Player:
 			bion: 25%
 			sniper: 15%
 			exterminator: 15%
-			scout: 1%
+			#scout: 1%
 			medic: 1%
-			saboteur: 1%
-			mechanic: 1%
-			martyr: 1%
-			infiltrator: 1%
+			#saboteur: 1%
+			#mechanic: 1%
+			#martyr: 1%
+			#infiltrator: 1%
 			spiderbike: 15%
-			rat: 1%
+			#rat: 1%
 			skirmishtank: 40%
 			tankhunter: 10%
-			phasetank: 1%
-			flakjack: 50%
+			#phasetank: 1%
+			#flakjack: 50%
 			triplerailhovertank: 70%
 			hellstormartillery: 40%
 			skybike: 10%
 			outrider: 15%
-			shockwave: 1%
-			watercontaminator: 1%
+			#shockwave: 1%
+			#watercontaminator: 1%
 			scoutrunner: 10%
-			itt: 5%
+			#itt: 5%
 			plasmatank: 30%
-			amper: 30%
-			mad: 15%
-			recondrone: 5%
-			shredder: 30%
-			hostagetaker: 15%
+			#amper: 30%
+			#mad: 15%
+			#recondrone: 5%
+			#shredder: 30%
+			#hostagetaker: 15%
 			tachiontank: 50%
 			scarab: 35%
 			cyclone: 15%
 			skyfortress: 5%
 		UnitLimits:
 			harv: 4
-		SquadSize: 40
+		SquadSize: 20

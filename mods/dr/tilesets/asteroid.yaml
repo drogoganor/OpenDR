@@ -1,7 +1,6 @@
 General:
 	Name: Asteroid
 	Id: ASTEROID
-	Palette: asteroid
 	SheetSize: 1024
 	EditorTemplateOrder: Terrain
 	HeightDebugColors: AA0000
