@@ -91,22 +91,22 @@
 	ProvidesPrerequisite:
 		Prerequisite: hq
 	ProvidesPrerequisite@human:
-		Factions: fguard, xenite
+		Factions: fguard, xenite, togran
 		Prerequisite: hq.human
 	ProvidesPrerequisite@cyborg:
-		Factions: imperium, shadowhand
+		Factions: imperium, shadowhand, togran
 		Prerequisite: hq.cyborg
 	ProvidesPrerequisite@fguard:
-		Factions: fguard
+		Factions: fguard, togran
 		Prerequisite: hq.fguard
 	ProvidesPrerequisite@imperium:
-		Factions: imperium
+		Factions: imperium, togran
 		Prerequisite: hq.imperium
 	ProvidesPrerequisite@xenite:
-		Factions: xenite
+		Factions: xenite, togran
 		Prerequisite: hq.xenite
 	ProvidesPrerequisite@shadowhand:
-		Factions: shadowhand
+		Factions: shadowhand, togran
 		Prerequisite: hq.shadowhand
 	Production:
 		Produces: Building,Upgrade,Economy
@@ -324,22 +324,22 @@ upgrade.phasing:
 	ProvidesPrerequisite@barracks:
 		Prerequisite: barracks
 	ProvidesPrerequisite@human:
-		Factions: fguard, xenite
+		Factions: fguard, xenite, togran
 		Prerequisite: infantry.human
 	ProvidesPrerequisite@cyborg:
-		Factions: imperium, shadowhand
+		Factions: imperium, shadowhand, togran
 		Prerequisite: infantry.cyborg
 	ProvidesPrerequisite@fguard:
-		Factions: fguard
+		Factions: fguard, togran
 		Prerequisite: infantry.fguard
 	ProvidesPrerequisite@imperium:
-		Factions: imperium
+		Factions: imperium, togran
 		Prerequisite: infantry.imperium
 	ProvidesPrerequisite@xenite:
-		Factions: xenite
+		Factions: xenite, togran
 		Prerequisite: infantry.xenite
 	ProvidesPrerequisite@shadowhand:
-		Factions: shadowhand
+		Factions: shadowhand, togran
 		Prerequisite: infantry.shadowhand
 	ProvidesPrerequisite@buildingname:
 	Targetable:
@@ -386,22 +386,22 @@ upgrade.phasing:
 	ProvidesPrerequisite@vehicles:
 		Prerequisite: vehicles
 	ProvidesPrerequisite@human:
-		Factions: fguard, xenite
+		Factions: fguard, xenite, togran
 		Prerequisite: vehicles.human
 	ProvidesPrerequisite@cyborg:
-		Factions: imperium, shadowhand
+		Factions: imperium, shadowhand, togran
 		Prerequisite: vehicles.cyborg
 	ProvidesPrerequisite@fguard:
-		Factions: fguard
+		Factions: fguard, togran
 		Prerequisite: vehicles.fguard
 	ProvidesPrerequisite@imperium:
-		Factions: imperium
+		Factions: imperium, togran
 		Prerequisite: vehicles.imperium
 	ProvidesPrerequisite@xenite:
-		Factions: xenite
+		Factions: xenite, togran
 		Prerequisite: vehicles.xenite
 	ProvidesPrerequisite@shadowhand:
-		Factions: shadowhand
+		Factions: shadowhand, togran
 		Prerequisite: vehicles.shadowhand
 	PrimaryBuilding:
 		PrimaryCondition: primary
@@ -594,14 +594,14 @@ TrainingFacility.fguard:
 	WithIdleOverlay@LAYER2:
 		Sequence: idle-top2
 
-TrainingFacility.imperium
+TrainingFacility.cyborg
 	Inherits: ^DrTrainingFacility
 	RenderSprites:
 		Image: niutf1l0.spr
 	Tooltip:
 		Name: Training Facility
 	Buildable:
-		Prerequisites: ~rig.imperium, hq.imperium
+		Prerequisites: ~rig.cyborg, hq.cyborg
 	Health:
 		HP: 900
 	WithIdleOverlay@LAYER1:
@@ -637,14 +637,14 @@ AssemblyPlant.human:
 	WithIdleOverlay@LAYER2:
 		Sequence: idle-top2
 
-AssemblyPlant.imperium:
+AssemblyPlant.cyborg:
 	Inherits: ^DrAssemblyPlant
 	RenderSprites:
 		Image: nivcy1l0.spr
 	Tooltip:
 		Name: Assembly Plant
 	Buildable:
-		Prerequisites: ~rig.imperium, hq.imperium
+		Prerequisites: ~rig.cyborg, hq.cyborg
 	Health:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
@@ -747,7 +747,7 @@ HeavyRailTurret:
 	Tooltip:
 		Name: Heavy Rail Turret
 	Buildable:
-		Prerequisites: ~hq.human, upgrade.hq1, vehicles, barracks
+		Prerequisites: ~rig.human, hq.human, upgrade.hq1, vehicles, barracks
 		Queue: Building
 		Description: Heavy Rail Turret
 		BuildPaletteOrder: 50
@@ -793,7 +793,7 @@ NeutronAccelerator:
 	Tooltip:
 		Name: Neutron Accelerator
 	Buildable:
-		Prerequisites: ~hq.cyborg, upgrade.hq1, vehicles, barracks
+		Prerequisites:  ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
 		Queue: Building
 		Description: Neutron Accelerator
 		BuildPaletteOrder: 50
@@ -832,7 +832,7 @@ AntiAirTurret.human:
 	Tooltip:
 		Name: Anti-Air Turret
 	Buildable:
-		Prerequisites: ~hq.human, upgrade.hq1, vehicles, barracks
+		Prerequisites: ~rig.human, hq.human, upgrade.hq1, vehicles, barracks
 		Queue: Building
 		Description: Anti-Air Turret
 		BuildPaletteOrder: 50
@@ -864,7 +864,7 @@ AntiAirTurret.cyborg:
 	Tooltip:
 		Name: Anti-Air Turret
 	Buildable:
-		Prerequisites: ~hq.cyborg, upgrade.hq1, vehicles, barracks
+		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
 		Queue: Building
 		Description: Anti-Air Turret
 		BuildPaletteOrder: 50
@@ -889,13 +889,13 @@ AntiAirTurret.cyborg:
 
 # Camera tower
 CameraTower:
-	Inherits: ^DrBuilding
+	Inherits: ^DrGenericBuilding
 	RenderSprites:
 		Image: nccam1l0.spr
 	Tooltip:
 		Name: Camera Tower
 	Buildable:
-		Prerequisites: ~hq, upgrade.hq1, vehicles, barracks
+		Prerequisites: ~rig, hq, upgrade.hq1, vehicles, barracks
 		Queue: Building
 		Description: Camera Tower
 		BuildPaletteOrder: 50
@@ -926,7 +926,7 @@ Hospital.human:
 	Tooltip:
 		Name: Field Hospital
 	Buildable:
-		Prerequisites: ~hq.human, barracks
+		Prerequisites: ~rig.human, hq.human, barracks
 		BuildPaletteOrder: 50
 		BuildDuration: 15
 	ProvidesPrerequisite@hospital:
@@ -960,7 +960,7 @@ Hospital.cyborg:
 	Tooltip:
 		Name: Field Hospital
 	Buildable:
-		Prerequisites: ~hq.cyborg, barracks
+		Prerequisites: ~rig.cyborg, hq.cyborg, barracks
 		BuildPaletteOrder: 50
 		BuildDuration: 15
 	ProvidesPrerequisite@hospital:
@@ -982,13 +982,13 @@ Hospital.cyborg:
 
 # FG repair pad
 Repair.human:
-	Inherits: ^DrAssemblyPlant
+	Inherits: ^DrGenericBuilding
 	RenderSprites:
 		Image: nfrep1l0.spr
 	Tooltip:
 		Name: Repair Station
 	Buildable:
-		Prerequisites: ~hq.human, vehicles
+		Prerequisites: ~rig.human, hq.human, vehicles
 		BuildPaletteOrder: 50
 		BuildDuration: 24
 	ProvidesPrerequisite@repair:
@@ -1008,13 +1008,13 @@ Repair.human:
 
 # Imperium repair pad
 Repair.cyborg:
-	Inherits: ^DrAssemblyPlant
+	Inherits: ^DrGenericBuilding
 	RenderSprites:
 		Image: nirep1l0.spr
 	Tooltip:
 		Name: Repair Station
 	Buildable:
-		Prerequisites: ~hq.cyborg, vehicles
+		Prerequisites: ~rig.cyborg, hq.cyborg, vehicles
 		BuildPaletteOrder: 50
 		BuildDuration: 24
 	ProvidesPrerequisite@repair:
@@ -1034,13 +1034,13 @@ Repair.cyborg:
 
 # Phasing facility
 PhasingFacility:
-	Inherits: ^DrAssemblyPlant
+	Inherits: ^DrGenericBuilding
 	RenderSprites:
 		Image: nfphf1l0.spr
 	Tooltip:
 		Name: Phasing Facility
 	Buildable:
-		Prerequisites: hq
+		Prerequisites: ~rig.human, hq.human
 		BuildPaletteOrder: 50
 		BuildDuration: 36
 	ProvidesPrerequisite@phasing:
@@ -1070,13 +1070,13 @@ PhasingFacility:
 
 # FG rearming deck
 RearmingDeck.human:
-	Inherits: ^DrAssemblyPlant
+	Inherits: ^DrGenericBuilding
 	RenderSprites:
 		Image: nfrrm1l0.spr
 	Tooltip:
 		Name: Rearming Deck
 	Buildable:
-		Prerequisites: ~hq.human, upgrade.hq2, vehicles, barracks
+		Prerequisites: ~rig.human, hq.human, upgrade.hq2, vehicles, barracks
 		BuildPaletteOrder: 50
 		BuildDuration: 30
 	ProvidesPrerequisite@air:
@@ -1094,15 +1094,41 @@ RearmingDeck.human:
 	WithIdleOverlay@LAYER1:
 		Sequence: idle-top
 
+# Imperium temporal gate
+TemporalGate:
+	Inherits: ^DrGenericBuilding
+	RenderSprites:
+		Image: nitgt1l0.spr
+	Tooltip:
+		Name: Temporal Gate
+	Buildable:
+		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 54
+	ProvidesPrerequisite@temporal:
+		Prerequisite: temporal
+	Valued:
+		Cost: 1800
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -200
+	Armor:
+		Type: Building
+	WithIdleOverlay@LAYER1:
+		Sequence: idle-top
+
 # Imperium rearming deck
 RearmingDeck.cyborg:
-	Inherits: ^DrAssemblyPlant
+	Inherits: ^DrGenericBuilding
 	RenderSprites:
 		Image: nirrm1l0.spr
 	Tooltip:
 		Name: Rearming Deck
 	Buildable:
-		Prerequisites: ~hq.cyborg, upgrade.hq2, vehicles, barracks
+		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
 		BuildPaletteOrder: 50
 		BuildDuration: 30
 	ProvidesPrerequisite@air:
@@ -1120,41 +1146,15 @@ RearmingDeck.cyborg:
 	WithIdleOverlay@LAYER1:
 		Sequence: idle-top
 
-# Imperium temporal gate
-TemporalGate:
-	Inherits: ^DrAssemblyPlant
-	RenderSprites:
-		Image: nitgt1l0.spr
-	Tooltip:
-		Name: Temporal Gate
-	Buildable:
-		Prerequisites: ~hq.cyborg, upgrade.hq2, vehicles, barracks
-		BuildPaletteOrder: 60
-		BuildDuration: 54
-	ProvidesPrerequisite@temporal:
-		Prerequisite: temporal
-	Valued:
-		Cost: 1800
-	Health:
-		HP: 1000
-	RevealsShroud:
-		Range: 8c0
-	Power:
-		Amount: -200
-	Armor:
-		Type: Building
-	WithIdleOverlay@LAYER1:
-		Sequence: idle-top
-
 # Imperium temporal rift creator
 TemporalRiftCreator:
-	Inherits: ^DrAssemblyPlant
+	Inherits: ^DrGenericBuilding
 	RenderSprites:
 		Image: nitrc1l0.spr
 	Tooltip:
 		Name: Temporal Rift Creator
 	Buildable:
-		Prerequisites: ~hq.cyborg, upgrade.hq2, vehicles, barracks
+		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
 		BuildPaletteOrder: 60
 		BuildDuration: 240
 	ProvidesPrerequisite@temporal:
@@ -1171,3 +1171,32 @@ TemporalRiftCreator:
 		Type: Building
 	WithIdleOverlay@LAYER1:
 		Sequence: idle-top
+
+# Shadowhand matrix
+Matrix:
+	Inherits: ^DrGenericBuilding
+	RenderSprites:
+		Image: ninex1l0.spr
+	Tooltip:
+		Name: Matrix
+	Buildable:
+		Prerequisites: ~rig.shadowhand, hq.shadowhand
+		BuildPaletteOrder: 30
+		BuildDuration: 10
+	ProvidesPrerequisite@matrix:
+		Prerequisite: matrix
+	Valued:
+		Cost: 1800
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2

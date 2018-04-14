@@ -210,3 +210,45 @@ ShredderVoice:
 	Voices:
 		Select: gxshrsc0,gxshrsc1,gxshrsc2
 		Action: gxshrrc0,gxshrrc1
+
+TerraformerVoice:
+	Inherits: GenericVehicleVoice
+	Voices:
+		Select: gxtersc0,gxtersc3,gxtersc4
+		Action: gxterrc1,gxterac0
+
+# Xenite
+
+GantVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gxgansc1,gxgansc2,gxgansc4
+		Action: gxganrc1,gxganrc2,gxganac0
+
+
+# Shadowhand
+
+
+ReaperVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvreasl1,gvreasl2,gvreasl4
+		Action: gvrearl1,gvrearl2,gvrearl3,gvrearl4
+
+GeminiTankVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvgemsl1,gvgemsl2,gvgemsl3,gvgemsl5
+		Action: gvgemrl1,gvgemrl2,gvgemrl3,gvgemrl4
+
+FuryVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gxfursc0,gxfursc1,gxfursc2
+		Action: gxfurrc0,gxfurrc1,gxfurrc2
+
+EMPVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gxempsc0,gxempsc1,gxempsc2
+		Action: gxemprc0,gxemprc1,gxemprc2,gxempac0

@@ -280,7 +280,7 @@ TripleRailTankWeapon: #TripleRailGun
 
 SkirmishTankWeapon:
 	Inherits: ^M2
-	ReloadDelay: 40 # TODO: HALVE FROM HERE AND BELOW, INCLUSIVE
+	ReloadDelay: 20
 	Range: 6c0
 	Report: gxsktwc0.wav
 	ValidTargets: Air, Ground
@@ -300,7 +300,7 @@ SkirmishTankWeapon:
 
 SniperRifle:
 	Inherits: ^S1
-	ReloadDelay: 28
+	ReloadDelay: 14
 	Range: 8c0
 	Report: gxsnpwc0.wav
 	Projectile: Bullet
@@ -316,7 +316,7 @@ SniperRifle:
 
 PlasmaTankWeapon:
 	Inherits: ^E3
-	ReloadDelay: 30
+	ReloadDelay: 15
 	Range: 5c0
 	Report: gxpltwc0.wav
 	Projectile: Bullet
@@ -332,7 +332,7 @@ PlasmaTankWeapon:
 
 PlasmaRifle: # Bion
 	Inherits: ^E3
-	ReloadDelay: 16
+	ReloadDelay: 8
 	Range: 4c0
 	Report: gxbonwc0.wav
 	ValidTargets: Air, Ground
@@ -350,7 +350,7 @@ PlasmaRifle: # Bion
 
 TachionTankWeapon:
 	Inherits: ^E4
-	ReloadDelay: 40
+	ReloadDelay: 20
 	Range: 8c0
 	Report: gxtctwc0.wav
 	Projectile: Bullet
@@ -389,7 +389,7 @@ SkyFortressWeapon: #FortressCannon
 CycloneWeapon: # CycloneCannon
 	Inherits: ^G1
 	#Ammo 5
-	ReloadDelay: 20
+	ReloadDelay: 10
 	Range: 6c0
 	Report: gxcycwc0.wav
 	ValidTargets: Air, Ground
@@ -421,7 +421,7 @@ MartyrWeapon: # SuicideNuke
 
 PhaseTankWeapon: #PhaseTankCannon
 	Inherits: ^E2
-	ReloadDelay: 26
+	ReloadDelay: 13
 	Range: 6c0
 	Report: gxphtwc0.wav
 	Projectile: Bullet
@@ -437,7 +437,7 @@ PhaseTankWeapon: #PhaseTankCannon
 
 ScoutRunnerWeapon: # LaserCannon
 	Inherits: ^E2
-	ReloadDelay: 26
+	ReloadDelay: 13
 	Range: 6c0
 	Report: gxsttwc0.wav
 	Projectile: Bullet
@@ -453,7 +453,7 @@ ScoutRunnerWeapon: # LaserCannon
 
 MADWeapon: # GroundToAirLaser
 	Inherits: ^A1
-	ReloadDelay: 40
+	ReloadDelay: 20
 	Range: 8c0
 	ValidTargets: Air
 	Report: gxmadwc0.wav
@@ -472,7 +472,7 @@ MADWeapon: # GroundToAirLaser
 SkyBikeWeapon:
 	Inherits: ^A1
 	#Ammo 20
-	ReloadDelay: 14
+	ReloadDelay: 7
 	Range: 5c0
 	Report: gxskbwc0.wav
 	ValidTargets: Air, Ground
@@ -490,7 +490,7 @@ SkyBikeWeapon:
 
 ExterminatorWeapon: #PolyAcid
 	Inherits: ^M3
-	ReloadDelay: 40
+	ReloadDelay: 20
 	Range: 5c0
 	Report: gxextwc1.wav
 	Projectile: Bullet
@@ -506,7 +506,7 @@ ExterminatorWeapon: #PolyAcid
 
 TankHunterWeapon: #TankHunterGun
 	Inherits: ^E5
-	ReloadDelay: 40
+	ReloadDelay: 20
 	Range: 3c0
 	Report: gxthnwc0.wav
 	Projectile: Bullet
@@ -522,7 +522,7 @@ TankHunterWeapon: #TankHunterGun
 
 OutriderWeapon: #OutriderMissile
 	Inherits: ^M1
-	ReloadDelay: 20
+	ReloadDelay: 10
 	#Ammo 10
 	Range: 5c0
 	Report: gxoutwc0.wav
@@ -539,7 +539,7 @@ OutriderWeapon: #OutriderMissile
 
 HellstormArtilleryWeapon: #ArtilleryShell
 	Inherits: ^K2
-	ReloadDelay: 160
+	ReloadDelay: 80
 	Range: 45c0
 	#MinRange: 3
 	Report: gxfarwc0.wav
@@ -557,7 +557,7 @@ HellstormArtilleryWeapon: #ArtilleryShell
 
 ScarabWeapon: # IMPArtilleryShell
 	Inherits: ^K2
-	ReloadDelay: 160
+	ReloadDelay: 80
 	Range: 45c0
 	Report: gxiarwc0.wav
 	Projectile: Bullet
@@ -574,7 +574,7 @@ ScarabWeapon: # IMPArtilleryShell
 
 AmperWeapon: #AmperAmp
 	Inherits: ^H1
-	ReloadDelay: 20
+	ReloadDelay: 10
 	Range: 5c0
 	Report: gxampwc0.wav
 	Projectile: Bullet

@@ -38,17 +38,17 @@ ucfrgst0.spr:
 		Tick: 100
 	harvest:
 		Start: 48
-		Facings: 1
+		Facings: 16
 		Length: 15
 		Tick: 100
 	dock:
 		Start: 48
-		Facings: 1
+		Facings: 16
 		Length: 15
 		Tick: 100
 	dock-loop:
 		Start: 48
-		Facings: 1
+		Facings: 16
 		Length: 15
 		Tick: 100
 	icon: ucfrgmn0.spr
@@ -665,4 +665,200 @@ uiskyst0.spr:
 		Tick: 100
 	icon: uiskymn0.spr
 
-# Water contaminator
+# Avenger
+ufomkst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
+	run:
+		Start: 16
+		Facings: 16
+		Length: 4
+		Tick: 100
+	shoot:
+		Start: 16
+		Facings: 16
+		Length: 4
+		Tick: 100
+	icon: ufomkmn0.spr
+
+# Gemini tank
+uigemst1.spr: # seems to transform into uigemst0, a slimmer version
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
+	run:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 0
+		Facings: 16
+	turret: uigemac0.spr
+		Start: 0
+		Facings: 16
+	icon: uigemmn1.spr
+
+# Shadowblade (clone of Shredder)
+uishrst1.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	icon: uishrmn1.spr
+
+# Fury
+uifurst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 100
+	run:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 100
+	shoot:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 100
+	turret: uifurac1.spr
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	icon: uifurmn0.spr
+
+# Hades Bomber
+uiarbst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 24
+	stand:
+		Start: 0
+		Facings: 24
+	run:
+		Start: 0
+		Facings: 24
+	shoot:
+		Start: 24
+		Facings: 24
+		Length: 3
+		Tick: 100
+	icon: uiarbmn0.spr
+
+# EMP
+uiempst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	shoot:
+		Start: 8
+		Facings: 8
+		Length: 24
+		Tick: 100
+	icon: uiempmn0.spr
+
+# Road Terraformer (Gold)
+uiterst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+	run:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+	shoot:
+		Start: 24
+		Facings: 8
+		Length: 4
+		Tick: 100
+	icon: uitermn0.spr
+
+# Marsh Terraformer (Green)
+uiterst1.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+	run:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+	shoot:
+		Start: 24
+		Facings: 8
+		Length: 4
+		Tick: 100
+	icon: uitermn1.spr

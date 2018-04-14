@@ -333,6 +333,7 @@ uiextst0.spr:
 
 # Xenite
 
+# Ranger
 uftrast0.spr:
 	Inherits: humansplat
 	Defaults:
@@ -355,6 +356,7 @@ uftrast0.spr:
 		Facings: 8
 	icon: uftramn0.spr
 
+# Gant
 ufganst0.spr:
 	Inherits: humansplat
 	Defaults:
@@ -385,6 +387,34 @@ ufganst0.spr:
 		AddExtension: False
 	icon: ufganmn0.spr
 
+# Power striker
+unpwcst0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 60
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 6
+		Tick: 100
+	idle:
+		Start: 112
+		Facings: 8
+		Length: 14
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 60
+	icon: unpwcmn0.spr
+
+# Grendel
 ufgrest0.spr:
 	Inherits: humansplat
 	Defaults:
@@ -415,6 +445,7 @@ ufgrest0.spr:
 		AddExtension: False
 	icon: ufgremn0.spr
 
+# Grendel Rider
 ufridst0.spr:
 	Inherits: humansplat
 	Defaults:
@@ -444,3 +475,32 @@ ufridst0.spr:
 		Facings: 8
 		AddExtension: False
 	icon: ufridmn0.spr
+
+# Shadowhand
+
+# Reaper
+uireast0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 60
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 4
+		Tick: 60
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 60
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 60
+	icon: uireamn0.spr

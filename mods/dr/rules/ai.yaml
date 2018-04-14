@@ -8,27 +8,29 @@ Player:
 			HQ: hq.human,hq.cyborg,hq.xenite
 			Refinery: waterlaunchpad
 			Power: power
-			Barracks: trainingfacility.fguard, trainingfacility.imperium
-			VehiclesFactory: assemblyplant.human, assemblyplant.imperium
-			Production: trainingfacility.fguard, trainingfacility.imperium,assemblyplant.human, assemblyplant.imperium
+			Barracks: trainingfacility.fguard, trainingfacility.cyborg
+			VehiclesFactory: assemblyplant.human, assemblyplant.cyborg
+			Production: trainingfacility.fguard, trainingfacility.cyborg, assemblyplant.human, assemblyplant.cyborg
 		UnitsCommonNames:
 			Mcv: constructionrig
 		BuildingLimits:
 			hq.human: 1
 			hq.cyborg: 1
-			trainingfacility.fguard: 2
-			trainingfacility.imperium: 2
+			trainingfacility.fguard: 1
+			trainingfacility.cyborg: 1
 			assemblyplant.human: 1
-			assemblyplant.imperium: 1
+			assemblyplant.cyborg: 1
+			waterlaunchpad: 4
+			power: 6
 		BuildingFractions:
 			waterlaunchpad: 40%
 			power: 10%
-			hq.human: 100%
-			hq.cyborg: 100%
+			hq.human: 20%
+			hq.cyborg: 20%
 			trainingfacility.fguard: 70%
-			trainingfacility.imperium: 70%
+			trainingfacility.cyborg: 70%
 			assemblyplant.human: 60%
-			assemblyplant.imperium: 60%
+			assemblyplant.cyborg: 60%
 		UnitsToBuild:
 			raider: 65%
 			guardian: 65%

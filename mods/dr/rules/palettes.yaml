@@ -39,22 +39,22 @@
 		Filename: jungle/jungle.pal
 		Tileset: JUNGLE
 		ShadowIndex: 3,4
-	PaletteFromDrFile@player:
+	PaletteFromGimpOrJascFile@player:
 		Name: player
-		Filename: barren/barren.pal
-		ShadowIndex: 110
-	PaletteFromDrFile@chrome:
+		Filename: units.pal
+		ShadowIndex: 3
+	PaletteFromGimpOrJascFile@chrome:
 		Name: chrome
-		Filename: barren/barren.pal
-		ShadowIndex: 110
+		Filename: units.pal
+		ShadowIndex: 3
 		AllowModifiers: false
-	PaletteFromDrFile@effect:
+	PaletteFromGimpOrJascFile@effect:
 		Name: effect
-		Filename: barren/barren.pal
-		ShadowIndex: 110
-	PaletteFromDrFile@colorpicker:
+		Filename: units.pal
+		ShadowIndex: 3
+	PaletteFromGimpOrJascFile@colorpicker:
 		Name: colorpicker
-		Filename: barren/barren.pal
+		Filename: units.pal
 		AllowModifiers: false
 	ShroudPalette@shroud:
 		Name: shroud

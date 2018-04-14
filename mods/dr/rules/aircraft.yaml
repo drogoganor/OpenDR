@@ -121,7 +121,7 @@ ReconDrone:
 		Name: Recon Drone
 	Buildable:
 		Description: General-purpose infantry.
-		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1
+		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1
 		BuildPaletteOrder: 150
 		BuildDuration: 12
 	Voiced:
@@ -147,7 +147,7 @@ Cyclone:
 		Name: Cyclone
 	Buildable:
 		Description: General-purpose infantry.
-		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
+		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
 		BuildDuration: 45
 	Voiced:
@@ -192,5 +192,61 @@ SkyFortress:
 		Weapon: SkyFortressWeapon
 	Aircraft:
 		Speed: 100
+	AttackHeli:
+		FacingTolerance: 20
+
+Avenger:
+	Inherits: ^DrPlane
+	RenderSprites:
+		Image: ufomkst0.spr
+	Tooltip:
+		Name: Hades Bomber
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.xenite, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
+		BuildPaletteOrder: 160
+		BuildDuration: 45
+	Voiced:
+		VoiceSet: AirUnitVoice
+	Valued:
+		Cost: 1500
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 9c0
+	Armor:
+		Type: Aircraft
+	Armament:
+		Weapon: CycloneWeapon
+	Aircraft:
+		Speed: 240
+	AttackHeli:
+		FacingTolerance: 20
+
+HadesBomber:
+	Inherits: ^DrPlane
+	RenderSprites:
+		Image: uiarbst0.spr
+	Tooltip:
+		Name: Hades Bomber
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.shadowhand, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
+		BuildPaletteOrder: 160
+		BuildDuration: 45
+	Voiced:
+		VoiceSet: CycloneVoice
+	Valued:
+		Cost: 1500
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 9c0
+	Armor:
+		Type: Aircraft
+	Armament:
+		Weapon: CycloneWeapon
+	Aircraft:
+		Speed: 240
 	AttackHeli:
 		FacingTolerance: 20

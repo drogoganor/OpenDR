@@ -30,18 +30,18 @@
 			Clear: 100
 			Normal2: 100
 			Normal3: 100
-			Muddy1: 80
-			Muddy2: 80
-			Rough1: 60
-			Rough2: 60
+			Muddy1: 50
+			Muddy2: 50
+			Rough1: 30
+			Rough2: 30
 			Road: 100
 			RoadBase: 100
-			HillSlope1: 70
-			HillSlope2: 70
-			Cliff1: 80
-			Cliff2: 80
-			Cliff3: 80
-			Cliff4: 80
+			HillSlope1: 20
+			HillSlope2: 20
+			Cliff1: 10
+			Cliff2: 10
+			Cliff3: 10
+			Cliff4: 10
 			Ore: 100
 			Gems: 100
 		TurnSpeed: 5
@@ -135,23 +135,25 @@ ConstructionRig:
 		Color: 8A8A8A
 	Production:
 		Produces: Building,Defense
+	ProvidesPrerequisite@rig:
+		Prerequisite: rig
 	ProvidesPrerequisite@human:
-		Factions: fguard, xenite
+		Factions: fguard, xenite, togran
 		Prerequisite: rig.human
 	ProvidesPrerequisite@cyborg:
-		Factions: imperium, shadowhand
+		Factions: imperium, shadowhand, togran
 		Prerequisite: rig.cyborg
 	ProvidesPrerequisite@fguard:
-		Factions: fguard
+		Factions: fguard, togran
 		Prerequisite: rig.fguard
 	ProvidesPrerequisite@imperium:
-		Factions: imperium
+		Factions: imperium, togran
 		Prerequisite: rig.imperium
 	ProvidesPrerequisite@xenite:
-		Factions: xenite
+		Factions: xenite, togran
 		Prerequisite: rig.xenite
 	ProvidesPrerequisite@shadowhand:
-		Factions: shadowhand
+		Factions: shadowhand, togran
 		Prerequisite: rig.shadowhand
 	-Armament:
 
@@ -182,7 +184,7 @@ Freighter:
 	WithDockingAnimation:
 	WithFacingSpriteBody:
 	Harvester:
-		Capacity: 200
+		Capacity: 100
 		Resources: Ore,Gems
 		BaleUnloadDelay: 1
 		SearchFromProcRadius: 30
@@ -216,7 +218,7 @@ HoverFreighter:
 	WithDockingAnimation:
 	WithFacingSpriteBody:
 	Harvester:
-		Capacity: 200
+		Capacity: 100
 		Resources: Ore,Gems
 		BaleUnloadDelay: 1
 		SearchFromProcRadius: 30
@@ -555,7 +557,7 @@ ScoutRunner:
 		Name: Scout Runner
 	Buildable:
 		Description: This fast moving hover vehicle is armed with a\nlaser and is fairly effective against both infantry\nand armour. However, it is not very sturdy, and is\nused primarily for front line reconnaissance.
-		Prerequisites: ~vehicles.imperium, hq
+		Prerequisites: ~vehicles.cyborg, hq
 		BuildPaletteOrder: 130
 		BuildDuration: 15
 	Voiced:
@@ -581,7 +583,7 @@ ITT:
 		Name: Invader Troop Transport
 	Buildable:
 		Description: General-purpose infantry.
-		Prerequisites: ~vehicles.imperium, hq
+		Prerequisites: ~vehicles.cyborg, hq
 		BuildPaletteOrder: 130
 		BuildDuration: 18
 	Voiced:
@@ -669,7 +671,7 @@ MAD:
 		Name: Mobile Air Defense
 	Buildable:
 		Description: General-purpose infantry.
-		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1
+		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1
 		BuildPaletteOrder: 140
 		BuildDuration: 24
 	Voiced:
@@ -769,7 +771,7 @@ Scarab:
 		Name: S.C.A.R.A.B.
 	Buildable:
 		Description: General-purpose infantry.
-		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
+		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
 		BuildDuration: 39
 	Voiced:
@@ -786,3 +788,175 @@ Scarab:
 		Type: Tank
 	Armament:
 		Weapon: ScarabWeapon
+
+GeminiTank:
+	Inherits: ^DrHoverAnimatedVehicle
+	RenderSprites:
+		Image: uigemst1.spr
+	Tooltip:
+		Name: Gemini Tank
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.shadowhand, hq, barracks
+		BuildPaletteOrder: 150
+		BuildDuration: 39
+	Voiced:
+		VoiceSet: GeminiTankVoice
+	Valued:
+		Cost: 700
+	Health:
+		HP: 250
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: Tank
+	Turreted:
+		TurnSpeed: 5
+	Armament:
+		Weapon: PlasmaTankWeapon
+		Recoil: 128
+		RecoilRecovery: 38
+		LocalOffset: 720,0,80
+		MuzzleSequence: muzzle
+	-AttackFrontal:
+	AttackTurreted:
+	WithSpriteTurret:
+
+Shadowblade:
+	Inherits: ^DrHoverAnimatedVehicle
+	RenderSprites:
+		Image: uishrst1.spr
+	Tooltip:
+		Name: Shadowblade
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.shadowhand, hq
+		BuildPaletteOrder: 150
+		BuildDuration: 21
+	Voiced:
+		VoiceSet: ShredderVoice
+	Valued:
+		Cost: 700
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 200
+	Armor:
+		Type: Tank
+
+Fury:
+	Inherits: ^DrAnimatedVehicle
+	RenderSprites:
+		Image: uifurst0.spr
+	Tooltip:
+		Name: Fury
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.shadowhand, hq, barracks
+		BuildPaletteOrder: 150
+		BuildDuration: 39
+	Voiced:
+		VoiceSet: FuryVoice
+	Valued:
+		Cost: 700
+	Health:
+		HP: 250
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: Tank
+	Turreted:
+		TurnSpeed: 5
+	Armament:
+		Weapon: PlasmaTankWeapon
+		Recoil: 128
+		RecoilRecovery: 38
+		LocalOffset: 720,0,80
+		MuzzleSequence: muzzle
+	-AttackFrontal:
+	AttackTurreted:
+	WithSpriteTurret:
+
+EMPDevice:
+	Inherits: ^DrAnimatedVehicle
+	RenderSprites:
+		Image: uiempst0.spr
+	Tooltip:
+		Name: EMP Device
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles.shadowhand, hq, barracks
+		BuildPaletteOrder: 150
+		BuildDuration: 39
+	Voiced:
+		VoiceSet: EMPVoice
+	Valued:
+		Cost: 700
+	Health:
+		HP: 250
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: Tank
+	Armament:
+		Weapon: TachionTankWeapon
+
+RoadTerraformer:
+	Inherits: ^DrAnimatedVehicle
+	RenderSprites:
+		Image: uiterst0.spr
+	Tooltip:
+		Name: Road Terraformer
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles, hq, barracks
+		BuildPaletteOrder: 150
+		BuildDuration: 39
+	Voiced:
+		VoiceSet: TerraformerVoice
+	Valued:
+		Cost: 700
+	Health:
+		HP: 250
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: Tank
+	Armament:
+		Weapon: TachionTankWeapon
+
+MarshTerraformer:
+	Inherits: ^DrAnimatedVehicle
+	RenderSprites:
+		Image: uiterst1.spr
+	Tooltip:
+		Name: Marsh Terraformer
+	Buildable:
+		Description: General-purpose infantry.
+		Prerequisites: ~vehicles, hq, barracks
+		BuildPaletteOrder: 150
+		BuildDuration: 39
+	Voiced:
+		VoiceSet: TerraformerVoice
+	Valued:
+		Cost: 700
+	Health:
+		HP: 250
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: Tank
+	Armament:
+		Weapon: TachionTankWeapon

@@ -386,8 +386,8 @@ Bion:
 		Name: Bion
 	Buildable:
 		Description: A fearless mechanical killer, the Bion is armoured\nlike a walking tank. This one-man cyborg death\nsquad carries a massive plasma rifle, and can fire\nat both ground and air units.
-		Prerequisites: ~infantry.imperium
-		BuildPaletteOrder: 10
+		Prerequisites: ~infantry.cyborg
+		BuildPaletteOrder: 20
 		BuildDuration: 12
 	Voiced:
 		VoiceSet: ImperiumBionVoice
@@ -412,8 +412,8 @@ Exterminator:
 		Name: Exterminator
 	Buildable:
 		Description: These infantry units are equipped with anti-gravity\ngenerators which allow them to hover over water.\nAs infantry, they can also move over steep gradients\nthat are generally inaccessible to hover vehicles.\nExterminators are armed with chemical grenades that\ndissolve metal. They are very effective at attacking\narmour.
-		Prerequisites: ~infantry.imperium, hq, upgrade.hq1, vehicles, upgrade.assemblyplant1
-		BuildPaletteOrder: 10
+		Prerequisites: ~infantry.cyborg, hq, upgrade.hq1, barracks, vehicles, upgrade.assemblyplant1
+		BuildPaletteOrder: 30
 		BuildDuration: 15
 	Voiced:
 		VoiceSet: ExterminatorVoice
@@ -464,11 +464,11 @@ Gant:
 		Name: Gant
 	Buildable:
 		Description: The Gant can....
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 50
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
 	Voiced:
-		VoiceSet: ScoutVoice
+		VoiceSet: GantVoice
 	Valued:
 		Cost: 1000
 	Health:
@@ -488,7 +488,31 @@ Ranger:
 		Name: Ranger
 	Buildable:
 		Description: The Ranger can....
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 60
+		BuildDuration: 30
+		Prerequisites: ~hq.xenite, ~barracks
+	Voiced:
+		VoiceSet: ScoutVoice
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 120
+	Armor:
+		Type: Infantry
+
+PowerStriker:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: unpwcst0.spr
+	Tooltip:
+		Name: Power Striker
+	Buildable:
+		Description: The Power Striker can....
+		BuildPaletteOrder: 60
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
 	Voiced:
@@ -512,7 +536,7 @@ Grendel:
 		Name: Grendel
 	Buildable:
 		Description: The Grendel can....
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 70
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
 	Voiced:
@@ -536,11 +560,37 @@ GrendelRider:
 		Name: Grendel
 	Buildable:
 		Description: The Grendel Rider can....
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 80
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
 	Voiced:
 		VoiceSet: ScoutVoice
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 120
+	Armor:
+		Type: Infantry
+
+# Shadowhand
+
+Reaper:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: uireast0.spr
+	Tooltip:
+		Name: Reaper
+	Buildable:
+		Description: The Reaper can....
+		BuildPaletteOrder: 20
+		BuildDuration: 30
+		Prerequisites: ~hq.shadowhand, ~barracks
+	Voiced:
+		VoiceSet: ReaperVoice
 	Valued:
 		Cost: 1000
 	Health:
