@@ -200,7 +200,7 @@ FlakJackWeapon: #Chaff
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
-		Spread: 2133 # 50
+		Spread: 800 # 50 * (1024 / 64)
 		Damage: 8
 	Warhead@3Eff: CreateEffect
 		Explosions: eochfex0
@@ -224,7 +224,7 @@ LaserRifle:
 		Shadow: False
 		ValidTargets: Air, Ground
 	Warhead@1Dam: SpreadDamage
-		Spread: 341 # 8
+		Spread: 128 # 8 * (1024 / 64)
 		Damage: 11
 	Warhead@3Eff: CreateEffect
 		Explosions: eolasex0
@@ -240,7 +240,7 @@ MercWeapon:
 		Image: eorgnpr5.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 341 # 8
+		Spread: 128 # 8 * (1024 / 64)
 		Damage: 11
 	Warhead@3Eff: CreateEffect
 		Explosions: eorgnex2
@@ -256,7 +256,7 @@ SpiderBikeWeapon:
 		Image: eorgnpr3.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 341 # 8 (english.txt value) * (1024 / 24)
+		Spread: 128 # 8 * (1024 / 64)
 		Damage: 10
 	Warhead@3Eff: CreateEffect
 		Explosions: eorgnex1
@@ -272,7 +272,7 @@ TripleRailTankWeapon: #TripleRailGun
 		Image: eorgnpr2.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 853 # 20 (english.txt value) * (1024 / 24)
+		Spread: 320 # 20 * (1024 / 64)
 		Damage: 24
 	Warhead@3Eff: CreateEffect
 		Explosions: eorgnex0
@@ -289,7 +289,7 @@ SkirmishTankWeapon:
 		Image: eomispr4.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 426 # 10 (english.txt value) * (1024 / 24)
+		Spread: 160 # 10 * (1024 / 64)
 		Damage: 14
 	Warhead@3Eff: CreateEffect
 		Explosions: eoblatr0,eoblatr1
@@ -308,7 +308,7 @@ SniperRifle:
 		Image: eorgnpr1.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 341 # 8 (english.txt value) * (1024 / 24)
+		Spread: 128 # 8 * (1024 / 64)
 		Damage: 150
 	Warhead@3Eff: CreateEffect
 		Explosions: eorgnex1
@@ -324,7 +324,7 @@ PlasmaTankWeapon:
 		Image: eoplspr1.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 341 # 8 (english.txt value) * (1024 / 24)
+		Spread: 128 # 8 * (1024 / 64)
 		Damage: 19
 	Warhead@3Eff: CreateEffect
 		Explosions: eoplsex2
@@ -342,7 +342,7 @@ PlasmaRifle: # Bion
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, Ground
-		Spread: 341 # 8 (english.txt value) * (1024 / 24)
+		Spread: 128 # 8 * (1024 / 64)
 		Damage: 18
 	Warhead@3Eff: CreateEffect
 		Explosions: eoplsex0
@@ -358,7 +358,7 @@ TachionTankWeapon:
 		Image: eotacpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 853 # 20
+		Spread: 320 # 20 * (1024 / 64)
 		Damage: 30
 	Warhead@3Eff: CreateEffect
 		Explosions: eotacex0
@@ -374,7 +374,7 @@ SkyFortressWeapon: #FortressCannon
 		Image: eoskypr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 1536 # 36 (english.txt value) * (1024 / 24)
+		Spread: 576 # 36 * (1024 / 64)
 		Damage: 650
 	Warhead@3Eff: CreateEffect
 		Explosions: eoplsex4 # eoplsex0, eoplsex2
@@ -399,7 +399,7 @@ CycloneWeapon: # CycloneCannon
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, Ground
-		Spread: 426 # 10 (english.txt value) * (1024 / 24)
+		Spread: 160 # 10 * (1024 / 64)
 		Damage: 24
 	Warhead@3Eff: CreateEffect
 		Explosions: eoncnex0
@@ -407,10 +407,10 @@ CycloneWeapon: # CycloneCannon
 
 MartyrWeapon: # SuicideNuke
 	Inherits: ^E3
-	Range: 2c0
+	Range: 3c0
 	ValidTargets: Ground, Trees, Water, Underwater, Air
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 4266 # 100 (english.txt value) * (1024 / 24)
+		Spread: 1600 # 100 * (1024 / 64)
 		Damage: 180
 		ValidTargets: Ground, Trees, Water, Air
 		AffectsParent: true
@@ -429,7 +429,7 @@ PhaseTankWeapon: #PhaseTankCannon
 		Image: eolaspr4.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 426 # 10 (english.txt value) * (1024 / 24)
+		Spread: 160 # 10 * (1024 / 64)
 		Damage: 30
 	Warhead@3Eff: CreateEffect
 		Explosions: eolasex0
@@ -445,7 +445,7 @@ ScoutRunnerWeapon: # LaserCannon
 		Image: eolaspr3.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 426 # 10 (english.txt value) * (1024 / 24)
+		Spread: 160 # 10 * (1024 / 64)
 		Damage: 10
 	Warhead@3Eff: CreateEffect
 		Explosions: eolasex1
@@ -463,7 +463,7 @@ MADWeapon: # GroundToAirLaser
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
-		Spread: 341 # 8 (english.txt value) * (1024 / 24)
+		Spread: 128 # 8 * (1024 / 64)
 		Damage: 48
 	Warhead@3Eff: CreateEffect
 		Explosions: eoblatr0
@@ -482,7 +482,7 @@ SkyBikeWeapon:
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, Ground
-		Spread: 426 # 10 (english.txt value) * (1024 / 24)
+		Spread: 160 # 10 * (1024 / 64)
 		Damage: 10
 	Warhead@3Eff: CreateEffect
 		Explosions: eosmosm2
@@ -498,7 +498,7 @@ ExterminatorWeapon: #PolyAcid
 		Image: eorfgpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 1024 # 24 (english.txt value) * (1024 / 24)
+		Spread: 384 # 24 * (1024 / 64)
 		Damage: 15
 	Warhead@3Eff: CreateEffect
 		Explosions: eorfgex0
@@ -514,7 +514,7 @@ TankHunterWeapon: #TankHunterGun
 		Image: eothnpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 341 # 8 (english.txt value) * (1024 / 24)
+		Spread: 128 # 8 * (1024 / 64)
 		Damage: 60
 	Warhead@3Eff: CreateEffect
 		Explosions: eothnex0
@@ -531,7 +531,7 @@ OutriderWeapon: #OutriderMissile
 		Image: eomispr1.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 1706 # 40 (english.txt value) * (1024 / 24)
+		Spread: 640 # 40 * (1024 / 64)
 		Damage: 20
 	Warhead@3Eff: CreateEffect
 		Explosions: eooutex0
@@ -548,7 +548,7 @@ HellstormArtilleryWeapon: #ArtilleryShell
 		Image: eofarpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 4266 # 100 (english.txt value) * (1024 / 24)
+		Spread: 1600 # 100 * (1024 / 64)
 		Damage: 30
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: gxex1oc0.wav
@@ -565,7 +565,7 @@ ScarabWeapon: # IMPArtilleryShell
 		Image: eoiarpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 4266 # 100 (english.txt value) * (1024 / 24)
+		Spread: 1600 # 100 * (1024 / 64)
 		Damage: 30
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: gxex1oc0.wav
@@ -582,7 +582,7 @@ AmperWeapon: #AmperAmp
 		Image: eolaspr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 298 # 7 * (1024 / 24) (actually doesn't have any spread)
+		Spread: 112 # 7 * (1024 / 64)
 		Damage: 100
 	Warhead@3Eff: CreateEffect
 		Explosions: eopamex0

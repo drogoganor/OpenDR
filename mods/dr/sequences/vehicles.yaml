@@ -741,28 +741,22 @@ uifurst0.spr:
 	idle:
 		Start: 0
 		Facings: 8
-		Length: 10
-		Tick: 100
 	stand:
 		Start: 0
 		Facings: 8
-		Length: 10
-		Tick: 100
 	run:
 		Start: 0
 		Facings: 8
 		Length: 10
-		Tick: 100
+		Tick: 40
 	shoot:
 		Start: 0
 		Facings: 8
-		Length: 10
-		Tick: 100
 	turret: uifurac1.spr
 		Start: 0
 		Facings: 16
-		Length: 4
-		Tick: 100
+		#Length: 4
+		#Tick: 20
 	icon: uifurmn0.spr
 
 # Hades Bomber

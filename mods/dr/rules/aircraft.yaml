@@ -207,7 +207,7 @@ Avenger:
 		BuildPaletteOrder: 160
 		BuildDuration: 45
 	Voiced:
-		VoiceSet: AirUnitVoice
+		VoiceSet: AvengerVoice
 	Valued:
 		Cost: 1500
 	Health:
@@ -235,7 +235,7 @@ HadesBomber:
 		BuildPaletteOrder: 160
 		BuildDuration: 45
 	Voiced:
-		VoiceSet: CycloneVoice
+		VoiceSet: HadesBomberVoice
 	Valued:
 		Cost: 1500
 	Health:

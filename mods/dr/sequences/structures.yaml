@@ -22,7 +22,7 @@ ncpow1l0.spr:
 		Start: 1
 		Tick: 800
 	idle-top: barren|ncpow1l0.spr
-		ZOffset: -1023
+		ZOffset: -8192
 		Start: 1
 	idle-top2: tcpow1l0.spr
 		Start: 1
@@ -49,7 +49,7 @@ nclnc1l0.spr:
 		Start: 1
 		Tick: 800
 	idle-top: barren|nclnc1l0.spr
-		ZOffset: -1023
+		ZOffset: -8192
 		Start: 1
 	idle-top2: tclnc1l0.spr
 		Start: 1
@@ -76,7 +76,7 @@ nfhqt1l0.spr:
 		Start: 1
 		Tick: 800
 	idle-top: barren|nfhqt1l0.spr
-		ZOffset: -1023
+		ZOffset: -8192
 		Start: 1
 	idle-top2: tfhqt1l0.spr
 		Start: 1
@@ -123,7 +123,7 @@ nfutf1l0.spr:
 		Start: 1
 		Tick: 800
 	idle-top: barren|nfutf1l0.spr
-		ZOffset: -1023
+		ZOffset: -8192
 		Start: 1
 	idle-top2: tfutf1l0.spr
 		Start: 1
@@ -156,7 +156,7 @@ nfvcy1l0.spr:
 		Start: 1
 		Tick: 800
 	idle-top: barren|nfvcy1l0.spr
-		ZOffset: -1023
+		ZOffset: -8192
 		Start: 1
 	idle-top2: tfvcy1l0.spr
 		Start: 1
@@ -190,7 +190,7 @@ nihqt1l0.spr:
 		Start: 1
 		Tick: 800
 	idle-top: barren|nihqt1l0.spr
-		ZOffset: -1023
+		ZOffset: -8192
 		Start: 1
 	idle-top2: tihqt1l0.spr
 		Start: 1
@@ -229,7 +229,7 @@ niutf1l0.spr:
 		Start: 0
 		Tick: 800
 	idle-top: barren|niutf1l0.spr
-		ZOffset: -1023
+		ZOffset: -8192
 		Start: 1
 	idle-top2: niutf1l0.spr
 		Start: 1
@@ -266,7 +266,7 @@ nivcy1l0.spr:
 		Start: 0
 		Tick: 800
 	idle-top: barren|nivcy1l0.spr
-		ZOffset: -1023
+		ZOffset: -8192
 		Start: 1
 	idle-top2: nivcy1l0.spr
 		Start: 1
@@ -309,7 +309,7 @@ nfgdt1l0.spr:
 		Start: 1
 		Tick: 800
 	idle-top: barren|nfgdt1l0.spr
-		ZOffset: -1023
+		ZOffset: -8192
 		Start: 1
 	idle-top2: tfgdt1l0.spr
 		Start: 1
@@ -342,7 +342,7 @@ nigdt1l0.spr:
 		Start: 1
 		Tick: 800
 	idle-top: barren|nigdt1l0.spr
-		ZOffset: -1023
+		ZOffset: -8192
 		Start: 1
 	idle-top2: tigdt1l0.spr
 		Start: 1
@@ -375,7 +375,7 @@ nfaar1l0.spr:
 		Start: 1
 		Tick: 800
 	idle-top: barren|nfaar1l0.spr
-		ZOffset: -1023
+		ZOffset: -8192
 		Start: 1
 	idle-top2: tfaar1l0.spr
 		Start: 1
@@ -408,7 +408,7 @@ niaar1l0.spr:
 		Start: 1
 		Tick: 800
 	idle-top: barren|niaar1l0.spr
-		ZOffset: -1023
+		ZOffset: -8192
 		Start: 1
 	idle-top2: tiaar1l0.spr
 		Start: 1

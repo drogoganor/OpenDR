@@ -118,7 +118,7 @@ ConstructionRig:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 60
+		Speed: 80 # should be 60 but 80 for development purposes
 	Armor:
 		Type: Tank
 	MustBeDestroyed:

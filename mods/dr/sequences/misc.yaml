@@ -74,6 +74,24 @@ moveflsh:
 	idle: mpspawn.shp
 		Length: *
 
+beacon:
+	Defaults:
+		ZOffset: 2535
+	arrow: mpspawn.shp
+		Length: *
+	circles: mpspawn.shp
+		Length: *
+	atomicon: mpspawn.shp
+		Length: *
+	pbmbicon: mpspawn.shp
+		Length: *
+	camicon: mpspawn.shp
+		Length: *
+	pinficon: mpspawn.shp
+		Length: *
+	clock: mpspawn.shp
+		Length: *
+
 explosion:
 	Defaults:
 		Length: *

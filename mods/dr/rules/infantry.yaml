@@ -479,6 +479,17 @@ Gant:
 		Speed: 120
 	Armor:
 		Type: Infantry
+	Turreted:
+		TurnSpeed: 5
+	Armament:
+		Weapon: PlasmaTankWeapon
+		Recoil: 128
+		RecoilRecovery: 38
+		LocalOffset: 720,0,80
+		MuzzleSequence: muzzle
+	-AttackFrontal:
+	AttackTurreted:
+	WithSpriteTurret:
 
 Ranger:
 	Inherits: ^DrSoldier
@@ -492,7 +503,7 @@ Ranger:
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
 	Voiced:
-		VoiceSet: ScoutVoice
+		VoiceSet: RangerVoice
 	Valued:
 		Cost: 1000
 	Health:
@@ -516,7 +527,7 @@ PowerStriker:
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
 	Voiced:
-		VoiceSet: ScoutVoice
+		VoiceSet: PowerStrikerVoice
 	Valued:
 		Cost: 1000
 	Health:
@@ -540,7 +551,7 @@ Grendel:
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
 	Voiced:
-		VoiceSet: ScoutVoice
+		VoiceSet: GrendelVoice
 	Valued:
 		Cost: 1000
 	Health:
@@ -557,14 +568,14 @@ GrendelRider:
 	RenderSprites:
 		Image: ufridst0.spr
 	Tooltip:
-		Name: Grendel
+		Name: Grendel Rider
 	Buildable:
 		Description: The Grendel Rider can....
 		BuildPaletteOrder: 80
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
 	Voiced:
-		VoiceSet: ScoutVoice
+		VoiceSet: GrendelRiderVoice
 	Valued:
 		Cost: 1000
 	Health:

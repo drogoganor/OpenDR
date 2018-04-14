@@ -219,11 +219,41 @@ TerraformerVoice:
 
 # Xenite
 
+RangerVoice:
+	Inherits: GenericHumanFemaleVoice
+	Voices:
+		Select: gvranrl3, gvransl2, gvransl3, gvransl4
+		Action: gvranrl1, gvranrl2, gvranrl5, gvranrl6
+
 GantVoice:
 	Inherits: ImperiumVoice
 	Voices:
 		Select: gxgansc1,gxgansc2,gxgansc4
 		Action: gxganrc1,gxganrc2,gxganac0
+
+GrendelVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gxgresc1, gxgresc2, gxgresc3
+		Action: gxgrerc1, gxgrerc2, gxgrerc3
+
+GrendelRiderVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvgrrsl1, gvgrrsl2, gvgrrsl3, gvgrrsl4
+		Action: gvgrrrl1, gvgrrrl2, gvgrrrl3, gvgrrrl4
+
+PowerStrikerVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvcirrl1, gvcirsl1, gvcirrl4, gvcirrl1
+		Action: gvcirrl2, gvcirsl2, gvcirrl3, gvcirrl5
+
+AvengerVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvaverl1, gvavesl3, gvavesl4, gvaverl5
+		Action: gvavesl1, gvavesl2, gvaverl3, gvavesl5
 
 
 # Shadowhand
@@ -245,10 +275,16 @@ FuryVoice:
 	Inherits: ImperiumVoice
 	Voices:
 		Select: gxfursc0,gxfursc1,gxfursc2
-		Action: gxfurrc0,gxfurrc1,gxfurrc2
+		Action: gxfurrc0 #,gxfurrc1,gxfurrc2
 
 EMPVoice:
 	Inherits: ImperiumVoice
 	Voices:
 		Select: gxempsc0,gxempsc1,gxempsc2
 		Action: gxemprc0,gxemprc1,gxemprc2,gxempac0
+
+HadesBomberVoice:
+	Inherits: ImperiumVoice
+	Voices:
+		Select: gvhadsl1, gvhadsl2, gvhadrl3, gvhadsl4
+		Action: gvhadrl1, gvhadrl6, gvhadsl3, gvhadrl8
