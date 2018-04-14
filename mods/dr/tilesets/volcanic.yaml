@@ -81,13 +81,13 @@ Terrain:
 		TargetTypes: Ground
 		Color: 73321C
 		RestrictPlayerColor: true
-	TerrainType@Ore:
-		Type: Ore
+	TerrainType@SpringWater:
+		Type: SpringWater
 		TargetTypes: Ground
 		Color: 8470FF
 		RestrictPlayerColor: true
-	TerrainType@Gems:
-		Type: Gems
+	TerrainType@Taelon:
+		Type: Taelon
 		TargetTypes: Ground
 		Color: 948060
 		RestrictPlayerColor: true

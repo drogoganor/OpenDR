@@ -42,8 +42,8 @@
 			Cliff2: 10
 			Cliff3: 10
 			Cliff4: 10
-			Ore: 100
-			Gems: 100
+			SpringWater: 100
+			Taelon: 100
 		TurnSpeed: 5
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
@@ -185,7 +185,7 @@ Freighter:
 	WithFacingSpriteBody:
 	Harvester:
 		Capacity: 100
-		Resources: Ore,Gems
+		Resources: SpringWater,Taelon
 		BaleUnloadDelay: 1
 		SearchFromProcRadius: 30
 		SearchFromOrderRadius: 11
@@ -219,7 +219,7 @@ HoverFreighter:
 	WithFacingSpriteBody:
 	Harvester:
 		Capacity: 100
-		Resources: Ore,Gems
+		Resources: SpringWater,Taelon
 		BaleUnloadDelay: 1
 		SearchFromProcRadius: 30
 		SearchFromOrderRadius: 11
@@ -284,7 +284,7 @@ RATmk2:
 	Voiced:
 		VoiceSet: FreedomGuardVoice
 	Buildable:
-		Description: The Freedom Guard troop transport has the ability\nto camouflage itself to match the surrounding terrain.\nThe R.A.T. is unarmed, but is able to carry up to\nfive infantry units at a time and can move over water,\nalthough at a considerably reduced speed.
+		Description: A RAT that has a laser like the Invader Troop Transport.\nNot much to say about it other than it's strictly\nbetter than the original, and obviously replaces\nthe original.
 		Prerequisites: ~vehicles.xenite
 		BuildPaletteOrder: 90
 		BuildDuration: 14
@@ -582,7 +582,7 @@ ITT:
 	Tooltip:
 		Name: Invader Troop Transport
 	Buildable:
-		Description: General-purpose infantry.
+		Description: Armed with a laser rifle, the Troop Transport can\ncarry up to five infantry units at a time.
 		Prerequisites: ~vehicles.cyborg, hq
 		BuildPaletteOrder: 130
 		BuildDuration: 18
@@ -608,7 +608,7 @@ PlasmaTank:
 	Tooltip:
 		Name: Plasma Tank
 	Buildable:
-		Description: General-purpose infantry.
+		Description: Backbone of the Imperium war effort, the Plasma Tank\nis tough and packs a formidable plasma cannon. The\nImperium overruns the enemy with endless waves of\nthese ruinous machines. 
 		Prerequisites: ~vehicles.imperium, hq
 		BuildPaletteOrder: 130
 		BuildDuration: 21
@@ -643,7 +643,7 @@ Amper:
 	Tooltip:
 		Name: Amper
 	Buildable:
-		Description: General-purpose infantry.
+		Description: The Imperium's version of first aid, this lunatic\ncyborg fires darts into dying infantry units that\nboost the target’s health to full, but leave the\nunit poisoned so that its health will steadily\ndecrease until the unit dies. The Amper can also be\nused as an offensive weapon, bringing slow death\nto enemy infantry. 
 		Prerequisites: ~vehicles.imperium, hq, barracks, hospital
 		BuildPaletteOrder: 140
 		BuildDuration: 15
@@ -670,7 +670,7 @@ MAD:
 	Tooltip:
 		Name: Mobile Air Defense
 	Buildable:
-		Description: General-purpose infantry.
+		Description: The M.A.D. fires bladed orbs at enemy air units.\nLike the Freedom Guard Flak Jack, it cannot fire\nat ground units and should be defended against land\nattack.
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1
 		BuildPaletteOrder: 140
 		BuildDuration: 24
@@ -696,7 +696,7 @@ Shredder:
 	Tooltip:
 		Name: Shredder
 	Buildable:
-		Description: General-purpose infantry.
+		Description: A huge, hovering nightmare, the Shredder tears through\ninfantry like a runaway saw. Although it has no ranged\nattack, it is fast, heavily armoured, and inflicts\nsevere damage on any infantry units foolish enough\nto get near it. 
 		Prerequisites: ~vehicles.imperium, hq
 		BuildPaletteOrder: 150
 		BuildDuration: 21
@@ -720,7 +720,7 @@ HostageTaker:
 	Tooltip:
 		Name: Hostage Taker
 	Buildable:
-		Description: General-purpose infantry.
+		Description: This diabolical Imperium vehicle snatches infantry\nunits, lobotomises them and converts them into Suicide\nZombies. Shortly after the infantry unit is run over\nand captured, it is released, now under the player’s\ncontrol and with a high-powered explosive strapped\nto its back. 
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
 		BuildDuration: 18
@@ -744,7 +744,7 @@ TachionTank:
 	Tooltip:
 		Name: Tachion Tank
 	Buildable:
-		Description: General-purpose infantry.
+		Description: The Tachion Tank is the largest, most heavily armed\nbeast on the battlefield. It’s a ponderous mountain\nof havoc that has the last word in any argument.\nWhen the enemy does manage to overpower one of these\njuggernaughts, it has the ability to self-destruct\nand take any nearby units down with it.
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
 		BuildDuration: 45
@@ -770,7 +770,7 @@ Scarab:
 	Tooltip:
 		Name: S.C.A.R.A.B.
 	Buildable:
-		Description: General-purpose infantry.
+		Description: This long range weapon fires a fragmenting projectile\nthat breaks into numerous burning particles over its\ntarget. This vehicle is slow and lightly armoured,\nbut it can enclose itself in a retractable armoured\nexoskeleton when it gets in trouble. The unit cannot\nfire while this armour is engaged, but can weather\na considerable beating while waiting for reinforcements.
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
 		BuildDuration: 39
@@ -796,7 +796,7 @@ GeminiTank:
 	Tooltip:
 		Name: Gemini Tank
 	Buildable:
-		Description: General-purpose infantry.
+		Description: Fairly straightforward hovering tank. What makes the\nGemini unique is the ability to morph into a fast\nmode where you deal less damage, have your health\nhalved, and move twice as fast. Replaces the Plasma\nTank.
 		Prerequisites: ~vehicles.shadowhand, hq, barracks
 		BuildPaletteOrder: 150
 		BuildDuration: 39
@@ -831,7 +831,7 @@ Shadowblade:
 	Tooltip:
 		Name: Shadowblade
 	Buildable:
-		Description: General-purpose infantry.
+		Description: A Shredder with slightly more health.
 		Prerequisites: ~vehicles.shadowhand, hq
 		BuildPaletteOrder: 150
 		BuildDuration: 21
@@ -855,7 +855,7 @@ Fury:
 	Tooltip:
 		Name: Fury
 	Buildable:
-		Description: General-purpose infantry.
+		Description: Now this is a heavy hitter. At long ranges it uses\nits paired guns to do heavy damage on par with the\nTachyon tank. Anything that closes to point blank\nwill come under fire from its rapid fire Tachyon\nlaser. Plus, it's a walker. Replaces the Tachyon\nTank.
 		Prerequisites: ~vehicles.shadowhand, hq, barracks
 		BuildPaletteOrder: 150
 		BuildDuration: 39
@@ -890,7 +890,7 @@ EMPDevice:
 	Tooltip:
 		Name: EMP Device
 	Buildable:
-		Description: General-purpose infantry.
+		Description: When detonated, shuts down either structures or\nmechanical units within the blast area.
 		Prerequisites: ~vehicles.shadowhand, hq, barracks
 		BuildPaletteOrder: 150
 		BuildDuration: 39
@@ -916,7 +916,7 @@ RoadTerraformer:
 	Tooltip:
 		Name: Road Terraformer
 	Buildable:
-		Description: General-purpose infantry.
+		Description: When detonated, transforms the terrain within the\nblast radius to Road.
 		Prerequisites: ~vehicles, hq, barracks
 		BuildPaletteOrder: 150
 		BuildDuration: 39
@@ -942,7 +942,7 @@ MarshTerraformer:
 	Tooltip:
 		Name: Marsh Terraformer
 	Buildable:
-		Description: General-purpose infantry.
+		Description: When detonated, transforms the terrain within the\nblast radius to Marsh.
 		Prerequisites: ~vehicles, hq, barracks
 		BuildPaletteOrder: 150
 		BuildDuration: 39

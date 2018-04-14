@@ -29,7 +29,7 @@ Players:
 		Playable: True
 		Required: True
 		LockFaction: True
-		Faction: fguard
+		Faction: togran
 		LockColor: True
 		Color: F5D378
 		LockSpawn: True
@@ -274,7 +274,7 @@ Actors:
 		Owner: Freedom Guard
 		Location: 46,60
 		Facing: 92
-	Actor72: powerstriker
+	Actor72: powerspiker
 		Owner: Freedom Guard
 		Location: 46,56
 		Facing: 92
@@ -301,6 +301,10 @@ Actors:
 	Actor78: shadowblade
 		Owner: Freedom Guard
 		Location: 43,41
+		Facing: 92
+	Actor79: constructionrig
+		Owner: Freedom Guard
+		Location: 38,59
 		Facing: 92
 
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, dr|rules/campaign-palettes.yaml, rules.yaml

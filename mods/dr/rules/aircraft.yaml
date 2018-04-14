@@ -120,7 +120,7 @@ ReconDrone:
 	Tooltip:
 		Name: Recon Drone
 	Buildable:
-		Description: General-purpose infantry.
+		Description: This small unmanned drone is lightly armoured and\nhas no offensive capability. It is used solely to\nscout enemy targets.
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1
 		BuildPaletteOrder: 150
 		BuildDuration: 12
@@ -146,7 +146,7 @@ Cyclone:
 	Tooltip:
 		Name: Cyclone
 	Buildable:
-		Description: General-purpose infantry.
+		Description: The Cyclone embodies the core of the Imperium aerial\nforce. The unit is fairly rugged and can engage both\nair and ground units. However, the Cyclone’s neutron\ncannon has a limited energy source and must recharge\nat the Re-Arming Deck. 
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
 		BuildDuration: 45
@@ -174,7 +174,7 @@ SkyFortress:
 	Tooltip:
 		Name: Sky Fortress
 	Buildable:
-		Description: General-purpose infantry.
+		Description: Death from above. This floating platform of wreckage\nhouses the largest plasma cannon known to humanity.\nIt's slow to recharge but makes a lasting impact.
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
 		BuildDuration: 75
@@ -202,7 +202,7 @@ Avenger:
 	Tooltip:
 		Name: Hades Bomber
 	Buildable:
-		Description: General-purpose infantry.
+		Description: The Avenger is the heavy air unit designed for base\nbusting. It can only fire a single shot before having\nto reload but it has a fairly long range and does\na lot of damage.
 		Prerequisites: ~vehicles.xenite, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
 		BuildDuration: 45
@@ -230,7 +230,7 @@ HadesBomber:
 	Tooltip:
 		Name: Hades Bomber
 	Buildable:
-		Description: General-purpose infantry.
+		Description: This heavy bomber moves slower than the Cyclone but\nhas a powerful payload of missiles with a large area\nof effect and a high amount of damage. Replaces the\nSky Fortress.
 		Prerequisites: ~vehicles.shadowhand, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
 		BuildDuration: 45

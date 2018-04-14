@@ -24,14 +24,15 @@
 			Rough2: 60
 			Road: 100
 			RoadBase: 100
-			HillSlope1: 70
-			HillSlope2: 70
-			Cliff1: 80
-			Cliff2: 80
-			Cliff3: 80
-			Cliff4: 80
-			Ore: 100
-			Gems: 100
+			HillSlope1: 30
+			HillSlope2: 30
+			Cliff1: 20
+			Cliff2: 20
+			Cliff3: 20
+			Cliff4: 20
+			SpringWater: 100
+			Taelon: 100
+		TurnSpeed: 50
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -93,7 +94,7 @@
 		BuildAtProductionType: Soldier
 		BuildPaletteOrder: 10
 		Prerequisites: ~barracks, ~techlevel.infonly
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: Generic Soldier
 		BuildDurationModifier: 2486 # DR build rate
 	Valued:
 		Cost: 100
@@ -463,7 +464,7 @@ Gant:
 	Tooltip:
 		Name: Gant
 	Buildable:
-		Description: The Gant can....
+		Description: Your basic Xenite. Has a melee attack and can self\nheal. Replaces Mercenaries.
 		BuildPaletteOrder: 50
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
@@ -498,7 +499,7 @@ Ranger:
 	Tooltip:
 		Name: Ranger
 	Buildable:
-		Description: The Ranger can....
+		Description: Your basic controller unit. Has no attack. Replaces Martyrs.
 		BuildPaletteOrder: 60
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
@@ -515,19 +516,19 @@ Ranger:
 	Armor:
 		Type: Infantry
 
-PowerStriker:
+PowerSpiker:
 	Inherits: ^DrSoldier
 	RenderSprites:
 		Image: unpwcst0.spr
 	Tooltip:
-		Name: Power Striker
+		Name: Power Spiker
 	Buildable:
-		Description: The Power Striker can....
+		Description: This unit can fully shut down enemy powered buildings\nif you can get him next to an enemy power plant.
 		BuildPaletteOrder: 60
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
 	Voiced:
-		VoiceSet: PowerStrikerVoice
+		VoiceSet: PowerSpikerVoice
 	Valued:
 		Cost: 1000
 	Health:
@@ -546,7 +547,7 @@ Grendel:
 	Tooltip:
 		Name: Grendel
 	Buildable:
-		Description: The Grendel can....
+		Description: The Grendel has a ranged attack that's effective\nagainst basically everything and can outrange basic\nturrets. Only downside is that it can go feral on\nyou if it goes outside the range of a controller.\nReplaces Tank Hunters.
 		BuildPaletteOrder: 70
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
@@ -570,7 +571,7 @@ GrendelRider:
 	Tooltip:
 		Name: Grendel Rider
 	Buildable:
-		Description: The Grendel Rider can....
+		Description: Essentially a Grendel with a Ranger on top. Is a\ncontroller, so if you want the easiest to use force\npossible just make a force of these rather than a\nmixed force of Grendels and Riders. Replaces Triple\nRail Hovertanks.
 		BuildPaletteOrder: 80
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
@@ -596,7 +597,7 @@ Reaper:
 	Tooltip:
 		Name: Reaper
 	Buildable:
-		Description: The Reaper can....
+		Description: Your new heavy infantry, these guys lay a massive\nhurting on pretty much everything. They do bonus\ndamage to Xenites, basically making your Bions only\nworthwhile when you want some incidental air defense.\nReplaces Guardians.
 		BuildPaletteOrder: 20
 		BuildDuration: 30
 		Prerequisites: ~hq.shadowhand, ~barracks

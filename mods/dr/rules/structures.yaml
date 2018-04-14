@@ -445,7 +445,7 @@ Power:
 	Buildable:
 		Prerequisites: ~techlevel.infonly
 		Queue: Building
-		Description: Provides power for other structures.
+		Description: Provides power for other structures. Refines Taelon into credits.
 		BuildPaletteOrder: 20
 		BuildDuration: 30
 	Building:
@@ -497,7 +497,7 @@ WaterLaunchPad:
 		Queue: Building
 		BuildPaletteOrder: 10
 		Prerequisites: ~techlevel.infonly
-		Description: Refines Ore and Gems\ninto credits.
+		Description: Refines spring water into credits.
 		BuildDuration: 37
 	Building:
 		Footprint: _Xxx= xxxX= ====_

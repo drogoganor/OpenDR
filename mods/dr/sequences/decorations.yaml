@@ -3,7 +3,16 @@ aotre000.spr:
 	Defaults:
 		AddExtension: False
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aotre000.spr:
+				Start: 0
+				Length: 1
+			aotre0sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 13, 12
 
 aotre001.spr:
 	Defaults:

@@ -8,7 +8,7 @@ ucfcnst0.spr:
 		Start: 0
 		Facings: 8
 		Length: 6
-		Tick: 100
+		Tick: 60
 	stand:
 		Start: 48
 		Facings: 8

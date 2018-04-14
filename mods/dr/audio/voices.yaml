@@ -243,7 +243,7 @@ GrendelRiderVoice:
 		Select: gvgrrsl1, gvgrrsl2, gvgrrsl3, gvgrrsl4
 		Action: gvgrrrl1, gvgrrrl2, gvgrrrl3, gvgrrrl4
 
-PowerStrikerVoice:
+PowerSpikerVoice:
 	Inherits: ImperiumVoice
 	Voices:
 		Select: gvcirrl1, gvcirsl1, gvcirrl4, gvcirrl1

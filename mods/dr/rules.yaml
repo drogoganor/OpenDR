@@ -54,11 +54,11 @@
 		RandomFactionMembers: fguard, imperium
 		Description: Random Faction\nA random faction will be chosen when the game starts.
 	ResourceType@water:
-		Type: Ore
+		Type: SpringWater
 		Name: Water Spring
 		PipColor: Blue
 		ResourceType: 1
-		TerrainType: Ore
+		TerrainType: SpringWater
 		Palette: player
 		Sequences: water1
 		MaxDensity: 12000
@@ -66,11 +66,11 @@
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true
 	ResourceType@taelon:
-		Type: Ore
+		Type: Taelon
 		Name: Taelon
 		PipColor: Green
 		ResourceType: 2
-		TerrainType: Ore
+		TerrainType: Taelon
 		Palette: player
 		Sequences: taelon1
 		MaxDensity: 12000
