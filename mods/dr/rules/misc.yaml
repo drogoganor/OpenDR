@@ -29,6 +29,8 @@ waypoint:
 
 freighter.colorpicker:
 	Inherits: Freighter
+	-Buildable:
+	-EditorTilesetFilter:
 	RenderSprites:
 		Image: ucfrgst0.spr
 		Palette: colorpicker

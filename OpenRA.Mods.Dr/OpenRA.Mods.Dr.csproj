@@ -40,6 +40,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileFormats\ScnFile.cs" />
     <Compile Include="FileSystem\Ftg.cs" />
     <Compile Include="Graphics\HackySpriteSequence.cs" />
     <Compile Include="SpriteLoaders\DrTilLoader.cs" />

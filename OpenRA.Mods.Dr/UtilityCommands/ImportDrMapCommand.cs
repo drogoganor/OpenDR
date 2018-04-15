@@ -21,6 +21,7 @@ using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.FileFormats;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.UtilityCommands;
+using OpenRA.Mods.Dr.FileFormats;
 using OpenRA.Primitives;
 
 namespace OpenRA.Mods.Dr.UtilityCommands
@@ -69,33 +70,22 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				var tilesetNum = stream.ReadInt32();
 
 				var tilesetName = "BARREN";
-				switch (tilesetNum)
+				
+				var scnFilename = filename.Replace(".map", ".scn");
+				using (var scn = File.OpenRead(scnFilename))
 				{
-					case 2:
-						tilesetName = "JUNGLE";
-						break;
-					case 1:
-						tilesetName = "BARREN";
-						break;
-					case 0: // confirmed
-						tilesetName = "SNOW";
-						break;
-					case 3:
-						tilesetName = "ALIEN";
-						break;
-					case 4:
-						tilesetName = "AUST";
-						break;
-					case 5:
-						tilesetName = "AURALIEN";
-						break;
-					case 6:
-						tilesetName = "ASTEROID";
-						break;
-					case 7:
-						tilesetName = "VOLCANIC";
-						break;
+					var scnFile = new ScnFile(scn);
+					foreach (var scnSection in scnFile.Entries)
+					{
+						if (scnSection.Name != "SetDefaultTerrain")
+							continue;
+
+						tilesetName = scnSection.ValuesStr.ToUpperInvariant();
+					}
 				}
+
+
+
 
 				Map = new Map(ModData, ModData.DefaultTileSets[tilesetName], width, height)
 				{
@@ -147,15 +137,173 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						if (tileType >= 16)
 						{
 							unknownTileTypeHash.Add(tileType);
-							tileType = 15; // TODO: Handle edge sprites
+							tileType = 1; // TODO: Handle edge sprites
 						}
 						
 						Map.Tiles[new CPos(x, y)] = new TerrainTile((ushort)tileType, variation); // types[i, j], byte1
 					}
 				}
 
-				MapPlayers = new MapPlayers(Map.Rules, 0);
-				SetMapPlayersDefault(Players, MapPlayers);
+				// What's after the tiles? Water/Taelon?
+
+				int oneFlag = stream.ReadInt32(); // Always one
+				int flag256 = stream.ReadInt32(); // Always 256
+				int length = stream.ReadInt32(); // Byte length of remaining data
+				
+				byte1Hash = new HashSet<byte>();
+				var byteList = new List<byte>();
+				var intList = new List<int>();
+				for (int i = 0; i < length; i++)
+				{
+					//var int1 = stream.ReadInt32();
+					//var int2 = stream.ReadInt32();
+					//intList.Add(int1);
+					//intList.Add(int2);
+
+					var byte1 = stream.ReadUInt8();
+					//var byte2 = stream.ReadUInt8();
+					if (!byte1Hash.Contains(byte1))
+						byte1Hash.Add(byte1);
+
+					//var byte1 = stream.ReadInt32();
+					byteList.Add(byte1);
+					//byteList.Add(byte2);
+				}
+
+
+				using (var scn = File.OpenRead(scnFilename))
+				{
+					var scnFile = new ScnFile(scn);
+
+					MapPlayers = new MapPlayers(Map.Rules, 0);
+					SetMapPlayers(scnFile, Players, MapPlayers);
+					
+					// Place start locations
+					int i = 0;
+					foreach (var scnSection in scnFile.Entries)
+					{
+						if (scnSection.Name != "SetStartLocation")
+							continue;
+
+						int divisor = 24;
+						int x = Convert.ToInt32(scnSection.Values[0]) / divisor;
+						int y = Convert.ToInt32(scnSection.Values[1]) / divisor;
+						if (x != 0 && y != 0)
+						{
+							var ar = new ActorReference("mpspawn")
+							{
+								new LocationInit(new CPos(x, y)),
+								new OwnerInit("Neutral")
+							};
+
+							Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
+						}
+					}
+
+
+					// Parse map thingies
+					foreach (var scnSection in scnFile.Entries)
+					{
+						if (scnSection.Name != "AddThingAt")
+							continue;
+
+						int divisor = 24;
+						int id = Convert.ToInt32(scnSection.Values[0]);
+						string type = scnSection.Values[1];
+						int x = Convert.ToInt32(scnSection.Values[2]) - 1;
+						int y = Convert.ToInt32(scnSection.Values[3]) - 1;
+
+						var matchingActor = string.Empty;
+						switch (type)
+						{
+							case "tree1":
+								matchingActor = "aotre000.spr";
+								break;
+							case "tree2":
+								matchingActor = "aotre001.spr";
+								break;
+							case "tree3":
+								matchingActor = "aotre002.spr";
+								break;
+							case "tree4":
+								matchingActor = "aotre003.spr";
+								break;
+							case "tree5":
+								matchingActor = "aotre004.spr";
+								break;
+							case "tree6":
+								matchingActor = "aotre005.spr";
+								break;
+							case "rock1":
+								matchingActor = "aoroc000.spr";
+								break;
+							case "rock2":
+								matchingActor = "aoroc001.spr";
+								break;
+							case "rock3":
+								matchingActor = "aoroc002.spr";
+								break;
+							case "rock4":
+								matchingActor = "aoroc003.spr";
+								break;
+							case "rock5":
+								matchingActor = "aoroc004.spr";
+								break;
+							case "rock6":
+								matchingActor = "aoroc005.spr";
+								break;
+							case "plnt1":
+								matchingActor = "aopln000.spr";
+								break;
+							case "plnt2":
+								matchingActor = "aopln001.spr";
+								break;
+							case "plnt3":
+								matchingActor = "aopln002.spr";
+								break;
+							default:
+								//matchingActor = "aoclf000.spr";
+								break;
+						}
+						
+						if (x != 0 && y != 0 && !string.IsNullOrEmpty(matchingActor))
+						{
+							var ar = new ActorReference(matchingActor)
+							{
+								new LocationInit(new CPos(x, y)),
+								new OwnerInit("Neutral")
+							};
+
+							Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
+						}
+					}
+
+
+					foreach (var scnSection in scnFile.Entries)
+					{
+						if (scnSection.Name != "AddBuildingAt")
+							continue;
+
+						int id = Convert.ToInt32(scnSection.Values[0]);
+						string type = scnSection.Values[1];
+						int x = Convert.ToInt32(scnSection.Values[2]);
+						int y = Convert.ToInt32(scnSection.Values[3]);
+
+						byte typeId = 1;
+						switch (type)
+						{
+							case "impww":
+								typeId = 1;
+								break;
+							case "impmn":
+								typeId = 2;
+								break;
+						}
+
+						var cell = new CPos(x, y);
+						Map.Resources[cell] = new ResourceTile(typeId, 0);
+					}
+				}
 
 				Map.PlayerDefinitions = MapPlayers.ToMiniYaml();
 			}
@@ -209,6 +357,48 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			else
 				mapPlayers.Players[section] = pr;
 		}
-		
+
+		public static void SetMapPlayers(ScnFile file, List<string> players, MapPlayers mapPlayers)
+		{
+			var section = "Neutral";
+			var pr = new PlayerReference
+			{
+				Name = section,
+				OwnsWorld = true,
+				NonCombatant = true,
+				Faction = "fguard",
+				Color = namedColorMapping["white"]
+			};
+
+			// Overwrite default player definitions if needed
+			if (!mapPlayers.Players.ContainsKey(section))
+				mapPlayers.Players.Add(section, pr);
+			else
+				mapPlayers.Players[section] = pr;
+
+			int i = 0;
+			foreach (var scnSection in file.Entries)
+			{
+				if (scnSection.Name != "SetStartLocation")
+					continue;
+
+				int x = Convert.ToInt32(scnSection.Values[0]);
+				int y = Convert.ToInt32(scnSection.Values[1]);
+				if (x != 0 && y != 0)
+				{
+					var multi = new PlayerReference
+					{
+						Name = "Multi" + i,
+						Playable = true,
+						Faction = "Random",
+						//Enemies = "Creeps"
+					};
+
+					mapPlayers.Players.Add(multi.Name, multi);
+					i++;
+				}
+			}
+		}
+
 	}
 }
