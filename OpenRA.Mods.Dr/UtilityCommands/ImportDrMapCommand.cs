@@ -87,7 +87,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 
 
-				Map = new Map(ModData, ModData.DefaultTileSets[tilesetName], width, height)
+				Map = new Map(ModData, ModData.DefaultTileSets[tilesetName], width + 2, height + 2)
 				{
 					Title = Path.GetFileNameWithoutExtension(filename),
 					Author = "Dark Reign",
@@ -95,7 +95,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 				Map.RequiresMod = ModData.Manifest.Id;
 
-				SetBounds(Map, width, height);
+				SetBounds(Map, width + 2, height + 2);
 				
 				var byte1Hash = new HashSet<byte>();
 				var byte2Hash = new HashSet<byte>();
@@ -140,7 +140,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							tileType = 1; // TODO: Handle edge sprites
 						}
 						
-						Map.Tiles[new CPos(x, y)] = new TerrainTile((ushort)tileType, variation); // types[i, j], byte1
+						Map.Tiles[new CPos(x + 1, y + 1)] = new TerrainTile((ushort)tileType, variation); // types[i, j], byte1
 					}
 				}
 
@@ -192,7 +192,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						{
 							var ar = new ActorReference("mpspawn")
 							{
-								new LocationInit(new CPos(x, y)),
+								new LocationInit(new CPos(x + 1, y + 1)),
 								new OwnerInit("Neutral")
 							};
 
@@ -210,8 +210,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						int divisor = 24;
 						int id = Convert.ToInt32(scnSection.Values[0]);
 						string type = scnSection.Values[1];
-						int x = Convert.ToInt32(scnSection.Values[2]) - 1;
-						int y = Convert.ToInt32(scnSection.Values[3]) - 1;
+						int x = Convert.ToInt32(scnSection.Values[2]) - 1; // Manual adjustment while our offsets are stuffed
+						int y = Convert.ToInt32(scnSection.Values[3]) - 1; // Manual adjustment while our offsets are stuffed
 
 						var matchingActor = string.Empty;
 						switch (type)
@@ -270,7 +270,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						{
 							var ar = new ActorReference(matchingActor)
 							{
-								new LocationInit(new CPos(x, y)),
+								new LocationInit(new CPos(x + 1, y + 1)),
 								new OwnerInit("Neutral")
 							};
 
@@ -289,7 +289,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						int x = Convert.ToInt32(scnSection.Values[2]);
 						int y = Convert.ToInt32(scnSection.Values[3]);
 
-						byte typeId = 1;
+						byte typeId = 0;
 						switch (type)
 						{
 							case "impww":
@@ -300,7 +300,10 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 								break;
 						}
 
-						var cell = new CPos(x, y);
+						if (typeId == 0)
+							continue;
+
+						var cell = new CPos(x + 1, y + 1);
 						Map.Resources[cell] = new ResourceTile(typeId, 0);
 					}
 				}

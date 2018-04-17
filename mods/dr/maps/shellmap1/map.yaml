@@ -2,15 +2,15 @@ MapFormat: 11
 
 RequiresMod: dr
 
-Title: Shellmap 1
+Title: Shellmap
 
 Author: Dark Reign
 
 Tileset: BARREN
 
-MapSize: 48,30
+MapSize: 94,58
 
-Bounds: 1,1,46,28
+Bounds: 1,1,92,56
 
 Visibility: Lobby, Shellmap
 
@@ -26,91 +26,177 @@ Players:
 		Name: Creeps
 		NonCombatant: True
 		Faction: fguard
-	PlayerReference@Imperium:
-		Name: Imperium
-		Faction: imperium
-		Color: FE1100
-		Allies: Imperium
-		Enemies: FreedomGuard
+		Enemies: Freedom Guard, Imperium, Multi0, Multi1
 	PlayerReference@Freedom Guard:
 		Name: Freedom Guard
 		Faction: fguard
 		Color: 5D98F7
 		Allies: FreedomGuard
 		Enemies: Imperium
+	PlayerReference@Imperium:
+		Name: Imperium
+		Faction: imperium
+		Color: FE1100
+		Allies: Imperium
+		Enemies: FreedomGuard
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
 
 Actors:
-	Actor10: aotre000.spr
+	Actor0: aotre000.spr
 		Owner: Neutral
-		Location: 16,22
-	Actor11: aotre002.spr
+		Location: 44,17
+	Actor1: aotre000.spr
 		Owner: Neutral
-		Location: 12,20
-	Actor12: aotre001.spr
+		Location: 49,20
+	Actor2: aotre000.spr
 		Owner: Neutral
-		Location: 8,23
+		Location: 41,39
+	Actor3: aotre000.spr
+		Owner: Neutral
+		Location: 74,35
+	Actor4: aotre001.spr
+		Owner: Neutral
+		Location: 73,38
+	Actor5: aotre001.spr
+		Owner: Neutral
+		Location: 54,21
+	Actor6: aotre001.spr
+		Owner: Neutral
+		Location: 51,22
+	Actor7: aotre001.spr
+		Owner: Neutral
+		Location: 43,16
+	Actor8: aotre001.spr
+		Owner: Neutral
+		Location: 45,35
+	Actor9: aotre002.spr
+		Owner: Neutral
+		Location: 69,36
+	Actor10: aotre005.spr
+		Owner: Neutral
+		Location: 65,35
+	Actor11: aotre005.spr
+		Owner: Neutral
+		Location: 39,37
+	Actor12: aotre005.spr
+		Owner: Neutral
+		Location: 52,20
+	Actor13: aotre004.spr
+		Owner: Neutral
+		Location: 30,24
 	Actor14: aorub000.spr
 		Owner: Neutral
-		Location: 19,15
+		Location: 33,22
+	Actor15: aoroc000.spr
+		Owner: Neutral
+		Location: 66,20
 	Actor16: aoroc002.spr
 		Owner: Neutral
-		Location: 18,18
+		Location: 34,23
+	Actor17: aoroc003.spr
+		Owner: Neutral
+		Location: 67,19
 	Actor18: aoroc004.spr
 		Owner: Neutral
-		Location: 15,24
-	Actor19: aopln002.spr
+		Location: 69,17
+	Actor19: aorub001.spr
 		Owner: Neutral
-		Location: 34,9
-	Actor20: aopln001.spr
+		Location: 70,19
+	Actor23: aopln001.spr
 		Owner: Neutral
-		Location: 33,8
-	Actor21: aopln000.spr
+		Location: 59,32
+	Actor24: aopln002.spr
 		Owner: Neutral
-		Location: 34,11
-	Actor22: aopln000.spr
+		Location: 58,30
+	Actor25: aoclf002.spr
 		Owner: Neutral
-		Location: 34,7
-	Actor23: aoroc005.spr
+		Location: 35,21
+	Actor26: aoclf005.spr
 		Owner: Neutral
-		Location: 38,18
-	Actor24: aoroc001.spr
+		Location: 62,36
+	Actor27: aoclf001.spr
 		Owner: Neutral
-		Location: 37,16
-	Actor25: aorub002.spr
+		Location: 14,13
+	Actor28: aoclf003.spr
 		Owner: Neutral
-		Location: 36,14
-	Actor26: aorub001.spr
+		Location: 16,9
+	Actor29: aoclf004.spr
 		Owner: Neutral
-		Location: 35,16
-	Actor47: aotre000.spr
+		Location: 12,15
+	Actor30: aoclf005.spr
 		Owner: Neutral
-		Location: 9,7
-	Actor50: aotre001.spr
+		Location: 12,10
+	Actor31: aoroc001.spr
 		Owner: Neutral
-		Location: 10,8
-	Actor51: aotre005.spr
+		Location: 9,13
+	Actor32: aoroc000.spr
 		Owner: Neutral
-		Location: 9,9
-	Actor56: aotre002.spr
+		Location: 10,7
+	Actor33: aoroc005.spr
 		Owner: Neutral
-		Location: 7,10
-	Actor57: aorub002.spr
+		Location: 8,9
+	Actor34: aoroc004.spr
 		Owner: Neutral
-		Location: 18,8
-	Actor58: aopln001.spr
+		Location: 6,12
+	Actor35: aoroc003.spr
 		Owner: Neutral
-		Location: 17,7
-	Actor60: aotre000.spr
+		Location: 3,14
+	Actor36: aoroc001.spr
 		Owner: Neutral
-		Location: 39,20
-	Actor61: aotre003.spr
+		Location: 17,5
+	Actor37: aotre003.spr
 		Owner: Neutral
-		Location: 40,21
-	Actor62: aotre005.spr
+		Location: 13,6
+	Actor38: aotre002.spr
 		Owner: Neutral
-		Location: 39,22
-	Actor63: aotre002.spr
+		Location: 6,15
+	Actor39: aotre000.spr
 		Owner: Neutral
-		Location: 40,23
+		Location: 8,16
+	Actor40: aospc000.spr
+		Owner: Neutral
+		Location: 5,4
+	Actor41: aotre001.spr
+		Owner: Neutral
+		Location: 14,5
+	Actor42: aotre003.spr
+		Owner: Neutral
+		Location: 2,12
+	Actor43: aotre002.spr
+		Owner: Neutral
+		Location: 10,2
+	Actor44: aotre004.spr
+		Owner: Neutral
+		Location: 5,10
+	Actor46: aoroc001.spr
+		Owner: Neutral
+		Location: 66,17
+	Actor45: aoroc002.spr
+		Owner: Neutral
+		Location: 65,16
+	Actor47: aoroc005.spr
+		Owner: Neutral
+		Location: 64,13
+	Actor48: aopln001.spr
+		Owner: Neutral
+		Location: 63,17
+	Actor49: aopln002.spr
+		Owner: Neutral
+		Location: 64,18
+	Actor50: mpspawn
+		Owner: Neutral
+		Location: 12,46
+	Actor51: mpspawn
+		Owner: Neutral
+		Location: 79,10
 
 Rules: rules.yaml
