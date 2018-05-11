@@ -44,7 +44,6 @@ namespace OpenRA.Mods.Dr.FileFormats
 		public void Load(Stream s)
 		{
 			var reader = new StreamReader(s);
-			string lastEntry = null;
 
 			while (!reader.EndOfStream)
 			{

@@ -775,7 +775,10 @@ HeavyRailTurret:
 	DetectCloaked:
 		Range: 6c0
 	WithIdleOverlay@LAYER1:
+		Palette: terrain
 		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 
 # Imperium neutron accelerator
 NeutronAccelerator:
@@ -821,7 +824,10 @@ NeutronAccelerator:
 	DetectCloaked:
 		Range: 6c0
 	WithIdleOverlay@LAYER1:
+		Palette: terrain
 		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 
 # FG anti-air turret
 AntiAirTurret.human:
@@ -942,7 +948,10 @@ Hospital.human:
 	Armor:
 		Type: Building
 	WithIdleOverlay@LAYER1:
+		Palette: terrain
 		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure
 
@@ -976,7 +985,10 @@ Hospital.cyborg:
 	Armor:
 		Type: Building
 	WithIdleOverlay@LAYER1:
+		Palette: terrain
 		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure
 
@@ -1004,13 +1016,17 @@ Repair.human:
 	Armor:
 		Type: Building
 	WithIdleOverlay@LAYER1:
+		Palette: terrain
 		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 
 # Imperium repair pad
 Repair.cyborg:
 	Inherits: ^DrGenericBuilding
 	RenderSprites:
 		Image: nirep1l0.spr
+		Palette: barren
 	Tooltip:
 		Name: Repair Station
 	Buildable:
@@ -1029,8 +1045,8 @@ Repair.cyborg:
 		Amount: -100
 	Armor:
 		Type: Building
-	WithIdleOverlay@LAYER1:
-		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 
 # Phasing facility
 PhasingFacility:
@@ -1056,7 +1072,10 @@ PhasingFacility:
 	Armor:
 		Type: Building
 	WithIdleOverlay@LAYER1:
+		Palette: terrain
 		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 	GrantConditionOnPrerequisite:
 		Prerequisites: upgrade.phasing
 		Condition: stardecoration
@@ -1094,32 +1113,6 @@ RearmingDeck.human:
 	WithIdleOverlay@LAYER1:
 		Sequence: idle-top
 
-# Imperium temporal gate
-TemporalGate:
-	Inherits: ^DrGenericBuilding
-	RenderSprites:
-		Image: nitgt1l0.spr
-	Tooltip:
-		Name: Temporal Gate
-	Buildable:
-		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
-		BuildPaletteOrder: 50
-		BuildDuration: 54
-	ProvidesPrerequisite@temporal:
-		Prerequisite: temporal
-	Valued:
-		Cost: 1800
-	Health:
-		HP: 1000
-	RevealsShroud:
-		Range: 8c0
-	Power:
-		Amount: -200
-	Armor:
-		Type: Building
-	WithIdleOverlay@LAYER1:
-		Sequence: idle-top
-
 # Imperium rearming deck
 RearmingDeck.cyborg:
 	Inherits: ^DrGenericBuilding
@@ -1141,6 +1134,35 @@ RearmingDeck.cyborg:
 		Range: 8c0
 	Power:
 		Amount: -100
+	Armor:
+		Type: Building
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
+
+# Imperium temporal gate
+TemporalGate:
+	Inherits: ^DrGenericBuilding
+	RenderSprites:
+		Image: nitgt1l0.spr
+	Tooltip:
+		Name: Temporal Gate
+	Buildable:
+		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 54
+	ProvidesPrerequisite@temporal:
+		Prerequisite: temporal
+	Valued:
+		Cost: 1800
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -200
 	Armor:
 		Type: Building
 	WithIdleOverlay@LAYER1:

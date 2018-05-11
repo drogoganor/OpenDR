@@ -19,8 +19,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 {
 	public class DrTilLoader : ISpriteLoader
 	{
-		TilHeader header;
-
 		class TilHeader
 		{
 			public string Magic1;

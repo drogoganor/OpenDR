@@ -440,7 +440,10 @@ nfagt1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: tfagt1l0.spr
+	idle-top: barren|nfagt1l0.spr
+		ZOffset: -8192
+		Start: 1
+	idle-top2: tfagt1l0.spr
 		Start: 1
 	icon: bfagtmn0.spr
 	fake-icon: bfagtmn0.spr
@@ -470,7 +473,10 @@ niagt1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: tiagt1l0.spr
+	idle-top: barren|niagt1l0.spr
+		ZOffset: -8192
+		Start: 1
+	idle-top2: tiagt1l0.spr
 		Start: 1
 	icon: biagtmn0.spr
 	fake-icon: biagtmn0.spr
@@ -518,7 +524,10 @@ nfhsp1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: tfhsp1l0.spr
+	idle-top: barren|nfhsp1l0.spr
+		ZOffset: -8192
+		Start: 1
+	idle-top2: tfhsp1l0.spr
 		Start: 1
 	icon: bfhspmn0.spr
 	fake-icon: bfhspmn0.spr
@@ -542,15 +551,16 @@ nihsp1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: tihsp1l0.spr
+	idle-top: barren|nihsp1l0.spr
+		ZOffset: -8192
+		Start: 1
+	idle-top2: tihsp1l0.spr
 		Start: 1
 	icon: bihspmn0.spr
 	fake-icon: bihspmn0.spr
 
 # FG Repair
 nfrep1l0.spr:
-	Defaults:
-		AddExtension: False
 	idle:
 		Start: 1
 	make:
@@ -566,7 +576,10 @@ nfrep1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: tfrep1l0.spr
+	idle-top: barren|nfrep1l0.spr
+		ZOffset: -8192
+		Start: 1
+	idle-top2: tfrep1l0.spr
 		Start: 1
 	icon: bfrepmn0.spr
 	fake-icon: bfrepmn0.spr
@@ -590,7 +603,7 @@ nirep1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: tirep1l0.spr
+	idle-top2: tirep1l0.spr
 		Start: 1
 	icon: birepmn0.spr
 	fake-icon: birepmn0.spr
@@ -614,7 +627,10 @@ nfphf1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: tfphf1l0.spr
+	idle-top: barren|nfphf1l0.spr
+		ZOffset: -8192
+		Start: 1
+	idle-top2: tfphf1l0.spr
 		Start: 1
 	icon: bfphfmn0.spr
 	fake-icon: bfphfmn0.spr
@@ -662,7 +678,10 @@ nirrm1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: tirrm1l0.spr
+	idle-top: barren|nirrm1l0.spr
+		ZOffset: -8192
+		Start: 1
+	idle-top2: tirrm1l0.spr
 		Start: 1
 	icon: birrmmn0.spr
 	fake-icon: birrmmn0.spr

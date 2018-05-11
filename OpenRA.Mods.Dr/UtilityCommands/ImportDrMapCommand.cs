@@ -207,7 +207,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						if (scnSection.Name != "AddThingAt")
 							continue;
 
-						int divisor = 24;
 						int id = Convert.ToInt32(scnSection.Values[0]);
 						string type = scnSection.Values[1];
 						int x = Convert.ToInt32(scnSection.Values[2]) - 1; // Manual adjustment while our offsets are stuffed
