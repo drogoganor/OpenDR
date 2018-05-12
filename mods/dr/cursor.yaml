@@ -123,6 +123,38 @@ Cursors:
 			Start: 0
 			X: -16
 			Y: -12
+		attackmove:
+			Start: 0
+			X: -16
+			Y: -12
+		attackmove-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		attackmove-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		attackmove-blocked-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		assaultmove:
+			Start: 0
+			X: -16
+			Y: -12
+		assaultmove-minimap:
+			Start: 0
+			X: -16
+			Y: -12
+		assaultmove-blocked:
+			Start: 0
+			X: -16
+			Y: -12
+		assaultmove-blocked-minimap:
+			Start: 0
+			X: -16
+			Y: -12
 		harvest:
 			Start: 0
 			X: -16

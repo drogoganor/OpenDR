@@ -1026,7 +1026,6 @@ Repair.cyborg:
 	Inherits: ^DrGenericBuilding
 	RenderSprites:
 		Image: nirep1l0.spr
-		Palette: barren
 	Tooltip:
 		Name: Repair Station
 	Buildable:
