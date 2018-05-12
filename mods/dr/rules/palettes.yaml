@@ -1,7 +1,7 @@
 ^Palettes:
 	PaletteFromDrFile@terrain-barren:
 		Name: terrain
-		Filename: barren/barren.pal
+		Filename: BARREN/BARREN.PAL
 		Tileset: BARREN
 		ShadowIndex: 110
 	PaletteFromDrFile@terrain-aust:
@@ -16,7 +16,7 @@
 		ShadowIndex: 3,4
 	PaletteFromDrFile@terrain-alien:
 		Name: terrain
-		Filename: alien/alien.pal
+		Filename: ALIEN/ALIEN.PAL
 		Tileset: ALIEN
 		ShadowIndex: 3,4
 	PaletteFromDrFile@terrain-auralien:
@@ -26,7 +26,7 @@
 		ShadowIndex: 3,4
 	PaletteFromDrFile@terrain-snow:
 		Name: terrain
-		Filename: snow/snow.pal
+		Filename: SNOW/SNOW.PAL
 		Tileset: SNOW
 		ShadowIndex: 3,4
 	PaletteFromDrFile@terrain-volcanic:
@@ -36,7 +36,7 @@
 		ShadowIndex: 3,4
 	PaletteFromDrFile@terrain-jungle:
 		Name: terrain
-		Filename: jungle/jungle.pal
+		Filename: JUNGLE/JUNGLE.PAL
 		Tileset: JUNGLE
 		ShadowIndex: 3,4
 	PaletteFromGimpOrJascFile@player:
