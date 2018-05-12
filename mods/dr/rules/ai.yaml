@@ -5,7 +5,7 @@ Player:
 		MinimumExcessPower: 60
 		BuildingCommonNames:
 			ConstructionYard: constructionrig
-			HQ: hq.human,hq.cyborg,hq.xenite
+			HQ: hq.human,hq.cyborg
 			Refinery: waterlaunchpad
 			Power: power
 			Barracks: trainingfacility.fguard, trainingfacility.cyborg
