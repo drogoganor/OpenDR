@@ -29,7 +29,7 @@ Players:
 		Playable: True
 		Required: True
 		LockFaction: True
-		Faction: togran
+		Faction: fguard
 		LockColor: True
 		Color: F5D378
 		LockSpawn: True
@@ -95,9 +95,6 @@ Actors:
 	Actor27: power
 		Owner: Freedom Guard
 		Location: 25,63
-	Actor28: trainingfacility.fguard
-		Owner: Freedom Guard
-		Location: 22,53
 	Actor29: assemblyplant.human
 		Owner: Freedom Guard
 		Location: 30,57
@@ -238,69 +235,6 @@ Actors:
 	Actor63: spiderbike
 		Owner: Freedom Guard
 		Location: 43,50
-		Facing: 92
-	Actor64: avenger
-		Owner: Freedom Guard
-		Location: 50,53
-		Facing: 92
-	Actor65: hadesbomber
-		Owner: Freedom Guard
-		Location: 51,59
-		Facing: 92
-	Actor66: ratmk2
-		Owner: Freedom Guard
-		Location: 47,50
-		Facing: 92
-		TurretFacing: 92
-	Actor67: geminitank
-		Owner: Freedom Guard
-		Location: 54,56
-		Facing: 92
-		TurretFacing: 92
-	Actor68: fury
-		Owner: Freedom Guard
-		Location: 51,49
-		Facing: 92
-		TurretFacing: 92
-	Actor69: roadterraformer
-		Owner: Freedom Guard
-		Location: 47,46
-		Facing: 92
-	Actor70: marshterraformer
-		Owner: Freedom Guard
-		Location: 43,45
-		Facing: 92
-	Actor71: gant
-		Owner: Freedom Guard
-		Location: 46,60
-		Facing: 92
-	Actor72: powerspiker
-		Owner: Freedom Guard
-		Location: 46,56
-		Facing: 92
-	Actor73: reaper
-		Owner: Freedom Guard
-		Location: 53,52
-		Facing: 92
-	Actor74: grendelrider
-		Owner: Freedom Guard
-		Location: 54,47
-		Facing: 92
-	Actor75: grendel
-		Owner: Freedom Guard
-		Location: 58,57
-		Facing: 92
-	Actor76: ranger
-		Owner: Freedom Guard
-		Location: 56,51
-		Facing: 92
-	Actor77: empdevice
-		Owner: Freedom Guard
-		Location: 47,42
-		Facing: 92
-	Actor78: shadowblade
-		Owner: Freedom Guard
-		Location: 43,41
 		Facing: 92
 	Actor79: constructionrig
 		Owner: Freedom Guard
