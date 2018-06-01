@@ -4,6 +4,8 @@ A Dark Reign mod for the [OpenRA](https://github.com/OpenRA/OpenRA) engine. Crea
 
 Currently a WIP made available for testing purposes. Please be aware that this mod is incomplete and the game might crash. I don't recommend trying to play it as it currently stands.
 
+[![Skirmish test video](https://img.youtube.com/vi/oBAMk_LMObc/0.jpg)](https://www.youtube.com/watch?v=oBAMk_LMObc)
+
 Most [Dark Reign features](https://github.com/drogoganor/DarkReign/wiki/Dark-Reign-features) are missing. Basic unit values for cost, health, damage, etc are in place but certain values like movement speed, attack speed, attack damage spread, and projectile speed are currently being worked on.
 
 This mod uses assets from the freely available Dark Reign demo, or alternatively you can install assets from an original game disc.
