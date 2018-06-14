@@ -8,6 +8,8 @@ Currently a WIP made available for testing purposes. Please be aware that this m
 
 Most [Dark Reign features](https://github.com/drogoganor/DarkReign/wiki/Dark-Reign-features) are missing. Basic unit values for cost, health, damage, etc are in place but certain values like movement speed, attack speed, attack damage spread, and projectile speed are currently being worked on.
 
+The most critical feature missing is the ability for [construction rigs to build buildings like the original](https://github.com/drogoganor/DarkReign/issues/1). This mod is unlikely to move forward until this feature is implemented.
+
 This mod uses assets from the freely available Dark Reign demo, or alternatively you can install assets from an original game disc.
 
 See the [wiki](https://github.com/drogoganor/DarkReign/wiki) for basic installation details if you want to try it at this early stage.
