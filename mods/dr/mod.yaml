@@ -51,6 +51,10 @@ Rules:
 	dr|rules/vehicles.yaml
 	dr|rules/infantry.yaml
 	dr|rules/decorations.yaml
+#	dr|rules/structures-ex.yaml
+#	dr|rules/aircraft-ex.yaml
+#	dr|rules/vehicles-ex.yaml
+#	dr|rules/infantry-ex.yaml
 
 Sequences:
 	dr|sequences/misc.yaml
@@ -59,6 +63,9 @@ Sequences:
 	dr|sequences/infantry.yaml
 	dr|sequences/effects.yaml
 	dr|sequences/decorations.yaml
+#	dr|sequences/structures-ex.yaml
+#	dr|sequences/vehicles-ex.yaml
+#	dr|sequences/infantry-ex.yaml
 
 TileSets:
 	dr|tilesets/alien.yaml
@@ -192,21 +199,25 @@ SpriteSequenceFormat: HackySpriteSequence
 ModelSequenceFormat: PlaceholderModelSequence
 
 GameSpeeds:
+	slow:
+		Name: Slow
+		Timestep: 70
+		OrderLatency: 1
 	default:
 		Name: Normal
-		Timestep: 40
-		OrderLatency: 3
+		Timestep: 50
+		OrderLatency: 1
 	fast:
 		Name: Fast
-		Timestep: 32
-		OrderLatency: 4
+		Timestep: 35
+		OrderLatency: 2
 	faster:
 		Name: Faster
-		Timestep: 24
+		Timestep: 25
 		OrderLatency: 4
 	fastest:
 		Name: Fastest
-		Timestep: 16
+		Timestep: 18
 		OrderLatency: 6
 
 ColorValidator:

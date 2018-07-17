@@ -1,0 +1,36 @@
+
+TrainingFacility.xenite:
+	Inherits: TrainingFacility.fguard
+	RenderSprites:
+		Image: nfnes1l0.spr
+	Buildable:
+		Prerequisites: ~rig.xenite, hq.xenite
+
+# Shadowhand matrix
+Matrix:
+	Inherits: ^DrGenericBuilding
+	RenderSprites:
+		Image: ninex1l0.spr
+	Tooltip:
+		Name: Matrix
+	Buildable:
+		Prerequisites: ~rig.shadowhand, hq.shadowhand
+		BuildPaletteOrder: 30
+		BuildDuration: 10
+	ProvidesPrerequisite@matrix:
+		Prerequisite: matrix
+	Valued:
+		Cost: 1800
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	Armor:
+		Type: Building
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2

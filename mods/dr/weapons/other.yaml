@@ -17,5 +17,5 @@ Repair:
 	Report: gxrepoc0.wav
 	ValidTargets: Repair
 	Warhead@1Dam: SpreadDamage
-		Damage: -5
+		Damage: -5000
 		ValidTargets: Repair

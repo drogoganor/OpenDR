@@ -52,12 +52,26 @@
 			TopLeft: -1536, -1536
 			BottomRight: 1536, 1536
 
-^4x4Shape:
+^3x4Shape:
 	HitShape:
 		UseTargetableCellsOffsets: true
 		Type: Rectangle
+			TopLeft: -1536, -2048
+			BottomRight: 1536, 2048
+
+^4x4Shape:
+	HitShape:
+		UseTargetableCellsOffsets: false
+		Type: Rectangle
 			TopLeft: -2048, -2048
 			BottomRight: 2048, 2048
+
+^4x3Shape:
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -1536
+			BottomRight: 2048, 1536
 
 ^5x4Shape:
 	HitShape:
@@ -218,8 +232,6 @@
 		Footprint: x
 		Dimensions: 1,1
 	AppearsOnRadar:
-	Health:
-		HP: 50000
 	Armor:
 		Type: Building
 	Targetable:

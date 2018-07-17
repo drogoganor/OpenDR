@@ -1,0 +1,54 @@
+
+# Xenite biotech compound
+nfnes1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: barrenEx|nfnes1l0.spr
+		ZOffset: -1023
+		Start: 1
+	idle-top2: tfnes1l0.spr
+		Start: 1
+	icon: bfnesmn0.spr
+	fake-icon: bfnesmn0.spr
+
+# Shadowhand Matrix
+ninex1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	idle-top: barrenEx|ninex1l0.spr
+		ZOffset: -1023
+		Start: 1
+	idle-top2: tinex1l0.spr
+		Start: 1
+	icon: binexmn0.spr
+	fake-icon: binexmn0.spr

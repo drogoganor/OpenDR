@@ -1,0 +1,23 @@
+IceReaper - Yesterday at 10:40 PM
+We might want to poke OpenRA staff a little to get stuff merged.. :smile:
+So basicaly, dark reign has the kknd building construction logic + consume unit + non shared build-progress
+so you likely wont need #15018 and #15021
+but you need something like a modified #15018 which tries to tick all elements per tick and stops as soon as not enough money is left. So your buildings will be build up in parallel
+then you will also need #15040 because buildings prespawned on the server should not "construct" and consume money on game start
+then you will need #15043 because the water / taleron (i think it was called like that, the green energy resource) harvesters should spawn after the building is finished, and not before
+at last you want to use #15045 to avoid buildings to be able to build units, while they are still being build themself
+so to summarize: it might be the best to somehow convince some people with approval and merge permission to look at these things, and get them fone
+so both our mods will work construction wise as they should work
+
+
+# Implemented ParallelProductionQueue
+https://github.com/OpenRA/OpenRA/pull/15018
+#  you need something like a modified #15018 which tries to tick all elements per tick and stops as soon as not enough money is left. So your buildings will be build up in parallel
+
+# Added CreationCause.
+https://github.com/OpenRA/OpenRA/pull/15040
+# pchote: This feels speculatively general to me - my gut feeling is that this isn't going to get much use outside of your own use case.
+
+I think a better approach may be to define a new IProducedActorInitModifier interface, similar to the existing IDeathActorInitModifier, and then call that from PlaceBuilding, Production and ClonesProducedUnits. This would allow arbitrary other traits to add arbitrary other info, which would be a lot more flexible.
+
+

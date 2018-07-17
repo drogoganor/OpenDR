@@ -1,18 +1,32 @@
 
 ^DrRock:
 	Inherits: ^Tree
+	Tooltip:
+		Name: Rock
 	EditorTilesetFilter:
 		Categories: Rocks
 
 ^DrCrater:
 	Inherits: ^Tree
+	Tooltip:
+		Name: Crater
 	EditorTilesetFilter:
 		Categories: Craters
 
 ^DrPlant:
 	Inherits: ^Tree
+	Tooltip:
+		Name: Plant
 	EditorTilesetFilter:
 		Categories: Plant
+
+^DrRubble:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Rubble
+	-HitShape:
+	EditorTilesetFilter:
+		Categories: Rocks
 
 ^DrMisc:
 	Inherits: ^Tree
@@ -21,39 +35,27 @@
 
 aotre000.spr:
 	Inherits: ^Tree
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+	Inherits@shape: ^1x1Shape
 
 aotre001.spr:
 	Inherits: ^Tree
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+	Inherits@shape: ^1x1Shape
 
 aotre002.spr:
 	Inherits: ^Tree
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+	Inherits@shape: ^1x1Shape
 
 aotre003.spr:
 	Inherits: ^Tree
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+	Inherits@shape: ^1x1Shape
 
 aotre004.spr:
 	Inherits: ^Tree
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+	Inherits@shape: ^1x1Shape
 
 aotre005.spr:
 	Inherits: ^Tree
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+	Inherits@shape: ^1x1Shape
 
 # Crashed space ship
 aospc000.spr:
@@ -64,162 +66,156 @@ aospc000.spr:
 
 # Rubble
 aorub000.spr:
-	Inherits: ^Tree
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+	Inherits: ^DrRubble
 
 aorub001.spr:
-	Inherits: ^Tree
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+	Inherits: ^DrRubble
 
 aorub002.spr:
-	Inherits: ^Tree
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+	Inherits: ^DrRubble
 
 # Rocks
 aoroc000.spr:
 	Inherits: ^DrRock
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
 
 aoroc001.spr:
 	Inherits: ^DrRock
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
 
 aoroc002.spr:
 	Inherits: ^DrRock
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
 
 aoroc003.spr:
 	Inherits: ^DrRock
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: x_ xx xx
+		Dimensions: 2,3
+		LocalCenterOffset: 0,0,0
 
 aoroc004.spr:
 	Inherits: ^DrRock
 	Building:
-		Footprint: __ x_
+		Footprint: xx xx
 		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
 
 aoroc005.spr:
 	Inherits: ^DrRock
 	Building:
-		Footprint: __ x_
+		Footprint: xx xx
 		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
 
 # Plant
 aopln000.spr:
 	Inherits: ^DrPlant
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
 
 aopln001.spr:
 	Inherits: ^DrPlant
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
 
 aopln002.spr:
 	Inherits: ^DrPlant
-	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
 
 # Scoring
 aomsc000.spr:
 	Inherits: ^DrMisc
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
 
 aomsc001.spr:
 	Inherits: ^DrMisc
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
 
 aomsc002.spr:
 	Inherits: ^DrMisc
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
 
 # Crater
 aoctr000.spr:
 	Inherits: ^DrCrater
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
 
 aoctr001.spr:
 	Inherits: ^DrCrater
 	Building:
-		Footprint: __ x_
+		Footprint: xx xx
 		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
 
 aoctr002.spr:
 	Inherits: ^DrCrater
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
 
 aoctr003.spr:
 	Inherits: ^DrCrater
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
 
 aoctr004.spr:
 	Inherits: ^DrCrater
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
 
 # Cliff
 aoclf000.spr:
 	Inherits: ^DrRock
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: _x_ xxx xx_
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
 
 aoclf001.spr:
 	Inherits: ^DrRock
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: _x_ xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
 
 aoclf002.spr:
 	Inherits: ^DrRock
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: _x_ xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
 
 aoclf003.spr:
 	Inherits: ^DrRock
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: _x_ xxx xxx xx_
+		Dimensions: 3,4
+		LocalCenterOffset: 0,0,0
 
 aoclf004.spr:
 	Inherits: ^DrRock
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: _x_ xxx xx= xxx
+		Dimensions: 3,4
+		LocalCenterOffset: 0,0,0
 
 aoclf005.spr:
 	Inherits: ^DrRock
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: _x__ xxxx xxxx xxx_
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0

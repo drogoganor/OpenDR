@@ -6,6 +6,7 @@
 ncpow1l0.spr:
 	Defaults:
 		AddExtension: False
+		Offset: -8, -6
 	idle:
 		Start: 1
 	make:
@@ -27,7 +28,9 @@ ncpow1l0.spr:
 	idle-top2: tcpow1l0.spr
 		Start: 1
 	icon: bcpowmn0.spr
+		Offset: 0, 0
 	fake-icon: bcpowmn0.spr
+		Offset: 0, 0
 
 # Water Launch Pad
 nclnc1l0.spr:
@@ -60,6 +63,7 @@ nclnc1l0.spr:
 nfhqt1l0.spr:
 	Defaults:
 		AddExtension: False
+		Offset: -6, -12
 	idle:
 		Start: 1
 	make:
@@ -81,7 +85,9 @@ nfhqt1l0.spr:
 	idle-top2: tfhqt1l0.spr
 		Start: 1
 	icon: bfhqtmn0.spr
+		Offset: 0, 0
 	fake-icon: bfhqtmn0.spr
+		Offset: 0, 0
 
 bfhqtmn1.spr:
 	Defaults:
@@ -107,6 +113,7 @@ bfphfmn1.spr:
 nfutf1l0.spr:
 	Defaults:
 		AddExtension: False
+		Offset: 0, -2
 	idle:
 		Start: 1
 	make:
@@ -128,7 +135,9 @@ nfutf1l0.spr:
 	idle-top2: tfutf1l0.spr
 		Start: 1
 	icon: bfutfmn0.spr
+		Offset: 0, 0
 	fake-icon: bfutfmn0.spr
+		Offset: 0, 0
 
 bfutfmn1.spr:
 	Defaults:
@@ -140,6 +149,7 @@ bfutfmn1.spr:
 nfvcy1l0.spr:
 	Defaults:
 		AddExtension: False
+		Offset: 12, 0
 	idle:
 		Start: 1
 	make:
@@ -161,7 +171,9 @@ nfvcy1l0.spr:
 	idle-top2: tfvcy1l0.spr
 		Start: 1
 	icon: bfvcymn0.spr
+		Offset: 0, 0
 	fake-icon: bfvcymn0.spr
+		Offset: 0, 0
 
 bfvcymn1.spr:
 	Defaults:
@@ -174,6 +186,7 @@ bfvcymn1.spr:
 nihqt1l0.spr:
 	Defaults:
 		AddExtension: False
+		Offset: 6, -22
 	idle:
 		Start: 1
 	make:
@@ -195,7 +208,9 @@ nihqt1l0.spr:
 	idle-top2: tihqt1l0.spr
 		Start: 1
 	icon: bihqtmn0.spr
+		Offset: 0, 0
 	fake-icon: bihqtmn0.spr
+		Offset: 0, 0
 
 bihqtmn1.spr:
 	Defaults:
@@ -213,6 +228,7 @@ bihqtmn2.spr:
 niutf1l0.spr:
 	Defaults:
 		AddExtension: False
+		Offset: 10, 6
 	idle:
 		Start: 0
 	make:
@@ -238,7 +254,9 @@ niutf1l0.spr:
 	idle-top4: tiutf1l0.spr
 		Start: 1
 	icon: biutfmn0.spr
+		Offset: 0, 0
 	fake-icon: biutfmn0.spr
+		Offset: 0, 0
 
 biutfmn1.spr:
 	Defaults:
@@ -386,6 +404,7 @@ nfaar1l0.spr:
 niaar1l0.spr:
 	Defaults:
 		AddExtension: False
+		Offset: -1, -14
 	idle:
 		Start: 1
 	make:
@@ -413,7 +432,9 @@ niaar1l0.spr:
 	idle-top2: tiaar1l0.spr
 		Start: 1
 	icon: biaarmn0.spr
+		Offset: 0, 0
 	fake-icon: biaarmn0.spr
+		Offset: 0, 0
 
 # FG Heavy rail
 nfagt1l0.spr:
@@ -485,6 +506,7 @@ niagt1l0.spr:
 nccam1l0.spr:
 	Defaults:
 		AddExtension: False
+		Offset: 1, -12
 	idle:
 		Start: 1
 	make:
@@ -503,12 +525,15 @@ nccam1l0.spr:
 	idle-top: tccam1l0.spr
 		Start: 1
 	icon: bccammn0.spr
+		Offset: 0, 0
 	fake-icon: bccammn0.spr
+		Offset: 0, 0
 
 # FG Field hospital
 nfhsp1l0.spr:
 	Defaults:
 		AddExtension: False
+		Offset: -6, 0
 	idle:
 		Start: 1
 	make:
@@ -530,7 +555,9 @@ nfhsp1l0.spr:
 	idle-top2: tfhsp1l0.spr
 		Start: 1
 	icon: bfhspmn0.spr
+		Offset: 0, 0
 	fake-icon: bfhspmn0.spr
+		Offset: 0, 0
 
 # Imperium field hospital
 nihsp1l0.spr:
@@ -573,6 +600,14 @@ nfrep1l0.spr:
 	damaged-build:
 		Start: 1
 		Length: 1
+	active:
+		Start: 1
+		Length: 1
+		ZOffset: -1c511
+	damaged-active:
+		Start: 1
+		Length: 1
+		ZOffset: -1c511
 	dead:
 		Start: 1
 		Tick: 800
@@ -612,6 +647,7 @@ nirep1l0.spr:
 nfphf1l0.spr:
 	Defaults:
 		AddExtension: False
+		Offset: 0, -6
 	idle:
 		Start: 1
 	make:
@@ -633,7 +669,9 @@ nfphf1l0.spr:
 	idle-top2: tfphf1l0.spr
 		Start: 1
 	icon: bfphfmn0.spr
+		Offset: 0, 0
 	fake-icon: bfphfmn0.spr
+		Offset: 0, 0
 
 # FG Rearming deck
 nfrrm1l0.spr:
@@ -733,57 +771,3 @@ nitrc1l0.spr:
 		Start: 1
 	icon: bitrcmn0.spr
 	fake-icon: bitrcmn0.spr
-
-# Xenite biotech compound
-nfnes1l0.spr:
-	Defaults:
-		AddExtension: False
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 800
-	idle-top: barrenEx|nfnes1l0.spr
-		ZOffset: -1023
-		Start: 1
-	idle-top2: tfnes1l0.spr
-		Start: 1
-	icon: bfnesmn0.spr
-	fake-icon: bfnesmn0.spr
-
-# Shadowhand Matrix
-ninex1l0.spr:
-	Defaults:
-		AddExtension: False
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 800
-	idle-top: barrenEx|ninex1l0.spr
-		ZOffset: -1023
-		Start: 1
-	idle-top2: tinex1l0.spr
-		Start: 1
-	icon: binexmn0.spr
-	fake-icon: binexmn0.spr

@@ -80,8 +80,14 @@ SkyBike:
 		Type: Aircraft
 	Armament:
 		Weapon: SkyBikeWeapon
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 24
+		PipCount: 4
+		AmmoCondition: ammo
 	Aircraft:
 		Speed: 200
+		RearmBuildings: RearmingDeck.human, RearmingDeck.cyborg
 	AttackHeli:
 		FacingTolerance: 20
 
@@ -192,61 +198,5 @@ SkyFortress:
 		Weapon: SkyFortressWeapon
 	Aircraft:
 		Speed: 100
-	AttackHeli:
-		FacingTolerance: 20
-
-Avenger:
-	Inherits: ^DrPlane
-	RenderSprites:
-		Image: ufomkst0.spr
-	Tooltip:
-		Name: Hades Bomber
-	Buildable:
-		Description: The Avenger is the heavy air unit designed for base\nbusting. It can only fire a single shot before having\nto reload but it has a fairly long range and does\na lot of damage.
-		Prerequisites: ~vehicles.xenite, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
-		BuildPaletteOrder: 160
-		BuildDuration: 45
-	Voiced:
-		VoiceSet: AvengerVoice
-	Valued:
-		Cost: 1500
-	Health:
-		HP: 150
-	RevealsShroud:
-		Range: 9c0
-	Armor:
-		Type: Aircraft
-	Armament:
-		Weapon: CycloneWeapon
-	Aircraft:
-		Speed: 240
-	AttackHeli:
-		FacingTolerance: 20
-
-HadesBomber:
-	Inherits: ^DrPlane
-	RenderSprites:
-		Image: uiarbst0.spr
-	Tooltip:
-		Name: Hades Bomber
-	Buildable:
-		Description: This heavy bomber moves slower than the Cyclone but\nhas a powerful payload of missiles with a large area\nof effect and a high amount of damage. Replaces the\nSky Fortress.
-		Prerequisites: ~vehicles.shadowhand, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
-		BuildPaletteOrder: 160
-		BuildDuration: 45
-	Voiced:
-		VoiceSet: HadesBomberVoice
-	Valued:
-		Cost: 1500
-	Health:
-		HP: 150
-	RevealsShroud:
-		Range: 9c0
-	Armor:
-		Type: Aircraft
-	Armament:
-		Weapon: CycloneWeapon
-	Aircraft:
-		Speed: 240
 	AttackHeli:
 		FacingTolerance: 20

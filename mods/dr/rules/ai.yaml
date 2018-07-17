@@ -32,6 +32,7 @@ Player:
 			assemblyplant.human: 60%
 			assemblyplant.cyborg: 60%
 		UnitsToBuild:
+			freighter: 0%
 			raider: 65%
 			guardian: 65%
 			mercenary: 25%

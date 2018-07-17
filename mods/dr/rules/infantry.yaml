@@ -3,6 +3,15 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^GainsExperience
 	Inherits@3: ^SpriteActor
+	SelfHealing@HOSPITAL:
+		Step: 10
+		Delay: 100
+		HealIfBelow: 100
+		DamageCooldown: 125
+		RequiresCondition: hospitalheal
+	GrantConditionOnPrerequisite:
+		Condition: hospitalheal
+		Prerequisites: hospital
 	Huntable:
 	Health:
 		HP: 2500
@@ -82,7 +91,7 @@
 		VoiceSet: GenericVoice
 	HitShape:
 		Type: Circle
-			Radius: 128
+			Radius: 256
 	EditorTilesetFilter:
 		Categories: Infantry
 
@@ -446,163 +455,6 @@ Infiltrator:
 		Prerequisites: hq, upgrade.hq1, vehicles, barracks, upgrade.barracks1
 	Voiced:
 		VoiceSet: InfiltratorVoice
-	Valued:
-		Cost: 1000
-	Health:
-		HP: 66
-	RevealsShroud:
-		Range: 9c0
-	Mobile:
-		Speed: 120
-	Armor:
-		Type: Infantry
-
-Gant:
-	Inherits: ^DrSoldier
-	RenderSprites:
-		Image: ufganst0.spr
-	Tooltip:
-		Name: Gant
-	Buildable:
-		Description: Your basic Xenite. Has a melee attack and can self\nheal. Replaces Mercenaries.
-		BuildPaletteOrder: 50
-		BuildDuration: 30
-		Prerequisites: ~hq.xenite, ~barracks
-	Voiced:
-		VoiceSet: GantVoice
-	Valued:
-		Cost: 1000
-	Health:
-		HP: 66
-	RevealsShroud:
-		Range: 9c0
-	Mobile:
-		Speed: 120
-	Armor:
-		Type: Infantry
-	Turreted:
-		TurnSpeed: 5
-	Armament:
-		Weapon: PlasmaTankWeapon
-		Recoil: 128
-		RecoilRecovery: 38
-		LocalOffset: 720,0,80
-		MuzzleSequence: muzzle
-	-AttackFrontal:
-	AttackTurreted:
-	WithSpriteTurret:
-
-Ranger:
-	Inherits: ^DrSoldier
-	RenderSprites:
-		Image: uftrast0.spr
-	Tooltip:
-		Name: Ranger
-	Buildable:
-		Description: Your basic controller unit. Has no attack. Replaces Martyrs.
-		BuildPaletteOrder: 60
-		BuildDuration: 30
-		Prerequisites: ~hq.xenite, ~barracks
-	Voiced:
-		VoiceSet: RangerVoice
-	Valued:
-		Cost: 1000
-	Health:
-		HP: 66
-	RevealsShroud:
-		Range: 9c0
-	Mobile:
-		Speed: 120
-	Armor:
-		Type: Infantry
-
-PowerSpiker:
-	Inherits: ^DrSoldier
-	RenderSprites:
-		Image: unpwcst0.spr
-	Tooltip:
-		Name: Power Spiker
-	Buildable:
-		Description: This unit can fully shut down enemy powered buildings\nif you can get him next to an enemy power plant.
-		BuildPaletteOrder: 60
-		BuildDuration: 30
-		Prerequisites: ~hq.xenite, ~barracks
-	Voiced:
-		VoiceSet: PowerSpikerVoice
-	Valued:
-		Cost: 1000
-	Health:
-		HP: 66
-	RevealsShroud:
-		Range: 9c0
-	Mobile:
-		Speed: 120
-	Armor:
-		Type: Infantry
-
-Grendel:
-	Inherits: ^DrSoldier
-	RenderSprites:
-		Image: ufgrest0.spr
-	Tooltip:
-		Name: Grendel
-	Buildable:
-		Description: The Grendel has a ranged attack that's effective\nagainst basically everything and can outrange basic\nturrets. Only downside is that it can go feral on\nyou if it goes outside the range of a controller.\nReplaces Tank Hunters.
-		BuildPaletteOrder: 70
-		BuildDuration: 30
-		Prerequisites: ~hq.xenite, ~barracks
-	Voiced:
-		VoiceSet: GrendelVoice
-	Valued:
-		Cost: 1000
-	Health:
-		HP: 66
-	RevealsShroud:
-		Range: 9c0
-	Mobile:
-		Speed: 120
-	Armor:
-		Type: Infantry
-
-GrendelRider:
-	Inherits: ^DrSoldier
-	RenderSprites:
-		Image: ufridst0.spr
-	Tooltip:
-		Name: Grendel Rider
-	Buildable:
-		Description: Essentially a Grendel with a Ranger on top. Is a\ncontroller, so if you want the easiest to use force\npossible just make a force of these rather than a\nmixed force of Grendels and Riders. Replaces Triple\nRail Hovertanks.
-		BuildPaletteOrder: 80
-		BuildDuration: 30
-		Prerequisites: ~hq.xenite, ~barracks
-	Voiced:
-		VoiceSet: GrendelRiderVoice
-	Valued:
-		Cost: 1000
-	Health:
-		HP: 66
-	RevealsShroud:
-		Range: 9c0
-	Mobile:
-		Speed: 120
-	Armor:
-		Type: Infantry
-
-# Shadowhand
-
-Reaper:
-	Inherits: ^DrSoldier
-	RenderSprites:
-		Image: uireast0.spr
-	Tooltip:
-		Name: Reaper
-	Buildable:
-		Description: Your new heavy infantry, these guys lay a massive\nhurting on pretty much everything. They do bonus\ndamage to Xenites, basically making your Bions only\nworthwhile when you want some incidental air defense.\nReplaces Guardians.
-		BuildPaletteOrder: 20
-		BuildDuration: 30
-		Prerequisites: ~hq.shadowhand, ~barracks
-	Voiced:
-		VoiceSet: ReaperVoice
 	Valued:
 		Cost: 1000
 	Health:

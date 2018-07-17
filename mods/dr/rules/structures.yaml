@@ -2,7 +2,6 @@
 ^BasicBuilding:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
-	Inherits@shape: ^1x1Shape
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -56,32 +55,25 @@
 	Sellable:
 		SellSounds: cashturn.aud
 	HitShape@LAYER1:
-		Type: Rectangle
-			TopLeft: -512, -1536
-			BottomRight: 512, -512
 	HitShape@LAYER2:
-		Type: Rectangle
-			TopLeft: -512, -1536
-			BottomRight: 512, -512
 	HitShape@LAYER3:
-		Type: Rectangle
-			TopLeft: -512, -1536
-			BottomRight: 512, -512
 
 ^DrHeadquarters:
 	Inherits: ^DrBuilding
-	Inherits@shape: ^5x4Shape
 	Tooltip:
 		Name: Headquarters
 	Building:
-		Footprint: ===== Xxxxx xxxxx =xxxX
-		Dimensions: 5,4
-		LocalCenterOffset: 256,-768,0
+		Footprint: _xx_ xxxx xxxx xxx_
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
 	HitShape:
-		TargetableOffsets: 1273,939,0, -980,-640,0, -980,640,0
+		UseTargetableCellsOffsets: true
 		Type: Rectangle
-			TopLeft: -1536, -1536
-			BottomRight: 1536, 1536	
+			TopLeft: -2048, -2048
+			BottomRight: 2048, 2048
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 0
@@ -114,10 +106,10 @@
 		PrimaryCondition: primary
 	BaseBuilding:
 	RallyPoint:
-		Offset: 2,4
+		Offset: 4,4
 	Exit@1:
-		SpawnOffset: -42,810,0
-		ExitCell: 2,3
+		SpawnOffset: 0,0,0
+		ExitCell: 2,2
 		ProductionTypes: Economy,Upgrade
 	ProductionBar@Building:
 		ProductionType: Building
@@ -253,9 +245,8 @@ upgrade.phasing:
 	ProvidesPrerequisite@upgradename:
 
 
-^DrGenericBuilding
+^DrGenericBuilding:
 	Inherits: ^DrBuilding
-	Inherits@shape: ^3x3Shape
 	Buildable:
 		Queue: Building
 		Description: Generic
@@ -270,21 +261,12 @@ upgrade.phasing:
 		Amount: -100
 	Armor:
 		Type: Building
-	Building:
-		Footprint: Xxx xxx xxX
-		Dimensions: 3,3
-		LocalCenterOffset: 384,-256,0
-	HitShape:
-		UseTargetableCellsOffsets: false
-		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 
-^DrTrainingFacility
+^DrTrainingFacility:
 	Inherits: ^DrBuilding
 	Tooltip:
 		Name: Training Facility
-	Inherits@shape: ^5x5Shape
+	Inherits@shape: ^5x4Shape
 	Buildable:
 		Queue: Building
 		Description: Trains infantry.
@@ -300,21 +282,17 @@ upgrade.phasing:
 	Armor:
 		Type: Building
 	Building:
-		Footprint: _xxx_ Xxxxx xxxxx xxxxX =====
-		Dimensions: 5,5
-		LocalCenterOffset: 384,-256,0
-	HitShape:
-		UseTargetableCellsOffsets: false
-		TargetableOffsets: 0,0,0, 630,-512,0, 355,512,0, -281,-512,0, -630,512,0
+		Footprint: xxxxx xxxxx xxxxx xxxx=
+		Dimensions: 5,4
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 120,96,0,0
+		DecorationBounds: 120,96,0,0
 	RallyPoint:
-		Offset: 1,4
+		Offset: 4,4
 	Exit@1:
-		SpawnOffset: -42,810,0
-		ExitCell: 2,3
-		ProductionTypes: Soldier, Infantry
-	Exit@2:
-		SpawnOffset: -725,640,0
-		ExitCell: 4,3
+		SpawnOffset: 512,256,0
+		ExitCell: 3,3
 		ProductionTypes: Soldier, Infantry
 	Production:
 		Produces: Infantry, Soldier, DrSoldier
@@ -366,9 +344,12 @@ upgrade.phasing:
 		BuildDuration: 66
 		Description: Produces vehicles.
 	Building:
-		Footprint: =Xxx= xxxxx xxxxx xxxxx xxxX=
+		Footprint: ===__ =xx== xxxxx ==xxx ==xx=
 		Dimensions: 5,5
-		LocalCenterOffset: 256,-256,0
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 120,120,0,0
+		DecorationBounds: 120,120,0,0
 	Valued:
 		Cost: 2200
 	RevealsShroud:
@@ -378,8 +359,8 @@ upgrade.phasing:
 	Armor:
 		Type: Building
 	Exit@1:
-		SpawnOffset: 213,-128,0
-		ExitCell: 0,4
+		SpawnOffset: -512,768,0
+		ExitCell: 1,3
 	Production:
 		Produces: Vehicle, DrVehicle, DrAnimatedVehicle
 	ProvidesPrerequisite@buildingname:
@@ -407,7 +388,7 @@ upgrade.phasing:
 		PrimaryCondition: primary
 	ProductionBar:
 	RallyPoint:
-		Offset: 1,5
+		Offset: 0,5
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 	GrantConditionOnPrerequisite:
@@ -440,7 +421,7 @@ Power:
 		Image: ncpow1l0.spr
 	Tooltip:
 		Name: Taelon Power Generator
-	Inherits@shape: ^4x4Shape
+	Inherits@shape: ^3x4Shape
 	HitShape:
 	Buildable:
 		Prerequisites: ~techlevel.infonly
@@ -448,10 +429,13 @@ Power:
 		Description: Provides power for other structures. Refines Taelon into credits.
 		BuildPaletteOrder: 20
 		BuildDuration: 30
+	Selectable:
+		Bounds: 72,84,0,-12
+		DecorationBounds: 72,84,0,-12
 	Building:
-		Footprint: _=x_ =Xx= =xX= ====
-		Dimensions: 4,4
-		LocalCenterOffset: 0,-512,0
+		Footprint: _== xxx =xx ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,0,0
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Valued:
@@ -469,13 +453,13 @@ Power:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	Refinery:
 		DockAngle: 64
-		DockOffset: 1,3
+		DockOffset: 0,2
 	StoresResources:
 		PipCount: 17
 		Capacity: 2000
 	FreeActor:
 		Actor: Freighter
-		SpawnOffset: 0,3
+		SpawnOffset: 0,2
 		Facing: 64
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
@@ -492,7 +476,7 @@ WaterLaunchPad:
 		Image: nclnc1l0.spr
 	Tooltip:
 		Name: Water Launch Pad
-	Inherits@shape: ^5x3Shape
+	Inherits@shape: ^4x3Shape
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 10
@@ -500,18 +484,18 @@ WaterLaunchPad:
 		Description: Refines spring water into credits.
 		BuildDuration: 37
 	Building:
-		Footprint: _Xxx= xxxX= ====_
-		Dimensions: 5,3
-		LocalCenterOffset: -256,-512,0
+		Footprint: _xx_ xxxx ==x=
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	Selectable:
-		Bounds: 72,50,0,12
-		DecorationBounds: 72,70,0,-2
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
 	HitShape:
 		Type: Rectangle
-			TopLeft: -1536, -512
-			BottomRight: 1536, 598
+			TopLeft: -2048, -1536
+			BottomRight: 2048, 1536
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: waterlaunch
@@ -531,8 +515,8 @@ WaterLaunchPad:
 		DockAngle: 64
 		DockOffset: 1,2
 	StoresResources:
-		PipCount: 17
-		Capacity: 2000
+		PipCount: 12
+		Capacity: 3000
 	FreeActor:
 		Actor: Freighter
 		SpawnOffset: 1,2
@@ -568,10 +552,18 @@ HQ.cyborg:
 		Image: nihqt1l0.spr
 	Tooltip:
 		Name: Headquarters
+	Building:
+		Footprint: x==x xxxx xxxx =xxx
 	Buildable:
 		Prerequisites: ~rig.cyborg
 	Health:
 		HP: 1440
+	RallyPoint:
+		Offset: 0,4
+	Exit@1:
+		SpawnOffset: -512,1536,0
+		ExitCell: 0,4
+		ProductionTypes: Economy,Upgrade
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: idle-top
@@ -596,12 +588,23 @@ TrainingFacility.fguard:
 
 TrainingFacility.cyborg
 	Inherits: ^DrTrainingFacility
+	Inherits@shape: ^5x4Shape
 	RenderSprites:
 		Image: niutf1l0.spr
 	Tooltip:
 		Name: Training Facility
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg
+	Building:
+		Footprint: =xxx= xxxxx xxxxx =xxx=
+		Dimensions: 5,4
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 120,96,0,0
+		DecorationBounds: 120,96,0,0
+	Exit@1:
+		SpawnOffset: 1280,768,0
+		ExitCell: 3,3
 	Health:
 		HP: 900
 	WithIdleOverlay@LAYER1:
@@ -614,13 +617,6 @@ TrainingFacility.cyborg
 	WithIdleOverlay@LAYER4:
 		Sequence: idle-top4
 
-#TrainingFacility.xenite:
-#	Inherits: TrainingFacility.fguard
-#	RenderSprites:
-#		Image: nfnes1l0.spr
-#	Buildable:
-#		Prerequisites: ~rig.xenite, hq.xenite
-
 AssemblyPlant.human:
 	Inherits: ^DrAssemblyPlant
 	RenderSprites:
@@ -629,6 +625,9 @@ AssemblyPlant.human:
 		Name: Assembly Plant
 	Buildable:
 		Prerequisites: ~rig.human, hq.human
+	#Exit@2:
+	#	SpawnOffset: 512,-256,0
+	#	ExitCell: 3,1
 	Health:
 		HP: 1000
 	WithIdleOverlay@LAYER1:
@@ -645,6 +644,22 @@ AssemblyPlant.cyborg:
 		Name: Assembly Plant
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg
+	Building:
+		Footprint: _xxxx xxxxx xxxxx xxxxx =xxxx
+		Dimensions: 5,5
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 120,120,0,0
+		DecorationBounds: 120,120,0,0
+	HitShape:
+		Type: Rectangle
+			TopLeft: -2560, -2560
+			BottomRight: 2560, 2560
+	Exit@1:
+		SpawnOffset: -768,768,0
+		ExitCell: 1,3
+	RallyPoint:
+		Offset: 1,5
 	Health:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
@@ -661,9 +676,8 @@ AssemblyPlant.cyborg:
 	Inherits: ^Defense
 	Inherits@shape: ^2x2Shape
 	Building:
-		Footprint: Xx xX
+		Footprint: xx xx
 		Dimensions: 2,2
-		#LocalCenterOffset: 384,-256,0
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure
 	Valued:
@@ -671,7 +685,7 @@ AssemblyPlant.cyborg:
 	Health:
 		HP: 400
 	RevealsShroud:
-		Range: 8c0
+		Range: 9c0
 	Power:
 		Amount: -50
 	Armor:
@@ -680,7 +694,7 @@ AssemblyPlant.cyborg:
 	AttackTurreted:
 	WithMuzzleOverlay:
 	DetectCloaked:
-		Range: 6c0
+		Range: 2c0
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: idle-top
@@ -702,11 +716,11 @@ LaserTurret:
 		BuildPaletteOrder: 50
 		BuildDuration: 22
 	Turreted:
-		TurnSpeed: 12
+		TurnSpeed: 16
 		InitialFacing: 56
 		Offset: 256,-24,255
 	Armament:
-		Weapon: LaserRifle
+		Weapon: LaserTurretRifle
 		LocalOffset: 512,0,112
 
 # Imperium plasma turret
@@ -739,9 +753,8 @@ HeavyRailTurret:
 	Inherits@shape: ^3x3Shape
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Building:
-		Footprint: Xxx xxx xxX
+		Footprint: =x_ xxx xx=
 		Dimensions: 3,3
-		#LocalCenterOffset: 384,-256,0
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure
 	Tooltip:
@@ -788,7 +801,7 @@ NeutronAccelerator:
 	Inherits@shape: ^3x3Shape
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Building:
-		Footprint: Xxx xxx xxX
+		Footprint: =x= xxx xxx
 		Dimensions: 3,3
 		#LocalCenterOffset: 384,-256,0
 	Targetable:
@@ -858,7 +871,7 @@ AntiAirTurret.human:
 		InitialFacing: 56
 		Offset: 256,-24,255
 	Armament:
-		Weapon: LaserRifle
+		Weapon: FlakJackWeapon
 		LocalOffset: 512,0,112
 
 # Imperium anti-air turret
@@ -890,12 +903,13 @@ AntiAirTurret.cyborg:
 		InitialFacing: 56
 		Offset: 256,-24,255
 	Armament:
-		Weapon: PlasmaRifle
+		Weapon: FlakJackWeapon
 		LocalOffset: 512,0,112
 
 # Camera tower
 CameraTower:
 	Inherits: ^DrGenericBuilding
+	Inherits@shape: ^1x1Shape
 	RenderSprites:
 		Image: nccam1l0.spr
 	Tooltip:
@@ -906,6 +920,10 @@ CameraTower:
 		Description: Camera Tower
 		BuildPaletteOrder: 50
 		BuildDuration: 6
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
 	Valued:
 		Cost: 200
 	Health:
@@ -924,11 +942,14 @@ Hospital.human:
 	Inherits: ^DrGenericBuilding
 	RenderSprites:
 		Image: nfhsp1l0.spr
-	Inherits@shape: ^5x4Shape
+	Inherits@shape: ^4x4Shape
 	Building:
-		Footprint: _xxxX xxxxx xxxxx Xxxx_
-		Dimensions: 5,4
-		#LocalCenterOffset: 384,-256,0
+		Footprint: _xxx xxxx xxx= ===_
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
 	Tooltip:
 		Name: Field Hospital
 	Buildable:
@@ -961,11 +982,14 @@ Hospital.cyborg:
 	Inherits: ^DrGenericBuilding
 	RenderSprites:
 		Image: nihsp1l0.spr
-	Inherits@shape: ^5x4Shape
+	Inherits@shape: ^4x3Shape
 	Building:
-		Footprint: _xxxX xxxxx xxxxx Xxxx_
-		Dimensions: 5,4
-		#LocalCenterOffset: 384,-256,0
+		Footprint: xxx= xxxx =xxx
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
 	Tooltip:
 		Name: Field Hospital
 	Buildable:
@@ -995,6 +1019,7 @@ Hospital.cyborg:
 # FG repair pad
 Repair.human:
 	Inherits: ^DrGenericBuilding
+	Inherits@shape: ^3x3Shape
 	RenderSprites:
 		Image: nfrep1l0.spr
 	Tooltip:
@@ -1003,8 +1028,20 @@ Repair.human:
 		Prerequisites: ~rig.human, hq.human, vehicles
 		BuildPaletteOrder: 50
 		BuildDuration: 24
-	ProvidesPrerequisite@repair:
-		Prerequisite: repair
+	Building:
+		Footprint: =x= xxx =x=
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
+	SelectionDecorations:
+	Reservable:
+	RallyPoint:
+	RepairsUnits:
+		HpPerStep: 10000
+		Interval: 2
+	WithRepairAnimation:
 	Valued:
 		Cost: 800
 	Health:
@@ -1015,17 +1052,34 @@ Repair.human:
 		Amount: -100
 	Armor:
 		Type: Building
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: idle-top
-	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+	-HitShape@LAYER1:
+	-HitShape@LAYER2:
+	-HitShape@LAYER3:
+	-HitShape:
+	HitShape:
+		Type: Polygon
+			Points: -2048,-2048, 2048,-2048, 2048,2048, -2048,2048
+#	ProvidesPrerequisite@repair:
+#		Prerequisite: repair
+#	WithIdleOverlay@LAYER1:
+#		Palette: terrain
+#		Sequence: idle-top
+#	WithIdleOverlay@LAYER2:
+#		Sequence: idle-top2
 
 # Imperium repair pad
 Repair.cyborg:
 	Inherits: ^DrGenericBuilding
 	RenderSprites:
 		Image: nirep1l0.spr
+	Inherits@shape: ^4x4Shape
+	Building:
+		Footprint: xxx= xx=x x=xx =xx=
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
 	Tooltip:
 		Name: Repair Station
 	Buildable:
@@ -1034,6 +1088,15 @@ Repair.cyborg:
 		BuildDuration: 24
 	ProvidesPrerequisite@repair:
 		Prerequisite: repair
+	Reservable:
+	RallyPoint:
+	RepairsUnits:
+		HpPerStep: 100000
+		Interval: 7
+		FinishRepairingNotification: UnitRepaired
+		PlayerExperience: 15
+	WithRepairAnimation:
+	WithRearmAnimation:
 	Valued:
 		Cost: 800
 	Health:
@@ -1050,6 +1113,7 @@ Repair.cyborg:
 # Phasing facility
 PhasingFacility:
 	Inherits: ^DrGenericBuilding
+	Inherits@shape: ^4x3Shape
 	RenderSprites:
 		Image: nfphf1l0.spr
 	Tooltip:
@@ -1060,6 +1124,13 @@ PhasingFacility:
 		BuildDuration: 36
 	ProvidesPrerequisite@phasing:
 		Prerequisite: phasing
+	Building:
+		Footprint: _xxx xxxx xxx_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
 	Valued:
 		Cost: 1200
 	Health:
@@ -1089,6 +1160,7 @@ PhasingFacility:
 # FG rearming deck
 RearmingDeck.human:
 	Inherits: ^DrGenericBuilding
+	Inherits@shape: ^3x3Shape
 	RenderSprites:
 		Image: nfrrm1l0.spr
 	Tooltip:
@@ -1099,6 +1171,13 @@ RearmingDeck.human:
 		BuildDuration: 30
 	ProvidesPrerequisite@air:
 		Prerequisite: air
+	Building:
+		Footprint: xxx xxx xx_
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
 	Valued:
 		Cost: 1000
 	Health:
@@ -1108,13 +1187,23 @@ RearmingDeck.human:
 	Power:
 		Amount: -120
 	Armor:
-		Type: Building  # TODO
+		Type: Building
+	RallyPoint:
+	Reservable:
 	WithIdleOverlay@LAYER1:
 		Sequence: idle-top
 
 # Imperium rearming deck
 RearmingDeck.cyborg:
 	Inherits: ^DrGenericBuilding
+	Inherits@shape: ^3x3Shape
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
 	RenderSprites:
 		Image: nirrm1l0.spr
 	Tooltip:
@@ -1144,6 +1233,14 @@ RearmingDeck.cyborg:
 # Imperium temporal gate
 TemporalGate:
 	Inherits: ^DrGenericBuilding
+	Inherits@shape: ^3x2Shape
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
 	RenderSprites:
 		Image: nitgt1l0.spr
 	Tooltip:
@@ -1170,6 +1267,14 @@ TemporalGate:
 # Imperium temporal rift creator
 TemporalRiftCreator:
 	Inherits: ^DrGenericBuilding
+	Inherits@shape: ^4x4Shape
+	Building:
+		Footprint: _==_ =xx= xxxx =xxx
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
 	RenderSprites:
 		Image: nitrc1l0.spr
 	Tooltip:
@@ -1192,32 +1297,3 @@ TemporalRiftCreator:
 		Type: Building
 	WithIdleOverlay@LAYER1:
 		Sequence: idle-top
-
-# Shadowhand matrix
-#Matrix:
-#	Inherits: ^DrGenericBuilding
-#	RenderSprites:
-#		Image: ninex1l0.spr
-#	Tooltip:
-#		Name: Matrix
-#	Buildable:
-#		Prerequisites: ~rig.shadowhand, hq.shadowhand
-#		BuildPaletteOrder: 30
-#		BuildDuration: 10
-#	ProvidesPrerequisite@matrix:
-#		Prerequisite: matrix
-#	Valued:
-#		Cost: 1800
-#	Health:
-#		HP: 1000
-#	RevealsShroud:
-#		Range: 8c0
-#	Power:
-#		Amount: -100
-#	Armor:
-#		Type: Building
-#	WithIdleOverlay@LAYER1:
-#		Palette: terrain
-#		Sequence: idle-top
-#	WithIdleOverlay@LAYER2:
-#		Sequence: idle-top2
