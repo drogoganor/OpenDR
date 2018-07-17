@@ -353,9 +353,7 @@ Templates:
 			5: Water
 			6: Water
 			7: Water
-# Sea edge/corner types Order
-# 128: BRI, BLI, B, TLI, TR/BL-O, L, TRO, TRI, R, TL/BR-O, TLO, T, BLO, BRO
-	Template@27:
+	Template@27: # Sea edge/corner types Order  128: BRI, BLI, B, TLI, TR/BL-O, L, TRO, TRI, R, TL/BR-O, TLO, T, BLO, BRO
 		Id: 27
 		Images: auralien.til
 		Size: 1,1

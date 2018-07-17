@@ -720,7 +720,7 @@ LaserTurret:
 		InitialFacing: 56
 		Offset: 256,-24,255
 	Armament:
-		Weapon: LaserTurretRifle
+		Weapon: GatLaser
 		LocalOffset: 512,0,112
 
 # Imperium plasma turret
@@ -742,7 +742,7 @@ PlasmaTurret:
 		InitialFacing: 56
 		Offset: 256,-24,255
 	Armament:
-		Weapon: PlasmaRifle
+		Weapon: GatPlasma
 		LocalOffset: 512,0,112
 
 # FG heavy rail turret
@@ -780,7 +780,7 @@ HeavyRailTurret:
 		InitialFacing: 56
 		Offset: 256,-24,255
 	Armament:
-		Weapon: LaserRifle
+		Weapon: FixedLaserPlat
 		LocalOffset: 512,0,112
 	WithSpriteTurret:
 	AttackTurreted:
@@ -829,8 +829,8 @@ NeutronAccelerator:
 		InitialFacing: 56
 		Offset: 256,-24,255
 	Armament:
-		Weapon: PlasmaRifle
-		LocalOffset: 512,0,112
+		Weapon: NeutronAss
+		LocalOffset: 0,-256,0
 	WithSpriteTurret:
 	AttackTurreted:
 	WithMuzzleOverlay:
@@ -871,7 +871,7 @@ AntiAirTurret.human:
 		InitialFacing: 56
 		Offset: 256,-24,255
 	Armament:
-		Weapon: FlakJackWeapon
+		Weapon: FixedGroundToAirLaser
 		LocalOffset: 512,0,112
 
 # Imperium anti-air turret
@@ -903,7 +903,7 @@ AntiAirTurret.cyborg:
 		InitialFacing: 56
 		Offset: 256,-24,255
 	Armament:
-		Weapon: FlakJackWeapon
+		Weapon: IMPFixedGroundToAirLaser
 		LocalOffset: 512,0,112
 
 # Camera tower

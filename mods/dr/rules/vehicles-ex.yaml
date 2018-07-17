@@ -60,7 +60,7 @@ GeminiTank:
 	Turreted:
 		TurnSpeed: 5
 	Armament:
-		Weapon: PlasmaTankWeapon
+		Weapon: PlasmaCannon
 		Recoil: 128
 		RecoilRecovery: 38
 		LocalOffset: 720,0,80
@@ -119,7 +119,7 @@ Fury:
 	Turreted:
 		TurnSpeed: 5
 	Armament:
-		Weapon: PlasmaTankWeapon
+		Weapon: PlasmaCannon
 		Recoil: 128
 		RecoilRecovery: 38
 		LocalOffset: 720,0,80
@@ -152,7 +152,7 @@ EMPDevice:
 	Armor:
 		Type: Tank
 	Armament:
-		Weapon: TachionTankWeapon
+		Weapon: TachyonCannon
 
 #RoadTerraformer:
 #	Inherits: ^DrAnimatedVehicle

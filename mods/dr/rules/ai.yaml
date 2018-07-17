@@ -1,8 +1,9 @@
 Player:
-	HackyAI@TestAI:
-		Name: Test AI
+	HackyAI@NormalAI:
+		Name: Normal AI
 		Type: normal
 		MinimumExcessPower: 60
+		BuildingQueues: Building, Upgrade
 		BuildingCommonNames:
 			ConstructionYard: constructionrig
 			HQ: hq.human,hq.cyborg
@@ -11,8 +12,10 @@ Player:
 			Barracks: trainingfacility.fguard, trainingfacility.cyborg
 			VehiclesFactory: assemblyplant.human, assemblyplant.cyborg
 			Production: trainingfacility.fguard, trainingfacility.cyborg, assemblyplant.human, assemblyplant.cyborg
+			Rearming: rearmingdeck.human, rearmingdeck.human.cyborg
 		UnitsCommonNames:
 			Mcv: constructionrig
+			ExcludeFromSquads: freighter, hoverfreighter, constructionrig
 		BuildingLimits:
 			hq.human: 1
 			hq.cyborg: 1
@@ -31,44 +34,215 @@ Player:
 			trainingfacility.cyborg: 70%
 			assemblyplant.human: 60%
 			assemblyplant.cyborg: 60%
+			upgrade.hq1: 50%
+			upgrade.barracks1: 50%
+			upgrade.assemblyplant1: 50%
+			upgrade.hq2: 50%
 		UnitsToBuild:
-			freighter: 0%
+			raider: 25%
+			guardian: 25%
+			mercenary: 15%
+			bion: 15%
+			sniper: 0.5%
+			exterminator: 0.5%
+			#scout: 0.5%
+			medic: 0.1%
+			#saboteur: 0.1%
+			#mechanic: 0.1%
+			martyr: 1%
+			#infiltrator: 0.1%
+			spiderbike: 15%
+			#rat: 1%
+			skirmishtank: 25%
+			tankhunter: 2%
+			#phasetank: 0.1%
+			flakjack: 1%
+			triplerailhovertank: 50%
+			hellstormartillery: 20%
+			skybike: 5%
+			outrider: 15%
+			#shockwave: 1%
+			#watercontaminator: 1%
+			scoutrunner: 10%
+			#itt: 5%
+			plasmatank: 25%
+			#amper: 30%
+			mad: 1%
+			#recondrone: 5%
+			#shredder: 30%
+			#hostagetaker: 15%
+			tachiontank: 50%
+			scarab: 20%
+			cyclone: 15%
+			skyfortress: 2%
+		UnitLimits:
+			freighter: 4
+		SquadSize: 20
+	HackyAI@InfantryAI:
+		Name: Infantry AI
+		Type: infantry
+		MinimumExcessPower: 60
+		BuildingQueues: Building, Upgrade
+		BuildingCommonNames:
+			ConstructionYard: constructionrig
+			HQ: hq.human,hq.cyborg
+			Refinery: waterlaunchpad
+			Power: power
+			Barracks: trainingfacility.fguard, trainingfacility.cyborg
+			VehiclesFactory: assemblyplant.human, assemblyplant.cyborg
+			Production: trainingfacility.fguard, trainingfacility.cyborg, assemblyplant.human, assemblyplant.cyborg
+			Rearming: rearmingdeck.human, rearmingdeck.human.cyborg
+		UnitsCommonNames:
+			Mcv: constructionrig
+			ExcludeFromSquads: freighter, hoverfreighter, constructionrig
+		BuildingLimits:
+			hq.human: 1
+			hq.cyborg: 1
+			trainingfacility.fguard: 1
+			trainingfacility.cyborg: 1
+			assemblyplant.human: 1
+			assemblyplant.cyborg: 1
+			waterlaunchpad: 4
+			power: 6
+		BuildingFractions:
+			waterlaunchpad: 40%
+			power: 10%
+			hq.human: 20%
+			hq.cyborg: 20%
+			trainingfacility.fguard: 70%
+			trainingfacility.cyborg: 70%
+			assemblyplant.human: 20%
+			assemblyplant.cyborg: 20%
+		UnitsToBuild:
+			#freighter: 0%
 			raider: 65%
 			guardian: 65%
 			mercenary: 25%
 			bion: 25%
 			sniper: 15%
 			exterminator: 15%
-			#scout: 1%
+			scout: 1%
 			medic: 1%
-			#saboteur: 1%
-			#mechanic: 1%
-			#martyr: 1%
-			#infiltrator: 1%
-			spiderbike: 15%
+			saboteur: 1%
+			mechanic: 1%
+			martyr: 1%
+			infiltrator: 1%
+			#spiderbike: 15%
 			#rat: 1%
-			skirmishtank: 40%
-			tankhunter: 10%
+			#skirmishtank: 40%
+			#tankhunter: 10%
 			#phasetank: 1%
 			#flakjack: 50%
-			triplerailhovertank: 70%
-			hellstormartillery: 40%
-			skybike: 10%
-			outrider: 15%
+			#triplerailhovertank: 70%
+			#hellstormartillery: 40%
+			#skybike: 10%
+			#outrider: 15%
 			#shockwave: 1%
 			#watercontaminator: 1%
-			scoutrunner: 10%
+			#scoutrunner: 10%
 			#itt: 5%
-			plasmatank: 30%
+			#plasmatank: 30%
 			#amper: 30%
 			#mad: 15%
 			#recondrone: 5%
 			#shredder: 30%
 			#hostagetaker: 15%
-			tachiontank: 50%
-			scarab: 35%
-			cyclone: 15%
-			skyfortress: 5%
+			#tachiontank: 50%
+			#scarab: 35%
+			#cyclone: 15%
+			#skyfortress: 5%
 		UnitLimits:
-			harv: 4
-		SquadSize: 20
+			freighter: 0
+		SquadSize: 30
+	HackyAI@AirAI:
+		Name: Air AI
+		Type: air
+		MinimumExcessPower: 60
+		BuildingQueues: Building, Upgrade
+		BuildingCommonNames:
+			ConstructionYard: constructionrig
+			HQ: hq.human,hq.cyborg
+			Refinery: waterlaunchpad
+			Power: power
+			Barracks: trainingfacility.fguard, trainingfacility.cyborg
+			VehiclesFactory: assemblyplant.human, assemblyplant.cyborg
+			Production: trainingfacility.fguard, trainingfacility.cyborg, assemblyplant.human, assemblyplant.cyborg
+			Rearming: rearmingdeck.human, rearmingdeck.human.cyborg
+		UnitsCommonNames:
+			Mcv: constructionrig
+			ExcludeFromSquads: freighter, hoverfreighter, constructionrig
+		BuildingLimits:
+			hq.human: 1
+			hq.cyborg: 1
+			trainingfacility.fguard: 1
+			trainingfacility.cyborg: 1
+			assemblyplant.human: 1
+			assemblyplant.cyborg: 1
+			waterlaunchpad: 4
+			power: 6
+			upgrade.hq1: 1
+			upgrade.barracks1: 1
+			upgrade.assemblyplant1: 1
+			upgrade.hq2: 1
+			rearmingdeck.human: 1
+			rearmingdeck.cyborg: 1
+		BuildingFractions:
+			waterlaunchpad: 40%
+			power: 10%
+			hq.human: 20%
+			hq.cyborg: 20%
+			trainingfacility.fguard: 70%
+			trainingfacility.cyborg: 70%
+			assemblyplant.human: 20%
+			assemblyplant.cyborg: 20%
+			upgrade.hq1: 50%
+			upgrade.barracks1: 50%
+			upgrade.assemblyplant1: 50%
+			upgrade.hq2: 50%
+			rearmingdeck.human: 100%
+			rearmingdeck.cyborg: 100%
+		UnitsToBuild:
+			upgrade.hq1: 50%
+			upgrade.barracks1: 50%
+			upgrade.assemblyplant1: 50%
+			upgrade.hq2: 50%
+			#freighter: 0%
+			#raider: 65%
+			#guardian: 65%
+			#mercenary: 25%
+			#bion: 25%
+			#sniper: 15%
+			#exterminator: 15%
+			#scout: 1%
+			#medic: 1%
+			#saboteur: 1%
+			#mechanic: 1%
+			#martyr: 1%
+			#infiltrator: 1%
+			#spiderbike: 15%
+			#rat: 1%
+			#skirmishtank: 40%
+			#tankhunter: 10%
+			#phasetank: 1%
+			#flakjack: 50%
+			#triplerailhovertank: 70%
+			#hellstormartillery: 40%
+			skybike: 50%
+			outrider: 90%
+			#shockwave: 1%
+			#watercontaminator: 1%
+			#scoutrunner: 10%
+			#itt: 5%
+			#plasmatank: 30%
+			#amper: 30%
+			#mad: 15%
+			recondrone: 5%
+			#shredder: 30%
+			#hostagetaker: 15%
+			#tachiontank: 50%
+			#scarab: 35%
+			cyclone: 85%
+			skyfortress: 15%
+		UnitLimits:
+			freighter: 0
+		SquadSize: 30

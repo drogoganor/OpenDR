@@ -210,21 +210,21 @@ GenericExplode:
 		Damage: 2
 	Warhead@3Eff: CreateEffect
 		Explosions: ecexpmd0,ecexpmd1
-		ValidTargets: Ground, Ship, Trees
+		ValidTargets: Ground, Ship, Trees, Structures
 
-FlakJackWeapon: #Chaff
+Chaff: # Flack Jack
 	Inherits: ^C1
-	ReloadDelay: 30
+	ReloadDelay: 15
 	Range: 8c0
 	Report: gxflkwc0.wav
 	ValidTargets: Air
 	Projectile: Bullet
-		Speed: 554 # 13
+		Speed: 555
 		Image: eochfpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
-		Spread: 400 # 50 * (1024 / 64)
+		Spread: 400
 		Damage: 8
 	Warhead@3Eff: CreateEffect
 		Explosions: eochfex0
@@ -241,91 +241,79 @@ LaserRifle:
 	ReloadDelay: 8
 	Range: 4c0
 	Report: gxlgnwc0.wav
-	ValidTargets: Air, Ground
+	ValidTargets: Ground
 	Projectile: Bullet
-		Speed: 853 # 20
+		Speed: 853
 		Image: eolaspr2.spr
 		Shadow: False
-		ValidTargets: Air, Ground
+		ValidTargets: Ground
 	Warhead@1Dam: SpreadDamage
-		Spread: 64 # 8 * (1024 / 64)
+		Spread: 64
 		Damage: 11
 	Warhead@3Eff: CreateEffect
 		Explosions: eolasex0
-		ValidTargets: Air, Ground, Ship, Trees
+		ValidTargets: Ground, Ship, Trees
 
-LaserTurretRifle:
-	Inherits: LaserRifle
-	Inherits: ^E2Turret
-	ReloadDelay: 10
-	Range: 9c0
-	Report: gxlgnwc0.wav
-	Projectile: Bullet
-		Speed: 426 # 20
-	Warhead@1Dam: SpreadDamage
-		Spread: 64 # 8 * (1024 / 64)
-		Damage: 13
-
-MercWeapon:
+RailGun:
 	Inherits: ^E1
 	ReloadDelay: 11
 	Range: 5c0
 	Report: gxmrcwc0.wav
 	Projectile: Bullet
-		Speed: 853 # 20
+		Speed: 853
 		Image: eorgnpr5.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 64 # 8 * (1024 / 64)
+		Spread: 64
 		Damage: 11
 	Warhead@3Eff: CreateEffect
 		Explosions: eorgnex2
 		ValidTargets: Ground, Ship, Trees
 
-SpiderBikeWeapon:
+DoubleRailGun:
 	Inherits: ^E1
 	ReloadDelay: 13
 	Range: 5c0
 	Report: gxspbwc0.wav
 	Projectile: Bullet
-		Speed: 853 # 20
+		Speed: 853
 		Image: eorgnpr3.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 64 # 8 * (1024 / 64)
+		Spread: 64
 		Damage: 10
 	Warhead@3Eff: CreateEffect
 		Explosions: eorgnex1
 		ValidTargets: Ground, Ship, Trees
 		
-TripleRailTankWeapon: #TripleRailGun
+TripleRailGun:
 	Inherits: ^E1
 	ReloadDelay: 20
 	Range: 8c0
 	Report: gxtrtwc0.wav
 	Projectile: Bullet
-		Speed: 853 # 20
+		Speed: 853
 		Image: eorgnpr2.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 160 # 20 * (1024 / 64)
+		Spread: 160
 		Damage: 24
 	Warhead@3Eff: CreateEffect
 		Explosions: eorgnex0
 		ValidTargets: Ground, Ship, Trees
 
-SkirmishTankWeapon:
+SkirmishGun1:
 	Inherits: ^M2
 	ReloadDelay: 20
 	Range: 6c0
 	Report: gxsktwc0.wav
 	ValidTargets: Air, Ground
 	Projectile: Bullet
-		Speed: 384 # 9 (4-10)
+		Speed: 341
 		Image: eomispr4.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 80 # 10 * (1024 / 64)
+		Spread: 80
 		Damage: 14
 	Warhead@3Eff: CreateEffect
 		Explosions: eoblatr0,eoblatr1
@@ -336,31 +324,31 @@ SkirmishTankWeapon:
 
 SniperRifle:
 	Inherits: ^S1
-	ReloadDelay: 14
+	ReloadDelay: 50
 	Range: 8c0
 	Report: gxsnpwc0.wav
 	Projectile: Bullet
-		Speed: 853 # 20
+		Speed: 853
 		Image: eorgnpr1.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 64 # 8 * (1024 / 64)
+		Spread: 64
 		Damage: 150
 	Warhead@3Eff: CreateEffect
 		Explosions: eorgnex1
 		ValidTargets: Ground, Ship, Trees
 
-PlasmaTankWeapon:
+PlasmaCannon:
 	Inherits: ^E3
 	ReloadDelay: 15
 	Range: 5c0
 	Report: gxpltwc0.wav
 	Projectile: Bullet
-		Speed: 853 # 20
+		Speed: 853
 		Image: eoplspr1.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 64 # 8 * (1024 / 64)
+		Spread: 64
 		Damage: 19
 	Warhead@3Eff: CreateEffect
 		Explosions: eoplsex2
@@ -373,42 +361,29 @@ PlasmaRifle: # Bion
 	Report: gxbonwc0.wav
 	ValidTargets: Air, Ground
 	Projectile: Bullet
-		Speed: 725 # 17
+		Speed: 725
 		Image: eoplspr0.spr # wrong
 		Shadow: False
+		ValidTargets: Air, Ground
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, Ground
-		Spread: 64 # 8 * (1024 / 64)
+		Spread: 64
 		Damage: 18
 	Warhead@3Eff: CreateEffect
 		Explosions: eoplsex0
 		ValidTargets: Air, Ground, Ship, Trees
 
-PlasmaTurretRifle:
-	Inherits: PlasmaRifle
-	Inherits: ^E3Turret
-	ReloadDelay: 10
-	Range: 5c0
-		Speed: 360 # 17
-	Warhead@1Dam: SpreadDamage
-		ValidTargets: Air, Ground
-		Spread: 64 # 8 * (1024 / 64)
-		Damage: 10
-	Warhead@3Eff: CreateEffect
-		Explosions: eoplsex0
-		ValidTargets: Air, Ground, Ship, Trees
-
-TachionTankWeapon:
+TachyonCannon:
 	Inherits: ^E4
 	ReloadDelay: 20
 	Range: 8c0
 	Report: gxtctwc0.wav
 	Projectile: Bullet
-		Speed: 1493 # 35
+		Speed: 1493
 		Image: eotacpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 160 # 20 * (1024 / 64)
+		Spread: 160
 		Damage: 30
 	Warhead@3Eff: CreateEffect
 		Explosions: eotacex0
@@ -416,15 +391,15 @@ TachionTankWeapon:
 
 SkyFortressWeapon: #FortressCannon
 	Inherits: ^E3
-	ReloadDelay: 800 # 40 if charged
+	ReloadDelay: 20
 	Range: 7c0
 	Report: gxskywc0.wav
 	Projectile: Bullet
-		Speed: 1493 # 35
+		Speed: 1493
 		Image: eoskypr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 288 # 36 * (1024 / 64)
+		Spread: 288
 		Damage: 650
 	Warhead@3Eff: CreateEffect
 		Explosions: eoplsex4 # eoplsex0, eoplsex2
@@ -436,90 +411,142 @@ SkyFortressWeapon: #FortressCannon
 		Explosions: eoplsex2
 		ValidTargets: Ground, Ship, Trees
 
-CycloneWeapon: # CycloneCannon
+CycloneCannon:
 	Inherits: ^G1
-	#Ammo 5
 	ReloadDelay: 10
 	Range: 6c0
 	Report: gxcycwc0.wav
 	ValidTargets: Air, Ground
 	Projectile: Bullet
-		Speed: 853 # 20
+		Speed: 853
 		Image: eoncnpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, Ground
-		Spread: 80 # 10 * (1024 / 64)
+		Spread: 80
 		Damage: 24
 	Warhead@3Eff: CreateEffect
 		Explosions: eoncnex0
 		ValidTargets: Air, Ground, Ship, Trees
 
-MartyrWeapon: # SuicideNuke
+SuicideNuke:
 	Inherits: ^E3
-	Range: 3c0
+	Range: 2c0
 	ValidTargets: Ground, Trees, Water, Underwater, Air
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 800 # 100 * (1024 / 64)
+		Spread: 800
 		Damage: 180
 		ValidTargets: Ground, Trees, Water, Air
 		AffectsParent: true
 	Warhead@3Eff_impact: CreateEffect
-		Explosions: ecexpsp1 # eoexpsp1
+		Explosions: ecexpsp1
 		ImpactSounds: gxmtrwc0.wav
-		ImpactActors: false
+		ImpactActors: true
 
-PhaseTankWeapon: #PhaseTankCannon
+PhaseTankCannon:
 	Inherits: ^E2
 	ReloadDelay: 13
 	Range: 6c0
 	Report: gxphtwc0.wav
 	Projectile: Bullet
-		Speed: 853 # 20
+		Speed: 853
 		Image: eolaspr4.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 80 # 10 * (1024 / 64)
+		Spread: 80
 		Damage: 30
 	Warhead@3Eff: CreateEffect
 		Explosions: eolasex0
 		ValidTargets: Ground, Ship, Trees
 
-ScoutRunnerWeapon: # LaserCannon
+LaserCannon:
 	Inherits: ^E2
 	ReloadDelay: 13
 	Range: 6c0
 	Report: gxsttwc0.wav
 	Projectile: Bullet
-		Speed: 853 # 20
+		Speed: 853
 		Image: eolaspr3.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 80 # 10 * (1024 / 64)
+		Spread: 80
 		Damage: 10
 	Warhead@3Eff: CreateEffect
 		Explosions: eolasex1
 		ValidTargets: Ground, Ship, Trees
 
-MADWeapon: # GroundToAirLaser
+FixedGroundToAirLaser:
+	Inherits: ^A1
+	ReloadDelay: 14
+	Range: 10c0
+	Report: gxfaawc0.wav
+	ValidTargets: Air
+	Projectile: Bullet
+		Speed: 4096
+		Image: eolaspr1.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 160 # SHOULD BE 80
+		Damage: 40
+		ValidTargets: Air
+	Warhead@3Eff: CreateEffect
+		Explosions: eolasex1
+		ValidTargets: Air, Trees
+
+IMPFixedGroundToAirLaser:
+	Inherits: ^A1
+	ReloadDelay: 14
+	Range: 10c0
+	Report: gxiaawc0.wav
+	ValidTargets: Air
+	Projectile: Bullet
+		Speed: 4096
+		Image: eoorbpr0.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 160 # SHOULD BE 80
+		Damage: 40
+		ValidTargets: Air
+	Warhead@3Eff: CreateEffect
+		Explosions: eoblatr0
+		ValidTargets: Air, Trees
+
+FixedLaserPlat:
+	Inherits: ^E1
+	ReloadDelay: 10
+	Range: 9c0
+	Report: gxfagwc0.wav
+	Projectile: Bullet
+		Speed: 853
+		Image: eorgnpr3.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 13
+	Warhead@3Eff: CreateEffect
+		Explosions: eorgnex2
+		ValidTargets: Ground, Ship, Trees
+
+GroundToAirLaser:
 	Inherits: ^A1
 	ReloadDelay: 20
 	Range: 8c0
 	ValidTargets: Air
 	Report: gxmadwc0.wav
 	Projectile: Bullet
-		Speed: 1706 # 40
+		Speed: 1707
 		Image: eoorbpr0.spr
 		Shadow: False
+		ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
-		Spread: 64 # 8 * (1024 / 64)
+		Spread: 64
 		Damage: 48
 	Warhead@3Eff: CreateEffect
 		Explosions: eoblatr0
 		ValidTargets: Air, Trees
 
-SkyBikeWeapon:
+BkLaser:
 	Inherits: ^A1
 	#Ammo 20
 	ReloadDelay: 7
@@ -527,113 +554,167 @@ SkyBikeWeapon:
 	Report: gxskbwc0.wav
 	ValidTargets: Air, Ground
 	Projectile: Bullet
-		Speed: 1280 # 30 (1-60)
+		Speed: 1707
 		Image: eomispr0.spr
 		Shadow: False
+		ValidTargets: Air, Ground
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, Ground
-		Spread: 64 # 10 * (1024 / 64)
+		Spread: 80
 		Damage: 10
 	Warhead@3Eff: CreateEffect
 		Explosions: eosmosm2
 		ValidTargets: Air, Ground, Ship, Trees
 
-ExterminatorWeapon: #PolyAcid
+GatLaser:
+	Inherits: ^E2
+	ReloadDelay: 3
+	Range: 5c0
+	Report: gxfgtwc0.wav
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 853
+		Image: eolaspr3.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Ground
+		Spread: 64
+		Damage: 10
+	Warhead@3Eff: CreateEffect
+		Explosions: eolasex0
+		ValidTargets: Ground, Ship, Trees
+
+GatPlasma:
+	Inherits: ^E3
+	ReloadDelay: 3
+	Range: 5c0
+	Report: gxigtwc0.wav
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 853
+		Image: eoplspr1.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Ground
+		Spread: 64
+		Damage: 10
+	Warhead@3Eff: CreateEffect
+		Explosions: eoplsex2
+		ValidTargets: Ground, Ship, Trees
+
+
+PolyAcid:
 	Inherits: ^M3
 	ReloadDelay: 20
 	Range: 5c0
 	Report: gxextwc1.wav
 	Projectile: Bullet
-		Speed: 213 # 5
+		Speed: 213
 		Image: eorfgpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 192 # 24 * (1024 / 64)
+		Spread: 192
 		Damage: 15
 	Warhead@3Eff: CreateEffect
 		Explosions: eorfgex0
 		ValidTargets: Ground, Ship, Trees
 
-TankHunterWeapon: #TankHunterGun
+TankHunterGun:
 	Inherits: ^E5
 	ReloadDelay: 20
 	Range: 3c0
 	Report: gxthnwc0.wav
 	Projectile: Bullet
-		Speed: 426 # 10
+		Speed: 427
 		Image: eothnpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 64 # 8 * (1024 / 64)
+		Spread: 64
 		Damage: 60
 	Warhead@3Eff: CreateEffect
 		Explosions: eothnex0
 		ValidTargets: Ground, Ship, Trees
 
-OutriderWeapon: #OutriderMissile
+OutriderMissile:
 	Inherits: ^M1
 	ReloadDelay: 10
 	#Ammo 10
 	Range: 5c0
 	Report: gxoutwc0.wav
 	Projectile: Bullet
-		Speed: 426 # 10 (.5-15)
+		Speed: 555
 		Image: eomispr1.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 320 # 40 * (1024 / 64)
+		Spread: 320
 		Damage: 20
 	Warhead@3Eff: CreateEffect
 		Explosions: eooutex0
 		ValidTargets: Ground, Ship, Trees
 
-HellstormArtilleryWeapon: #ArtilleryShell
+ArtilleryShell:
 	Inherits: ^K2
 	ReloadDelay: 80
 	Range: 45c0
 	#MinRange: 3
 	Report: gxfarwc0.wav
 	Projectile: Bullet
-		Speed: 426 # 10
+		Speed: 341
 		Image: eofarpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 800 # 100 * (1024 / 64)
+		Spread: 800
 		Damage: 30
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: gxex1oc0.wav
 		Explosions: eofarex0
 		ValidTargets: Ground, Ship, Trees
 
-ScarabWeapon: # IMPArtilleryShell
+IMPArtilleryShell:
 	Inherits: ^K2
 	ReloadDelay: 80
 	Range: 45c0
 	Report: gxiarwc0.wav
 	Projectile: Bullet
-		Speed: 298 # 7
+		Speed: 299
 		Image: eoiarpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 800 # 100 * (1024 / 64)
+		Spread: 800
 		Damage: 30
 	Warhead@3Eff: CreateEffect
 		ImpactSounds: gxex1oc0.wav
 		Explosions: eoiarex0
 		ValidTargets: Ground, Ship, Trees
 
-AmperWeapon: #AmperAmp
+AmperAmp:
 	Inherits: ^H1
 	ReloadDelay: 10
 	Range: 5c0
 	Report: gxampwc0.wav
 	Projectile: Bullet
-		Speed: 853 # 20
+		Speed: 853
 		Image: eolaspr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 56 # 7 * (1024 / 64)
+		Spread: 12
 		Damage: 100
+	Warhead@3Eff: CreateEffect
+		Explosions: eopamex0
+		ValidTargets: Ground, Ship, Trees
+
+NeutronAss:
+	Inherits: ^E3
+	ReloadDelay: 32
+	Range: 9c0
+	Report: gxampwc0.wav
+	Projectile: Bullet
+		Speed: 1493
+		Image: eolaspr0.spr
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 180
 	Warhead@3Eff: CreateEffect
 		Explosions: eopamex0
 		ValidTargets: Ground, Ship, Trees

@@ -30,25 +30,8 @@
 	Mobile:
 		Speed: 56
 		Crushes: mine, crate
-		TerrainSpeeds:
-			Clear: 100
-			Normal2: 100
-			Normal3: 100
-			Muddy1: 50
-			Muddy2: 50
-			Rough1: 30
-			Rough2: 30
-			Road: 100
-			RoadBase: 100
-			HillSlope1: 20
-			HillSlope2: 20
-			Cliff1: 10
-			Cliff2: 10
-			Cliff3: 10
-			Cliff4: 10
-			SpringWater: 100
-			Taelon: 100
-		TurnSpeed: 5
+		Locomotor: wheeled
+		TurnSpeed: 10
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -98,8 +81,7 @@
 	Hovers:
 		OffsetModifier: 0
 	Mobile:
-		TerrainSpeeds:
-			Water: 50
+		Locomotor: hovering
 
 ConstructionRig:
 	Inherits: ^DrAnimatedVehicle
@@ -252,7 +234,7 @@ SpiderBike:
 	Armor:
 		Type: Tank
 	Armament:
-		Weapon: SpiderBikeWeapon
+		Weapon: DoubleRailGun
 
 RAT:
 	Inherits: ^DrHoverAnimatedVehicle
@@ -314,7 +296,7 @@ SkirmishTank:
 	Armor:
 		Type: Tank
 	Armament:
-		Weapon: SkirmishTankWeapon
+		Weapon: SkirmishGun1
 
 TankHunter:
 	Inherits: ^DrAnimatedVehicle
@@ -340,7 +322,7 @@ TankHunter:
 	Armor:
 		Type: Tank
 	Armament:
-		Weapon: TankHunterWeapon
+		Weapon: TankHunterGun
 
 PhaseTank:
 	Inherits: ^DrAnimatedVehicle
@@ -366,7 +348,7 @@ PhaseTank:
 	Armor:
 		Type: Tank
 	Armament:
-		Weapon: PhaseTankWeapon
+		Weapon: PhaseTankCannon
 phasing
 
 FlakJack:
@@ -394,7 +376,7 @@ FlakJack:
 	Armor:
 		Type: Tank
 	Armament:
-		Weapon: FlakJackWeapon
+		Weapon: Chaff
 
 TripleRailHoverTank:
 	Inherits: ^DrHoverAnimatedVehicle
@@ -422,7 +404,7 @@ TripleRailHoverTank:
 	Turreted:
 		TurnSpeed: 5
 	Armament:
-		Weapon: TripleRailTankWeapon
+		Weapon: TripleRailGun
 		Recoil: 128
 		RecoilRecovery: 38
 		LocalOffset: 720,0,80
@@ -455,7 +437,7 @@ HellstormArtillery:
 	Armor:
 		Type: Tank
 	Armament:
-		Weapon: HellstormArtilleryWeapon
+		Weapon: ArtilleryShell
 
 ShockWave:
 	Inherits: ^DrAnimatedVehicle
@@ -542,7 +524,7 @@ ScoutRunner:
 	Armor:
 		Type: Tank
 	Armament:
-		Weapon: ScoutRunnerWeapon
+		Weapon: LaserCannon
 
 ITT:
 	Inherits: ^DrHoverAnimatedVehicle
@@ -596,7 +578,7 @@ PlasmaTank:
 	Turreted:
 		TurnSpeed: 5
 	Armament:
-		Weapon: PlasmaTankWeapon
+		Weapon: PlasmaCannon
 		Recoil: 128
 		RecoilRecovery: 38
 		LocalOffset: 720,0,80
@@ -629,7 +611,7 @@ Amper:
 	Armor:
 		Type: Tank
 	Armament:
-		Weapon: AmperWeapon
+		Weapon: AmperAmp
 
 MAD:
 	Inherits: ^DrAnimatedVehicle
@@ -656,7 +638,7 @@ MAD:
 	Armor:
 		Type: Tank
 	Armament:
-		Weapon: MADWeapon
+		Weapon: GroundToAirLaser
 
 Shredder:
 	Inherits: ^DrHoverAnimatedVehicle
@@ -730,7 +712,7 @@ TachionTank:
 	Armor:
 		Type: Tank
 	Armament:
-		Weapon: TachionTankWeapon
+		Weapon: TachyonCannon
 
 Scarab:
 	Inherits: ^DrHoverAnimatedVehicle
@@ -756,4 +738,4 @@ Scarab:
 	Armor:
 		Type: Tank
 	Armament:
-		Weapon: ScarabWeapon
+		Weapon: IMPArtilleryShell

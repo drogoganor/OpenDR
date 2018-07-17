@@ -21,7 +21,7 @@ Avenger:
 	Armor:
 		Type: Aircraft
 	Armament:
-		Weapon: CycloneWeapon
+		Weapon: CycloneCannon
 	Aircraft:
 		Speed: 240
 	AttackHeli:

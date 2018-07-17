@@ -23,25 +23,8 @@
 		Speed: 56
 		Crushes: mine, crate
 		SharesCell: false
-		TerrainSpeeds:
-			Clear: 100
-			Normal2: 100
-			Normal3: 100
-			Muddy1: 80
-			Muddy2: 80
-			Rough1: 60
-			Rough2: 60
-			Road: 100
-			RoadBase: 100
-			HillSlope1: 30
-			HillSlope2: 30
-			Cliff1: 20
-			Cliff2: 20
-			Cliff3: 20
-			Cliff4: 20
-			SpringWater: 100
-			Taelon: 100
-		TurnSpeed: 50
+		Locomotor: foot
+		TurnSpeed: 30
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -136,6 +119,8 @@ Civilian:
 
 Raider:
 	Inherits: ^DrSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGET: ^AutoTargetAir
 	RenderSprites:
 		Image: ufradst0.spr
 	Tooltip:
@@ -184,7 +169,7 @@ Mercenary:
 	Armor:
 		Type: Infantry
 	Armament@PRIMARY:
-		Weapon: MercWeapon
+		Weapon: RailGun
 
 Sniper:
 	Inherits: ^DrSoldier
@@ -360,12 +345,14 @@ Martyr:
 		Type: Infantry
 	-Armament@PRIMARY:
 	Explodes:
-		Weapon: MartyrWeapon
-		EmptyWeapon: MartyrWeapon
+		Weapon: SuicideNuke
+		EmptyWeapon: SuicideNuke
 	AttackSuicides:
 
 Guardian:
 	Inherits: ^DrSoldier
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	Inherits@AUTOTARGET: ^AutoTargetAir
 	RenderSprites:
 		Image: uigrdst0.spr
 	Tooltip:
@@ -392,6 +379,7 @@ Bion:
 	Inherits: ^DrSoldier
 	RenderSprites:
 		Image: uibonst0.spr
+	Inherits@AUTOTARGET: ^AutoTargetAir
 	Tooltip:
 		Name: Bion
 	Buildable:
@@ -438,7 +426,7 @@ Exterminator:
 	Armor:
 		Type: Infantry
 	Armament@PRIMARY:
-		Weapon: ExterminatorWeapon
+		Weapon: PolyAcid
 	Hovers:
 		OffsetModifier: -16
 

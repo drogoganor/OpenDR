@@ -77,6 +77,69 @@
 		ValuePerUnit: 25
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true
+	Locomotor@FOOT:
+		Name: foot
+		TerrainSpeeds:
+			Clear: 100
+			Normal2: 100
+			Normal3: 100
+			Muddy1: 90
+			Muddy2: 90
+			Rough1: 80
+			Rough2: 80
+			Road: 100
+			RoadBase: 100
+			HillSlope1: 65
+			HillSlope2: 65
+			Cliff1: 60
+			Cliff2: 60
+			Cliff3: 60
+			Cliff4: 60
+			SpringWater: 100
+			Taelon: 100
+	Locomotor@WHEELED:
+		Name: wheeled
+		TerrainSpeeds:
+			Clear: 100
+			Normal2: 100
+			Normal3: 100
+			Muddy1: 75
+			Muddy2: 75
+			Rough1: 80
+			Rough2: 80
+			Road: 100
+			RoadBase: 100
+			HillSlope1: 60
+			HillSlope2: 60
+			Cliff1: 50
+			Cliff2: 50
+			Cliff3: 50
+			Cliff4: 50
+			SpringWater: 100
+			Taelon: 100
+	Locomotor@HOVERING:
+		Inherits: wheeled
+		Name: hovering
+		TerrainSpeeds:
+			Clear: 100
+			Normal2: 100
+			Normal3: 100
+			Muddy1: 80
+			Muddy2: 80
+			Rough1: 80
+			Rough2: 80
+			Road: 100
+			RoadBase: 100
+			HillSlope1: 80
+			HillSlope2: 80
+			Cliff1: 75
+			Cliff2: 75
+			Cliff3: 75
+			Cliff4: 75
+			SpringWater: 100
+			Taelon: 100
+			Water: 50
+
 World:
 	Inherits: ^BaseWorld
 	ChatCommands:
