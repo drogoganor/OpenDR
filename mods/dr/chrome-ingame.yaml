@@ -33,12 +33,12 @@ production-icons: chrome-ingame.png
 	ship-alert: 496,80,16,16
 	
 	# added for DR
-	upgrade: 400,0,16,16
-	upgrade-disabled: 400,16,16,16
-	upgrade-alert: 400,32,16,16
-	economy: 496,48,16,16
-	economy-disabled: 496,64,16,16
-	economy-alert: 496,80,16,16
+	economy: 480,0,16,16
+	economy-disabled: 480,16,16,16
+	economy-alert: 480,32,16,16
+	upgrade: 384,48,16,16
+	upgrade-disabled: 384,64,16,16
+	upgrade-alert: 384,80,16,16
 
 
 command-icons: chrome-ingame.png

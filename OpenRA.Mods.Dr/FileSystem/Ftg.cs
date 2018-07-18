@@ -41,7 +41,7 @@ namespace OpenRA.Mods.Dr.FileSystem
 
 				try
 				{
-					var identifier = stream.ReadBytes(4);
+					stream.ReadBytes(4);
 					var directoryOffset = BitConverter.ToInt32(stream.ReadBytes(4), 0);
 					var fileCount = BitConverter.ToInt32(stream.ReadBytes(4), 0);
 
