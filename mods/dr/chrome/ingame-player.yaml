@@ -493,6 +493,7 @@ Container@PLAYER_WIDGETS:
 					Children:
 						ProductionTypeButton@BUILDING:
 							Logic: AddFactionSuffixLogic
+							Y: 0
 							Width: 28
 							Height: 28
 							VisualHeight: 0
@@ -506,25 +507,9 @@ Container@PLAYER_WIDGETS:
 									X: 6
 									Y: 6
 									ImageCollection: production-icons
-						ProductionTypeButton@UPGRADE:
-							Logic: AddFactionSuffixLogic
-							Y: 31
-							Width: 28
-							Height: 28
-							VisualHeight: 0
-							Background: sidebar-button
-							TooltipText: Upgrade
-							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: Upgrade
-							Key: ProductionTypeUpgrade
-							Children:
-								Image@ICON:
-									X: 6
-									Y: 6
-									ImageCollection: production-icons
 						ProductionTypeButton@ECONOMY:
 							Logic: AddFactionSuffixLogic
-							Y: 62
+							Y: 31
 							Width: 28
 							Height: 28
 							VisualHeight: 0
@@ -540,7 +525,7 @@ Container@PLAYER_WIDGETS:
 									ImageCollection: production-icons
 						ProductionTypeButton@INFANTRY:
 							Logic: AddFactionSuffixLogic
-							Y: 93
+							Y: 62
 							Width: 28
 							Height: 28
 							VisualHeight: 0
@@ -556,7 +541,7 @@ Container@PLAYER_WIDGETS:
 									ImageCollection: production-icons
 						ProductionTypeButton@VEHICLE:
 							Logic: AddFactionSuffixLogic
-							Y: 124
+							Y: 93
 							Width: 28
 							Height: 28
 							VisualHeight: 0
@@ -565,6 +550,22 @@ Container@PLAYER_WIDGETS:
 							TooltipContainer: TOOLTIP_CONTAINER
 							ProductionGroup: Vehicle
 							Key: ProductionTypeVehicle
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@UPGRADE:
+							Logic: AddFactionSuffixLogic
+							Y: 124
+							Width: 28
+							Height: 28
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: Upgrade
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Upgrade
+							Key: ProductionTypeUpgrade
 							Children:
 								Image@ICON:
 									X: 6

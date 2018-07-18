@@ -101,7 +101,7 @@
 		Factions: shadowhand, togran
 		Prerequisite: hq.shadowhand
 	Production:
-		Produces: Building,Upgrade,Economy
+		Produces: Upgrade,Economy
 	PrimaryBuilding:
 		PrimaryCondition: primary
 	BaseBuilding:
@@ -110,15 +110,12 @@
 	Exit@1:
 		SpawnOffset: 0,0,0
 		ExitCell: 2,2
-		ProductionTypes: Economy,Upgrade
-	ProductionBar@Building:
-		ProductionType: Building
-	ProductionBar@Upgrade:
-		ProductionType: Upgrade
-		Color: 8A8A8A
+		ProductionTypes: Upgrade,Economy
 	ProductionBar@Economy:
 		ProductionType: Economy
 		Color: 8A8A8A
+	ProductionBar@Upgrade:
+		ProductionType: Upgrade
 	WithBuildingPlacedAnimation:
 	WithDeathAnimation:
 		DeathSequence: dead
@@ -293,7 +290,7 @@ upgrade.phasing:
 	Exit@1:
 		SpawnOffset: 512,256,0
 		ExitCell: 3,3
-		ProductionTypes: Soldier, Infantry
+		ProductionTypes: Soldier, Infantry, DrSoldier
 	Production:
 		Produces: Infantry, Soldier, DrSoldier
 	PrimaryBuilding:

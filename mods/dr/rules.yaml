@@ -150,7 +150,7 @@ World:
 	ScreenShaker:
 	BuildingInfluence:
 	ProductionQueueFromSelection:
-		ProductionTabsWidget: PRODUCTION_TABS
+		ProductionPaletteWidget: PRODUCTION_PALETTE
 	DomainIndex:
 	ResourceLayer:
 	ResourceClaimLayer:
@@ -217,29 +217,6 @@ Player:
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		SpeedUp: True
-	ClassicProductionQueue@Defense:
-		Type: Defense
-		LowPowerSlowdown: 3
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-		SpeedUp: True
-	ClassicProductionQueue@Vehicle:
-		Type: Vehicle
-		LowPowerSlowdown: 3
-		QueuedAudio: Building
-		SpeedUp: True
-		BuildTimeSpeedReduction: 100, 75, 60, 50
-	ClassicProductionQueue@Infantry:
-		Type: Infantry
-		LowPowerSlowdown: 3
-		SpeedUp: True
-	ClassicProductionQueue@Upgrade:
-		Type: Upgrade
-		#BuildDurationModifier: 250
-		#LowPowerSlowdown: 1
-		QueuedAudio: Upgrading
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: Upgrading
 	ClassicProductionQueue@Economy:
 		Type: Economy
 		#BuildDurationModifier: 250
@@ -247,6 +224,29 @@ Player:
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		BlockedAudio: NoRoom
+	ClassicProductionQueue@Infantry:
+		Type: Infantry
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	ClassicProductionQueue@Vehicle:
+		Type: Vehicle
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		SpeedUp: True
+		BuildTimeSpeedReduction: 100, 75, 60, 50
+	ClassicProductionQueue@Upgrade:
+		Type: Upgrade
+		#BuildDurationModifier: 250
+		#LowPowerSlowdown: 1
+		QueuedAudio: Upgrading
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: Upgrading
+	ClassicProductionQueue@Defense:
+		Type: Defense
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		SpeedUp: True
 	Shroud:
 		FogCheckboxDisplayOrder: 3
 		ExploredMapCheckboxEnabled: True

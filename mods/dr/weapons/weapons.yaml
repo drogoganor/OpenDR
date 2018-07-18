@@ -362,7 +362,7 @@ PlasmaRifle: # Bion
 	ValidTargets: Air, Ground
 	Projectile: Bullet
 		Speed: 725
-		Image: eoplspr0.spr # wrong
+		Image: eoplspr0.spr
 		Shadow: False
 		ValidTargets: Air, Ground
 	Warhead@1Dam: SpreadDamage
@@ -478,15 +478,15 @@ LaserCannon:
 FixedGroundToAirLaser:
 	Inherits: ^A1
 	ReloadDelay: 14
-	Range: 10c0
+	Range: 20c0
 	Report: gxfaawc0.wav
 	ValidTargets: Air
 	Projectile: Bullet
-		Speed: 4096
+		Speed: 1707
 		Image: eolaspr1.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 160 # SHOULD BE 80
+		Spread: 80
 		Damage: 40
 		ValidTargets: Air
 	Warhead@3Eff: CreateEffect
@@ -500,12 +500,12 @@ IMPFixedGroundToAirLaser:
 	Report: gxiaawc0.wav
 	ValidTargets: Air
 	Projectile: Bullet
-		Speed: 4096
+		Speed: 1707
 		Image: eoorbpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
-		Spread: 160 # SHOULD BE 80
-		Damage: 40
+		Spread: 80
+		Damage: 14
 		ValidTargets: Air
 	Warhead@3Eff: CreateEffect
 		Explosions: eoblatr0
