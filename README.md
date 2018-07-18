@@ -14,6 +14,8 @@ This mod uses assets from the freely available Dark Reign demo, or alternatively
 
 See the [wiki](https://github.com/drogoganor/DarkReign/wiki) for basic installation details if you want to try it at this early stage.
 
+Join us on [![Discord](https://img.shields.io/discord/102860784329052160.svg)](https://discord.gg/3MKcGSW) if you want to talk about the mod.
+
 ## Thanks to
 
 * [OpenRA](https://github.com/OpenRA/OpenRA) devs
