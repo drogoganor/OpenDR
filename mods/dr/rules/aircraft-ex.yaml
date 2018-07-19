@@ -19,7 +19,7 @@ Avenger:
 	RevealsShroud:
 		Range: 9c0
 	Armor:
-		Type: Aircraft
+		Type: FlyingArmour
 	Armament:
 		Weapon: CycloneCannon
 	Aircraft:
@@ -47,7 +47,7 @@ HadesBomber:
 	RevealsShroud:
 		Range: 9c0
 	Armor:
-		Type: Aircraft
+		Type: FlyingArmour
 	Armament:
 		Weapon: CycloneWeapon
 	Aircraft:

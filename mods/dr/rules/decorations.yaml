@@ -1,6 +1,8 @@
 
 ^DrRock:
 	Inherits: ^Tree
+	RadarColorFromTerrain:
+		Terrain: Rock
 	Tooltip:
 		Name: Rock
 	EditorTilesetFilter:
@@ -8,6 +10,8 @@
 
 ^DrCrater:
 	Inherits: ^Tree
+	RadarColorFromTerrain:
+		Terrain: Rock
 	Tooltip:
 		Name: Crater
 	EditorTilesetFilter:
@@ -22,6 +26,8 @@
 
 ^DrRubble:
 	Inherits: ^Tree
+	RadarColorFromTerrain:
+		Terrain: Rock
 	Tooltip:
 		Name: Rubble
 	-HitShape:

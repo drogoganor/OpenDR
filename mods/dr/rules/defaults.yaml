@@ -240,3 +240,5 @@
 	ScriptTriggers:
 	EditorTilesetFilter:
 		Categories: Tree
+	RadarColorFromTerrain:
+		Terrain: Tree

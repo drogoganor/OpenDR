@@ -10,197 +10,301 @@
 # Speed and Spread are calculated using this formula.
 
 
-^E1: #  Rail Gun: Mercenary,SpiderBike,HoverTank,HeavyRailPlatform
-	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 11
-		Versus:
-			Infantry: 100
-			Tank: 200
-			Building: 70
-			Aircraft: 0
-			Animal: 150
-		DamageTypes: DefaultDeath
+# A1 is the air defence laser, used on ImpMAD and AntiAircraftSite
+# B1 is the suicide bomber's bomb
+# B2 is the artillery shell
+# C1 is the Construction MAD's chaff attack
+# E1 is the rail gun
+# E2 is the laser rifle/pistol
+# E3 is the plasma cannon
+# E4 is the tachyon cannon
+# E5 is the electro shock
+# G1 is the neutron weapons
+# H1 is the medic's healing weapon
+# H2 is the mechanic's repairing weapon
+# K1 is the normal grenade
+# K2 is the Artillery Blast
+# M1 is the air to ground missile
+# M2 is the air to air missile
+# M3 is the PolyAcid
+# M4 is the ground to air missile
+#
+# R1 is the mechanic's repair
+# R2 is the construction crew's repair
+#
+# S1 is the sniper rifle
+# S2 is the shredder
+#
+# V1 is the offense for the vortex (temporal rift)
+# W1 is the offense for the Seismic Wave
 
-^E2: # LaserGun: Raider,HoverFreighter,PhaseTank,LaserTurret,Guardian,ScoutTank,TroopTransport
-	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 8
-		Versus:
-			Infantry: 100
-			Tank: 50
-			Building: 50
-			Aircraft: 50
-			Animal: 100
-		DamageTypes: DefaultDeath
-
-^E2Turret: # LaserGun: LaserTurret
-	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 8
-		Versus:
-			Infantry: 100
-			Tank: 50
-			Building: 50
-			Aircraft: 50
-			Animal: 100
-		DamageTypes: DefaultDeath
-
-^E3: # plasma: Martyr,Bion,PlasmaTank,PlasmaTower,NeutronTower,SkyFortress,Tach.SelfDestruct,SHGemini
-	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 100
-		Versus:
-			Infantry: 100
-			Tank: 75
-			Building: 40
-			Aircraft: 50
-			Animal: 110
-		DamageTypes: DefaultDeath
- 
-^E3Turret: # plasma PlasmaTower 250  188  100  125
-	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 100
-		Versus:
-			Infantry: 100
-			Tank: 66
-			Building: 40
-			Aircraft: 50
-			Animal: 110
-		DamageTypes: DefaultDeath
- 
-^E4: # TachyonTank, SHFury
-	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 30
-		Versus:
-			Infantry: 100
-			Tank: 100
-			Building: 40
-			Aircraft: 0
-			Animal: 100
-		DamageTypes: DefaultDeath
-
-^E5: # Elecktro: TankHunter
-	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 60
-		Versus:
-			Infantry: 100
-			Tank: 150
-			Building: 40
-			Aircraft: 0
-			Animal: 100
-		DamageTypes: DefaultDeath
-
-^A1: # AirLaser: SkyBike , AntiAirSites, IMP-MAD
+^A1: # is the air defence laser, used on ImpMAD and AntiAircraftSite
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		Damage: 10
 		Versus:
-			Infantry: 50
-			Tank: 50
-			Building: 25
-			Aircraft: 100
-			Animal: 50
+			ToughHuman: 50 # 10
+			PowerHuman: 50 # 10
+			FlyingArmour: 100 # 10
+			TankPlating: 50 # 10
+			ForcePlating: 50 # 10
+			BuildingArmour: 25 # 10
 		DamageTypes: DefaultDeath
 
-^C1: # FGFlak
+^B1: # is the suicide bomber's bomb
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 10
+		Versus:
+			ToughHuman: 100
+			PowerHuman: 100
+			FlyingArmour: 0
+			TankPlating: 100
+			ForcePlating: 100
+			BuildingArmour: 50
+		DamageTypes: DefaultDeath
+
+^B2: # is the artillery shell
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 10
+		Versus:
+			ToughHuman: 0
+			PowerHuman: 0
+			FlyingArmour: 0
+			TankPlating: 0
+			ForcePlating: 0
+			BuildingArmour: 65
+		DamageTypes: DefaultDeath
+
+^C1: # is the Construction MAD's chaff attack
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		Damage: 8
 		Versus:
-			Infantry: 0
-			Tank: 100
-			Building: 0
-			Aircraft: 100
-			Animal: 0
+			ToughHuman: 0
+			PowerHuman: 0
+			FlyingArmour: 100
+			TankPlating: 0
+			ForcePlating: 0
+			BuildingArmour: 0
 		DamageTypes: DefaultDeath
 
-^S1: # Sniper
+^E1: # is the rail gun
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 150
+		Damage: 11
 		Versus:
-			Infantry: 100
-			Tank: 10
-			Building: 10
-			Aircraft: 0
-			Animal: 100
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 0
+			TankPlating: 200 # 10
+			ForcePlating: 125 # 10
+			BuildingArmour: 70 # 10
 		DamageTypes: DefaultDeath
 
-^M1: # or - missile: outrider,  FXAvenger
+^E2: # is the laser rifle/pistol
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 100
+		Damage: 8
 		Versus:
-			Infantry: 100
-			Tank: 100
-			Building: 50
-			Aircraft: 0
-			Animal: 100
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 50 # 10
+			TankPlating: 50 # 10
+			ForcePlating: 50 # 10
+			BuildingArmour: 50 # 10
 		DamageTypes: DefaultDeath
 
-^M2: # missile:  SkirmishTank
-	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 100
-		Versus:
-			Infantry: 100
-			Tank: 100
-			Building: 50
-			Aircraft: 100
-			Animal: 100
-		DamageTypes: DefaultDeath
-
-^M3: # polyacid: Exterminator
+^E3: # is the plasma cannon
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		Damage: 100
 		Versus:
-			Infantry: 100
-			Tank: 250
-			Building: 50
-			Aircraft: 0
-			Animal: 100
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 50 # 10
+			TankPlating: 75 # 10
+			ForcePlating: 75 # 10
+			BuildingArmour: 40 # 10
 		DamageTypes: DefaultDeath
 
-^G1: # Cyclone, SHReaper
-	Warhead@1Dam: SpreadDamage
-		Spread: 256
-		Damage: 24
-		Versus:
-			Infantry: 100
-			Tank: 150
-			Building: 50
-			Aircraft: 100
-			Animal: 170
-		DamageTypes: DefaultDeath
-
-^K2: # Artillery
+^E4: # is the tachyon cannon
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		Damage: 30
 		Versus:
-			Infantry: 100
-			Tank: 75
-			Building: 50
-			Aircraft: 0
-			Animal: 100
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 0
+			TankPlating: 100 # 10
+			ForcePlating: 100 # 10
+			BuildingArmour: 40 # 10
 		DamageTypes: DefaultDeath
 
-^H1:
+^E5: # is the electro shock
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 60
+		Versus:
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 0
+			TankPlating: 150 # 10
+			ForcePlating: 150 # 10
+			BuildingArmour: 40 # 10
+		DamageTypes: DefaultDeath
+
+^G1: # is the neutron weapons
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 24
+		Versus:
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 100 # 10
+			TankPlating: 150 # 10
+			ForcePlating: 150 # 10
+			BuildingArmour: 50 # 10
+		DamageTypes: DefaultDeath
+
+^H1: # is the medic's healing weapon
 	Warhead@1Dam: SpreadDamage
 		Spread: 20
 		Damage: -10
 		Versus:
-			Infantry: 100
-			Tank: 0
-			Building: 0
-			Aircraft: 0
-			Animal: 100
+			ToughHuman: 100
+			PowerHuman: 100
+			FlyingArmour: 0
+			TankPlating: 0
+			ForcePlating: 0
+			BuildingArmour: 0
 		DamageTypes: DefaultDeath
+
+^H2: # is the mechanic's repairing weapon
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 10
+		Versus:
+			ToughHuman: 0
+			PowerHuman: 0
+			FlyingArmour: 0
+			TankPlating: 100
+			ForcePlating: 100
+			BuildingArmour: 0
+		DamageTypes: DefaultDeath
+
+^K1: # is the normal grenade
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 10
+		Versus:
+			ToughHuman: 90 # 5 2
+			PowerHuman: 90 # 5 2
+			FlyingArmour: 0
+			TankPlating: 90 # 5 2
+			ForcePlating: 90 # 5 2
+			BuildingArmour: 45 # 5 2
+		DamageTypes: DefaultDeath
+
+^K2: # is the Artillery Blast
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 30
+		Versus:
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 0
+			TankPlating: 75 # 10
+			ForcePlating: 75 # 10
+			BuildingArmour: 50 # 10
+		DamageTypes: DefaultDeath
+
+^M1: # is the air to ground missile
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 100
+		Versus:
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 0
+			TankPlating: 100 # 10
+			ForcePlating: 100 # 10
+			BuildingArmour: 50 # 10
+		DamageTypes: DefaultDeath
+
+^M2: # is the air to air missile
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 100
+		Versus:
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 100 # 10
+			TankPlating: 100 # 10
+			ForcePlating: 100 # 10
+			BuildingArmour: 50 # 10
+		DamageTypes: DefaultDeath
+
+^M3: # is the PolyAcid
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 100
+		Versus:
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 0
+			TankPlating: 250 # 10
+			ForcePlating: 250 # 10
+			BuildingArmour: 50 # 10
+		DamageTypes: DefaultDeath
+
+^M4: # is the ground to air missile
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 10
+		Versus:
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 0
+			TankPlating: 100 # 10
+			ForcePlating: 100 # 10
+			BuildingArmour: 50 # 10
+		DamageTypes: DefaultDeath
+
+# R1 is the mechanic's repair
+# R2 is the construction crew's repair
+
+^S1: # is the sniper rifle
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 150
+		Versus:
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 0
+			TankPlating: 10 # 10
+			ForcePlating: 10 # 10
+			BuildingArmour: 10 # 10
+		DamageTypes: DefaultDeath
+
+^S2: # is the shredder
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 10
+		Versus:
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 0
+			TankPlating: 0
+			ForcePlating: 0
+			BuildingArmour: 0
+		DamageTypes: DefaultDeath
+
+# V1 is the offense for the vortex (temporal rift)
+# W1 is the offense for the Seismic Wave
+
+####################################################
 
 GenericExplode:
 	Range: 8c0
@@ -430,7 +534,7 @@ CycloneCannon:
 		ValidTargets: Air, Ground, Ship, Trees
 
 SuicideNuke:
-	Inherits: ^E3
+	Inherits: ^B1
 	Range: 2c0
 	ValidTargets: Ground, Trees, Water, Underwater, Air
 	Warhead@1Dam_impact: SpreadDamage

@@ -24,7 +24,7 @@
 	Health:
 		HP: 2500
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	RevealsShroud:
 		Range: 4c0
 	Mobile:
@@ -106,7 +106,7 @@ ConstructionRig:
 	Mobile:
 		Speed: 80 # should be 60 but 80 for development purposes
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	GivesBuildableArea:
@@ -166,7 +166,7 @@ Freighter:
 	Mobile:
 		Speed: 100
 	Armor:
-		Type: Tank
+		Type: TankPlatingPlating
 	WithDockingAnimation:
 	WithFacingSpriteBody:
 	Harvester:
@@ -200,7 +200,7 @@ HoverFreighter:
 	Mobile:
 		Speed: 160
 	Armor:
-		Type: Tank
+		Type: TankPlatingPlating
 	WithDockingAnimation:
 	WithFacingSpriteBody:
 	Harvester:
@@ -232,7 +232,7 @@ SpiderBike:
 	Mobile:
 		Speed: 240
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Armament:
 		Weapon: DoubleRailGun
 
@@ -258,7 +258,7 @@ RAT:
 	Mobile:
 		Speed: 180
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	-Armament:
 
 SkirmishTank:
@@ -294,7 +294,7 @@ SkirmishTank:
 	Mobile:
 		Speed: 160
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Armament:
 		Weapon: SkirmishGun1
 
@@ -320,7 +320,7 @@ TankHunter:
 	Mobile:
 		Speed: 200
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Armament:
 		Weapon: TankHunterGun
 
@@ -346,7 +346,7 @@ PhaseTank:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Armament:
 		Weapon: PhaseTankCannon
 phasing
@@ -374,7 +374,7 @@ FlakJack:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Armament:
 		Weapon: Chaff
 
@@ -400,7 +400,7 @@ TripleRailHoverTank:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Turreted:
 		TurnSpeed: 5
 	Armament:
@@ -435,7 +435,7 @@ HellstormArtillery:
 	Mobile:
 		Speed: 80
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Armament:
 		Weapon: ArtilleryShell
 
@@ -461,7 +461,7 @@ ShockWave:
 	Mobile:
 		Speed: 80
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Turreted:
 		TurnSpeed: 5
 	Armament:
@@ -496,7 +496,7 @@ WaterContaminator:
 	Mobile:
 		Speed: 40
 	Armor:
-		Type: Tank
+		Type: TankPlating
 
 # Imperium
 
@@ -522,7 +522,7 @@ ScoutRunner:
 	Mobile:
 		Speed: 200
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Armament:
 		Weapon: LaserCannon
 
@@ -548,7 +548,7 @@ ITT:
 	Mobile:
 		Speed: 200
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Armament:
 		Weapon: LaserRifle
 
@@ -574,7 +574,7 @@ PlasmaTank:
 	Mobile:
 		Speed: 160
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Turreted:
 		TurnSpeed: 5
 	Armament:
@@ -609,7 +609,7 @@ Amper:
 	Mobile:
 		Speed: 80
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Armament:
 		Weapon: AmperAmp
 
@@ -636,7 +636,7 @@ MAD:
 	Mobile:
 		Speed: 160
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Armament:
 		Weapon: GroundToAirLaser
 
@@ -662,7 +662,7 @@ Shredder:
 	Mobile:
 		Speed: 200
 	Armor:
-		Type: Tank
+		Type: ForcePlating
 
 HostageTaker:
 	Inherits: ^DrAnimatedVehicle
@@ -686,7 +686,7 @@ HostageTaker:
 	Mobile:
 		Speed: 200
 	Armor:
-		Type: Tank
+		Type: TankPlating
 
 TachionTank:
 	Inherits: ^DrHoverAnimatedVehicle
@@ -710,7 +710,7 @@ TachionTank:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Armament:
 		Weapon: TachyonCannon
 
@@ -736,6 +736,6 @@ Scarab:
 	Mobile:
 		Speed: 60
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Armament:
 		Weapon: IMPArtilleryShell

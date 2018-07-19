@@ -16,7 +16,7 @@
 	Health:
 		HP: 2500
 	Armor:
-		Type: Infantry
+		Type: ToughHuman
 	RevealsShroud:
 		Range: 4c0
 	Mobile:
@@ -141,7 +141,7 @@ Raider:
 	Mobile:
 		Speed: 100
 	Armor:
-		Type: Infantry
+		Type: ToughHuman
 	Armament@PRIMARY:
 		Weapon: LaserRifle
 
@@ -167,7 +167,7 @@ Mercenary:
 	Mobile:
 		Speed: 80
 	Armor:
-		Type: Infantry
+		Type: ToughHuman
 	Armament@PRIMARY:
 		Weapon: RailGun
 
@@ -193,7 +193,7 @@ Sniper:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Infantry
+		Type: ToughHuman
 	Armament@PRIMARY:
 		Weapon: SniperRifle
 
@@ -219,7 +219,7 @@ Scout:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Infantry
+		Type: ToughHuman
 	-Armament@PRIMARY:
 
 Medic:
@@ -244,7 +244,7 @@ Medic:
 	Mobile:
 		Speed: 80
 	Armor:
-		Type: Infantry
+		Type: ToughHuman
 	Armament@PRIMARY:
 		Weapon: Heal
 		Cursor: heal
@@ -279,7 +279,7 @@ Saboteur:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Infantry
+		Type: ToughHuman
 	-Armament@PRIMARY:
 	EngineerRepair:
 	RepairsBridges:
@@ -309,7 +309,7 @@ Mechanic:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Infantry
+		Type: ToughHuman
 	Armament@PRIMARY:
 		Weapon: Repair
 		Cursor: repair
@@ -342,7 +342,7 @@ Martyr:
 	Mobile:
 		Speed: 160
 	Armor:
-		Type: Infantry
+		Type: ToughHuman
 	-Armament@PRIMARY:
 	Explodes:
 		Weapon: SuicideNuke
@@ -373,7 +373,7 @@ Guardian:
 	Mobile:
 		Speed: 80
 	Armor:
-		Type: Infantry
+		Type: PowerHuman
 
 Bion:
 	Inherits: ^DrSoldier
@@ -398,7 +398,7 @@ Bion:
 	Mobile:
 		Speed: 60
 	Armor:
-		Type: Infantry
+		Type: PowerHuman
 	Armament@PRIMARY:
 		Weapon: PlasmaRifle
 
@@ -424,7 +424,7 @@ Exterminator:
 	Mobile:
 		Speed: 160
 	Armor:
-		Type: Infantry
+		Type: PowerHuman
 	Armament@PRIMARY:
 		Weapon: PolyAcid
 	Hovers:
@@ -452,4 +452,4 @@ Infiltrator:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Infantry
+		Type: ToughHuman

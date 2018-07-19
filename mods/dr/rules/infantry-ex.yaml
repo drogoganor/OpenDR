@@ -21,7 +21,7 @@ Gant:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Infantry
+		Type: ToughHuman
 	Turreted:
 		TurnSpeed: 5
 	Armament:
@@ -56,7 +56,7 @@ Ranger:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Infantry
+		Type: ToughHuman
 
 PowerSpiker:
 	Inherits: ^DrSoldier
@@ -80,7 +80,7 @@ PowerSpiker:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Infantry
+		Type: ToughHuman
 
 Grendel:
 	Inherits: ^DrSoldier
@@ -104,7 +104,7 @@ Grendel:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Infantry
+		Type: PowerHuman
 
 GrendelRider:
 	Inherits: ^DrSoldier
@@ -128,7 +128,7 @@ GrendelRider:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Infantry
+		Type: PowerHuman
 
 # Shadowhand
 
@@ -154,4 +154,4 @@ Reaper:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: Infantry
+		Type: PowerHuman

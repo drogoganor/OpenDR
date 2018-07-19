@@ -9,77 +9,77 @@ Terrain:
 	TerrainType@Clear:
 		Type: Clear
 		TargetTypes: Ground
-		Color: D09764
+		Color: 654A28
 		RestrictPlayerColor: true
 	TerrainType@Normal2:
 		Type: Normal2
 		TargetTypes: Ground
-		Color: D09764
+		Color: 654A28
 		RestrictPlayerColor: true
 	TerrainType@Normal3:
 		Type: Normal3
 		TargetTypes: Ground
-		Color: D09764
+		Color: 725E40
 		RestrictPlayerColor: true
 	TerrainType@Muddy1:
 		Type: Muddy1
 		TargetTypes: Ground
-		Color: 906439
+		Color: 624C2E
 		RestrictPlayerColor: true
 	TerrainType@Muddy2:
 		Type: Muddy2
 		TargetTypes: Ground
-		Color: 906439
+		Color: 604E36
 		RestrictPlayerColor: true
 	TerrainType@Rough1:
 		Type: Rough1
 		TargetTypes: Ground
-		Color: 889073
+		Color: 5D604E
 		RestrictPlayerColor: true
 	TerrainType@Rough2:
 		Type: Rough2
 		TargetTypes: Ground
-		Color: 889073
+		Color: 5D604E
 		RestrictPlayerColor: true
 	TerrainType@Road:
 		Type: Road
 		TargetTypes: Ground
-		Color: 90562B
+		Color: 593B17
 		RestrictPlayerColor: true
 	TerrainType@RoadBase:
 		Type: RoadBase
 		TargetTypes: Ground
-		Color: 814F15
+		Color: 4C2F0B
 		RestrictPlayerColor: true
 	TerrainType@HillSlope1:
 		Type: HillSlope1
 		TargetTypes: Ground
-		Color: A58881
+		Color: 6A502F
 		RestrictPlayerColor: true
 	TerrainType@HillSlope2:
 		Type: HillSlope2
 		TargetTypes: Ground
-		Color: A58881
+		Color: 63492B
 		RestrictPlayerColor: true
 	TerrainType@Cliff1:
 		Type: Cliff1
 		TargetTypes: Ground
-		Color: 642B00
+		Color: 4B361F
 		RestrictPlayerColor: true
 	TerrainType@Cliff2:
 		Type: Cliff2
 		TargetTypes: Ground
-		Color: 642B00
+		Color: 4B361F
 		RestrictPlayerColor: true
 	TerrainType@Cliff3:
 		Type: Cliff3
 		TargetTypes: Ground
-		Color: 642B00
+		Color: 4B361F
 		RestrictPlayerColor: true
 	TerrainType@Cliff4:
 		Type: Cliff4
 		TargetTypes: Ground
-		Color: 642B00
+		Color: 4B361F
 		RestrictPlayerColor: true
 	TerrainType@SpringWater:
 		Type: SpringWater
@@ -94,8 +94,16 @@ Terrain:
 	TerrainType@Water:
 		Type: Water
 		TargetTypes: Water
-		Color: 243940
+		Color: 192326
 		RestrictPlayerColor: true
+	TerrainType@Tree:
+		Type: Tree
+		TargetTypes: Ground
+		Color: 545B22
+	TerrainType@Rock:
+		Type: Rock
+		TargetTypes: Ground
+		Color: 877F70
 
 Templates:
 	Template@1:

@@ -9,7 +9,7 @@ Terrain:
 	TerrainType@Clear:
 		Type: Clear
 		TargetTypes: Ground
-		Color: B4D064
+		Color: B8D367
 		RestrictPlayerColor: true
 	TerrainType@Normal2:
 		Type: Normal2
@@ -19,7 +19,7 @@ Terrain:
 	TerrainType@Normal3:
 		Type: Normal3
 		TargetTypes: Ground
-		Color: B4D064
+		Color: A9C15E
 		RestrictPlayerColor: true
 	TerrainType@Muddy1:
 		Type: Muddy1
@@ -29,7 +29,7 @@ Terrain:
 	TerrainType@Muddy2:
 		Type: Muddy2
 		TargetTypes: Ground
-		Color: 647315
+		Color: 6B7A17
 		RestrictPlayerColor: true
 	TerrainType@Rough1:
 		Type: Rough1
@@ -39,7 +39,7 @@ Terrain:
 	TerrainType@Rough2:
 		Type: Rough2
 		TargetTypes: Ground
-		Color: D0BB1C
+		Color: C4B01B
 		RestrictPlayerColor: true
 	TerrainType@Road:
 		Type: Road
@@ -96,6 +96,14 @@ Terrain:
 		TargetTypes: Water
 		Color: 242440
 		RestrictPlayerColor: true
+	TerrainType@Tree:
+		Type: Tree
+		TargetTypes: Ground
+		Color: 545B22
+	TerrainType@Rock:
+		Type: Rock
+		TargetTypes: Ground
+		Color: 877F70
 
 Templates:
 	Template@1:

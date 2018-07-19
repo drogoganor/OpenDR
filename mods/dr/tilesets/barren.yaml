@@ -14,12 +14,12 @@ Terrain:
 	TerrainType@Normal2:
 		Type: Normal2
 		TargetTypes: Ground
-		Color: FFD8B4
+		Color: 98734A
 		RestrictPlayerColor: true
 	TerrainType@Normal3:
 		Type: Normal3
 		TargetTypes: Ground
-		Color: FFD8B4
+		Color: D29C78
 		RestrictPlayerColor: true
 	TerrainType@Muddy1:
 		Type: Muddy1
@@ -84,18 +84,26 @@ Terrain:
 	TerrainType@SpringWater:
 		Type: SpringWater
 		TargetTypes: Ground
-		Color: 8470FF
+		Color: 425EFF
 		RestrictPlayerColor: true
 	TerrainType@Taelon:
 		Type: Taelon
 		TargetTypes: Ground
-		Color: 948060
+		Color: 51EF63
 		RestrictPlayerColor: true
 	TerrainType@Water:
 		Type: Water
 		TargetTypes: Water
 		Color: 2B8164
 		RestrictPlayerColor: true
+	TerrainType@Tree:
+		Type: Tree
+		TargetTypes: Ground
+		Color: 545B22
+	TerrainType@Rock:
+		Type: Rock
+		TargetTypes: Ground
+		Color: 877F70
 
 Templates:
 	Template@1:

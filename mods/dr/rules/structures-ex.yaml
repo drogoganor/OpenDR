@@ -28,7 +28,7 @@ Matrix:
 	Power:
 		Amount: -100
 	Armor:
-		Type: Building
+		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: idle-top

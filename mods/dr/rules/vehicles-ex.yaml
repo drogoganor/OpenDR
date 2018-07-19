@@ -21,7 +21,7 @@ RATmk2:
 	Mobile:
 		Speed: 180
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Turreted:
 		TurnSpeed: 5
 	Armament:
@@ -56,7 +56,7 @@ GeminiTank:
 	Mobile:
 		Speed: 160
 	Armor:
-		Type: Tank
+		Type: ForcePlating
 	Turreted:
 		TurnSpeed: 5
 	Armament:
@@ -91,7 +91,7 @@ Shadowblade:
 	Mobile:
 		Speed: 200
 	Armor:
-		Type: Tank
+		Type: ForcePlating
 
 Fury:
 	Inherits: ^DrAnimatedVehicle
@@ -115,7 +115,7 @@ Fury:
 	Mobile:
 		Speed: 160
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Turreted:
 		TurnSpeed: 5
 	Armament:
@@ -150,58 +150,58 @@ EMPDevice:
 	Mobile:
 		Speed: 160
 	Armor:
-		Type: Tank
+		Type: TankPlating
 	Armament:
 		Weapon: TachyonCannon
 
-#RoadTerraformer:
-#	Inherits: ^DrAnimatedVehicle
-#	RenderSprites:
-#		Image: uiterst0.spr
-#	Tooltip:
-#		Name: Road Terraformer
-#	Buildable:
-#		Description: When detonated, transforms the terrain within the\nblast radius to Road.
-#		Prerequisites: ~vehicles, hq, barracks
-#		BuildPaletteOrder: 150
-#		BuildDuration: 39
-#	Voiced:
-#		VoiceSet: TerraformerVoice
-#	Valued:
-#		Cost: 700
-#	Health:
-#		HP: 250
-#	RevealsShroud:
-#		Range: 9c0
-#	Mobile:
-#		Speed: 160
-#	Armor:
-#		Type: Tank
-#	Armament:
-#		Weapon: TachionTankWeapon
+RoadTerraformer:
+	Inherits: ^DrAnimatedVehicle
+	RenderSprites:
+		Image: uiterst0.spr
+	Tooltip:
+		Name: Road Terraformer
+	Buildable:
+		Description: When detonated, transforms the terrain within the\nblast radius to Road.
+		Prerequisites: ~vehicles, hq, barracks
+		BuildPaletteOrder: 150
+		BuildDuration: 39
+	Voiced:
+		VoiceSet: TerraformerVoice
+	Valued:
+		Cost: 700
+	Health:
+		HP: 250
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: Tank
+	Armament:
+		Weapon: TachionTankWeapon
 
-#MarshTerraformer:
-#	Inherits: ^DrAnimatedVehicle
-#	RenderSprites:
-#		Image: uiterst1.spr
-#	Tooltip:
-#		Name: Marsh Terraformer
-#	Buildable:
-#		Description: When detonated, transforms the terrain within the\nblast radius to Marsh.
-#		Prerequisites: ~vehicles, hq, barracks
-#		BuildPaletteOrder: 150
-#		BuildDuration: 39
-#	Voiced:
-#		VoiceSet: TerraformerVoice
-#	Valued:
-#		Cost: 700
-#	Health:
-#		HP: 250
-#	RevealsShroud:
-#		Range: 9c0
-#	Mobile:
-#		Speed: 160
-#	Armor:
-#		Type: Tank
-#	Armament:
-#		Weapon: TachionTankWeapon
+MarshTerraformer:
+	Inherits: ^DrAnimatedVehicle
+	RenderSprites:
+		Image: uiterst1.spr
+	Tooltip:
+		Name: Marsh Terraformer
+	Buildable:
+		Description: When detonated, transforms the terrain within the\nblast radius to Marsh.
+		Prerequisites: ~vehicles, hq, barracks
+		BuildPaletteOrder: 150
+		BuildDuration: 39
+	Voiced:
+		VoiceSet: TerraformerVoice
+	Valued:
+		Cost: 700
+	Health:
+		HP: 250
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 160
+	Armor:
+		Type: Tank
+	Armament:
+		Weapon: TachionTankWeapon

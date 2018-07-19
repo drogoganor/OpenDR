@@ -9,7 +9,7 @@ Terrain:
 	TerrainType@Clear:
 		Type: Clear
 		TargetTypes: Ground
-		Color: 64562B
+		Color: 706031
 		RestrictPlayerColor: true
 	TerrainType@Normal2:
 		Type: Normal2
@@ -19,7 +19,7 @@ Terrain:
 	TerrainType@Normal3:
 		Type: Normal3
 		TargetTypes: Ground
-		Color: 64562B
+		Color: 564A26
 		RestrictPlayerColor: true
 	TerrainType@Muddy1:
 		Type: Muddy1
@@ -96,6 +96,14 @@ Terrain:
 		TargetTypes: Water
 		Color: 2B2B39
 		RestrictPlayerColor: true
+	TerrainType@Tree:
+		Type: Tree
+		TargetTypes: Ground
+		Color: 545B22
+	TerrainType@Rock:
+		Type: Rock
+		TargetTypes: Ground
+		Color: 877F70
 
 Templates:
 	Template@1:
