@@ -811,14 +811,14 @@ NeutronAss:
 	Inherits: ^E3
 	ReloadDelay: 32
 	Range: 9c0
-	Report: gxampwc0.wav
+	Report: gxneuwc0.wav
 	Projectile: Bullet
 		Speed: 1493
-		Image: eolaspr0.spr
+		Image: eoncnpr0.spr
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 96
 		Damage: 180
 	Warhead@3Eff: CreateEffect
-		Explosions: eopamex0
+		Explosions: eoncnex0
 		ValidTargets: Ground, Ship, Trees

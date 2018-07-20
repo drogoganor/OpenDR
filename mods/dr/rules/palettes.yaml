@@ -3,7 +3,7 @@
 		Name: terrain
 		Filename: BARREN/BARREN.PAL
 		Tileset: BARREN
-		ShadowIndex: 110
+		ShadowIndex: 161
 	PaletteFromDrFile@terrain-aust:
 		Name: terrain
 		Filename: aust.pal
@@ -42,7 +42,7 @@
 	PaletteFromGimpOrJascFile@player:
 		Name: player
 		Filename: units.pal
-		ShadowIndex: 3
+		ShadowIndex: 161
 	PaletteFromGimpOrJascFile@chrome:
 		Name: chrome
 		Filename: units.pal
@@ -67,7 +67,7 @@
 		R: 0
 		G: 0
 		B: 0
-		A: 140
+		A: 10
 	PaletteFromRGBA@moveflash:
 		Name: moveflash
 		R: 255

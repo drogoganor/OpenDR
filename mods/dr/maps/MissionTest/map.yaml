@@ -1,21 +1,12 @@
 MapFormat: 11
-
 RequiresMod: dr
-
 Title: Mission Test
-
 Author: Your name here
-
 Tileset: BARREN
-
 MapSize: 82,70
-
 Bounds: 1,1,80,68
-
 Visibility: Lobby, MissionSelector
-
 Categories: Conquest
-
 Players:
 	PlayerReference@Imperium:
 		Name: Imperium
@@ -46,7 +37,6 @@ Players:
 		NonCombatant: True
 		Faction: fguard
 		Enemies: Imperium, Freedom Guard
-
 Actors:
 	Actor12: aotre000.spr
 		Owner: Neutral
@@ -69,18 +59,9 @@ Actors:
 	Actor18: aotre002.spr
 		Owner: Neutral
 		Location: 50,46
-	Actor19: aotre000.spr
-		Owner: Neutral
-		Location: 31,35
 	Actor21: aotre000.spr
 		Owner: Neutral
 		Location: 64,29
-	Actor22: aorub000.spr
-		Owner: Neutral
-		Location: 63,31
-	Actor23: aoroc000.spr
-		Owner: Neutral
-		Location: 60,30
 	Actor24: aorub002.spr
 		Owner: Neutral
 		Location: 59,28
@@ -391,5 +372,112 @@ Actors:
 	Actor113: aoclf005.spr
 		Owner: Neutral
 		Location: 16,17
-
+	Actor114: aoroc000.spr
+		Owner: Neutral
+		Location: 48,33
+	Actor115: aoroc001.spr
+		Owner: Neutral
+		Location: 51,33
+	Actor116: aoroc002.spr
+		Owner: Neutral
+		Location: 54,33
+	Actor117: aoroc003.spr
+		Owner: Neutral
+		Location: 58,33
+	Actor118: aoroc004.spr
+		Owner: Neutral
+		Location: 63,33
+	Actor119: aoroc005.spr
+		Owner: Neutral
+		Location: 61,37
+	Actor120: aoclf000.spr
+		Owner: Neutral
+		Location: 28,16
+	Actor121: aoclf001.spr
+		Owner: Neutral
+		Location: 35,15
+	Actor122: aoclf002.spr
+		Owner: Neutral
+		Location: 41,14
+	Actor123: aoclf003.spr
+		Owner: Neutral
+		Location: 47,14
+	Actor124: aoclf004.spr
+		Owner: Neutral
+		Location: 50,19
+	Actor125: aoclf005.spr
+		Owner: Neutral
+		Location: 43,23
+	Actor126: hq.cyborg
+		Owner: Freedom Guard
+		Location: 6,43
+	Actor127: trainingfacility.cyborg
+		Owner: Freedom Guard
+		Location: 40,62
+	Actor128: assemblyplant.cyborg
+		Owner: Freedom Guard
+		Location: 48,61
+	Actor129: hospital.human
+		Owner: Freedom Guard
+		Location: 57,56
+	Actor130: repair.human
+		Owner: Freedom Guard
+		Location: 58,61
+	Actor131: hospital.cyborg
+		Owner: Freedom Guard
+		Location: 66,62
+	Actor132: repair.cyborg
+		Owner: Freedom Guard
+		Location: 66,54
+	Actor133: phasingfacility
+		Owner: Freedom Guard
+		Location: 53,52
+	Actor134: rearmingdeck.human
+		Owner: Freedom Guard
+		Location: 48,49
+	Actor135: rearmingdeck.cyborg
+		Owner: Freedom Guard
+		Location: 54,47
+	Actor136: temporalgate
+		Owner: Freedom Guard
+		Location: 65,50
+	Actor137: temporalriftcreator
+		Owner: Freedom Guard
+		Location: 30,39
+	Actor138: power
+		Owner: Freedom Guard
+		Location: 75,47
+	Actor139: power
+		Owner: Freedom Guard
+		Location: 75,54
+	Actor140: power
+		Owner: Freedom Guard
+		Location: 75,62
+	Actor141: laserturret
+		Owner: Freedom Guard
+		Location: 19,23
+		TurretFacing: 92
+	Actor142: plasmaturret
+		Owner: Freedom Guard
+		Location: 23,23
+		TurretFacing: 92
+	Actor143: heavyrailturret
+		Owner: Freedom Guard
+		Location: 26,26
+		TurretFacing: 92
+	Actor144: neutronaccelerator
+		Owner: Freedom Guard
+		Location: 31,27
+		TurretFacing: 92
+	Actor145: antiairturret.human
+		Owner: Freedom Guard
+		Location: 26,31
+		TurretFacing: 92
+	Actor146: antiairturret.cyborg
+		Owner: Freedom Guard
+		Location: 30,32
+		TurretFacing: 92
+	Actor147: cameratower
+		Owner: Freedom Guard
+		Location: 27,36
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, dr|rules/campaign-palettes.yaml, rules.yaml

@@ -63,22 +63,19 @@ aotre005.spr:
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
-# Crashed space ship
-aospc000.spr:
-	Inherits: ^DrMisc
+# Plant
+aopln000.spr:
+	Inherits: ^DrPlant
 	Building:
-		Footprint: __ x_
-		Dimensions: 2,2
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
 
-# Rubble
-aorub000.spr:
-	Inherits: ^DrRubble
+aopln001.spr:
+	Inherits: ^DrPlant
 
-aorub001.spr:
-	Inherits: ^DrRubble
-
-aorub002.spr:
-	Inherits: ^DrRubble
+aopln002.spr:
+	Inherits: ^DrPlant
 
 # Rocks
 aoroc000.spr:
@@ -97,6 +94,49 @@ aoroc003.spr:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,0,0
 
+# Cliff
+aoclf000.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: _x_ xxx xx_
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+
+aoclf001.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: _x_ xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+
+aoclf002.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: _x_ xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+
+aoclf003.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: _x_ xxx xxx xx_
+		Dimensions: 3,4
+		LocalCenterOffset: 0,0,0
+
+aoclf004.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: _x_ xxx xx= xxx
+		Dimensions: 3,4
+		LocalCenterOffset: 0,0,0
+
+aoclf005.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: _x__ xxxx xxxx xxx_
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+
 aoroc004.spr:
 	Inherits: ^DrRock
 	Building:
@@ -111,19 +151,15 @@ aoroc005.spr:
 		Dimensions: 2,2
 		LocalCenterOffset: 0,0,0
 
-# Plant
-aopln000.spr:
-	Inherits: ^DrPlant
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-		LocalCenterOffset: 0,0,0
+# Rubble
+aorub000.spr:
+	Inherits: ^DrRubble
 
-aopln001.spr:
-	Inherits: ^DrPlant
+aorub001.spr:
+	Inherits: ^DrRubble
 
-aopln002.spr:
-	Inherits: ^DrPlant
+aorub002.spr:
+	Inherits: ^DrRubble
 
 # Scoring
 aomsc000.spr:
@@ -183,45 +219,9 @@ aoctr004.spr:
 		Dimensions: 4,4
 		LocalCenterOffset: 0,0,0
 
-# Cliff
-aoclf000.spr:
-	Inherits: ^DrRock
+# Crashed space ship
+aospc000.spr:
+	Inherits: ^DrMisc
 	Building:
-		Footprint: _x_ xxx xx_
-		Dimensions: 3,3
-		LocalCenterOffset: 0,0,0
-
-aoclf001.spr:
-	Inherits: ^DrRock
-	Building:
-		Footprint: _x_ xxx xxx
-		Dimensions: 3,3
-		LocalCenterOffset: 0,0,0
-
-aoclf002.spr:
-	Inherits: ^DrRock
-	Building:
-		Footprint: _x_ xxx xxx
-		Dimensions: 3,3
-		LocalCenterOffset: 0,0,0
-
-aoclf003.spr:
-	Inherits: ^DrRock
-	Building:
-		Footprint: _x_ xxx xxx xx_
-		Dimensions: 3,4
-		LocalCenterOffset: 0,0,0
-
-aoclf004.spr:
-	Inherits: ^DrRock
-	Building:
-		Footprint: _x_ xxx xx= xxx
-		Dimensions: 3,4
-		LocalCenterOffset: 0,0,0
-
-aoclf005.spr:
-	Inherits: ^DrRock
-	Building:
-		Footprint: _x__ xxxx xxxx xxx_
-		Dimensions: 4,4
-		LocalCenterOffset: 0,0,0
+		Footprint: __ x_
+		Dimensions: 2,2

@@ -675,6 +675,9 @@ AssemblyPlant.cyborg:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
+	Selectable:
+		Bounds: 40,40,0,0
+		DecorationBounds: 40,40,0,0
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure
 	Valued:
@@ -737,7 +740,7 @@ PlasmaTurret:
 	Turreted:
 		TurnSpeed: 12
 		InitialFacing: 56
-		Offset: 256,-24,255
+		Offset: 0,0,-24
 	Armament:
 		Weapon: GatPlasma
 		LocalOffset: 512,0,112
@@ -906,9 +909,16 @@ AntiAirTurret.cyborg:
 # Camera tower
 CameraTower:
 	Inherits: ^DrGenericBuilding
-	Inherits@shape: ^1x1Shape
 	RenderSprites:
 		Image: nccam1l0.spr
+	Inherits@shape: ^1x1Shape
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 24,38,0,-8
+		DecorationBounds: 24,38,0,-8
 	Tooltip:
 		Name: Camera Tower
 	Buildable:
@@ -917,10 +927,6 @@ CameraTower:
 		Description: Camera Tower
 		BuildPaletteOrder: 50
 		BuildDuration: 6
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-		LocalCenterOffset: 0,0,0
 	Valued:
 		Cost: 200
 	Health:
@@ -932,7 +938,10 @@ CameraTower:
 	Armor:
 		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
+		Palette: terrain
 		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 
 # FG field hospital
 Hospital.human:
@@ -1049,20 +1058,13 @@ Repair.human:
 		Amount: -100
 	Armor:
 		Type: BuildingArmour
-	-HitShape@LAYER1:
-	-HitShape@LAYER2:
-	-HitShape@LAYER3:
-	-HitShape:
-	HitShape:
-		Type: Polygon
-			Points: -2048,-2048, 2048,-2048, 2048,2048, -2048,2048
-#	ProvidesPrerequisite@repair:
-#		Prerequisite: repair
-#	WithIdleOverlay@LAYER1:
-#		Palette: terrain
-#		Sequence: idle-top
-#	WithIdleOverlay@LAYER2:
-#		Sequence: idle-top2
+	ProvidesPrerequisite@repair:
+		Prerequisite: repair
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 
 # Imperium repair pad
 Repair.cyborg:
@@ -1104,6 +1106,9 @@ Repair.cyborg:
 		Amount: -100
 	Armor:
 		Type: BuildingArmour
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: idle-top
 	WithIdleOverlay@LAYER2:
 		Sequence: idle-top2
 
@@ -1188,7 +1193,10 @@ RearmingDeck.human:
 	RallyPoint:
 	Reservable:
 	WithIdleOverlay@LAYER1:
+		Palette: terrain
 		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 
 # Imperium rearming deck
 RearmingDeck.cyborg:
@@ -1259,7 +1267,10 @@ TemporalGate:
 	Armor:
 		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
+		Palette: terrain
 		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2
 
 # Imperium temporal rift creator
 TemporalRiftCreator:
@@ -1293,4 +1304,7 @@ TemporalRiftCreator:
 	Armor:
 		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
+		Palette: terrain
 		Sequence: idle-top
+	WithIdleOverlay@LAYER2:
+		Sequence: idle-top2

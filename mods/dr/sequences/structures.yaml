@@ -9,6 +9,14 @@ ncpow1l0.spr:
 		Offset: -8, -6
 	idle:
 		Start: 1
+		Combine:
+			ncpow1l0.spr:
+				Start: 1
+				Length: 1
+			bcpowsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 0, 0
 	make:
 		Start: 1
 	build:
@@ -38,6 +46,14 @@ nclnc1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
+		Combine:
+			nclnc1l0.spr:
+				Start: 1
+				Length: 1
+			bclncsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: -1, 1
 	make:
 		Start: 1
 	build:
@@ -66,6 +82,14 @@ nfhqt1l0.spr:
 		Offset: -6, -12
 	idle:
 		Start: 1
+		Combine:
+			nfhqt1l0.spr:
+				Start: 1
+				Length: 1
+			bfhqtsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 15, 1
 	make:
 		Start: 1
 	build:
@@ -116,6 +140,14 @@ nfutf1l0.spr:
 		Offset: 0, -2
 	idle:
 		Start: 1
+		Combine:
+			nfutf1l0.spr:
+				Start: 1
+				Length: 1
+			bfutfsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 11, -1
 	make:
 		Start: 1
 	build:
@@ -152,6 +184,14 @@ nfvcy1l0.spr:
 		Offset: 12, 0
 	idle:
 		Start: 1
+		Combine:
+			nfvcy1l0.spr:
+				Start: 1
+				Length: 1
+			bfvcysh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 0, 20
 	make:
 		Start: 1
 	build:
@@ -182,13 +222,20 @@ bfvcymn1.spr:
 		Start: 0
 
 # Imperium HQ
-#tihqt1l0.spr:
 nihqt1l0.spr:
 	Defaults:
 		AddExtension: False
 		Offset: 6, -22
 	idle:
 		Start: 1
+		Combine:
+			nihqt1l0.spr:
+				Start: 1
+				Length: 1
+			bihqtsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 24, 11
 	make:
 		Start: 1
 	build:
@@ -230,7 +277,15 @@ niutf1l0.spr:
 		AddExtension: False
 		Offset: 10, 6
 	idle:
-		Start: 0
+		Start: 1
+		Combine:
+			niutf1l0.spr:
+				Start: 1
+				Length: 1
+			biutfsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 12, 0
 	make:
 		Start: 0
 	build:
@@ -269,7 +324,15 @@ nivcy1l0.spr:
 	Defaults:
 		AddExtension: False
 	idle:
-		Start: 0
+		Start: 1
+		Combine:
+			nivcy1l0.spr:
+				Start: 1
+				Length: 1
+			bivcysh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 10, 11 # 9 10 also acceptable
 	make:
 		Start: 0
 	build:
@@ -307,6 +370,7 @@ nfgdt1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
+		ZOffset: -128
 	make:
 		Start: 1
 	build:
@@ -327,7 +391,6 @@ nfgdt1l0.spr:
 		Start: 1
 		Tick: 800
 	idle-top: barren|nfgdt1l0.spr
-		ZOffset: -8192
 		Start: 1
 	idle-top2: tfgdt1l0.spr
 		Start: 1
@@ -360,7 +423,6 @@ nigdt1l0.spr:
 		Start: 1
 		Tick: 800
 	idle-top: barren|nigdt1l0.spr
-		ZOffset: -8192
 		Start: 1
 	idle-top2: tigdt1l0.spr
 		Start: 1
@@ -509,6 +571,14 @@ nccam1l0.spr:
 		Offset: 1, -12
 	idle:
 		Start: 1
+		Combine:
+			nccam1l0.spr:
+				Start: 1
+				Length: 1
+			bccamsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 12, 12
 	make:
 		Start: 1
 	build:
@@ -522,7 +592,10 @@ nccam1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: tccam1l0.spr
+	idle-top: barren|nccam1l0.spr
+		ZOffset: -8192
+		Start: 1
+	idle-top2: tccam1l0.spr
 		Start: 1
 	icon: bccammn0.spr
 		Offset: 0, 0
@@ -536,6 +609,14 @@ nfhsp1l0.spr:
 		Offset: -6, 0
 	idle:
 		Start: 1
+		Combine:
+			nfhsp1l0.spr:
+				Start: 1
+				Length: 1
+			bfhspsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 0, 0
 	make:
 		Start: 1
 	build:
@@ -565,6 +646,14 @@ nihsp1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
+		Combine:
+			nihsp1l0.spr:
+				Start: 1
+				Length: 1
+			bihspsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 1, 0
 	make:
 		Start: 1
 	build:
@@ -590,6 +679,14 @@ nihsp1l0.spr:
 nfrep1l0.spr:
 	idle:
 		Start: 1
+		Combine:
+			nfrep1l0.spr:
+				Start: 1
+				Length: 1
+			bfrepsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 0, 12
 	make:
 		Start: 1
 	build:
@@ -625,6 +722,14 @@ nirep1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
+		Combine:
+			nirep1l0.spr:
+				Start: 1
+				Length: 1
+			birepsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 1, -1
 	make:
 		Start: 1
 	build:
@@ -638,6 +743,9 @@ nirep1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
+	idle-top: barren|nirep1l0.spr
+		ZOffset: -8192
+		Start: 1
 	idle-top2: tirep1l0.spr
 		Start: 1
 	icon: birepmn0.spr
@@ -650,6 +758,14 @@ nfphf1l0.spr:
 		Offset: 0, -6
 	idle:
 		Start: 1
+		Combine:
+			nfphf1l0.spr:
+				Start: 1
+				Length: 1
+			bfphfsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 1, 13
 	make:
 		Start: 1
 	build:
@@ -679,6 +795,14 @@ nfrrm1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
+		Combine:
+			nfrrm1l0.spr:
+				Start: 1
+				Length: 1
+			bfrrmsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 12, 0
 	make:
 		Start: 1
 	build:
@@ -692,7 +816,10 @@ nfrrm1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: tfrrm1l0.spr
+	idle-top: barren|nfrrm1l0.spr
+		ZOffset: -8192
+		Start: 1
+	idle-top2: tfrrm1l0.spr
 		Start: 1
 	icon: bfrrmmn0.spr
 	fake-icon: bfrrmmn0.spr
@@ -703,6 +830,14 @@ nirrm1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
+		Combine:
+			nirrm1l0.spr:
+				Start: 1
+				Length: 1
+			birrmsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 22, 21
 	make:
 		Start: 1
 	build:
@@ -730,6 +865,14 @@ nitgt1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
+		Combine:
+			nitgt1l0.spr:
+				Start: 1
+				Length: 1
+			bitgtsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: -2, 1
 	make:
 		Start: 1
 	build:
@@ -743,7 +886,10 @@ nitgt1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: titgt1l0.spr
+	idle-top: barren|nitgt1l0.spr
+		ZOffset: -8192
+		Start: 1
+	idle-top2: titgt1l0.spr
 		Start: 1
 	icon: bitgtmn0.spr
 	fake-icon: bitgtmn0.spr
@@ -754,6 +900,14 @@ nitrc1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
+		Combine:
+			nitrc1l0.spr:
+				Start: 1
+				Length: 1
+			bitrcsh0.spr:
+				Start: 1
+				Length: 1
+				Offset: 5, 19
 	make:
 		Start: 1
 	build:
@@ -767,7 +921,10 @@ nitrc1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: titrc1l0.spr
+	idle-top: barren|nitrc1l0.spr
+		ZOffset: -8192
+		Start: 1
+	idle-top2: titrc1l0.spr
 		Start: 1
 	icon: bitrcmn0.spr
 	fake-icon: bitrcmn0.spr

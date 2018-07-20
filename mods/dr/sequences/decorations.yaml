@@ -13,68 +13,136 @@ aotre000.spr:
 			aotre0sh.spr:
 				Start: 0
 				Length: 1
-				Offset: 13, 12
+				Offset: 25, 29
 
 aotre001.spr:
 	Defaults:
 		AddExtension: False
 		Offset: 0,-10
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aotre001.spr:
+				Start: 0
+				Length: 1
+			aotre1sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 16, 19
 
 aotre002.spr:
 	Defaults:
 		AddExtension: False
 		Offset: -1,-14
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aotre002.spr:
+				Start: 0
+				Length: 1
+			aotre2sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 19, 25
 
 aotre003.spr:
 	Defaults:
 		AddExtension: False
 		Offset: 3,-15
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aotre003.spr:
+				Start: 0
+				Length: 1
+			aotre3sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 20, 26
 
 aotre004.spr:
 	Defaults:
 		AddExtension: False
 		Offset: 1,-10
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aotre004.spr:
+				Start: 0
+				Length: 1
+			aotre4sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 9, 18
 
 aotre005.spr:
 	Defaults:
 		AddExtension: False
 		Offset: 2,-9
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aotre005.spr:
+				Start: 0
+				Length: 1
+			aotre5sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 11, 15
 
-# Crashed space ship
-aospc000.spr:
+# Plant
+aopln000.spr:
 	Defaults:
 		AddExtension: False
+		Offset: -2,-4
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aopln000.spr:
+				Start: 0
+				Length: 1
+			aopln0sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 0, 0
 
-# Rubble
-aorub000.spr:
+aopln001.spr:
 	Defaults:
 		AddExtension: False
+		Offset: 1,1
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aopln001.spr:
+				Start: 0
+				Length: 1
+			aopln1sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 0, 0
 
-aorub001.spr:
+aopln002.spr:
 	Defaults:
 		AddExtension: False
+		Offset: 4,2
 	idle:
-		Length: *
-
-aorub002.spr:
-	Defaults:
-		AddExtension: False
-	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aopln002.spr:
+				Start: 0
+				Length: 1
+			aopln2sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 0, 0
 
 # Rocks
 aoroc000.spr:
@@ -82,65 +150,236 @@ aoroc000.spr:
 		AddExtension: False
 		Offset: 0,0
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aoroc000.spr:
+				Start: 0
+				Length: 1
+			aoroc0sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 5, 2
 
 aoroc001.spr:
 	Defaults:
 		AddExtension: False
 		Offset: 0,0
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aoroc001.spr:
+				Start: 0
+				Length: 1
+			aoroc1sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 6, 3
 
 aoroc002.spr:
 	Defaults:
 		AddExtension: False
 		Offset: 0,0
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aoroc002.spr:
+				Start: 0
+				Length: 1
+			aoroc2sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 7, 2
 
 aoroc003.spr:
 	Defaults:
 		AddExtension: False
 		Offset: 0,2
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aoroc003.spr:
+				Start: 0
+				Length: 1
+			aoroc3sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 7, 18
 
 aoroc004.spr:
 	Defaults:
 		AddExtension: False
 		Offset: 2,2
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aoroc004.spr:
+				Start: 0
+				Length: 1
+			aoroc4sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 3, 21 # 8 23
 
 aoroc005.spr:
 	Defaults:
 		AddExtension: False
 		Offset: 1,0
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aoroc005.spr:
+				Start: 0
+				Length: 1
+			aoroc5sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 11, 35
 
-# Plant
-aopln000.spr:
+# Cliff
+aoclf000.spr:
 	Defaults:
 		AddExtension: False
-		Offset: -2,-4
-		ZOffset: -512
+		Offset: -3, -2
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aoclf000.spr:
+				Start: 0
+				Length: 1
+			aoclf0sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 12, 13
 
-aopln001.spr:
+aoclf001.spr:
 	Defaults:
 		AddExtension: False
-		Offset: 1,1
+		Offset: -3, -1
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aoclf001.spr:
+				Start: 0
+				Length: 1
+			aoclf1sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 15, 24
 
-aopln002.spr:
+aoclf002.spr:
 	Defaults:
 		AddExtension: False
-		Offset: 4,2
 	idle:
-		Length: *
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aoclf002.spr:
+				Start: 0
+				Length: 1
+			aoclf2sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 12, 25
+
+aoclf003.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aoclf003.spr:
+				Start: 0
+				Length: 1
+			aoclf3sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 13, 23
+
+aoclf004.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aoclf004.spr:
+				Start: 0
+				Length: 1
+			aoclf4sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 11, 15
+
+aoclf005.spr:
+	Defaults:
+		AddExtension: False
+		Offset: 0, 0
+	idle:
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aoclf005.spr:
+				Start: 0
+				Length: 1
+			aoclf5sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 8, 25
+
+# Rubble
+aorub000.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aorub000.spr:
+				Start: 0
+				Length: 1
+			aorub0sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 0, 0
+
+aorub001.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aorub001.spr:
+				Start: 0
+				Length: 1
+			aorub1sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 0, 0
+
+aorub002.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: 1
+		ShadowStart: 1
+		Combine:
+			aorub002.spr:
+				Start: 0
+				Length: 1
+			aorub2sh.spr:
+				Start: 0
+				Length: 1
+				Offset: 0, 0
 
 # Scoring
 aomsc000.spr:
@@ -194,51 +433,9 @@ aoctr004.spr:
 	idle:
 		Length: *
 
-# Cliff
-aoclf000.spr:
+# Crashed space ship
+aospc000.spr:
 	Defaults:
 		AddExtension: False
-		Offset: -3, -2
-	idle:
-		Length: 1
-		ShadowStart: 1
-		Combine:
-			aoclf000.spr:
-				Start: 0
-				Length: 1
-			aoclf0sh.spr:
-				Start: 0
-				Length: 1
-				Offset: 13, 12
-
-aoclf001.spr:
-	Defaults:
-		AddExtension: False
-		Offset: -3, -1
-	idle:
-		Length: *
-
-aoclf002.spr:
-	Defaults:
-		AddExtension: False
-	idle:
-		Length: *
-
-aoclf003.spr:
-	Defaults:
-		AddExtension: False
-	idle:
-		Length: *
-
-aoclf004.spr:
-	Defaults:
-		AddExtension: False
-	idle:
-		Length: *
-
-aoclf005.spr:
-	Defaults:
-		AddExtension: False
-		Offset: 0, 0
 	idle:
 		Length: *
