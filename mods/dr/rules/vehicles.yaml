@@ -257,6 +257,12 @@ RAT:
 		Range: 9c0
 	Mobile:
 		Speed: 180
+		RequiresCondition: !notmobile
+	Cargo:
+		Types: Infantry
+		MaxWeight: 15
+		PipCount: 5
+		LoadingCondition: notmobile
 	Armor:
 		Type: TankPlating
 	-Armament:
@@ -547,6 +553,12 @@ ITT:
 		Range: 9c0
 	Mobile:
 		Speed: 200
+		RequiresCondition: !notmobile
+	Cargo:
+		Types: Infantry
+		MaxWeight: 15
+		PipCount: 5
+		LoadingCondition: notmobile
 	Armor:
 		Type: TankPlating
 	Armament:
