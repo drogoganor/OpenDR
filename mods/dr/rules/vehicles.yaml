@@ -9,15 +9,6 @@
 		BuildPaletteOrder: 80
 		Prerequisites: ~barracks, ~techlevel.infonly
 		BuildDurationModifier: 2486 # DR build rate
-	SelfHealing@REPAIR:
-		Step: 5
-		Delay: 100
-		HealIfBelow: 100
-		DamageCooldown: 125
-		RequiresCondition: repairheal
-	GrantConditionOnPrerequisite:
-		Condition: repairheal
-		Prerequisites: repair
 	Huntable:
 	Valued:
 		Cost: 900
@@ -38,8 +29,9 @@
 		Bounds: 28, 28
 		DecorationBounds: 28,28
 	Targetable:
-		TargetTypes: Ground, Vehicle, Repair
+		TargetTypes: Ground, Repair, Vehicle
 	Repairable:
+		RepairBuildings: repair.human, repair.cyborg
 	Passenger:
 		CargoType: Vehicle
 	AttackMove:

@@ -480,4 +480,36 @@ Actors:
 	Actor147: cameratower
 		Owner: Freedom Guard
 		Location: 27,36
+	Actor148: medic
+		Owner: Freedom Guard
+		Location: 44,52
+		Facing: 92
+	Actor149: mechanic
+		Owner: Freedom Guard
+		Location: 40,49
+		Facing: 92
+	Actor150: martyr
+		Owner: Freedom Guard
+		Location: 41,44
+		Facing: 92
+	Actor151: martyr
+		Owner: Freedom Guard
+		Location: 44,44
+		Facing: 92
+	Actor152: martyr
+		Owner: Freedom Guard
+		Location: 46,45
+		Facing: 92
+	Actor153: martyr
+		Owner: Freedom Guard
+		Location: 47,46
+		Facing: 92
+	Actor154: martyr
+		Owner: Freedom Guard
+		Location: 67,25
+		Facing: 92
+	Actor155: martyr
+		Owner: Freedom Guard
+		Location: 68,27
+		Facing: 92
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, dr|rules/campaign-palettes.yaml, rules.yaml

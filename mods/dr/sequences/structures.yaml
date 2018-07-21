@@ -627,6 +627,14 @@ nfhsp1l0.spr:
 	damaged-build:
 		Start: 1
 		Length: 1
+	active:
+		Start: 1
+		Length: 1
+		ZOffset: -1c511
+	damaged-active:
+		Start: 1
+		Length: 1
+		ZOffset: -1c511
 	dead:
 		Start: 1
 		Tick: 800
@@ -664,6 +672,14 @@ nihsp1l0.spr:
 	damaged-build:
 		Start: 1
 		Length: 1
+	active:
+		Start: 1
+		Length: 1
+		ZOffset: -1c511
+	damaged-active:
+		Start: 1
+		Length: 1
+		ZOffset: -1c511
 	dead:
 		Start: 1
 		Tick: 800
@@ -740,6 +756,14 @@ nirep1l0.spr:
 	damaged-build:
 		Start: 1
 		Length: 1
+	active:
+		Start: 1
+		Length: 1
+		ZOffset: -1c511
+	damaged-active:
+		Start: 1
+		Length: 1
+		ZOffset: -1c511
 	dead:
 		Start: 1
 		Tick: 800
@@ -803,6 +827,14 @@ nfrrm1l0.spr:
 				Start: 1
 				Length: 1
 				Offset: 12, 0
+	active:
+		Start: 1
+		Length: 1
+		ZOffset: -1023
+	damaged-active:
+		Start: 1
+		Length: 1
+		ZOffset: -1023
 	make:
 		Start: 1
 	build:

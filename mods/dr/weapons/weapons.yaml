@@ -536,11 +536,12 @@ CycloneCannon:
 SuicideNuke:
 	Inherits: ^B1
 	Range: 2c0
-	ValidTargets: Ground, Trees, Water, Underwater, Air
+	Projectile: Bullet
+		Speed: 4096
+		Shadow: False
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 800
+		Spread: 1536
 		Damage: 180
-		ValidTargets: Ground, Trees, Water, Air
 		AffectsParent: true
 	Warhead@3Eff_impact: CreateEffect
 		Explosions: ecexpsp1

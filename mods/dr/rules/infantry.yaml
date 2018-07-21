@@ -3,15 +3,8 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^GainsExperience
 	Inherits@3: ^SpriteActor
-	SelfHealing@HOSPITAL:
-		Step: 10
-		Delay: 100
-		HealIfBelow: 100
-		DamageCooldown: 125
-		RequiresCondition: hospitalheal
-	GrantConditionOnPrerequisite:
-		Condition: hospitalheal
-		Prerequisites: hospital
+	Repairable:
+		RepairBuildings: hospital.human, hospital.cyborg
 	Huntable:
 	Health:
 		HP: 2500
@@ -90,8 +83,6 @@
 		BuildDurationModifier: 2486 # DR build rate
 	Valued:
 		Cost: 100
-	Armament@PRIMARY:
-		Weapon: LaserRifle
 	UpdatesPlayerStatistics:
 	MustBeDestroyed:
 	ProximityCaptor:
@@ -115,7 +106,6 @@ Civilian:
 	Voiced:
 		VoiceSet: CivilianVoice
 	-Buildable:
-	-Armament@PRIMARY:
 
 Raider:
 	Inherits: ^DrSoldier
@@ -220,7 +210,6 @@ Scout:
 		Speed: 120
 	Armor:
 		Type: ToughHuman
-	-Armament@PRIMARY:
 
 Medic:
 	Inherits: ^DrSoldier
@@ -280,7 +269,6 @@ Saboteur:
 		Speed: 120
 	Armor:
 		Type: ToughHuman
-	-Armament@PRIMARY:
 	EngineerRepair:
 	RepairsBridges:
 	Captures:
@@ -343,10 +331,11 @@ Martyr:
 		Speed: 160
 	Armor:
 		Type: ToughHuman
-	-Armament@PRIMARY:
-	Explodes:
+	Armament@PRIMARY:
 		Weapon: SuicideNuke
-		EmptyWeapon: SuicideNuke
+	#Explodes:
+	#	Weapon: SuicideNuke
+	#	EmptyWeapon: SuicideNuke
 	AttackSuicides:
 
 Guardian:

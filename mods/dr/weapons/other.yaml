@@ -1,5 +1,5 @@
 Heal:
-	ReloadDelay: 200
+	ReloadDelay: 135
 	Range: 2c0
 	Report: gxheaoc0.wav
 	ValidTargets: Infantry
@@ -7,15 +7,16 @@ Heal:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: -20
+		Damage: -85
 		ValidStances: Ally
 		ValidTargets: Infantry
 		DebugOverlayColor: 00FF00
 
 Repair:
 	Inherits: Heal
+	ReloadDelay: 150
 	Report: gxrepoc0.wav
 	ValidTargets: Repair
 	Warhead@1Dam: SpreadDamage
-		Damage: -5000
+		Damage: -85
 		ValidTargets: Repair

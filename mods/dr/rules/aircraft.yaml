@@ -16,12 +16,14 @@
 	Selectable:
 		Bounds: 24,24
 	Aircraft:
-		RepairBuildings: nfhqt1l0.spr:
+		RearmBuildings: rearmingdeck.human, rearmingdeck.cyborg
+		RepairBuildings: repair.human, repair.cyborg
 		AirborneCondition: airborne
 		InitialFacing: 224 # helicopter
 		TurnSpeed: 15
 		Speed: 200
 		LandableTerrainTypes: 
+		LandWhenIdle: false
 		AltitudeVelocity: 0c58
 		CanHover: True
 		CruisingCondition: cruising
