@@ -84,12 +84,11 @@ SkyBike:
 		Weapon: BkLaser
 		PauseOnCondition: !ammo
 	AmmoPool:
-		Ammo: 24
-		PipCount: 4
+		Ammo: 20
+		PipCount: 5
 		AmmoCondition: ammo
 	Aircraft:
 		Speed: 200
-		RearmBuildings: RearmingDeck.human, RearmingDeck.cyborg
 	AttackHeli:
 		FacingTolerance: 20
 
@@ -116,6 +115,11 @@ Outrider:
 		Type: FlyingArmour
 	Armament:
 		Weapon: OutriderMissile
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 10
+		PipCount: 5
+		AmmoCondition: ammo
 	Aircraft:
 		Speed: 240
 	AttackHeli:
@@ -170,6 +174,11 @@ Cyclone:
 		Type: FlyingArmour
 	Armament:
 		Weapon: CycloneCannon
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 5
+		PipCount: 5
+		AmmoCondition: ammo
 	Aircraft:
 		Speed: 240
 	AttackHeli:
@@ -198,6 +207,11 @@ SkyFortress:
 		Type: FlyingArmour
 	Armament:
 		Weapon: SkyFortressWeapon
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 1
+		PipCount: 1
+		AmmoCondition: ammo
 	Aircraft:
 		Speed: 100
 	AttackHeli:

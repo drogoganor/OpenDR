@@ -269,11 +269,13 @@ Saboteur:
 		Speed: 120
 	Armor:
 		Type: ToughHuman
+	Demolition:
+		EnterBehaviour: Suicide
 	EngineerRepair:
 	RepairsBridges:
-	Captures:
-		CaptureTypes: building
-		PlayerExperience: 50
+	#Captures:
+	#	CaptureTypes: building
+	#	PlayerExperience: 50
 
 Mechanic:
 	Inherits: ^DrSoldier
@@ -333,6 +335,10 @@ Martyr:
 		Type: ToughHuman
 	Armament@PRIMARY:
 		Weapon: SuicideNuke
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+		ScanRadius: 5
 	#Explodes:
 	#	Weapon: SuicideNuke
 	#	EmptyWeapon: SuicideNuke
@@ -423,8 +429,6 @@ Infiltrator:
 	Inherits: ^DrSoldier
 	RenderSprites:
 		Image: ucinfst0.spr
-	Tooltip:
-		Name: Infiltrator
 	Buildable:
 		Description: The Infiltrator can morph into enemy infantry and\nis able to steal plans for enemy units and buildings.\nThe unit can also observe the opponent’s Minimap\nat the HQ building. Plans for units are obtained\nat the building where that unit is produced. The\nInfiltrator must return safely to his own HQ with\nall stolen plans.
 		BuildPaletteOrder: 40
@@ -442,3 +446,31 @@ Infiltrator:
 		Speed: 120
 	Armor:
 		Type: ToughHuman
+	#Disguise:
+	#	DisguisedCondition: disguise
+	#-Tooltip:
+	#DisguiseTooltip:
+	#	Name: Infiltrator
+	#	GenericName: Soldier
+	#-Guard:
+	#Infiltrates:
+	#	ValidStances: Enemy
+	#	Types: SpyInfiltrate
+	#	PlayerExperience: 50
+	#AutoTarget:
+	#	InitialStance: HoldFire
+	#	InitialStanceAI: HoldFire
+	#	ScanRadius: 5
+	#-WithInfantryBody:
+	#WithDisguisingInfantryBody:
+	#	DefaultAttackSequence: shoot
+	#	IdleSequences: idle
+	#	StandSequences: stand
+	#WithDecoration@disguise:
+	#	Image: pips
+	#	Sequence: pip-blue
+	#	Palette: effect
+	#	ReferencePoint: Top, Right
+	#	ZOffset: 256
+	#	RequiresCondition: disguise
+	#IgnoresDisguise:

@@ -1210,16 +1210,6 @@ RearmingDeck.human:
 	Selectable:
 		Bounds: 72,72,0,0
 		DecorationBounds: 72,72,0,0
-	Reservable:
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
-	RepairsUnits:
-		HpPerStep: 100000
-		Interval: 7
-		FinishRepairingNotification: UnitRepaired
-		PlayerExperience: 15
-	WithRepairAnimation:
-	WithRearmAnimation:
 	Valued:
 		Cost: 1000
 	Health:
@@ -1269,6 +1259,8 @@ RearmingDeck.cyborg:
 		Amount: -100
 	Armor:
 		Type: BuildingArmour
+	RallyPoint:
+	Reservable:
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: idle-top
