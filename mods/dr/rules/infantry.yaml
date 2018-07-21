@@ -446,31 +446,31 @@ Infiltrator:
 		Speed: 120
 	Armor:
 		Type: ToughHuman
-	#Disguise:
-	#	DisguisedCondition: disguise
-	#-Tooltip:
-	#DisguiseTooltip:
-	#	Name: Infiltrator
-	#	GenericName: Soldier
-	#-Guard:
-	#Infiltrates:
-	#	ValidStances: Enemy
-	#	Types: SpyInfiltrate
-	#	PlayerExperience: 50
-	#AutoTarget:
-	#	InitialStance: HoldFire
-	#	InitialStanceAI: HoldFire
-	#	ScanRadius: 5
-	#-WithInfantryBody:
-	#WithDisguisingInfantryBody:
-	#	DefaultAttackSequence: shoot
-	#	IdleSequences: idle
-	#	StandSequences: stand
-	#WithDecoration@disguise:
-	#	Image: pips
-	#	Sequence: pip-blue
-	#	Palette: effect
-	#	ReferencePoint: Top, Right
-	#	ZOffset: 256
-	#	RequiresCondition: disguise
-	#IgnoresDisguise:
+	Disguise:
+		DisguisedCondition: disguise
+	-Tooltip:
+	DisguiseTooltip:
+		Name: Infiltrator
+		GenericName: Soldier
+	-Guard:
+	Infiltrates:
+		ValidStances: Enemy
+		Types: SpyInfiltrate
+		PlayerExperience: 50
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+		ScanRadius: 5
+	-WithInfantryBody:
+	WithDisguisingInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle
+		StandSequences: stand
+	WithDecoration@disguise:
+		Image: pips
+		Sequence: pip-blue
+		Palette: effect
+		ReferencePoint: Top, Right
+		ZOffset: 256
+		RequiresCondition: disguise
+	IgnoresDisguise:

@@ -87,9 +87,9 @@ Cursors:
 			Start: 0
 			X: -16
 			Y: -12
-		move:
+		move: cursortarget.shp
 			Start: 0
-			X: -16
+			X: -12
 			Y: -12
 		move-minimap:
 			Start: 0
@@ -107,9 +107,9 @@ Cursors:
 			Start: 0
 			X: -16
 			Y: -12
-		attack:
+		attack: cursortarget.shp
 			Start: 0
-			X: -16
+			X: -12
 			Y: -12
 		attack-minimap:
 			Start: 0
@@ -123,9 +123,9 @@ Cursors:
 			Start: 0
 			X: -16
 			Y: -12
-		attackmove:
+		attackmove: cursortarget.shp
 			Start: 0
-			X: -16
+			X: -12
 			Y: -12
 		attackmove-minimap:
 			Start: 0
@@ -139,9 +139,9 @@ Cursors:
 			Start: 0
 			X: -16
 			Y: -12
-		assaultmove:
+		assaultmove: cursortarget.shp
 			Start: 0
-			X: -16
+			X: -12
 			Y: -12
 		assaultmove-minimap:
 			Start: 0

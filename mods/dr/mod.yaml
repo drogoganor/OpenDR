@@ -88,6 +88,7 @@ Chrome:
 Assemblies:
 	dr|OpenRA.Mods.Dr.dll
 	common|OpenRA.Mods.Common.dll
+	common|OpenRA.Mods.Cnc.dll
 
 ChromeLayout:
 	dr|chrome/mainmenu.yaml
@@ -199,25 +200,29 @@ SpriteSequenceFormat: HackySpriteSequence
 ModelSequenceFormat: PlaceholderModelSequence
 
 GameSpeeds:
+	slower:
+		Name: Slower
+		Timestep: 65
+		OrderLatency: 1
 	slow:
 		Name: Slow
-		Timestep: 70
+		Timestep: 50
 		OrderLatency: 1
 	default:
 		Name: Normal
-		Timestep: 50
+		Timestep: 40
 		OrderLatency: 1
 	fast:
 		Name: Fast
-		Timestep: 35
+		Timestep: 34
 		OrderLatency: 2
 	faster:
 		Name: Faster
-		Timestep: 25
+		Timestep: 28
 		OrderLatency: 4
 	fastest:
 		Name: Fastest
-		Timestep: 18
+		Timestep: 22
 		OrderLatency: 6
 
 ColorValidator:

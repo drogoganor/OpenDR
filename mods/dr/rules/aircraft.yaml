@@ -15,6 +15,7 @@
 	#WithSpriteControlGroupDecoration:
 	Selectable:
 		Bounds: 24,24
+		DecorationBounds: 26,24
 	Aircraft:
 		RearmBuildings: rearmingdeck.human, rearmingdeck.cyborg
 		RepairBuildings: repair.human, repair.cyborg

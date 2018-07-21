@@ -61,8 +61,8 @@
 		TerrainType: SpringWater
 		Palette: player
 		Sequences: water1
-		MaxDensity: 12000
-		ValuePerUnit: 25
+		MaxDensity: 120000
+		ValuePerUnit: 20
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true
 	ResourceType@taelon:
@@ -73,8 +73,8 @@
 		TerrainType: Taelon
 		Palette: player
 		Sequences: taelon1
-		MaxDensity: 12000
-		ValuePerUnit: 25
+		MaxDensity: 120000
+		ValuePerUnit: 20
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true
 	Locomotor@FOOT:
@@ -252,6 +252,7 @@ Player:
 		ExploredMapCheckboxEnabled: True
 		FogCheckboxEnabled: True
 	PlaceBuilding:
+		NewOptionsNotificationDelay: 0
 	SupportPowerManager:
 	ScriptTriggers:
 	MissionObjectives:

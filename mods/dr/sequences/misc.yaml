@@ -71,7 +71,7 @@ clock:
 		Length: *
 
 moveflsh:
-	idle: mpspawn.shp
+	idle: cursortarget.shp
 		Length: *
 
 beacon:

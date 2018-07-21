@@ -162,7 +162,7 @@ Freighter:
 	WithDockingAnimation:
 	WithFacingSpriteBody:
 	Harvester:
-		Capacity: 100
+		Capacity: 60
 		Resources: SpringWater,Taelon
 		BaleUnloadDelay: 1
 		SearchFromProcRadius: 30
@@ -196,7 +196,7 @@ HoverFreighter:
 	WithDockingAnimation:
 	WithFacingSpriteBody:
 	Harvester:
-		Capacity: 100
+		Capacity: 60
 		Resources: SpringWater,Taelon
 		BaleUnloadDelay: 1
 		SearchFromProcRadius: 30

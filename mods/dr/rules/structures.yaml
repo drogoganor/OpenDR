@@ -38,7 +38,7 @@
 	Huntable:
 	UpdatesPlayerStatistics:
 	Buildable:
-		BuildDurationModifier: 2486 # DR original: 2486, set to 360 for testing sanity
+		BuildDurationModifier: 1243 # DR original: 2486, 360 for testing sanity
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 12
@@ -171,7 +171,7 @@
 		BuildPaletteOrder: 50
 		Queue: Upgrade
 		BuildLimit: 1
-		BuildDurationModifier: 40
+		BuildDurationModifier: 1243
 		Description: Unlocks additional construction options
 		BuildDuration: 52
 
@@ -460,11 +460,12 @@ Power:
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	Refinery:
-		DockAngle: 64
+		DockAngle: 32
 		DockOffset: 0,2
 	StoresResources:
-		PipCount: 17
-		Capacity: 2000
+		PipColor: Green
+		PipCount: 12
+		Capacity: 3000
 	FreeActor:
 		Actor: Freighter
 		SpawnOffset: 0,2
@@ -521,10 +522,11 @@ WaterLaunchPad:
 	Armor:
 		Type: BuildingArmour
 	Refinery:
-		DockAngle: 64
+		DockAngle: 32
 		DockOffset: 1,2
 	StoresResources:
-		PipCount: 12
+		PipColor: Blue
+		PipCount: 18
 		Capacity: 3000
 	FreeActor:
 		Actor: Freighter

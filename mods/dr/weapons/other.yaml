@@ -1,6 +1,6 @@
 Heal:
 	ReloadDelay: 135
-	Range: 2c0
+	Range: 2c512
 	Report: gxheaoc0.wav
 	ValidTargets: Infantry
 	Projectile: Bullet
