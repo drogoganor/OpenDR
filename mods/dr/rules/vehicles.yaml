@@ -19,7 +19,7 @@
 	RevealsShroud:
 		Range: 4c0
 	Mobile:
-		Speed: 56
+		Speed: 72
 		Crushes: mine, crate
 		Locomotor: wheeled
 		TurnSpeed: 10
@@ -33,7 +33,7 @@
 	Repairable:
 		RepairBuildings: repair.human, repair.cyborg
 	Passenger:
-		CargoType: Vehicle
+		CargoType: Infantry
 	AttackMove:
 	HiddenUnderFog:
 	ActorLostNotification:
@@ -96,7 +96,7 @@ ConstructionRig:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 80 # should be 60 but 80 for development purposes
+		Speed: 72
 	Armor:
 		Type: TankPlating
 	MustBeDestroyed:
@@ -156,7 +156,7 @@ Freighter:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 100
+		Speed: 120
 	Armor:
 		Type: TankPlatingPlating
 	WithDockingAnimation:
@@ -190,7 +190,7 @@ HoverFreighter:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 160
+		Speed: 192
 	Armor:
 		Type: TankPlatingPlating
 	WithDockingAnimation:
@@ -222,7 +222,7 @@ SpiderBike:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 240
+		Speed: 288
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -248,11 +248,11 @@ RAT:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 180
+		Speed: 216
 		RequiresCondition: !notmobile
 	Cargo:
 		Types: Infantry
-		MaxWeight: 15
+		MaxWeight: 5
 		PipCount: 5
 		LoadingCondition: notmobile
 	Armor:
@@ -275,7 +275,7 @@ SkirmishTank:
 	Turreted:
 		TurnSpeed: 5
 	Armament:
-		Weapon: LaserRifle
+		Weapon: SkirmishGun1
 		Recoil: 128
 		RecoilRecovery: 38
 		LocalOffset: 720,0,80
@@ -290,11 +290,9 @@ SkirmishTank:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 160
+		Speed: 192
 	Armor:
 		Type: TankPlating
-	Armament:
-		Weapon: SkirmishGun1
 
 TankHunter:
 	Inherits: ^DrAnimatedVehicle
@@ -316,7 +314,7 @@ TankHunter:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 200
+		Speed: 240
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -342,7 +340,7 @@ PhaseTank:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 120
+		Speed: 144
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -370,7 +368,7 @@ FlakJack:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 120
+		Speed: 144
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -396,7 +394,7 @@ TripleRailHoverTank:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 120
+		Speed: 144
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -431,7 +429,7 @@ HellstormArtillery:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 80
+		Speed: 96
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -457,7 +455,7 @@ ShockWave:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 80
+		Speed: 96
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -492,7 +490,7 @@ WaterContaminator:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 40
+		Speed: 48
 	Armor:
 		Type: TankPlating
 
@@ -518,7 +516,7 @@ ScoutRunner:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 200
+		Speed: 240
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -544,11 +542,11 @@ ITT:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 200
+		Speed: 240
 		RequiresCondition: !notmobile
 	Cargo:
 		Types: Infantry
-		MaxWeight: 15
+		MaxWeight: 5
 		PipCount: 5
 		LoadingCondition: notmobile
 	Armor:
@@ -576,7 +574,7 @@ PlasmaTank:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 160
+		Speed: 192
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -611,7 +609,7 @@ Amper:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 80
+		Speed: 96
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -638,7 +636,7 @@ MAD:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 160
+		Speed: 192
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -664,7 +662,7 @@ Shredder:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 200
+		Speed: 240
 	Armor:
 		Type: ForcePlating
 
@@ -688,7 +686,7 @@ HostageTaker:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 200
+		Speed: 240
 	Armor:
 		Type: TankPlating
 
@@ -712,7 +710,7 @@ TachionTank:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 120
+		Speed: 144
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -738,7 +736,7 @@ Scarab:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 60
+		Speed: 72
 	Armor:
 		Type: TankPlating
 	Armament:

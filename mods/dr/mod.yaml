@@ -185,6 +185,9 @@ Fonts:
 		Font: common|FreeSansBold.ttf
 		Size:14
 
+Missions:
+	dr|missions.yaml
+
 MapGrid:
 	TileSize: 24, 24
 	Type: Rectangular

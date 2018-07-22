@@ -329,3 +329,36 @@ uiextst0.spr:
 		Start: 0
 		Facings: 16
 	icon: uiextmn0.spr
+
+# Rowdy Civilian
+uorcmst0.spr:
+	Inherits: humansplat
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 184
+		Facings: 8
+	idle2:
+		Start: 88
+		Facings: 8
+		Length: 6
+		Tick: 100
+	idle3:
+		Start: 136
+		Facings: 8
+		Length: 6
+		Tick: 100
+	stand:
+		Start: 184
+		Facings: 8
+	icon: uorcmmn0.spr

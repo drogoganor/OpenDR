@@ -1342,3 +1342,31 @@ TemporalRiftCreator:
 		Sequence: idle-top
 	WithIdleOverlay@LAYER2:
 		Sequence: idle-top2
+
+# Civilian stuff now
+BigWallLeft:
+	Inherits: ^DrGenericBuilding
+	Inherits@shape: ^3x3Shape
+	Building:
+		Footprint: xx= xxx =xx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
+	RenderSprites:
+		Image: tcbwl1l0.spr
+	Tooltip:
+		Name: Big Wall Left
+	Buildable:
+		Prerequisites: ~rig, hq
+		BuildPaletteOrder: 70
+		BuildDuration: 40
+	Valued:
+		Cost: 150
+	Health:
+		HP: 4000
+	Power:
+		Amount: 0
+	Armor:
+		Type: BuildingArmour

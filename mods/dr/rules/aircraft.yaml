@@ -89,7 +89,7 @@ SkyBike:
 		PipCount: 5
 		AmmoCondition: ammo
 	Aircraft:
-		Speed: 200
+		Speed: 336
 	AttackHeli:
 		FacingTolerance: 20
 
@@ -122,7 +122,7 @@ Outrider:
 		PipCount: 5
 		AmmoCondition: ammo
 	Aircraft:
-		Speed: 240
+		Speed: 288
 	AttackHeli:
 		FacingTolerance: 20
 
@@ -148,7 +148,7 @@ ReconDrone:
 	Armor:
 		Type: FlyingArmour
 	Aircraft:
-		Speed: 240
+		Speed: 192
 	AttackHeli:
 		FacingTolerance: 20
 
@@ -181,7 +181,7 @@ Cyclone:
 		PipCount: 5
 		AmmoCondition: ammo
 	Aircraft:
-		Speed: 240
+		Speed: 288
 	AttackHeli:
 		FacingTolerance: 20
 
@@ -214,6 +214,6 @@ SkyFortress:
 		PipCount: 1
 		AmmoCondition: ammo
 	Aircraft:
-		Speed: 100
+		Speed: 120
 	AttackHeli:
 		FacingTolerance: 20

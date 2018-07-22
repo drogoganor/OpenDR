@@ -13,7 +13,7 @@
 	RevealsShroud:
 		Range: 4c0
 	Mobile:
-		Speed: 56
+		Speed: 96
 		Crushes: mine, crate
 		SharesCell: false
 		Locomotor: foot
@@ -100,17 +100,32 @@ Civilian:
 	Tooltip:
 		Name: Civilian
 	Health:
-		HP: 1
+		HP: 40
 	Mobile:
-		Speed: 60
+		Speed: 72
 	Voiced:
 		VoiceSet: CivilianVoice
 	-Buildable:
 
+RowdyCivilian:
+	Inherits: Civilian
+	RenderSprites:
+		Image: uorcmst0.spr
+	Tooltip:
+		Name: Rowdy Civilian
+	Health:
+		HP: 120
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		Weapon: LaserRifle
+
 Raider:
 	Inherits: ^DrSoldier
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Inherits@AUTOTARGET: ^AutoTargetAir
 	RenderSprites:
 		Image: ufradst0.spr
 	Tooltip:
@@ -129,7 +144,7 @@ Raider:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 100
+		Speed: 96
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -155,7 +170,7 @@ Mercenary:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 80
+		Speed: 96
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -181,7 +196,7 @@ Sniper:
 	RevealsShroud:
 		Range: 12c0
 	Mobile:
-		Speed: 120
+		Speed: 144
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -207,7 +222,7 @@ Scout:
 	RevealsShroud:
 		Range: 12c0
 	Mobile:
-		Speed: 120
+		Speed: 144
 	Armor:
 		Type: ToughHuman
 
@@ -231,7 +246,7 @@ Medic:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 80
+		Speed: 96
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -266,11 +281,11 @@ Saboteur:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 120
+		Speed: 144
 	Armor:
 		Type: ToughHuman
 	Demolition:
-		EnterBehaviour: Suicide
+		EnterBehaviour: Dispose
 	EngineerRepair:
 	RepairsBridges:
 	#Captures:
@@ -297,7 +312,7 @@ Mechanic:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 120
+		Speed: 144
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -330,7 +345,7 @@ Martyr:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 160
+		Speed: 192
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -346,8 +361,6 @@ Martyr:
 
 Guardian:
 	Inherits: ^DrSoldier
-	Inherits@AUTOTARGET: ^AutoTargetGround
-	Inherits@AUTOTARGET: ^AutoTargetAir
 	RenderSprites:
 		Image: uigrdst0.spr
 	Tooltip:
@@ -366,9 +379,11 @@ Guardian:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 80
+		Speed: 96
 	Armor:
 		Type: PowerHuman
+	Armament@PRIMARY:
+		Weapon: LaserRifle
 
 Bion:
 	Inherits: ^DrSoldier
@@ -391,7 +406,7 @@ Bion:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 60
+		Speed: 72
 	Armor:
 		Type: PowerHuman
 	Armament@PRIMARY:
@@ -417,7 +432,7 @@ Exterminator:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 160
+		Speed: 192
 	Armor:
 		Type: PowerHuman
 	Armament@PRIMARY:
@@ -443,7 +458,7 @@ Infiltrator:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 120
+		Speed: 144
 	Armor:
 		Type: ToughHuman
 	Disguise:

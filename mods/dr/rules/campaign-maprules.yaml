@@ -22,8 +22,8 @@ Player:
 	Shroud:
 		FogCheckboxLocked: False
 		FogCheckboxEnabled: True
-		ExploredMapCheckboxLocked: True
-		ExploredMapCheckboxEnabled: True
+		ExploredMapCheckboxLocked: False
+		ExploredMapCheckboxEnabled: False
 	PlayerResources:
 		DefaultCashLocked: True
 		DefaultCash: 5000
