@@ -91,6 +91,7 @@ SkyBike:
 	AmmoPool:
 		Ammo: 20
 		PipCount: 5
+		PipType: Red
 		AmmoCondition: ammo
 	Aircraft:
 		Speed: 336
@@ -124,6 +125,7 @@ Outrider:
 	AmmoPool:
 		Ammo: 10
 		PipCount: 5
+		PipType: Red
 		AmmoCondition: ammo
 	Aircraft:
 		Speed: 288
@@ -183,6 +185,7 @@ Cyclone:
 	AmmoPool:
 		Ammo: 5
 		PipCount: 5
+		PipType: Red
 		AmmoCondition: ammo
 	Aircraft:
 		Speed: 288
@@ -216,6 +219,7 @@ SkyFortress:
 	AmmoPool:
 		Ammo: 1
 		PipCount: 1
+		PipType: Red
 		AmmoCondition: ammo
 	Aircraft:
 		Speed: 120

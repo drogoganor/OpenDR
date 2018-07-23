@@ -33,7 +33,7 @@
 	Repairable:
 		RepairBuildings: repair.human, repair.cyborg
 	Passenger:
-		CargoType: Infantry
+		CargoType: Vehicle
 	AttackMove:
 	HiddenUnderFog:
 	ActorLostNotification:
@@ -70,6 +70,9 @@
 
 ^DrHoverAnimatedVehicle:
 	Inherits: ^DrAnimatedVehicle
+	WithShadow:
+		Offset: 111, 64, 0
+		ZOffset: -129
 	Hovers:
 		OffsetModifier: 0
 	Mobile:
@@ -99,6 +102,10 @@ ConstructionRig:
 		Speed: 72
 	Armor:
 		Type: TankPlating
+	Passenger:
+		CargoType: Infantry
+		Weight: 5
+		PipType: Yellow
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	GivesBuildableArea:

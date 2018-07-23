@@ -20,9 +20,9 @@ Medic:
 	Buildable:
 		Prerequisites: ~disabled
 
-#Saboteur:
-#	Buildable:
-#		Prerequisites: ~disabled
+Saboteur:
+	Buildable:
+		Prerequisites: ~disabled
 
 Sniper:
 	Buildable:
@@ -33,6 +33,10 @@ Mechanic:
 		Prerequisites: ~disabled
 
 Martyr:
+	Buildable:
+		Prerequisites: ~disabled
+
+Infiltrator:
 	Buildable:
 		Prerequisites: ~disabled
 

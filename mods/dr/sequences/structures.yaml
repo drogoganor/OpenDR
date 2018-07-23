@@ -823,7 +823,7 @@ barren|nirep1l0.spr:
 		ZOffset: -1c511
 	dead:
 		Start: 1
-		Tick: 800
+		Tick: 1
 	underlay: nirep1l0.spr
 		ZOffset: -8192
 		Start: 1
@@ -862,7 +862,7 @@ nfphf1l0.spr:
 		Length: 1
 	dead:
 		Start: 1
-		Tick: 800
+		Tick: 1
 	underlay: barren|nfphf1l0.spr
 		ZOffset: -8192
 		Start: 1
@@ -920,7 +920,9 @@ nfrrm1l0.spr:
 		Start: 1
 		Offset: 12, 16
 	icon: bfrrmmn0.spr
+		Offset: 0, 0
 	fake-icon: bfrrmmn0.spr
+		Offset: 0, 0
 
 # Imperium rearming deck
 nirrm1l0.spr:
@@ -960,7 +962,9 @@ nirrm1l0.spr:
 		Start: 1
 		Offset: 23, 37
 	icon: birrmmn0.spr
+		Offset: 0, 0
 	fake-icon: birrmmn0.spr
+		Offset: 0, 0
 
 # Imperium temporal gate
 nitgt1l0.spr:
@@ -988,7 +992,7 @@ nitgt1l0.spr:
 		Length: 1
 	dead:
 		Start: 1
-		Tick: 800
+		Tick: 1
 	underlay: barren|nitgt1l0.spr
 		ZOffset: -8192
 		Start: 1
@@ -1026,7 +1030,7 @@ nitrc1l0.spr:
 		Length: 1
 	dead:
 		Start: 1
-		Tick: 800
+		Tick: 1
 	underlay: barren|nitrc1l0.spr
 		ZOffset: -8192
 		Start: 1
@@ -1058,7 +1062,7 @@ tcbwl1l0.spr:
 		Length: 1
 	dead:
 		Start: 1
-		Tick: 800
+		Tick: 1
 	icon: bcbwmmn0.spr
 	fake-icon: bcbwmmn0.spr
 
@@ -1080,6 +1084,6 @@ tcbwm1l0.spr:
 		Length: 1
 	dead:
 		Start: 1
-		Tick: 800
+		Tick: 1
 	icon: bcbwlmn0.spr
 	fake-icon: bcbwlmn0.spr
