@@ -427,6 +427,9 @@ Exterminator:
 		VoiceSet: ExterminatorVoice
 	Valued:
 		Cost: 500
+	WithShadow:
+		Offset: 111, 64, 0
+		ZOffset: -129
 	Health:
 		HP: 75
 	RevealsShroud:

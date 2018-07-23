@@ -93,6 +93,7 @@ SkyBike:
 		PipCount: 5
 		PipType: Red
 		AmmoCondition: ammo
+		ReloadDelay: 10 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 336
 	AttackHeli:
@@ -127,6 +128,7 @@ Outrider:
 		PipCount: 5
 		PipType: Red
 		AmmoCondition: ammo
+		ReloadDelay: 20 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 288
 	AttackHeli:
@@ -187,6 +189,7 @@ Cyclone:
 		PipCount: 5
 		PipType: Red
 		AmmoCondition: ammo
+		ReloadDelay: 40 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 288
 	AttackHeli:
@@ -221,6 +224,7 @@ SkyFortress:
 		PipCount: 1
 		PipType: Red
 		AmmoCondition: ammo
+		ReloadDelay: 200 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 120
 	AttackHeli:

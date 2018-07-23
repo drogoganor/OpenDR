@@ -1024,6 +1024,7 @@ Hospital.human:
 	RepairsUnits:
 		HpPerStep: 5
 		Interval: 5
+		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 5
 	Reservable:
@@ -1076,6 +1077,7 @@ Hospital.cyborg:
 	RepairsUnits:
 		HpPerStep: 5
 		Interval: 5
+		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 5
 	Reservable:
@@ -1130,6 +1132,7 @@ Repair.human:
 	RepairsUnits:
 		HpPerStep: 10
 		Interval: 7
+		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
 	WithRepairAnimation:
@@ -1179,6 +1182,7 @@ Repair.cyborg:
 	RepairsUnits:
 		HpPerStep: 10
 		Interval: 7
+		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
 	WithRepairAnimation:

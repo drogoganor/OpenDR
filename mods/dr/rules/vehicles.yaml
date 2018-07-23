@@ -623,7 +623,7 @@ Amper:
 		Weapon: AmperAmp
 
 MAD:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^DrHoverAnimatedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	RenderSprites:
 		Image: uimadst0.spr
