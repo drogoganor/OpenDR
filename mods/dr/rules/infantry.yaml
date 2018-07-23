@@ -283,13 +283,11 @@ Saboteur:
 		Speed: 144
 	Armor:
 		Type: ToughHuman
-	Demolition:
-		EnterBehaviour: Dispose
 	EngineerRepair:
-	RepairsBridges:
-	#Captures:
-	#	CaptureTypes: building
-	#	PlayerExperience: 50
+	Captures:
+		CaptureTypes: building
+		Sabotage: True
+		SabotageHPRemoval: 50
 
 Mechanic:
 	Inherits: ^DrSoldier

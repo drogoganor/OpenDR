@@ -261,7 +261,7 @@ uffarst0.spr:
 		Length: 3
 		Tick: 100
 	shoot:
-		Start: 16
+		Start: 48
 		Facings: 16
 		Length: 2
 		Tick: 100
@@ -573,7 +573,7 @@ uitctst0.spr:
 		Facings: 16
 	icon: uitctmn0.spr
 
-# S.C.A.R.A.B.
+# S.C.A.R.A.B. scarab
 uiiarst0.spr:
 	Defaults:
 		AddExtension: False
@@ -587,9 +587,9 @@ uiiarst0.spr:
 		Start: 0
 		Facings: 16
 	shoot:
-		Start: 0
+		Start: 16
 		Facings: 16
-		Length: 4
+		Length: 3
 		Tick: 100
 	icon: uiiarmn0.spr
 

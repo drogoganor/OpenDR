@@ -50,6 +50,7 @@
 	#WithMakeAnimation:
 	#ExternalCapturable:
 	#ExternalCapturableBar:
+	Capturable:
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	Sellable:
