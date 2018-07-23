@@ -139,6 +139,29 @@
 			SpringWater: 100
 			Taelon: 100
 			Water: 50
+	Locomotor@SHREDDER:
+		Name: shredder
+		Inherits: hovering
+		Crushes: infantry
+		TerrainSpeeds: # copy of hover
+			Clear: 100
+			Normal2: 100
+			Normal3: 100
+			Muddy1: 80
+			Muddy2: 80
+			Rough1: 80
+			Rough2: 80
+			Road: 100
+			RoadBase: 100
+			HillSlope1: 80
+			HillSlope2: 80
+			Cliff1: 75
+			Cliff2: 75
+			Cliff3: 75
+			Cliff4: 75
+			SpringWater: 100
+			Taelon: 100
+			Water: 50
 
 World:
 	Inherits: ^BaseWorld

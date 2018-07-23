@@ -50,7 +50,6 @@
 	ActorLostNotification:
 	AttackFrontal:
 	Crushable:
-		CrushSound: squishy2.aud
 	Guard:
 	Guardable:
 	Tooltip:
@@ -403,6 +402,7 @@ Bion:
 		Cost: 350
 	Health:
 		HP: 150
+	-Crushable:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
@@ -432,6 +432,7 @@ Exterminator:
 		ZOffset: -129
 	Health:
 		HP: 75
+	-Crushable:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:

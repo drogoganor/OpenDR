@@ -1,6 +1,10 @@
 
 # Generic human death
 humansplat:
+	die: splata.spr
+		Start: 0
+		Length: 15
+		Tick: 100
 	die1: splata.spr
 		Start: 0
 		Length: 15
@@ -12,6 +16,10 @@ humansplat:
 
 # Generic alien death
 aliensplat:
+	die: splatb.spr
+		Start: 0
+		Length: 15
+		Tick: 100
 	die1: splatb.spr
 		Start: 0
 		Length: 15

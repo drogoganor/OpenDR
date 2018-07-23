@@ -318,7 +318,7 @@ GenericExplode:
 
 Chaff: # Flack Jack
 	Inherits: ^C1
-	ReloadDelay: 15
+	ReloadDelay: 21
 	Range: 8c0
 	Report: gxflkwc0.wav
 	ValidTargets: Air
@@ -342,7 +342,7 @@ Chaff: # Flack Jack
 
 LaserRifle:
 	Inherits: ^E2
-	ReloadDelay: 8
+	ReloadDelay: 11
 	Range: 4c0
 	Report: gxlgnwc0.wav
 	ValidTargets: Ground
@@ -365,7 +365,7 @@ LaserRifle:
 
 LaserRifleOriginal:
 	Inherits: ^E2
-	ReloadDelay: 8
+	ReloadDelay: 11
 	Range: 4c0
 	Report: gxlgnwc0.wav
 	ValidTargets: Ground
@@ -383,7 +383,7 @@ LaserRifleOriginal:
 
 RailGun:
 	Inherits: ^E1
-	ReloadDelay: 11
+	ReloadDelay: 15
 	Range: 5c0
 	Report: gxmrcwc0.wav
 	Projectile: Bullet
@@ -399,7 +399,7 @@ RailGun:
 
 DoubleRailGun:
 	Inherits: ^E1
-	ReloadDelay: 13
+	ReloadDelay: 18
 	Range: 5c0
 	Report: gxspbwc0.wav
 	Projectile: Bullet
@@ -415,7 +415,7 @@ DoubleRailGun:
 		
 TripleRailGun:
 	Inherits: ^E1
-	ReloadDelay: 20
+	ReloadDelay: 28
 	Range: 8c0
 	Report: gxtrtwc0.wav
 	Projectile: Bullet
@@ -431,8 +431,10 @@ TripleRailGun:
 
 SkirmishGun1:
 	Inherits: ^M2
-	ReloadDelay: 20
+	ReloadDelay: 28
 	Range: 6c0
+	Burst: 2
+	BurstDelays: 9
 	Report: gxsktwc0.wav
 	ValidTargets: Air, Ground
 	Projectile: Bullet
@@ -451,7 +453,7 @@ SkirmishGun1:
 
 SniperRifle:
 	Inherits: ^S1
-	ReloadDelay: 50
+	ReloadDelay: 70
 	Range: 8c0
 	Report: gxsnpwc0.wav
 	Projectile: Bullet
@@ -467,7 +469,7 @@ SniperRifle:
 
 PlasmaCannon:
 	Inherits: ^E3
-	ReloadDelay: 15
+	ReloadDelay: 21
 	Range: 5c0
 	Report: gxpltwc0.wav
 	Projectile: Bullet
@@ -483,7 +485,7 @@ PlasmaCannon:
 
 PlasmaRifle: # Bion
 	Inherits: ^E3
-	ReloadDelay: 8
+	ReloadDelay: 11
 	Range: 4c0
 	Report: gxbonwc0.wav
 	ValidTargets: Air, Ground
@@ -502,7 +504,7 @@ PlasmaRifle: # Bion
 
 TachyonCannon:
 	Inherits: ^E4
-	ReloadDelay: 20
+	ReloadDelay: 28
 	Range: 8c0
 	Report: gxtctwc0.wav
 	Projectile: Bullet
@@ -518,7 +520,7 @@ TachyonCannon:
 
 SkyFortressWeapon: #FortressCannon
 	Inherits: ^E3
-	ReloadDelay: 20
+	ReloadDelay: 28
 	Range: 7c0
 	Report: gxskywc0.wav
 	Projectile: Bullet
@@ -540,7 +542,7 @@ SkyFortressWeapon: #FortressCannon
 
 CycloneCannon:
 	Inherits: ^G1
-	ReloadDelay: 10
+	ReloadDelay: 14
 	Range: 6c0
 	Report: gxcycwc0.wav
 	ValidTargets: Air, Ground
@@ -573,7 +575,7 @@ SuicideNuke:
 
 PhaseTankCannon:
 	Inherits: ^E2
-	ReloadDelay: 13
+	ReloadDelay: 18
 	Range: 6c0
 	Report: gxphtwc0.wav
 	Projectile: Bullet
@@ -589,7 +591,7 @@ PhaseTankCannon:
 
 LaserCannon:
 	Inherits: ^E2
-	ReloadDelay: 13
+	ReloadDelay: 18
 	Range: 6c0
 	Report: gxsttwc0.wav
 	Projectile: Bullet
@@ -605,7 +607,7 @@ LaserCannon:
 
 FixedGroundToAirLaser:
 	Inherits: ^A1
-	ReloadDelay: 14
+	ReloadDelay: 20
 	Range: 20c0
 	Report: gxfaawc0.wav
 	ValidTargets: Air
@@ -623,7 +625,7 @@ FixedGroundToAirLaser:
 
 IMPFixedGroundToAirLaser:
 	Inherits: ^A1
-	ReloadDelay: 14
+	ReloadDelay: 20
 	Range: 10c0
 	Report: gxiaawc0.wav
 	ValidTargets: Air
@@ -641,7 +643,7 @@ IMPFixedGroundToAirLaser:
 
 FixedLaserPlat:
 	Inherits: ^E1
-	ReloadDelay: 10
+	ReloadDelay: 14
 	Range: 9c0
 	Report: gxfagwc0.wav
 	Projectile: Bullet
@@ -657,7 +659,7 @@ FixedLaserPlat:
 
 GroundToAirLaser:
 	Inherits: ^A1
-	ReloadDelay: 20
+	ReloadDelay: 28
 	Range: 8c0
 	ValidTargets: Air
 	Report: gxmadwc0.wav
@@ -677,7 +679,7 @@ GroundToAirLaser:
 BkLaser:
 	Inherits: ^A1
 	#Ammo 20
-	ReloadDelay: 7
+	ReloadDelay: 10
 	Range: 5c0
 	Report: gxskbwc0.wav
 	ValidTargets: Air, Ground
@@ -696,7 +698,7 @@ BkLaser:
 
 GatLaser:
 	Inherits: ^E2
-	ReloadDelay: 3
+	ReloadDelay: 4
 	Range: 5c0
 	Report: gxfgtwc0.wav
 	ValidTargets: Ground
@@ -714,7 +716,7 @@ GatLaser:
 
 GatPlasma:
 	Inherits: ^E3
-	ReloadDelay: 3
+	ReloadDelay: 4
 	Range: 5c0
 	Report: gxigtwc0.wav
 	ValidTargets: Ground
@@ -733,7 +735,7 @@ GatPlasma:
 
 PolyAcid:
 	Inherits: ^M3
-	ReloadDelay: 20
+	ReloadDelay: 28
 	Range: 5c0
 	Report: gxextwc1.wav
 	Projectile: Bullet
@@ -749,7 +751,7 @@ PolyAcid:
 
 TankHunterGun:
 	Inherits: ^E5
-	ReloadDelay: 20
+	ReloadDelay: 28
 	Range: 3c0
 	Report: gxthnwc0.wav
 	Projectile: Bullet
@@ -765,7 +767,7 @@ TankHunterGun:
 
 OutriderMissile:
 	Inherits: ^M1
-	ReloadDelay: 10
+	ReloadDelay: 14
 	#Ammo 10
 	Range: 5c0
 	Report: gxoutwc0.wav
@@ -782,7 +784,7 @@ OutriderMissile:
 
 ArtilleryShell:
 	Inherits: ^K2
-	ReloadDelay: 80
+	ReloadDelay: 112
 	Range: 45c0
 	#MinRange: 3
 	Report: gxfarwc0.wav
@@ -800,7 +802,7 @@ ArtilleryShell:
 
 IMPArtilleryShell:
 	Inherits: ^K2
-	ReloadDelay: 80
+	ReloadDelay: 112
 	Range: 45c0
 	Report: gxiarwc0.wav
 	Projectile: Bullet
@@ -817,7 +819,7 @@ IMPArtilleryShell:
 
 AmperAmp:
 	Inherits: ^H1
-	ReloadDelay: 10
+	ReloadDelay: 14
 	Range: 5c0
 	Report: gxampwc0.wav
 	Projectile: Bullet
@@ -833,7 +835,7 @@ AmperAmp:
 
 NeutronAss:
 	Inherits: ^E3
-	ReloadDelay: 32
+	ReloadDelay: 45
 	Range: 9c0
 	Report: gxneuwc0.wav
 	Projectile: Bullet

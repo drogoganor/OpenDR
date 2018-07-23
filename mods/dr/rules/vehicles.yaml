@@ -670,8 +670,10 @@ Shredder:
 		Range: 9c0
 	Mobile:
 		Speed: 240
+		Locomotor: shredder
 	Armor:
 		Type: ForcePlating
+	-Armament:
 
 HostageTaker:
 	Inherits: ^DrAnimatedVehicle
