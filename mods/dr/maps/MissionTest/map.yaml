@@ -22,7 +22,7 @@ Players:
 		LockFaction: True
 		Faction: fguard
 		LockColor: True
-		Color: F5D378
+		Color: 3A78FF
 		LockSpawn: True
 		LockTeam: True
 		Allies: FreedomGuard
@@ -315,14 +315,6 @@ Actors:
 	Actor95: aoroc002.spr
 		Owner: Neutral
 		Location: 16,43
-	Actor96: skybike
-		Owner: Freedom Guard
-		Location: 33,54
-		Facing: 92
-	Actor97: outrider
-		Owner: Freedom Guard
-		Location: 37,56
-		Facing: 92
 	Actor98: aoroc003.spr
 		Owner: Neutral
 		Location: 14,47
@@ -512,4 +504,32 @@ Actors:
 		Owner: Freedom Guard
 		Location: 68,27
 		Facing: 92
-Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, dr|rules/campaign-palettes.yaml, rules.yaml
+	Actor156: infiltrator
+		Owner: Freedom Guard
+		Location: 69,30
+		Facing: 92
+	Actor157: saboteur
+		Owner: Freedom Guard
+		Location: 64,24
+		Facing: 92
+	Actor158: saboteur
+		Owner: Freedom Guard
+		Location: 60,23
+		Facing: 92
+	Actor159: outrider
+		Owner: Freedom Guard
+		Location: 39,32
+		Facing: 92
+	Actor160: cyclone
+		Owner: Freedom Guard
+		Location: 43,31
+		Facing: 92
+	Actor161: skyfortress
+		Owner: Freedom Guard
+		Location: 38,35
+		Facing: 92
+	Actor162: skybike
+		Owner: Freedom Guard
+		Location: 43,34
+		Facing: 92
+Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

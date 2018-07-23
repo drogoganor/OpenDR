@@ -16,6 +16,9 @@
 	Selectable:
 		Bounds: 24,24
 		DecorationBounds: 26,24
+	WithShadow:
+		Offset: 111, 64, 0
+		ZOffset: -129
 	Aircraft:
 		RearmBuildings: rearmingdeck.human, rearmingdeck.cyborg
 		RepairBuildings: repair.human, repair.cyborg
@@ -31,6 +34,7 @@
 		WaitDistanceFromResupplyBase: 4c0
 		TakeOffOnResupply: true
 		VTOL: true
+		#LandAltitude: 1
 	Targetable@GROUND:
 		TargetTypes: Ground, Repair, Vehicle
 		RequiresCondition: !airborne

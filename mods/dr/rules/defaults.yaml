@@ -242,3 +242,6 @@
 		Categories: Tree
 	RadarColorFromTerrain:
 		Terrain: Tree
+	WithIdleOverlay@LAYER1:
+		Palette: shadow
+		Sequence: shadow

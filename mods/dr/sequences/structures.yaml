@@ -9,14 +9,14 @@ ncpow1l0.spr:
 		Offset: -8, -6
 	idle:
 		Start: 1
-		Combine:
-			ncpow1l0.spr:
-				Start: 1
-				Length: 1
-			bcpowsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 0, 0
+		#Combine:
+		#	ncpow1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bcpowsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 0, 0
 	make:
 		Start: 1
 	build:
@@ -30,15 +30,20 @@ ncpow1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	idle-top: barren|ncpow1l0.spr
+	underlay: barren|ncpow1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tcpow1l0.spr
+	top: tcpow1l0.spr
 		Start: 1
+	shadow: bcpowsh0.spr
+		Start: 1
+		Offset: 4, -7
 	icon: bcpowmn0.spr
 		Offset: 0, 0
 	fake-icon: bcpowmn0.spr
 		Offset: 0, 0
+
+
 
 # Water Launch Pad
 nclnc1l0.spr:
@@ -46,14 +51,14 @@ nclnc1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
-		Combine:
-			nclnc1l0.spr:
-				Start: 1
-				Length: 1
-			bclncsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: -1, 1
+		#Combine:
+		#	nclnc1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bclncsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: -1, 1
 	make:
 		Start: 1
 	build:
@@ -67,11 +72,14 @@ nclnc1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	idle-top: barren|nclnc1l0.spr
+	underlay: barren|nclnc1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tclnc1l0.spr
+	top: tclnc1l0.spr
 		Start: 1
+	shadow: bclncsh0.spr
+		Start: 1
+		Offset: -1, 1
 	icon: bclncmn0.spr
 	fake-icon: bclncmn0.spr
 
@@ -82,14 +90,14 @@ nfhqt1l0.spr:
 		Offset: -6, -12
 	idle:
 		Start: 1
-		Combine:
-			nfhqt1l0.spr:
-				Start: 1
-				Length: 1
-			bfhqtsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 15, 1
+		#Combine:
+		#	nfhqt1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bfhqtsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 15, 1
 	make:
 		Start: 1
 	build:
@@ -103,11 +111,14 @@ nfhqt1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	idle-top: barren|nfhqt1l0.spr
+	underlay: barren|nfhqt1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tfhqt1l0.spr
+	top: tfhqt1l0.spr
 		Start: 1
+	shadow: bfhqtsh0.spr
+		Start: 1
+		Offset: 8, -11
 	icon: bfhqtmn0.spr
 		Offset: 0, 0
 	fake-icon: bfhqtmn0.spr
@@ -140,14 +151,14 @@ nfutf1l0.spr:
 		Offset: 0, -2
 	idle:
 		Start: 1
-		Combine:
-			nfutf1l0.spr:
-				Start: 1
-				Length: 1
-			bfutfsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 11, -1
+		#Combine:
+		#	nfutf1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bfutfsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 11, -1
 	make:
 		Start: 1
 	build:
@@ -161,11 +172,14 @@ nfutf1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	idle-top: barren|nfutf1l0.spr
+	underlay: barren|nfutf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tfutf1l0.spr
+	top: tfutf1l0.spr
 		Start: 1
+	shadow: bfutfsh0.spr
+		Start: 1
+		Offset: 12, -2
 	icon: bfutfmn0.spr
 		Offset: 0, 0
 	fake-icon: bfutfmn0.spr
@@ -184,14 +198,14 @@ nfvcy1l0.spr:
 		Offset: 12, 0
 	idle:
 		Start: 1
-		Combine:
-			nfvcy1l0.spr:
-				Start: 1
-				Length: 1
-			bfvcysh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 0, 20
+		#Combine:
+		#	nfvcy1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bfvcysh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 0, 20
 	make:
 		Start: 1
 	build:
@@ -205,11 +219,14 @@ nfvcy1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	idle-top: barren|nfvcy1l0.spr
+	underlay: barren|nfvcy1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tfvcy1l0.spr
+	top: tfvcy1l0.spr
 		Start: 1
+	shadow: bfvcysh0.spr
+		Start: 1
+		Offset: 16, 21
 	icon: bfvcymn0.spr
 		Offset: 0, 0
 	fake-icon: bfvcymn0.spr
@@ -228,14 +245,14 @@ nihqt1l0.spr:
 		Offset: 6, -22
 	idle:
 		Start: 1
-		Combine:
-			nihqt1l0.spr:
-				Start: 1
-				Length: 1
-			bihqtsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 24, 11
+		#Combine:
+		#	nihqt1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bihqtsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 24, 11
 	make:
 		Start: 1
 	build:
@@ -249,11 +266,14 @@ nihqt1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	idle-top: barren|nihqt1l0.spr
+	underlay: barren|nihqt1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tihqt1l0.spr
+	top: tihqt1l0.spr
 		Start: 1
+	shadow: bihqtsh0.spr
+		Start: 1
+		Offset: 30, -10
 	icon: bihqtmn0.spr
 		Offset: 0, 0
 	fake-icon: bihqtmn0.spr
@@ -278,14 +298,14 @@ niutf1l0.spr:
 		Offset: 10, 6
 	idle:
 		Start: 1
-		Combine:
-			niutf1l0.spr:
-				Start: 1
-				Length: 1
-			biutfsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 12, 0
+		#Combine:
+		#	niutf1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	biutfsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 12, 0
 	make:
 		Start: 0
 	build:
@@ -299,15 +319,18 @@ niutf1l0.spr:
 	dead:
 		Start: 0
 		Tick: 1
-	idle-top: barren|niutf1l0.spr
+	underlay: barren|niutf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: niutf1l0.spr
+	top: niutf1l0.spr
 		Start: 1
-	idle-top3: tiutf1l0.spr
+	top2: tiutf1l0.spr
 		Start: 0
-	idle-top4: tiutf1l0.spr
+	top3: tiutf1l0.spr
 		Start: 1
+	shadow: biutfsh0.spr
+		Start: 1
+		Offset: 22, 6
 	icon: biutfmn0.spr
 		Offset: 0, 0
 	fake-icon: biutfmn0.spr
@@ -325,14 +348,14 @@ nivcy1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
-		Combine:
-			nivcy1l0.spr:
-				Start: 1
-				Length: 1
-			bivcysh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 10, 11 # 9 10 also acceptable
+		#Combine:
+		#	nivcy1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bivcysh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 10, 11 # 9 10 also acceptable
 	make:
 		Start: 0
 	build:
@@ -346,15 +369,18 @@ nivcy1l0.spr:
 	dead:
 		Start: 0
 		Tick: 1
-	idle-top: barren|nivcy1l0.spr
+	underlay: barren|nivcy1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: nivcy1l0.spr
+	top: nivcy1l0.spr
 		Start: 1
-	idle-top3: tivcy1l0.spr
+	top2: tivcy1l0.spr
 		Start: 0
-	idle-top4: tivcy1l0.spr
+	top3: tivcy1l0.spr
 		Start: 1
+	shadow: bivcysh0.spr
+		Start: 1
+		Offset: 11, 12
 	icon: bivcymn0.spr
 	fake-icon: bivcymn0.spr
 
@@ -365,12 +391,11 @@ bivcymn1.spr:
 		Start: 0
 
 # FG Laser turret
-nfgdt1l0.spr:
+barren|nfgdt1l0.spr:
 	Defaults:
 		AddExtension: False
 	idle:
 		Start: 1
-		ZOffset: -128
 	make:
 		Start: 1
 	build:
@@ -389,11 +414,15 @@ nfgdt1l0.spr:
 		Facings: 16
 	dead:
 		Start: 1
-		Tick: 800
-	idle-top: barren|nfgdt1l0.spr
+		Tick: 1
+	underlay: nfgdt1l0.spr
+		ZOffset: -8192
 		Start: 1
-	idle-top2: tfgdt1l0.spr
+	top: tfgdt1l0.spr
 		Start: 1
+	shadow: bfgdtsh0.spr
+		Start: 1
+		Offset: 0, -1
 	icon: bfgdtmn0.spr
 	fake-icon: bfgdtmn0.spr
 
@@ -403,6 +432,7 @@ nigdt1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
+		ZOffset: -128
 	make:
 		Start: 1
 	build:
@@ -421,11 +451,14 @@ nigdt1l0.spr:
 		Facings: 16
 	dead:
 		Start: 1
-		Tick: 800
-	idle-top: barren|nigdt1l0.spr
+		Tick: 1
+	underlay: barren|nigdt1l0.spr
 		Start: 1
-	idle-top2: tigdt1l0.spr
+	top: tigdt1l0.spr
 		Start: 1
+	shadow: bigdtsh0.spr
+		Start: 1
+		Offset: 11, 2
 	icon: bigdtmn0.spr
 	fake-icon: bigdtmn0.spr
 
@@ -453,12 +486,15 @@ nfaar1l0.spr:
 		Facings: 16
 	dead:
 		Start: 1
-		Tick: 800
-	idle-top: barren|nfaar1l0.spr
+		Tick: 1
+	underlay: barren|nfaar1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tfaar1l0.spr
+	top: tfaar1l0.spr
 		Start: 1
+	shadow: bfaarsh0.spr
+		Start: 1
+		Offset: 12, 2
 	icon: bfaarmn0.spr
 	fake-icon: bfaarmn0.spr
 
@@ -487,12 +523,15 @@ niaar1l0.spr:
 		Length: 1
 	dead:
 		Start: 1
-		Tick: 800
-	idle-top: barren|niaar1l0.spr
+		Tick: 1
+	underlay: barren|niaar1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tiaar1l0.spr
+	top: tiaar1l0.spr
 		Start: 1
+	shadow: biaarsh0.spr
+		Start: 1
+		Offset: -2, 0
 	icon: biaarmn0.spr
 		Offset: 0, 0
 	fake-icon: biaarmn0.spr
@@ -522,12 +561,15 @@ nfagt1l0.spr:
 		Facings: 16
 	dead:
 		Start: 1
-		Tick: 800
-	idle-top: barren|nfagt1l0.spr
+		Tick: 1
+	underlay: barren|nfagt1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tfagt1l0.spr
+	top: tfagt1l0.spr
 		Start: 1
+	shadow: bfagtsh0.spr
+		Start: 1
+		Offset: 13, 14
 	icon: bfagtmn0.spr
 	fake-icon: bfagtmn0.spr
 
@@ -555,12 +597,15 @@ niagt1l0.spr:
 		Facings: 16
 	dead:
 		Start: 1
-		Tick: 800
-	idle-top: barren|niagt1l0.spr
+		Tick: 1
+	underlay: barren|niagt1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tiagt1l0.spr
+	top: tiagt1l0.spr
 		Start: 1
+	shadow: biagtsh0.spr
+		Start: 1
+		Offset: 12, 6
 	icon: biagtmn0.spr
 	fake-icon: biagtmn0.spr
 
@@ -571,14 +616,14 @@ nccam1l0.spr:
 		Offset: 1, -12
 	idle:
 		Start: 1
-		Combine:
-			nccam1l0.spr:
-				Start: 1
-				Length: 1
-			bccamsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 12, 12
+		#Combine:
+		#	nccam1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bccamsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 12, 12
 	make:
 		Start: 1
 	build:
@@ -591,12 +636,15 @@ nccam1l0.spr:
 		Length: 1
 	dead:
 		Start: 1
-		Tick: 800
-	idle-top: barren|nccam1l0.spr
+		Tick: 1
+	underlay: barren|nccam1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tccam1l0.spr
+	top: tccam1l0.spr
 		Start: 1
+	shadow: bccamsh0.spr
+		Start: 1
+		Offset: 13, 0
 	icon: bccammn0.spr
 		Offset: 0, 0
 	fake-icon: bccammn0.spr
@@ -609,14 +657,14 @@ nfhsp1l0.spr:
 		Offset: -6, 0
 	idle:
 		Start: 1
-		Combine:
-			nfhsp1l0.spr:
-				Start: 1
-				Length: 1
-			bfhspsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 0, 0
+		#Combine:
+		#	nfhsp1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bfhspsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 0, 0
 	make:
 		Start: 1
 	build:
@@ -637,12 +685,15 @@ nfhsp1l0.spr:
 		ZOffset: -1c511
 	dead:
 		Start: 1
-		Tick: 800
-	idle-top: barren|nfhsp1l0.spr
+		Tick: 1
+	underlay: barren|nfhsp1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tfhsp1l0.spr
+	top: tfhsp1l0.spr
 		Start: 1
+	shadow: bfhspsh0.spr
+		Start: 1
+		Offset: -8, 0
 	icon: bfhspmn0.spr
 		Offset: 0, 0
 	fake-icon: bfhspmn0.spr
@@ -654,14 +705,14 @@ nihsp1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
-		Combine:
-			nihsp1l0.spr:
-				Start: 1
-				Length: 1
-			bihspsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 1, 0
+		#Combine:
+		#	nihsp1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bihspsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 1, 0
 	make:
 		Start: 1
 	build:
@@ -682,12 +733,15 @@ nihsp1l0.spr:
 		ZOffset: -1c511
 	dead:
 		Start: 1
-		Tick: 800
-	idle-top: barren|nihsp1l0.spr
+		Tick: 1
+	underlay: barren|nihsp1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tihsp1l0.spr
+	top: tihsp1l0.spr
 		Start: 1
+	shadow: bihspsh0.spr
+		Start: 1
+		Offset: 1, -2
 	icon: bihspmn0.spr
 	fake-icon: bihspmn0.spr
 
@@ -695,14 +749,14 @@ nihsp1l0.spr:
 nfrep1l0.spr:
 	idle:
 		Start: 1
-		Combine:
-			nfrep1l0.spr:
-				Start: 1
-				Length: 1
-			bfrepsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 0, 12
+		#Combine:
+		#	nfrep1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bfrepsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 0, 12
 	make:
 		Start: 1
 	build:
@@ -723,29 +777,32 @@ nfrep1l0.spr:
 		ZOffset: -1c511
 	dead:
 		Start: 1
-		Tick: 800
-	idle-top: barren|nfrep1l0.spr
+		Tick: 1
+	underlay: barren|nfrep1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tfrep1l0.spr
+	top: tfrep1l0.spr
 		Start: 1
+	shadow: bfrepsh0.spr
+		Start: 1
+		Offset: 0, 13
 	icon: bfrepmn0.spr
 	fake-icon: bfrepmn0.spr
 
 # Imperium repair
-nirep1l0.spr:
+barren|nirep1l0.spr:
 	Defaults:
 		AddExtension: False
 	idle:
 		Start: 1
-		Combine:
-			nirep1l0.spr:
-				Start: 1
-				Length: 1
-			birepsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 1, -1
+		#Combine:
+		#	nirep1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	birepsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 1, -1
 	make:
 		Start: 1
 	build:
@@ -767,11 +824,14 @@ nirep1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: barren|nirep1l0.spr
+	underlay: nirep1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tirep1l0.spr
+	top: tirep1l0.spr
 		Start: 1
+	shadow: birepsh0.spr
+		Start: 1
+		Offset: -1, 0
 	icon: birepmn0.spr
 	fake-icon: birepmn0.spr
 
@@ -782,14 +842,14 @@ nfphf1l0.spr:
 		Offset: 0, -6
 	idle:
 		Start: 1
-		Combine:
-			nfphf1l0.spr:
-				Start: 1
-				Length: 1
-			bfphfsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 1, 13
+		#Combine:
+		#	nfphf1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bfphfsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 1, 13
 	make:
 		Start: 1
 	build:
@@ -803,11 +863,14 @@ nfphf1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: barren|nfphf1l0.spr
+	underlay: barren|nfphf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tfphf1l0.spr
+	top: tfphf1l0.spr
 		Start: 1
+	shadow: bfphfsh0.spr
+		Start: 1
+		Offset: 0, 7
 	icon: bfphfmn0.spr
 		Offset: 0, 0
 	fake-icon: bfphfmn0.spr
@@ -817,24 +880,24 @@ nfphf1l0.spr:
 nfrrm1l0.spr:
 	Defaults:
 		AddExtension: False
+		Offset: 0, 16
+		ZOffset: -1024
 	idle:
 		Start: 1
-		Combine:
-			nfrrm1l0.spr:
-				Start: 1
-				Length: 1
-			bfrrmsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 12, 0
+		#Combine:
+		#	nfrrm1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bfrrmsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 12, 0
 	active:
 		Start: 1
 		Length: 1
-		ZOffset: -1023
 	damaged-active:
 		Start: 1
 		Length: 1
-		ZOffset: -1023
 	make:
 		Start: 1
 	build:
@@ -847,12 +910,15 @@ nfrrm1l0.spr:
 		Length: 1
 	dead:
 		Start: 1
-		Tick: 800
-	idle-top: barren|nfrrm1l0.spr
+		Tick: 1
+	underlay: barren|nfrrm1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tfrrm1l0.spr
+	top: tfrrm1l0.spr
 		Start: 1
+	shadow: bfrrmsh0.spr
+		Start: 1
+		Offset: 12, 16
 	icon: bfrrmmn0.spr
 	fake-icon: bfrrmmn0.spr
 
@@ -860,16 +926,18 @@ nfrrm1l0.spr:
 nirrm1l0.spr:
 	Defaults:
 		AddExtension: False
+		Offset: 0, 16
+		ZOffset: -1024
 	idle:
 		Start: 1
-		Combine:
-			nirrm1l0.spr:
-				Start: 1
-				Length: 1
-			birrmsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 22, 21
+		#Combine:
+		#	nirrm1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	birrmsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 22, 21
 	make:
 		Start: 1
 	build:
@@ -882,12 +950,15 @@ nirrm1l0.spr:
 		Length: 1
 	dead:
 		Start: 1
-		Tick: 800
-	idle-top: barren|nirrm1l0.spr
+		Tick: 1
+	underlay: barren|nirrm1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: tirrm1l0.spr
+	top: tirrm1l0.spr
 		Start: 1
+	shadow: birrmsh0.spr
+		Start: 1
+		Offset: 23, 37
 	icon: birrmmn0.spr
 	fake-icon: birrmmn0.spr
 
@@ -897,14 +968,14 @@ nitgt1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
-		Combine:
-			nitgt1l0.spr:
-				Start: 1
-				Length: 1
-			bitgtsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: -2, 1
+		#Combine:
+		#	nitgt1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bitgtsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: -2, 1
 	make:
 		Start: 1
 	build:
@@ -918,11 +989,14 @@ nitgt1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: barren|nitgt1l0.spr
+	underlay: barren|nitgt1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: titgt1l0.spr
+	top: titgt1l0.spr
 		Start: 1
+	shadow: bitgtsh0.spr
+		Start: 1
+		Offset: -1, 1
 	icon: bitgtmn0.spr
 	fake-icon: bitgtmn0.spr
 
@@ -932,14 +1006,14 @@ nitrc1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
-		Combine:
-			nitrc1l0.spr:
-				Start: 1
-				Length: 1
-			bitrcsh0.spr:
-				Start: 1
-				Length: 1
-				Offset: 5, 19
+		#Combine:
+		#	nitrc1l0.spr:
+		#		Start: 1
+		#		Length: 1
+		#	bitrcsh0.spr:
+		#		Start: 1
+		#		Length: 1
+		#		Offset: 5, 19
 	make:
 		Start: 1
 	build:
@@ -953,16 +1027,20 @@ nitrc1l0.spr:
 	dead:
 		Start: 1
 		Tick: 800
-	idle-top: barren|nitrc1l0.spr
+	underlay: barren|nitrc1l0.spr
 		ZOffset: -8192
 		Start: 1
-	idle-top2: titrc1l0.spr
+	top: titrc1l0.spr
 		Start: 1
+	shadow: bitrcsh0.spr
+		Start: 1
+		Offset: 11, 15
 	icon: bitrcmn0.spr
 	fake-icon: bitrcmn0.spr
 
 
 # Civilian stuff now
+# Big wall left
 tcbwl1l0.spr:
 	Defaults:
 		AddExtension: False
@@ -983,3 +1061,25 @@ tcbwl1l0.spr:
 		Tick: 800
 	icon: bcbwmmn0.spr
 	fake-icon: bcbwmmn0.spr
+
+# Big wall right
+tcbwm1l0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 800
+	icon: bcbwlmn0.spr
+	fake-icon: bcbwlmn0.spr

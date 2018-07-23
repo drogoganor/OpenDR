@@ -148,6 +148,7 @@ Raider:
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
+		LocalOffset: 512,0,112
 		Weapon: LaserRifle
 
 Mercenary:
@@ -263,8 +264,6 @@ Saboteur:
 	Inherits: ^DrSoldier
 	RenderSprites:
 		Image: ufmecst0.spr
-	Buildable:
-		Icon: icon-saboteur
 	Tooltip:
 		Name: Saboteur
 	Buildable:
@@ -272,6 +271,7 @@ Saboteur:
 		Prerequisites: ~infantry.fguard, hq, upgrade.hq1, vehicles, barracks, upgrade.barracks1
 		BuildPaletteOrder: 20
 		BuildDuration: 24
+		Icon: icon-saboteur
 	Voiced:
 		VoiceSet: MechanicVoice
 	Valued:

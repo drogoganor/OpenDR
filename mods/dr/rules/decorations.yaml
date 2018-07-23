@@ -94,6 +94,20 @@ aoroc003.spr:
 		Dimensions: 2,3
 		LocalCenterOffset: 0,0,0
 
+aoroc004.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+
+aoroc005.spr:
+	Inherits: ^DrRock
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+
 # Cliff
 aoclf000.spr:
 	Inherits: ^DrRock
@@ -135,20 +149,6 @@ aoclf005.spr:
 	Building:
 		Footprint: _x__ xxxx xxxx xxx_
 		Dimensions: 4,4
-		LocalCenterOffset: 0,0,0
-
-aoroc004.spr:
-	Inherits: ^DrRock
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-		LocalCenterOffset: 0,0,0
-
-aoroc005.spr:
-	Inherits: ^DrRock
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
 		LocalCenterOffset: 0,0,0
 
 # Rubble
@@ -222,6 +222,7 @@ aoctr004.spr:
 # Crashed space ship
 aospc000.spr:
 	Inherits: ^DrMisc
+	-WithIdleOverlay@LAYER1: # no shadows
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2

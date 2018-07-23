@@ -472,9 +472,12 @@ Power:
 		Facing: 64
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 	WithDeathAnimation:
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
@@ -534,9 +537,12 @@ WaterLaunchPad:
 		Facing: 64
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 	WithDeathAnimation:
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
@@ -553,9 +559,12 @@ HQ.human:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 HQ.cyborg:
 	Inherits: ^DrHeadquarters
@@ -577,9 +586,12 @@ HQ.cyborg:
 		ProductionTypes: Economy,Upgrade
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 TrainingFacility.fguard:
 	Inherits: ^DrTrainingFacility
@@ -593,9 +605,12 @@ TrainingFacility.fguard:
 		HP: 750
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 TrainingFacility.cyborg
 	Inherits: ^DrTrainingFacility
@@ -620,13 +635,16 @@ TrainingFacility.cyborg
 		HP: 900
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
 	WithIdleOverlay@LAYER3:
-		Sequence: idle-top3
+		Sequence: top2
 	WithIdleOverlay@LAYER4:
-		Sequence: idle-top4
+		Sequence: top3
+	WithIdleOverlay@LAYER5:
+		Palette: shadow
+		Sequence: shadow
 
 AssemblyPlant.human:
 	Inherits: ^DrAssemblyPlant
@@ -643,9 +661,12 @@ AssemblyPlant.human:
 		HP: 1000
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 AssemblyPlant.cyborg:
 	Inherits: ^DrAssemblyPlant
@@ -675,13 +696,16 @@ AssemblyPlant.cyborg:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
 	WithIdleOverlay@LAYER3:
-		Sequence: idle-top3
+		Sequence: top2
 	WithIdleOverlay@LAYER4:
-		Sequence: idle-top4
+		Sequence: top3
+	WithIdleOverlay@LAYER5:
+		Palette: shadow
+		Sequence: shadow
 
 ^SmallTurret:
 	Inherits: ^Defense
@@ -710,16 +734,19 @@ AssemblyPlant.cyborg:
 	DetectCloaked:
 		Range: 2c0
 	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 # FG laser turret
 LaserTurret:
 	Inherits: ^SmallTurret
 	RenderSprites:
-		Image: nfgdt1l0.spr
+		Image: barren|nfgdt1l0.spr
+		Palette: terrain # Manually set to barren here along with Laser Turret.
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Tooltip:
 		Name: Laser Turret
@@ -736,6 +763,7 @@ LaserTurret:
 	Armament:
 		Weapon: GatLaser
 		LocalOffset: 512,0,112
+	-WithIdleOverlay@LAYER1: # Problem with the sprites here
 
 # Imperium plasma turret
 PlasmaTurret:
@@ -803,9 +831,12 @@ HeavyRailTurret:
 		Range: 6c0
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 # Imperium neutron accelerator
 NeutronAccelerator:
@@ -852,9 +883,12 @@ NeutronAccelerator:
 		Range: 6c0
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 # FG anti-air turret
 AntiAirTurret.human:
@@ -893,6 +927,7 @@ AntiAirTurret.cyborg:
 	Inherits: ^SmallTurret
 	RenderSprites:
 		Image: niaar1l0.spr
+		Palette: terrain # Manually set to barren here along with Laser Turret.
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Tooltip:
 		Name: Anti-Air Turret
@@ -919,6 +954,11 @@ AntiAirTurret.cyborg:
 	Armament:
 		Weapon: IMPFixedGroundToAirLaser
 		LocalOffset: 512,0,112
+	#-WithIdleOverlay@LAYER1: # Problem with the sprites here
+	WithIdleOverlay@LAYER2:
+		Palette: player
+		Sequence: top
+		IsPlayerPalette: True
 
 # Camera tower
 CameraTower:
@@ -953,9 +993,12 @@ CameraTower:
 		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 # FG field hospital
 Hospital.human:
@@ -985,6 +1028,7 @@ Hospital.human:
 		PlayerExperience: 5
 	Reservable:
 	RallyPoint:
+		Offset: 3,5
 	WithRepairAnimation:
 	Valued:
 		Cost: 500
@@ -996,13 +1040,16 @@ Hospital.human:
 		Amount: -100
 	Armor:
 		Type: BuildingArmour
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: idle-top
-	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 		
 # Imperium field hospital
@@ -1033,6 +1080,7 @@ Hospital.cyborg:
 		PlayerExperience: 5
 	Reservable:
 	RallyPoint:
+		Offset: 3,5
 	WithRepairAnimation:
 	Valued:
 		Cost: 500
@@ -1044,13 +1092,16 @@ Hospital.cyborg:
 		Amount: -100
 	Armor:
 		Type: BuildingArmour
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: idle-top
-	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 # FG repair pad
 Repair.human:
@@ -1094,15 +1145,19 @@ Repair.human:
 		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 # Imperium repair pad
 Repair.cyborg:
 	Inherits: ^DrGenericBuilding
 	RenderSprites:
-		Image: nirep1l0.spr
+		Image: barren|nirep1l0.spr
+		Palette: terrain # Manually set to barren here along with Laser Turret.
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: xxx= xxxx =xx=
@@ -1127,7 +1182,6 @@ Repair.cyborg:
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
 	WithRepairAnimation:
-	WithRearmAnimation:
 	Valued:
 		Cost: 800
 	Health:
@@ -1138,11 +1192,16 @@ Repair.cyborg:
 		Amount: -100
 	Armor:
 		Type: BuildingArmour
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: idle-top
+	#WithIdleOverlay@LAYER1:
+	#	Palette: terrain
+	#	Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Palette: player
+		Sequence: top
+		IsPlayerPalette: True
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 # Phasing facility
 PhasingFacility:
@@ -1177,9 +1236,12 @@ PhasingFacility:
 		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 	GrantConditionOnPrerequisite:
 		Prerequisites: upgrade.phasing
 		Condition: stardecoration
@@ -1206,12 +1268,12 @@ RearmingDeck.human:
 	ProvidesPrerequisite@air:
 		Prerequisite: air
 	Building:
-		Footprint: xxx xxx xx_
+		Footprint: === xxx xxx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 72,72,0,0
-		DecorationBounds: 72,72,0,0
+		Bounds: 72,72,0,16
+		DecorationBounds: 72,72,0,16
 	Valued:
 		Cost: 1000
 	Health:
@@ -1223,24 +1285,28 @@ RearmingDeck.human:
 	Armor:
 		Type: BuildingArmour
 	RallyPoint:
+		Offset: 1,-2
 	Reservable:
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 # Imperium rearming deck
 RearmingDeck.cyborg:
 	Inherits: ^DrGenericBuilding
 	Inherits@shape: ^3x3Shape
 	Building:
-		Footprint: xxx xxx xxx
+		Footprint: === xxx xxx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 72,72,0,0
-		DecorationBounds: 72,72,0,0
+		Bounds: 72,72,0,16
+		DecorationBounds: 72,72,0,16
 	RenderSprites:
 		Image: nirrm1l0.spr
 	Tooltip:
@@ -1262,12 +1328,16 @@ RearmingDeck.cyborg:
 	Armor:
 		Type: BuildingArmour
 	RallyPoint:
+		Offset: 1,-2
 	Reservable:
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 # Imperium temporal gate
 TemporalGate:
@@ -1302,9 +1372,12 @@ TemporalGate:
 		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 # Imperium temporal rift creator
 TemporalRiftCreator:
@@ -1339,11 +1412,15 @@ TemporalRiftCreator:
 		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: idle-top
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: idle-top2
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 # Civilian stuff now
+
 BigWallLeft:
 	Inherits: ^DrGenericBuilding
 	Inherits@shape: ^3x3Shape
@@ -1370,3 +1447,16 @@ BigWallLeft:
 		Amount: 0
 	Armor:
 		Type: BuildingArmour
+
+BigWallRight:
+	Inherits: BigWallLeft
+	Building:
+		Footprint: =xx xxx xx=
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	RenderSprites:
+		Image: tcbwm1l0.spr
+	Tooltip:
+		Name: Big Wall Right
+		
+		

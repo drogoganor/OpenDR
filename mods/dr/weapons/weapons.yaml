@@ -346,6 +346,29 @@ LaserRifle:
 	Range: 4c0
 	Report: gxlgnwc0.wav
 	ValidTargets: Ground
+	Projectile: LaserZap
+		Inaccuracy: 1c0
+		Width: 48
+		Duration: 6
+		ZOffset: 2047
+		Color: F20C0C80
+		SecondaryBeam: true
+		SecondaryBeamWidth: 96
+		SecondaryBeamZOffset: 2047
+		SecondaryBeamColor: FF000040
+	Warhead@1Dam: SpreadDamage
+		Spread: 64
+		Damage: 11
+	Warhead@3Eff: CreateEffect
+		Explosions: eolasex0
+		ValidTargets: Ground, Ship, Trees
+
+LaserRifleOriginal:
+	Inherits: ^E2
+	ReloadDelay: 8
+	Range: 4c0
+	Report: gxlgnwc0.wav
+	ValidTargets: Ground
 	Projectile: Bullet
 		Speed: 853
 		Image: eolaspr2.spr
