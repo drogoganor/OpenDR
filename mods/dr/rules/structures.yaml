@@ -38,7 +38,7 @@
 	Huntable:
 	UpdatesPlayerStatistics:
 	Buildable:
-		BuildDurationModifier: 1243 # DR original: 2486, 360 for testing sanity
+		BuildDurationModifier: 2486 # DR build rate
 	RequiresBuildableArea:
 		AreaTypes: building
 		Adjacent: 12
@@ -89,7 +89,6 @@
 		BuildPaletteOrder: 0
 		BuildDuration: 22
 		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
-		BuildDurationModifier: 360 # set to 360 for debug sanity
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: hq
@@ -124,7 +123,6 @@
 		ProductionTypes: Upgrade,Economy
 	ProductionQueue@Economy:
 		Type: Economy
-		#BuildDurationModifier: 250
 		#LowPowerSlowdown: 1
 		Group: Economy
 		QueuedAudio: Building
@@ -180,7 +178,7 @@
 		BuildPaletteOrder: 50
 		Queue: Upgrade
 		BuildLimit: 1
-		BuildDurationModifier: 1243
+		BuildDurationModifier: 2486 # DR build rate
 		Description: Unlocks additional construction options
 		BuildDuration: 52
 
@@ -454,7 +452,6 @@ Power:
 		Description: Provides power for other structures. Refines Taelon into credits.
 		BuildPaletteOrder: 20
 		BuildDuration: 30
-		BuildDurationModifier: 360 # set to 360 for debug sanity
 	Selectable:
 		Bounds: 72,84,0,-12
 		DecorationBounds: 72,84,0,-12
@@ -513,7 +510,6 @@ WaterLaunchPad:
 		Prerequisites: ~techlevel.infonly
 		Description: Refines spring water into credits.
 		BuildDuration: 37
-		BuildDurationModifier: 360 # set to 360 for debug sanity
 	Building:
 		Footprint: _xx_ xxxx ==x=
 		Dimensions: 4,3

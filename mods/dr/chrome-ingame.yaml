@@ -103,6 +103,10 @@ order-icons: chrome-ingame.png
 	stats-active: 368,80,16,16
 
 
+sidebar-observer: chrome.png
+	background: 512,167,238,287
+	replay-bottom: 512,454,238,40
+	observer-bottom: 512,495,238,8
 
 sidebar-fguard: chrome-ingame.png
 	background-top: 0,167,238,310

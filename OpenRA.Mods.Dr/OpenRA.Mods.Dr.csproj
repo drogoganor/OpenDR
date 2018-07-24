@@ -47,9 +47,11 @@
     <Compile Include="SpriteLoaders\DrSprLoader.cs" />
     <Compile Include="Traits\World\PaletteFromDrFile.cs" />
     <Compile Include="UtilityCommands\ImportDrMapCommand.cs" />
+    <Compile Include="Widgets\Logic\ProductionTabsWithRowsAndFooterLogic.cs" />
+    <Compile Include="Widgets\ProductionTabsWithRowsAndFooterWidget.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Widgets\Logic\" />
+    <Folder Include="GameRules\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">

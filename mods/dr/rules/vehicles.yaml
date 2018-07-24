@@ -172,13 +172,15 @@ Freighter:
 	Mobile:
 		Speed: 120
 	Armor:
-		Type: TankPlatingPlating
+		Type: TankPlating
 	WithDockingAnimation:
 	WithFacingSpriteBody:
 	Harvester:
-		Capacity: 60
+		Capacity: 10
+		PipCount: 5
 		Resources: SpringWater,Taelon
-		BaleUnloadDelay: 1
+		BaleLoadDelay: 50
+		BaleUnloadDelay: 25
 		SearchFromProcRadius: 30
 		SearchFromOrderRadius: 11
 	-Armament:
@@ -206,13 +208,15 @@ HoverFreighter:
 	Mobile:
 		Speed: 192
 	Armor:
-		Type: TankPlatingPlating
+		Type: TankPlating
 	WithDockingAnimation:
 	WithFacingSpriteBody:
 	Harvester:
-		Capacity: 60
+		Capacity: 10
+		PipCount: 5
 		Resources: SpringWater,Taelon
-		BaleUnloadDelay: 1
+		BaleLoadDelay: 50
+		BaleUnloadDelay: 25
 		SearchFromProcRadius: 30
 		SearchFromOrderRadius: 11
 

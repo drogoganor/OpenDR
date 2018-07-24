@@ -17,27 +17,41 @@ Player:
 			Mcv: constructionrig
 			ExcludeFromSquads: freighter, hoverfreighter, constructionrig
 		BuildingLimits:
+			waterlaunchpad: 3
+			power: 3
 			hq.human: 1
 			hq.cyborg: 1
-			trainingfacility.fguard: 1
-			trainingfacility.cyborg: 1
-			assemblyplant.human: 1
-			assemblyplant.cyborg: 1
-			waterlaunchpad: 4
-			power: 6
+			trainingfacility.fguard: 2
+			trainingfacility.cyborg: 2
+			assemblyplant.human: 2
+			assemblyplant.cyborg: 2
+			repair.human: 1
+			repair.cyborg: 1
+			hospital.human: 1
+			hospital.cyborg: 1
+			phasingfacility: 1
+			rearmingdeck.human: 1
+			rearmingdeck.cyborg: 1
 		BuildingFractions:
-			waterlaunchpad: 40%
-			power: 10%
-			hq.human: 20%
-			hq.cyborg: 20%
-			trainingfacility.fguard: 70%
-			trainingfacility.cyborg: 70%
-			assemblyplant.human: 60%
-			assemblyplant.cyborg: 60%
-			upgrade.hq1: 50%
-			upgrade.barracks1: 50%
-			upgrade.assemblyplant1: 50%
-			upgrade.hq2: 50%
+			waterlaunchpad: 20%
+			power: 20%
+			hq.human: 1%
+			hq.cyborg: 1%
+			trainingfacility.fguard: 40%
+			trainingfacility.cyborg: 40%
+			assemblyplant.human: 35%
+			assemblyplant.cyborg: 35%
+			upgrade.hq1: 20%
+			upgrade.barracks1: 20%
+			upgrade.assemblyplant1: 20%
+			upgrade.hq2: 10%
+			repair.human: 1%
+			repair.cyborg: 1%
+			hospital.human: 1%
+			hospital.cyborg: 1%
+			phasingfacility: 1%
+			rearmingdeck.human: 1%
+			rearmingdeck.cyborg: 1%
 		UnitsToBuild:
 			raider: 25%
 			guardian: 25%

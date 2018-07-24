@@ -65,7 +65,7 @@
 		Palette: player
 		Sequences: water1
 		MaxDensity: 120000
-		ValuePerUnit: 8
+		ValuePerUnit: 50
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true
 	ResourceType@taelon:
@@ -77,7 +77,7 @@
 		Palette: player
 		Sequences: taelon1
 		MaxDensity: 120000
-		ValuePerUnit: 8
+		ValuePerUnit: 50
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true
 	Locomotor@FOOT:
@@ -207,10 +207,10 @@ World:
 		Factions: fguard, imperium, togran, xenite, shadowhand
 		BaseActor: ConstructionRig
 		SupportActors: ConstructionRig,ConstructionRig
-		InnerSupportRadius: 3
-		OuterSupportRadius: 5
+		InnerSupportRadius: 6
+		OuterSupportRadius: 14
 	SpawnMPUnits:
-		StartingUnitsClass: none
+		StartingUnitsClass: light
 		DropdownDisplayOrder: 0
 	PathFinder:
 	ValidateOrder:
@@ -240,7 +240,6 @@ Player:
 	TechTree:
 	ClassicProductionQueue@Upgrade:
 		Type: Upgrade
-		#BuildDurationModifier: 250
 		LowPowerSlowdown: 2
 		Group: Upgrade
 		QueuedAudio: Upgrading
@@ -266,7 +265,7 @@ Player:
 	PowerManager:
 	AllyRepair:
 	PlayerResources:
-		SelectableCash: 15000, 20000, 30000, 45000, 60000, 90000
+		SelectableCash: 10000, 15000, 20000, 30000, 45000, 60000, 90000
 		DefaultCash: 15000
 		InsufficientFundsNotification: InsufficientFunds
 	DeveloperMode:
