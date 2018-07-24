@@ -7,6 +7,9 @@ sidebar-bits: chrome-ingame.png
 	production-tooltip-cost: 448, 80, 16, 16
 	production-iconoverlay: 128,75,238,48
 	commandbar-background: 0,123,434,44
+	indicator-left: 416,48,16,8
+	indicator-right: 416,56,16,8
+
 
 power-icons: chrome-ingame.png
 	power-normal: 350,0,12,18
@@ -102,9 +105,9 @@ order-icons: chrome-ingame.png
 
 
 sidebar-fguard: chrome-ingame.png
-	background-top: 0,167,238,290
-	background-iconrow: 0,457,238,47
-	background-bottom: 0,504,238,8
+	background-top: 0,167,238,310
+	background-iconrow: 0,477,238,47
+	background-bottom: 0,524,238,9
 	background-supportoverlay: 0,75,64,48
 
 sidebar-button-fguard: chrome-ingame.png
@@ -206,11 +209,11 @@ command-button-fguard-highlighted-disabled: chrome-ingame.png
 	background: 87,31,22,22
 
 sidebar-imperium: chrome-ingame.png
-	background-top: 274,167,238,290
-	background-iconrow: 274,457,238,47
-	background-bottom: 274,504,238,8
+	background-top: 274,167,238,310
+	background-iconrow: 274,477,238,47
+	background-bottom: 274,524,238,9
 	background-supportoverlay: 64,75,64,48
-
+	
 sidebar-button-imperium: chrome-ingame.png
 	background: 3,31,22,22
 	border-r: 25,31,3,22

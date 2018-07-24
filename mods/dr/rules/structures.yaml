@@ -122,6 +122,14 @@
 		SpawnOffset: 0,0,0
 		ExitCell: 2,2
 		ProductionTypes: Upgrade,Economy
+	ProductionQueue@Economy:
+		Type: Economy
+		#BuildDurationModifier: 250
+		#LowPowerSlowdown: 1
+		Group: Economy
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: NoRoom
 	ProductionBar@Economy:
 		ProductionType: Economy
 		Color: 8A8A8A
@@ -183,6 +191,7 @@ upgrade.hq1:
 		Name: Headquarters 2
 	Buildable:
 		BuildPaletteOrder: 50
+		Queue: Upgrade
 		Prerequisites: ~hq, ~barracks, ~vehicles
 		Description: Unlocks additional construction options
 		BuildDuration: 52
@@ -304,8 +313,11 @@ upgrade.phasing:
 		ProductionTypes: Soldier, Infantry, DrSoldier
 	Production:
 		Produces: Infantry, Soldier, DrSoldier
-	PrimaryBuilding:
-		PrimaryCondition: primary
+	ProductionQueue@Infantry:
+		Type: Infantry
+		Group: Infantry
+		LowPowerSlowdown: 1
+		SpeedUp: True
 	ProductionBar:
 	ProvidesPrerequisite@barracks:
 		Prerequisite: barracks
@@ -371,6 +383,13 @@ upgrade.phasing:
 		ExitCell: 1,3
 	Production:
 		Produces: Vehicle, DrVehicle, DrAnimatedVehicle
+	ProductionQueue@Vehicle:
+		Type: Vehicle
+		Group: Vehicle
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		#SpeedUp: True
+		#BuildTimeSpeedReduction: 100, 75, 60, 50
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@vehicles:
 		Prerequisite: vehicles
@@ -392,8 +411,6 @@ upgrade.phasing:
 	ProvidesPrerequisite@shadowhand:
 		Factions: shadowhand, togran
 		Prerequisite: vehicles.shadowhand
-	PrimaryBuilding:
-		PrimaryCondition: primary
 	ProductionBar:
 	RallyPoint:
 		Offset: 0,6

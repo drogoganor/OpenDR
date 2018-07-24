@@ -565,7 +565,7 @@ SuicideNuke:
 		Speed: 4096
 		Shadow: False
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1536
+		Spread: 1280
 		Damage: 180
 		AffectsParent: true
 	Warhead@3Eff_impact: CreateEffect

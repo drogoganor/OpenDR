@@ -95,7 +95,7 @@ ConstructionRig:
 	Valued:
 		Cost: 300
 	Health:
-		HP: 900
+		HP: 100
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -111,8 +111,15 @@ ConstructionRig:
 	GivesBuildableArea:
 		AreaTypes: building
 	BaseProvider:
-		Range: 10c0
+		Range: 8c0
 	BaseBuilding:
+	ProductionQueue@Building:
+		Type: Building
+		Group: Building
+		LowPowerSlowdown: 2
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		#SpeedUp: True
 	ProductionBar@Building:
 		ProductionType: Building
 	ProductionBar@Defense:

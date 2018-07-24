@@ -294,7 +294,7 @@ Container@PLAYER_WIDGETS:
 							Logic: BeaconOrderButtonLogic, AddFactionSuffixLogic
 							Width: 28
 							Height: 28
-							Background: sidebar-button
+							Background: command-button
 							Key: PlaceBeacon
 							TooltipText: Place Beacon
 							TooltipContainer: TOOLTIP_CONTAINER
@@ -309,7 +309,7 @@ Container@PLAYER_WIDGETS:
 							X: 32
 							Width: 28
 							Height: 28
-							Background: sidebar-button
+							Background: command-button
 							Key: Sell
 							TooltipText: Sell
 							TooltipContainer: TOOLTIP_CONTAINER
@@ -324,7 +324,7 @@ Container@PLAYER_WIDGETS:
 							X: 64
 							Width: 28
 							Height: 28
-							Background: sidebar-button
+							Background: command-button
 							Key: PowerDown
 							TooltipText: Power Down
 							TooltipContainer: TOOLTIP_CONTAINER
@@ -339,7 +339,7 @@ Container@PLAYER_WIDGETS:
 							X: 96
 							Width: 28
 							Height: 28
-							Background: sidebar-button
+							Background: command-button
 							Key: Repair
 							TooltipText: Repair
 							TooltipContainer: TOOLTIP_CONTAINER
@@ -354,7 +354,7 @@ Container@PLAYER_WIDGETS:
 							X: 128
 							Width: 28
 							Height: 28
-							Background: sidebar-button
+							Background: command-button
 							Key: escape Shift
 							TooltipText: Debug Menu
 							TooltipContainer: TOOLTIP_CONTAINER
@@ -371,7 +371,7 @@ Container@PLAYER_WIDGETS:
 							X: 192
 							Width: 28
 							Height: 28
-							Background: sidebar-button
+							Background: command-button
 							Key: escape
 							TooltipText: Options
 							TooltipContainer: TOOLTIP_CONTAINER
@@ -440,54 +440,56 @@ Container@PLAYER_WIDGETS:
 							Y: 5
 							ImageCollection: power-icons
 							ImageName: power-normal
-		Container@SIDEBAR_PRODUCTION:
-			Logic: ClassicProductionLogic
+		Container@SIDEBAR_BACKGROUND:
 			X: WINDOW_RIGHT - 250
 			Y: 300
 			Width: 238
-			Height: 250
 			Children:
 				Container@PALETTE_BACKGROUND:
 					Children:
-						Image@ROW_TEMPLATE:
-							Logic: AddFactionSuffixLogic
-							Width: 238
-							Height: 47
-							ClickThrough: false
-							ImageCollection: sidebar
-							ImageName: background-iconrow
-						Image@BOTTOM_CAP:
-							Logic: AddFactionSuffixLogic
-							Width: 238
-							Height: 8
-							ClickThrough: false
-							ImageCollection: sidebar
-							ImageName: background-bottom
+						#Image@ROW_TEMPLATE:
+						#	Logic: AddFactionSuffixLogic
+						#	Width: 238
+						#	Height: 47
+						#	ClickThrough: false
+						#	ImageCollection: sidebar
+						#	ImageName: background-iconrow
+						#Image@BOTTOM_CAP:
+						#	Logic: AddFactionSuffixLogic
+						#	Width: 238
+						#	Height: 8
+						#	ClickThrough: false
+						#	ImageCollection: sidebar
+						#	ImageName: background-bottom
 				LogicTicker@PRODUCTION_TICKER:
-				ProductionPalette@PRODUCTION_PALETTE:
-					X: 42
-					Y: 1
-					TooltipContainer: TOOLTIP_CONTAINER
-					ReadyText: READY
-					HoldText: ON HOLD
-					IconSize: 62, 46
-					IconMargin: 1, 1
-					IconSpriteOffset: -1, -1
-					HotkeyPrefix: Production
-					HotkeyCount: 24
-				Container@PALETTE_FOREGROUND:
-					X: 40
-					Y: 0 - 1
+				Container@PALETTE_FOREGROUND: # row of black boxes surrounding the building icons. Just the one row, meant for templating I guess
+					X: 0
+					Y: 20
 					Children:
 						Image@ROW_TEMPLATE:
+							Logic: AddFactionSuffixLogic
 							Width: 238
 							Height: 47
 							IgnoreMouseOver: true
-							ImageCollection: sidebar-bits
-							ImageName: production-iconoverlay
+							ImageCollection: sidebar
+							ImageName: background-iconrow
+				Container@PALETTE_FOOTER: # row of black boxes surrounding the building icons. Just the one row, meant for templating I guess
+					X: 0
+					Y: 0
+					Children:
+						Image@ROW_TEMPLATE:
+							X: 0
+							Y: 21
+							Logic: AddFactionSuffixLogic
+							Width: 238
+							Height: 9
+							IgnoreMouseOver: true
+							ClickThrough: true
+							ImageCollection: sidebar
+							ImageName: background-bottom
 				Container@PRODUCTION_TYPES:
 					X: 7
-					Y: 2
+					Y: 22
 					Width: 29
 					Height: 240
 					Children:
@@ -571,33 +573,35 @@ Container@PLAYER_WIDGETS:
 									X: 6
 									Y: 6
 									ImageCollection: production-icons
-						Button@SCROLL_UP_BUTTON:
-							Logic: AddFactionSuffixLogic
-							Y: 186
-							Width: 28
-							Height: 22
-							VisualHeight: 0
-							Background: sidebar-button
-							TooltipText: Scroll up
-							TooltipContainer: TOOLTIP_CONTAINER
-							Children:
-								Image@ICON:
-									X: 6
-									Y: 3
-									ImageCollection: scrollbar
-									ImageName: up_arrow
-						Button@SCROLL_DOWN_BUTTON:
-							Logic: AddFactionSuffixLogic
-							Y: 211
-							Width: 28
-							Height: 22
-							VisualHeight: 0
-							Background: sidebar-button
-							TooltipText: Scroll down
-							TooltipContainer: TOOLTIP_CONTAINER
-							Children:
-								Image@ICON:
-									X: 6
-									Y: 3
-									ImageCollection: scrollbar
-									ImageName: down_arrow
+				Container@PRODUCTION_BACKGROUND: # ???
+					X: 41
+					Y: 21
+					Children:
+						Background@ICON_TEMPLATE:
+							Width: 66
+							Height: 50
+							Background: command-button
+				ProductionPalette@PRODUCTION_PALETTE: # the actual building icons to click on
+					X: 41
+					Y: 21
+					TooltipContainer: TOOLTIP_CONTAINER
+					IconSize: 62, 46
+					IconMargin: 1, 1
+					IconSpriteOffset: -1, -1
+					ReadyText: Ready
+					HoldText: On Hold
+					HotkeyPrefix: Production
+					HotkeyCount: 24
+				ProductionTabsWithRowsAndFooter@PRODUCTION_TABS: # per-queue tabs
+					Logic: ProductionTabsWithRowsAndFooterLogic
+					PaletteWidget: PRODUCTION_PALETTE
+					TypesContainer: PRODUCTION_TYPES
+					RowWidget: PALETTE_FOREGROUND
+					FooterWidget: PALETTE_FOOTER
+					BackgroundContainer: PRODUCTION_BACKGROUND
+					PreviousProductionTabKey: PreviousProductionTab
+					NextProductionTabKey: NextProductionTab
+					X: 41
+					Y: 0
+					Width: 188
+					Height: 20

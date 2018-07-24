@@ -6,6 +6,10 @@ scrollbar: buttons.png
 	down_pressed: 16,140,16,16
 	up_arrow: 32,140,16,16
 	up_pressed: 32,140,16,16
+	left_arrow: 48,140,16,16
+	left_pressed: 48,140,16,16
+	right_arrow: 64,140,16,16
+	right_pressed: 64,140,16,16
 
 checkbox-bits: buttons.png
 	checked: 0,157,16,16

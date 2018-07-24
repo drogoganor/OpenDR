@@ -65,7 +65,7 @@
 		Palette: player
 		Sequences: water1
 		MaxDensity: 120000
-		ValuePerUnit: 20
+		ValuePerUnit: 8
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true
 	ResourceType@taelon:
@@ -77,7 +77,7 @@
 		Palette: player
 		Sequences: taelon1
 		MaxDensity: 120000
-		ValuePerUnit: 20
+		ValuePerUnit: 8
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true
 	Locomotor@FOOT:
@@ -176,7 +176,8 @@ World:
 	ScreenShaker:
 	BuildingInfluence:
 	ProductionQueueFromSelection:
-		ProductionPaletteWidget: PRODUCTION_PALETTE
+		#ProductionPaletteWidget: PRODUCTION_PALETTE
+		ProductionTabsWidget: PRODUCTION_TABS
 	DomainIndex:
 	ResourceLayer:
 	ResourceClaimLayer:
@@ -237,42 +238,21 @@ EditorPlayer:
 Player:
 	Inherits: ^BasePlayer
 	TechTree:
-	ClassicProductionQueue@Building:
-		Type: Building
-		LowPowerSlowdown: 3
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-		SpeedUp: True
-	ClassicProductionQueue@Economy:
-		Type: Economy
-		#BuildDurationModifier: 250
-		#LowPowerSlowdown: 1
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoRoom
-	ClassicProductionQueue@Infantry:
-		Type: Infantry
-		LowPowerSlowdown: 3
-		SpeedUp: True
-	ClassicProductionQueue@Vehicle:
-		Type: Vehicle
-		LowPowerSlowdown: 3
-		QueuedAudio: Building
-		SpeedUp: True
-		BuildTimeSpeedReduction: 100, 75, 60, 50
 	ClassicProductionQueue@Upgrade:
 		Type: Upgrade
 		#BuildDurationModifier: 250
-		#LowPowerSlowdown: 1
+		LowPowerSlowdown: 2
+		Group: Upgrade
 		QueuedAudio: Upgrading
 		ReadyAudio: ConstructionComplete
 		BlockedAudio: Upgrading
 	ClassicProductionQueue@Defense:
 		Type: Defense
 		LowPowerSlowdown: 3
+		Group: Defense
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
-		SpeedUp: True
+		#SpeedUp: True
 	Shroud:
 		FogCheckboxDisplayOrder: 3
 		ExploredMapCheckboxEnabled: True
