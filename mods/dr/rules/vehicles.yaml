@@ -140,6 +140,9 @@ ConstructionRig:
 	ProvidesPrerequisite@imperium:
 		Factions: imperium, togran
 		Prerequisite: rig.imperium
+	ProvidesPrerequisite@togran:
+		Factions: togran
+		Prerequisite: rig.togran
 	ProvidesPrerequisite@xenite:
 		Factions: xenite, togran
 		Prerequisite: rig.xenite
@@ -510,6 +513,38 @@ WaterContaminator:
 	Armor:
 		Type: TankPlating
 
+# Phase Runner
+PhaseRunner:
+	Inherits: ^DrHoverAnimatedVehicle
+	RenderSprites:
+		Image: ufphrst0.spr
+	Tooltip:
+		Name: Phase Runner
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Buildable:
+		Description: The Phase Runner troop transport has the ability\nto travel while phased.
+		Prerequisites: ~vehicles.fguard
+		BuildPaletteOrder: 210
+		BuildDuration: 40
+	Valued:
+		Cost: 900
+	Health:
+		HP: 300
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 156
+		RequiresCondition: !notmobile
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+		LoadingCondition: notmobile
+	Armor:
+		Type: TankPlating
+	-Armament:
+
 # Imperium
 
 ScoutRunner:
@@ -759,3 +794,43 @@ Scarab:
 		Type: TankPlating
 	Armament:
 		Weapon: IMPArtilleryShell
+
+
+DessicatorTransport:
+	Inherits: ^DrHoverAnimatedVehicle
+	RenderSprites:
+		Image: uohtrst0.spr
+	Tooltip:
+		Name: Dessicator Transport
+	-Buildable:
+	Voiced:
+		VoiceSet: ImperiumVoice
+	Health:
+		HP: 200
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 72
+	Armor:
+		Type: TankPlating
+	-Armament:
+
+# Civ Troop Transport
+CivWheelTransporter:
+	Inherits: ^DrHoverAnimatedVehicle
+	RenderSprites:
+		Image: uowtrst0.spr
+	Tooltip:
+		Name: Civilian Wheeled Transporter
+	-Buildable:
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Health:
+		HP: 200
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 72
+	Armor:
+		Type: TankPlating
+	-Armament:

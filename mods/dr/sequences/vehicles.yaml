@@ -368,7 +368,32 @@ ucwcost0.spr:
 		Tick: 100
 	icon: ucwcomn0.spr
 
-# Infiltrator
+# Phase Runner
+ufphrst0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	icon: ufphrmn0.spr
+
 
 # Scout Runner
 uisttst0.spr:
@@ -632,3 +657,47 @@ uiskyst0.spr:
 		Length: 3
 		Tick: 100
 	icon: uiskymn0.spr
+
+# Dessicator transport
+uohtrst0.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Start: 0
+		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
+	run:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 0
+		Facings: 16
+	icon: uohtrmn0.spr
+
+# Civ Troop Transport
+uowtrst0.spr:
+	Defaults:
+		AddExtension: False
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	icon: uowtrmn0.spr

@@ -15,18 +15,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace OpenRA.Mods.Dr.FileFormats
 {
 	public class ScnFile
 	{
-		const string PlayerStartStr = "SetStartLocation";
-		const string AddThingStr = "AddThingAt";
-		const string SetTeamSideStr = "SetTeamSide";
-		const string SetDefaultTerrainStr = "SetDefaultTerrain";
-		const string AddBuildingAtStr = "AddBuildingAt";
-
+		const string SpecialForcesStr = "DefineSpecialForces";
+		readonly string[] acceptableEntries =
+			new[]
+			{
+				"SetStartLocation", "AddThingAt", "PutUnitAt", "SetTeam", "SetTeamSide", "SetDefaultTerrain", "AddBuildingAt",
+				"SetDefaultTeam"
+			};
 		bool skipNextBlock = false;
 
 		public IEnumerable<ScnSection> Entries
@@ -96,17 +98,10 @@ namespace OpenRA.Mods.Dr.FileFormats
 
 			var scnEntry = new ScnSection(line);
 
-			if (line.StartsWith(PlayerStartStr))
+			if (acceptableEntries.Any(x => line.StartsWith(x)))
 				entries.Add(scnEntry);
-			else if (line.StartsWith(AddThingStr))
-				entries.Add(scnEntry);
-			else if (line.StartsWith(SetTeamSideStr))
-				entries.Add(scnEntry);
-			else if (line.StartsWith(SetDefaultTerrainStr))
-				entries.Add(scnEntry);
-			else if (line.StartsWith(AddBuildingAtStr))
-				entries.Add(scnEntry);
-			else if (line.StartsWith("DefineSpecialForces"))
+
+			if (line.StartsWith(SpecialForcesStr))
 			{
 				skipNextBlock = true;
 				return false;

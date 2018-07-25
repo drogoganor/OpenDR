@@ -13,16 +13,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
 using OpenRA.FileSystem;
 using OpenRA.Graphics;
-using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.FileFormats;
-using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Common.UtilityCommands;
 using OpenRA.Mods.Dr.FileFormats;
-using OpenRA.Primitives;
 
 namespace OpenRA.Mods.Dr.UtilityCommands
 {
@@ -38,6 +31,208 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		public Map Map;
 		public List<string> Players = new List<string>();
 		public MapPlayers MapPlayers;
+
+		private static string[] knownUnknownThings = new string[]
+		{
+			"wreck1", // aowrk000
+			"wreck2",
+			"wreck3",
+			"water1", // aowtr00
+			"water2",
+			"water3",
+			"brdh", // Civilian bridge overlay
+			"brdv", // Same deal
+		};
+
+		private static string[] knownUnknownBuildings = new string[]
+		{
+			"cp", // Civilian factory
+			"cc", // Civilian Commercial
+			"civsub", // Civilian SubTransit
+			"chf", // Civilian hydro farm
+			"cgf", // Civilian Grain Farm
+			"cf1", // Civilian Farmhouse
+			"civshl", // Civilian Public Shelter
+			"cr", // Civilian Rural
+			"ce", // Civilian Entertainment Facility
+			"civtcn", // Civilian Transit Centre
+			"CivilianBridge", // nobrd1l0
+			"CivilianVerticalBridge",
+			"impmn", // Taelon resource
+			"impww", // Water resource
+			"SmallWall1",
+			"SmallWall2",
+			"LargeWall1",
+			"LargeWall2",
+			"impwr", // Imperium water research
+			"SmallHorizontalBridge",
+			"SmallVerticalBridge",
+			"fh1_decoy",
+			"ih1_decoy",
+			"fu1_decoy",
+			"iu1_decoy",
+			"fc1_decoy",
+			"ic1_decoy",
+			"fgre_decoy",
+			"impre_decoy",
+			"fgho_decoy",
+			"impho_decoy",
+			"fgar_decoy",
+			"impar_decoy",
+		};
+
+		private static string[] knownUnknownUnits = new string[]
+		{
+			"Prisoner",
+			"JebRadec",
+			"RowdyMaleCivilian",
+			"FGundergtunnel",
+			"Karoch", // a medic
+			"IMPSuicideZombie", // Hostage taker output
+			"ColonelMartel",
+		};
+
+		static Dictionary<string, string> thingNames = new Dictionary<string, string>
+		{
+			{ "tree1", "aotre000.spr" },
+			{ "tree2", "aotre001.spr" },
+			{ "tree3", "aotre002.spr" },
+			{ "tree4", "aotre003.spr" },
+			{ "tree5", "aotre004.spr" },
+			{ "tree6", "aotre005.spr" },
+			{ "rock1", "aoroc000.spr" },
+			{ "rock2", "aoroc001.spr" },
+			{ "rock3", "aoroc002.spr" },
+			{ "rock4", "aoroc003.spr" },
+			{ "rock5", "aoroc004.spr" },
+			{ "rock6", "aoroc005.spr" },
+			{ "plnt1", "aopln000.spr" },
+			{ "plnt2", "aopln001.spr" },
+			{ "plnt3", "aopln002.spr" },
+			{ "clif1", "aoclf000.spr" },
+			{ "clif2", "aoclf001.spr" },
+			{ "clif3", "aoclf002.spr" },
+			{ "clif4", "aoclf003.spr" },
+			{ "clif5", "aoclf004.spr" },
+			{ "clif6", "aoclf005.spr" },
+			{ "special1", "aospc000.spr" },
+			{ "rubble1", "aorub000.spr" },
+			{ "rubble2", "aorub001.spr" },
+			{ "rubble3", "aorub002.spr" },
+			{ "misc1", "aomsc000.spr" },
+			{ "misc2", "aomsc001.spr" },
+			{ "misc3", "aomsc002.spr" },
+			{ "smcrater", "aoctr000.spr" }, // Not sure if these are ever deliberately placed on a map
+			{ "medcrater", "aoctr001.spr" },
+			{ "bigcrater", "aoctr002.spr" },
+			{ "largercrater", "aoctr003.spr" },
+			{ "hugecrater1", "aoctr004.spr" },
+			{ "hugecrater2", "aoctr005.spr" },
+			{ "hugecrater3", "aoctr006.spr" },
+			{ "hugecrater4", "aoctr007.spr" },
+			{ "hugecrater5", "aoctr008.spr" },
+			{ "hugecrater6", "aoctr009.spr" },
+		};
+
+		static Dictionary<string, string> unitNames = new Dictionary<string, string>
+		{
+			{ "FGConstructionCrew", "ConstructionRig" },
+			{ "FGGroundTransporter", "Freighter" },
+			{ "FGHoverTransporter", "HoverFreighter" },
+			{ "FGFreedomFighter", "Raider" },
+			{ "FGMercenary", "Mercenary" },
+			{ "FGSniper", "Sniper" },
+			{ "FGScout", "Scout" },
+			{ "FGMedic", "Medic" },
+			{ "FGSaboteur", "Saboteur" },
+			{ "FGMechanic", "Mechanic" },
+			{ "FGSuicideNuker", "Martyr" },
+			{ "FGSpy", "Infiltrator" },
+			{ "FGSpiderBike", "SpiderBike" },
+			{ "FGIFV", "RAT" },
+			{ "FGMediumTank", "SkirmishTank" },
+			{ "FGTankHunterTank", "TankHunter" },
+			{ "FGAmbushTank", "PhaseTank" },
+			{ "FGConstructionMAD", "FlakJack" },
+			{ "FGTripleRailHoverTank", "TripleRailHoverTank" },
+			{ "FGSPA", "HellstormArtillery" },
+			{ "FGSkyBike", "SkyBike" },
+			{ "FGDualSkyBike", "Outrider" },
+			{ "FGShockWave", "ShockWave" },
+			{ "FGContaminator", "WaterContaminator" },
+
+			// { "FGundergtunnel", "PhaseRunner" },
+			{ "IMPConstructionCrew", "ConstructionRig" },
+			{ "ImpGroundTransporter", "Freighter" },
+			{ "ImpHoverTransporter", "HoverFreighter" },
+			{ "IMPStrikeMarine", "Guardian" },
+			{ "IMPFireSupportMarine", "Bion" },
+			{ "IMPHoverMarine", "Exterminator" },
+			{ "IMPSpy", "Infiltrator" },
+
+			// { "IMPSuicideZombie", "SuicideZombie" },
+			{ "IMPScoutTank", "ScoutRunner" },
+			{ "IMPAssaultVehicle", "ITT" },
+			{ "IMPPlasmaTank", "PlasmaTank" },
+			{ "IMPAmper", "Amper" },
+			{ "IMPMAD", "MAD" },
+			{ "IMPReconSaucer", "ReconDrone" },
+			{ "IMPShredder", "Shredder" },
+			{ "IMPHostageTaker", "HostageTaker" },
+			{ "IMPTachyonTank", "TachionTank" }, // Note spelling difference
+			{ "IMPShieldedSPA", "SCARAB" },
+			{ "IMPSPA", "SCARAB" },
+			{ "ImpVTOL", "Cyclone" },
+			{ "IMPSkyFortress", "SkyFortress" },
+			{ "IMPContaminator", "WaterContaminator" },
+			{ "CIVHoverTransporter", "DessicatorTransport" },
+			{ "CivWheelTransporter", "CivWheelTransporter" },
+		};
+
+		private static Dictionary<string, string> buildingNames = new Dictionary<string, string>
+		{
+			{ "fgpp", "Power" },
+			{ "imppp", "Power" },
+			{ "fglp", "WaterLaunchPad" },
+			{ "implp", "WaterLaunchPad" },
+			{ "fh1", "HQ.human" },
+			{ "fh2", "HQ.human" },
+			{ "fh3", "HQ.human" },
+			{ "ih1", "HQ.cyborg" },
+			{ "ih2", "HQ.cyborg" },
+			{ "ih3", "HQ.cyborg" },
+			{ "fu1", "TrainingFacility.fguard" },
+			{ "fu2", "TrainingFacility.fguard" },
+			{ "iu1", "TrainingFacility.cyborg" },
+			{ "iu2", "TrainingFacility.cyborg" },
+			{ "fc1", "AssemblyPlant.human" },
+			{ "fc2", "AssemblyPlant.human" },
+			{ "ic1", "AssemblyPlant.cyborg" },
+			{ "ic2", "AssemblyPlant.cyborg" },
+			{ "impca", "CameraTower" },
+			{ "fgca", "CameraTower" },
+			{ "fg", "LaserTurret" },
+			{ "ig", "PlasmaTurret" },
+			{ "fs", "AntiAirTurret.human" },
+			{ "is", "AntiAirTurret.cyborg" },
+			{ "fa", "HeavyRailTurret" },
+			{ "ia", "NeutronAccelerator" },
+			{ "fgho", "Hospital.human" },
+			{ "impho", "Hospital.cyborg" },
+			{ "fgre", "Repair.human" },
+			{ "impre", "Repair.cyborg" },
+			{ "fgar", "RearmingDeck.human" },
+			{ "impar", "RearmingDeck.cyborg" },
+			{ "ft1", "PhasingFacility" },
+			{ "ft2", "PhasingFacility" }, // Should be upgraded
+			{ "it", "TemporalGate" },
+			{ "itrc", "TemporalRiftCreator" },
+			{ "fgth", "FreedomGuardTreatyHall" },
+			{ "impdr", "ImperiumDesicator" },
+			{ "rp", "RendezvousPoint" },
+			{ "impmr", "ImperiumMedicalResearch" },
+			{ "imphr", "ImperiumHoverResearch" },
+		};
 
 		protected bool ValidateArguments(string[] args)
 		{
@@ -197,54 +392,11 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						int y = Convert.ToInt32(scnSection.Values[3]) - 1; // Manual adjustment while our offsets are stuffed
 
 						var matchingActor = string.Empty;
-						switch (type)
-						{
-							case "tree1":
-								matchingActor = "aotre000.spr";
-								break;
-							case "tree2":
-								matchingActor = "aotre001.spr";
-								break;
-							case "tree3":
-								matchingActor = "aotre002.spr";
-								break;
-							case "tree4":
-								matchingActor = "aotre003.spr";
-								break;
-							case "tree5":
-								matchingActor = "aotre004.spr";
-								break;
-							case "tree6":
-								matchingActor = "aotre005.spr";
-								break;
-							case "rock1":
-								matchingActor = "aoroc000.spr";
-								break;
-							case "rock2":
-								matchingActor = "aoroc001.spr";
-								break;
-							case "rock3":
-								matchingActor = "aoroc002.spr";
-								break;
-							case "rock4":
-								matchingActor = "aoroc003.spr";
-								break;
-							case "rock5":
-								matchingActor = "aoroc004.spr";
-								break;
-							case "rock6":
-								matchingActor = "aoroc005.spr";
-								break;
-							case "plnt1":
-								matchingActor = "aopln000.spr";
-								break;
-							case "plnt2":
-								matchingActor = "aopln001.spr";
-								break;
-							case "plnt3":
-								matchingActor = "aopln002.spr";
-								break;
-						}
+
+						if (thingNames.ContainsKey(type))
+							matchingActor = thingNames[type];
+						else if (!knownUnknownThings.Contains(type))
+							throw new Exception("Unknown thing name: " + type);
 
 						if (x != 0 && y != 0 && !string.IsNullOrEmpty(matchingActor))
 						{
@@ -258,6 +410,51 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						}
 					}
 
+					// Units
+					int currentTeam = 0;
+					foreach (var scnSection in scnFile.Entries)
+					{
+						if (scnSection.Name == "SetDefaultTeam")
+						{
+							currentTeam = Convert.ToInt32(scnSection.ValuesStr) + 2; // To skip creeps
+							continue;
+						}
+
+						if (scnSection.Name != "PutUnitAt")
+							continue;
+
+						if (currentTeam > 3)
+						{
+							// throw new Exception("More than two teams on this map.");
+
+							// Just add to creeps
+							currentTeam = 1;
+						}
+
+						string type = scnSection.Values[1];
+						int x = Convert.ToInt32(scnSection.Values[2]) - 1; // Manual adjustment while our offsets are stuffed
+						int y = Convert.ToInt32(scnSection.Values[3]) - 1; // Manual adjustment while our offsets are stuffed
+
+						var matchingActor = string.Empty;
+
+						if (unitNames.ContainsKey(type))
+							matchingActor = unitNames[type];
+						else if (!knownUnknownUnits.Contains(type))
+							throw new Exception("Unknown unit name: " + type);
+
+						if (x != 0 && y != 0 && !string.IsNullOrEmpty(matchingActor))
+						{
+							var ar = new ActorReference(matchingActor)
+							{
+								new LocationInit(new CPos(x + 1, y + 1)),
+								new OwnerInit(MapPlayers.Players.Keys.ToArray()[currentTeam])
+							};
+
+							Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
+						}
+					}
+
+					// Do resources
 					foreach (var scnSection in scnFile.Entries)
 					{
 						if (scnSection.Name != "AddBuildingAt")
@@ -283,6 +480,49 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 						var cell = new CPos(x + 1, y + 1);
 						Map.Resources[cell] = new ResourceTile(typeId, 0);
+					}
+
+					// Do buildings
+					foreach (var scnSection in scnFile.Entries)
+					{
+						if (scnSection.Name == "SetDefaultTeam")
+						{
+							currentTeam = Convert.ToInt32(scnSection.ValuesStr) + 2; // To skip creeps
+							continue;
+						}
+
+						if (scnSection.Name != "AddBuildingAt")
+							continue;
+
+						if (currentTeam > 3)
+						{
+							// throw new Exception("More than two teams on this map.");
+
+							// Just add to creeps
+							currentTeam = 1;
+						}
+
+						string type = scnSection.Values[1];
+						int x = Convert.ToInt32(scnSection.Values[2]);
+						int y = Convert.ToInt32(scnSection.Values[3]);
+
+						var matchingActor = string.Empty;
+
+						if (buildingNames.ContainsKey(type))
+							matchingActor = buildingNames[type];
+						else if (!knownUnknownBuildings.Contains(type))
+							throw new Exception("Unknown building name: " + type);
+
+						if (x != 0 && y != 0 && !string.IsNullOrEmpty(matchingActor))
+						{
+							var ar = new ActorReference(matchingActor)
+							{
+								new LocationInit(new CPos(x + 1, y + 1)),
+								new OwnerInit(MapPlayers.Players.Keys.ToArray()[currentTeam])
+							};
+
+							Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
+						}
 					}
 				}
 
@@ -349,6 +589,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				Color = namedColorMapping["white"]
 			};
 
+			bool isMulti = false; // file.Entries.Count(x => x.Name == "SetStartLocation") > 1;
+
 			// Overwrite default player definitions if needed
 			if (!mapPlayers.Players.ContainsKey(section))
 				mapPlayers.Players.Add(section, pr);
@@ -356,23 +598,89 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				mapPlayers.Players[section] = pr;
 
 			int i = 0;
-			foreach (var scnSection in file.Entries)
+			if (isMulti)
 			{
-				if (scnSection.Name != "SetStartLocation")
-					continue;
-
-				int x = Convert.ToInt32(scnSection.Values[0]);
-				int y = Convert.ToInt32(scnSection.Values[1]);
-				if (x != 0 && y != 0)
+				foreach (var scnSection in file.Entries)
 				{
-					var multi = new PlayerReference
-					{
-						Name = "Multi" + i,
-						Playable = true,
-						Faction = "Random"
-					};
+					if (scnSection.Name != "SetStartLocation")
+						continue;
 
-					mapPlayers.Players.Add(multi.Name, multi);
+					int x = Convert.ToInt32(scnSection.Values[0]);
+					int y = Convert.ToInt32(scnSection.Values[1]);
+					if (x != 0 && y != 0)
+					{
+						var multi = new PlayerReference
+						{
+							Name = "Multi" + i,
+							Playable = true,
+							Faction = "Random"
+						};
+
+						mapPlayers.Players.Add(multi.Name, multi);
+						i++;
+					}
+				}
+			}
+			else
+			{
+				// Single player, examine sides
+				foreach (var scnSection in file.Entries)
+				{
+					if (scnSection.Name != "SetTeamSide")
+						continue;
+
+					if (i > 1) // Only allow two sides
+						break;
+
+					int sideIndex = Convert.ToInt32(scnSection.Values[0]);
+					PlayerReference newPlayer;
+
+					if (sideIndex == 0)
+					{
+						newPlayer = new PlayerReference
+						{
+							Name = "Freedom Guard",
+							Faction = "fguard",
+							Color = HSLColor.FromRGB(234, 189, 25),
+							Enemies = new[] { "Imperium" } // This will have a problem if we have Imp vs Imp or FG vs FG.
+						};
+					}
+					else
+					{
+						newPlayer = new PlayerReference
+						{
+							Name = "Imperium",
+							Faction = "imperium",
+							Color = HSLColor.FromRGB(124, 60, 234),
+							Enemies = new[] { "Freedom Guard" }
+						};
+					}
+
+					if (i == 0)
+					{
+						// First is always playable faction
+						newPlayer.Playable = true;
+						newPlayer.AllowBots = false;
+						newPlayer.Required = true;
+						newPlayer.LockSpawn = true;
+						newPlayer.LockTeam = true;
+					}
+					else if (i == 1)
+					{
+						// Check we don't have the same faction name
+						if (mapPlayers.Players.ContainsKey(newPlayer.Name))
+						{
+							// Create a new name for this faction and alter enemies accordingly
+							var player = mapPlayers.Players.Values.ToArray()[2];
+							var newName = newPlayer.Name + " Foe";
+							newPlayer.Color = HSLColor.FromRGB(234, 32, 59); // Give it a red color
+							newPlayer.Name = newName;
+							newPlayer.Enemies = new[] { player.Name };
+							player.Enemies = new[] { newName };
+						}
+					}
+
+					mapPlayers.Players.Add(newPlayer.Name, newPlayer);
 					i++;
 				}
 			}

@@ -265,6 +265,41 @@ aoctr004.spr:
 	idle:
 		Length: *
 
+aoctr005.spr:
+	Defaults:
+		AddExtension: False
+		Offset: 0,-2
+	idle:
+		Length: *
+
+aoctr006.spr:
+	Defaults:
+		AddExtension: False
+		Offset: 0,-2
+	idle:
+		Length: *
+
+aoctr007.spr:
+	Defaults:
+		AddExtension: False
+		Offset: 0,-2
+	idle:
+		Length: *
+
+aoctr008.spr:
+	Defaults:
+		AddExtension: False
+		Offset: 0,-2
+	idle:
+		Length: *
+
+aoctr009.spr:
+	Defaults:
+		AddExtension: False
+		Offset: 0,-2
+	idle:
+		Length: *
+
 # Crashed space ship
 aospc000.spr:
 	Defaults:

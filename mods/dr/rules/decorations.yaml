@@ -38,6 +38,7 @@
 	Inherits: ^Tree
 	EditorTilesetFilter:
 		Categories: Misc
+	-WithIdleOverlay@LAYER1:
 
 aotre000.spr:
 	Inherits: ^Tree
@@ -185,35 +186,71 @@ aomsc002.spr:
 
 # Crater
 aoctr000.spr:
-	Inherits: ^DrCrater
+	Inherits: ^DrMisc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 		LocalCenterOffset: 0,0,0
 
 aoctr001.spr:
-	Inherits: ^DrCrater
+	Inherits: ^DrMisc
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
 		LocalCenterOffset: 0,0,0
 
 aoctr002.spr:
-	Inherits: ^DrCrater
+	Inherits: ^DrMisc
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 
 aoctr003.spr:
-	Inherits: ^DrCrater
+	Inherits: ^DrMisc
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 
 aoctr004.spr:
-	Inherits: ^DrCrater
+	Inherits: ^DrMisc
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+
+# Need to review the rest of these craters
+aoctr005.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+
+aoctr006.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+
+aoctr007.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+
+aoctr008.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+
+aoctr009.spr:
+	Inherits: ^DrMisc
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
@@ -222,7 +259,6 @@ aoctr004.spr:
 # Crashed space ship
 aospc000.spr:
 	Inherits: ^DrMisc
-	-WithIdleOverlay@LAYER1: # no shadows
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2

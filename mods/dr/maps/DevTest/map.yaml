@@ -342,46 +342,10 @@ Actors:
 	Actor108: aopln002.spr
 		Owner: Neutral
 		Location: 16,46
-	Actor101: aoclf000.spr
-		Owner: Neutral
-		Location: 8,34
-	Actor102: aoclf001.spr
-		Owner: Neutral
-		Location: 13,32
-	Actor109: aoclf002.spr
-		Owner: Neutral
-		Location: 7,29
-	Actor110: aoclf003.spr
-		Owner: Neutral
-		Location: 13,27
-	Actor111: aoclf004.spr
-		Owner: Neutral
-		Location: 6,24
 	Actor112: raider
 		Owner: Freedom Guard
 		Location: 11,24
 		Facing: 92
-	Actor113: aoclf005.spr
-		Owner: Neutral
-		Location: 16,17
-	Actor120: aoclf000.spr
-		Owner: Neutral
-		Location: 28,16
-	Actor121: aoclf001.spr
-		Owner: Neutral
-		Location: 35,15
-	Actor122: aoclf002.spr
-		Owner: Neutral
-		Location: 41,14
-	Actor123: aoclf003.spr
-		Owner: Neutral
-		Location: 47,14
-	Actor124: aoclf004.spr
-		Owner: Neutral
-		Location: 50,19
-	Actor125: aoclf005.spr
-		Owner: Neutral
-		Location: 43,23
 	Actor126: hq.cyborg
 		Owner: Freedom Guard
 		Location: 6,43
@@ -632,5 +596,68 @@ Actors:
 	Actor191: tankhunter
 		Owner: Freedom Guard
 		Location: 61,35
+		Facing: 92
+	Actor192: freedomguardtreatyhall
+		Owner: Freedom Guard
+		Location: 28,7
+	Actor193: imperiumdesicator
+		Owner: Freedom Guard
+		Location: 36,7
+	Actor194: rendezvouspoint
+		Owner: Freedom Guard
+		Location: 29,13
+	Actor195: imperiummedicalresearch
+		Owner: Freedom Guard
+		Location: 37,13
+	Actor196: imperiumhoverresearch
+		Owner: Freedom Guard
+		Location: 32,19
+	Actor197: fgplanetarydefense
+		Owner: Freedom Guard
+		Location: 39,19
+	Actor198: imperiumprison
+		Owner: Freedom Guard
+		Location: 9,30
+	Actor199: civilianentertainmentfacility
+		Owner: Freedom Guard
+		Location: 3,26
+	Actor200: civilianpublicshelter
+		Owner: Freedom Guard
+		Location: 9,25
+	Actor201: civiliansubtransit
+		Owner: Freedom Guard
+		Location: 13,26
+	Actor202: civiliantransitcentre
+		Owner: Freedom Guard
+		Location: 3,21
+	Actor203: civiliancommercial
+		Owner: Freedom Guard
+		Location: 11,19
+	Actor204: civilianfactory
+		Owner: Freedom Guard
+		Location: 18,18
+	Actor205: civilianrural
+		Owner: Freedom Guard
+		Location: 25,18
+	Actor206: civiliangrainfarm
+		Owner: Freedom Guard
+		Location: 43,4
+	Actor207: civilianhydrofarm
+		Owner: Freedom Guard
+		Location: 44,11
+	Actor208: civilianfarmhouse
+		Owner: Freedom Guard
+		Location: 45,17
+	Actor209: dessicatortransport
+		Owner: Freedom Guard
+		Location: 38,28
+		Facing: 92
+	Actor210: civwheeltransporter
+		Owner: Freedom Guard
+		Location: 42,28
+		Facing: 92
+	Actor211: rowdycivilian
+		Owner: Freedom Guard
+		Location: 41,26
 		Facing: 92
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

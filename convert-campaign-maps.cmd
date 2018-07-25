@@ -38,7 +38,6 @@ call OpenRA.Utility.exe %MOD_ID% --import-dr-map "FIXED/M09I/M09I.MAP"
 call OpenRA.Utility.exe %MOD_ID% --import-dr-map "FIXED/M10I/M10I.MAP"
 call OpenRA.Utility.exe %MOD_ID% --import-dr-map "FIXED/M11I/M11I.MAP"
 call OpenRA.Utility.exe %MOD_ID% --import-dr-map "FIXED/M12I/M12I.MAP"
-call OpenRA.Utility.exe %MOD_ID% --import-dr-map "FIXED/M13T/M13T.MAP"
 pause
 exit /b
 
