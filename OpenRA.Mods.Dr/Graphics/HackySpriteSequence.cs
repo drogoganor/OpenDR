@@ -118,7 +118,6 @@ namespace OpenRA.Mods.Dr.Graphics
 
 		public HackySpriteSequence(ModData modData, TileSet tileSet, SpriteCache cache, ISpriteSequenceLoader loader, string sequence, string animation, MiniYaml info)
 		{
-			this.sequence = sequence;
 			Name = animation;
 			Loader = loader;
 			var d = info.ToDictionary();
