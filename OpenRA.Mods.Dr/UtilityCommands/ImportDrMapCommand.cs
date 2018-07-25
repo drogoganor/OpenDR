@@ -67,7 +67,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 				var width = stream.ReadInt32();
 				var height = stream.ReadInt32();
-				var tilesetNum = stream.ReadInt32();
+				stream.ReadInt32(); // Tileset num???
 				var tilesetName = "BARREN";
 
 				var scnFilename = filename.Replace(".map", ".scn");
@@ -190,7 +190,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						if (scnSection.Name != "AddThingAt")
 							continue;
 
-						int id = Convert.ToInt32(scnSection.Values[0]);
 						string type = scnSection.Values[1];
 						int x = Convert.ToInt32(scnSection.Values[2]) - 1; // Manual adjustment while our offsets are stuffed
 						int y = Convert.ToInt32(scnSection.Values[3]) - 1; // Manual adjustment while our offsets are stuffed
@@ -262,7 +261,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						if (scnSection.Name != "AddBuildingAt")
 							continue;
 
-						int id = Convert.ToInt32(scnSection.Values[0]);
 						string type = scnSection.Values[1];
 						int x = Convert.ToInt32(scnSection.Values[2]);
 						int y = Convert.ToInt32(scnSection.Values[3]);
