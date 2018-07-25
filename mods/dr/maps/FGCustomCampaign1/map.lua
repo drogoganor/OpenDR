@@ -26,8 +26,8 @@ DiscoverAbandonedBase = function(_, actor, discoverer)
 end
 
 WorldLoaded = function()
-	player = Player.GetPlayer("FreedomGuard")
-	abandonBase = Player.GetPlayer("AbandonedBase")
+	player = Player.GetPlayer("Freedom Guard")
+	abandonBase = Player.GetPlayer("Abandoned Base")
 	enemy = Player.GetPlayer("Imperium")
 	
 	--baseDiscovered = false

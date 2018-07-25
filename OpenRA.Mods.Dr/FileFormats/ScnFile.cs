@@ -1,4 +1,5 @@
 #region Copyright & License Information
+
 /*
  * Copyright 2007-2018 The OpenRA Developers (see AUTHORS)
  * This file is part of OpenRA, which is free software. It is made
@@ -7,6 +8,7 @@
  * the License, or (at your option) any later version. For more
  * information, see COPYING.
  */
+
 #endregion
 
 using System;
@@ -25,7 +27,12 @@ namespace OpenRA.Mods.Dr.FileFormats
 		const string SetDefaultTerrainStr = "SetDefaultTerrain";
 		const string AddBuildingAtStr = "AddBuildingAt";
 
-		public IEnumerable<ScnSection> Entries { get { return entries; } }
+		bool skipNextBlock = false;
+
+		public IEnumerable<ScnSection> Entries
+		{
+			get { return entries; }
+		}
 
 		List<ScnSection> entries = new List<ScnSection>();
 
@@ -43,30 +50,42 @@ namespace OpenRA.Mods.Dr.FileFormats
 
 		public void Load(Stream s)
 		{
-			var reader = new StreamReader(s);
-
-			while (!reader.EndOfStream)
+			try
 			{
-				var line = reader.ReadLine();
+				var reader = new StreamReader(s);
 
-				if (line.Length == 0) continue;
-
-				switch (line[0])
+				while (!reader.EndOfStream)
 				{
-					case ';':
-						break;
-					case '{':
-					case '}':
-						break;
-					default:
-						ProcessEntry(line);
-						break;
+					var line = reader.ReadLine();
+
+					if (line.Length == 0) continue;
+
+					switch (line[0])
+					{
+						case ';':
+							break;
+						case '{':
+							break;
+						case '}':
+							skipNextBlock = false;
+							break;
+						default:
+							ProcessEntry(line);
+							break;
+					}
 				}
+			}
+			catch (Exception ex)
+			{
+				throw ex;
 			}
 		}
 
 		bool ProcessEntry(string line)
 		{
+			if (skipNextBlock)
+				return false;
+
 			var comment = line.IndexOf(';');
 			if (comment >= 0)
 				line = line.Substring(0, comment);
@@ -79,14 +98,19 @@ namespace OpenRA.Mods.Dr.FileFormats
 
 			if (line.StartsWith(PlayerStartStr))
 				entries.Add(scnEntry);
-			if (line.StartsWith(AddThingStr))
+			else if (line.StartsWith(AddThingStr))
 				entries.Add(scnEntry);
-			if (line.StartsWith(SetTeamSideStr))
+			else if (line.StartsWith(SetTeamSideStr))
 				entries.Add(scnEntry);
-			if (line.StartsWith(SetDefaultTerrainStr))
+			else if (line.StartsWith(SetDefaultTerrainStr))
 				entries.Add(scnEntry);
-			if (line.StartsWith(AddBuildingAtStr))
+			else if (line.StartsWith(AddBuildingAtStr))
 				entries.Add(scnEntry);
+			else if (line.StartsWith("DefineSpecialForces"))
+			{
+				skipNextBlock = true;
+				return false;
+			}
 
 			return true;
 		}

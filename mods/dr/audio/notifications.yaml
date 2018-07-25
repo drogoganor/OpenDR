@@ -12,7 +12,7 @@ Speech:
 		ConstructionComplete: gvstscl0 # gvstscl5 # Unit complete
 		ConvoyApproaching: 
 		ConvoyUnitLost: 
-		CreditsStolen: 
+		CreditsStolen: gvstscln
 		EnemyUnitsApproaching: 
 		EnemyDetected: gvwrncl1 # infiltrator detected
 		HarvesterAttack:
@@ -54,6 +54,49 @@ Speech:
 		Upgrading: gvstscl2
 		NoRoom: 
 		Win: acid
+		# DR
+		ExcellentTheresHopeForYouYet: gvitrel0
+		AdequateMoveOn: gvitrel1
+		WellDone: gvitrel2
+		DeviationFromOrdersIsUnacceptable: gvitrnl0
+		YouHaveBeenGivenInstructionsFollowThem: gvitrnl1
+		WhatAreYouDoingFoolCheckYourMissionObjectives: gvitrnl2
+		OrdersAreToBeFollowedAsGiven: gvitrnl3
+		FulfillYourDirectivesImmediately: gvitrnl4
+		YourIncompetenceIsStaggering: gvitrnl5
+		MoveNorth: gvitrnl6
+		MoveSouth: gvitrnl7
+		MoveEast: gvitrnl8
+		MoveWest: gvitrnl9
+		SquadOne: gvselcl0
+		SquadTwo: gvselcl1
+		SquadZero: gvselcl9
+		BuildingDestroyed: gvstscl8
+		TemporalGateReady: gvstscla
+		RiftCreatorCharged: gvstsclb
+		PhaseRunnerAvailable: gvstsclc
+		PhasingOnline: gvstscle
+		PhasingOffline: gvwrncl7
+		UpgradeAvailable: gvstsclf
+		AllianceHasChanged: gvstsclg
+		AllyDefeated: gvstsclh
+		NewAlly: gvstscli
+		NewEnemy: gvstsclj
+		CreditsTransferred: gvstsclm
+		CreditsReceived: gvstscln
+		UnitsTransferred: gvstsclo
+		UnitsReceived: gvstsclp
+		WaterResourceContaminated: gvstsclq
+		AdditionalTroopsAvailable: gvstsclr
+		UnitsCaptured: gvstscls
+		UnitsLiberated: gvstsclt
+		NewTechnologyIntegrated: gvstsclu
+		InfiltratorDetected: gvwrncl1
+		TemporalDistortionDetected: gvwrncl2
+		SeismicActivityDetected: gvwrncl3
+		AllyUnderAttack: gvwrncl8
+		TimeLimitApproaching: gvwrncla
+		
 
 Sounds:
 	DefaultVariant: .wav
@@ -72,3 +115,5 @@ Sounds:
 		AlertBuzzer: 
 		AlertBleep: 
 		BaseSetup: 
+		# DR
+		CreditsReceived: gxcrdoc0

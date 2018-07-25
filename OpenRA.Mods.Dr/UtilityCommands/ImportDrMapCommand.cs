@@ -70,6 +70,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				stream.ReadInt32(); // Tileset num???
 				var tilesetName = "BARREN";
 
+				filename = filename.ToLowerInvariant();
+
 				var scnFilename = filename.Replace(".map", ".scn");
 				using (var scn = File.OpenRead(scnFilename))
 				{
