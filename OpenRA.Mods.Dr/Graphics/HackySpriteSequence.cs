@@ -357,7 +357,6 @@ namespace OpenRA.Mods.Dr.Graphics
 			{
 				//	throw new InvalidOperationException("Attempted to query unloaded sprite from {0}.{1}".F(Name, sequence) +
 				//		" start={0} frame={1} facing={2}".F(start, frame, facing));
-
 				if (sprites[0] != null)
 					return sprites[0];
 			}

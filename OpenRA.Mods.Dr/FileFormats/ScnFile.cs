@@ -19,15 +19,15 @@ namespace OpenRA.Mods.Dr.FileFormats
 {
 	public class ScnFile
 	{
-		public IEnumerable<ScnSection> Entries { get { return entries; } }
-
-		List<ScnSection> entries = new List<ScnSection>();
-
 		const string PlayerStartStr = "SetStartLocation";
 		const string AddThingStr = "AddThingAt";
 		const string SetTeamSideStr = "SetTeamSide";
 		const string SetDefaultTerrainStr = "SetDefaultTerrain";
 		const string AddBuildingAtStr = "AddBuildingAt";
+
+		public IEnumerable<ScnSection> Entries { get { return entries; } }
+
+		List<ScnSection> entries = new List<ScnSection>();
 
 		public ScnFile(Stream s)
 		{
@@ -64,7 +64,7 @@ namespace OpenRA.Mods.Dr.FileFormats
 				}
 			}
 		}
-		
+
 		bool ProcessEntry(string line)
 		{
 			var comment = line.IndexOf(';');
@@ -74,9 +74,8 @@ namespace OpenRA.Mods.Dr.FileFormats
 			line = line.Trim();
 			if (line.Length == 0)
 				return false;
-			
-			var scnEntry = new ScnSection(line);
 
+			var scnEntry = new ScnSection(line);
 
 			if (line.StartsWith(PlayerStartStr))
 				entries.Add(scnEntry);
@@ -89,22 +88,6 @@ namespace OpenRA.Mods.Dr.FileFormats
 			if (line.StartsWith(AddBuildingAtStr))
 				entries.Add(scnEntry);
 
-			//var key = line;
-			//var value = "";
-			//var eq = line.IndexOf('=');
-			//if (eq >= 0)
-			//{
-			//	key = line.Substring(0, eq).Trim();
-			//	value = line.Substring(eq + 1, line.Length - eq - 1).Trim();
-			//}
-
-			//if (currentSection == null)
-			//	throw new InvalidOperationException("No current INI section");
-
-			//if (!currentSection.Contains(key))
-			//	currentSection.Add(key, value);
-
-
 			return true;
 		}
 	}
@@ -114,18 +97,18 @@ namespace OpenRA.Mods.Dr.FileFormats
 		public string Name { get; private set; }
 		public string ValuesStr { get; private set; }
 		public string[] Values { get; private set; }
-		string rawValue { get; set; }
+		string RawValue { get; set; }
 
 		public ScnSection(string raw)
 		{
-			rawValue = raw;
+			RawValue = raw;
 
 			var openBracketIndex = raw.IndexOf("(");
 			var closeBracketIndex = raw.IndexOf(")");
 			Name = raw.Substring(0, openBracketIndex);
 			ValuesStr = raw.Substring(openBracketIndex + 1, (closeBracketIndex - openBracketIndex) - 1);
 
-			Values = ValuesStr.Split(new[] {' '});
+			Values = ValuesStr.Split(new[] { ' ' });
 		}
 	}
 }

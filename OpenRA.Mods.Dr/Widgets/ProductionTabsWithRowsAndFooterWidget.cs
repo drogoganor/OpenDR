@@ -9,32 +9,18 @@
  */
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using OpenRA.Graphics;
-using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Widgets;
-using OpenRA.Widgets;
 
 namespace OpenRA.Mods.Dr.Widgets
 {
 	public class ProductionTabsWithRowsAndFooterWidget : ProductionTabsWidget
 	{
-		//readonly World world;
-
 		public readonly string RowWidget = null;
 		public readonly string FooterWidget = null;
-		
-		//Lazy<ProductionPaletteWidget> paletteWidget;
 
 		[ObjectCreator.UseCtor]
 		public ProductionTabsWithRowsAndFooterWidget(World world) : base(world)
 		{
-			//this.world = world;
-			
-			//paletteWidget = Exts.Lazy(() => Ui.Root.Get<ProductionPaletteWidget>(PaletteWidget));
 		}
 	}
 }

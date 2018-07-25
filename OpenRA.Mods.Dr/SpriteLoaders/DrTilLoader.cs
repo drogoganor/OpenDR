@@ -32,16 +32,16 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			public float2 Offset { get; private set; }
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
-			
+
 			public DrTilFrame(Stream s)
 			{
 				int tileSize = 24;
-				
+
 				Data = new byte[tileSize * tileSize];
 
 				var byt = s.ReadUInt8();
-				
-				for (int i = 0; i < tileSize*tileSize; i++)
+
+				for (int i = 0; i < tileSize * tileSize; i++)
 				{
 					byt = s.ReadUInt8();
 					Data[i] = byt;
@@ -67,13 +67,13 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				s.Position = start;
 				return false;
 			}
-			
+
 			if (h.Version != 0x0240)
 			{
 				s.Position = start;
 				return false;
 			}
-			
+
 			return true;
 		}
 
@@ -94,8 +94,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			int chunkSize = 577;
 
-			s.Position += chunkSize*65;
-			s.Position -= (64);
+			s.Position += chunkSize * 65;
+			s.Position -= 64;
 
 			for (int artIndex = 0; artIndex < 4; artIndex++)
 			{
@@ -104,7 +104,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					var frame = new DrTilFrame(s);
 					frames.Add(frame);
 				}
-				s.Position += 2*chunkSize; // Skip mask frame
+
+				s.Position += 2 * chunkSize; // Skip mask frame
 			}
 
 			s.Position = start;

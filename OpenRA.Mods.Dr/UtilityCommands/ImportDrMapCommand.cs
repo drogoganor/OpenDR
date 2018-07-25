@@ -33,7 +33,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		[Desc("FILENAME", "Convert a legacy Dark Reign  map to the OpenRA format.")]
 		void IUtilityCommand.Run(Utility utility, string[] args) { Run(utility, args); }
-		
+
 		public ModData ModData;
 		public Map Map;
 		public List<string> Players = new List<string>();
@@ -68,9 +68,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				var width = stream.ReadInt32();
 				var height = stream.ReadInt32();
 				var tilesetNum = stream.ReadInt32();
-
 				var tilesetName = "BARREN";
-				
+
 				var scnFilename = filename.Replace(".map", ".scn");
 				using (var scn = File.OpenRead(scnFilename))
 				{
@@ -84,9 +83,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 					}
 				}
 
-
-
-
 				Map = new Map(ModData, ModData.DefaultTileSets[tilesetName], width + 2, height + 2)
 				{
 					Title = Path.GetFileNameWithoutExtension(filename),
@@ -96,7 +92,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				Map.RequiresMod = ModData.Manifest.Id;
 
 				SetBounds(Map, width + 2, height + 2);
-				
+
 				var byte1Hash = new HashSet<byte>();
 				var byte2Hash = new HashSet<byte>();
 				var byte3Hash = new HashSet<byte>();
@@ -129,47 +125,35 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						if (!byte6Hash.Contains(byte6))
 							byte6Hash.Add(byte6);
 
-						var subindex = (byte)(byte1/64);
-						byte variation = (byte)(subindex*(byte2+1));
-
-						int tileType = byte1%64;
+						var subindex = (byte)(byte1 / 64);
+						byte variation = (byte)(subindex * (byte2 + 1));
+						int tileType = byte1 % 64;
 
 						if (tileType >= 16)
 						{
 							unknownTileTypeHash.Add(tileType);
 							tileType = 1; // TODO: Handle edge sprites
 						}
-						
+
 						Map.Tiles[new CPos(x + 1, y + 1)] = new TerrainTile((ushort)tileType, variation); // types[i, j], byte1
 					}
 				}
 
 				// What's after the tiles? Water/Taelon?
-
-				int oneFlag = stream.ReadInt32(); // Always one
-				int flag256 = stream.ReadInt32(); // Always 256
+				int dummy = stream.ReadInt32(); // Always one
+				dummy = stream.ReadInt32(); // Always 256
 				int length = stream.ReadInt32(); // Byte length of remaining data
-				
+
 				byte1Hash = new HashSet<byte>();
 				var byteList = new List<byte>();
-				var intList = new List<int>();
 				for (int i = 0; i < length; i++)
 				{
-					//var int1 = stream.ReadInt32();
-					//var int2 = stream.ReadInt32();
-					//intList.Add(int1);
-					//intList.Add(int2);
-
 					var byte1 = stream.ReadUInt8();
-					//var byte2 = stream.ReadUInt8();
 					if (!byte1Hash.Contains(byte1))
 						byte1Hash.Add(byte1);
 
-					//var byte1 = stream.ReadInt32();
 					byteList.Add(byte1);
-					//byteList.Add(byte2);
 				}
-
 
 				using (var scn = File.OpenRead(scnFilename))
 				{
@@ -177,7 +161,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 					MapPlayers = new MapPlayers(Map.Rules, 0);
 					SetMapPlayers(scnFile, Players, MapPlayers);
-					
+
 					// Place start locations
 					int i = 0;
 					foreach (var scnSection in scnFile.Entries)
@@ -199,7 +183,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 						}
 					}
-
 
 					// Parse map thingies
 					foreach (var scnSection in scnFile.Entries)
@@ -260,11 +243,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							case "plnt3":
 								matchingActor = "aopln002.spr";
 								break;
-							default:
-								//matchingActor = "aoclf000.spr";
-								break;
 						}
-						
+
 						if (x != 0 && y != 0 && !string.IsNullOrEmpty(matchingActor))
 						{
 							var ar = new ActorReference(matchingActor)
@@ -276,7 +256,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 						}
 					}
-
 
 					foreach (var scnSection in scnFile.Entries)
 					{
@@ -317,14 +296,14 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			Map.Save(ZipFileLoader.Create(dest));
 			Console.WriteLine(dest + " saved.");
 		}
-		
+
 		static void SetBounds(Map map, int width, int height)
 		{
 			var tl = new PPos(1, 1);
 			var br = new PPos(0 + width - 2, 0 + height - 2);
 			map.SetBounds(tl, br);
 		}
-		
+
 		// TODO: fix this -- will have bitrotted pretty badly.
 		static Dictionary<string, HSLColor> namedColorMapping = new Dictionary<string, HSLColor>()
 		{
@@ -339,7 +318,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "white", HSLColor.FromRGB(255, 255, 255) },
 			{ "black", HSLColor.FromRGB(80, 80, 80) },
 		};
-		
+
 		public static void SetMapPlayersDefault(List<string> players, MapPlayers mapPlayers, string section = "Neutral", string faction = "fguard", string color = "white")
 		{
 			var pr = new PlayerReference
@@ -392,8 +371,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 					{
 						Name = "Multi" + i,
 						Playable = true,
-						Faction = "Random",
-						//Enemies = "Creeps"
+						Faction = "Random"
 					};
 
 					mapPlayers.Players.Add(multi.Name, multi);
@@ -401,6 +379,5 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				}
 			}
 		}
-
 	}
 }

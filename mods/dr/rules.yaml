@@ -6,7 +6,7 @@
 	LoadWidgetAtGameStart:
 	MusicPlaylist:
 		VictoryMusic: acid
-		DefeatMusic: acid
+		DefeatMusic: crazylaf
 	DebugVisualizations:
 	TerrainGeometryOverlay:
 	ShroudRenderer:
@@ -14,44 +14,34 @@
 		Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
 		UseExtendedIndex: true
 	Faction@0:
-		Name: Freedom Guard
-		InternalName: freedom
-		Side: Original
-		Selectable: False
-	Faction@1:
-		Name: Imperium
-		InternalName: imp
-		Side: Original
-		Selectable: False
-	Faction@2:
-		Name: Freedom Guard
+		Name: F. Guard
 		InternalName: fguard
 		Side: Original
 		Description: 
-	Faction@4:
+	Faction@1:
 		Name: Imperium
 		InternalName: imperium
 		Side: Original
 		Description: 
-	Faction@3:
+	Faction@2:
 		Name: Togran
 		InternalName: togran
 		Side: Original
 		Description: 
 		Selectable: False
-	Faction@5:
+	Faction@3:
 		Name: Xenite
 		InternalName: xenite
 		Side: Expansion
 		Description: 
 		Selectable: False
-	Faction@6:
+	Faction@4:
 		Name: Shadowhand
 		InternalName: shadowhand
 		Side: Expansion
 		Description: 
 		Selectable: False
-	Faction@7:
+	Faction@5:
 		Name: Any
 		InternalName: Random
 		RandomFactionMembers: fguard, imperium

@@ -57,7 +57,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			public float2 Offset { get; private set; }
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
-			
+
 			public int Growto4(int x)
 			{
 				return x + 3 & ~3;
@@ -116,9 +116,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 									int newIndex = pixindex(currx + i, l);
 									Data[newIndex] = 161;
 								}
-
 							}
-
 						}
 
 						currx += cnt;
@@ -196,8 +194,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				s.Position = header.OffSections + 16 * sect;
 				int firstanim = s.ReadInt32();
 				int lastanim = s.ReadInt32();
-				int framerate = s.ReadInt32();
-				int nhotspots = s.ReadInt32();
+				int dummy = s.ReadInt32();
+				dummy = s.ReadInt32();
 
 				int bmp_szx = header.Szx * header.Nrots;
 				int bmp_szy = header.Szy * (lastanim - firstanim + 1);

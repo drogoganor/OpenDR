@@ -57,10 +57,10 @@ namespace OpenRA.Mods.Dr.Traits
 			Stream s;
 			if (!world.Map.TryOpen(info.Filename, out s))
 			{
-				//throw new FileNotFoundException("Couldn't find palette file: " + info.Filename);
+				// throw new FileNotFoundException("Couldn't find palette file: " + info.Filename);
 				return;
 			}
-			
+
 			var headerName = s.ReadASCII(4);
 			var headerVersion = s.ReadInt32();
 
@@ -80,8 +80,6 @@ namespace OpenRA.Mods.Dr.Traits
 			{
 				list.Add(s.ReadUInt8());
 			}
-
-			//list = list.Skip(768).Take(768).ToList(); // Get the second palette, ranging 0-31
 
 			var rList = list.Take(256).ToList();
 			var gList = list.Skip(256).Take(256).ToList();

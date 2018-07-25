@@ -19,12 +19,10 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 	public class ProductionTabsWithRowsAndFooterLogic : ProductionTabsLogic
 	{
 		readonly ProductionTabsWithRowsAndFooterWidget tabs;
-		readonly World world;
 
 		[ObjectCreator.UseCtor]
 		public ProductionTabsWithRowsAndFooterLogic(Widget widget, World world) : base(widget, world)
 		{
-			this.world = world;
 			tabs = widget.Get<ProductionTabsWithRowsAndFooterWidget>("PRODUCTION_TABS");
 			var rowWidget = tabs.Parent.GetOrNull(tabs.RowWidget);
 			if (rowWidget != null)
@@ -40,7 +38,7 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 					foreground.RemoveChildren();
 					foreground.AddChild(templates);
 
-					int numRows = (int)Math.Ceiling((double)newCount/palette.Columns);
+					int numRows = (int)Math.Ceiling((double)newCount / palette.Columns);
 					if (numRows < minRows)
 						numRows = minRows;
 					for (var i = 0; i < numRows; i++)
@@ -51,10 +49,10 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 						foreground.AddChild(bg);
 					}
 
-					footer.Bounds.Y = ((numRows)* (palette.IconSize.Y));
+					footer.Bounds.Y = numRows * palette.IconSize.Y;
 				};
 				palette.OnIconCountChanged += updateBackground;
-				
+
 				// Set the initial palette state
 				updateBackground(0, 0);
 			}
