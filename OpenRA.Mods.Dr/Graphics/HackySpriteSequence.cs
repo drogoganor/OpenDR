@@ -79,7 +79,6 @@ namespace OpenRA.Mods.Dr.Graphics
 
 		protected readonly ISpriteSequenceLoader Loader;
 
-		readonly string sequence;
 		public string Name { get; private set; }
 		public int Start { get; private set; }
 		public int Length { get; private set; }
