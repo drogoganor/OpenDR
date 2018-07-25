@@ -1,11 +1,11 @@
 MapFormat: 11
 RequiresMod: dr
-Title: Mission Test
-Author: Your name here
+Title: Dev Test
+Author: DMW
 Tileset: BARREN
 MapSize: 82,70
 Bounds: 1,1,80,68
-Visibility: Lobby, MissionSelector
+Visibility: MissionSelector
 Categories: Conquest
 Players:
 	PlayerReference@Imperium:

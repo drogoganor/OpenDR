@@ -7,14 +7,12 @@ MapSize: 94,58
 Bounds: 1,1,92,56
 Visibility: Lobby, Shellmap
 Categories: Map
-
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
 		OwnsWorld: True
 		NonCombatant: True
 		Faction: fguard
-
 Actors:
 	Actor0: aotre000.spr
 		Owner: Neutral
@@ -85,63 +83,6 @@ Actors:
 	Actor25: aoclf002.spr
 		Owner: Neutral
 		Location: 35,21
-	Actor26: aoclf005.spr
-		Owner: Neutral
-		Location: 62,36
-	Actor27: aoclf001.spr
-		Owner: Neutral
-		Location: 14,13
-	Actor28: aoclf003.spr
-		Owner: Neutral
-		Location: 16,9
-	Actor29: aoclf004.spr
-		Owner: Neutral
-		Location: 12,15
-	Actor30: aoclf005.spr
-		Owner: Neutral
-		Location: 12,10
-	Actor31: aoroc001.spr
-		Owner: Neutral
-		Location: 9,13
-	Actor32: aoroc000.spr
-		Owner: Neutral
-		Location: 10,7
-	Actor33: aoroc005.spr
-		Owner: Neutral
-		Location: 8,9
-	Actor34: aoroc004.spr
-		Owner: Neutral
-		Location: 6,12
-	Actor35: aoroc003.spr
-		Owner: Neutral
-		Location: 3,14
-	Actor36: aoroc001.spr
-		Owner: Neutral
-		Location: 17,5
-	Actor37: aotre003.spr
-		Owner: Neutral
-		Location: 13,6
-	Actor38: aotre002.spr
-		Owner: Neutral
-		Location: 6,15
-	Actor39: aotre000.spr
-		Owner: Neutral
-		Location: 8,16
-	Actor40: aospc000.spr
-		Owner: Neutral
-		Location: 5,4
-	Actor41: aotre001.spr
-		Owner: Neutral
-		Location: 14,5
-	Actor42: aotre003.spr
-		Owner: Neutral
-		Location: 2,12
-	Actor43: aotre002.spr
-		Owner: Neutral
-		Location: 10,2
-	Actor44: aotre004.spr
-		Owner: Neutral
-		Location: 5,10
 	Actor46: aoroc001.spr
 		Owner: Neutral
 		Location: 66,17
@@ -172,22 +113,16 @@ Actors:
 	Actor54: aopln002.spr
 		Owner: Neutral
 		Location: 46,23
-	Actor55: aoclf000.spr
+	Actor55: aotre000.spr
 		Owner: Neutral
-		Location: 40,25
-	Actor56: aoclf001.spr
+		Location: 37,35
+	Actor56: aoroc001.spr
 		Owner: Neutral
-		Location: 44,25
-	Actor57: aoclf002.spr
+		Location: 38,34
+	Actor57: aorub000.spr
 		Owner: Neutral
-		Location: 48,25
-	Actor58: aoclf003.spr
+		Location: 39,35
+	Actor58: aotre005.spr
 		Owner: Neutral
-		Location: 52,23
-	Actor59: aoclf004.spr
-		Owner: Neutral
-		Location: 51,28
-	Actor60: aoclf005.spr
-		Owner: Neutral
-		Location: 55,25
+		Location: 46,18
 Rules: rules.yaml

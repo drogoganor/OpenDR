@@ -40,7 +40,6 @@ Players:
 		Faction: fguard
 		Color: F5D378
 		Enemies: Imperium
-
 Actors:
 	StartWaypoint: waypoint
 		Owner: Neutral
@@ -57,15 +56,18 @@ Actors:
 		Owner: AbandonedBase
 		Location: 6,64
 		Facing: 92
-	EnemyHQ: hq.cyborg
+	ImperiumHQ: hq.cyborg
 		Owner: Imperium
-		Location: 36,5
-	EnemyTrainingFacility: trainingfacility.cyborg
+		Location: 38,8
+	ImperiumTrainingFacility: trainingfacility.cyborg
 		Owner: Imperium
-		Location: 28,18
-	EnemyAssemblyPlant: assemblyplant.cyborg
+		Location: 27,21
+	ImperiumAssemblyPlant: assemblyplant.cyborg
 		Owner: Imperium
-		Location: 46,16
+		Location: 43,16
+	AttackWaypoint: waypoint
+		Owner: Neutral
+		Location: 15,63
 	Actor22: aotre000.spr
 		Owner: Neutral
 		Location: 55,49
@@ -656,4 +658,88 @@ Actors:
 		Owner: Imperium
 		Location: 31,41
 		Facing: 92
+	Actor253: aotre000.spr
+		Owner: Neutral
+		Location: 25,35
+	Actor254: aotre001.spr
+		Owner: Neutral
+		Location: 27,34
+	Actor255: aotre003.spr
+		Owner: Neutral
+		Location: 27,33
+	Actor263: aotre002.spr
+		Owner: Neutral
+		Location: 24,36
+	Actor266: aoroc000.spr
+		Owner: Neutral
+		Location: 26,35
+	Actor267: aotre005.spr
+		Owner: Neutral
+		Location: 19,26
+	Actor268: aotre002.spr
+		Owner: Neutral
+		Location: 18,26
+	Actor269: aoroc000.spr
+		Owner: Neutral
+		Location: 20,16
+	Actor270: aoroc003.spr
+		Owner: Neutral
+		Location: 22,15
+	Actor271: aorub000.spr
+		Owner: Neutral
+		Location: 21,17
+	Actor272: aotre004.spr
+		Owner: Neutral
+		Location: 18,16
+	Actor273: aotre000.spr
+		Owner: Neutral
+		Location: 29,11
+	Actor274: aotre003.spr
+		Owner: Neutral
+		Location: 28,12
+	Actor275: aotre005.spr
+		Owner: Neutral
+		Location: 27,12
+	Actor276: aotre000.spr
+		Owner: Neutral
+		Location: 44,4
+	Actor277: aotre001.spr
+		Owner: Neutral
+		Location: 48,3
+	Actor278: aotre003.spr
+		Owner: Neutral
+		Location: 46,2
+	Actor279: aotre005.spr
+		Owner: Neutral
+		Location: 47,4
+	Actor281: aoroc001.spr
+		Owner: Neutral
+		Location: 41,25
+	Actor280: aopln001.spr
+		Owner: Neutral
+		Location: 41,26
+	Actor282: aoroc003.spr
+		Owner: Neutral
+		Location: 20,24
+	Actor283: aoroc004.spr
+		Owner: Neutral
+		Location: 14,16
+	Actor284: aoroc002.spr
+		Owner: Neutral
+		Location: 7,21
+	Actor285: aoroc001.spr
+		Owner: Neutral
+		Location: 9,20
+	Actor286: aorub000.spr
+		Owner: Neutral
+		Location: 9,21
+	Actor287: aotre005.spr
+		Owner: Neutral
+		Location: 7,20
+	Actor288: aotre001.spr
+		Owner: Neutral
+		Location: 12,17
+	Actor289: aotre001.spr
+		Owner: Neutral
+		Location: 26,12
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml
