@@ -25,5 +25,4 @@ Player:
 		ExploredMapCheckboxLocked: False
 		ExploredMapCheckboxEnabled: False
 	PlayerResources:
-		DefaultCashLocked: True
-		DefaultCash: 5000
+		DefaultCash: 10000

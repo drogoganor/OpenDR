@@ -30,7 +30,7 @@
 		LandWhenIdle: false
 		AltitudeVelocity: 0c58
 		CanHover: True
-		CruisingCondition: cruising
+		#CruisingCondition: cruising
 		WaitDistanceFromResupplyBase: 4c0
 		TakeOffOnResupply: true
 		VTOL: true

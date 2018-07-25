@@ -17,13 +17,8 @@ Players:
 		Name: Creeps
 		NonCombatant: True
 		Faction: fguard
-	PlayerReference@Imperium:
-		Name: Imperium
-		Faction: imperium
-		Color: FE1100
-		Enemies: FreedomGuard, AbandonedBase
-	PlayerReference@FreedomGuard:
-		Name: FreedomGuard
+	PlayerReference@Freedom Guard:
+		Name: Freedom Guard
 		AllowBots: False
 		Playable: True
 		Required: True
@@ -34,12 +29,18 @@ Players:
 		LockSpawn: True
 		LockTeam: True
 		Enemies: Imperium
+	PlayerReference@Imperium:
+		Name: Imperium
+		Faction: imperium
+		Color: FE1100
+		Enemies: Freedom Guard, AbandonedBase
 	PlayerReference@AbandonedBase:
 		Name: AbandonedBase
 		NonCombatant: True
 		Faction: fguard
 		Color: F5D378
 		Enemies: Imperium
+
 Actors:
 	StartWaypoint: waypoint
 		Owner: Neutral
@@ -285,23 +286,23 @@ Actors:
 		Facing: 92
 		TurretFacing: 92
 	Actor101: spiderbike
-		Owner: FreedomGuard
+		Owner: Freedom Guard
 		Location: 51,64
 		Facing: 92
 	Actor102: spiderbike
-		Owner: FreedomGuard
+		Owner: Freedom Guard
 		Location: 53,66
 		Facing: 92
 	Actor103: spiderbike
-		Owner: FreedomGuard
+		Owner: Freedom Guard
 		Location: 53,64
 		Facing: 92
 	Actor104: spiderbike
-		Owner: FreedomGuard
+		Owner: Freedom Guard
 		Location: 52,65
 		Facing: 92
 	Actor99: sniper
-		Owner: FreedomGuard
+		Owner: Freedom Guard
 		Location: 48,65
 		Facing: 92
 	Actor105: bion
@@ -596,7 +597,7 @@ Actors:
 		Location: 17,58
 		Facing: 92
 	Actor247: medic
-		Owner: FreedomGuard
+		Owner: Freedom Guard
 		Location: 49,66
 		Facing: 92
 	Actor248: guardian

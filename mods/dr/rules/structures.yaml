@@ -112,8 +112,6 @@
 		Prerequisite: hq.shadowhand
 	Production:
 		Produces: Upgrade,Economy
-	PrimaryBuilding:
-		PrimaryCondition: primary
 	BaseBuilding:
 	RallyPoint:
 		Offset: 4,5
@@ -148,7 +146,7 @@
 	Armor:
 		Type: BuildingArmour
 	ProvidesRadar:
-		RequiresCondition: !jammed && !disabled
+		#RequiresCondition: !jammed && !disabled
 	GrantConditionOnPrerequisite@con1:
 		Prerequisites: upgrade.hq1
 		Condition: dec1
@@ -315,7 +313,6 @@ upgrade.phasing:
 		Type: Infantry
 		Group: Infantry
 		LowPowerSlowdown: 1
-		SpeedUp: True
 	ProductionBar:
 	ProvidesPrerequisite@barracks:
 		Prerequisite: barracks

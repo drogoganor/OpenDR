@@ -101,9 +101,9 @@ upgrade.assemblyplant1:
 	Buildable:
 		Prerequisites: ~disabled
 
-upgrade.phasing:
-	Buildable:
-		Prerequisites: ~disabled
+#upgrade.phasing:
+#	Buildable:
+#		Prerequisites: ~disabled
 
 # FG Buildings
 LaserTurret:

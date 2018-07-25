@@ -42,23 +42,19 @@
 	PaletteFromGimpOrJascFile@player:
 		Name: player
 		Filename: units.pal
-		ShadowIndex: 161
 	PaletteFromGimpOrJascFile@chrome:
 		Name: chrome
 		Filename: units.pal
-		ShadowIndex: 3
 		AllowModifiers: false
 	PaletteFromGimpOrJascFile@effect:
 		Name: effect
 		Filename: units.pal
-		ShadowIndex: 3
 	PaletteFromGimpOrJascFile@colorpicker:
 		Name: colorpicker
 		Filename: units.pal
 		AllowModifiers: false
 	ShroudPalette@shroud:
 		Name: shroud
-		Type: Shroud
 	ShroudPalette@fog:
 		Name: fog
 		Fog: true

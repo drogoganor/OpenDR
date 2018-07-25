@@ -111,7 +111,6 @@
 			SpringWater: 100
 			Taelon: 100
 	Locomotor@HOVERING:
-		Inherits: wheeled
 		Name: hovering
 		TerrainSpeeds:
 			Clear: 100
@@ -134,7 +133,6 @@
 			Water: 50
 	Locomotor@SHREDDER:
 		Name: shredder
-		Inherits: hovering
 		Crushes: infantry
 		TerrainSpeeds: # copy of hover
 			Clear: 100

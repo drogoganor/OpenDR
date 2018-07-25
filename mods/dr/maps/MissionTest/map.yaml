@@ -13,7 +13,7 @@ Players:
 		Faction: imperium
 		Color: FE1100
 		Allies: Imperium
-		Enemies: FreedomGuard
+		Enemies: Freedom Guard
 	PlayerReference@Freedom Guard:
 		Name: Freedom Guard
 		AllowBots: False
@@ -25,7 +25,7 @@ Players:
 		Color: 3A78FF
 		LockSpawn: True
 		LockTeam: True
-		Allies: FreedomGuard
+		Allies: Freedom Guard
 		Enemies: Imperium
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -364,24 +364,6 @@ Actors:
 	Actor113: aoclf005.spr
 		Owner: Neutral
 		Location: 16,17
-	Actor114: aoroc000.spr
-		Owner: Neutral
-		Location: 48,33
-	Actor115: aoroc001.spr
-		Owner: Neutral
-		Location: 51,33
-	Actor116: aoroc002.spr
-		Owner: Neutral
-		Location: 54,33
-	Actor117: aoroc003.spr
-		Owner: Neutral
-		Location: 58,33
-	Actor118: aoroc004.spr
-		Owner: Neutral
-		Location: 63,33
-	Actor119: aoroc005.spr
-		Owner: Neutral
-		Location: 61,37
 	Actor120: aoclf000.spr
 		Owner: Neutral
 		Location: 28,16
@@ -531,5 +513,124 @@ Actors:
 	Actor162: skybike
 		Owner: Freedom Guard
 		Location: 43,34
+		Facing: 92
+	Actor163: recondrone
+		Owner: Freedom Guard
+		Location: 47,35
+		Facing: 92
+	Actor164: rat
+		Owner: Freedom Guard
+		Location: 51,35
+		Facing: 92
+	Actor165: triplerailhovertank
+		Owner: Freedom Guard
+		Location: 54,36
+		Facing: 92
+		TurretFacing: 92
+	Actor166: scoutrunner
+		Owner: Freedom Guard
+		Location: 45,38
+		Facing: 92
+	Actor167: itt
+		Owner: Freedom Guard
+		Location: 48,37
+		Facing: 92
+	Actor168: plasmatank
+		Owner: Freedom Guard
+		Location: 55,38
+		Facing: 92
+		TurretFacing: 92
+	Actor169: shredder
+		Owner: Freedom Guard
+		Location: 58,37
+		Facing: 92
+	Actor170: tachiontank
+		Owner: Freedom Guard
+		Location: 51,30
+		Facing: 92
+	Actor172: shockwave
+		Owner: Freedom Guard
+		Location: 33,37
+		Facing: 92
+		TurretFacing: 92
+	Actor173: flakjack
+		Owner: Freedom Guard
+		Location: 36,38
+		Facing: 92
+	Actor174: amper
+		Owner: Freedom Guard
+		Location: 38,39
+		Facing: 92
+	Actor175: hostagetaker
+		Owner: Freedom Guard
+		Location: 34,35
+		Facing: 92
+	Actor176: exterminator
+		Owner: Freedom Guard
+		Location: 41,39
+		Facing: 92
+	Actor171: scarab
+		Owner: Freedom Guard
+		Location: 9,64
+		Facing: 92
+	Actor177: hellstormartillery
+		Owner: Freedom Guard
+		Location: 13,65
+		Facing: 92
+	Actor178: guardian
+		Owner: Imperium
+		Location: 19,6
+		Facing: 92
+	Actor179: guardian
+		Owner: Imperium
+		Location: 14,4
+		Facing: 92
+	Actor180: guardian
+		Owner: Imperium
+		Location: 12,7
+		Facing: 92
+	Actor181: guardian
+		Owner: Imperium
+		Location: 8,8
+		Facing: 92
+	Actor182: guardian
+		Owner: Imperium
+		Location: 5,7
+		Facing: 92
+	Actor183: guardian
+		Owner: Imperium
+		Location: 4,11
+		Facing: 92
+	Actor184: guardian
+		Owner: Imperium
+		Location: 9,13
+		Facing: 92
+	Actor185: bion
+		Owner: Imperium
+		Location: 18,8
+		Facing: 92
+	Actor186: bion
+		Owner: Imperium
+		Location: 10,5
+		Facing: 92
+	Actor187: bion
+		Owner: Imperium
+		Location: 10,9
+		Facing: 92
+	Actor188: bion
+		Owner: Imperium
+		Location: 6,11
+		Facing: 92
+	Actor189: sniper
+		Owner: Freedom Guard
+		Location: 29,24
+		Facing: 92
+	Actor190: watercontaminator
+		Owner: Freedom Guard
+		Location: 57,33
+		Facing: 92
+	Actor191: tankhunter
+		Owner: Freedom Guard
+		Location: 61,35
 		Facing: 92
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

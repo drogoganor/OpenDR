@@ -14,8 +14,6 @@
 		Range: 4c0
 	Mobile:
 		Speed: 96
-		Crushes: mine, crate
-		SharesCell: false
 		Locomotor: foot
 		TurnSpeed: 30
 	SelectionDecorations:
@@ -26,7 +24,6 @@
 		DecorationBounds: 19,22,-2,1
 	Targetable:
 		TargetTypes: Ground, Infantry, Disguise
-		RequiresCondition: !parachute
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:

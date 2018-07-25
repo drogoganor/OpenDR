@@ -20,7 +20,6 @@
 		Range: 4c0
 	Mobile:
 		Speed: 72
-		Crushes: mine, crate
 		Locomotor: wheeled
 		TurnSpeed: 10
 	SelectionDecorations:
@@ -363,7 +362,6 @@ PhaseTank:
 		Type: TankPlating
 	Armament:
 		Weapon: PhaseTankCannon
-phasing
 
 FlakJack:
 	Inherits: ^DrAnimatedVehicle

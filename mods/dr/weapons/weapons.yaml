@@ -373,7 +373,6 @@ LaserRifleOriginal:
 		Speed: 853
 		Image: eolaspr2.spr
 		Shadow: False
-		ValidTargets: Ground
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
 		Damage: 11
@@ -493,7 +492,6 @@ PlasmaRifle: # Bion
 		Speed: 725
 		Image: eoplspr0.spr
 		Shadow: False
-		ValidTargets: Air, Ground
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, Ground
 		Spread: 64
@@ -667,7 +665,6 @@ GroundToAirLaser:
 		Speed: 1707
 		Image: eoorbpr0.spr
 		Shadow: False
-		ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
 		Spread: 64
@@ -687,7 +684,6 @@ BkLaser:
 		Speed: 1707
 		Image: eomispr0.spr
 		Shadow: False
-		ValidTargets: Air, Ground
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, Ground
 		Spread: 80
