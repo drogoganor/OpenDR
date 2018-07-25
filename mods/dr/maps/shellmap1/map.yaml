@@ -1,19 +1,11 @@
 MapFormat: 11
-
 RequiresMod: dr
-
 Title: Shellmap
-
 Author: Dark Reign
-
 Tileset: BARREN
-
 MapSize: 94,58
-
 Bounds: 1,1,92,56
-
 Visibility: Lobby, Shellmap
-
 Categories: Map
 
 Players:
@@ -22,33 +14,6 @@ Players:
 		OwnsWorld: True
 		NonCombatant: True
 		Faction: fguard
-	PlayerReference@Creeps:
-		Name: Creeps
-		NonCombatant: True
-		Faction: fguard
-		Enemies: Freedom Guard, Imperium, Multi0, Multi1
-	PlayerReference@Freedom Guard:
-		Name: Freedom Guard
-		Faction: fguard
-		Color: 5D98F7
-		Allies: FreedomGuard
-		Enemies: Imperium
-	PlayerReference@Imperium:
-		Name: Imperium
-		Faction: imperium
-		Color: FE1100
-		Allies: Imperium
-		Enemies: FreedomGuard
-	PlayerReference@Multi0:
-		Name: Multi0
-		Playable: True
-		Faction: Random
-		Enemies: Creeps
-	PlayerReference@Multi1:
-		Name: Multi1
-		Playable: True
-		Faction: Random
-		Enemies: Creeps
 
 Actors:
 	Actor0: aotre000.spr
@@ -198,5 +163,31 @@ Actors:
 	Actor51: mpspawn
 		Owner: Neutral
 		Location: 79,10
-
+	Actor52: aopln000.spr
+		Owner: Neutral
+		Location: 44,23
+	Actor53: aopln001.spr
+		Owner: Neutral
+		Location: 45,23
+	Actor54: aopln002.spr
+		Owner: Neutral
+		Location: 46,23
+	Actor55: aoclf000.spr
+		Owner: Neutral
+		Location: 40,25
+	Actor56: aoclf001.spr
+		Owner: Neutral
+		Location: 44,25
+	Actor57: aoclf002.spr
+		Owner: Neutral
+		Location: 48,25
+	Actor58: aoclf003.spr
+		Owner: Neutral
+		Location: 52,23
+	Actor59: aoclf004.spr
+		Owner: Neutral
+		Location: 51,28
+	Actor60: aoclf005.spr
+		Owner: Neutral
+		Location: 55,25
 Rules: rules.yaml
