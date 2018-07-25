@@ -328,8 +328,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				Color = namedColorMapping[color]
 			};
 
-			var neutral = new[] { "Neutral" };
-
 			// Overwrite default player definitions if needed
 			if (!mapPlayers.Players.ContainsKey(section))
 				mapPlayers.Players.Add(section, pr);
