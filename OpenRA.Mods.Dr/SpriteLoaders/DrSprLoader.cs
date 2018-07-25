@@ -194,8 +194,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				s.Position = header.OffSections + 16 * sect;
 				int firstanim = s.ReadInt32();
 				int lastanim = s.ReadInt32();
-				int dummy = s.ReadInt32();
-				dummy = s.ReadInt32();
+				s.ReadInt32();
+				s.ReadInt32();
 
 				int bmp_szx = header.Szx * header.Nrots;
 				int bmp_szy = header.Szy * (lastanim - firstanim + 1);

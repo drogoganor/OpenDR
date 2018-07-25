@@ -140,8 +140,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				}
 
 				// What's after the tiles? Water/Taelon?
-				int dummy = stream.ReadInt32(); // Always one
-				dummy = stream.ReadInt32(); // Always 256
+				stream.ReadInt32(); // Always one
+				stream.ReadInt32(); // Always 256
 				int length = stream.ReadInt32(); // Byte length of remaining data
 
 				byte1Hash = new HashSet<byte>();
