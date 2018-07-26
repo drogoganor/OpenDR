@@ -1459,6 +1459,67 @@ TemporalRiftCreator:
 		Palette: shadow
 		Sequence: shadow
 
+# SmallSHHorizontalBridge
+SmallSHHorizontalBridge:
+	Inherits: ^DrGenericBuilding
+	RenderSprites:
+		Image: tcsbh1l0.spr
+	Inherits@shape: ^4x4Shape
+	Building:
+		Footprint: ==== ____ ____ ====
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+		TerrainTypes: Clear,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase, HillSlope1, HillSlope2, Cliff1, Cliff2, Cliff3, Cliff4, Water
+	Buildable:
+		Prerequisites: rig
+		BuildPaletteOrder: 90
+		BuildDuration: 7
+	Valued:
+		Cost: 600
+	Power:
+		Amount: 0
+	Armor:
+		Type: BuildingArmour
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
+	Tooltip:
+		Name: Horizontal Bridge
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# SmallSHVerticalBridge
+SmallSHVerticalBridge:
+	Inherits: SmallSHHorizontalBridge
+	Building:
+		Footprint: =__= =__= =__= =__=
+	Tooltip:
+		Name: Vertical Bridge
+	RenderSprites:
+		Image: tcsbv1l0.spr
+
+# SmallSHCentreBridge
+SmallSHCentreBridge:
+	Inherits: SmallSHHorizontalBridge
+	Building:
+		Footprint: =__= ____ ____ =__=
+	Tooltip:
+		Name: Center Bridge
+	RenderSprites:
+		Image: tcsbc1l0.spr
+
 # Civilian stuff now
 
 SmallWallLeft:
@@ -1477,23 +1538,18 @@ SmallWallLeft:
 		Name: Small Wall
 	Armor:
 		Type: BuildingArmour
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 SmallWallRight:
-	Inherits: ^CivBuilding
-	Inherits@shape: ^3x3Shape
+	Inherits: SmallWallLeft
 	Building:
 		Footprint: xx= xxx =xx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 72,72,0,0
-		DecorationBounds: 72,72,0,0
 	RenderSprites:
 		Image: tcswl1l0.spr
-	Tooltip:
-		Name: Small Wall
-	Armor:
-		Type: BuildingArmour
 
 BigWallLeft:
 	Inherits: ^CivBuilding
@@ -1511,6 +1567,9 @@ BigWallLeft:
 		Name: Big Wall
 	Armor:
 		Type: BuildingArmour
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
 
 BigWallRight:
 	Inherits: BigWallLeft
@@ -1520,22 +1579,20 @@ BigWallRight:
 		LocalCenterOffset: 0,0,0
 	RenderSprites:
 		Image: tcbwm1l0.spr
-	Tooltip:
-		Name: Big Wall
 
 # Freedom Guard Treaty Hall
 FreedomGuardTreatyHall:
 	Inherits: ^CivBuilding
 	RenderSprites:
 		Image: totyh1l0.spr
-	Inherits@shape: ^4x3Shape
+	Inherits@shape: ^4x4Shape
 	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
+		Footprint: _xxx xxxx xxxx ===_
+		Dimensions: 4,4
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
 	Tooltip:
 		Name: Freedom Guard Treaty Hall
 	Health:
@@ -2268,96 +2325,6 @@ CivilianVerticalBridge:
 		Palette: shadow
 		Sequence: shadow
 
-
-# SmallSHHorizontalBridge
-SmallSHHorizontalBridge:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tcsbh1l0.spr
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Bridge
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# SmallSHVerticalBridge
-SmallSHVerticalBridge:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tcsbv1l0.spr
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Bridge
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# SmallSHCentreBridge
-SmallSHCentreBridge:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tcsbc1l0.spr
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Bridge
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
 
 # Dirt Bridge
 DirtBridge:
