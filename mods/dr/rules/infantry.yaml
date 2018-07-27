@@ -120,6 +120,35 @@ RowdyCivilian:
 	Armament@PRIMARY:
 		Weapon: LaserRifle
 
+ColonelMartel: # Campaign
+	Inherits: Civilian
+	RenderSprites:
+		Image: uocvmst0.spr
+	Tooltip:
+		Name: Colonel Martel
+	Health:
+		HP: 500
+
+JebRadec: # Campaign
+	Inherits: RowdyCivilian
+	RenderSprites:
+		Image: uorcmst0.spr
+	Tooltip:
+		Name: Jeb Radec
+	Health:
+		HP: 500
+	Armament@PRIMARY:
+		Weapon: LaserRifle
+
+Karoch: # Campaign
+	Inherits: Medic
+	RenderSprites:
+		Image: uocspst0.spr
+	Tooltip:
+		Name: Karoch
+	Health:
+		HP: 500
+
 Raider:
 	Inherits: ^DrSoldier
 	RenderSprites:

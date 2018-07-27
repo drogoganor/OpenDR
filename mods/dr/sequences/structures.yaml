@@ -1,7 +1,4 @@
 
-
-# Buildings
-
 # Taelon Power Generator
 ncpow1l0.spr:
 	Defaults:
@@ -9,14 +6,6 @@ ncpow1l0.spr:
 		Offset: -8, -6
 	idle:
 		Start: 1
-		#Combine:
-		#	ncpow1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bcpowsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 0, 0
 	make:
 		Start: 1
 	build:
@@ -36,9 +25,9 @@ ncpow1l0.spr:
 	top: tcpow1l0.spr
 		Start: 1
 	top2: tcpow1l0.spr
-		Start: 1
+		Start: 3
 		Length: 5
-		Tick: 100
+		Tick: 800
 	shadow: bcpowsh0.spr
 		Start: 1
 		Offset: 4, -7
@@ -55,14 +44,6 @@ nclnc1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
-		#Combine:
-		#	nclnc1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bclncsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: -1, 1
 	make:
 		Start: 1
 	build:
@@ -94,33 +75,41 @@ nfhqt1l0.spr:
 		Offset: -6, -12
 	idle:
 		Start: 1
-		#Combine:
-		#	nfhqt1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bfhqtsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 15, 1
 	make:
 		Start: 1
 	build:
 		Start: 1
 		Length: 1
 	damaged-idle:
-		Start: 1
+		Start: 2
 	damaged-build:
 		Start: 1
 		Length: 1
 	dead:
-		Start: 1
+		Start: 2
 		Tick: 1
 	underlay: barren|nfhqt1l0.spr
 		ZOffset: -8192
 		Start: 1
+	up2underlay: barren|nfhqt2l0.spr
+		ZOffset: -8192
+		Start: 1
+	up3underlay: barren|nfhqt3l0.spr
+		ZOffset: -8192
+		Start: 1
 	top: tfhqt1l0.spr
 		Start: 1
+	up2top: tfhqt2l0.spr
+		Start: 1
+	up3top: tfhqt3l0.spr
+		Start: 1
 	shadow: bfhqtsh0.spr
+		Start: 1
+		Offset: 8, -11
+	up2shadow: bfhqtsh1.spr
+		Start: 1
+		Offset: 8, -11
+	up3shadow: bfhqtsh2.spr
 		Start: 1
 		Offset: 8, -11
 	icon: bfhqtmn0.spr
@@ -155,14 +144,6 @@ nfutf1l0.spr:
 		Offset: 0, -2
 	idle:
 		Start: 1
-		#Combine:
-		#	nfutf1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bfutfsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 11, -1
 	make:
 		Start: 1
 	build:
@@ -179,9 +160,24 @@ nfutf1l0.spr:
 	underlay: barren|nfutf1l0.spr
 		ZOffset: -8192
 		Start: 1
+	up2underlay: barren|nfutf2l0.spr
+		ZOffset: -8192
+		Start: 1
 	top: tfutf1l0.spr
 		Start: 1
+	up2base: nfutf2l0.spr
+		ZOffset: -8192
+		Start: 1
+	up2top: tfutf2l0.spr
+		Start: 1
+	animation: tfutf2l0.spr # flag
+		Start: 3
+		Length: 14
+		Tick: 150
 	shadow: bfutfsh0.spr
+		Start: 1
+		Offset: 12, -2
+	up2shadow: bfutfsh1.spr
 		Start: 1
 		Offset: 12, -2
 	icon: bfutfmn0.spr
@@ -202,14 +198,6 @@ nfvcy1l0.spr:
 		Offset: 12, 0
 	idle:
 		Start: 1
-		#Combine:
-		#	nfvcy1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bfvcysh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 0, 20
 	make:
 		Start: 1
 	build:
@@ -226,11 +214,23 @@ nfvcy1l0.spr:
 	underlay: barren|nfvcy1l0.spr
 		ZOffset: -8192
 		Start: 1
+	up2underlay: barren|nfvcy2l0.spr
+		ZOffset: -8192
+		Start: 1
 	top: tfvcy1l0.spr
 		Start: 1
+	up2top: tfvcy2l0.spr
+		Start: 1
+	animation: tfvcy2l0.spr # chimney
+		Start: 3
+		Length: 40
+		Tick: 150
 	shadow: bfvcysh0.spr
 		Start: 1
-		Offset: 16, 21
+		Offset: 12, -2
+	up2shadow: bfvcysh1.spr
+		Start: 1
+		Offset: 12, -2
 	icon: bfvcymn0.spr
 		Offset: 0, 0
 	fake-icon: bfvcymn0.spr
@@ -249,14 +249,6 @@ nihqt1l0.spr:
 		Offset: 6, -22
 	idle:
 		Start: 1
-		#Combine:
-		#	nihqt1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bihqtsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 24, 11
 	make:
 		Start: 1
 	build:
@@ -273,9 +265,25 @@ nihqt1l0.spr:
 	underlay: barren|nihqt1l0.spr
 		ZOffset: -8192
 		Start: 1
+	up2underlay: barren|nihqt2l0.spr
+		ZOffset: -8192
+		Start: 1
+	up3underlay: barren|nihqt3l0.spr
+		ZOffset: -8192
+		Start: 1
 	top: tihqt1l0.spr
 		Start: 1
+	up2top: tihqt2l0.spr
+		Start: 1
+	up3top: tihqt3l0.spr
+		Start: 1
 	shadow: bihqtsh0.spr
+		Start: 1
+		Offset: 30, -10
+	up2shadow: bihqtsh1.spr
+		Start: 1
+		Offset: 30, -10
+	up3shadow: bihqtsh2.spr
 		Start: 1
 		Offset: 30, -10
 	icon: bihqtmn0.spr
@@ -302,14 +310,6 @@ niutf1l0.spr:
 		Offset: 10, 6
 	idle:
 		Start: 1
-		#Combine:
-		#	niutf1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	biutfsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 12, 0
 	make:
 		Start: 0
 	build:
@@ -326,13 +326,24 @@ niutf1l0.spr:
 	underlay: barren|niutf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top: niutf1l0.spr
+	up2underlay: barren|niutf2l0.spr
+		ZOffset: -8192
 		Start: 1
-	top2: tiutf1l0.spr
-		Start: 0
-	top3: tiutf1l0.spr
+	top: tiutf1l0.spr
 		Start: 1
+	up2base: niutf2l0.spr
+		ZOffset: -8192
+		Start: 1
+	up2top: tiutf2l0.spr
+		Start: 1
+	animation: tiutf2l0.spr # flashing light
+		Start: 3
+		Length: 5
+		Tick: 500
 	shadow: biutfsh0.spr
+		Start: 1
+		Offset: 22, 6
+	up2shadow: biutfsh1.spr
 		Start: 1
 		Offset: 22, 6
 	icon: biutfmn0.spr
@@ -352,14 +363,6 @@ nivcy1l0.spr:
 		AddExtension: False
 	idle:
 		Start: 1
-		#Combine:
-		#	nivcy1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bivcysh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 10, 11 # 9 10 also acceptable
 	make:
 		Start: 0
 	build:
@@ -376,13 +379,20 @@ nivcy1l0.spr:
 	underlay: barren|nivcy1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top: nivcy1l0.spr
+	up2underlay: barren|nivcy2l0.spr
+		ZOffset: -8192
 		Start: 1
-	top2: tivcy1l0.spr
-		Start: 0
-	top3: tivcy1l0.spr
+	top: tivcy1l0.spr
+		Start: 1
+	up2base: nivcy2l0.spr
+		ZOffset: -8192
+		Start: 1
+	up2top: tivcy2l0.spr
 		Start: 1
 	shadow: bivcysh0.spr
+		Start: 1
+		Offset: 11, 12
+	up2shadow: bivcysh1.spr
 		Start: 1
 		Offset: 11, 12
 	icon: bivcymn0.spr
@@ -1231,7 +1241,8 @@ tcbwm1l0.spr:
 		Start: 0
 		Offset: 0, 1
 	icon: bcbwlmn0.spr
-	fake-icon: bcbwlmn0
+	fake-icon: bcbwlmn0.spr
+
 # Freedom Guard Treaty Hall
 totyh1l0.spr:
 	Defaults:

@@ -55,7 +55,7 @@
 		Palette: player
 		Sequences: water1
 		MaxDensity: 120000
-		ValuePerUnit: 80
+		ValuePerUnit: 60
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true
 	ResourceType@taelon:
@@ -67,7 +67,7 @@
 		Palette: player
 		Sequences: taelon1
 		MaxDensity: 120000
-		ValuePerUnit: 80
+		ValuePerUnit: 60
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true
 	Locomotor@FOOT:

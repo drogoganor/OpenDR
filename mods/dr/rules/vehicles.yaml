@@ -181,8 +181,8 @@ Freighter:
 		Capacity: 10
 		PipCount: 5
 		Resources: SpringWater,Taelon
-		BaleLoadDelay: 50
-		BaleUnloadDelay: 25
+		BaleLoadDelay: 35
+		BaleUnloadDelay: 20
 		SearchFromProcRadius: 30
 		SearchFromOrderRadius: 11
 	-Armament:
@@ -217,8 +217,8 @@ HoverFreighter:
 		Capacity: 10
 		PipCount: 5
 		Resources: SpringWater,Taelon
-		BaleLoadDelay: 50
-		BaleUnloadDelay: 25
+		BaleLoadDelay: 35
+		BaleUnloadDelay: 20
 		SearchFromProcRadius: 30
 		SearchFromOrderRadius: 11
 

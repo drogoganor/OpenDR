@@ -26,7 +26,7 @@ namespace OpenRA.Mods.Dr.FileFormats
 		readonly string[] acceptableEntries =
 			new[]
 			{
-				"SetStartLocation", "AddThingAt", "PutUnitAt", "SetTeam", "SetTeamSide", "SetDefaultTerrain", "AddBuildingAt",
+				"SetStartLocation", "AddThingAt", "PutUnitAt", "SetTeam", "SetTeamSide", "SetAlliance", "SetDefaultTerrain", "AddBuildingAt",
 				"SetDefaultTeam"
 			};
 		bool skipNextBlock = false;

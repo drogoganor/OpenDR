@@ -642,12 +642,16 @@ TrainingFacility.fguard:
 		HP: 750
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: underlay
+		Sequence: up2underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: top
+		Sequence: up2top
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
-		Sequence: shadow
+		Sequence: up2shadow
+	WithIdleOverlay@LAYER4:
+		Sequence: animation
+	WithIdleOverlay@LAYER5:
+		Sequence: up2base
 
 TrainingFacility.cyborg
 	Inherits: ^DrTrainingFacility
@@ -672,16 +676,16 @@ TrainingFacility.cyborg
 		HP: 900
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: underlay
+		Sequence: up2underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: top
+		Sequence: up2top
 	WithIdleOverlay@LAYER3:
-		Sequence: top2
-	WithIdleOverlay@LAYER4:
-		Sequence: top3
-	WithIdleOverlay@LAYER5:
 		Palette: shadow
-		Sequence: shadow
+		Sequence: up2shadow
+	WithIdleOverlay@LAYER4:
+		Sequence: animation
+	WithIdleOverlay@LAYER5:
+		Sequence: up2base
 
 AssemblyPlant.human:
 	Inherits: ^DrAssemblyPlant
@@ -698,12 +702,14 @@ AssemblyPlant.human:
 		HP: 1000
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: underlay
+		Sequence: up2underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: top
+		Sequence: up2top
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
-		Sequence: shadow
+		Sequence: up2shadow
+	WithIdleOverlay@LAYER4:
+		Sequence: animation
 
 AssemblyPlant.cyborg:
 	Inherits: ^DrAssemblyPlant
@@ -733,16 +739,14 @@ AssemblyPlant.cyborg:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: underlay
+		Sequence: up2underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: top
+		Sequence: up2top
 	WithIdleOverlay@LAYER3:
-		Sequence: top2
-	WithIdleOverlay@LAYER4:
-		Sequence: top3
-	WithIdleOverlay@LAYER5:
 		Palette: shadow
-		Sequence: shadow
+		Sequence: up2shadow
+	WithIdleOverlay@LAYER5:
+		Sequence: up2base
 
 ^SmallTurret:
 	Inherits: ^Defense
@@ -782,8 +786,8 @@ AssemblyPlant.cyborg:
 LaserTurret:
 	Inherits: ^SmallTurret
 	RenderSprites:
-		Image: barren|nfgdt1l0.spr
-		Palette: terrain # Manually set to barren here along with Laser Turret.
+		Image: barren|nfgdt1l0.spr # Manually set to barren here along with Imperium repair pad and Imp AA.
+		Palette: terrain 
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Tooltip:
 		Name: Laser Turret
@@ -1466,7 +1470,7 @@ SmallSHHorizontalBridge:
 		Image: tcsbh1l0.spr
 	Inherits@shape: ^4x4Shape
 	Building:
-		Footprint: ==== ____ ____ ====
+		Footprint: x=== ____ ____ ===x
 		Dimensions: 4,4
 		LocalCenterOffset: 0,0,0
 		TerrainTypes: Clear,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase, HillSlope1, HillSlope2, Cliff1, Cliff2, Cliff3, Cliff4, Water
@@ -1504,7 +1508,7 @@ SmallSHHorizontalBridge:
 SmallSHVerticalBridge:
 	Inherits: SmallSHHorizontalBridge
 	Building:
-		Footprint: =__= =__= =__= =__=
+		Footprint: x__= =__= =__= =__x
 	Tooltip:
 		Name: Vertical Bridge
 	RenderSprites:
@@ -1514,7 +1518,7 @@ SmallSHVerticalBridge:
 SmallSHCentreBridge:
 	Inherits: SmallSHHorizontalBridge
 	Building:
-		Footprint: =__= ____ ____ =__=
+		Footprint: x__= ____ ____ =__x
 	Tooltip:
 		Name: Center Bridge
 	RenderSprites:
@@ -1522,7 +1526,7 @@ SmallSHCentreBridge:
 
 # Civilian stuff now
 
-SmallWallLeft:
+SmallWall2:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^3x3Shape
 	Building:
@@ -1542,8 +1546,8 @@ SmallWallLeft:
 		Palette: shadow
 		Sequence: shadow
 
-SmallWallRight:
-	Inherits: SmallWallLeft
+SmallWall1:
+	Inherits: SmallWall2
 	Building:
 		Footprint: xx= xxx =xx
 		Dimensions: 3,3
@@ -1551,7 +1555,7 @@ SmallWallRight:
 	RenderSprites:
 		Image: tcswl1l0.spr
 
-BigWallLeft:
+LargeWall1:
 	Inherits: ^CivBuilding
 	Inherits@shape: ^3x3Shape
 	Building:
@@ -1571,8 +1575,8 @@ BigWallLeft:
 		Palette: shadow
 		Sequence: shadow
 
-BigWallRight:
-	Inherits: BigWallLeft
+LargeWall2:
+	Inherits: LargeWall1
 	Building:
 		Footprint: =xx xxx xx=
 		Dimensions: 3,3

@@ -306,3 +306,49 @@ aospc000.spr:
 		AddExtension: False
 	idle:
 		Length: *
+
+# Water rocks
+aowtr000.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aowtr001.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aowtr002.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+# Wrecks
+aowrk000.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aowrk001.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+aowrk002.spr:
+	Defaults:
+		AddExtension: False
+	idle:
+		Length: *
+
+# contaminated water
+eowcocr0.spr:
+	Defaults:
+		AddExtension: False
+		Offset: 0,0
+	idle:
+		Length: 1

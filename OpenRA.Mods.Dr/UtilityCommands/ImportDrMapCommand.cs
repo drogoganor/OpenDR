@@ -24,49 +24,23 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		string IUtilityCommand.Name { get { return "--import-dr-map"; } }
 		bool IUtilityCommand.ValidateArguments(string[] args) { return ValidateArguments(args); }
 
-		[Desc("FILENAME", "Convert a legacy Dark Reign  map to the OpenRA format.")]
+		[Desc("FILENAME", "Convert a Dark Reign map to the OpenRA format.")]
 		void IUtilityCommand.Run(Utility utility, string[] args) { Run(utility, args); }
 
 		public ModData ModData;
 		public Map Map;
 		public List<string> Players = new List<string>();
 		public MapPlayers MapPlayers;
+		private int numMultiStarts = 0;
 
 		private static string[] knownUnknownThings = new string[]
 		{
-			"wreck1", // aowrk000
-			"wreck2",
-			"wreck3",
-			"water1", // aowtr00
-			"water2",
-			"water3",
-			"brdh", // Civilian bridge overlay
-			"brdv", // Same deal
 		};
 
 		private static string[] knownUnknownBuildings = new string[]
 		{
-			"cp", // Civilian factory
-			"cc", // Civilian Commercial
-			"civsub", // Civilian SubTransit
-			"chf", // Civilian hydro farm
-			"cgf", // Civilian Grain Farm
-			"cf1", // Civilian Farmhouse
-			"civshl", // Civilian Public Shelter
-			"cr", // Civilian Rural
-			"ce", // Civilian Entertainment Facility
-			"civtcn", // Civilian Transit Centre
-			"CivilianBridge", // nobrd1l0
-			"CivilianVerticalBridge",
 			"impmn", // Taelon resource
 			"impww", // Water resource
-			"SmallWall1",
-			"SmallWall2",
-			"LargeWall1",
-			"LargeWall2",
-			"impwr", // Imperium water research
-			"SmallHorizontalBridge",
-			"SmallVerticalBridge",
 			"fh1_decoy",
 			"ih1_decoy",
 			"fu1_decoy",
@@ -83,13 +57,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		private static string[] knownUnknownUnits = new string[]
 		{
-			"Prisoner",
-			"JebRadec",
-			"RowdyMaleCivilian",
-			"FGundergtunnel",
-			"Karoch", // a medic
-			"IMPSuicideZombie", // Hostage taker output
-			"ColonelMartel",
 		};
 
 		static Dictionary<string, string> thingNames = new Dictionary<string, string>
@@ -132,6 +99,15 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "hugecrater4", "aoctr007.spr" },
 			{ "hugecrater5", "aoctr008.spr" },
 			{ "hugecrater6", "aoctr009.spr" },
+			{ "water1", "aowtr000.spr" },
+			{ "water2", "aowtr001.spr" },
+			{ "water3", "aowtr002.spr" },
+			{ "brdh", "DirtBridge" },
+			{ "brdv", "DirtBridge" }, // Allow it to face the other way
+			{ "wreck1", "aowrk000.spr" },
+			{ "wreck2", "aowrk001.spr" },
+			{ "wreck3", "aowrk002.spr" },
+			{ "watercrater", "eowcocr0.spr" },
 		};
 
 		static Dictionary<string, string> unitNames = new Dictionary<string, string>
@@ -187,6 +163,24 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "IMPContaminator", "WaterContaminator" },
 			{ "CIVHoverTransporter", "DessicatorTransport" },
 			{ "CivWheelTransporter", "CivWheelTransporter" },
+			{ "RowdyMaleCivilian", "RowdyCivilian" },
+			{ "Prisoner", "Civilian" },
+			{ "FGundergtunnel", "PhaseRunner" },
+			{ "ColonelMartel", "ColonelMartel" },
+			{ "JebRadec", "JebRadec" },
+			{ "Karoch", "Karoch" },
+			{ "IMPSuicideZombie", "Martyr" }, // Hostage taker output
+			{ "TVTOL", "Cyclone" }, // Togran cyclone
+			{ "TSkyFortress", "SkyFortress" },
+			{ "TPlasmaTank", "PlasmaTank" },
+			{ "TShredder", "Shredder" },
+			{ "TMechanic", "Mechanic" },
+			{ "TMediumTank", "SkirmishTank" },
+			{ "TMedic", "Medic" },
+			{ "TFireSupportMarine", "Bion" },
+			{ "TMercenary", "Mercenary" },
+			{ "TTankHunterTank", "TankHunter" },
+			{ "TConstructionCrew", "ConstructionRig" }
 		};
 
 		private static Dictionary<string, string> buildingNames = new Dictionary<string, string>
@@ -232,6 +226,34 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "rp", "RendezvousPoint" },
 			{ "impmr", "ImperiumMedicalResearch" },
 			{ "imphr", "ImperiumHoverResearch" },
+			{ "impwr", "ImperiumWaterResearch" },
+			{ "cp", "CivilianFactory" },
+			{ "cc", "CivilianCommercial" },
+			{ "civsub", "CivilianSubTransit" },
+			{ "chf", "CivilianHydroFarm" },
+			{ "cgf", "CivilianGrainFarm" },
+			{ "cf1", "CivilianFarmhouse" },
+			{ "civshl", "CivilianPublicShelter" },
+			{ "cr", "CivilianRural" },
+			{ "ce", "CivilianEntertainmentFacility" },
+			{ "civtcn", "CivilianTransitCentre" },
+			{ "CivilianBridge", "CivilianBridge" },
+			{ "CivilianVerticalBridge", "CivilianVerticalBridge" },
+			{ "SmallWall1", "SmallWall1" },
+			{ "SmallWall2", "SmallWall2" },
+			{ "LargeWall1", "LargeWall1" },
+			{ "LargeWall2", "LargeWall2" },
+			{ "SmallHorizontalBridge", "SmallSHHorizontalBridge" },
+			{ "SmallVerticalBridge", "SmallSHVerticalBridge" },
+			{ "tfgpp", "Power" }, // Togran
+			{ "tfg", "LaserTurret" },
+			{ "tfa", "HeavyRailTurret" },
+			{ "tfglp", "WaterLaunchPad" },
+			{ "tfgre", "Repair.human" },
+			{ "tfgca", "CameraTower" },
+			{ "tfs", "AntiAirTurret.human" },
+			{ "tih1", "HQ.cyborg" },
+			{ "timpre", "Repair.cyborg" }
 		};
 
 		protected bool ValidateArguments(string[] args)
@@ -388,8 +410,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							continue;
 
 						string type = scnSection.Values[1];
-						int x = Convert.ToInt32(scnSection.Values[2]) - 1; // Manual adjustment while our offsets are stuffed
-						int y = Convert.ToInt32(scnSection.Values[3]) - 1; // Manual adjustment while our offsets are stuffed
+						int x = Convert.ToInt32(scnSection.Values[2]);
+						int y = Convert.ToInt32(scnSection.Values[3]);
 
 						var matchingActor = string.Empty;
 
@@ -398,7 +420,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						else if (!knownUnknownThings.Contains(type))
 							throw new Exception("Unknown thing name: " + type);
 
-						if (x != 0 && y != 0 && !string.IsNullOrEmpty(matchingActor))
+						if (x >= 0 && y >= 0 && !string.IsNullOrEmpty(matchingActor))
 						{
 							var ar = new ActorReference(matchingActor)
 							{
@@ -416,24 +438,18 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 					{
 						if (scnSection.Name == "SetDefaultTeam")
 						{
-							currentTeam = Convert.ToInt32(scnSection.ValuesStr) + 2; // To skip creeps
+							currentTeam = Convert.ToInt32(scnSection.ValuesStr);
 							continue;
 						}
 
 						if (scnSection.Name != "PutUnitAt")
 							continue;
 
-						if (currentTeam > 3)
-						{
-							// throw new Exception("More than two teams on this map.");
-
-							// Just add to creeps
-							currentTeam = 1;
-						}
+						int playerIndex = GetMatchingPlayerIndex(currentTeam); // to skip creeps and neutral if necessary
 
 						string type = scnSection.Values[1];
-						int x = Convert.ToInt32(scnSection.Values[2]) - 1; // Manual adjustment while our offsets are stuffed
-						int y = Convert.ToInt32(scnSection.Values[3]) - 1; // Manual adjustment while our offsets are stuffed
+						int x = Convert.ToInt32(scnSection.Values[2]);
+						int y = Convert.ToInt32(scnSection.Values[3]);
 
 						var matchingActor = string.Empty;
 
@@ -442,12 +458,12 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						else if (!knownUnknownUnits.Contains(type))
 							throw new Exception("Unknown unit name: " + type);
 
-						if (x != 0 && y != 0 && !string.IsNullOrEmpty(matchingActor))
+						if (x >= 0 && y >= 0 && !string.IsNullOrEmpty(matchingActor))
 						{
 							var ar = new ActorReference(matchingActor)
 							{
 								new LocationInit(new CPos(x + 1, y + 1)),
-								new OwnerInit(MapPlayers.Players.Keys.ToArray()[currentTeam])
+								new OwnerInit(MapPlayers.Players.Values.First(p => p.Team == playerIndex).Name)
 							};
 
 							Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
@@ -487,20 +503,14 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 					{
 						if (scnSection.Name == "SetDefaultTeam")
 						{
-							currentTeam = Convert.ToInt32(scnSection.ValuesStr) + 2; // To skip creeps
+							currentTeam = Convert.ToInt32(scnSection.ValuesStr);
 							continue;
 						}
 
 						if (scnSection.Name != "AddBuildingAt")
 							continue;
 
-						if (currentTeam > 3)
-						{
-							// throw new Exception("More than two teams on this map.");
-
-							// Just add to creeps
-							currentTeam = 1;
-						}
+						int playerIndex = GetMatchingPlayerIndex(currentTeam); // to skip creeps and neutral if necessary
 
 						string type = scnSection.Values[1];
 						int x = Convert.ToInt32(scnSection.Values[2]);
@@ -513,17 +523,23 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						else if (!knownUnknownBuildings.Contains(type))
 							throw new Exception("Unknown building name: " + type);
 
-						if (x != 0 && y != 0 && !string.IsNullOrEmpty(matchingActor))
+						if (x >= 0 && y >= 0 && !string.IsNullOrEmpty(matchingActor))
 						{
 							var ar = new ActorReference(matchingActor)
 							{
 								new LocationInit(new CPos(x + 1, y + 1)),
-								new OwnerInit(MapPlayers.Players.Keys.ToArray()[currentTeam])
+								new OwnerInit(MapPlayers.Players.Values.First(p => p.Team == playerIndex).Name)
 							};
 
 							Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 						}
 					}
+				}
+
+				// Reset teams var
+				foreach (var playersValue in MapPlayers.Players.Values)
+				{
+					playersValue.Team = 0;
 				}
 
 				Map.PlayerDefinitions = MapPlayers.ToMiniYaml();
@@ -545,29 +561,30 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		}
 
 		// TODO: fix this -- will have bitrotted pretty badly.
-		static Dictionary<string, HSLColor> namedColorMapping = new Dictionary<string, HSLColor>()
+		protected Dictionary<string, HSLColor> namedColorMapping = new Dictionary<string, HSLColor>()
 		{
-			{ "gold", HSLColor.FromRGB(246, 214, 121) },
-			{ "blue", HSLColor.FromRGB(226, 230, 246) },
+			{ "blue", HSLColor.FromRGB(46, 92, 244) },
 			{ "red", HSLColor.FromRGB(255, 20, 0) },
-			{ "neutral", HSLColor.FromRGB(238, 238, 238) },
-			{ "orange", HSLColor.FromRGB(255, 230, 149) },
+			{ "green", HSLColor.FromRGB(160, 240, 140) },
 			{ "teal", HSLColor.FromRGB(93, 194, 165) },
 			{ "salmon", HSLColor.FromRGB(210, 153, 125) },
-			{ "green", HSLColor.FromRGB(160, 240, 140) },
-			{ "white", HSLColor.FromRGB(255, 255, 255) },
 			{ "black", HSLColor.FromRGB(80, 80, 80) },
+			{ "gold", HSLColor.FromRGB(246, 214, 121) },
+			{ "pink", HSLColor.FromRGB(232, 85, 212) },
+			{ "orange", HSLColor.FromRGB(255, 230, 149) },
+			{ "lime", HSLColor.FromRGB(0, 255, 0) },
 		};
 
-		public static void SetMapPlayersDefault(List<string> players, MapPlayers mapPlayers, string section = "Neutral", string faction = "fguard", string color = "white")
+		protected void SetNeutralPlayer(MapPlayers mapPlayers)
 		{
+			var section = "Neutral";
 			var pr = new PlayerReference
 			{
-				Name = "Neutral",
+				Name = section,
 				OwnsWorld = true,
 				NonCombatant = true,
-				Faction = faction,
-				Color = namedColorMapping[color]
+				Faction = "fguard",
+				Color = HSLColor.FromRGB(255, 255, 255)
 			};
 
 			// Overwrite default player definitions if needed
@@ -577,113 +594,43 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				mapPlayers.Players[section] = pr;
 		}
 
-		public static void SetMapPlayers(ScnFile file, List<string> players, MapPlayers mapPlayers)
+		protected virtual int GetMatchingPlayerIndex(int index)
 		{
-			var section = "Neutral";
-			var pr = new PlayerReference
+			if (index > numMultiStarts)
 			{
-				Name = section,
-				OwnsWorld = true,
-				NonCombatant = true,
-				Faction = "fguard",
-				Color = namedColorMapping["white"]
-			};
-
-			bool isMulti = false; // file.Entries.Count(x => x.Name == "SetStartLocation") > 1;
-
-			// Overwrite default player definitions if needed
-			if (!mapPlayers.Players.ContainsKey(section))
-				mapPlayers.Players.Add(section, pr);
-			else
-				mapPlayers.Players[section] = pr;
-
-			int i = 0;
-			if (isMulti)
-			{
-				foreach (var scnSection in file.Entries)
-				{
-					if (scnSection.Name != "SetStartLocation")
-						continue;
-
-					int x = Convert.ToInt32(scnSection.Values[0]);
-					int y = Convert.ToInt32(scnSection.Values[1]);
-					if (x != 0 && y != 0)
-					{
-						var multi = new PlayerReference
-						{
-							Name = "Multi" + i,
-							Playable = true,
-							Faction = "Random"
-						};
-
-						mapPlayers.Players.Add(multi.Name, multi);
-						i++;
-					}
-				}
+				// Just add to neutral
+				return 0;
 			}
-			else
+
+			return index + 2;
+		}
+
+		protected virtual void SetMapPlayers(ScnFile file, List<string> players, MapPlayers mapPlayers)
+		{
+			int i = 0;
+			foreach (var scnSection in file.Entries)
 			{
-				// Single player, examine sides
-				foreach (var scnSection in file.Entries)
+				if (scnSection.Name != "SetStartLocation")
+					continue;
+
+				int x = Convert.ToInt32(scnSection.Values[0]);
+				int y = Convert.ToInt32(scnSection.Values[1]);
+				if (x != 0 && y != 0)
 				{
-					if (scnSection.Name != "SetTeamSide")
-						continue;
-
-					if (i > 1) // Only allow two sides
-						break;
-
-					int sideIndex = Convert.ToInt32(scnSection.Values[0]);
-					PlayerReference newPlayer;
-
-					if (sideIndex == 0)
+					var multi = new PlayerReference
 					{
-						newPlayer = new PlayerReference
-						{
-							Name = "Freedom Guard",
-							Faction = "fguard",
-							Color = HSLColor.FromRGB(234, 189, 25),
-							Enemies = new[] { "Imperium" } // This will have a problem if we have Imp vs Imp or FG vs FG.
-						};
-					}
-					else
-					{
-						newPlayer = new PlayerReference
-						{
-							Name = "Imperium",
-							Faction = "imperium",
-							Color = HSLColor.FromRGB(124, 60, 234),
-							Enemies = new[] { "Freedom Guard" }
-						};
-					}
+						Name = "Multi" + i,
+						Team = i + 2,
+						Playable = true,
+						Faction = "Random"
+					};
 
-					if (i == 0)
-					{
-						// First is always playable faction
-						newPlayer.Playable = true;
-						newPlayer.AllowBots = false;
-						newPlayer.Required = true;
-						newPlayer.LockSpawn = true;
-						newPlayer.LockTeam = true;
-					}
-					else if (i == 1)
-					{
-						// Check we don't have the same faction name
-						if (mapPlayers.Players.ContainsKey(newPlayer.Name))
-						{
-							// Create a new name for this faction and alter enemies accordingly
-							var player = mapPlayers.Players.Values.ToArray()[2];
-							var newName = newPlayer.Name + " Foe";
-							newPlayer.Color = HSLColor.FromRGB(234, 32, 59); // Give it a red color
-							newPlayer.Name = newName;
-							newPlayer.Enemies = new[] { player.Name };
-							player.Enemies = new[] { newName };
-						}
-					}
-
-					mapPlayers.Players.Add(newPlayer.Name, newPlayer);
+					mapPlayers.Players.Add(multi.Name, multi);
 					i++;
 				}
 			}
+
+			numMultiStarts = i;
 		}
 	}
 }

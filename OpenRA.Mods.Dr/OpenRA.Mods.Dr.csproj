@@ -46,6 +46,7 @@
     <Compile Include="SpriteLoaders\DrTilLoader.cs" />
     <Compile Include="SpriteLoaders\DrSprLoader.cs" />
     <Compile Include="Traits\World\PaletteFromDrFile.cs" />
+    <Compile Include="UtilityCommands\ImportDrCampaignMapCommand.cs" />
     <Compile Include="UtilityCommands\ImportDrMapCommand.cs" />
     <Compile Include="Widgets\Logic\ProductionTabsWithRowsAndFooterLogic.cs" />
     <Compile Include="Widgets\ProductionTabsWithRowsAndFooterWidget.cs" />

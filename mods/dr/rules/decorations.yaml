@@ -262,3 +262,47 @@ aospc000.spr:
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
+
+# Water rock
+aowtr000.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+aowtr001.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+aowtr002.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+# Wreck
+aowrk000.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+aowrk001.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+aowrk002.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+
+eowcocr0.spr:
+	Inherits: ^DrMisc
+	Building:
+		Footprint: x
+		Dimensions: 1,1
