@@ -16,6 +16,7 @@ cd %ENGINE_DIRECTORY%
 
 call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/2drybed/2drybed.MAP"
 call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/2forest/2forest.MAP"
+call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/2foxhunt/2foxhunt.MAP"
 call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/2outback/2outback.MAP"
 call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/2sandtrp/2sandtrp.MAP"
 call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/2saturn/2saturn.MAP"
