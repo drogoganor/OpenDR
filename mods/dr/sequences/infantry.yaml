@@ -1,39 +1,37 @@
 
 # Generic human death
 humansplat:
-	die: splata.spr
+	die: splata
 		Start: 0
 		Length: 15
 		Tick: 100
-	die1: splata.spr
+	die1: splata
 		Start: 0
 		Length: 15
 		Tick: 100
-	die2: splatc.spr
+	die2: splatc
 		Start: 0
 		Length: 13
 		Tick: 100
 
 # Generic alien death
 aliensplat:
-	die: splatb.spr
+	die: splatb
 		Start: 0
 		Length: 15
 		Tick: 100
-	die1: splatb.spr
+	die1: splatb
 		Start: 0
 		Length: 15
 		Tick: 100
-	die2: splatd.spr
+	die2: splatd
 		Start: 0
 		Length: 12
 		Tick: 100
 
 # Civilian
-uocvmst0.spr:
+uocvmst0:
 	Inherits: humansplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 8
@@ -52,13 +50,11 @@ uocvmst0.spr:
 	stand:
 		Start: 176
 		Facings: 8
-	icon: uocvmmn0.spr
+	icon: uocvmmn0
 
 # Raider
-ufradst0.spr:
+ufradst0:
 	Inherits: humansplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 16
@@ -77,13 +73,11 @@ ufradst0.spr:
 	stand:
 		Start: 240
 		Facings: 16
-	icon: ufradmn0.spr
+	icon: ufradmn0
 
 # Mercenary
-ufmrcst0.spr:
+ufmrcst0:
 	Inherits: humansplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 16
@@ -107,13 +101,11 @@ ufmrcst0.spr:
 	stand:
 		Start: 288
 		Facings: 16
-	icon: ufmrcmn0.spr
+	icon: ufmrcmn0
 
 # Sniper
-ufsnpst0.spr:
+ufsnpst0:
 	Inherits: humansplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 24
@@ -132,13 +124,11 @@ ufsnpst0.spr:
 	stand:
 		Start: 480
 		Facings: 24
-	icon: ufsnpmn0.spr
+	icon: ufsnpmn0
 
 # Scout
-ufsctst0.spr:
+ufsctst0:
 	Inherits: humansplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 8
@@ -157,13 +147,11 @@ ufsctst0.spr:
 	stand:
 		Start: 152
 		Facings: 8
-	icon: ufsctmn0.spr
+	icon: ufsctmn0
 
 # Field Medic
-ufmedst0.spr:
+ufmedst0:
 	Inherits: humansplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 8
@@ -182,17 +170,11 @@ ufmedst0.spr:
 	stand:
 		Start: 176
 		Facings: 8
-	icon: ufmedmn0.spr
-
-#Saboteur
-ufsabmn0.spr:
-
+	icon: ufmedmn0
 
 # Mechanic
-ufmecst0.spr:
+ufmecst0:
 	Inherits: humansplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 8
@@ -214,14 +196,12 @@ ufmecst0.spr:
 	stand:
 		Start: 192
 		Facings: 8
-	icon: ufmecmn0.spr
-	icon-saboteur: ufsabmn0.spr
+	icon: ufmecmn0
+	icon-saboteur: ufsabmn0
 
 # Martyr
-ufmtrst0.spr:
+ufmtrst0:
 	Inherits: humansplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 8
@@ -240,13 +220,11 @@ ufmtrst0.spr:
 	stand:
 		Start: 202
 		Facings: 8
-	icon: ufmtrmn0.spr
+	icon: ufmtrmn0
 
 # Infiltrator
-ucinfst0.spr:
+ucinfst0:
 	Inherits: humansplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 8
@@ -260,15 +238,13 @@ ucinfst0.spr:
 	stand:
 		Start: 64
 		Facings: 8
-	icon: ucinfmn0.spr
+	icon: ucinfmn0
 
 # Imperium
 
 # Guardian
-uigrdst0.spr:
+uigrdst0:
 	Inherits: aliensplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 8
@@ -285,13 +261,11 @@ uigrdst0.spr:
 	stand:
 		Start: 64
 		Facings: 8
-	icon: uigrdmn0.spr
+	icon: uigrdmn0
 
 # Bion
-uibonst0.spr:
+uibonst0:
 	Inherits: aliensplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 8
@@ -315,13 +289,11 @@ uibonst0.spr:
 	stand:
 		Start: 200
 		Facings: 8
-	icon: uibonmn0.spr
+	icon: uibonmn0
 
 # Exterminator
-uiextst0.spr:
+uiextst0:
 	Inherits: aliensplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 16
@@ -336,13 +308,11 @@ uiextst0.spr:
 	stand:
 		Start: 0
 		Facings: 16
-	icon: uiextmn0.spr
+	icon: uiextmn0
 
 # Rowdy Civilian
-uorcmst0.spr:
+uorcmst0:
 	Inherits: humansplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 8
@@ -369,13 +339,11 @@ uorcmst0.spr:
 	stand:
 		Start: 184
 		Facings: 8
-	icon: uorcmmn0.spr
+	icon: uorcmmn0
 
 # Karoch
-uocspst0.spr:
+uocspst0:
 	Inherits: humansplat
-	Defaults:
-		AddExtension: False
 	run:
 		Start: 0
 		Facings: 8
@@ -387,4 +355,4 @@ uocspst0.spr:
 	stand:
 		Start: 0
 		Facings: 8
-	icon: uocspmn0.spr
+	icon: uocspmn0

@@ -2,7 +2,7 @@
 TrainingFacility.xenite:
 	Inherits: TrainingFacility.fguard
 	RenderSprites:
-		Image: nfnes1l0.spr
+		Image: nfnes1l0
 	Buildable:
 		Prerequisites: ~rig.xenite, hq.xenite
 
@@ -10,7 +10,7 @@ TrainingFacility.xenite:
 Matrix:
 	Inherits: ^DrGenericBuilding
 	RenderSprites:
-		Image: ninex1l0.spr
+		Image: ninex1l0
 	Tooltip:
 		Name: Matrix
 	Buildable:

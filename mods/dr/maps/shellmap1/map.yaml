@@ -14,88 +14,88 @@ Players:
 		NonCombatant: True
 		Faction: fguard
 Actors:
-	Actor0: aotre000.spr
+	Actor0: aotre000
 		Owner: Neutral
 		Location: 44,17
-	Actor1: aotre000.spr
+	Actor1: aotre000
 		Owner: Neutral
 		Location: 49,20
-	Actor2: aotre000.spr
+	Actor2: aotre000
 		Owner: Neutral
 		Location: 41,39
-	Actor3: aotre000.spr
+	Actor3: aotre000
 		Owner: Neutral
 		Location: 74,35
-	Actor4: aotre001.spr
+	Actor4: aotre001
 		Owner: Neutral
 		Location: 73,38
-	Actor5: aotre001.spr
+	Actor5: aotre001
 		Owner: Neutral
 		Location: 54,21
-	Actor6: aotre001.spr
+	Actor6: aotre001
 		Owner: Neutral
 		Location: 51,22
-	Actor7: aotre001.spr
+	Actor7: aotre001
 		Owner: Neutral
 		Location: 43,16
-	Actor8: aotre001.spr
+	Actor8: aotre001
 		Owner: Neutral
 		Location: 45,35
-	Actor9: aotre002.spr
+	Actor9: aotre002
 		Owner: Neutral
 		Location: 69,36
-	Actor10: aotre005.spr
+	Actor10: aotre005
 		Owner: Neutral
 		Location: 65,35
-	Actor11: aotre005.spr
+	Actor11: aotre005
 		Owner: Neutral
 		Location: 39,37
-	Actor12: aotre005.spr
+	Actor12: aotre005
 		Owner: Neutral
 		Location: 52,20
-	Actor13: aotre004.spr
+	Actor13: aotre004
 		Owner: Neutral
 		Location: 30,24
-	Actor14: aorub000.spr
+	Actor14: aorub000
 		Owner: Neutral
 		Location: 33,22
-	Actor15: aoroc000.spr
+	Actor15: aoroc000
 		Owner: Neutral
 		Location: 66,20
-	Actor16: aoroc002.spr
+	Actor16: aoroc002
 		Owner: Neutral
 		Location: 34,23
-	Actor17: aoroc003.spr
+	Actor17: aoroc003
 		Owner: Neutral
 		Location: 67,19
-	Actor18: aoroc004.spr
+	Actor18: aoroc004
 		Owner: Neutral
 		Location: 69,17
-	Actor19: aorub001.spr
+	Actor19: aorub001
 		Owner: Neutral
 		Location: 70,19
-	Actor23: aopln001.spr
+	Actor23: aopln001
 		Owner: Neutral
 		Location: 59,32
-	Actor24: aopln002.spr
+	Actor24: aopln002
 		Owner: Neutral
 		Location: 58,30
-	Actor25: aoclf002.spr
+	Actor25: aoclf002
 		Owner: Neutral
 		Location: 35,21
-	Actor46: aoroc001.spr
+	Actor46: aoroc001
 		Owner: Neutral
 		Location: 66,17
-	Actor45: aoroc002.spr
+	Actor45: aoroc002
 		Owner: Neutral
 		Location: 65,16
-	Actor47: aoroc005.spr
+	Actor47: aoroc005
 		Owner: Neutral
 		Location: 64,13
-	Actor48: aopln001.spr
+	Actor48: aopln001
 		Owner: Neutral
 		Location: 63,17
-	Actor49: aopln002.spr
+	Actor49: aopln002
 		Owner: Neutral
 		Location: 64,18
 	Actor50: mpspawn
@@ -104,25 +104,25 @@ Actors:
 	Actor51: mpspawn
 		Owner: Neutral
 		Location: 79,10
-	Actor52: aopln000.spr
+	Actor52: aopln000
 		Owner: Neutral
 		Location: 44,23
-	Actor53: aopln001.spr
+	Actor53: aopln001
 		Owner: Neutral
 		Location: 45,23
-	Actor54: aopln002.spr
+	Actor54: aopln002
 		Owner: Neutral
 		Location: 46,23
-	Actor55: aotre000.spr
+	Actor55: aotre000
 		Owner: Neutral
 		Location: 37,35
-	Actor56: aoroc001.spr
+	Actor56: aoroc001
 		Owner: Neutral
 		Location: 38,34
-	Actor57: aorub000.spr
+	Actor57: aorub000
 		Owner: Neutral
 		Location: 39,35
-	Actor58: aotre005.spr
+	Actor58: aotre005
 		Owner: Neutral
 		Location: 46,18
 Rules: rules.yaml

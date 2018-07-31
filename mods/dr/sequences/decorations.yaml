@@ -1,354 +1,309 @@
 
-aotre000.spr:
+aotre000:
 	Defaults:
-		AddExtension: False
 		Offset: -4,-19
 	idle:
 		Length: 1
-	shadow: aotre0sh.spr
+	shadow: aotre0sh
 		Offset: 21, 10
 
-aotre001.spr:
+aotre001:
 	Defaults:
-		AddExtension: False
 		Offset: 0,-10
 	idle:
 		Length: 1
-	shadow: aotre1sh.spr
+	shadow: aotre1sh
 		Offset: 15, 9
 
-aotre002.spr:
+aotre002:
 	Defaults:
-		AddExtension: False
 		Offset: -1,-14
 	idle:
 		Length: 1
-	shadow: aotre2sh.spr
+	shadow: aotre2sh
 		Offset: 19, 11
 
-aotre003.spr:
+aotre003:
 	Defaults:
-		AddExtension: False
 		Offset: 3,-15
 	idle:
 		Length: 1
-	shadow: aotre3sh.spr
+	shadow: aotre3sh
 		Offset: 23, 11
 
-aotre004.spr:
+aotre004:
 	Defaults:
-		AddExtension: False
 		Offset: 1,-10
 	idle:
 		Length: 1
-	shadow: aotre4sh.spr
+	shadow: aotre4sh
 		Offset: 10, 8
 
-aotre005.spr:
+aotre005:
 	Defaults:
-		AddExtension: False
 		Offset: 2,-9
 	idle:
 		Length: 1
-	shadow: aotre5sh.spr
+	shadow: aotre5sh
 		Offset: 13, 6
 
 # Plant
-aopln000.spr:
+aopln000:
 	Defaults:
-		AddExtension: False
 		Offset: -2,-4
 	idle:
 		Length: 1
-	shadow: aopln0sh.spr
+	shadow: aopln0sh
 		Offset: -4, -3
 
-aopln001.spr:
+aopln001:
 	Defaults:
-		AddExtension: False
 		Offset: 1,1
 	idle:
 		Length: 1
-	shadow: aopln1sh.spr
+	shadow: aopln1sh
 		Offset: 1, 1
 
-aopln002.spr:
+aopln002:
 	Defaults:
-		AddExtension: False
 		Offset: 4,2
 	idle:
 		Length: 1
-	shadow: aopln2sh.spr
+	shadow: aopln2sh
 		Offset: 6, 7
 
 # Rocks
-aoroc000.spr:
+aoroc000:
 	Defaults:
-		AddExtension: False
 		Offset: 0,0
 	idle:
 		Length: 1
-	shadow: aoroc0sh.spr
+	shadow: aoroc0sh
 		Offset: 5, 1
 
-aoroc001.spr:
+aoroc001:
 	Defaults:
-		AddExtension: False
 		Offset: 0,0
 	idle:
 		Length: 1
-	shadow: aoroc1sh.spr
+	shadow: aoroc1sh
 		Offset: 6, 3
 
-aoroc002.spr:
+aoroc002:
 	Defaults:
-		AddExtension: False
 		Offset: 0,0
 	idle:
 		Length: 1
-	shadow: aoroc2sh.spr
+	shadow: aoroc2sh
 		Offset: 8, 7
 
-aoroc003.spr:
+aoroc003:
 	Defaults:
-		AddExtension: False
 		Offset: 0,2
 	idle:
 		Length: 1
-	shadow: aoroc3sh.spr
+	shadow: aoroc3sh
 		Offset: 7, 20
 
-aoroc004.spr:
+aoroc004:
 	Defaults:
-		AddExtension: False
 		Offset: 2,2
 	idle:
 		Length: 1
-	shadow: aoroc4sh.spr
+	shadow: aoroc4sh
 		Offset: 10, 25
 
-aoroc005.spr:
+aoroc005:
 	Defaults:
-		AddExtension: False
 		Offset: 1,0
 	idle:
 		Length: 1
-	shadow: aoroc5sh.spr
+	shadow: aoroc5sh
 		Offset: 12, 35
 
 # Cliff
-aoclf000.spr:
+aoclf000:
 	Defaults:
-		AddExtension: False
 		Offset: -3, -2
 	idle:
 		Length: 1
-	shadow: aoclf0sh.spr
+	shadow: aoclf0sh
 		Offset: 9, 11
 
-aoclf001.spr:
+aoclf001:
 	Defaults:
-		AddExtension: False
 		Offset: -3, -1
 	idle:
 		Length: 1
-	shadow: aoclf1sh.spr
+	shadow: aoclf1sh
 		Offset: 12, 23
 
-aoclf002.spr:
+aoclf002:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: 1
-	shadow: aoclf2sh.spr
+	shadow: aoclf2sh
 		Offset: 12, 25
 
-aoclf003.spr:
+aoclf003:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: 1
-	shadow: aoclf3sh.spr
+	shadow: aoclf3sh
 		Offset: 13, 23
 
-aoclf004.spr:
+aoclf004:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: 1
-	shadow: aoclf4sh.spr
+	shadow: aoclf4sh
 		Offset: 11, 15
 
-aoclf005.spr:
+aoclf005:
 	Defaults:
-		AddExtension: False
 		Offset: 0, 0
 	idle:
 		Length: 1
-	shadow: aoclf5sh.spr
+	shadow: aoclf5sh
 		Offset: 8, 25
 
 # Rubble
-aorub000.spr:
+aorub000:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: 1
-	shadow: aorub0sh.spr
+	shadow: aorub0sh
 		Offset: 0, 0
 
-aorub001.spr:
+aorub001:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: 1
-	shadow: aorub1sh.spr
+	shadow: aorub1sh
 		Offset: 0, 0
 
-aorub002.spr:
+aorub002:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: 1
-	shadow: aorub2sh.spr
+	shadow: aorub2sh
 		Offset: 0, 0
 
 # Scoring
-aomsc000.spr:
+aomsc000:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: *
 
-aomsc001.spr:
+aomsc001:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: *
 
-aomsc002.spr:
+aomsc002:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: *
 
 # Crater
-aoctr000.spr:
+aoctr000:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: *
 
-aoctr001.spr:
+aoctr001:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: *
 
-aoctr002.spr:
+aoctr002:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: *
 
-aoctr003.spr:
+aoctr003:
 	Defaults:
-		AddExtension: False
 		Offset: 0,4
 	idle:
 		Length: *
 
-aoctr004.spr:
+aoctr004:
 	Defaults:
-		AddExtension: False
 		Offset: 0,-2
 	idle:
 		Length: *
 
-aoctr005.spr:
+aoctr005:
 	Defaults:
-		AddExtension: False
 		Offset: 0,-2
 	idle:
 		Length: *
 
-aoctr006.spr:
+aoctr006:
 	Defaults:
-		AddExtension: False
 		Offset: 0,-2
 	idle:
 		Length: *
 
-aoctr007.spr:
+aoctr007:
 	Defaults:
-		AddExtension: False
 		Offset: 0,-2
 	idle:
 		Length: *
 
-aoctr008.spr:
+aoctr008:
 	Defaults:
-		AddExtension: False
 		Offset: 0,-2
 	idle:
 		Length: *
 
-aoctr009.spr:
+aoctr009:
 	Defaults:
-		AddExtension: False
 		Offset: 0,-2
 	idle:
 		Length: *
 
 # Crashed space ship
-aospc000.spr:
+aospc000:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: *
 
 # Water rocks
-aowtr000.spr:
+aowtr000:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: *
 
-aowtr001.spr:
+aowtr001:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: *
 
-aowtr002.spr:
+aowtr002:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: *
 
 # Wrecks
-aowrk000.spr:
+aowrk000:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: *
 
-aowrk001.spr:
+aowrk001:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: *
 
-aowrk002.spr:
+aowrk002:
 	Defaults:
-		AddExtension: False
 	idle:
 		Length: *
 
 # contaminated water
-eowcocr0.spr:
+eowcocr0:
 	Defaults:
-		AddExtension: False
 		Offset: 0,0
 	idle:
 		Length: 1

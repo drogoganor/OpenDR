@@ -15,6 +15,7 @@ drorig: Dark Reign (Disc, English)
 			^Content/dr/JUNGLE/JUNGLE.TIL: INSTALL/DATA/DARK/GRAPHICS/JUNGLE/JUNGLE.TIL
 			^Content/dr/JUNGLE/JUNGLE.PAL: INSTALL/DATA/DARK/GRAPHICS/JUNGLE/JUNGLE.PAL
 			^Content/dr/JUNGLE/SPRITES.FTG: INSTALL/DATA/DARK/GRAPHICS/JUNGLE/SPRITES.FTG
+			^Content/dr/mouse.crs: INSTALL/DATA/DARK/GRAPHICS/INTFACE/MOUSE.CRS
 drexp: Dark Reign Expansion (Disc, English)
 	IDFiles:
 		Install/Data/Dark/graphics/spriteEx.ftg: 429667e2fa8c6fa7da727cc64c9d5512ae2c832d
@@ -28,3 +29,4 @@ drexp: Dark Reign Expansion (Disc, English)
 			^Content/dr/BARREN/spriteEx.ftg: INSTALL/DATA/DARK/GRAPHICS/BARREN/spriteEx.ftg
 			^Content/dr/JUNGLE/spriteEx.ftg: INSTALL/DATA/DARK/GRAPHICS/JUNGLE/spriteEx.ftg
 			^Content/dr/SNOW/spriteEx.ftg: INSTALL/DATA/DARK/GRAPHICS/SNOW/spriteEx.ftg
+			^Content/dr/mouse.crs: INSTALL/DATA/DARK/GRAPHICS/INTFACE/MOUSE.CRS

@@ -2,7 +2,7 @@
 Gant:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: ufganst0.spr
+		Image: ufganst0
 	Tooltip:
 		Name: Gant
 	Buildable:
@@ -37,7 +37,7 @@ Gant:
 Ranger:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: uftrast0.spr
+		Image: uftrast0
 	Tooltip:
 		Name: Ranger
 	Buildable:
@@ -61,7 +61,7 @@ Ranger:
 PowerSpiker:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: unpwcst0.spr
+		Image: unpwcst0
 	Tooltip:
 		Name: Power Spiker
 	Buildable:
@@ -85,7 +85,7 @@ PowerSpiker:
 Grendel:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: ufgrest0.spr
+		Image: ufgrest0
 	Tooltip:
 		Name: Grendel
 	Buildable:
@@ -109,7 +109,7 @@ Grendel:
 GrendelRider:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: ufridst0.spr
+		Image: ufridst0
 	Tooltip:
 		Name: Grendel Rider
 	Buildable:
@@ -135,7 +135,7 @@ GrendelRider:
 Reaper:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: uireast0.spr
+		Image: uireast0
 	Tooltip:
 		Name: Reaper
 	Buildable:

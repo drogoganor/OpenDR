@@ -10,3 +10,7 @@ World:
 		ValuePerUnit: 0
 	LuaScript:
 		Scripts: script.lua
+	#GlobalLightingPaletteEffect:
+	#	Red: 0.8
+	#	Green: 0.7
+	#	Ambient: 0.575

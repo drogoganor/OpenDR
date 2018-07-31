@@ -2,7 +2,7 @@
 Avenger:
 	Inherits: ^DrPlane
 	RenderSprites:
-		Image: ufomkst0.spr
+		Image: ufomkst0
 	Tooltip:
 		Name: Hades Bomber
 	Buildable:
@@ -30,7 +30,7 @@ Avenger:
 HadesBomber:
 	Inherits: ^DrPlane
 	RenderSprites:
-		Image: uiarbst0.spr
+		Image: uiarbst0
 	Tooltip:
 		Name: Hades Bomber
 	Buildable:

@@ -1,7 +1,5 @@
 # Construction Rig
-ucfcnst0.spr:
-	Defaults:
-		AddExtension: False
+ucfcnst0:
 	run:
 		Start: 0
 		Facings: 8
@@ -13,12 +11,10 @@ ucfcnst0.spr:
 	idle:
 		Start: 48
 		Facings: 8
-	icon: ucfcnmn0.spr
+	icon: ucfcnmn0
 
 # Freighter
-ucfrgst0.spr:
-	Defaults:
-		AddExtension: False
+ucfrgst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -49,12 +45,10 @@ ucfrgst0.spr:
 		Facings: 16
 		Length: 15
 		Tick: 100
-	icon: ucfrgmn0.spr
+	icon: ucfrgmn0
 
 # Hover Freighter
-uchfrst0.spr:
-	Defaults:
-		AddExtension: False
+uchfrst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -79,12 +73,10 @@ uchfrst0.spr:
 		Facings: 1
 		Length: 16
 		Tick: 100
-	icon: uchfrmn0.spr
+	icon: uchfrmn0
 
 # Spider Bike
-ufspbst0.spr:
-	Defaults:
-		AddExtension: False
+ufspbst0:
 	idle:
 		Start: 64
 		Facings: 16
@@ -101,12 +93,10 @@ ufspbst0.spr:
 	stand:
 		Start: 64
 		Facings: 16
-	icon: ufspbmn0.spr
+	icon: ufspbmn0
 
 # Rapid Armored Transport
-ufratst0.spr:
-	Defaults:
-		AddExtension: False
+ufratst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -122,12 +112,10 @@ ufratst0.spr:
 		Facings: 16
 		Length: 3
 		Tick: 100
-	icon: ufratmn0.spr
+	icon: ufratmn0
 
 # Skirmish Tank
-ufsktst0.spr:
-	Defaults:
-		AddExtension: False
+ufsktst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -148,16 +136,13 @@ ufsktst0.spr:
 		Facings: 16
 		Length: 3
 		Tick: 100
-	turret: ufsktac0.spr
+	turret: ufsktac0
 		Start: 0
 		Facings: 16
-		AddExtension: False
-	icon: ufsktmn0.spr
+	icon: ufsktmn0
 
 # Tank Hunter
-ufthnst0.spr:
-	Defaults:
-		AddExtension: False
+ufthnst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -178,12 +163,10 @@ ufthnst0.spr:
 		Facings: 16
 		Length: 3
 		Tick: 100
-	icon: ufthnmn0.spr
+	icon: ufthnmn0
 
 # Phase Tank
-ufphtst0.spr:
-	Defaults:
-		AddExtension: False
+ufphtst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -202,12 +185,10 @@ ufphtst0.spr:
 	idle:
 		Start: 0
 		Facings: 16
-	icon: ufphtmn0.spr
+	icon: ufphtmn0
 
 # Flak Jack
-ufflkst0.spr:
-	Defaults:
-		AddExtension: False
+ufflkst0:
 	run:
 		Start: 0
 		Facings: 8
@@ -228,12 +209,10 @@ ufflkst0.spr:
 		Facings: 8
 		Length: 8
 		Tick: 100
-	icon: ufflkmn0.spr
+	icon: ufflkmn0
 
 # Triple Rail Hover Tank
-uftrtst0.spr:
-	Defaults:
-		AddExtension: False
+uftrtst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -246,15 +225,13 @@ uftrtst0.spr:
 	idle:
 		Start: 0
 		Facings: 16
-	turret: uftrtac0.spr
+	turret: uftrtac0
 		Start: 0
 		Facings: 16
-	icon: uftrtmn0.spr
+	icon: uftrtmn0
 
 # Hellstorm Artillery
-uffarst0.spr:
-	Defaults:
-		AddExtension: False
+uffarst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -275,12 +252,10 @@ uffarst0.spr:
 		Facings: 16
 		Length: 3
 		Tick: 100
-	icon: uffarmn0.spr
+	icon: uffarmn0
 
 # Sky Bike
-ufskbst0.spr:
-	Defaults:
-		AddExtension: False
+ufskbst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -293,12 +268,10 @@ ufskbst0.spr:
 	idle:
 		Start: 0
 		Facings: 16
-	icon: ufskbmn0.spr
+	icon: ufskbmn0
 
 # Outrider
-ufoutst0.spr:
-	Defaults:
-		AddExtension: False
+ufoutst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -311,12 +284,10 @@ ufoutst0.spr:
 	idle:
 		Start: 0
 		Facings: 16
-	icon: ufoutmn0.spr
+	icon: ufoutmn0
 
 # Shock Wave
-ufswvst0.spr:
-	Defaults:
-		AddExtension: False
+ufswvst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -337,15 +308,13 @@ ufswvst0.spr:
 		Facings: 16
 		Length: 3
 		Tick: 100
-	turret: ufswvac0.spr
+	turret: ufswvac0
 		Start: 0
 		Facings: 16
-	icon: ufswvmn0.spr
+	icon: ufswvmn0
 
 # Water Contaminator
-ucwcost0.spr:
-	Defaults:
-		AddExtension: False
+ucwcost0:
 	run:
 		Start: 0
 		Facings: 16
@@ -366,12 +335,10 @@ ucwcost0.spr:
 		Facings: 16
 		Length: 4
 		Tick: 100
-	icon: ucwcomn0.spr
+	icon: ucwcomn0
 
 # Phase Runner
-ufphrst0.spr:
-	Defaults:
-		AddExtension: False
+ufphrst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -392,13 +359,11 @@ ufphrst0.spr:
 		Facings: 16
 		Length: 3
 		Tick: 100
-	icon: ufphrmn0.spr
+	icon: ufphrmn0
 
 
 # Scout Runner
-uisttst0.spr:
-	Defaults:
-		AddExtension: False
+uisttst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -413,12 +378,10 @@ uisttst0.spr:
 	idle:
 		Start: 0
 		Facings: 16
-	icon: uisttmn0.spr
+	icon: uisttmn0
 
 # Invader Troop Transport
-uiittst0.spr:
-	Defaults:
-		AddExtension: False
+uiittst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -433,12 +396,10 @@ uiittst0.spr:
 		Facings: 16
 		Length: 1
 		Tick: 100
-	icon: uiittmn0.spr
+	icon: uiittmn0
 
 # Plasma Tank
-uipltst0.spr:
-	Defaults:
-		AddExtension: False
+uipltst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -451,20 +412,13 @@ uipltst0.spr:
 	idle:
 		Start: 0
 		Facings: 16
-	turret: uipltac0.spr
+	turret: uipltac0
 		Start: 0
 		Facings: 16
-	#shoot:
-	#	Start: 16
-	#	Facings: 16
-	#	Length: 3
-	#	Tick: 100
-	icon: uipltmn0.spr
+	icon: uipltmn0
 
 # Amper
-uiampst0.spr:
-	Defaults:
-		AddExtension: False
+uiampst0:
 	run:
 		Start: 0
 		Facings: 8
@@ -488,12 +442,10 @@ uiampst0.spr:
 	stand:
 		Start: 120
 		Facings: 8
-	icon: uiampmn0.spr
+	icon: uiampmn0
 
 # Mobile Air Defense
-uimadst0.spr:
-	Defaults:
-		AddExtension: False
+uimadst0:
 	idle:
 		Start: 0
 		Facings: 16
@@ -506,12 +458,10 @@ uimadst0.spr:
 	shoot:
 		Start: 0
 		Facings: 16
-	icon: uimadmn0.spr
+	icon: uimadmn0
 
 # Recon Drone
-uirdrst0.spr:
-	Defaults:
-		AddExtension: False
+uirdrst0:
 	idle:
 		Start: 0
 		Facings: 12
@@ -526,12 +476,10 @@ uirdrst0.spr:
 		Facings: 12
 		Length: 7
 		Tick: 100
-	icon: uirdrmn0.spr
+	icon: uirdrmn0
 
 # Shredder
-uishrst0.spr:
-	Defaults:
-		AddExtension: False
+uishrst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -552,12 +500,10 @@ uishrst0.spr:
 		Facings: 16
 		Length: 4
 		Tick: 100
-	icon: uishrmn0.spr
+	icon: uishrmn0
 
 # Hostage Taker
-uihosst0.spr:
-	Defaults:
-		AddExtension: False
+uihosst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -578,12 +524,10 @@ uihosst0.spr:
 		Facings: 16
 		Length: 3
 		Tick: 100
-	icon: uihosmn0.spr
+	icon: uihosmn0
 
 # Tachion Tank
-uitctst0.spr:
-	Defaults:
-		AddExtension: False
+uitctst0:
 	idle:
 		Start: 0
 		Facings: 16
@@ -596,12 +540,10 @@ uitctst0.spr:
 	shoot:
 		Start: 0
 		Facings: 16
-	icon: uitctmn0.spr
+	icon: uitctmn0
 
 # S.C.A.R.A.B. scarab
-uiiarst0.spr:
-	Defaults:
-		AddExtension: False
+uiiarst0:
 	idle:
 		Start: 0
 		Facings: 16
@@ -616,12 +558,10 @@ uiiarst0.spr:
 		Facings: 16
 		Length: 3
 		Tick: 100
-	icon: uiiarmn0.spr
+	icon: uiiarmn0
 
 # Cyclone
-uicycst0.spr:
-	Defaults:
-		AddExtension: False
+uicycst0:
 	idle:
 		Start: 0
 		Facings: 16
@@ -636,12 +576,10 @@ uicycst0.spr:
 		Facings: 16
 		Length: 1
 		Tick: 100
-	icon: uicycmn0.spr
+	icon: uicycmn0
 
 # Sky Fortress
-uiskyst0.spr:
-	Defaults:
-		AddExtension: False
+uiskyst0:
 	idle:
 		Start: 0
 		Facings: 8
@@ -656,12 +594,10 @@ uiskyst0.spr:
 		Facings: 8
 		Length: 3
 		Tick: 100
-	icon: uiskymn0.spr
+	icon: uiskymn0
 
 # Dessicator transport
-uohtrst0.spr:
-	Defaults:
-		AddExtension: False
+uohtrst0:
 	idle:
 		Start: 0
 		Facings: 16
@@ -674,12 +610,10 @@ uohtrst0.spr:
 	shoot:
 		Start: 0
 		Facings: 16
-	icon: uohtrmn0.spr
+	icon: uohtrmn0
 
 # Civ Troop Transport
-uowtrst0.spr:
-	Defaults:
-		AddExtension: False
+uowtrst0:
 	run:
 		Start: 0
 		Facings: 16
@@ -700,4 +634,4 @@ uowtrst0.spr:
 		Facings: 16
 		Length: 3
 		Tick: 100
-	icon: uowtrmn0.spr
+	icon: uowtrmn0

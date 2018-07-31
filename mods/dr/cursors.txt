@@ -1,0 +1,54 @@
+DR CURSORS
+
+1 1 Screwdriver
+2 1 Hand
+3 4 Paintbrush
+7 3 Vol Full
+10 4 Vol Lowering
+14 5 Vol empty with arrow pointing right
+19 9 Enter door
+28 4 Move unit
+32 8 Phase out
+40 10 Demolish
+50 7 Hosptial Flag
+57 5 Empower
+62 6 Target maybe?
+68 8 Harvest water or return
+76 8 Power
+84 6 Turn into tree blocked?
+90 6 Turn into tree
+96 8 Cash
+104 8 Three dots arrows right
+112 4 Move right blocked
+116 4 Move left blocked
+120 4 Move down blocked
+124 4 Move up blocked
+128 7 Move lower right
+135 7 Move lower left
+142 7 Move upper right
+149 7 Move upper left
+156 7 Move right
+163 7 Move left
+170 7 Move down
+177 7 Move up
+184 1 Weird W target
+185 9 Target with sparks on right
+194 7 Flag target (rally maybe)
+201 1 Grey Hand
+202 8 Select unit, blue, Spins around
+210 5 Seek Heal
+215 5 Seek Repair
+220 9 Repair gleam
+229 11 APC Exit??
+240 11 APC Enter ???
+251 8 Spin around
+259 4 Blocked, STOP
+263 8 SELECT UNIT!! 2
+271 8 ATTACK!!
+279 9 SELECT UNIT 3!!
+288 8 Power again
+296 8 Tri-arms target
+304 1 Red cursor, must be alt palette
+305 16 Animated spinning around cursor
+321 1 Idle black cursor
+322 1 NORMAL CURSOR

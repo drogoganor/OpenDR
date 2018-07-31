@@ -2,7 +2,7 @@
 RATmk2:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: ufrt2st0.spr
+		Image: ufrt2st0
 	Tooltip:
 		Name: Rapid Armored Transport Mk. 2
 	Voiced:
@@ -37,7 +37,7 @@ RATmk2:
 GeminiTank:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: uigemst1.spr
+		Image: uigemst1
 	Tooltip:
 		Name: Gemini Tank
 	Buildable:
@@ -72,7 +72,7 @@ GeminiTank:
 Shadowblade:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: uishrst1.spr
+		Image: uishrst1
 	Tooltip:
 		Name: Shadowblade
 	Buildable:
@@ -96,7 +96,7 @@ Shadowblade:
 Fury:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: uifurst0.spr
+		Image: uifurst0
 	Tooltip:
 		Name: Fury
 	Buildable:
@@ -131,7 +131,7 @@ Fury:
 EMPDevice:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: uiempst0.spr
+		Image: uiempst0
 	Tooltip:
 		Name: EMP Device
 	Buildable:
@@ -157,7 +157,7 @@ EMPDevice:
 RoadTerraformer:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: uiterst0.spr
+		Image: uiterst0
 	Tooltip:
 		Name: Road Terraformer
 	Buildable:
@@ -183,7 +183,7 @@ RoadTerraformer:
 MarshTerraformer:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: uiterst1.spr
+		Image: uiterst1
 	Tooltip:
 		Name: Marsh Terraformer
 	Buildable:

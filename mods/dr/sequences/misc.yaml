@@ -1,5 +1,7 @@
 
-overlay:
+overlay: overlay.shp
+	Defaults:
+		AddExtension: False
 	build-valid-barren:
 		Start: 0
 	build-valid-aust:
@@ -40,6 +42,8 @@ overlay:
 		Start: 1
 
 editor-overlay:
+	Defaults:
+		AddExtension: False
 	copy: overlay
 		Start: 0
 	paste: overlay
@@ -51,31 +55,34 @@ shroud:
 		Length: *
 
 resources:
-	Defaults:
-		AddExtension: False
-	water1: ncwel1l0.spr
+	water1: ncwel1l0
 		Length: *
-	taelon1: ncmin1l0.spr
+	taelon1: ncmin1l0
 		Length: *
 
 mpspawn:
 	idle: mpspawn.shp
+		AddExtension: False
 		Length: *
 
 waypoint:
 	idle: waypoint.shp
+		AddExtension: False
 		Length: *
 
 clock:
 	idle: clock.shp
+		AddExtension: False
 		Length: *
 
 moveflsh:
 	idle: cursortarget.shp
+		AddExtension: False
 		Length: *
 
 beacon:
 	Defaults:
+		AddExtension: False
 		ZOffset: 2535
 	arrow: mpspawn.shp
 		Length: *
@@ -96,60 +103,63 @@ explosion:
 	Defaults:
 		Length: *
 		ZOffset: 2047
-		AddExtension: False
-	eolasex0: eolasex0.spr
-	eolasex1: eolasex1.spr
-	eolasex2: eolasex2.spr
-	eochfex3: eochfex3.spr
-	eorgnex2: eorgnex2.spr # rail gun (merc)
-	eorgnex1: eorgnex1.spr # double rail gun (spider bike), sniper
-	eorgnex0: eorgnex0.spr # triple rail gun (hover tank)
-	eosktex0: eosktex0.spr # skirmish tank
-	eoblatr0: eoblatr0.spr # skirmish tank 2
-	eoblatr1: eoblatr1.spr # skirmish tank 3
-	eothnex0: eothnex0.spr # tank hunter
-	eofarex0: eofarex0.spr # hellstorm
-	eoiarex2: eoiarex2.spr # scarab explosion
-	eoiarex0: eoiarex0.spr # scarab explosion 2
-	eoskyex0: eoskyex0.spr # sky fortress explosion - seems to be the exact same as the projectile
-	eorfgex1: eorfgex1.spr # sky fortress explosion 2
-	eoncnex0: eoncnex0.spr # cyclone explosion
-	eoplsex0: eoplsex0.spr # bion
-	eoplsex1: eoplsex1.spr # exterminator?
-	eoplsex2: eoplsex2.spr # plasma tank
-	eoplsex3: eoplsex3.spr # plasma tank
-	eoplsex4: eoplsex4.spr # fortress cannon
-	ecexpsp1: ecexpsp1.spr # martyr
-	eoblatr0: eoblatr0.spr # mobile air defense MAD
-	eotacex0: eotacex0.spr # tachion tank
-	eorfgex0: eorfgex0.spr # exterminator
-	eosmosm0: eosmosm0.spr # sky bike
-	eosmosm2: eosmosm2.spr # sky bike 2
-	eooutex0: eooutex0.spr # outrider
-	eoexpsp1: eoexpsp1.spr # nuke
-	eopamex0: eopamex0.spr # amper explosion
-	eochfex0: eochfex0.spr # flak jack 1
-	eochfex1: eochfex1.spr # flak jack 1
-	eochfex2: eochfex2.spr # flak jack 1
-	ecexpmd0: ecexpmd0.spr # generic explosion 1
-	ecexpmd1: ecexpmd1.spr # generic explosion 2
+	eolasex0: eolasex0
+	eolasex1: eolasex1
+	eolasex2: eolasex2
+	eochfex3: eochfex3
+	eorgnex2: eorgnex2 # rail gun (merc)
+	eorgnex1: eorgnex1 # double rail gun (spider bike), sniper
+	eorgnex0: eorgnex0 # triple rail gun (hover tank)
+	eosktex0: eosktex0 # skirmish tank
+	eoblatr0: eoblatr0 # skirmish tank 2
+	eoblatr1: eoblatr1 # skirmish tank 3
+	eothnex0: eothnex0 # tank hunter
+	eofarex0: eofarex0 # hellstorm
+	eoiarex2: eoiarex2 # scarab explosion
+	eoiarex0: eoiarex0 # scarab explosion 2
+	eoskyex0: eoskyex0 # sky fortress explosion - seems to be the exact same as the projectile
+	eorfgex1: eorfgex1 # sky fortress explosion 2
+	eoncnex0: eoncnex0 # cyclone explosion
+	eoplsex0: eoplsex0 # bion
+	eoplsex1: eoplsex1 # exterminator?
+	eoplsex2: eoplsex2 # plasma tank
+	eoplsex3: eoplsex3 # plasma tank
+	eoplsex4: eoplsex4 # fortress cannon
+	ecexpsp1: ecexpsp1 # martyr
+	eoblatr0: eoblatr0 # mobile air defense MAD
+	eotacex0: eotacex0 # tachion tank
+	eorfgex0: eorfgex0 # exterminator
+	eosmosm0: eosmosm0 # sky bike
+	eosmosm2: eosmosm2 # sky bike 2
+	eooutex0: eooutex0 # outrider
+	eoexpsp1: eoexpsp1 # nuke
+	eopamex0: eopamex0 # amper explosion
+	eochfex0: eochfex0 # flak jack 1
+	eochfex1: eochfex1 # flak jack 1
+	eochfex2: eochfex2 # flak jack 1
+	ecexpmd0: ecexpmd0 # generic explosion 1
+	ecexpmd1: ecexpmd1 # generic explosion 2
 	
 
 allyrepair:
-	repair: repricon.spr
+	repair: repricon
 		Length: 8
-		Tick: 300
+		Tick: 30
 		ZOffset: 2047
 
 rallypoint:
 	flag: mpspawn.shp
+		AddExtension: False
 		Length: *
 		ZOffset: 2535
 	circles: mpspawn.shp
+		AddExtension: False
 		Length: *
 		ZOffset: 2047
 
 pips:
+	Defaults:
+		AddExtension: False
 	groups: pips.shp # TODO: Create 0-9 pips
 		Start: 3
 	pip-empty: pips.shp

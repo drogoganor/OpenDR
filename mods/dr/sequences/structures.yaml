@@ -1,8 +1,7 @@
 
 # Taelon Power Generator
-ncpow1l0.spr:
+ncpow1l0:
 	Defaults:
-		AddExtension: False
 		Offset: -8, -6
 	idle:
 		Start: 1
@@ -19,29 +18,27 @@ ncpow1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|ncpow1l0.spr
+	underlay: barren|ncpow1l0
 		ZOffset: -8192
 		Start: 1
-	top: tcpow1l0.spr
+	top: tcpow1l0
 		Start: 1
-	top2: tcpow1l0.spr
+	top2: tcpow1l0
 		Start: 3
 		Length: 5
 		Tick: 800
-	shadow: bcpowsh0.spr
+	shadow: bcpowsh0
 		Start: 1
 		Offset: 4, -7
-	icon: bcpowmn0.spr
+	icon: bcpowmn0
 		Offset: 0, 0
-	fake-icon: bcpowmn0.spr
+	fake-icon: bcpowmn0
 		Offset: 0, 0
 
 
 
 # Water Launch Pad
-nclnc1l0.spr:
-	Defaults:
-		AddExtension: False
+nclnc1l0:
 	idle:
 		Start: 1
 	make:
@@ -57,21 +54,20 @@ nclnc1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nclnc1l0.spr
+	underlay: barren|nclnc1l0
 		ZOffset: -8192
 		Start: 1
-	top: tclnc1l0.spr
+	top: tclnc1l0
 		Start: 1
-	shadow: bclncsh0.spr
+	shadow: bclncsh0
 		Start: 1
 		Offset: -1, 1
-	icon: bclncmn0.spr
-	fake-icon: bclncmn0.spr
+	icon: bclncmn0
+	fake-icon: bclncmn0
 
 # Freedom Guard HQ
-nfhqt1l0.spr:
+nfhqt1l0:
 	Defaults:
-		AddExtension: False
 		Offset: -6, -12
 	idle:
 		Start: 1
@@ -88,59 +84,52 @@ nfhqt1l0.spr:
 	dead:
 		Start: 2
 		Tick: 1
-	underlay: barren|nfhqt1l0.spr
+	underlay: barren|nfhqt1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: barren|nfhqt2l0.spr
+	up2underlay: barren|nfhqt2l0
 		ZOffset: -8192
 		Start: 1
-	up3underlay: barren|nfhqt3l0.spr
+	up3underlay: barren|nfhqt3l0
 		ZOffset: -8192
 		Start: 1
-	top: tfhqt1l0.spr
+	top: tfhqt1l0
 		Start: 1
-	up2top: tfhqt2l0.spr
+	up2top: tfhqt2l0
 		Start: 1
-	up3top: tfhqt3l0.spr
+	up3top: tfhqt3l0
 		Start: 1
-	shadow: bfhqtsh0.spr
-		Start: 1
-		Offset: 8, -11
-	up2shadow: bfhqtsh1.spr
+	shadow: bfhqtsh0
 		Start: 1
 		Offset: 8, -11
-	up3shadow: bfhqtsh2.spr
+	up2shadow: bfhqtsh1
 		Start: 1
 		Offset: 8, -11
-	icon: bfhqtmn0.spr
+	up3shadow: bfhqtsh2
+		Start: 1
+		Offset: 8, -11
+	icon: bfhqtmn0
 		Offset: 0, 0
-	fake-icon: bfhqtmn0.spr
+	fake-icon: bfhqtmn0
 		Offset: 0, 0
 
-bfhqtmn1.spr:
-	Defaults:
-		AddExtension: False
+bfhqtmn1:
 	icon:
 		Start: 0
 		
-bfhqtmn2.spr:
-	Defaults:
-		AddExtension: False
+bfhqtmn2:
 	icon:
 		Start: 0
 
 # Phasing facility upgrade icon
-bfphfmn1.spr:
-	Defaults:
-		AddExtension: False
+bfphfmn1:
 	icon:
 		Start: 0
 
 
 # Freedom Guard Training Facility
-nfutf1l0.spr:
+nfutf1l0:
 	Defaults:
-		AddExtension: False
 		Offset: 0, -2
 	idle:
 		Start: 1
@@ -157,44 +146,41 @@ nfutf1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nfutf1l0.spr
+	underlay: barren|nfutf1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: barren|nfutf2l0.spr
+	up2underlay: barren|nfutf2l0
 		ZOffset: -8192
 		Start: 1
-	top: tfutf1l0.spr
+	top: tfutf1l0
 		Start: 1
-	up2base: nfutf2l0.spr
+	up2base: nfutf2l0
 		ZOffset: -8192
 		Start: 1
-	up2top: tfutf2l0.spr
+	up2top: tfutf2l0
 		Start: 1
-	animation: tfutf2l0.spr # flag
+	animation: tfutf2l0 # flag
 		Start: 3
 		Length: 14
 		Tick: 150
-	shadow: bfutfsh0.spr
+	shadow: bfutfsh0
 		Start: 1
 		Offset: 12, -2
-	up2shadow: bfutfsh1.spr
+	up2shadow: bfutfsh1
 		Start: 1
 		Offset: 12, -2
-	icon: bfutfmn0.spr
+	icon: bfutfmn0
 		Offset: 0, 0
-	fake-icon: bfutfmn0.spr
+	fake-icon: bfutfmn0
 		Offset: 0, 0
 
-bfutfmn1.spr:
-	Defaults:
-		AddExtension: False
+bfutfmn1:
 	icon:
 		Start: 0
 
 # Freedom Guard Assembly Plant
-nfvcy1l0.spr:
+nfvcy1l0:
 	Defaults:
-		AddExtension: False
 		Offset: 12, 0
 	idle:
 		Start: 1
@@ -211,41 +197,38 @@ nfvcy1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nfvcy1l0.spr
+	underlay: barren|nfvcy1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: barren|nfvcy2l0.spr
+	up2underlay: barren|nfvcy2l0
 		ZOffset: -8192
 		Start: 1
-	top: tfvcy1l0.spr
+	top: tfvcy1l0
 		Start: 1
-	up2top: tfvcy2l0.spr
+	up2top: tfvcy2l0
 		Start: 1
-	animation: tfvcy2l0.spr # chimney
+	animation: tfvcy2l0 # chimney
 		Start: 3
 		Length: 40
 		Tick: 150
-	shadow: bfvcysh0.spr
+	shadow: bfvcysh0
 		Start: 1
 		Offset: 12, -2
-	up2shadow: bfvcysh1.spr
+	up2shadow: bfvcysh1
 		Start: 1
 		Offset: 12, -2
-	icon: bfvcymn0.spr
+	icon: bfvcymn0
 		Offset: 0, 0
-	fake-icon: bfvcymn0.spr
+	fake-icon: bfvcymn0
 		Offset: 0, 0
 
-bfvcymn1.spr:
-	Defaults:
-		AddExtension: False
+bfvcymn1:
 	icon:
 		Start: 0
 
 # Imperium HQ
-nihqt1l0.spr:
+nihqt1l0:
 	Defaults:
-		AddExtension: False
 		Offset: 6, -22
 	idle:
 		Start: 1
@@ -262,51 +245,46 @@ nihqt1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nihqt1l0.spr
+	underlay: barren|nihqt1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: barren|nihqt2l0.spr
+	up2underlay: barren|nihqt2l0
 		ZOffset: -8192
 		Start: 1
-	up3underlay: barren|nihqt3l0.spr
+	up3underlay: barren|nihqt3l0
 		ZOffset: -8192
 		Start: 1
-	top: tihqt1l0.spr
+	top: tihqt1l0
 		Start: 1
-	up2top: tihqt2l0.spr
+	up2top: tihqt2l0
 		Start: 1
-	up3top: tihqt3l0.spr
+	up3top: tihqt3l0
 		Start: 1
-	shadow: bihqtsh0.spr
-		Start: 1
-		Offset: 30, -10
-	up2shadow: bihqtsh1.spr
+	shadow: bihqtsh0
 		Start: 1
 		Offset: 30, -10
-	up3shadow: bihqtsh2.spr
+	up2shadow: bihqtsh1
 		Start: 1
 		Offset: 30, -10
-	icon: bihqtmn0.spr
+	up3shadow: bihqtsh2
+		Start: 1
+		Offset: 30, -10
+	icon: bihqtmn0
 		Offset: 0, 0
-	fake-icon: bihqtmn0.spr
+	fake-icon: bihqtmn0
 		Offset: 0, 0
 
-bihqtmn1.spr:
-	Defaults:
-		AddExtension: False
+bihqtmn1:
 	icon:
 		Start: 0
 		
-bihqtmn2.spr:
-	Defaults:
-		AddExtension: False
+bihqtmn2:
 	icon:
 		Start: 0
 
 # Imperium Training Facility
-niutf1l0.spr:
+niutf1l0:
 	Defaults:
-		AddExtension: False
 		Offset: 10, 6
 	idle:
 		Start: 1
@@ -323,44 +301,40 @@ niutf1l0.spr:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: barren|niutf1l0.spr
+	underlay: barren|niutf1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: barren|niutf2l0.spr
+	up2underlay: barren|niutf2l0
 		ZOffset: -8192
 		Start: 1
-	top: tiutf1l0.spr
+	top: tiutf1l0
 		Start: 1
-	up2base: niutf2l0.spr
+	up2base: niutf2l0
 		ZOffset: -8192
 		Start: 1
-	up2top: tiutf2l0.spr
+	up2top: tiutf2l0
 		Start: 1
-	animation: tiutf2l0.spr # flashing light
+	animation: tiutf2l0 # flashing light
 		Start: 3
 		Length: 5
 		Tick: 500
-	shadow: biutfsh0.spr
+	shadow: biutfsh0
 		Start: 1
 		Offset: 22, 6
-	up2shadow: biutfsh1.spr
+	up2shadow: biutfsh1
 		Start: 1
 		Offset: 22, 6
-	icon: biutfmn0.spr
+	icon: biutfmn0
 		Offset: 0, 0
-	fake-icon: biutfmn0.spr
+	fake-icon: biutfmn0
 		Offset: 0, 0
 
-biutfmn1.spr:
-	Defaults:
-		AddExtension: False
+biutfmn1:
 	icon:
 		Start: 0
 
 # Imperium Assembly Plant
-nivcy1l0.spr:
-	Defaults:
-		AddExtension: False
+nivcy1l0:
 	idle:
 		Start: 1
 	make:
@@ -376,38 +350,34 @@ nivcy1l0.spr:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: barren|nivcy1l0.spr
+	underlay: barren|nivcy1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: barren|nivcy2l0.spr
+	up2underlay: barren|nivcy2l0
 		ZOffset: -8192
 		Start: 1
-	top: tivcy1l0.spr
+	top: tivcy1l0
 		Start: 1
-	up2base: nivcy2l0.spr
+	up2base: nivcy2l0
 		ZOffset: -8192
 		Start: 1
-	up2top: tivcy2l0.spr
+	up2top: tivcy2l0
 		Start: 1
-	shadow: bivcysh0.spr
+	shadow: bivcysh0
 		Start: 1
 		Offset: 11, 12
-	up2shadow: bivcysh1.spr
+	up2shadow: bivcysh1
 		Start: 1
 		Offset: 11, 12
-	icon: bivcymn0.spr
-	fake-icon: bivcymn0.spr
+	icon: bivcymn0
+	fake-icon: bivcymn0
 
-bivcymn1.spr:
-	Defaults:
-		AddExtension: False
+bivcymn1:
 	icon:
 		Start: 0
 
 # FG Laser turret
-barren|nfgdt1l0.spr:
-	Defaults:
-		AddExtension: False
+barren|nfgdt1l0:
 	idle:
 		Start: 1
 	make:
@@ -420,30 +390,28 @@ barren|nfgdt1l0.spr:
 	damaged-build:
 		Start: 1
 		Length: 1
-	recoil: bfgdtsp0.spr
+	recoil: bfgdtsp0
 		Start: 0
 		Facings: 16
-	turret: bfgdtsp0.spr
+	turret: bfgdtsp0
 		Start: 0
 		Facings: 16
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nfgdt1l0.spr
+	underlay: nfgdt1l0
 		ZOffset: -8192
 		Start: 1
-	top: tfgdt1l0.spr
+	top: tfgdt1l0
 		Start: 1
-	shadow: bfgdtsh0.spr
+	shadow: bfgdtsh0
 		Start: 1
 		Offset: 0, -1
-	icon: bfgdtmn0.spr
-	fake-icon: bfgdtmn0.spr
+	icon: bfgdtmn0
+	fake-icon: bfgdtmn0
 
 # Imperium Plasma turret
-nigdt1l0.spr:
-	Defaults:
-		AddExtension: False
+nigdt1l0:
 	idle:
 		Start: 1
 		ZOffset: -128
@@ -457,29 +425,27 @@ nigdt1l0.spr:
 	damaged-build:
 		Start: 1
 		Length: 1
-	recoil: bigdtsp0.spr
+	recoil: bigdtsp0
 		Start: 0
 		Facings: 16
-	turret: bigdtsp0.spr
+	turret: bigdtsp0
 		Start: 0
 		Facings: 16
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nigdt1l0.spr
+	underlay: barren|nigdt1l0
 		Start: 1
-	top: tigdt1l0.spr
+	top: tigdt1l0
 		Start: 1
-	shadow: bigdtsh0.spr
+	shadow: bigdtsh0
 		Start: 1
 		Offset: 11, 2
-	icon: bigdtmn0.spr
-	fake-icon: bigdtmn0.spr
+	icon: bigdtmn0
+	fake-icon: bigdtmn0
 
 # FG Anti-air turret
-nfaar1l0.spr:
-	Defaults:
-		AddExtension: False
+nfaar1l0:
 	idle:
 		Start: 1
 	make:
@@ -492,30 +458,29 @@ nfaar1l0.spr:
 	damaged-build:
 		Start: 1
 		Length: 1
-	recoil: bfaarsp0.spr
+	recoil: bfaarsp0
 		Start: 0
 		Facings: 16
-	turret: bfaarsp0.spr
+	turret: bfaarsp0
 		Start: 0
 		Facings: 16
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nfaar1l0.spr
+	underlay: barren|nfaar1l0
 		ZOffset: -8192
 		Start: 1
-	top: tfaar1l0.spr
+	top: tfaar1l0
 		Start: 1
-	shadow: bfaarsh0.spr
+	shadow: bfaarsh0
 		Start: 1
 		Offset: 12, 2
-	icon: bfaarmn0.spr
-	fake-icon: bfaarmn0.spr
+	icon: bfaarmn0
+	fake-icon: bfaarmn0
 
 # Imperium  Anti-air turret
-niaar1l0.spr:
+niaar1l0:
 	Defaults:
-		AddExtension: False
 		Offset: -1, -14
 	idle:
 		Start: 1
@@ -529,32 +494,30 @@ niaar1l0.spr:
 	damaged-build:
 		Start: 1
 		Length: 1
-	recoil: biaarsp0.spr
+	recoil: biaarsp0
 		Start: 0
 		Length: 1
-	turret: biaarsp0.spr
+	turret: biaarsp0
 		Start: 0
 		Length: 1
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|niaar1l0.spr
+	underlay: barren|niaar1l0
 		ZOffset: -8192
 		Start: 1
-	top: tiaar1l0.spr
+	top: tiaar1l0
 		Start: 1
-	shadow: biaarsh0.spr
+	shadow: biaarsh0
 		Start: 1
 		Offset: -2, 0
-	icon: biaarmn0.spr
+	icon: biaarmn0
 		Offset: 0, 0
-	fake-icon: biaarmn0.spr
+	fake-icon: biaarmn0
 		Offset: 0, 0
 
 # FG Heavy rail
-nfagt1l0.spr:
-	Defaults:
-		AddExtension: False
+nfagt1l0:
 	idle:
 		Start: 1
 	make:
@@ -567,30 +530,28 @@ nfagt1l0.spr:
 	damaged-build:
 		Start: 1
 		Length: 1
-	recoil: bfagtsp0.spr
+	recoil: bfagtsp0
 		Start: 0
 		Facings: 16
-	turret: bfagtsp0.spr
+	turret: bfagtsp0
 		Start: 0
 		Facings: 16
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nfagt1l0.spr
+	underlay: barren|nfagt1l0
 		ZOffset: -8192
 		Start: 1
-	top: tfagt1l0.spr
+	top: tfagt1l0
 		Start: 1
-	shadow: bfagtsh0.spr
+	shadow: bfagtsh0
 		Start: 1
 		Offset: 13, 14
-	icon: bfagtmn0.spr
-	fake-icon: bfagtmn0.spr
+	icon: bfagtmn0
+	fake-icon: bfagtmn0
 
 # Imperium neutron accelerator
-niagt1l0.spr:
-	Defaults:
-		AddExtension: False
+niagt1l0:
 	idle:
 		Start: 1
 	make:
@@ -603,41 +564,32 @@ niagt1l0.spr:
 	damaged-build:
 		Start: 1
 		Length: 1
-	recoil: biagtsp0.spr
+	recoil: biagtsp0
 		Start: 0
 		Facings: 16
-	turret: biagtsp0.spr
+	turret: biagtsp0
 		Start: 0
 		Facings: 16
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|niagt1l0.spr
+	underlay: barren|niagt1l0
 		ZOffset: -8192
 		Start: 1
-	top: tiagt1l0.spr
+	top: tiagt1l0
 		Start: 1
-	shadow: biagtsh0.spr
+	shadow: biagtsh0
 		Start: 1
 		Offset: 12, 6
-	icon: biagtmn0.spr
-	fake-icon: biagtmn0.spr
+	icon: biagtmn0
+	fake-icon: biagtmn0
 
 # Camera tower
-nccam1l0.spr:
+nccam1l0:
 	Defaults:
-		AddExtension: False
 		Offset: 1, -12
 	idle:
 		Start: 1
-		#Combine:
-		#	nccam1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bccamsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 12, 12
 	make:
 		Start: 1
 	build:
@@ -651,34 +603,25 @@ nccam1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nccam1l0.spr
+	underlay: barren|nccam1l0
 		ZOffset: -8192
 		Start: 1
-	top: tccam1l0.spr
+	top: tccam1l0
 		Start: 1
-	shadow: bccamsh0.spr
+	shadow: bccamsh0
 		Start: 1
 		Offset: 13, 0
-	icon: bccammn0.spr
+	icon: bccammn0
 		Offset: 0, 0
-	fake-icon: bccammn0.spr
+	fake-icon: bccammn0
 		Offset: 0, 0
 
 # FG Field hospital
-nfhsp1l0.spr:
+nfhsp1l0:
 	Defaults:
-		AddExtension: False
 		Offset: -6, 0
 	idle:
 		Start: 1
-		#Combine:
-		#	nfhsp1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bfhspsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 0, 0
 	make:
 		Start: 1
 	build:
@@ -700,33 +643,23 @@ nfhsp1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nfhsp1l0.spr
+	underlay: barren|nfhsp1l0
 		ZOffset: -8192
 		Start: 1
-	top: tfhsp1l0.spr
+	top: tfhsp1l0
 		Start: 1
-	shadow: bfhspsh0.spr
+	shadow: bfhspsh0
 		Start: 1
 		Offset: -8, 0
-	icon: bfhspmn0.spr
+	icon: bfhspmn0
 		Offset: 0, 0
-	fake-icon: bfhspmn0.spr
+	fake-icon: bfhspmn0
 		Offset: 0, 0
 
 # Imperium field hospital
-nihsp1l0.spr:
-	Defaults:
-		AddExtension: False
+nihsp1l0:
 	idle:
 		Start: 1
-		#Combine:
-		#	nihsp1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bihspsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 1, 0
 	make:
 		Start: 1
 	build:
@@ -748,29 +681,21 @@ nihsp1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nihsp1l0.spr
+	underlay: barren|nihsp1l0
 		ZOffset: -8192
 		Start: 1
-	top: tihsp1l0.spr
+	top: tihsp1l0
 		Start: 1
-	shadow: bihspsh0.spr
+	shadow: bihspsh0
 		Start: 1
 		Offset: 1, -2
-	icon: bihspmn0.spr
-	fake-icon: bihspmn0.spr
+	icon: bihspmn0
+	fake-icon: bihspmn0
 
 # FG Repair
-nfrep1l0.spr:
+nfrep1l0:
 	idle:
 		Start: 1
-		#Combine:
-		#	nfrep1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bfrepsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 0, 12
 	make:
 		Start: 1
 	build:
@@ -792,31 +717,21 @@ nfrep1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nfrep1l0.spr
+	underlay: barren|nfrep1l0
 		ZOffset: -8192
 		Start: 1
-	top: tfrep1l0.spr
+	top: tfrep1l0
 		Start: 1
-	shadow: bfrepsh0.spr
+	shadow: bfrepsh0
 		Start: 1
 		Offset: 0, 13
-	icon: bfrepmn0.spr
-	fake-icon: bfrepmn0.spr
+	icon: bfrepmn0
+	fake-icon: bfrepmn0
 
 # Imperium repair
-barren|nirep1l0.spr:
-	Defaults:
-		AddExtension: False
+barren|nirep1l0:
 	idle:
 		Start: 1
-		#Combine:
-		#	nirep1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	birepsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 1, -1
 	make:
 		Start: 1
 	build:
@@ -838,32 +753,23 @@ barren|nirep1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nirep1l0.spr
+	underlay: nirep1l0
 		ZOffset: -8192
 		Start: 1
-	top: tirep1l0.spr
+	top: tirep1l0
 		Start: 1
-	shadow: birepsh0.spr
+	shadow: birepsh0
 		Start: 1
 		Offset: -1, 0
-	icon: birepmn0.spr
-	fake-icon: birepmn0.spr
+	icon: birepmn0
+	fake-icon: birepmn0
 
 # Phasing facility
-nfphf1l0.spr:
+nfphf1l0:
 	Defaults:
-		AddExtension: False
 		Offset: 0, -6
 	idle:
 		Start: 1
-		#Combine:
-		#	nfphf1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bfphfsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 1, 13
 	make:
 		Start: 1
 	build:
@@ -877,35 +783,26 @@ nfphf1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nfphf1l0.spr
+	underlay: barren|nfphf1l0
 		ZOffset: -8192
 		Start: 1
-	top: tfphf1l0.spr
+	top: tfphf1l0
 		Start: 1
-	shadow: bfphfsh0.spr
+	shadow: bfphfsh0
 		Start: 1
 		Offset: 0, 7
-	icon: bfphfmn0.spr
+	icon: bfphfmn0
 		Offset: 0, 0
-	fake-icon: bfphfmn0.spr
+	fake-icon: bfphfmn0
 		Offset: 0, 0
 
 # FG Rearming deck
-nfrrm1l0.spr:
+nfrrm1l0:
 	Defaults:
-		AddExtension: False
 		Offset: 0, 16
 		ZOffset: -1024
 	idle:
 		Start: 1
-		#Combine:
-		#	nfrrm1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bfrrmsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 12, 0
 	active:
 		Start: 1
 		Length: 1
@@ -925,35 +822,26 @@ nfrrm1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nfrrm1l0.spr
+	underlay: barren|nfrrm1l0
 		ZOffset: -8192
 		Start: 1
-	top: tfrrm1l0.spr
+	top: tfrrm1l0
 		Start: 1
-	shadow: bfrrmsh0.spr
+	shadow: bfrrmsh0
 		Start: 1
 		Offset: 12, 16
-	icon: bfrrmmn0.spr
+	icon: bfrrmmn0
 		Offset: 0, 0
-	fake-icon: bfrrmmn0.spr
+	fake-icon: bfrrmmn0
 		Offset: 0, 0
 
 # Imperium rearming deck
-nirrm1l0.spr:
+nirrm1l0:
 	Defaults:
-		AddExtension: False
 		Offset: 0, 16
 		ZOffset: -1024
 	idle:
 		Start: 1
-		#Combine:
-		#	nirrm1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	birrmsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 22, 21
 	make:
 		Start: 1
 	build:
@@ -967,33 +855,23 @@ nirrm1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nirrm1l0.spr
+	underlay: barren|nirrm1l0
 		ZOffset: -8192
 		Start: 1
-	top: tirrm1l0.spr
+	top: tirrm1l0
 		Start: 1
-	shadow: birrmsh0.spr
+	shadow: birrmsh0
 		Start: 1
 		Offset: 23, 37
-	icon: birrmmn0.spr
+	icon: birrmmn0
 		Offset: 0, 0
-	fake-icon: birrmmn0.spr
+	fake-icon: birrmmn0
 		Offset: 0, 0
 
 # Imperium temporal gate
-nitgt1l0.spr:
-	Defaults:
-		AddExtension: False
+nitgt1l0:
 	idle:
 		Start: 1
-		#Combine:
-		#	nitgt1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bitgtsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: -2, 1
 	make:
 		Start: 1
 	build:
@@ -1007,31 +885,21 @@ nitgt1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nitgt1l0.spr
+	underlay: barren|nitgt1l0
 		ZOffset: -8192
 		Start: 1
-	top: titgt1l0.spr
+	top: titgt1l0
 		Start: 1
-	shadow: bitgtsh0.spr
+	shadow: bitgtsh0
 		Start: 1
 		Offset: -1, 1
-	icon: bitgtmn0.spr
-	fake-icon: bitgtmn0.spr
+	icon: bitgtmn0
+	fake-icon: bitgtmn0
 
 # Imperium temporal rift creator
-nitrc1l0.spr:
-	Defaults:
-		AddExtension: False
+nitrc1l0:
 	idle:
 		Start: 1
-		#Combine:
-		#	nitrc1l0.spr:
-		#		Start: 1
-		#		Length: 1
-		#	bitrcsh0.spr:
-		#		Start: 1
-		#		Length: 1
-		#		Offset: 5, 19
 	make:
 		Start: 1
 	build:
@@ -1045,21 +913,19 @@ nitrc1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: barren|nitrc1l0.spr
+	underlay: barren|nitrc1l0
 		ZOffset: -8192
 		Start: 1
-	top: titrc1l0.spr
+	top: titrc1l0
 		Start: 1
-	shadow: bitrcsh0.spr
+	shadow: bitrcsh0
 		Start: 1
 		Offset: 11, 15
-	icon: bitrcmn0.spr
-	fake-icon: bitrcmn0.spr
+	icon: bitrcmn0
+	fake-icon: bitrcmn0
 
 # SmallSHHorizontalBridge
-tcsbh1l0.spr:
-	Defaults:
-		AddExtension: False
+tcsbh1l0:
 	idle:
 		Start: 0
 	make:
@@ -1075,19 +941,17 @@ tcsbh1l0.spr:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: ncsbh1l0.spr # no barren|xx..
+	underlay: ncsbh1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 0
-	shadow: bcsbvmn0.spr
+	shadow: bcsbvmn0
 		Start: 0
 		Offset: 0, 1
-	icon: bcsbhmn0.spr
-	fake-icon: bcsbhmn0.spr
+	icon: bcsbhmn0
+	fake-icon: bcsbhmn0
 
 # SmallSHVerticalBridge
-tcsbv1l0.spr:
-	Defaults:
-		AddExtension: False
+tcsbv1l0:
 	idle:
 		Start: 0
 	make:
@@ -1103,19 +967,17 @@ tcsbv1l0.spr:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: ncsbv1l0.spr # no barren|xx..
+	underlay: ncsbv1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 0
-	shadow: bcsbvmn0.spr
+	shadow: bcsbvmn0
 		Start: 0
 		Offset: 0, 1
-	icon: bcsbvmn0.spr
-	fake-icon: bcsbvmn0.spr
+	icon: bcsbvmn0
+	fake-icon: bcsbvmn0
 
 # SmallSHCentreBridge
-tcsbc1l0.spr:
-	Defaults:
-		AddExtension: False
+tcsbc1l0:
 	idle:
 		Start: 0
 	make:
@@ -1131,22 +993,20 @@ tcsbc1l0.spr:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: ncsbc1l0.spr # no barren|xx..
+	underlay: ncsbc1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 0
-	shadow: bcsbcsh0.spr
+	shadow: bcsbcsh0
 		Start: 0
 		Offset: 0, 1
-	icon: bcsbcmn0.spr
-	fake-icon: bcsbcmn0.spr
+	icon: bcsbcmn0
+	fake-icon: bcsbcmn0
 
 
 # Civilian stuff now
 
 # Small wall left
-tcswm1l0.spr:
-	Defaults:
-		AddExtension: False
+tcswm1l0:
 	idle:
 		Start: 1
 	make:
@@ -1162,16 +1022,14 @@ tcswm1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	shadow: ncswmsh0.spr
+	shadow: ncswmsh0
 		Start: 0
 		Offset: 0, 1
-	icon: bcswmmn0.spr
-	fake-icon: bcswmmn0.spr
+	icon: bcswmmn0
+	fake-icon: bcswmmn0
 
 # Small wall right
-tcswl1l0.spr:
-	Defaults:
-		AddExtension: False
+tcswl1l0:
 	idle:
 		Start: 1
 	make:
@@ -1187,16 +1045,14 @@ tcswl1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	shadow: ncswlsh0.spr
+	shadow: ncswlsh0
 		Start: 0
 		Offset: 0, 1
-	icon: bcswlmn0.spr
-	fake-icon: bcswlmn0.spr
+	icon: bcswlmn0
+	fake-icon: bcswlmn0
 
 # Big wall left
-tcbwl1l0.spr:
-	Defaults:
-		AddExtension: False
+tcbwl1l0:
 	idle:
 		Start: 1
 	make:
@@ -1212,16 +1068,14 @@ tcbwl1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	shadow: ncbwlsh0.spr
+	shadow: ncbwlsh0
 		Start: 0
 		Offset: 0, 1
-	icon: bcbwmmn0.spr
-	fake-icon: bcbwmmn0.spr
+	icon: bcbwmmn0
+	fake-icon: bcbwmmn0
 
 # Big wall right
-tcbwm1l0.spr:
-	Defaults:
-		AddExtension: False
+tcbwm1l0:
 	idle:
 		Start: 1
 	make:
@@ -1237,16 +1091,14 @@ tcbwm1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	shadow: ncbwmsh0.spr
+	shadow: ncbwmsh0
 		Start: 0
 		Offset: 0, 1
-	icon: bcbwlmn0.spr
-	fake-icon: bcbwlmn0.spr
+	icon: bcbwlmn0
+	fake-icon: bcbwlmn0
 
 # Freedom Guard Treaty Hall
-totyh1l0.spr:
-	Defaults:
-		AddExtension: False
+totyh1l0:
 	idle:
 		Start: 1
 	make:
@@ -1262,23 +1114,21 @@ totyh1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: notyh1l0.spr # no barren|xx..
+	underlay: notyh1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	top: totyh1l0.spr
+	top: totyh1l0
 		Start: 3
 		Length: 2
 		Tick: 100
-	shadow: totyhsh0.spr
+	shadow: totyhsh0
 		Start: 1
 		Offset: 16, 0
-	icon: botyhmn0.spr
-	fake-icon: botyhmn0.spr
+	icon: botyhmn0
+	fake-icon: botyhmn0
 
 # Togran HQ
-tothq1l0.spr:
-	Defaults:
-		AddExtension: False
+tothq1l0:
 	idle:
 		Start: 1
 	make:
@@ -1294,23 +1144,21 @@ tothq1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nothq1l0.spr # no barren|xx..
+	underlay: nothq1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	top: tothq1l0.spr
+	top: tothq1l0
 		Start: 3
 		Length: 3
 		Tick: 100
-	shadow: tothqsh0.spr
+	shadow: tothqsh0
 		Start: 1
 		Offset: 13, 9
-	icon: bothqmn0.spr
-	fake-icon: bothqmn0.spr
+	icon: bothqmn0
+	fake-icon: bothqmn0
 
 # Imperium Desicator
-todes1l0.spr:
-	Defaults:
-		AddExtension: False
+todes1l0:
 	idle:
 		Start: 1
 	make:
@@ -1326,19 +1174,17 @@ todes1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nodes1l0.spr # no barren|xx..
+	underlay: nodes1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: todessh0.spr
+	shadow: todessh0
 		Start: 1
 		Offset: 6, 4
-	icon: bodesmn0.spr
-	fake-icon: bodesmn0.spr
+	icon: bodesmn0
+	fake-icon: bodesmn0
 
 # Rendezvous point
-torvp1l0.spr:
-	Defaults:
-		AddExtension: False
+torvp1l0:
 	idle:
 		Start: 1
 	make:
@@ -1354,23 +1200,21 @@ torvp1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: norvp1l0.spr # no barren|xx..
+	underlay: norvp1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	top: torvp1l0.spr
+	top: torvp1l0
 		Start: 3
 		Length: 6
 		Tick: 100
-	shadow: torvpsh0.spr
+	shadow: torvpsh0
 		Start: 1
 		Offset: 12, 5
-	icon: borvpmn0.spr
-	fake-icon: borvpmn0.spr
+	icon: borvpmn0
+	fake-icon: borvpmn0
 
 # Imperium Medical research
-tomdr1l0.spr:
-	Defaults:
-		AddExtension: False
+tomdr1l0:
 	idle:
 		Start: 1
 	make:
@@ -1386,19 +1230,17 @@ tomdr1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nomdr1l0.spr # no barren|xx..
+	underlay: nomdr1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: tomdrsh0.spr
+	shadow: tomdrsh0
 		Start: 1
 		Offset: 9, 8
-	icon: bomdrmn0.spr
-	fake-icon: bomdrmn0.spr
+	icon: bomdrmn0
+	fake-icon: bomdrmn0
 
 # Imperium Water research
-towat1l0.spr:
-	Defaults:
-		AddExtension: False
+towat1l0:
 	idle:
 		Start: 1
 	make:
@@ -1414,19 +1256,17 @@ towat1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nowat1l0.spr # no barren|xx..
+	underlay: nowat1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: towatsh0.spr
+	shadow: towatsh0
 		Start: 1
 		Offset: 12, 0
-	icon: bowatmn0.spr
-	fake-icon: bowatmn0.spr
+	icon: bowatmn0
+	fake-icon: bowatmn0
 
 # Imperium Hover research
-tohov1l0.spr:
-	Defaults:
-		AddExtension: False
+tohov1l0:
 	idle:
 		Start: 1
 	make:
@@ -1442,19 +1282,17 @@ tohov1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nohov1l0.spr # no barren|xx..
+	underlay: nohov1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: tohovsh0.spr
+	shadow: tohovsh0
 		Start: 1
 		Offset: 4, 5
-	icon: bohovmn0.spr
-	fake-icon: bohovmn0.spr
+	icon: bohovmn0
+	fake-icon: bohovmn0
 
 # FG Planetary Defense
-t0rad1l0.spr:
-	Defaults:
-		AddExtension: False
+t0rad1l0:
 	idle:
 		Start: 1
 	make:
@@ -1470,19 +1308,17 @@ t0rad1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: n0rad1l0.spr # no barren|xx..
+	underlay: n0rad1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: b0towsh0.spr
+	shadow: b0towsh0
 		Start: 1
 		Offset: 54, 37
-	icon: b0radmn0.spr
-	fake-icon: b0radmn0.spr
+	icon: b0radmn0
+	fake-icon: b0radmn0
 
 # FG Planetary Defense 2
-topld1l0.spr:
-	Defaults:
-		AddExtension: False
+topld1l0:
 	idle:
 		Start: 1
 	make:
@@ -1498,19 +1334,17 @@ topld1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nopld1l0.spr # no barren|xx..
+	underlay: nopld1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: topldsh0.spr
+	shadow: topldsh0
 		Start: 1
 		Offset: 40, 14
-	icon: bopldmn0.spr
-	fake-icon: bopldmn0.spr
+	icon: bopldmn0
+	fake-icon: bopldmn0
 
 # Imperium Prison
-topri1l0.spr:
-	Defaults:
-		AddExtension: False
+topri1l0:
 	idle:
 		Start: 1
 	make:
@@ -1526,19 +1360,17 @@ topri1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nopri1l0.spr # no barren|xx..
+	underlay: nopri1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: toprish0.spr
+	shadow: toprish0
 		Start: 1
 		Offset: 17, 4
-	icon: boprimn0.spr
-	fake-icon: boprimn0.spr
+	icon: boprimn0
+	fake-icon: boprimn0
 	
 # Civilian Entertainment Facility
-tocen1l0.spr:
-	Defaults:
-		AddExtension: False
+tocen1l0:
 	idle:
 		Start: 1
 	make:
@@ -1554,19 +1386,17 @@ tocen1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nocen1l0.spr # no barren|xx..
+	underlay: nocen1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: bocensh0.spr
+	shadow: bocensh0
 		Start: 1
 		Offset: -1, 0
-	icon: bocenmn0.spr
-	fake-icon: bocenmn0.spr
+	icon: bocenmn0
+	fake-icon: bocenmn0
 
 # Civilian Public Shelter
-toshl1l0.spr:
-	Defaults:
-		AddExtension: False
+toshl1l0:
 	idle:
 		Start: 1
 	make:
@@ -1582,19 +1412,17 @@ toshl1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: noshl1l0.spr # no barren|xx..
+	underlay: noshl1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: toshlsh0.spr
+	shadow: toshlsh0
 		Start: 1
 		Offset: 5, 1
-	icon: boshlmn0.spr
-	fake-icon: boshlmn0.spr
+	icon: boshlmn0
+	fake-icon: boshlmn0
 
 #  Civilian SubTransit
-tosub1l0.spr:
-	Defaults:
-		AddExtension: False
+tosub1l0:
 	idle:
 		Start: 1
 	make:
@@ -1610,19 +1438,17 @@ tosub1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nosub1l0.spr # no barren|xx..
+	underlay: nosub1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: tosubsh0.spr
+	shadow: tosubsh0
 		Start: 1
 		Offset: 0, 0
-	icon: bosubmn0.spr
-	fake-icon: bosubmn0.spr
+	icon: bosubmn0
+	fake-icon: bosubmn0
 
 # Civilian Transit Centre
-totcn1l0.spr:
-	Defaults:
-		AddExtension: False
+totcn1l0:
 	idle:
 		Start: 1
 	make:
@@ -1638,19 +1464,17 @@ totcn1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: notcn1l0.spr # no barren|xx..
+	underlay: notcn1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: totcnsh0.spr
+	shadow: totcnsh0
 		Start: 1
 		Offset: 0, 0
-	icon: botcnmn0.spr
-	fake-icon: botcnmn0.spr
+	icon: botcnmn0
+	fake-icon: botcnmn0
 
 # Civilian Commercial
-tocbs1l0.spr:
-	Defaults:
-		AddExtension: False
+tocbs1l0:
 	idle:
 		Start: 1
 	make:
@@ -1666,19 +1490,17 @@ tocbs1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nocbs1l0.spr # no barren|xx..
+	underlay: nocbs1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: bocbssh0.spr
+	shadow: bocbssh0
 		Start: 1
 		Offset: 12, 1
-	icon: bocbsmn0.spr
-	fake-icon: bocbsmn0.spr
+	icon: bocbsmn0
+	fake-icon: bocbsmn0
 
 # Civilian Factory
-towar1l0.spr:
-	Defaults:
-		AddExtension: False
+towar1l0:
 	idle:
 		Start: 1
 	make:
@@ -1694,19 +1516,17 @@ towar1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nowar1l0.spr # no barren|xx..
+	underlay: nowar1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: bowarsh0.spr
+	shadow: bowarsh0
 		Start: 1
 		Offset: 0, 1
-	icon: bowarmn0.spr
-	fake-icon: bowarmn0.spr
+	icon: bowarmn0
+	fake-icon: bowarmn0
 
 # Civilian hall
-t0hal1l0.spr:
-	Defaults:
-		AddExtension: False
+t0hal1l0:
 	idle:
 		Start: 1
 	make:
@@ -1722,19 +1542,17 @@ t0hal1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: n0hal1l0.spr # no barren|xx..
+	underlay: n0hal1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: b0halsh0.spr
+	shadow: b0halsh0
 		Start: 1
 		Offset: 0, 0
-	icon: b0halmn0.spr
-	fake-icon: b0halmn0.spr
+	icon: b0halmn0
+	fake-icon: b0halmn0
 
 # Civilian large hall
-t0lar1l0.spr:
-	Defaults:
-		AddExtension: False
+t0lar1l0:
 	idle:
 		Start: 1
 	make:
@@ -1750,19 +1568,17 @@ t0lar1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: n0lar1l0.spr # no barren|xx..
+	underlay: n0lar1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: b0larsh0.spr
+	shadow: b0larsh0
 		Start: 1
 		Offset: 0, 0
-	icon: b0larmn0.spr
-	fake-icon: b0larmn0.spr
+	icon: b0larmn0
+	fake-icon: b0larmn0
 
 # Civilian small hall
-t0sma1l0.spr:
-	Defaults:
-		AddExtension: False
+t0sma1l0:
 	idle:
 		Start: 1
 	make:
@@ -1778,19 +1594,17 @@ t0sma1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: n0sma1l0.spr # no barren|xx..
+	underlay: n0sma1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: b0smash0.spr
+	shadow: b0smash0
 		Start: 1
 		Offset: 0, 0
-	icon: b0smamn0.spr
-	fake-icon: b0smamn0.spr
+	icon: b0smamn0
+	fake-icon: b0smamn0
 
 # Civilian Destiny
-t0des1l0.spr:
-	Defaults:
-		AddExtension: False
+t0des1l0:
 	idle:
 		Start: 1
 	make:
@@ -1806,19 +1620,17 @@ t0des1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: n0des1l0.spr # no barren|xx..
+	underlay: n0des1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: b0dessh0.spr
+	shadow: b0dessh0
 		Start: 1
 		Offset: 0, 0
-	icon: b0desmn0.spr
-	fake-icon: b0desmn0.spr
+	icon: b0desmn0
+	fake-icon: b0desmn0
 
 # Civilian Rural
-tochm4l0.spr:
-	Defaults:
-		AddExtension: False
+tochm4l0:
 	idle:
 		Start: 1
 	make:
@@ -1834,19 +1646,17 @@ tochm4l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nochm4l0.spr # no barren|xx..
+	underlay: nochm4l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: bochmsh0.spr
+	shadow: bochmsh0
 		Start: 1
 		Offset: 0, 0
-	icon: bochmmn0.spr
-	fake-icon: bochmmn0.spr
+	icon: bochmmn0
+	fake-icon: bochmmn0
 
 # Civilian Grain Farm
-tofrm1l0.spr:
-	Defaults:
-		AddExtension: False
+tofrm1l0:
 	idle:
 		Start: 1
 	make:
@@ -1862,16 +1672,14 @@ tofrm1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nofrm1l0.spr # no barren|xx..
+	underlay: nofrm1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	icon: tofrmmn0.spr
-	fake-icon: tofrmmn0.spr
+	icon: tofrmmn0
+	fake-icon: tofrmmn0
 
 # Civilian Hydro Farm
-tofrm1l1.spr:
-	Defaults:
-		AddExtension: False
+tofrm1l1:
 	idle:
 		Start: 1
 	make:
@@ -1887,16 +1695,14 @@ tofrm1l1.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nofrm1l1.spr # no barren|xx..
+	underlay: nofrm1l1 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	icon: tofrmmn1.spr
-	fake-icon: tofrmmn1.spr
+	icon: tofrmmn1
+	fake-icon: tofrmmn1
 
 # Civilian Farmhouse
-tofrm1l2.spr:
-	Defaults:
-		AddExtension: False
+tofrm1l2:
 	idle:
 		Start: 1
 	make:
@@ -1912,16 +1718,14 @@ tofrm1l2.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nofrm1l2.spr # no barren|xx..
+	underlay: nofrm1l2 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	icon: tofrmmn2.spr
-	fake-icon: tofrmmn2.spr
+	icon: tofrmmn2
+	fake-icon: tofrmmn2
 
 # Civilian Bridge
-tobrd1l0.spr:
-	Defaults:
-		AddExtension: False
+tobrd1l0:
 	idle:
 		Start: 1
 	make:
@@ -1937,19 +1741,17 @@ tobrd1l0.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nobrd1l0.spr # no barren|xx..
+	underlay: nobrd1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: tobrdsh0.spr
+	shadow: tobrdsh0
 		Start: 1
 		Offset: 10, 11
-	icon: bobrdmn0.spr
-	fake-icon: bobrdmn0.spr
+	icon: bobrdmn0
+	fake-icon: bobrdmn0
 
 # Civilian Vertical Bridge
-tobrd1l1.spr:
-	Defaults:
-		AddExtension: False
+tobrd1l1:
 	idle:
 		Start: 1
 	make:
@@ -1965,20 +1767,18 @@ tobrd1l1.spr:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nobrd1l1.spr # no barren|xx..
+	underlay: nobrd1l1 # no barren|xx..
 		ZOffset: -8192
 		Start: 1
-	shadow: tobrdsh1.spr
+	shadow: tobrdsh1
 		Start: 1
 		Offset: 24, 12
-	icon: bobrdmn1.spr
-	fake-icon: bobrdmn1.spr
+	icon: bobrdmn1
+	fake-icon: bobrdmn1
 
 
 # Dirt bridge
-tcvbvst0.spr:
-	Defaults:
-		AddExtension: False
+tcvbvst0:
 	idle:
 		Start: 0
 	make:
@@ -1994,15 +1794,13 @@ tcvbvst0.spr:
 	dead:
 		Start: 0
 		Tick: 1
-	shadow: tcvbvsh0.spr
+	shadow: tcvbvsh0
 		Start: 0
 		Offset: -9, 0
 
 	
 # Togran Monolith
-tomlt1l0.spr:
-	Defaults:
-		AddExtension: False
+tomlt1l0:
 	idle:
 		Start: 0
 	make:
@@ -2018,19 +1816,17 @@ tomlt1l0.spr:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: nomlt1l0.spr # no barren|xx..
+	underlay: nomlt1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 0
-	shadow: tomltsh0.spr
+	shadow: tomltsh0
 		Start: 0
 		Offset: 14, 6
-	icon: bocenmn0.spr
-	fake-icon: bocenmn0.spr
+	icon: bocenmn0
+	fake-icon: bocenmn0
 
 # Togran Door
-totdr1l0.spr:
-	Defaults:
-		AddExtension: False
+totdr1l0:
 	idle:
 		Start: 0
 	make:
@@ -2046,8 +1842,8 @@ totdr1l0.spr:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: notdr1l0.spr # no barren|xx..
+	underlay: notdr1l0 # no barren|xx..
 		ZOffset: -8192
 		Start: 0
-	icon: botdrmn0.spr
-	fake-icon: botdrmn0.spr
+	icon: botdrmn0
+	fake-icon: botdrmn0

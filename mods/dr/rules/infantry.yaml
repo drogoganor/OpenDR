@@ -92,7 +92,7 @@
 Civilian:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: uocvmst0.spr
+		Image: uocvmst0
 	Tooltip:
 		Name: Civilian
 	Health:
@@ -106,7 +106,7 @@ Civilian:
 RowdyCivilian:
 	Inherits: Civilian
 	RenderSprites:
-		Image: uorcmst0.spr
+		Image: uorcmst0
 	Tooltip:
 		Name: Rowdy Civilian
 	Health:
@@ -123,7 +123,7 @@ RowdyCivilian:
 ColonelMartel: # Campaign
 	Inherits: Civilian
 	RenderSprites:
-		Image: uocvmst0.spr
+		Image: uocvmst0
 	Tooltip:
 		Name: Colonel Martel
 	Health:
@@ -132,7 +132,7 @@ ColonelMartel: # Campaign
 JebRadec: # Campaign
 	Inherits: RowdyCivilian
 	RenderSprites:
-		Image: uorcmst0.spr
+		Image: uorcmst0
 	Tooltip:
 		Name: Jeb Radec
 	Health:
@@ -143,7 +143,7 @@ JebRadec: # Campaign
 Karoch: # Campaign
 	Inherits: Medic
 	RenderSprites:
-		Image: uocspst0.spr
+		Image: uocspst0
 	Tooltip:
 		Name: Karoch
 	Health:
@@ -152,7 +152,7 @@ Karoch: # Campaign
 Raider:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: ufradst0.spr
+		Image: ufradst0
 	Tooltip:
 		Name: Raider
 	Buildable:
@@ -179,7 +179,7 @@ Raider:
 Mercenary:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: ufmrcst0.spr
+		Image: ufmrcst0
 	Tooltip:
 		Name: Mercenary
 	Buildable:
@@ -205,7 +205,7 @@ Mercenary:
 Sniper:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: ufsnpst0.spr
+		Image: ufsnpst0
 	Tooltip:
 		Name: Sniper
 	Buildable:
@@ -231,7 +231,7 @@ Sniper:
 Scout:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: ufsctst0.spr
+		Image: ufsctst0
 	Tooltip:
 		Name: Scout
 	Buildable:
@@ -255,7 +255,7 @@ Scout:
 Medic:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: ufmedst0.spr
+		Image: ufmedst0
 	Tooltip:
 		Name: Field Medic
 	Buildable:
@@ -288,7 +288,7 @@ Medic:
 Saboteur:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: ufmecst0.spr
+		Image: ufmecst0
 	Tooltip:
 		Name: Saboteur
 	Buildable:
@@ -318,7 +318,7 @@ Saboteur:
 Mechanic:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: ufmecst0.spr
+		Image: ufmecst0
 	Tooltip:
 		Name: Mechanic
 	Buildable:
@@ -351,7 +351,7 @@ Mechanic:
 Martyr:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: ufmtrst0.spr
+		Image: ufmtrst0
 	Tooltip:
 		Name: Martyr
 	Buildable:
@@ -385,7 +385,7 @@ Martyr:
 Guardian:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: uigrdst0.spr
+		Image: uigrdst0
 	Tooltip:
 		Name: Guardian
 	Buildable:
@@ -411,7 +411,7 @@ Guardian:
 Bion:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: uibonst0.spr
+		Image: uibonst0
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Tooltip:
 		Name: Bion
@@ -439,7 +439,7 @@ Bion:
 Exterminator:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: uiextst0.spr
+		Image: uiextst0
 	Tooltip:
 		Name: Exterminator
 	Buildable:
@@ -471,7 +471,7 @@ Exterminator:
 Infiltrator:
 	Inherits: ^DrSoldier
 	RenderSprites:
-		Image: ucinfst0.spr
+		Image: ucinfst0
 	Buildable:
 		Description: The Infiltrator can morph into enemy infantry and\nis able to steal plans for enemy units and buildings.\nThe unit can also observe the opponent’s Minimap\nat the HQ building. Plans for units are obtained\nat the building where that unit is produced. The\nInfiltrator must return safely to his own HQ with\nall stolen plans.
 		BuildPaletteOrder: 40

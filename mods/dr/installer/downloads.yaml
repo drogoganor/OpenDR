@@ -10,6 +10,7 @@ drdemo: Dark Reign Demo
 		^Content/dr/JUNGLE/SPRITES.FTG: Dark Reign/DATA/DARK/GRAPHICS/JUNGLE/SPRITES.FTG
 		^Content/dr/SOUNDS.FTG: Dark Reign/DATA/DARK/sndfx/SOUNDS.FTG
 		^Content/dr/shell/SOUNDS.FTG: Dark Reign/DATA/DARK/SHELL/SOUNDS.FTG
+		^Content/dr/mouse.crs: Dark Reign/DATA/DARK/GRAPHICS/INTFACE/MOUSE.CRS
 drtilesets: Extra Tilesets
 	MirrorList: http://drogoganor.net/dr/dr-tileset-mirrors.txt
 	Extract:

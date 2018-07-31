@@ -68,196 +68,196 @@ Actors:
 	AttackWaypoint: waypoint
 		Owner: Neutral
 		Location: 15,63
-	Actor22: aotre000.spr
+	Actor22: aotre000
 		Owner: Neutral
 		Location: 55,49
-	Actor23: aotre001.spr
+	Actor23: aotre001
 		Owner: Neutral
 		Location: 53,49
-	Actor25: aotre002.spr
+	Actor25: aotre002
 		Owner: Neutral
 		Location: 44,50
-	Actor26: aotre005.spr
+	Actor26: aotre005
 		Owner: Neutral
 		Location: 46,49
-	Actor27: aoroc003.spr
+	Actor27: aoroc003
 		Owner: Neutral
 		Location: 51,46
-	Actor28: aoclf005.spr
+	Actor28: aoclf005
 		Owner: Neutral
 		Location: 53,44
-	Actor29: aoclf005.spr
+	Actor29: aoclf005
 		Owner: Neutral
 		Location: 42,45
-	Actor31: aoroc005.spr
+	Actor31: aoroc005
 		Owner: Neutral
 		Location: 46,47
-	Actor32: aoclf002.spr
+	Actor32: aoclf002
 		Owner: Neutral
 		Location: 39,46
-	Actor50: aoroc003.spr
+	Actor50: aoroc003
 		Owner: Neutral
 		Location: 1,56
-	Actor51: aoroc001.spr
+	Actor51: aoroc001
 		Owner: Neutral
 		Location: 3,56
-	Actor52: aoclf003.spr
+	Actor52: aoclf003
 		Owner: Neutral
 		Location: 4,53
-	Actor53: aotre002.spr
+	Actor53: aotre002
 		Owner: Neutral
 		Location: 2,55
-	Actor54: aotre003.spr
+	Actor54: aotre003
 		Owner: Neutral
 		Location: 4,57
-	Actor55: aotre004.spr
+	Actor55: aotre004
 		Owner: Neutral
 		Location: 3,59
-	Actor56: aoroc005.spr
+	Actor56: aoroc005
 		Owner: Neutral
 		Location: 8,53
-	Actor57: aoroc004.spr
+	Actor57: aoroc004
 		Owner: Neutral
 		Location: 12,52
-	Actor58: aoclf003.spr
+	Actor58: aoclf003
 		Owner: Neutral
 		Location: 13,48
-	Actor59: aorub000.spr
+	Actor59: aorub000
 		Owner: Neutral
 		Location: 4,58
-	Actor60: aorub000.spr
+	Actor60: aorub000
 		Owner: Neutral
 		Location: 15,52
-	Actor61: aorub001.spr
+	Actor61: aorub001
 		Owner: Neutral
 		Location: 12,54
-	Actor63: aorub000.spr
+	Actor63: aorub000
 		Owner: Neutral
 		Location: 3,53
-	Actor64: aotre005.spr
+	Actor64: aotre005
 		Owner: Neutral
 		Location: 7,55
-	Actor65: aotre002.spr
+	Actor65: aotre002
 		Owner: Neutral
 		Location: 10,54
-	Actor66: aotre003.spr
+	Actor66: aotre003
 		Owner: Neutral
 		Location: 12,50
-	Actor67: aotre001.spr
+	Actor67: aotre001
 		Owner: Neutral
 		Location: 14,53
-	Actor41: aotre005.spr
+	Actor41: aotre005
 		Owner: Neutral
 		Location: 39,59
-	Actor42: aopln001.spr
+	Actor42: aopln001
 		Owner: Neutral
 		Location: 43,59
-	Actor43: aopln002.spr
+	Actor43: aopln002
 		Owner: Neutral
 		Location: 38,60
-	Actor69: aopln000.spr
+	Actor69: aopln000
 		Owner: Neutral
 		Location: 38,68
-	Actor70: aotre000.spr
+	Actor70: aotre000
 		Owner: Neutral
 		Location: 34,58
-	Actor71: aotre001.spr
+	Actor71: aotre001
 		Owner: Neutral
 		Location: 32,59
-	Actor72: aotre003.spr
+	Actor72: aotre003
 		Owner: Neutral
 		Location: 28,68
-	Actor73: aoroc000.spr
+	Actor73: aoroc000
 		Owner: Neutral
 		Location: 1,61
-	Actor77: aotre004.spr
+	Actor77: aotre004
 		Owner: Neutral
 		Location: 2,70
-	Actor78: aoroc003.spr
+	Actor78: aoroc003
 		Owner: Neutral
 		Location: 3,71
-	Actor79: aoclf003.spr
+	Actor79: aoclf003
 		Owner: Neutral
 		Location: 0,63
-	Actor80: aoclf002.spr
+	Actor80: aoclf002
 		Owner: Neutral
 		Location: 0,66
-	Actor82: aorub002.spr
+	Actor82: aorub002
 		Owner: Neutral
 		Location: 3,68
-	Actor96: aotre000.spr
+	Actor96: aotre000
 		Owner: Neutral
 		Location: 25,57
-	Actor97: aotre001.spr
+	Actor97: aotre001
 		Owner: Neutral
 		Location: 27,55
-	Actor98: aotre005.spr
+	Actor98: aotre005
 		Owner: Neutral
 		Location: 28,58
-	Actor126: aotre000.spr
+	Actor126: aotre000
 		Owner: Neutral
 		Location: 6,72
-	Actor127: aotre003.spr
+	Actor127: aotre003
 		Owner: Neutral
 		Location: 1,60
-	Actor128: aotre001.spr
+	Actor128: aotre001
 		Owner: Neutral
 		Location: 1,63
-	Actor129: aoroc001.spr
+	Actor129: aoroc001
 		Owner: Neutral
 		Location: 0,62
-	Actor130: aopln000.spr
+	Actor130: aopln000
 		Owner: Neutral
 		Location: 4,69
-	Actor131: aopln001.spr
+	Actor131: aopln001
 		Owner: Neutral
 		Location: 3,69
-	Actor133: aoroc001.spr
+	Actor133: aoroc001
 		Owner: Neutral
 		Location: 41,59
-	Actor136: aopln002.spr
+	Actor136: aopln002
 		Owner: Neutral
 		Location: 38,67
-	Actor134: aopln001.spr
+	Actor134: aopln001
 		Owner: Neutral
 		Location: 39,67
-	Actor137: aopln001.spr
+	Actor137: aopln001
 		Owner: Neutral
 		Location: 35,60
-	Actor138: aorub001.spr
+	Actor138: aorub001
 		Owner: Neutral
 		Location: 47,59
-	Actor139: aorub002.spr
+	Actor139: aorub002
 		Owner: Neutral
 		Location: 42,69
-	Actor140: aoroc000.spr
+	Actor140: aoroc000
 		Owner: Neutral
 		Location: 41,68
-	Actor141: aopln000.spr
+	Actor141: aopln000
 		Owner: Neutral
 		Location: 45,71
-	Actor142: aopln001.spr
+	Actor142: aopln001
 		Owner: Neutral
 		Location: 46,71
-	Actor143: aopln002.spr
+	Actor143: aopln002
 		Owner: Neutral
 		Location: 44,60
-	Actor144: aoroc001.spr
+	Actor144: aoroc001
 		Owner: Neutral
 		Location: 35,67
-	Actor145: aoroc004.spr
+	Actor145: aoroc004
 		Owner: Neutral
 		Location: 30,58
-	Actor146: aorub002.spr
+	Actor146: aorub002
 		Owner: Neutral
 		Location: 32,60
-	Actor147: aoroc002.spr
+	Actor147: aoroc002
 		Owner: Neutral
 		Location: 30,66
-	Actor125: aotre005.spr
+	Actor125: aotre005
 		Owner: Neutral
 		Location: 45,59
-	Actor135: aoroc002.spr
+	Actor135: aoroc002
 		Owner: Neutral
 		Location: 42,58
 	Actor148: guardian
@@ -315,241 +315,241 @@ Actors:
 		Owner: Imperium
 		Location: 17,57
 		Facing: 92
-	Actor170: aoroc003.spr
+	Actor170: aoroc003
 		Owner: Neutral
 		Location: 13,46
-	Actor171: aoroc002.spr
+	Actor171: aoroc002
 		Owner: Neutral
 		Location: 13,45
-	Actor172: aopln002.spr
+	Actor172: aopln002
 		Owner: Neutral
 		Location: 14,45
-	Actor173: aoroc005.spr
+	Actor173: aoroc005
 		Owner: Neutral
 		Location: 13,43
-	Actor174: aoroc001.spr
+	Actor174: aoroc001
 		Owner: Neutral
 		Location: 14,46
-	Actor175: aotre003.spr
+	Actor175: aotre003
 		Owner: Neutral
 		Location: 15,44
-	Actor176: aotre004.spr
+	Actor176: aotre004
 		Owner: Neutral
 		Location: 12,44
-	Actor177: aotre000.spr
+	Actor177: aotre000
 		Owner: Neutral
 		Location: 37,48
-	Actor178: aotre003.spr
+	Actor178: aotre003
 		Owner: Neutral
 		Location: 38,49
-	Actor179: aopln001.spr
+	Actor179: aopln001
 		Owner: Neutral
 		Location: 38,48
-	Actor180: aoroc000.spr
+	Actor180: aoroc000
 		Owner: Neutral
 		Location: 36,47
-	Actor181: aorub000.spr
+	Actor181: aorub000
 		Owner: Neutral
 		Location: 36,48
-	Actor182: aoroc004.spr
+	Actor182: aoroc004
 		Owner: Neutral
 		Location: 34,46
-	Actor183: aoroc000.spr
+	Actor183: aoroc000
 		Owner: Neutral
 		Location: 47,46
-	Actor184: aotre004.spr
+	Actor184: aotre004
 		Owner: Neutral
 		Location: 40,50
-	Actor185: aorub001.spr
+	Actor185: aorub001
 		Owner: Neutral
 		Location: 52,49
-	Actor186: aotre001.spr
+	Actor186: aotre001
 		Owner: Neutral
 		Location: 42,50
-	Actor187: aoclf005.spr
+	Actor187: aoclf005
 		Owner: Neutral
 		Location: 54,24
-	Actor188: aoclf001.spr
+	Actor188: aoclf001
 		Owner: Neutral
 		Location: 52,26
-	Actor189: aotre005.spr
+	Actor189: aotre005
 		Owner: Neutral
 		Location: 52,26
-	Actor190: aopln001.spr
+	Actor190: aopln001
 		Owner: Neutral
 		Location: 55,28
-	Actor191: aopln000.spr
+	Actor191: aopln000
 		Owner: Neutral
 		Location: 53,29
-	Actor192: aoroc004.spr
+	Actor192: aoroc004
 		Owner: Neutral
 		Location: 50,27
-	Actor193: aoclf002.spr
+	Actor193: aoclf002
 		Owner: Neutral
 		Location: 47,26
-	Actor194: aoroc000.spr
+	Actor194: aoroc000
 		Owner: Neutral
 		Location: 49,26
-	Actor195: aorub002.spr
+	Actor195: aorub002
 		Owner: Neutral
 		Location: 51,26
-	Actor196: aotre004.spr
+	Actor196: aotre004
 		Owner: Neutral
 		Location: 53,24
-	Actor197: aorub000.spr
+	Actor197: aorub000
 		Owner: Neutral
 		Location: 56,22
-	Actor198: aoroc003.spr
+	Actor198: aoroc003
 		Owner: Neutral
 		Location: 46,28
-	Actor199: aotre000.spr
+	Actor199: aotre000
 		Owner: Neutral
 		Location: 48,29
-	Actor200: aotre000.spr
+	Actor200: aotre000
 		Owner: Neutral
 		Location: 49,25
-	Actor201: aotre001.spr
+	Actor201: aotre001
 		Owner: Neutral
 		Location: 48,26
-	Actor202: aoroc001.spr
+	Actor202: aoroc001
 		Owner: Neutral
 		Location: 46,31
-	Actor203: aoroc005.spr
+	Actor203: aoroc005
 		Owner: Neutral
 		Location: 44,32
-	Actor204: aopln000.spr
+	Actor204: aopln000
 		Owner: Neutral
 		Location: 45,30
-	Actor205: aotre002.spr
+	Actor205: aotre002
 		Owner: Neutral
 		Location: 45,27
-	Actor206: aopln001.spr
+	Actor206: aopln001
 		Owner: Neutral
 		Location: 46,27
-	Actor207: aotre003.spr
+	Actor207: aotre003
 		Owner: Neutral
 		Location: 43,32
-	Actor208: aorub002.spr
+	Actor208: aorub002
 		Owner: Neutral
 		Location: 47,31
-	Actor209: aorub002.spr
+	Actor209: aorub002
 		Owner: Neutral
 		Location: 54,29
-	Actor210: aotre003.spr
+	Actor210: aotre003
 		Owner: Neutral
 		Location: 54,33
-	Actor211: aotre005.spr
+	Actor211: aotre005
 		Owner: Neutral
 		Location: 53,34
-	Actor212: aoroc000.spr
+	Actor212: aoroc000
 		Owner: Neutral
 		Location: 54,34
-	Actor213: aorub002.spr
+	Actor213: aorub002
 		Owner: Neutral
 		Location: 55,35
-	Actor215: aotre004.spr
+	Actor215: aotre004
 		Owner: Neutral
 		Location: 54,36
-	Actor214: aorub002.spr
+	Actor214: aorub002
 		Owner: Neutral
 		Location: 55,32
-	Actor216: aoclf005.spr
+	Actor216: aoclf005
 		Owner: Neutral
 		Location: 41,33
-	Actor217: aorub000.spr
+	Actor217: aorub000
 		Owner: Neutral
 		Location: 45,34
-	Actor218: aoclf001.spr
+	Actor218: aoclf001
 		Owner: Neutral
 		Location: 39,35
-	Actor219: aoroc000.spr
+	Actor219: aoroc000
 		Owner: Neutral
 		Location: 41,37
-	Actor220: aopln000.spr
+	Actor220: aopln000
 		Owner: Neutral
 		Location: 42,37
-	Actor221: aotre000.spr
+	Actor221: aotre000
 		Owner: Neutral
 		Location: 38,37
-	Actor222: aotre001.spr
+	Actor222: aotre001
 		Owner: Neutral
 		Location: 40,38
-	Actor223: aotre002.spr
+	Actor223: aotre002
 		Owner: Neutral
 		Location: 39,38
-	Actor224: aotre005.spr
+	Actor224: aotre005
 		Owner: Neutral
 		Location: 38,39
-	Actor225: aotre003.spr
+	Actor225: aotre003
 		Owner: Neutral
 		Location: 37,38
-	Actor226: aotre003.spr
+	Actor226: aotre003
 		Owner: Neutral
 		Location: 33,46
-	Actor227: aotre004.spr
+	Actor227: aotre004
 		Owner: Neutral
 		Location: 39,34
-	Actor228: aorub000.spr
+	Actor228: aorub000
 		Owner: Neutral
 		Location: 41,33
-	Actor157: aoroc005.spr
+	Actor157: aoroc005
 		Owner: Neutral
 		Location: 4,24
-	Actor158: aoroc000.spr
+	Actor158: aoroc000
 		Owner: Neutral
 		Location: 6,24
-	Actor159: aoroc002.spr
+	Actor159: aoroc002
 		Owner: Neutral
 		Location: 2,26
-	Actor160: aopln000.spr
+	Actor160: aopln000
 		Owner: Neutral
 		Location: 6,26
-	Actor161: aotre005.spr
+	Actor161: aotre005
 		Owner: Neutral
 		Location: 2,25
-	Actor162: aotre003.spr
+	Actor162: aotre003
 		Owner: Neutral
 		Location: 5,23
-	Actor163: aotre002.spr
+	Actor163: aotre002
 		Owner: Neutral
 		Location: 3,24
-	Actor164: aotre000.spr
+	Actor164: aotre000
 		Owner: Neutral
 		Location: 4,23
-	Actor165: aotre001.spr
+	Actor165: aotre001
 		Owner: Neutral
 		Location: 2,23
-	Actor167: aopln001.spr
+	Actor167: aopln001
 		Owner: Neutral
 		Location: 1,44
-	Actor169: aotre004.spr
+	Actor169: aotre004
 		Owner: Neutral
 		Location: 2,52
-	Actor229: aotre000.spr
+	Actor229: aotre000
 		Owner: Neutral
 		Location: 7,45
-	Actor230: aotre001.spr
+	Actor230: aotre001
 		Owner: Neutral
 		Location: 8,45
-	Actor231: aoroc003.spr
+	Actor231: aoroc003
 		Owner: Neutral
 		Location: 0,44
-	Actor232: aotre004.spr
+	Actor232: aotre004
 		Owner: Neutral
 		Location: 6,40
-	Actor235: aorub002.spr
+	Actor235: aorub002
 		Owner: Neutral
 		Location: 1,40
-	Actor234: aorub000.spr
+	Actor234: aorub000
 		Owner: Neutral
 		Location: 5,40
-	Actor233: aorub001.spr
+	Actor233: aorub001
 		Owner: Neutral
 		Location: 8,40
-	Actor168: aotre002.spr
+	Actor168: aotre002
 		Owner: Neutral
 		Location: 56,40
-	Actor236: aotre005.spr
+	Actor236: aotre005
 		Owner: Neutral
 		Location: 55,43
 	Actor166: guardian
@@ -658,88 +658,88 @@ Actors:
 		Owner: Imperium
 		Location: 31,41
 		Facing: 92
-	Actor253: aotre000.spr
+	Actor253: aotre000
 		Owner: Neutral
 		Location: 25,35
-	Actor254: aotre001.spr
+	Actor254: aotre001
 		Owner: Neutral
 		Location: 27,34
-	Actor255: aotre003.spr
+	Actor255: aotre003
 		Owner: Neutral
 		Location: 27,33
-	Actor263: aotre002.spr
+	Actor263: aotre002
 		Owner: Neutral
 		Location: 24,36
-	Actor266: aoroc000.spr
+	Actor266: aoroc000
 		Owner: Neutral
 		Location: 26,35
-	Actor267: aotre005.spr
+	Actor267: aotre005
 		Owner: Neutral
 		Location: 19,26
-	Actor268: aotre002.spr
+	Actor268: aotre002
 		Owner: Neutral
 		Location: 18,26
-	Actor269: aoroc000.spr
+	Actor269: aoroc000
 		Owner: Neutral
 		Location: 20,16
-	Actor270: aoroc003.spr
+	Actor270: aoroc003
 		Owner: Neutral
 		Location: 22,15
-	Actor271: aorub000.spr
+	Actor271: aorub000
 		Owner: Neutral
 		Location: 21,17
-	Actor272: aotre004.spr
+	Actor272: aotre004
 		Owner: Neutral
 		Location: 18,16
-	Actor273: aotre000.spr
+	Actor273: aotre000
 		Owner: Neutral
 		Location: 29,11
-	Actor274: aotre003.spr
+	Actor274: aotre003
 		Owner: Neutral
 		Location: 28,12
-	Actor275: aotre005.spr
+	Actor275: aotre005
 		Owner: Neutral
 		Location: 27,12
-	Actor276: aotre000.spr
+	Actor276: aotre000
 		Owner: Neutral
 		Location: 44,4
-	Actor277: aotre001.spr
+	Actor277: aotre001
 		Owner: Neutral
 		Location: 48,3
-	Actor278: aotre003.spr
+	Actor278: aotre003
 		Owner: Neutral
 		Location: 46,2
-	Actor279: aotre005.spr
+	Actor279: aotre005
 		Owner: Neutral
 		Location: 47,4
-	Actor281: aoroc001.spr
+	Actor281: aoroc001
 		Owner: Neutral
 		Location: 41,25
-	Actor280: aopln001.spr
+	Actor280: aopln001
 		Owner: Neutral
 		Location: 41,26
-	Actor282: aoroc003.spr
+	Actor282: aoroc003
 		Owner: Neutral
 		Location: 20,24
-	Actor283: aoroc004.spr
+	Actor283: aoroc004
 		Owner: Neutral
 		Location: 14,16
-	Actor284: aoroc002.spr
+	Actor284: aoroc002
 		Owner: Neutral
 		Location: 7,21
-	Actor285: aoroc001.spr
+	Actor285: aoroc001
 		Owner: Neutral
 		Location: 9,20
-	Actor286: aorub000.spr
+	Actor286: aorub000
 		Owner: Neutral
 		Location: 9,21
-	Actor287: aotre005.spr
+	Actor287: aotre005
 		Owner: Neutral
 		Location: 7,20
-	Actor288: aotre001.spr
+	Actor288: aotre001
 		Owner: Neutral
 		Location: 12,17
-	Actor289: aotre001.spr
+	Actor289: aotre001
 		Owner: Neutral
 		Location: 26,12
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

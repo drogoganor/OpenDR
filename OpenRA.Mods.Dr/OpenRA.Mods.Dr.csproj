@@ -43,8 +43,10 @@
     <Compile Include="FileFormats\ScnFile.cs" />
     <Compile Include="FileSystem\Ftg.cs" />
     <Compile Include="Graphics\HackySpriteSequence.cs" />
+    <Compile Include="SpriteLoaders\DrCrsLoader.cs" />
     <Compile Include="SpriteLoaders\DrTilLoader.cs" />
     <Compile Include="SpriteLoaders\DrSprLoader.cs" />
+    <Compile Include="SpriteLoaders\JascPaletteLoader.cs" />
     <Compile Include="Traits\World\PaletteFromDrFile.cs" />
     <Compile Include="UtilityCommands\ImportDrCampaignMapCommand.cs" />
     <Compile Include="UtilityCommands\ImportDrMapCommand.cs" />

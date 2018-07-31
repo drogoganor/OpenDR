@@ -67,7 +67,7 @@
 SkyBike:
 	Inherits: ^DrPlane
 	RenderSprites:
-		Image: ufskbst0.spr
+		Image: ufskbst0
 	Tooltip:
 		Name: Sky Bike
 	Buildable:
@@ -102,7 +102,7 @@ SkyBike:
 Outrider:
 	Inherits: ^DrPlane
 	RenderSprites:
-		Image: ufoutst0.spr
+		Image: ufoutst0
 	Tooltip:
 		Name: Outrider
 	Buildable:
@@ -137,7 +137,7 @@ Outrider:
 ReconDrone:
 	Inherits: ^DrPlane
 	RenderSprites:
-		Image: uirdrst0.spr
+		Image: uirdrst0
 	Tooltip:
 		Name: Recon Drone
 	Buildable:
@@ -163,7 +163,7 @@ ReconDrone:
 Cyclone:
 	Inherits: ^DrPlane
 	RenderSprites:
-		Image: uicycst0.spr
+		Image: uicycst0
 	Tooltip:
 		Name: Cyclone
 	Buildable:
@@ -198,7 +198,7 @@ Cyclone:
 SkyFortress:
 	Inherits: ^DrPlane
 	RenderSprites:
-		Image: uiskyst0.spr
+		Image: uiskyst0
 	Tooltip:
 		Name: Sky Fortress
 	Buildable:

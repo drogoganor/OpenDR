@@ -80,7 +80,7 @@
 ConstructionRig:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: ucfcnst0.spr
+		Image: ucfcnst0
 	Tooltip:
 		Name: Construction Rig
 	Buildable:
@@ -154,7 +154,7 @@ ConstructionRig:
 Freighter:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: ucfrgst0.spr
+		Image: ucfrgst0
 	Tooltip:
 		Name: Freighter
 	Buildable:
@@ -190,7 +190,7 @@ Freighter:
 HoverFreighter:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: uchfrst0.spr
+		Image: uchfrst0
 	Tooltip:
 		Name: Hover Freighter
 	Buildable:
@@ -225,7 +225,7 @@ HoverFreighter:
 SpiderBike:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: ufspbst0.spr
+		Image: ufspbst0
 	Tooltip:
 		Name: Spider Bike
 	Buildable:
@@ -251,7 +251,7 @@ SpiderBike:
 RAT:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: ufratst0.spr
+		Image: ufratst0
 	Tooltip:
 		Name: Rapid Armored Transport
 	Voiced:
@@ -282,7 +282,7 @@ RAT:
 SkirmishTank:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: ufsktst0.spr
+		Image: ufsktst0
 	Tooltip:
 		Name: Skirmish Tank
 	Voiced:
@@ -317,7 +317,7 @@ SkirmishTank:
 TankHunter:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: ufthnst0.spr
+		Image: ufthnst0
 	Tooltip:
 		Name: Tank Hunter
 	Buildable:
@@ -343,7 +343,7 @@ TankHunter:
 PhaseTank:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: ufphtst0.spr
+		Image: ufphtst0
 	Tooltip:
 		Name: Phase Tank
 	Buildable:
@@ -370,7 +370,7 @@ FlakJack:
 	Inherits: ^DrAnimatedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	RenderSprites:
-		Image: ufflkst0.spr
+		Image: ufflkst0
 	Tooltip:
 		Name: Flak Jack
 	Buildable:
@@ -396,7 +396,7 @@ FlakJack:
 TripleRailHoverTank:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: uftrtst0.spr
+		Image: uftrtst0
 	Tooltip:
 		Name: Triple Rail Hover Tank
 	Buildable:
@@ -431,7 +431,7 @@ TripleRailHoverTank:
 HellstormArtillery:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: uffarst0.spr
+		Image: uffarst0
 	Tooltip:
 		Name: Hellstorm Artillery
 	Buildable:
@@ -457,7 +457,7 @@ HellstormArtillery:
 ShockWave:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: ufswvst0.spr
+		Image: ufswvst0
 	Tooltip:
 		Name: Shock Wave
 	Buildable:
@@ -492,7 +492,7 @@ ShockWave:
 WaterContaminator:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: ucwcost0.spr
+		Image: ucwcost0
 	Tooltip:
 		Name: Water Contaminator
 	Buildable:
@@ -517,7 +517,7 @@ WaterContaminator:
 PhaseRunner:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: ufphrst0.spr
+		Image: ufphrst0
 	Tooltip:
 		Name: Phase Runner
 	Voiced:
@@ -550,7 +550,7 @@ PhaseRunner:
 ScoutRunner:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: uisttst0.spr
+		Image: uisttst0
 	Tooltip:
 		Name: Scout Runner
 	Buildable:
@@ -576,7 +576,7 @@ ScoutRunner:
 ITT:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: uiittst0.spr
+		Image: uiittst0
 	Tooltip:
 		Name: Invader Troop Transport
 	Buildable:
@@ -608,7 +608,7 @@ ITT:
 PlasmaTank:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: uipltst0.spr
+		Image: uipltst0
 	Tooltip:
 		Name: Plasma Tank
 	Buildable:
@@ -643,7 +643,7 @@ PlasmaTank:
 Amper:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: uiampst0.spr
+		Image: uiampst0
 	Tooltip:
 		Name: Amper
 	Buildable:
@@ -670,7 +670,7 @@ MAD:
 	Inherits: ^DrHoverAnimatedVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	RenderSprites:
-		Image: uimadst0.spr
+		Image: uimadst0
 	Tooltip:
 		Name: Mobile Air Defense
 	Buildable:
@@ -696,7 +696,7 @@ MAD:
 Shredder:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: uishrst0.spr
+		Image: uishrst0
 	Tooltip:
 		Name: Shredder
 	Buildable:
@@ -722,7 +722,7 @@ Shredder:
 HostageTaker:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
-		Image: uihosst0.spr
+		Image: uihosst0
 	Tooltip:
 		Name: Hostage Taker
 	Buildable:
@@ -746,7 +746,7 @@ HostageTaker:
 TachionTank:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: uitctst0.spr
+		Image: uitctst0
 	Tooltip:
 		Name: Tachion Tank
 	Buildable:
@@ -772,7 +772,7 @@ TachionTank:
 Scarab:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: uiiarst0.spr
+		Image: uiiarst0
 	Tooltip:
 		Name: S.C.A.R.A.B.
 	Buildable:
@@ -799,7 +799,7 @@ Scarab:
 DessicatorTransport:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: uohtrst0.spr
+		Image: uohtrst0
 	Tooltip:
 		Name: Dessicator Transport
 	-Buildable:
@@ -819,7 +819,7 @@ DessicatorTransport:
 CivWheelTransporter:
 	Inherits: ^DrHoverAnimatedVehicle
 	RenderSprites:
-		Image: uowtrst0.spr
+		Image: uowtrst0
 	Tooltip:
 		Name: Civilian Wheeled Transporter
 	-Buildable:

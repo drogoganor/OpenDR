@@ -38,34 +38,34 @@ Players:
 		Faction: fguard
 		Enemies: Imperium, Freedom Guard
 Actors:
-	Actor12: aotre000.spr
+	Actor12: aotre000
 		Owner: Neutral
 		Location: 22,48
-	Actor13: aotre001.spr
+	Actor13: aotre001
 		Owner: Neutral
 		Location: 24,47
-	Actor14: aotre003.spr
+	Actor14: aotre003
 		Owner: Neutral
 		Location: 25,49
-	Actor15: aorub000.spr
+	Actor15: aorub000
 		Owner: Neutral
 		Location: 23,50
-	Actor16: aorub002.spr
+	Actor16: aorub002
 		Owner: Neutral
 		Location: 26,48
-	Actor17: aotre003.spr
+	Actor17: aotre003
 		Owner: Neutral
 		Location: 47,29
-	Actor18: aotre002.spr
+	Actor18: aotre002
 		Owner: Neutral
 		Location: 50,46
-	Actor21: aotre000.spr
+	Actor21: aotre000
 		Owner: Neutral
 		Location: 64,29
-	Actor24: aorub002.spr
+	Actor24: aorub002
 		Owner: Neutral
 		Location: 59,28
-	Actor25: aotre004.spr
+	Actor25: aotre004
 		Owner: Neutral
 		Location: 62,25
 	Actor20: hq.human
@@ -222,124 +222,124 @@ Actors:
 		Owner: Freedom Guard
 		Location: 38,59
 		Facing: 92
-	Actor64: aotre000.spr
+	Actor64: aotre000
 		Owner: Neutral
 		Location: 46,56
 	Actor65: trainingfacility.fguard
 		Owner: Freedom Guard
 		Location: 22,53
-	Actor66: aotre000.spr
+	Actor66: aotre000
 		Owner: Neutral
 		Location: 12,42
-	Actor67: aotre001.spr
+	Actor67: aotre001
 		Owner: Neutral
 		Location: 14,42
-	Actor68: aotre002.spr
+	Actor68: aotre002
 		Owner: Neutral
 		Location: 16,42
-	Actor69: aotre003.spr
+	Actor69: aotre003
 		Owner: Neutral
 		Location: 18,42
-	Actor70: aotre004.spr
+	Actor70: aotre004
 		Owner: Neutral
 		Location: 20,42
-	Actor71: aotre005.spr
+	Actor71: aotre005
 		Owner: Neutral
 		Location: 22,42
-	Actor72: aotre000.spr
+	Actor72: aotre000
 		Owner: Neutral
 		Location: 15,38
-	Actor73: aotre000.spr
+	Actor73: aotre000
 		Owner: Neutral
 		Location: 21,37
-	Actor74: aotre000.spr
+	Actor74: aotre000
 		Owner: Neutral
 		Location: 24,40
-	Actor75: aotre000.spr
+	Actor75: aotre000
 		Owner: Neutral
 		Location: 20,39
-	Actor76: aotre001.spr
+	Actor76: aotre001
 		Owner: Neutral
 		Location: 23,38
-	Actor77: aotre001.spr
+	Actor77: aotre001
 		Owner: Neutral
 		Location: 22,39
-	Actor78: aotre001.spr
+	Actor78: aotre001
 		Owner: Neutral
 		Location: 24,41
-	Actor80: aotre001.spr
+	Actor80: aotre001
 		Owner: Neutral
 		Location: 18,39
-	Actor82: aotre002.spr
+	Actor82: aotre002
 		Owner: Neutral
 		Location: 19,37
-	Actor81: aotre002.spr
+	Actor81: aotre002
 		Owner: Neutral
 		Location: 14,39
-	Actor83: aotre002.spr
+	Actor83: aotre002
 		Owner: Neutral
 		Location: 21,40
-	Actor84: aotre004.spr
+	Actor84: aotre004
 		Owner: Neutral
 		Location: 17,38
-	Actor85: aotre003.spr
+	Actor85: aotre003
 		Owner: Neutral
 		Location: 17,40
-	Actor86: aotre003.spr
+	Actor86: aotre003
 		Owner: Neutral
 		Location: 26,41
-	Actor87: aotre003.spr
+	Actor87: aotre003
 		Owner: Neutral
 		Location: 15,36
-	Actor88: aotre001.spr
+	Actor88: aotre001
 		Owner: Neutral
 		Location: 17,34
-	Actor89: aotre004.spr
+	Actor89: aotre004
 		Owner: Neutral
 		Location: 16,35
-	Actor90: aorub000.spr
+	Actor90: aorub000
 		Owner: Neutral
 		Location: 20,43
-	Actor91: aorub001.spr
+	Actor91: aorub001
 		Owner: Neutral
 		Location: 22,43
-	Actor92: aorub002.spr
+	Actor92: aorub002
 		Owner: Neutral
 		Location: 18,43
-	Actor93: aoroc000.spr
+	Actor93: aoroc000
 		Owner: Neutral
 		Location: 12,43
-	Actor94: aoroc001.spr
+	Actor94: aoroc001
 		Owner: Neutral
 		Location: 14,43
-	Actor95: aoroc002.spr
+	Actor95: aoroc002
 		Owner: Neutral
 		Location: 16,43
-	Actor98: aoroc003.spr
+	Actor98: aoroc003
 		Owner: Neutral
 		Location: 14,47
-	Actor99: aoroc004.spr
+	Actor99: aoroc004
 		Owner: Neutral
 		Location: 10,49
-	Actor100: aoroc005.spr
+	Actor100: aoroc005
 		Owner: Neutral
 		Location: 4,50
-	Actor103: aopln001.spr
+	Actor103: aopln001
 		Owner: Neutral
 		Location: 17,50
-	Actor104: aopln002.spr
+	Actor104: aopln002
 		Owner: Neutral
 		Location: 17,49
-	Actor105: aopln000.spr
+	Actor105: aopln000
 		Owner: Neutral
 		Location: 18,50
-	Actor106: aopln000.spr
+	Actor106: aopln000
 		Owner: Neutral
 		Location: 16,48
-	Actor107: aopln001.spr
+	Actor107: aopln001
 		Owner: Neutral
 		Location: 17,47
-	Actor108: aopln002.spr
+	Actor108: aopln002
 		Owner: Neutral
 		Location: 16,46
 	Actor112: raider
@@ -659,5 +659,9 @@ Actors:
 	Actor211: rowdycivilian
 		Owner: Freedom Guard
 		Location: 41,26
+		Facing: 92
+	Actor212: phaserunner
+		Owner: Freedom Guard
+		Location: 46,25
 		Facing: 92
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

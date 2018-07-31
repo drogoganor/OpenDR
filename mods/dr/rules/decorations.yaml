@@ -40,69 +40,65 @@
 		Categories: Misc
 	-WithIdleOverlay@LAYER1:
 
-aotre000.spr:
+aotre000:
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
-aotre001.spr:
+aotre001:
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
-aotre002.spr:
+aotre002:
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
-aotre003.spr:
+aotre003:
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
-aotre004.spr:
+aotre004:
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
-aotre005.spr:
+aotre005:
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
 # Plant
-aopln000.spr:
-	Inherits: ^DrPlant
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-		LocalCenterOffset: 0,0,0
-
-aopln001.spr:
+aopln000:
 	Inherits: ^DrPlant
 
-aopln002.spr:
+aopln001:
+	Inherits: ^DrPlant
+
+aopln002:
 	Inherits: ^DrPlant
 
 # Rocks
-aoroc000.spr:
+aoroc000:
 	Inherits: ^DrRock
 
-aoroc001.spr:
+aoroc001:
 	Inherits: ^DrRock
 
-aoroc002.spr:
+aoroc002:
 	Inherits: ^DrRock
 
-aoroc003.spr:
+aoroc003:
 	Inherits: ^DrRock
 	Building:
 		Footprint: x_ xx xx
 		Dimensions: 2,3
 		LocalCenterOffset: 0,0,0
 
-aoroc004.spr:
+aoroc004:
 	Inherits: ^DrRock
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
 		LocalCenterOffset: 0,0,0
 
-aoroc005.spr:
+aoroc005:
 	Inherits: ^DrRock
 	Building:
 		Footprint: xx xx
@@ -110,42 +106,42 @@ aoroc005.spr:
 		LocalCenterOffset: 0,0,0
 
 # Cliff
-aoclf000.spr:
+aoclf000:
 	Inherits: ^DrRock
 	Building:
 		Footprint: _x_ xxx xx_
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 
-aoclf001.spr:
+aoclf001:
 	Inherits: ^DrRock
 	Building:
 		Footprint: _x_ xxx xxx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 
-aoclf002.spr:
+aoclf002:
 	Inherits: ^DrRock
 	Building:
 		Footprint: _x_ xxx xxx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 
-aoclf003.spr:
+aoclf003:
 	Inherits: ^DrRock
 	Building:
 		Footprint: _x_ xxx xxx xx_
 		Dimensions: 3,4
 		LocalCenterOffset: 0,0,0
 
-aoclf004.spr:
+aoclf004:
 	Inherits: ^DrRock
 	Building:
 		Footprint: _x_ xxx xx= xxx
 		Dimensions: 3,4
 		LocalCenterOffset: 0,0,0
 
-aoclf005.spr:
+aoclf005:
 	Inherits: ^DrRock
 	Building:
 		Footprint: _x__ xxxx xxxx xxx_
@@ -153,31 +149,31 @@ aoclf005.spr:
 		LocalCenterOffset: 0,0,0
 
 # Rubble
-aorub000.spr:
+aorub000:
 	Inherits: ^DrRubble
 
-aorub001.spr:
+aorub001:
 	Inherits: ^DrRubble
 
-aorub002.spr:
+aorub002:
 	Inherits: ^DrRubble
 
 # Scoring
-aomsc000.spr:
+aomsc000:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 		LocalCenterOffset: 0,0,0
 
-aomsc001.spr:
+aomsc001:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 		LocalCenterOffset: 0,0,0
 
-aomsc002.spr:
+aomsc002:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: x
@@ -185,35 +181,35 @@ aomsc002.spr:
 		LocalCenterOffset: 0,0,0
 
 # Crater
-aoctr000.spr:
+aoctr000:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 		LocalCenterOffset: 0,0,0
 
-aoctr001.spr:
+aoctr001:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
 		LocalCenterOffset: 0,0,0
 
-aoctr002.spr:
+aoctr002:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 
-aoctr003.spr:
+aoctr003:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 
-aoctr004.spr:
+aoctr004:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
@@ -221,35 +217,35 @@ aoctr004.spr:
 		LocalCenterOffset: 0,0,0
 
 # Need to review the rest of these craters
-aoctr005.spr:
+aoctr005:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
 		LocalCenterOffset: 0,0,0
 
-aoctr006.spr:
+aoctr006:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
 		LocalCenterOffset: 0,0,0
 
-aoctr007.spr:
+aoctr007:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
 		LocalCenterOffset: 0,0,0
 
-aoctr008.spr:
+aoctr008:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
 		LocalCenterOffset: 0,0,0
 
-aoctr009.spr:
+aoctr009:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
@@ -257,51 +253,51 @@ aoctr009.spr:
 		LocalCenterOffset: 0,0,0
 
 # Crashed space ship
-aospc000.spr:
+aospc000:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
 
 # Water rock
-aowtr000.spr:
+aowtr000:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 
-aowtr001.spr:
+aowtr001:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 
-aowtr002.spr:
+aowtr002:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 
 # Wreck
-aowrk000.spr:
+aowrk000:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 
-aowrk001.spr:
+aowrk001:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 
-aowrk002.spr:
+aowrk002:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 
-eowcocr0.spr:
+eowcocr0:
 	Inherits: ^DrMisc
 	Building:
 		Footprint: x

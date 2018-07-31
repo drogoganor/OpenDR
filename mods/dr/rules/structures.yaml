@@ -199,7 +199,7 @@ upgrade.hq1:
 	Valued:
 		Cost: 2050
 	RenderSprites:
-		Image: bfhqtmn1.spr
+		Image: bfhqtmn1
 	ProvidesPrerequisite@upgradename:
 
 upgrade.hq2:
@@ -214,7 +214,7 @@ upgrade.hq2:
 	Valued:
 		Cost: 3300
 	RenderSprites:
-		Image: bfhqtmn2.spr
+		Image: bfhqtmn2
 	ProvidesPrerequisite@upgradename:
 
 upgrade.barracks1:
@@ -229,7 +229,7 @@ upgrade.barracks1:
 	Valued:
 		Cost: 2550
 	RenderSprites:
-		Image: bfutfmn1.spr
+		Image: bfutfmn1
 	ProvidesPrerequisite@upgradename:
 
 upgrade.assemblyplant1:
@@ -244,7 +244,7 @@ upgrade.assemblyplant1:
 	Valued:
 		Cost: 5000
 	RenderSprites:
-		Image: bfvcymn1.spr
+		Image: bfvcymn1
 	ProvidesPrerequisite@upgradename:
 
 upgrade.phasing:
@@ -259,7 +259,7 @@ upgrade.phasing:
 	Valued:
 		Cost: 2700
 	RenderSprites:
-		Image: bfphfmn1.spr
+		Image: bfphfmn1
 	ProvidesPrerequisite@upgradename:
 
 
@@ -443,7 +443,7 @@ upgrade.phasing:
 Power:
 	Inherits: ^DrBuilding
 	RenderSprites:
-		Image: ncpow1l0.spr
+		Image: ncpow1l0
 	Tooltip:
 		Name: Taelon Power Generator
 	Inherits@shape: ^3x4Shape
@@ -504,7 +504,7 @@ Power:
 WaterLaunchPad:
 	Inherits: ^DrBuilding
 	RenderSprites:
-		Image: nclnc1l0.spr
+		Image: nclnc1l0
 	Tooltip:
 		Name: Water Launch Pad
 	Inherits@shape: ^4x3Shape
@@ -568,7 +568,7 @@ WaterLaunchPad:
 HQ.human:
 	Inherits: ^DrHeadquarters
 	RenderSprites:
-		Image: nfhqt1l0.spr
+		Image: nfhqt1l0
 	Tooltip:
 		Name: Headquarters
 	Buildable:
@@ -587,7 +587,7 @@ HQ.human:
 HQ.cyborg:
 	Inherits: ^DrHeadquarters
 	RenderSprites:
-		Image: nihqt1l0.spr
+		Image: nihqt1l0
 	Tooltip:
 		Name: Headquarters
 	Building:
@@ -614,7 +614,7 @@ HQ.cyborg:
 HQ.togran:
 	Inherits: ^DrHeadquarters
 	RenderSprites:
-		Image: tothq1l0.spr
+		Image: tothq1l0
 	Tooltip:
 		Name: Headquarters
 	Buildable:
@@ -633,7 +633,7 @@ HQ.togran:
 TrainingFacility.fguard:
 	Inherits: ^DrTrainingFacility
 	RenderSprites:
-		Image: nfutf1l0.spr
+		Image: nfutf1l0
 	Tooltip:
 		Name: Training Facility
 	Buildable:
@@ -657,7 +657,7 @@ TrainingFacility.cyborg
 	Inherits: ^DrTrainingFacility
 	Inherits@shape: ^5x4Shape
 	RenderSprites:
-		Image: niutf1l0.spr
+		Image: niutf1l0
 	Tooltip:
 		Name: Training Facility
 	Buildable:
@@ -690,7 +690,7 @@ TrainingFacility.cyborg
 AssemblyPlant.human:
 	Inherits: ^DrAssemblyPlant
 	RenderSprites:
-		Image: nfvcy1l0.spr
+		Image: nfvcy1l0
 	Tooltip:
 		Name: Assembly Plant
 	Buildable:
@@ -714,7 +714,7 @@ AssemblyPlant.human:
 AssemblyPlant.cyborg:
 	Inherits: ^DrAssemblyPlant
 	RenderSprites:
-		Image: nivcy1l0.spr
+		Image: nivcy1l0
 	Tooltip:
 		Name: Assembly Plant
 	Buildable:
@@ -786,7 +786,7 @@ AssemblyPlant.cyborg:
 LaserTurret:
 	Inherits: ^SmallTurret
 	RenderSprites:
-		Image: barren|nfgdt1l0.spr # Manually set to barren here along with Imperium repair pad and Imp AA.
+		Image: barren|nfgdt1l0 # Manually set to barren here along with Imperium repair pad and Imp AA.
 		Palette: terrain 
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Tooltip:
@@ -810,7 +810,7 @@ LaserTurret:
 PlasmaTurret:
 	Inherits: ^SmallTurret
 	RenderSprites:
-		Image: nigdt1l0.spr
+		Image: nigdt1l0
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Tooltip:
 		Name: Plasma Turret
@@ -832,7 +832,7 @@ PlasmaTurret:
 HeavyRailTurret:
 	Inherits: ^Defense
 	RenderSprites:
-		Image: nfagt1l0.spr
+		Image: nfagt1l0
 	Inherits@shape: ^3x3Shape
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Building:
@@ -883,7 +883,7 @@ HeavyRailTurret:
 NeutronAccelerator:
 	Inherits: ^Defense
 	RenderSprites:
-		Image: niagt1l0.spr
+		Image: niagt1l0
 	Inherits@shape: ^3x3Shape
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Building:
@@ -935,7 +935,7 @@ NeutronAccelerator:
 AntiAirTurret.human:
 	Inherits: ^SmallTurret
 	RenderSprites:
-		Image: nfaar1l0.spr
+		Image: nfaar1l0
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Tooltip:
 		Name: Anti-Air Turret
@@ -967,7 +967,7 @@ AntiAirTurret.human:
 AntiAirTurret.cyborg:
 	Inherits: ^SmallTurret
 	RenderSprites:
-		Image: niaar1l0.spr
+		Image: niaar1l0
 		Palette: terrain # Manually set to barren here along with Laser Turret.
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	Tooltip:
@@ -1005,7 +1005,7 @@ AntiAirTurret.cyborg:
 CameraTower:
 	Inherits: ^DrGenericBuilding
 	RenderSprites:
-		Image: nccam1l0.spr
+		Image: nccam1l0
 	Inherits@shape: ^1x1Shape
 	Building:
 		Footprint: x
@@ -1045,7 +1045,7 @@ CameraTower:
 Hospital.human:
 	Inherits: ^DrGenericBuilding
 	RenderSprites:
-		Image: nfhsp1l0.spr
+		Image: nfhsp1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -1097,7 +1097,7 @@ Hospital.human:
 Hospital.cyborg:
 	Inherits: ^DrGenericBuilding
 	RenderSprites:
-		Image: nihsp1l0.spr
+		Image: nihsp1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: xxx= xxxx =xxx
@@ -1150,7 +1150,7 @@ Repair.human:
 	Inherits: ^DrGenericBuilding
 	Inherits@shape: ^4x3Shape
 	RenderSprites:
-		Image: nfrep1l0.spr
+		Image: nfrep1l0
 	Tooltip:
 		Name: Repair Station
 	Buildable:
@@ -1199,7 +1199,7 @@ Repair.human:
 Repair.cyborg:
 	Inherits: ^DrGenericBuilding
 	RenderSprites:
-		Image: barren|nirep1l0.spr
+		Image: barren|nirep1l0
 		Palette: terrain # Manually set to barren here along with Laser Turret.
 	Inherits@shape: ^4x3Shape
 	Building:
@@ -1252,7 +1252,7 @@ PhasingFacility:
 	Inherits: ^DrGenericBuilding
 	Inherits@shape: ^4x3Shape
 	RenderSprites:
-		Image: nfphf1l0.spr
+		Image: nfphf1l0
 	Tooltip:
 		Name: Phasing Facility
 	Buildable:
@@ -1302,7 +1302,7 @@ RearmingDeck.human:
 	Inherits: ^DrGenericBuilding
 	Inherits@shape: ^3x3Shape
 	RenderSprites:
-		Image: nfrrm1l0.spr
+		Image: nfrrm1l0
 	Tooltip:
 		Name: Rearming Deck
 	Buildable:
@@ -1352,7 +1352,7 @@ RearmingDeck.cyborg:
 		Bounds: 72,72,0,16
 		DecorationBounds: 72,72,0,16
 	RenderSprites:
-		Image: nirrm1l0.spr
+		Image: nirrm1l0
 	Tooltip:
 		Name: Rearming Deck
 	Buildable:
@@ -1395,7 +1395,7 @@ TemporalGate:
 		Bounds: 72,72,0,0
 		DecorationBounds: 72,72,0,0
 	RenderSprites:
-		Image: nitgt1l0.spr
+		Image: nitgt1l0
 	Tooltip:
 		Name: Temporal Gate
 	Buildable:
@@ -1435,7 +1435,7 @@ TemporalRiftCreator:
 		Bounds: 96,96,0,0
 		DecorationBounds: 96,96,0,0
 	RenderSprites:
-		Image: nitrc1l0.spr
+		Image: nitrc1l0
 	Tooltip:
 		Name: Temporal Rift Creator
 	Buildable:
@@ -1467,7 +1467,7 @@ TemporalRiftCreator:
 SmallSHHorizontalBridge:
 	Inherits: ^DrGenericBuilding
 	RenderSprites:
-		Image: tcsbh1l0.spr
+		Image: tcsbh1l0
 	Inherits@shape: ^4x4Shape
 	Building:
 		Footprint: x=== ____ ____ ===x
@@ -1512,7 +1512,7 @@ SmallSHVerticalBridge:
 	Tooltip:
 		Name: Vertical Bridge
 	RenderSprites:
-		Image: tcsbv1l0.spr
+		Image: tcsbv1l0
 
 # SmallSHCentreBridge
 SmallSHCentreBridge:
@@ -1522,7 +1522,7 @@ SmallSHCentreBridge:
 	Tooltip:
 		Name: Center Bridge
 	RenderSprites:
-		Image: tcsbc1l0.spr
+		Image: tcsbc1l0
 
 # Civilian stuff now
 
@@ -1537,7 +1537,7 @@ SmallWall2:
 		Bounds: 72,72,0,0
 		DecorationBounds: 72,72,0,0
 	RenderSprites:
-		Image: tcswm1l0.spr
+		Image: tcswm1l0
 	Tooltip:
 		Name: Small Wall
 	Armor:
@@ -1553,7 +1553,7 @@ SmallWall1:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 	RenderSprites:
-		Image: tcswl1l0.spr
+		Image: tcswl1l0
 
 LargeWall1:
 	Inherits: ^CivBuilding
@@ -1566,7 +1566,7 @@ LargeWall1:
 		Bounds: 72,72,0,0
 		DecorationBounds: 72,72,0,0
 	RenderSprites:
-		Image: tcbwl1l0.spr
+		Image: tcbwl1l0
 	Tooltip:
 		Name: Big Wall
 	Armor:
@@ -1582,13 +1582,13 @@ LargeWall2:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 	RenderSprites:
-		Image: tcbwm1l0.spr
+		Image: tcbwm1l0
 
 # Freedom Guard Treaty Hall
 FreedomGuardTreatyHall:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: totyh1l0.spr
+		Image: totyh1l0
 	Inherits@shape: ^4x4Shape
 	Building:
 		Footprint: _xxx xxxx xxxx ===_
@@ -1620,7 +1620,7 @@ FreedomGuardTreatyHall:
 ImperiumDesicator:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: todes1l0.spr
+		Image: todes1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -1650,7 +1650,7 @@ ImperiumDesicator:
 RendezvousPoint:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: torvp1l0.spr
+		Image: torvp1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -1682,7 +1682,7 @@ RendezvousPoint:
 ImperiumMedicalResearch:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: tomdr1l0.spr
+		Image: tomdr1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -1712,7 +1712,7 @@ ImperiumMedicalResearch:
 ImperiumWaterResearch:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: towat1l0.spr
+		Image: towat1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -1742,7 +1742,7 @@ ImperiumWaterResearch:
 ImperiumHoverResearch:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: tohov1l0.spr
+		Image: tohov1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -1772,7 +1772,7 @@ ImperiumHoverResearch:
 FGPlanetaryDefense:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: t0rad1l0.spr
+		Image: t0rad1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -1802,7 +1802,7 @@ FGPlanetaryDefense:
 FGPlanetaryDefense2:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: topld1l0.spr
+		Image: topld1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -1832,7 +1832,7 @@ FGPlanetaryDefense2:
 ImperiumPrison:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: topri1l0.spr
+		Image: topri1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -1862,7 +1862,7 @@ ImperiumPrison:
 CivilianEntertainmentFacility:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: tocen1l0.spr
+		Image: tocen1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -1892,7 +1892,7 @@ CivilianEntertainmentFacility:
 CivilianPublicShelter:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: toshl1l0.spr
+		Image: toshl1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -1922,7 +1922,7 @@ CivilianPublicShelter:
 CivilianSubTransit:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: tosub1l0.spr
+		Image: tosub1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -1952,7 +1952,7 @@ CivilianSubTransit:
 CivilianTransitCentre:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: totcn1l0.spr
+		Image: totcn1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -1982,7 +1982,7 @@ CivilianTransitCentre:
 CivilianCommercial:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: tocbs1l0.spr
+		Image: tocbs1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2012,7 +2012,7 @@ CivilianCommercial:
 CivilianFactory:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: towar1l0.spr
+		Image: towar1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2042,7 +2042,7 @@ CivilianFactory:
 CivilianHall:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: t0hal1l0.spr
+		Image: t0hal1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2072,7 +2072,7 @@ CivilianHall:
 CivilianLargeHall:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: t0lar1l0.spr
+		Image: t0lar1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2102,7 +2102,7 @@ CivilianLargeHall:
 CivilianSmallHall:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: t0sma1l0.spr
+		Image: t0sma1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2132,7 +2132,7 @@ CivilianSmallHall:
 CivilianDestiny:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: t0des1l0.spr
+		Image: t0des1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2162,7 +2162,7 @@ CivilianDestiny:
 CivilianRural:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: tochm4l0.spr
+		Image: tochm4l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2192,7 +2192,7 @@ CivilianRural:
 CivilianGrainFarm:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: tofrm1l0.spr
+		Image: tofrm1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2219,7 +2219,7 @@ CivilianGrainFarm:
 CivilianHydroFarm:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: tofrm1l1.spr
+		Image: tofrm1l1
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2246,7 +2246,7 @@ CivilianHydroFarm:
 CivilianFarmhouse:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: tofrm1l2.spr
+		Image: tofrm1l2
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2273,7 +2273,7 @@ CivilianFarmhouse:
 CivilianBridge:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: tobrd1l0.spr
+		Image: tobrd1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2303,7 +2303,7 @@ CivilianBridge:
 CivilianVerticalBridge:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: tobrd1l1.spr
+		Image: tobrd1l1
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2334,7 +2334,7 @@ CivilianVerticalBridge:
 DirtBridge:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: tcvbvst0.spr
+		Image: tcvbvst0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2361,7 +2361,7 @@ DirtBridge:
 TogranMonolith:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: tomlt1l0.spr
+		Image: tomlt1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_
@@ -2392,7 +2392,7 @@ TogranMonolith:
 TogranDoor:
 	Inherits: ^CivBuilding
 	RenderSprites:
-		Image: totdr1l0.spr
+		Image: totdr1l0
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: _xxx xxxx ===_

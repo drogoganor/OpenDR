@@ -324,7 +324,7 @@ Chaff: # Flack Jack
 	ValidTargets: Air
 	Projectile: Bullet
 		Speed: 555
-		Image: eochfpr0.spr
+		Image: eochfpr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
@@ -371,7 +371,7 @@ LaserRifleOriginal:
 	ValidTargets: Ground
 	Projectile: Bullet
 		Speed: 853
-		Image: eolaspr2.spr
+		Image: eolaspr2
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -387,7 +387,7 @@ RailGun:
 	Report: gxmrcwc0.wav
 	Projectile: Bullet
 		Speed: 853
-		Image: eorgnpr5.spr
+		Image: eorgnpr5
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -403,7 +403,7 @@ DoubleRailGun:
 	Report: gxspbwc0.wav
 	Projectile: Bullet
 		Speed: 853
-		Image: eorgnpr3.spr
+		Image: eorgnpr3
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -419,7 +419,7 @@ TripleRailGun:
 	Report: gxtrtwc0.wav
 	Projectile: Bullet
 		Speed: 853
-		Image: eorgnpr2.spr
+		Image: eorgnpr2
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 160
@@ -438,7 +438,7 @@ SkirmishGun1:
 	ValidTargets: Air, Ground
 	Projectile: Bullet
 		Speed: 341
-		Image: eomispr4.spr
+		Image: eomispr4
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
@@ -457,7 +457,7 @@ SniperRifle:
 	Report: gxsnpwc0.wav
 	Projectile: Bullet
 		Speed: 853
-		Image: eorgnpr1.spr
+		Image: eorgnpr1
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -473,7 +473,7 @@ PlasmaCannon:
 	Report: gxpltwc0.wav
 	Projectile: Bullet
 		Speed: 853
-		Image: eoplspr1.spr
+		Image: eoplspr1
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -490,7 +490,7 @@ PlasmaRifle: # Bion
 	ValidTargets: Air, Ground
 	Projectile: Bullet
 		Speed: 725
-		Image: eoplspr0.spr
+		Image: eoplspr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, Ground
@@ -507,7 +507,7 @@ TachyonCannon:
 	Report: gxtctwc0.wav
 	Projectile: Bullet
 		Speed: 1493
-		Image: eotacpr0.spr
+		Image: eotacpr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 160
@@ -523,7 +523,7 @@ SkyFortressWeapon: #FortressCannon
 	Report: gxskywc0.wav
 	Projectile: Bullet
 		Speed: 1493
-		Image: eoskypr0.spr
+		Image: eoskypr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 288
@@ -546,7 +546,7 @@ CycloneCannon:
 	ValidTargets: Air, Ground
 	Projectile: Bullet
 		Speed: 853
-		Image: eoncnpr0.spr
+		Image: eoncnpr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, Ground
@@ -578,7 +578,7 @@ PhaseTankCannon:
 	Report: gxphtwc0.wav
 	Projectile: Bullet
 		Speed: 853
-		Image: eolaspr4.spr
+		Image: eolaspr4
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
@@ -594,7 +594,7 @@ LaserCannon:
 	Report: gxsttwc0.wav
 	Projectile: Bullet
 		Speed: 853
-		Image: eolaspr3.spr
+		Image: eolaspr3
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
@@ -611,7 +611,7 @@ FixedGroundToAirLaser:
 	ValidTargets: Air
 	Projectile: Bullet
 		Speed: 1707
-		Image: eolaspr1.spr
+		Image: eolaspr1
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
@@ -629,7 +629,7 @@ IMPFixedGroundToAirLaser:
 	ValidTargets: Air
 	Projectile: Bullet
 		Speed: 1707
-		Image: eoorbpr0.spr
+		Image: eoorbpr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
@@ -646,7 +646,7 @@ FixedLaserPlat:
 	Report: gxfagwc0.wav
 	Projectile: Bullet
 		Speed: 853
-		Image: eorgnpr3.spr
+		Image: eorgnpr3
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -663,7 +663,7 @@ GroundToAirLaser:
 	Report: gxmadwc0.wav
 	Projectile: Bullet
 		Speed: 1707
-		Image: eoorbpr0.spr
+		Image: eoorbpr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
@@ -682,7 +682,7 @@ BkLaser:
 	ValidTargets: Air, Ground
 	Projectile: Bullet
 		Speed: 1707
-		Image: eomispr0.spr
+		Image: eomispr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air, Ground
@@ -700,7 +700,7 @@ GatLaser:
 	ValidTargets: Ground
 	Projectile: Bullet
 		Speed: 853
-		Image: eolaspr3.spr
+		Image: eolaspr3
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground
@@ -718,7 +718,7 @@ GatPlasma:
 	ValidTargets: Ground
 	Projectile: Bullet
 		Speed: 853
-		Image: eoplspr1.spr
+		Image: eoplspr1
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground
@@ -736,7 +736,7 @@ PolyAcid:
 	Report: gxextwc1.wav
 	Projectile: Bullet
 		Speed: 213
-		Image: eorfgpr0.spr
+		Image: eorfgpr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 192
@@ -752,7 +752,7 @@ TankHunterGun:
 	Report: gxthnwc0.wav
 	Projectile: Bullet
 		Speed: 427
-		Image: eothnpr0.spr
+		Image: eothnpr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -769,7 +769,7 @@ OutriderMissile:
 	Report: gxoutwc0.wav
 	Projectile: Bullet
 		Speed: 555
-		Image: eomispr1.spr
+		Image: eomispr1
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 320
@@ -786,7 +786,7 @@ ArtilleryShell:
 	Report: gxfarwc0.wav
 	Projectile: Bullet
 		Speed: 341
-		Image: eofarpr0.spr
+		Image: eofarpr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 800
@@ -803,7 +803,7 @@ IMPArtilleryShell:
 	Report: gxiarwc0.wav
 	Projectile: Bullet
 		Speed: 299
-		Image: eoiarpr0.spr
+		Image: eoiarpr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 800
@@ -820,7 +820,7 @@ AmperAmp:
 	Report: gxampwc0.wav
 	Projectile: Bullet
 		Speed: 853
-		Image: eolaspr0.spr
+		Image: eolaspr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 12
@@ -836,7 +836,7 @@ NeutronAss:
 	Report: gxneuwc0.wav
 	Projectile: Bullet
 		Speed: 1493
-		Image: eoncnpr0.spr
+		Image: eoncnpr0
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 96

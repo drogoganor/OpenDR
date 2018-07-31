@@ -42,7 +42,7 @@ namespace OpenRA.Mods.Dr.Traits
 	}
 
 	class PaletteFromDrFile : ILoadsPalettes, IProvidesAssetBrowserPalettes
-	{
+    {
 		readonly World world;
 		readonly PaletteFromDrFileInfo info;
 		public PaletteFromDrFile(World world, PaletteFromDrFileInfo info)

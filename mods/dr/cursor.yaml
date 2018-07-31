@@ -1,305 +1,226 @@
 Palettes:
-	cursor: template.pal
+	cursor: units.pal
+
+PaletteLoaders:
+	cursor: JascPalette
 
 Cursors:
-	mouse.shp: cursor
+	mouse.crs: cursor
 		default:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 322
+			Length: 1
+			X: -15
+			Y: -15
 		scroll-t:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 177
+			Length: 7
 		scroll-tr:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 142
+			Length: 7
 		scroll-r:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 156
+			Length: 7
 		scroll-br:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 128
+			Length: 7
 		scroll-b:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 170
+			Length: 7
 		scroll-bl:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 135
+			Length: 7
 		scroll-l:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 163
+			Length: 7
 		scroll-tl:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 149
+			Length: 7
 		scroll-t-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 124
+			Length: 4
 		scroll-tr-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 112
+			Length: 4
 		scroll-r-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 112
+			Length: 4
 		scroll-br-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 120
+			Length: 4
 		scroll-b-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 120
+			Length: 4
 		scroll-bl-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 116
+			Length: 4
 		scroll-l-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 116
+			Length: 4
 		scroll-tl-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 124
+			Length: 4
 		select:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 279
+			Length: 9
 		default-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 322
+			Length: 1
 		generic-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 259
+			Length: 4
 		generic-blocked-minimap:
-			Start: 0
-			X: -16
-			Y: -12
-		move: cursortarget.shp
-			Start: 0
-			X: -12
-			Y: -12
+			Start: 259
+			Length: 1
+		move:
+			Start: 263
+			Length: 8 # should be 8 but getting error initializing hardware cursor Error was: Failed to create hardware cursor `move` - Failed to create cursor: CreateIconIndirect(): The parameter is incorrect.
 		move-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 263
+			Length: 8
 		move-rough:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 263
+			Length: 8
 		move-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 259
+			Length: 4
 		move-blocked-minimap:
-			Start: 0
-			X: -16
-			Y: -12
-		attack: cursortarget.shp
-			Start: 0
-			X: -12
-			Y: -12
+			Start: 259
+			Length: 4
+		attack:
+			Start: 271
+			Length: 8
 		attack-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 271
+			Length: 8
 		attackoutsiderange:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 271
+			Length: 8
 		attackoutsiderange-minimap:
-			Start: 0
-			X: -16
-			Y: -12
-		attackmove: cursortarget.shp
-			Start: 0
-			X: -12
-			Y: -12
+			Start: 271
+			Length: 8
+		attackmove:
+			Start: 271
+			Length: 8
 		attackmove-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 271
+			Length: 8
 		attackmove-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 259
+			Length: 4
 		attackmove-blocked-minimap:
-			Start: 0
-			X: -16
-			Y: -12
-		assaultmove: cursortarget.shp
-			Start: 0
-			X: -12
-			Y: -12
+			Start: 259
+			Length: 4
+		assaultmove:
+			Start: 271
+			Length: 8
 		assaultmove-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 271
+			Length: 8
 		assaultmove-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 259
+			Length: 4
 		assaultmove-blocked-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 259
+			Length: 4
 		harvest:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 68
+			Length: 8
 		harvest-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 68
+			Length: 8
 		enter:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 240
+			Length: 11
 		enter-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 240
+			Length: 11
 		enter-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 259
+			Length: 4
 		enter-blocked-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 259
+			Length: 4
 		c4:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 40
+			Length: 10
 		c4-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 40
+			Length: 10
 		guard:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 251
+			Length: 8
 		guard-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 251
+			Length: 8
 		capture:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 62
+			Length: 6
 		capture-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 62
+			Length: 6
 		heal:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 210
+			Length: 5
 		heal-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 210
+			Length: 5
 		ability:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 263
+			Length: 8
 		ability-minimap:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 263
+			Length: 8
 		joystick-all:
 			Start: 0
-			X: -16
-			Y: -12
 		joystick-t-blocked:
 			Start: 0
-			X: -16
-			Y: -12
 		joystick-tr-blocked:
 			Start: 0
-			X: -16
-			Y: -12
 		joystick-r-blocked:
 			Start: 0
-			X: -16
-			Y: -12
 		joystick-br-blocked:
 			Start: 0
-			X: -16
-			Y: -12
 		joystick-b-blocked:
 			Start: 0
-			X: -16
-			Y: -12
 		joystick-bl-blocked:
 			Start: 0
-			X: -16
-			Y: -12
 		joystick-l-blocked:
 			Start: 0
-			X: -16
-			Y: -12
 		joystick-tl-blocked:
 			Start: 0
-			X: -16
-			Y: -12
 		deploy: # Cursors that need minimap variants
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 229
+			Length: 11
 		deploy-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 259
+			Length: 4
 		goldwrench:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 220
+			Length: 9
 		goldwrench-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 259
+			Length: 4
 		nuke:
-			Start: 0
-			X: -16
-			Y: -12
-		chrono-select:
-			Start: 0
-			X: -16
-			Y: -12
-		chrono-target:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 185
+			Length: 9
 		sell:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 96
+			Length: 8
 		sell-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 259
+			Length: 4
 		repair:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 215
+			Length: 5
 		repair-blocked:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 259
+			Length: 4
 		sell2:
-			Start: 0
-			X: -16
-			Y: -12
+			Start: 96
+			Length: 8
+		powerdown:
+			Start: 288
+			Length: 8
+		powerdown-blocked:
+			Start: 259
+			Length: 4
