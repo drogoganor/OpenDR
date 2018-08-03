@@ -132,6 +132,7 @@ ChromeLayout:
 	common|chrome/musicplayer.yaml
 	common|chrome/assetbrowser.yaml
 	common|chrome/credits.yaml
+	common|chrome/playerprofile.yaml
 	
 Weapons:
 	dr|weapons/weapons.yaml
@@ -175,16 +176,16 @@ ChromeMetrics:
 Fonts:
 	Tiny:
 		Font: common|FreeSansBold.ttf
-		Size:8
+		Size:9
 	TinyBold:
 		Font: common|FreeSansBold.ttf
-		Size:8
-	MediumBold:
-		Font: common|FreeSansBold.ttf
-		Size:10
+		Size:9
 	Small:
 		Font: common|FreeSansBold.ttf
 		Size:10
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size:11
 	Regular:
 		Font: common|FreeSansBold.ttf
 		Size:12
@@ -205,7 +206,7 @@ SoundFormats: Aud, Wav
 
 SpriteFormats: DrSpr, DrTil, DrCrs, ShpTD, TmpRA, TmpTD, ShpTS
 
-SpriteSequenceFormat: HackySpriteSequence
+SpriteSequenceFormat: DrSpriteSequence
 
 ModelSequenceFormat: PlaceholderModelSequence
 
