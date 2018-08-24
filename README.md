@@ -12,9 +12,9 @@ The most critical feature missing is the ability for [construction rigs to build
 
 This mod uses assets from the freely available Dark Reign demo, or alternatively you can install assets from an original game disc.
 
-See the [Releases page](https://github.com/drogoganor/DarkReign/releases/) for game installer packages, or the [wiki](https://github.com/drogoganor/DarkReign/wiki) for other information.
+See the [Installation](https://github.com/drogoganor/DarkReign/wiki/Installation) page if you want to install it, or the [wiki](https://github.com/drogoganor/DarkReign/wiki) for other information.
 
-Join us on [![Discord](https://img.shields.io/discord/102860784329052160.svg)](https://discord.gg/3MKcGSW) if you want to talk about the mod.
+Join us on Discord [![Discord](https://img.shields.io/discord/102860784329052160.svg)](https://discord.gg/3MKcGSW) if you want to talk about the mod.
 
 ## Thanks to
 
