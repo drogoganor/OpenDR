@@ -43,6 +43,7 @@
     <Compile Include="FileFormats\ScnFile.cs" />
     <Compile Include="FileSystem\Ftg.cs" />
     <Compile Include="Graphics\DrSpriteSequence.cs" />
+    <Compile Include="Graphics\DrTilesetSpecificSpriteSequence.cs" />
     <Compile Include="SpriteLoaders\DrCrsLoader.cs" />
     <Compile Include="SpriteLoaders\DrTilLoader.cs" />
     <Compile Include="SpriteLoaders\DrSprLoader.cs" />

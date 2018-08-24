@@ -41,26 +41,44 @@
 	-WithIdleOverlay@LAYER1:
 
 aotre000:
+	RenderSprites:
+		Palette: terrain
+		Image: base|aotre000
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
 aotre001:
+	RenderSprites:
+		Palette: terrain
+		Image: base|aotre001
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
 aotre002:
+	RenderSprites:
+		Palette: terrain
+		Image: base|aotre002
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
 aotre003:
+	RenderSprites:
+		Palette: terrain
+		Image: base|aotre003
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
 aotre004:
+	RenderSprites:
+		Palette: terrain
+		Image: base|aotre004
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
 aotre005:
+	RenderSprites:
+		Palette: terrain
+		Image: base|aotre005
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 

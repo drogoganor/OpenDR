@@ -45,10 +45,10 @@ namespace OpenRA.Mods.Dr.FileSystem
 					var directoryOffset = BitConverter.ToInt32(stream.ReadBytes(4), 0);
 					var fileCount = BitConverter.ToInt32(stream.ReadBytes(4), 0);
 
-					stream.Seek(directoryOffset, SeekOrigin.Begin); // stream.BaseStream?
+					stream.Seek(directoryOffset, SeekOrigin.Begin);
 					for (int i = 0; i < fileCount; i++)
 					{
-						var entryFilename = stream.ReadASCII(28); // stream.ReadChars
+						var entryFilename = stream.ReadASCII(28);
 						entryFilename = entryFilename.Replace("\0", string.Empty);
 
 						var offset = BitConverter.ToInt32(stream.ReadBytes(4), 0);

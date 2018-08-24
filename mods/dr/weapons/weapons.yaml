@@ -815,7 +815,7 @@ IMPArtilleryShell:
 
 AmperAmp:
 	Inherits: ^H1
-	ReloadDelay: 14
+	ReloadDelay: 64
 	Range: 5c0
 	Report: gxampwc0.wav
 	Projectile: Bullet
@@ -824,10 +824,14 @@ AmperAmp:
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 12
-		Damage: 100
+		Damage: -1000
 	Warhead@3Eff: CreateEffect
 		Explosions: eopamex0
 		ValidTargets: Ground, Ship, Trees
+	Warhead@poison: GrantExternalCondition
+		Range: 0c512
+		Duration: 2500
+		Condition: amperpoison
 
 NeutronAss:
 	Inherits: ^E3

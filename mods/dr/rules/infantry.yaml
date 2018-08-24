@@ -66,6 +66,14 @@
 			Radius: 256
 	EditorTilesetFilter:
 		Categories: Infantry
+	ExternalCondition@AMPERPOISON:
+		Condition: amperpoison
+	SelfHealing:
+		Step: -4
+		Delay: 6
+		HealIfBelow: 200
+		DamageTypes: DefaultDeath
+		RequiresCondition: amperpoison
 
 ^DrSoldier:
 	Inherits: ^Humanoid

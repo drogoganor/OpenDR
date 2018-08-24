@@ -522,11 +522,11 @@ PhaseRunner:
 		Name: Phase Runner
 	Voiced:
 		VoiceSet: FreedomGuardVoice
-	Buildable:
-		Description: The Phase Runner troop transport has the ability\nto travel while phased.
-		Prerequisites: ~vehicles.fguard
-		BuildPaletteOrder: 210
-		BuildDuration: 40
+	-Buildable:
+	#	Description: The Phase Runner troop transport has the ability\nto travel while phased.
+	#	Prerequisites: ~vehicles.fguard
+	#	BuildPaletteOrder: 210
+	#	BuildDuration: 40
 	Valued:
 		Cost: 900
 	Health:
@@ -640,6 +640,8 @@ PlasmaTank:
 	AttackTurreted:
 	WithSpriteTurret:
 
+# poison darts can probably be done with the existing external condition warhead
+# and the other thing should be straightforward with custom projectiles/warheads/traits
 Amper:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:

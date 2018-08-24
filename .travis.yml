@@ -33,4 +33,4 @@ deploy:
     - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}.AppImage
   skip_cleanup: true
   on:
-    tags: true
+    tags: false

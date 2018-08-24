@@ -1,52 +1,52 @@
 
-overlay: overlay.shp
+overlay:
 	Defaults:
 		AddExtension: False
-	build-valid-barren:
+	build-valid-barren: overlay.png
 		Start: 0
-	build-valid-aust:
+	build-valid-aust: overlay.png
 		Start: 0
-	build-valid-alien:
+	build-valid-alien: overlay.png
 		Start: 0
-	build-valid-asteroid:
+	build-valid-asteroid: overlay.png
 		Start: 0
-	build-valid-auralien:
+	build-valid-auralien: overlay.png
 		Start: 0
-	build-valid-volcanic:
+	build-valid-volcanic: overlay.png
 		Start: 0
-	build-valid-snow:
+	build-valid-snow: overlay.png
 		Start: 0
-	build-valid-jungle:
+	build-valid-jungle: overlay.png
 		Start: 0
-	build-invalid:
+	build-invalid: overlay.png
 		Start: 1
-	target-select:
+	target-select: overlay.png
 		Start: 0
-	target-valid-barren:
+	target-valid-barren: overlay.png
 		Start: 0
-	target-valid-aust:
+	target-valid-aust: overlay.png
 		Start: 0
-	target-valid-alien:
+	target-valid-alien: overlay.png
 		Start: 0
-	target-valid-asteroid:
+	target-valid-asteroid: overlay.png
 		Start: 0
-	target-valid-auralien:
+	target-valid-auralien: overlay.png
 		Start: 0
-	target-valid-volcanic:
+	target-valid-volcanic: overlay.png
 		Start: 0
-	target-valid-snow:
+	target-valid-snow: overlay.png
 		Start: 0
-	target-valid-jungle:
+	target-valid-jungle: overlay.png
 		Start: 0
-	target-invalid:
+	target-invalid: overlay.png
 		Start: 1
 
 editor-overlay:
 	Defaults:
 		AddExtension: False
-	copy: overlay
+	copy: overlay.png
 		Start: 0
-	paste: overlay
+	paste: overlay.png
 		Start: 0
 
 shroud:
@@ -61,22 +61,22 @@ resources:
 		Length: *
 
 mpspawn:
-	idle: mpspawn.shp
+	idle: mpspawn.png
 		AddExtension: False
 		Length: *
 
 waypoint:
-	idle: waypoint.shp
+	idle: waypoint.png
 		AddExtension: False
 		Length: *
 
 clock:
-	idle: clock.shp
+	idle: clock.png
 		AddExtension: False
 		Length: *
 
 moveflsh:
-	idle: cursortarget.shp
+	idle: cursortarget.png
 		AddExtension: False
 		Length: *
 
@@ -84,19 +84,19 @@ beacon:
 	Defaults:
 		AddExtension: False
 		ZOffset: 2535
-	arrow: mpspawn.shp
+	arrow: mpspawn.png
 		Length: *
-	circles: mpspawn.shp
+	circles: mpspawn.png
 		Length: *
-	atomicon: mpspawn.shp
+	atomicon: mpspawn.png
 		Length: *
-	pbmbicon: mpspawn.shp
+	pbmbicon: mpspawn.png
 		Length: *
-	camicon: mpspawn.shp
+	camicon: mpspawn.png
 		Length: *
-	pinficon: mpspawn.shp
+	pinficon: mpspawn.png
 		Length: *
-	clock: mpspawn.shp
+	clock: mpspawn.png
 		Length: *
 
 explosion:
@@ -148,11 +148,11 @@ allyrepair:
 		ZOffset: 2047
 
 rallypoint:
-	flag: mpspawn.shp
+	flag: mpspawn.png
 		AddExtension: False
 		Length: *
 		ZOffset: 2535
-	circles: mpspawn.shp
+	circles: mpspawn.png
 		AddExtension: False
 		Length: *
 		ZOffset: 2047
@@ -160,15 +160,15 @@ rallypoint:
 pips:
 	Defaults:
 		AddExtension: False
-	groups: pips.shp # TODO: Create 0-9 pips
+	groups: pips.png # TODO: Create 0-9 pips
 		Start: 3
-	pip-empty: pips.shp
+	pip-empty: pips.png
 		Start: 0
-	pip-red: pips.shp
+	pip-red: pips.png
 		Start: 1
-	pip-green: pips.shp
+	pip-green: pips.png
 		Start: 2
-	pip-blue: pips.shp
+	pip-blue: pips.png
 		Start: 3
-	pip-yellow: pips.shp
+	pip-yellow: pips.png
 		Start: 4

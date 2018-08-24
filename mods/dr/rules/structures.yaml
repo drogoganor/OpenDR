@@ -642,16 +642,16 @@ TrainingFacility.fguard:
 		HP: 750
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: up2underlay
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: up2top
+		Sequence: top
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
-		Sequence: up2shadow
-	WithIdleOverlay@LAYER4:
-		Sequence: animation
-	WithIdleOverlay@LAYER5:
-		Sequence: up2base
+		Sequence: shadow
+	#WithIdleOverlay@LAYER4:
+	#	Sequence: animation
+	#WithIdleOverlay@LAYER5: # Only for upgraded
+	#	Sequence: base
 
 TrainingFacility.cyborg
 	Inherits: ^DrTrainingFacility
@@ -676,16 +676,16 @@ TrainingFacility.cyborg
 		HP: 900
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: up2underlay
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: up2top
+		Sequence: top
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
-		Sequence: up2shadow
+		Sequence: shadow
 	WithIdleOverlay@LAYER4:
 		Sequence: animation
-	WithIdleOverlay@LAYER5:
-		Sequence: up2base
+	#WithIdleOverlay@LAYER5: # Only for upgraded
+	#	Sequence: base
 
 AssemblyPlant.human:
 	Inherits: ^DrAssemblyPlant
@@ -702,14 +702,14 @@ AssemblyPlant.human:
 		HP: 1000
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: up2underlay
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: up2top
+		Sequence: top
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
-		Sequence: up2shadow
-	WithIdleOverlay@LAYER4:
-		Sequence: animation
+		Sequence: shadow
+	#WithIdleOverlay@LAYER4:
+	#	Sequence: animation
 
 AssemblyPlant.cyborg:
 	Inherits: ^DrAssemblyPlant
@@ -739,14 +739,14 @@ AssemblyPlant.cyborg:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
-		Sequence: up2underlay
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Sequence: up2top
+		Sequence: top
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
-		Sequence: up2shadow
-	WithIdleOverlay@LAYER5:
-		Sequence: up2base
+		Sequence: shadow
+	#WithIdleOverlay@LAYER5: # Only for upgraded
+	#	Sequence: base
 
 ^SmallTurret:
 	Inherits: ^Defense
@@ -786,7 +786,7 @@ AssemblyPlant.cyborg:
 LaserTurret:
 	Inherits: ^SmallTurret
 	RenderSprites:
-		Image: barren|nfgdt1l0 # Manually set to barren here along with Imperium repair pad and Imp AA.
+		Image: base|nfgdt1l0 # Manually set to barren here along with Imperium repair pad and Imp AA.
 		Palette: terrain 
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	Tooltip:
@@ -1199,7 +1199,7 @@ Repair.human:
 Repair.cyborg:
 	Inherits: ^DrGenericBuilding
 	RenderSprites:
-		Image: barren|nirep1l0
+		Image: base|nirep1l0
 		Palette: terrain # Manually set to barren here along with Laser Turret.
 	Inherits@shape: ^4x3Shape
 	Building:

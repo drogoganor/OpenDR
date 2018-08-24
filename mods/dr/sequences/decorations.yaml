@@ -1,50 +1,50 @@
 
-aotre000:
+base|aotre000:
 	Defaults:
 		Offset: -4,-19
 	idle:
 		Length: 1
-	shadow: aotre0sh
+	shadow: base|aotre0sh
 		Offset: 21, 10
 
-aotre001:
+base|aotre001:
 	Defaults:
 		Offset: 0,-10
 	idle:
 		Length: 1
-	shadow: aotre1sh
+	shadow: base|aotre1sh
 		Offset: 15, 9
 
-aotre002:
+base|aotre002:
 	Defaults:
 		Offset: -1,-14
 	idle:
 		Length: 1
-	shadow: aotre2sh
+	shadow: base|aotre2sh
 		Offset: 19, 11
 
-aotre003:
+base|aotre003:
 	Defaults:
 		Offset: 3,-15
 	idle:
 		Length: 1
-	shadow: aotre3sh
+	shadow: base|aotre3sh
 		Offset: 23, 11
 
-aotre004:
+base|aotre004:
 	Defaults:
 		Offset: 1,-10
 	idle:
 		Length: 1
-	shadow: aotre4sh
+	shadow: base|aotre4sh
 		Offset: 10, 8
 
-aotre005:
+base|aotre005:
 	Defaults:
 		Offset: 2,-9
 	idle:
 		Length: 1
-	shadow: aotre5sh
+	shadow: base|aotre5sh
 		Offset: 13, 6
 
 # Plant

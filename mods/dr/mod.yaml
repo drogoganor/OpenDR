@@ -28,7 +28,7 @@ Packages:
 	~aust/AUST.FTG
 	~volcanic/VOLCANIC.FTG
 	~auralien/AURALIEN.FTG
-	~SPRITES.FTG
+	~SPRITES.FTG: base
 	~spriteEx.ftg
 	~SOUNDS.FTG
 	~soundsEx.ftg
@@ -204,9 +204,10 @@ SupportsMapsFrom: dr
 
 SoundFormats: Aud, Wav
 
-SpriteFormats: DrSpr, DrTil, DrCrs, ShpTD, TmpRA, TmpTD, ShpTS
+SpriteFormats: DrSpr, DrTil, DrCrs, ShpTD, TmpRA, TmpTD, ShpTS, PngSheet
 
 SpriteSequenceFormat: DrSpriteSequence
+#SpriteSequenceFormat: DrTilesetSpecificSpriteSequence
 
 ModelSequenceFormat: PlaceholderModelSequence
 
