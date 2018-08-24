@@ -20,10 +20,6 @@ namespace OpenRA.Mods.Dr.Graphics
 		public DrTilesetSpecificSpriteSequenceLoader(ModData modData)
 			: base(modData)
 		{
-			var metadata = modData.Manifest.Get<SpriteSequenceFormat>().Metadata;
-			MiniYaml yaml;
-			//if (metadata.TryGetValue("DefaultSpriteExtension", out yaml))
-			//	DefaultSpriteExtension = yaml.Value;
 		}
 
 		public override ISpriteSequence CreateSequence(ModData modData, TileSet tileSet, SpriteCache cache, string sequence, string animation, MiniYaml info)
@@ -40,16 +36,6 @@ namespace OpenRA.Mods.Dr.Graphics
 		string ResolveTilesetId(TileSet tileSet, Dictionary<string, MiniYaml> d)
 		{
 			var tsId = tileSet.Id;
-
-            /*
-			MiniYaml yaml;
-			if (d.TryGetValue("TilesetOverrides", out yaml))
-			{
-				var tsNode = yaml.Nodes.FirstOrDefault(n => n.Key == tsId);
-				if (tsNode != null)
-					tsId = tsNode.Value.Value;
-			}
-            */
 
 			return tsId;
 		}
