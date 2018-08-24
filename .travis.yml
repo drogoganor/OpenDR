@@ -34,3 +34,7 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
+
+branches:
+  except:
+  - sdk
