@@ -8,7 +8,7 @@ Click here to see an (outdated) video of a test skirmish match:
 
 [![Skirmish test video](https://img.youtube.com/vi/oBAMk_LMObc/0.jpg)](https://www.youtube.com/watch?v=oBAMk_LMObc)
 
-This mod uses assets from the freely available Dark Reign demo, or alternatively you can install assets from an original game disc.
+This mod uses game content from the freely available Dark Reign demo, or alternatively you can install the content from an original game disc.
 
 See the [Installation](https://github.com/drogoganor/DarkReign/wiki/Installation) page if you want to install it, or the [wiki](https://github.com/drogoganor/DarkReign/wiki) for other information about the mod and OpenRA.
 
