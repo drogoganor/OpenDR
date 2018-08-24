@@ -1,20 +1,18 @@
 # Dark Reign mod for OpenRA
 
-A Dark Reign mod for the [OpenRA](https://github.com/OpenRA/OpenRA) engine. Created using the [OpenRAModSDK](https://github.com/OpenRA/OpenRAModSDK).
+A Dark Reign mod for the [OpenRA](https://github.com/OpenRA/OpenRA) strategy game engine. Created using the [OpenRAModSDK](https://github.com/OpenRA/OpenRAModSDK).
 
-Currently a WIP made available for testing purposes. Please be aware that this mod is incomplete and the game might crash. I don't recommend trying to play it as it currently stands.
+This mod is a WIP made available for testing purposes. Many [features](https://github.com/drogoganor/DarkReign/wiki/Dark-Reign-features) are missing or incomplete and the game might crash.
+
+Click here to see an (outdated) video of a test skirmish match:
 
 [![Skirmish test video](https://img.youtube.com/vi/oBAMk_LMObc/0.jpg)](https://www.youtube.com/watch?v=oBAMk_LMObc)
 
-Most [Dark Reign features](https://github.com/drogoganor/DarkReign/wiki/Dark-Reign-features) are missing. Basic unit values for cost, health, damage, etc are in place but certain values like movement speed, attack speed, attack damage spread, and projectile speed are currently being worked on.
-
-The most critical feature missing is the ability for [construction rigs to build buildings like the original](https://github.com/drogoganor/DarkReign/issues/1). This mod is unlikely to move forward until this feature is implemented.
-
 This mod uses assets from the freely available Dark Reign demo, or alternatively you can install assets from an original game disc.
 
-See the [Installation](https://github.com/drogoganor/DarkReign/wiki/Installation) page if you want to install it, or the [wiki](https://github.com/drogoganor/DarkReign/wiki) for other information.
+See the [Installation](https://github.com/drogoganor/DarkReign/wiki/Installation) page if you want to install it, or the [wiki](https://github.com/drogoganor/DarkReign/wiki) for other information about the mod and OpenRA.
 
-Join us on Discord [![Discord](https://img.shields.io/discord/102860784329052160.svg)](https://discord.gg/3MKcGSW) if you want to talk about the mod.
+Join us on the Dark Reign discord [![Discord](https://img.shields.io/discord/102860784329052160.svg)](https://discord.gg/3MKcGSW) if you want to talk about the mod.
 
 ## Thanks to
 
