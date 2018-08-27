@@ -11,7 +11,7 @@ function All-Command
 	}
 
 	$msBuild = FindMSBuild
-	$msBuildArguments = "/t:Rebuild /nr:false"
+	$msBuildArguments = "/t:Rebuild /nr:false /p:TreatWarningsAsErrors=`"true`""
 	if ($msBuild -eq $null)
 	{
 		echo "Unable to locate an appropriate version of MSBuild."
