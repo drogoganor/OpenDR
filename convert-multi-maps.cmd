@@ -5,8 +5,6 @@ if exist user.config (FOR /F "tokens=1,2 delims==" %%A IN (user.config) DO (set 
 
 title OpenRA.Utility.exe %MOD_ID%
 
-set MOD_SEARCH_PATHS=%~dp0mods
-if %INCLUDE_DEFAULT_MODS% neq "True" goto start
 set MOD_SEARCH_PATHS=%MOD_SEARCH_PATHS%,./mods
 
 :start
