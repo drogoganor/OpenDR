@@ -40,17 +40,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activities\BuildOnSite.cs" />
     <Compile Include="FileFormats\ScnFile.cs" />
     <Compile Include="FileSystem\Ftg.cs" />
     <Compile Include="Graphics\DrSpriteSequence.cs" />
     <Compile Include="Graphics\DrTilesetSpecificSpriteSequence.cs" />
+    <Compile Include="Orders\BuilderUnitBuildingOrderGenerator.cs" />
     <Compile Include="SpriteLoaders\DrCrsLoader.cs" />
     <Compile Include="SpriteLoaders\DrTilLoader.cs" />
     <Compile Include="SpriteLoaders\DrSprLoader.cs" />
     <Compile Include="SpriteLoaders\JascPaletteLoader.cs" />
+    <Compile Include="Traits\Player\BuilderUnit.cs" />
+    <Compile Include="Traits\Player\BuildUnitPlaceBuilding.cs" />
+    <Compile Include="Traits\ProductionQueueOrBuildingPickerFromSelection.cs" />
     <Compile Include="Traits\World\PaletteFromDrFile.cs" />
     <Compile Include="UtilityCommands\ImportDrCampaignMapCommand.cs" />
     <Compile Include="UtilityCommands\ImportDrMapCommand.cs" />
+    <Compile Include="Widgets\BuildSelectPaletteWidget.cs" />
+    <Compile Include="Widgets\Logic\Ingame\BuildingPickerLogic.cs" />
     <Compile Include="Widgets\Logic\ProductionTabsWithRowsAndFooterLogic.cs" />
     <Compile Include="Widgets\ProductionTabsWithRowsAndFooterWidget.cs" />
   </ItemGroup>

@@ -13,8 +13,6 @@
 		Footprint: x
 		TerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		RequiresBaseProvider: True
-	RequiresBuildableArea:
-		AreaTypes: building
 	SoundOnDamageTransition:
 		DamagedSounds: gxexpoc2.wav
 		DestroyedSounds: gxexpoc1.wav
@@ -47,9 +45,6 @@
 	UpdatesPlayerStatistics:
 	Buildable:
 		BuildDurationModifier: 2486 # DR build rate
-	RequiresBuildableArea:
-		AreaTypes: building
-		Adjacent: 12
 	RepairableBuilding:
 		RepairStep: 20
 		PlayerExperience: 25

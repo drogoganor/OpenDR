@@ -107,23 +107,10 @@ ConstructionRig:
 		PipType: Yellow
 	MustBeDestroyed:
 		RequiredForShortGame: true
-	GivesBuildableArea:
-		AreaTypes: building
-	BaseProvider:
-		Range: 8c0
-	BaseBuilding:
-	ProductionQueue@Building:
+	BuilderUnit@Building:
 		Type: Building
 		Group: Building
-		LowPowerSlowdown: 2
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-		#SpeedUp: True
-	ProductionBar@Building:
-		ProductionType: Building
-	ProductionBar@Defense:
-		ProductionType: Defense
-		Color: 8A8A8A
+	BaseBuilding:
 	Production:
 		Produces: Building,Defense
 	ProvidesPrerequisite@rig:

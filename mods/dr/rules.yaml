@@ -163,8 +163,10 @@ World:
 	HelpCommand:
 	ScreenShaker:
 	BuildingInfluence:
-	ProductionQueueFromSelection:
+	ProductionQueueOrBuildingPickerFromSelection:
+		ProductionParent: SIDEBAR_BACKGROUND
 		ProductionTabsWidget: PRODUCTION_TABS
+		BuildSelectPalette: BUILD_SELECT_PALETTE
 	DomainIndex:
 	ResourceLayer:
 	ResourceClaimLayer:
@@ -194,8 +196,8 @@ World:
 		Factions: fguard, imperium, togran, xenite, shadowhand
 		BaseActor: ConstructionRig
 		SupportActors: ConstructionRig,ConstructionRig
-		InnerSupportRadius: 6
-		OuterSupportRadius: 14
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
 	SpawnMPUnits:
 		StartingUnitsClass: light
 		DropdownDisplayOrder: 0
@@ -245,6 +247,7 @@ Player:
 		FogCheckboxEnabled: True
 	PlaceBuilding:
 		NewOptionsNotificationDelay: 0
+	BuildUnitPlaceBuilding:
 	SupportPowerManager:
 	ScriptTriggers:
 	MissionObjectives:
