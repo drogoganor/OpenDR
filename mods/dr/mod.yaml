@@ -46,6 +46,7 @@ Rules:
 	dr|rules.yaml
 	dr|rules/defaults.yaml
 	dr|rules/misc.yaml
+	dr|rules/structures-building.yaml
 	dr|rules/structures.yaml
 	dr|rules/ai.yaml
 	dr|rules/aircraft.yaml
@@ -206,8 +207,8 @@ SoundFormats: Aud, Wav
 
 SpriteFormats: DrSpr, DrTil, DrCrs, ShpTD, TmpRA, TmpTD, ShpTS, PngSheet
 
-SpriteSequenceFormat: DrSpriteSequence
-#SpriteSequenceFormat: DrTilesetSpecificSpriteSequence
+#SpriteSequenceFormat: DrSpriteSequence
+SpriteSequenceFormat: DrTilesetSpecificSpriteSequence
 
 ModelSequenceFormat: PlaceholderModelSequence
 

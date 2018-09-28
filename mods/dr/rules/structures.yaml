@@ -1,38 +1,18 @@
 
+
 ^BasicBuilding:
-	Inherits@1: ^ExistsInWorld
-	Inherits@3: ^SpriteActor
-	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
-	Selectable:
-		Priority: 3
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure
-	Building:
-		Dimensions: 1,1
-		Footprint: x
-		TerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
-		RequiresBaseProvider: True
 	SoundOnDamageTransition:
 		DamagedSounds: gxexpoc2.wav
 		DestroyedSounds: gxexpoc1.wav
-	WithSpriteBody:
 	CaptureNotification:
 	ShakeOnDeath:
 	ProximityCaptor:
 		Types: Building
-	Guardable:
-		Range: 3c0
-	FrozenUnderFog:
-	Tooltip:
-		GenericName: Structure
-	Demolishable:
 	EditorTilesetFilter:
 		Categories: Building
-	CommandBarBlacklist:
-	HitShape@LAYER1:
-	HitShape@LAYER2:
-	HitShape@LAYER3:
 
 ^CivBuilding:
 	Inherits: ^BasicBuilding
@@ -43,8 +23,35 @@
 	Inherits: ^BasicBuilding
 	Huntable:
 	UpdatesPlayerStatistics:
-	Buildable:
-		BuildDurationModifier: 2486 # DR build rate
+	RepairableBuilding:
+		RepairStep: 20
+		PlayerExperience: 25
+	EngineerRepairable:
+	AcceptsDeliveredCash:
+	#WithMakeAnimation:
+	#ExternalCapturable:
+	#ExternalCapturableBar:
+	Capturable:
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Sellable:
+		SellSounds: cashturn.aud
+	Explodes:
+		Weapon: GenericExplode
+		EmptyWeapon: GenericExplode
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
+
+^DrBuildingOLD:
+	Inherits: ^BasicBuilding
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Huntable:
+	UpdatesPlayerStatistics:
 	RepairableBuilding:
 		RepairStep: 20
 		PlayerExperience: 25
@@ -69,26 +76,7 @@
 		IsPlayerPalette: True
 
 ^DrHeadquarters:
-	Inherits: ^DrBuilding
-	Tooltip:
-		Name: Headquarters
-	Building:
-		Footprint: _xx_ xxxx xxxx xxx_
-		Dimensions: 4,4
-		LocalCenterOffset: 0,0,0
-	HitShape:
-		UseTargetableCellsOffsets: true
-		Type: Rectangle
-			TopLeft: -2048, -2048
-			BottomRight: 2048, 2048
-	Selectable:
-		Bounds: 96,96,0,0
-		DecorationBounds: 96,96,0,0
-	Buildable:
-		Queue: Building
-		BuildPaletteOrder: 0
-		BuildDuration: 22
-		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
+	Inherits: ^DrHeadquarters.Constructing
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: hq
@@ -112,7 +100,6 @@
 		Prerequisite: hq.shadowhand
 	Production:
 		Produces: Upgrade,Economy
-	BaseBuilding:
 	RallyPoint:
 		Offset: 4,5
 	Exit@1:
@@ -131,14 +118,8 @@
 		Color: 8A8A8A
 	ProductionBar@Upgrade:
 		ProductionType: Upgrade
-	WithBuildingPlacedAnimation:
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
 	Valued:
 		Cost: 750
-	CustomSellValue:
-		Value: 800
 	RevealsShroud:
 		Range: 8c0
 	Power:
@@ -259,7 +240,7 @@ upgrade.phasing:
 
 
 ^DrGenericBuilding:
-	Inherits: ^DrBuilding
+	Inherits: ^DrBuildingOLD
 	Buildable:
 		Queue: Building
 		Description: Generic
@@ -276,7 +257,7 @@ upgrade.phasing:
 		Type: BuildingArmour
 
 ^DrTrainingFacility:
-	Inherits: ^DrBuilding
+	Inherits: ^DrBuildingOLD
 	Tooltip:
 		Name: Training Facility
 	Inherits@shape: ^5x4Shape
@@ -349,7 +330,7 @@ upgrade.phasing:
 		RequiresCondition: stardecoration
 
 ^DrAssemblyPlant:
-	Inherits: ^DrBuilding
+	Inherits: ^DrBuildingOLD
 	Tooltip:
 		Name: Assembly Plant
 	Inherits@shape: ^5x5Shape
@@ -423,7 +404,7 @@ upgrade.phasing:
 		RequiresCondition: stardecoration
 
 ^Defense:
-	Inherits: ^DrBuilding
+	Inherits: ^DrBuildingOLD
 	RenderRangeCircle:
 	RenderDetectionCircle:
 	MustBeDestroyed:
@@ -432,45 +413,25 @@ upgrade.phasing:
 		TargetTypes: Ground, C4, Structure, Defense
 	EditorTilesetFilter:
 		Categories: Defense
-	-CommandBarBlacklist:
-	-AcceptsDeliveredCash:
+
+
+## Actual buildings start here
+
 
 Power:
-	Inherits: ^DrBuilding
+	Inherits: Power.Constructing
+	Inherits@4: ^DrBuilding
+	-SelfConstructing:
+	-Buildable:
 	RenderSprites:
 		Image: ncpow1l0
-	Tooltip:
-		Name: Taelon Power Generator
-	Inherits@shape: ^3x4Shape
-	HitShape:
-	Buildable:
-		Prerequisites: ~techlevel.infonly
-		Queue: Building
-		Description: Provides power for other structures. Refines Taelon into credits.
-		BuildPaletteOrder: 20
-		BuildDuration: 30
-	Selectable:
-		Bounds: 72,84,0,-12
-		DecorationBounds: 72,84,0,-12
-	Building:
-		Footprint: _== xxx =xx ===
-		Dimensions: 3,4
-		LocalCenterOffset: 0,0,0
 	ProvidesPrerequisite:
 		Prerequisite: anypower
-	Valued:
-		Cost: 2000
-	Health:
-		HP: 1450
-	RevealsShroud:
-		Range: 8c0
+	Tooltip:
+		Name: Taelon Power Generator
 	Power:
 		Amount: 500
 	ScalePowerWithHealth:
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	Refinery:
 		DockAngle: 32
 		DockOffset: 0,2
@@ -478,10 +439,10 @@ Power:
 		PipColor: Green
 		PipCount: 12
 		Capacity: 3000
-	FreeActor:
-		Actor: Freighter
-		SpawnOffset: 0,2
-		Facing: 64
+	#FreeActor:
+	#	Actor: Freighter
+	#	SpawnOffset: 0,2
+	#	Facing: 64
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
@@ -492,36 +453,12 @@ Power:
 		Sequence: shadow
 	WithIdleOverlay@LAYER4:
 		Sequence: top2
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
 
 WaterLaunchPad:
-	Inherits: ^DrBuilding
-	RenderSprites:
-		Image: nclnc1l0
-	Tooltip:
-		Name: Water Launch Pad
-	Inherits@shape: ^4x3Shape
-	Buildable:
-		Queue: Building
-		BuildPaletteOrder: 10
-		Prerequisites: ~techlevel.infonly
-		Description: Refines spring water into credits.
-		BuildDuration: 37
-	Building:
-		Footprint: _xx_ xxxx ==x=
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Targetable:
-		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	HitShape:
-		Type: Rectangle
-			TopLeft: -2048, -1536
-			BottomRight: 2048, 1536
+	Inherits: WaterLaunchPad.Constructing
+	Inherits@4: ^DrBuilding
+	-SelfConstructing:
+	-Buildable:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: waterlaunch
@@ -535,8 +472,6 @@ WaterLaunchPad:
 		Range: 8c0
 	Power:
 		Amount: -100
-	Armor:
-		Type: BuildingArmour
 	Refinery:
 		DockAngle: 32
 		DockOffset: 1,2
@@ -561,13 +496,12 @@ WaterLaunchPad:
 		UseDeathTypeSuffix: false
 
 HQ.human:
-	Inherits: ^DrHeadquarters
-	RenderSprites:
-		Image: nfhqt1l0
+	Inherits: HQ.human.Constructing
+	Inherits@4: ^DrHeadquarters
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Headquarters
-	Buildable:
-		Prerequisites: ~rig.human
 	Health:
 		HP: 1200
 	WithIdleOverlay@LAYER1:

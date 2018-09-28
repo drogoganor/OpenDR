@@ -33,6 +33,7 @@ namespace OpenRA.Mods.Dr.Activities
 		readonly BuildingInfo buildingInfo;
 		readonly PlayerResources playerResources;
 		readonly ActorInfo buildingActor;
+        bool buildingPlaced = false;
 
 		public BuildOnSite(World world, Actor self, Order order, TraitPair<BuilderUnit> producer, string faction, BuildingInfo buildingInfo)
 		{
@@ -74,28 +75,23 @@ namespace OpenRA.Mods.Dr.Activities
 
 				self.World.AddFrameEndTask(w =>
 				{
-					var building = w.CreateActor(order.TargetString, new TypeDictionary
+					var building = w.CreateActor(true, order.TargetString, new TypeDictionary
 						{
 							new LocationInit(order.TargetLocation),
 							new OwnerInit(order.Player),
 							new FactionInit(faction),
-							new PlaceBuildingInit()
-						});
-
-					foreach (var s in buildingInfo.BuildSounds)
-						Game.Sound.PlayToPlayer(SoundType.World, order.Player, s, building.CenterPosition);
-
-					if (producer.Actor != null)
-						foreach (var nbp in producer.Actor.TraitsImplementing<INotifyBuildingPlaced>())
-							nbp.BuildingPlaced(producer.Actor);
+                            new PlaceBuildingInit()
+                        });
 
 					Game.Sound.PlayNotification(self.World.Map.Rules, order.Player, "Speech", "Building", faction);
-				});
+                });
 
-				return new RemoveSelf();
-			}
+                buildingPlaced = true;
 
-			return ActivityUtils.SequenceActivities(
+                return new RemoveSelf();
+            }
+
+            return ActivityUtils.SequenceActivities(
 				move.MoveTo(target, 2),
 				this);
 		}

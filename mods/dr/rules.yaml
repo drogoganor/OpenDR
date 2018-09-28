@@ -234,6 +234,12 @@ Player:
 		QueuedAudio: Upgrading
 		ReadyAudio: ConstructionComplete
 		BlockedAudio: Upgrading
+	BuilderQueue@Building:
+		Type: Building
+		Group: Building
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: Upgrading
 	ClassicProductionQueue@Defense:
 		Type: Defense
 		LowPowerSlowdown: 3

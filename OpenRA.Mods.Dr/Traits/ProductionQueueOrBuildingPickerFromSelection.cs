@@ -64,7 +64,7 @@ namespace OpenRA.Mods.Dr.Traits
 			if (builderQueue == null)
 			{
 				var types = world.Selection.Actors.Where(a => a.IsInWorld && a.World.LocalPlayer == a.Owner)
-					.SelectMany(a => a.TraitsImplementing<Production>())
+					.SelectMany(a => a.TraitsImplementing<Common.Traits.Production>())
 					.SelectMany(t => t.Info.Produces);
 
 				builderQueue = world.LocalPlayer.PlayerActor.TraitsImplementing<BuilderUnit>()
@@ -89,7 +89,7 @@ namespace OpenRA.Mods.Dr.Traits
 			if (queue == null)
 			{
 				var types = world.Selection.Actors.Where(a => a.IsInWorld && a.World.LocalPlayer == a.Owner)
-					.SelectMany(a => a.TraitsImplementing<Production>())
+					.SelectMany(a => a.TraitsImplementing<Common.Traits.Production>())
 					.SelectMany(t => t.Info.Produces);
 
 				queue = world.LocalPlayer.PlayerActor.TraitsImplementing<ProductionQueue>()
