@@ -46,7 +46,7 @@ namespace OpenRA.Mods.Dr.Graphics
 
 			var spriteName = sprite ?? sequence;
 
-            var validTilesetIds = new string[] { "JUNGLE", "SNOW" }; // Barren also has tileset-specific graphics but they don't look nice
+            var validTilesetIds = new string[] { "BARREN", "JUNGLE", "SNOW" }; // Barren also has tileset-specific graphics but they don't look nice
 
             if (spriteName.StartsWith("base|") && !spriteName.EndsWith(".shp"))
             {

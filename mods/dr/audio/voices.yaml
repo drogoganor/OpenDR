@@ -48,6 +48,7 @@ ConstructionVoice:
 	Voices:
 		Select: gvfg1sl0,gvfg1sl1,gvfg1sl2
 		Action: gvfg1rl0,gvfg1rl1,gvfg1rl2
+		Die: gxexpoc2
 
 RaiderVoice:
 	Inherits: FreedomGuardVoice

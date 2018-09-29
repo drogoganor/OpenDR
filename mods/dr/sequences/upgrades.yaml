@@ -1,0 +1,45 @@
+
+# FG HQ Upgrade 1
+bfhqtmn1:
+	icon:
+		Start: 0
+
+# FG HQ Upgrade 2
+bfhqtmn2:
+	icon:
+		Start: 0
+
+# FG Training Facility Upgrade 1
+bfutfmn1:
+	icon:
+		Start: 0
+
+# FG Assembly Plant Upgrade 1
+bfvcymn1:
+	icon:
+		Start: 0
+
+# Phasing facility upgrade
+bfphfmn1:
+	icon:
+		Start: 0
+
+# Imperium HQ Upgrade 1
+bihqtmn1:
+	icon:
+		Start: 0
+
+# Imperium HQ Upgrade 2
+bihqtmn2:
+	icon:
+		Start: 0
+
+# Imperium Training Facility Upgrade 1
+biutfmn1:
+	icon:
+		Start: 0
+
+# Imperium Assembly Plant Upgrade 1
+bivcymn1:
+	icon:
+		Start: 0

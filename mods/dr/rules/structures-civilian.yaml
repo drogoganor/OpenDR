@@ -1,0 +1,953 @@
+
+
+# SmallSHHorizontalBridge
+SmallSHHorizontalBridge:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tcsbh1l0
+	Inherits@shape: ^4x4Shape
+	Building:
+		Footprint: x=== ____ ____ ===x
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+		TerrainTypes: Clear,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase, HillSlope1, HillSlope2, Cliff1, Cliff2, Cliff3, Cliff4, Water
+	Buildable:
+		Prerequisites: rig
+		BuildPaletteOrder: 90
+		BuildDuration: 7
+	Valued:
+		Cost: 600
+	Power:
+		Amount: 0
+	Armor:
+		Type: BuildingArmour
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
+	Tooltip:
+		Name: Horizontal Bridge
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# SmallSHVerticalBridge
+SmallSHVerticalBridge:
+	Inherits: SmallSHHorizontalBridge
+	Building:
+		Footprint: x__= =__= =__= =__x
+	Tooltip:
+		Name: Vertical Bridge
+	RenderSprites:
+		Image: tcsbv1l0
+
+# SmallSHCentreBridge
+SmallSHCentreBridge:
+	Inherits: SmallSHHorizontalBridge
+	Building:
+		Footprint: x__= ____ ____ =__x
+	Tooltip:
+		Name: Center Bridge
+	RenderSprites:
+		Image: tcsbc1l0
+
+# Civilian stuff now
+
+SmallWall2:
+	Inherits: ^DrCivBuilding
+	Inherits@shape: ^3x3Shape
+	Building:
+		Footprint: xx= xxx =xx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
+	RenderSprites:
+		Image: tcswm1l0
+	Tooltip:
+		Name: Small Wall
+	Armor:
+		Type: BuildingArmour
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+SmallWall1:
+	Inherits: SmallWall2
+	Building:
+		Footprint: xx= xxx =xx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	RenderSprites:
+		Image: tcswl1l0
+
+LargeWall1:
+	Inherits: ^DrCivBuilding
+	Inherits@shape: ^3x3Shape
+	Building:
+		Footprint: xx= xxx =xx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
+	RenderSprites:
+		Image: tcbwl1l0
+	Tooltip:
+		Name: Big Wall
+	Armor:
+		Type: BuildingArmour
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+LargeWall2:
+	Inherits: LargeWall1
+	Building:
+		Footprint: =xx xxx xx=
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	RenderSprites:
+		Image: tcbwm1l0
+
+# Freedom Guard Treaty Hall
+FreedomGuardTreatyHall:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: totyh1l0
+	Inherits@shape: ^4x4Shape
+	Building:
+		Footprint: _xxx xxxx xxxx ===_
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
+	Tooltip:
+		Name: Freedom Guard Treaty Hall
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Imperium Desicator
+ImperiumDesicator:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: todes1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Imperium Desicator
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Rendezvous point
+RendezvousPoint:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: torvp1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Rendezvous Point
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Imperium Medical research 
+ImperiumMedicalResearch:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tomdr1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Imperium Medical Research 
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Imperium Water research
+ImperiumWaterResearch:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: towat1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Imperium Water Research 
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Imperium Hover research
+ImperiumHoverResearch:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tohov1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Imperium Hover Research 
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# FG Planetary Defense
+FGPlanetaryDefense:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: t0rad1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: FG Planetary Defense
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# FG Planetary Defense 2
+FGPlanetaryDefense2:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: topld1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: FG Planetary Defense 2
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Imperium Prison
+ImperiumPrison:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: topri1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Imperium Prison
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian Entertainment Facility
+CivilianEntertainmentFacility:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tocen1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Entertainment Facility
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian Public Shelter
+CivilianPublicShelter:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: toshl1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Public Shelter
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian SubTransit
+CivilianSubTransit:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tosub1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian SubTransit
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian Transit Centre
+CivilianTransitCentre:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: totcn1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Transit Centre
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian Commercial
+CivilianCommercial:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tocbs1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Commercial
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian Factory
+CivilianFactory:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: towar1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Factory
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian hall
+CivilianHall:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: t0hal1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Hall
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian large hall
+CivilianLargeHall:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: t0lar1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Large Hall
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian small hall
+CivilianSmallHall:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: t0sma1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Small Hall
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian Destiny
+CivilianDestiny:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: t0des1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Destiny
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian Rural
+CivilianRural:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tochm4l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Rural
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian Grain Field
+CivilianGrainFarm:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tofrm1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Grain Field
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+
+# Civilian Hydro Farm
+CivilianHydroFarm:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tofrm1l1
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Hydro Farm
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+
+# Civilian Farmhouse
+CivilianFarmhouse:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tofrm1l2
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Grain Fields
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+
+# Civilian Bridge
+CivilianBridge:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tobrd1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Bridge
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian Vertical Bridge
+CivilianVerticalBridge:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tobrd1l1
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Bridge
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+
+# Dirt Bridge
+DirtBridge:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tcvbvst0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Dirt Bridge
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Togran Monolith
+TogranMonolith:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: tomlt1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Togran Monolith
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+
+# Togran Door
+TogranDoor:
+	Inherits: ^DrCivBuilding
+	RenderSprites:
+		Image: totdr1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Togran Door
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay

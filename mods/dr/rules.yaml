@@ -227,6 +227,8 @@ EditorPlayer:
 Player:
 	Inherits: ^BasePlayer
 	TechTree:
+	DeveloperMode:
+		CheckboxDisplayOrder: 8
 	ClassicProductionQueue@Upgrade:
 		Type: Upgrade
 		LowPowerSlowdown: 2
@@ -264,8 +266,6 @@ Player:
 		SelectableCash: 10000, 15000, 20000, 30000, 45000, 60000, 90000
 		DefaultCash: 15000
 		InsufficientFundsNotification: InsufficientFunds
-	DeveloperMode:
-		CheckboxDisplayOrder: 8
 	FrozenActorLayer:
 	BaseAttackNotifier:
 	PlayerStatistics:

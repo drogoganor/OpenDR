@@ -1,36 +1,4 @@
 
-^SelfConstructingBuilding:
-	Inherits@1: ^ExistsInWorld
-	Inherits@3: ^SpriteActor
-	Buildable:
-		BuildDurationModifier: 2486 # DR build rate
-	SelfConstructing:
-		Steps: 1
-	SelectionDecorations:
-	Selectable:
-		Priority: 3
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	Building:
-		Dimensions: 1,1
-		Footprint: x
-		TerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
-		SkipMakeAnimation: True
-	WithSpriteBody:
-	HitShape@LAYER1:
-	HitShape@LAYER2:
-	HitShape@LAYER3:
-	HitShape@LAYER4:
-	Guardable:
-		Range: 3c0
-	FrozenUnderFog:
-	Tooltip:
-		GenericName: Structure
-	Demolishable:
-	EditorTilesetFilter:
-		Categories: Building
-	CommandBarBlacklist:
-
 Power.Constructing:
 	Inherits: ^SelfConstructingBuilding
 	RenderSprites:
@@ -42,7 +10,7 @@ Power.Constructing:
 		BuildPaletteOrder: 20
 		BuildDuration: 30
 	SelfConstructing:
-		Steps: 1
+		Steps: 20
 		Becomes: Power
 	MustBeDestroyed:
 		RequiredForShortGame: true
@@ -60,8 +28,6 @@ Power.Constructing:
 		Cost: 2000
 	Health:
 		HP: 1450
-	RevealsShroud:
-		Range: 8c0
 	Armor:
 		Type: BuildingArmour
 	Targetable:
@@ -81,7 +47,6 @@ Power.Constructing:
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
 
-
 WaterLaunchPad.Constructing:
 	Inherits: ^SelfConstructingBuilding
 	RenderSprites:
@@ -93,7 +58,7 @@ WaterLaunchPad.Constructing:
 		Description: Refines spring water into credits.
 		BuildDuration: 37
 	SelfConstructing:
-		Steps: 1
+		Steps: 20
 		Becomes: WaterLaunchPad
 	MustBeDestroyed:
 		RequiredForShortGame: true
@@ -119,8 +84,6 @@ WaterLaunchPad.Constructing:
 		Value: 600
 	Health:
 		HP: 1300
-	RevealsShroud:
-		Range: 8c0
 	Armor:
 		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
@@ -138,42 +101,6 @@ WaterLaunchPad.Constructing:
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
 
-^DrHeadquarters.Constructing:
-	Inherits: ^SelfConstructingBuilding
-	Tooltip:
-		Name: Headquarters
-	Buildable:
-		Queue: Building
-		BuildPaletteOrder: 0
-		BuildDuration: 22
-		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
-	Building:
-		Footprint: _xx_ xxxx xxxx xxx_
-		Dimensions: 4,4
-		LocalCenterOffset: 0,0,0
-	MustBeDestroyed:
-		RequiredForShortGame: true
-	HitShape:
-		UseTargetableCellsOffsets: true
-		Type: Rectangle
-			TopLeft: -2048, -2048
-			BottomRight: 2048, 2048
-	Selectable:
-		Bounds: 96,96,0,0
-		DecorationBounds: 96,96,0,0
-	Buildable:
-		Queue: Building
-		BuildPaletteOrder: 0
-		BuildDuration: 22
-		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
-	BaseBuilding:
-	Valued:
-		Cost: 750
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-
 HQ.human.Constructing:
 	Inherits: ^DrHeadquarters.Constructing
 	RenderSprites:
@@ -183,10 +110,713 @@ HQ.human.Constructing:
 	Buildable:
 		Prerequisites: ~rig.human
 	SelfConstructing:
-		Steps: 1
+		Steps: 20
 		Becomes: HQ.human
 	Health:
 		HP: 1200
+	WithIdleOverlay@LAYER1:
+		RenderBeforeBuildComplete: true
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		RenderBeforeBuildComplete: true
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		RenderBeforeBuildComplete: true
+		Palette: shadow
+		Sequence: shadow-building
+
+HQ.cyborg.Constructing:
+	Inherits: ^DrHeadquarters.Constructing
+	RenderSprites:
+		Image: nihqt1l0
+	Tooltip:
+		Name: Headquarters
+	Building:
+		Footprint: x==x xxxx xxxx =xxx
+	Buildable:
+		Prerequisites: ~rig.cyborg
+	SelfConstructing:
+		Steps: 20
+		Becomes: HQ.cyborg
+	Health:
+		HP: 1440
+	WithIdleOverlay@LAYER1:
+		RenderBeforeBuildComplete: true
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		RenderBeforeBuildComplete: true
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		RenderBeforeBuildComplete: true
+		Palette: shadow
+		Sequence: shadow-building
+
+HQ.togran.Constructing:
+	Inherits: ^DrHeadquarters.Constructing
+	RenderSprites:
+		Image: tothq1l0
+	Tooltip:
+		Name: Headquarters
+	Buildable:
+		Prerequisites: ~rig.togran
+	SelfConstructing:
+		Steps: 20
+		Becomes: HQ.togran
+	Health:
+		HP: 1200
+	WithIdleOverlay@LAYER1:
+		RenderBeforeBuildComplete: true
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER3:
+		RenderBeforeBuildComplete: true
+		Palette: shadow
+		Sequence: shadow-building
+
+TrainingFacility.fguard.Constructing:
+	Inherits: ^DrTrainingFacility.Constructing
+	RenderSprites:
+		Image: nfutf1l0
+	Tooltip:
+		Name: Training Facility
+	Buildable:
+		Prerequisites: ~rig.fguard, hq.fguard
+	SelfConstructing:
+		Steps: 20
+		Becomes: TrainingFacility.fguard
+	Health:
+		HP: 750
+	WithIdleOverlay@LAYER1:
+		RenderBeforeBuildComplete: true
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		RenderBeforeBuildComplete: true
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		RenderBeforeBuildComplete: true
+		Palette: shadow
+		Sequence: shadow-building
+
+TrainingFacility.cyborg.Constructing:
+	Inherits: ^DrTrainingFacility.Constructing
+	Inherits@shape: ^5x4Shape
+	RenderSprites:
+		Image: niutf1l0
+	Tooltip:
+		Name: Training Facility
+	Buildable:
+		Prerequisites: ~rig.cyborg, hq.cyborg
+	SelfConstructing:
+		Steps: 20
+		Becomes: TrainingFacility.cyborg
+	Building:
+		Footprint: =xxx= xxxxx xxxxx =xxx=
+		Dimensions: 5,4
+		LocalCenterOffset: 0,0,0
+	Health:
+		HP: 900
+	WithIdleOverlay@LAYER1:
+		RenderBeforeBuildComplete: true
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		RenderBeforeBuildComplete: true
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		RenderBeforeBuildComplete: true
+		Palette: shadow
+		Sequence: shadow-building
+
+AssemblyPlant.human.Constructing:
+	Inherits: ^DrAssemblyPlant.Constructing
+	RenderSprites:
+		Image: nfvcy1l0
+	Tooltip:
+		Name: Assembly Plant
+	Buildable:
+		Prerequisites: ~rig.human, hq.human
+	SelfConstructing:
+		Steps: 20
+		Becomes: AssemblyPlant.human
+	Health:
+		HP: 1000
+	#WithIdleOverlay@LAYER4:
+	#	Sequence: animation
+
+AssemblyPlant.cyborg.Constructing:
+	Inherits: ^DrAssemblyPlant.Constructing
+	RenderSprites:
+		Image: nivcy1l0
+	Tooltip:
+		Name: Assembly Plant
+	Buildable:
+		Prerequisites: ~rig.cyborg, hq.cyborg
+	SelfConstructing:
+		Steps: 20
+		Becomes: AssemblyPlant.cyborg
+	Building:
+		Footprint: _xxxx xxxxx xxxxx xxxxx =xxxx
+		Dimensions: 5,5
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 120,120,0,0
+		DecorationBounds: 120,120,0,0
+	HitShape:
+		Type: Rectangle
+			TopLeft: -2560, -2560
+			BottomRight: 2560, 2560
+	Health:
+		HP: 1200
+	#WithIdleOverlay@LAYER5: # Only for upgraded
+	#	Sequence: base
+
+# FG laser turret
+LaserTurret.Constructing:
+	Inherits: ^Defense.Constructing
+	RenderSprites:
+		Image: base|nfgdt1l0 # Manually set to barren here along with Imperium repair pad and Imp AA.
+		Palette: terrain
+	Tooltip:
+		Name: Laser Turret
+	Buildable:
+		Prerequisites: ~rig.human
+		Queue: Building
+		Description: Laser Defense Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 22
+	SelfConstructing:
+		Steps: 20
+		Becomes: LaserTurret
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+
+# Imperium plasma turret
+PlasmaTurret.Constructing:
+	Inherits: ^Defense.Constructing
+	RenderSprites:
+		Image: nigdt1l0
+	Tooltip:
+		Name: Plasma Turret
+	Buildable:
+		Prerequisites: ~rig.cyborg
+		Queue: Building
+		Description: Plasma Defense Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 22
+	SelfConstructing:
+		Steps: 20
+		Becomes: PlasmaTurret
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+
+# FG anti-air turret
+AntiAirTurret.human.Constructing:
+	Inherits: ^Defense.Constructing
+	RenderSprites:
+		Image: nfaar1l0 # Manually set to barren here along with Imperium repair pad and Imp AA.
+	Tooltip:
+		Name: Anti-Air Turret
+	Buildable:
+		Prerequisites: ~rig.human, hq.human, upgrade.hq1, vehicles, barracks
+		Queue: Building
+		Description: Anti-Air Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 30
+	SelfConstructing:
+		Steps: 20
+		Becomes: AntiAirTurret.human
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 12c0
+	-WithIdleOverlay@LAYER1:
+	#-WithIdleOverlay@LAYER2: # Problem with the sprites here
+
+# Imperium anti-air turret
+AntiAirTurret.cyborg.Constructing:
+	Inherits: ^Defense.Constructing
+	RenderSprites:
+		Image: niaar1l0
+		Palette: terrain # Manually set to barren here along with Laser Turret.
+	Tooltip:
+		Name: Anti-Air Turret
+	Buildable:
+		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
+		Queue: Building
+		Description: Anti-Air Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 30
+	SelfConstructing:
+		Steps: 20
+		Becomes: AntiAirTurret.cyborg
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 720
+	RevealsShroud:
+		Range: 12c0
+
+# FG heavy rail turret
+HeavyRailTurret.Constructing:
+	Inherits: ^Defense.Constructing
+	RenderSprites:
+		Image: nfagt1l0
+	Tooltip:
+		Name: Heavy Rail Turret
+	Inherits@shape: ^3x3Shape
+	Building:
+		Footprint: =x_ xxx xx=
+		Dimensions: 3,3
+	Buildable:
+		Prerequisites: ~rig.human, hq.human, upgrade.hq1, vehicles, barracks
+		Queue: Building
+		Description: Heavy Rail Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 51
+	SelfConstructing:
+		Steps: 20
+		Becomes: HeavyRailTurret
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
+	Valued:
+		Cost: 1700
+	Health:
+		HP: 550
+	RevealsShroud:
+		Range: 12c0
+
+# Imperium neutron accelerator
+NeutronAccelerator.Constructing:
+	Inherits: ^Defense.Constructing
+	RenderSprites:
+		Image: niagt1l0
+	Tooltip:
+		Name: Neutron Accelerator
+	Inherits@shape: ^3x3Shape
+	Building:
+		Footprint: =x= xxx xxx
+		Dimensions: 3,3
+		#LocalCenterOffset: 384,-256,0
+	Buildable:
+		Prerequisites:  ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
+		Queue: Building
+		Description: Neutron Accelerator
+		BuildPaletteOrder: 50
+		BuildDuration: 51
+	SelfConstructing:
+		Steps: 20
+		Becomes: NeutronAccelerator
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
+	Valued:
+		Cost: 1700
+	Health:
+		HP: 550
+	RevealsShroud:
+		Range: 8c0
+
+# Camera tower
+CameraTower.Constructing:
+	Inherits: ^DrGenericBuilding.Constructing
+	RenderSprites:
+		Image: nccam1l0
+	Inherits@shape: ^1x1Shape
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 24,38,0,-8
+		DecorationBounds: 24,38,0,-8
+	Tooltip:
+		Name: Camera Tower
+	Buildable:
+		Prerequisites: ~rig, hq, upgrade.hq1, vehicles, barracks
+		Queue: Building
+		Description: Camera Tower
+		BuildPaletteOrder: 50
+		BuildDuration: 6
+	SelfConstructing:
+		Steps: 20
+		Becomes: CameraTower
+	Valued:
+		Cost: 200
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 16c0
+
+# FG field hospital
+Hospital.human.Constructing:
+	Inherits: ^DrGenericBuilding.Constructing
+	RenderSprites:
+		Image: nfhsp1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Field Hospital
+	Buildable:
+		Prerequisites: ~rig.human, hq.human, barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 15
+	SelfConstructing:
+		Steps: 20
+		Becomes: Hospital.human
+	Valued:
+		Cost: 500
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		RenderBeforeBuildComplete: true
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		RenderBeforeBuildComplete: true
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		RenderBeforeBuildComplete: true
+		Palette: shadow
+		Sequence: shadow-building
+
+# Imperium field hospital
+Hospital.cyborg.Constructing:
+	Inherits: ^DrGenericBuilding.Constructing
+	RenderSprites:
+		Image: nihsp1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: xxx= xxxx =xxx
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Field Hospital
+	Buildable:
+		Prerequisites: ~rig.cyborg, hq.cyborg, barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 15
+	SelfConstructing:
+		Steps: 20
+		Becomes: Hospital.cyborg
+	Valued:
+		Cost: 500
+	Health:
+		HP: 720
+	RevealsShroud:
+		Range: 8c0
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		RenderBeforeBuildComplete: true
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		RenderBeforeBuildComplete: true
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		RenderBeforeBuildComplete: true
+		Palette: shadow
+		Sequence: shadow-building
+
+# FG repair pad
+Repair.human.Constructing:
+	Inherits: ^DrGenericBuilding.Constructing
+	Inherits@shape: ^4x3Shape
+	RenderSprites:
+		Image: nfrep1l0
+	Tooltip:
+		Name: Repair Station
+	Buildable:
+		Prerequisites: ~rig.human, hq.human, vehicles
+		BuildPaletteOrder: 50
+		BuildDuration: 24
+	SelfConstructing:
+		Steps: 20
+		Becomes: Repair.human
+	Building:
+		Footprint: =xx= xxxx =xx=
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	SelectionDecorations:
+	Valued:
+		Cost: 800
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	WithIdleOverlay@LAYER1:
+		RenderBeforeBuildComplete: true
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		RenderBeforeBuildComplete: true
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		RenderBeforeBuildComplete: true
+		Palette: shadow
+		Sequence: shadow-building
+
+# Imperium repair pad
+Repair.cyborg.Constructing:
+	Inherits: ^DrGenericBuilding.Constructing
+	RenderSprites:
+		Image: base|nirep1l0
+		Palette: terrain # Manually set to barren here along with Laser Turret.
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: xxx= xxxx =xx=
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Repair Station
+	Buildable:
+		Prerequisites: ~rig.cyborg, hq.cyborg, vehicles
+		BuildPaletteOrder: 50
+		BuildDuration: 24
+	SelfConstructing:
+		Steps: 20
+		Becomes: Repair.cyborg
+	Valued:
+		Cost: 800
+	Health:
+		HP: 720
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	#WithIdleOverlay@LAYER1:
+	#	RenderBeforeBuildComplete: true
+	#	Palette: terrain
+	#	Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		RenderBeforeBuildComplete: true
+		Palette: player
+		Sequence: top-building
+		IsPlayerPalette: True
+	WithIdleOverlay@LAYER3:
+		RenderBeforeBuildComplete: true
+		Palette: shadow
+		Sequence: shadow-building
+
+# Phasing facility
+PhasingFacility.Constructing:
+	Inherits: ^DrGenericBuilding.Constructing
+	Inherits@shape: ^4x3Shape
+	RenderSprites:
+		Image: nfphf1l0
+	Tooltip:
+		Name: Phasing Facility
+	Buildable:
+		Prerequisites: ~rig.human, hq.human
+		BuildPaletteOrder: 50
+		BuildDuration: 36
+	SelfConstructing:
+		Steps: 20
+		Becomes: PhasingFacility
+	Building:
+		Footprint: _xxx xxxx xxx_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Valued:
+		Cost: 1200
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	WithIdleOverlay@LAYER1:
+		RenderBeforeBuildComplete: true
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		RenderBeforeBuildComplete: true
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		RenderBeforeBuildComplete: true
+		Palette: shadow
+		Sequence: shadow-building
+
+# FG rearming deck
+RearmingDeck.human.Constructing:
+	Inherits: ^DrGenericBuilding.Constructing
+	Inherits@shape: ^3x3Shape
+	RenderSprites:
+		Image: nfrrm1l0
+	Tooltip:
+		Name: Rearming Deck
+	Buildable:
+		Prerequisites: ~rig.human, hq.human, upgrade.hq2, vehicles, barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 30
+	SelfConstructing:
+		Steps: 20
+		Becomes: RearmingDeck.human
+	Building:
+		Footprint: === xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 72,72,0,16
+		DecorationBounds: 72,72,0,16
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	WithIdleOverlay@LAYER1:
+		RenderBeforeBuildComplete: true
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		RenderBeforeBuildComplete: true
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		RenderBeforeBuildComplete: true
+		Palette: shadow
+		Sequence: shadow-building
+
+# Imperium rearming deck
+RearmingDeck.cyborg.Constructing:
+	Inherits: ^DrGenericBuilding.Constructing
+	Inherits@shape: ^3x3Shape
+	Building:
+		Footprint: === xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 72,72,0,16
+		DecorationBounds: 72,72,0,16
+	RenderSprites:
+		Image: nirrm1l0
+	Tooltip:
+		Name: Rearming Deck
+	Buildable:
+		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 30
+	SelfConstructing:
+		Steps: 20
+		Becomes: RearmingDeck.cyborg
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 960
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	WithIdleOverlay@LAYER1:
+		RenderBeforeBuildComplete: true
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		RenderBeforeBuildComplete: true
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		RenderBeforeBuildComplete: true
+		Palette: shadow
+		Sequence: shadow-building
+
+# Imperium temporal gate
+TemporalGate.Constructing:
+	Inherits: ^DrGenericBuilding.Constructing
+	Inherits@shape: ^3x2Shape
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
+	RenderSprites:
+		Image: nitgt1l0
+	Tooltip:
+		Name: Temporal Gate
+	Buildable:
+		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
+		BuildPaletteOrder: 50
+		BuildDuration: 54
+	SelfConstructing:
+		Steps: 20
+		Becomes: TemporalGate
+	Valued:
+		Cost: 1800
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	WithIdleOverlay@LAYER1:
+		RenderBeforeBuildComplete: true
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		RenderBeforeBuildComplete: true
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		RenderBeforeBuildComplete: true
+		Palette: shadow
+		Sequence: shadow-building
+
+# Imperium temporal rift creator
+TemporalRiftCreator.Constructing:
+	Inherits: ^DrGenericBuilding.Constructing
+	Inherits@shape: ^4x4Shape
+	Building:
+		Footprint: _==_ =xx= xxxx =xxx
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
+	RenderSprites:
+		Image: nitrc1l0
+	Tooltip:
+		Name: Temporal Rift Creator
+	Buildable:
+		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
+		BuildPaletteOrder: 60
+		BuildDuration: 240
+	SelfConstructing:
+		Steps: 20
+		Becomes: TemporalRiftCreator
+	Valued:
+		Cost: 8000
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
 	WithIdleOverlay@LAYER1:
 		RenderBeforeBuildComplete: true
 		Palette: terrain

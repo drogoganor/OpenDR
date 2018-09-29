@@ -33,7 +33,6 @@ namespace OpenRA.Mods.Dr.Activities
 		readonly BuildingInfo buildingInfo;
 		readonly PlayerResources playerResources;
 		readonly ActorInfo buildingActor;
-        bool buildingPlaced = false;
 
 		public BuildOnSite(World world, Actor self, Order order, TraitPair<BuilderUnit> producer, string faction, BuildingInfo buildingInfo)
 		{
@@ -85,8 +84,6 @@ namespace OpenRA.Mods.Dr.Activities
 
 					Game.Sound.PlayNotification(self.World.Map.Rules, order.Player, "Speech", "Building", faction);
                 });
-
-                buildingPlaced = true;
 
                 return new RemoveSelf();
             }

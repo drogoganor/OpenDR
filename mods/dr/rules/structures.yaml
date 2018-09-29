@@ -1,426 +1,10 @@
 
 
-^BasicBuilding:
-	WithSpriteControlGroupDecoration:
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	SoundOnDamageTransition:
-		DamagedSounds: gxexpoc2.wav
-		DestroyedSounds: gxexpoc1.wav
-	CaptureNotification:
-	ShakeOnDeath:
-	ProximityCaptor:
-		Types: Building
-	EditorTilesetFilter:
-		Categories: Building
-
-^CivBuilding:
-	Inherits: ^BasicBuilding
-	EditorTilesetFilter:
-		Categories: Civilian
-
-^DrBuilding:
-	Inherits: ^BasicBuilding
-	Huntable:
-	UpdatesPlayerStatistics:
-	RepairableBuilding:
-		RepairStep: 20
-		PlayerExperience: 25
-	EngineerRepairable:
-	AcceptsDeliveredCash:
-	#WithMakeAnimation:
-	#ExternalCapturable:
-	#ExternalCapturableBar:
-	Capturable:
-	MustBeDestroyed:
-		RequiredForShortGame: true
-	Sellable:
-		SellSounds: cashturn.aud
-	Explodes:
-		Weapon: GenericExplode
-		EmptyWeapon: GenericExplode
-	WithBuildingRepairDecoration:
-		Image: allyrepair
-		Sequence: repair
-		ReferencePoint: Center
-		Palette: player
-		IsPlayerPalette: True
-
-^DrBuildingOLD:
-	Inherits: ^BasicBuilding
-	Inherits@1: ^ExistsInWorld
-	Inherits@3: ^SpriteActor
-	Huntable:
-	UpdatesPlayerStatistics:
-	RepairableBuilding:
-		RepairStep: 20
-		PlayerExperience: 25
-	EngineerRepairable:
-	AcceptsDeliveredCash:
-	#WithMakeAnimation:
-	#ExternalCapturable:
-	#ExternalCapturableBar:
-	Capturable:
-	MustBeDestroyed:
-		RequiredForShortGame: true
-	Sellable:
-		SellSounds: cashturn.aud
-	Explodes:
-		Weapon: GenericExplode
-		EmptyWeapon: GenericExplode
-	WithBuildingRepairDecoration:
-		Image: allyrepair
-		Sequence: repair
-		ReferencePoint: Center
-		Palette: player
-		IsPlayerPalette: True
-
-^DrHeadquarters:
-	Inherits: ^DrHeadquarters.Constructing
-	ProvidesPrerequisite@buildingname:
-	ProvidesPrerequisite:
-		Prerequisite: hq
-	ProvidesPrerequisite@human:
-		Factions: fguard, xenite, togran
-		Prerequisite: hq.human
-	ProvidesPrerequisite@cyborg:
-		Factions: imperium, shadowhand, togran
-		Prerequisite: hq.cyborg
-	ProvidesPrerequisite@fguard:
-		Factions: fguard, togran
-		Prerequisite: hq.fguard
-	ProvidesPrerequisite@imperium:
-		Factions: imperium, togran
-		Prerequisite: hq.imperium
-	ProvidesPrerequisite@xenite:
-		Factions: xenite, togran
-		Prerequisite: hq.xenite
-	ProvidesPrerequisite@shadowhand:
-		Factions: shadowhand, togran
-		Prerequisite: hq.shadowhand
-	Production:
-		Produces: Upgrade,Economy
-	RallyPoint:
-		Offset: 4,5
-	Exit@1:
-		SpawnOffset: 0,0,0
-		ExitCell: 2,2
-		ProductionTypes: Upgrade,Economy
-	ProductionQueue@Economy:
-		Type: Economy
-		#LowPowerSlowdown: 1
-		Group: Economy
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
-		BlockedAudio: NoRoom
-	ProductionBar@Economy:
-		ProductionType: Economy
-		Color: 8A8A8A
-	ProductionBar@Upgrade:
-		ProductionType: Upgrade
-	Valued:
-		Cost: 750
-	RevealsShroud:
-		Range: 8c0
-	Power:
-		Amount: 100
-	Armor:
-		Type: BuildingArmour
-	ProvidesRadar:
-		#RequiresCondition: !jammed && !disabled
-	GrantConditionOnPrerequisite@con1:
-		Prerequisites: upgrade.hq1
-		Condition: dec1
-	GrantConditionOnPrerequisite@con2:
-		Prerequisites: upgrade.hq2
-		Condition: dec2
-	WithDecoration@upgraded:
-		RequiresSelection: true
-		Image: pips
-		Sequence: pip-blue
-		ReferencePoint: Bottom, Left
-		ZOffset: 256
-		RequiresCondition: dec1
-	WithDecoration@upgraded2:
-		RequiresSelection: true
-		Image: pips
-		Sequence: pip-red
-		ReferencePoint: Bottom, Left
-		ZOffset: 256
-		RequiresCondition: dec2
-
-^Upgrade:
-	AlwaysVisible:
-	Interactable:
-	ScriptTriggers:
-	Buildable:
-		BuildPaletteOrder: 50
-		Queue: Upgrade
-		BuildLimit: 1
-		BuildDurationModifier: 2486 # DR build rate
-		Description: Unlocks additional construction options
-		BuildDuration: 52
-
-
-upgrade.hq1:
-	Inherits: ^Upgrade
-	Tooltip:
-		Name: Headquarters 2
-	Buildable:
-		BuildPaletteOrder: 50
-		Queue: Upgrade
-		Prerequisites: ~hq, ~barracks, ~vehicles
-		Description: Unlocks additional construction options
-		BuildDuration: 52
-	Valued:
-		Cost: 2050
-	RenderSprites:
-		Image: bfhqtmn1
-	ProvidesPrerequisite@upgradename:
-
-upgrade.hq2:
-	Inherits: ^Upgrade
-	Tooltip:
-		Name: Headquarters 3
-	Buildable:
-		BuildPaletteOrder: 50
-		Prerequisites: ~hq, ~upgrade.hq1, ~vehicles, ~barracks, ~upgrade.barracks1, ~upgrade.assemblyplant1
-		Description: Unlocks additional construction options
-		BuildDuration: 89
-	Valued:
-		Cost: 3300
-	RenderSprites:
-		Image: bfhqtmn2
-	ProvidesPrerequisite@upgradename:
-
-upgrade.barracks1:
-	Inherits: ^Upgrade
-	Tooltip:
-		Name: Advanced Training Facility
-	Buildable:
-		BuildPaletteOrder: 50
-		Prerequisites: ~hq, ~upgrade.hq1, ~barracks
-		Description: Unlocks additional construction options
-		BuildDuration: 68
-	Valued:
-		Cost: 2550
-	RenderSprites:
-		Image: bfutfmn1
-	ProvidesPrerequisite@upgradename:
-
-upgrade.assemblyplant1:
-	Inherits: ^Upgrade
-	Tooltip:
-		Name: Advanced Assembly Plant
-	Buildable:
-		BuildPaletteOrder: 50
-		Prerequisites: ~hq, ~upgrade.hq1, ~vehicles
-		BuildDuration: 141
-		Description: Unlocks additional construction options
-	Valued:
-		Cost: 5000
-	RenderSprites:
-		Image: bfvcymn1
-	ProvidesPrerequisite@upgradename:
-
-upgrade.phasing:
-	Inherits: ^Upgrade
-	Tooltip:
-		Name: Advanced Phasing Facility Upgrade
-	Buildable:
-		BuildPaletteOrder: 50
-		Prerequisites: ~hq, ~upgrade.hq1, ~phasing
-		BuildDuration: 72
-		Description: Unlocks additional construction options
-	Valued:
-		Cost: 2700
-	RenderSprites:
-		Image: bfphfmn1
-	ProvidesPrerequisite@upgradename:
-
-
-^DrGenericBuilding:
-	Inherits: ^DrBuildingOLD
-	Buildable:
-		Queue: Building
-		Description: Generic
-		Prerequisites: hq
-		BuildPaletteOrder: 30
-		BuildDuration: 45
-	Valued:
-		Cost: 1500
-	RevealsShroud:
-		Range: 8c0
-	Power:
-		Amount: -100
-	Armor:
-		Type: BuildingArmour
-
-^DrTrainingFacility:
-	Inherits: ^DrBuildingOLD
-	Tooltip:
-		Name: Training Facility
-	Inherits@shape: ^5x4Shape
-	Buildable:
-		Queue: Building
-		Description: Trains infantry.
-		Prerequisites: hq
-		BuildPaletteOrder: 30
-		BuildDuration: 45
-	Valued:
-		Cost: 1500
-	RevealsShroud:
-		Range: 8c0
-	Power:
-		Amount: -100
-	Armor:
-		Type: Building
-	Building:
-		Footprint: xxxxx xxxxx xxxxx xxxx=
-		Dimensions: 5,4
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 120,96,0,0
-		DecorationBounds: 120,96,0,0
-	RallyPoint:
-		Offset: 4,5
-	Exit@1:
-		SpawnOffset: 512,256,0
-		ExitCell: 3,3
-		ProductionTypes: Soldier, Infantry, DrSoldier
-	Production:
-		Produces: Infantry, Soldier, DrSoldier
-	ProductionQueue@Infantry:
-		Type: Infantry
-		Group: Infantry
-		LowPowerSlowdown: 1
-	ProductionBar:
-	ProvidesPrerequisite@barracks:
-		Prerequisite: barracks
-	ProvidesPrerequisite@human:
-		Factions: fguard, xenite, togran
-		Prerequisite: infantry.human
-	ProvidesPrerequisite@cyborg:
-		Factions: imperium, shadowhand, togran
-		Prerequisite: infantry.cyborg
-	ProvidesPrerequisite@fguard:
-		Factions: fguard, togran
-		Prerequisite: infantry.fguard
-	ProvidesPrerequisite@imperium:
-		Factions: imperium, togran
-		Prerequisite: infantry.imperium
-	ProvidesPrerequisite@xenite:
-		Factions: xenite, togran
-		Prerequisite: infantry.xenite
-	ProvidesPrerequisite@shadowhand:
-		Factions: shadowhand, togran
-		Prerequisite: infantry.shadowhand
-	ProvidesPrerequisite@buildingname:
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
-	GrantConditionOnPrerequisite:
-		Prerequisites: upgrade.barracks1
-		Condition: stardecoration
-	WithDecoration@upgraded:
-		RequiresSelection: true
-		Image: pips
-		Sequence: pip-red
-		ReferencePoint: Bottom, Left
-		ZOffset: 256
-		RequiresCondition: stardecoration
-
-^DrAssemblyPlant:
-	Inherits: ^DrBuildingOLD
-	Tooltip:
-		Name: Assembly Plant
-	Inherits@shape: ^5x5Shape
-	Buildable:
-		Queue: Building
-		BuildPaletteOrder: 40
-		BuildDuration: 66
-		Description: Produces vehicles.
-	Building:
-		Footprint: ===__ =xx== xxxxx ==xxx ==xx=
-		Dimensions: 5,5
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 120,120,0,0
-		DecorationBounds: 120,120,0,0
-	Valued:
-		Cost: 2200
-	RevealsShroud:
-		Range: 8c0
-	Power:
-		Amount: -100
-	Armor:
-		Type: BuildingArmour
-	Exit@1:
-		SpawnOffset: -512,768,0
-		ExitCell: 1,3
-	Production:
-		Produces: Vehicle, DrVehicle, DrAnimatedVehicle
-	ProductionQueue@Vehicle:
-		Type: Vehicle
-		Group: Vehicle
-		LowPowerSlowdown: 3
-		QueuedAudio: Building
-		#SpeedUp: True
-		#BuildTimeSpeedReduction: 100, 75, 60, 50
-	ProvidesPrerequisite@buildingname:
-	ProvidesPrerequisite@vehicles:
-		Prerequisite: vehicles
-	ProvidesPrerequisite@human:
-		Factions: fguard, xenite, togran
-		Prerequisite: vehicles.human
-	ProvidesPrerequisite@cyborg:
-		Factions: imperium, shadowhand, togran
-		Prerequisite: vehicles.cyborg
-	ProvidesPrerequisite@fguard:
-		Factions: fguard, togran
-		Prerequisite: vehicles.fguard
-	ProvidesPrerequisite@imperium:
-		Factions: imperium, togran
-		Prerequisite: vehicles.imperium
-	ProvidesPrerequisite@xenite:
-		Factions: xenite, togran
-		Prerequisite: vehicles.xenite
-	ProvidesPrerequisite@shadowhand:
-		Factions: shadowhand, togran
-		Prerequisite: vehicles.shadowhand
-	ProductionBar:
-	RallyPoint:
-		Offset: 0,6
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
-	GrantConditionOnPrerequisite:
-		Prerequisites: upgrade.assemblyplant1
-		Condition: stardecoration
-	WithDecoration@upgraded:
-		RequiresSelection: true
-		Image: pips
-		Sequence: pip-red
-		ReferencePoint: Bottom, Left
-		ZOffset: 256
-		RequiresCondition: stardecoration
-
-^Defense:
-	Inherits: ^DrBuildingOLD
-	RenderRangeCircle:
-	RenderDetectionCircle:
-	MustBeDestroyed:
-		RequiredForShortGame: false
-	Targetable:
-		TargetTypes: Ground, C4, Structure, Defense
-	EditorTilesetFilter:
-		Categories: Defense
-
-
 ## Actual buildings start here
-
 
 Power:
 	Inherits: Power.Constructing
-	Inherits@4: ^DrBuilding
+	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
 	RenderSprites:
@@ -456,7 +40,7 @@ Power:
 
 WaterLaunchPad:
 	Inherits: WaterLaunchPad.Constructing
-	Inherits@4: ^DrBuilding
+	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
 	ProvidesPrerequisite@buildingname:
@@ -514,15 +98,12 @@ HQ.human:
 		Sequence: shadow
 
 HQ.cyborg:
-	Inherits: ^DrHeadquarters
-	RenderSprites:
-		Image: nihqt1l0
+	Inherits: HQ.cyborg.Constructing
+	Inherits@4: ^DrHeadquarters
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Headquarters
-	Building:
-		Footprint: x==x xxxx xxxx =xxx
-	Buildable:
-		Prerequisites: ~rig.cyborg
 	Health:
 		HP: 1440
 	RallyPoint:
@@ -541,13 +122,14 @@ HQ.cyborg:
 		Sequence: shadow
 
 HQ.togran:
-	Inherits: ^DrHeadquarters
+	Inherits: HQ.togran.Constructing
+	Inherits@4: ^DrHeadquarters
+	-SelfConstructing:
+	-Buildable:
 	RenderSprites:
 		Image: tothq1l0
 	Tooltip:
 		Name: Headquarters
-	Buildable:
-		Prerequisites: ~rig.togran
 	Health:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
@@ -560,13 +142,12 @@ HQ.togran:
 		Sequence: shadow
 
 TrainingFacility.fguard:
-	Inherits: ^DrTrainingFacility
-	RenderSprites:
-		Image: nfutf1l0
+	Inherits: TrainingFacility.fguard.Constructing
+	Inherits@4: ^DrTrainingFacility
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Training Facility
-	Buildable:
-		Prerequisites: ~rig.fguard, hq.fguard
 	Health:
 		HP: 750
 	WithIdleOverlay@LAYER1:
@@ -582,27 +163,22 @@ TrainingFacility.fguard:
 	#WithIdleOverlay@LAYER5: # Only for upgraded
 	#	Sequence: base
 
-TrainingFacility.cyborg
-	Inherits: ^DrTrainingFacility
-	Inherits@shape: ^5x4Shape
-	RenderSprites:
-		Image: niutf1l0
+TrainingFacility.cyborg:
+	Inherits: TrainingFacility.cyborg.Constructing
+	Inherits@4: ^DrTrainingFacility
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Training Facility
-	Buildable:
-		Prerequisites: ~rig.cyborg, hq.cyborg
+	Health:
+		HP: 900
 	Building:
 		Footprint: =xxx= xxxxx xxxxx =xxx=
 		Dimensions: 5,4
 		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 120,96,0,0
-		DecorationBounds: 120,96,0,0
 	Exit@1:
 		SpawnOffset: 1280,768,0
 		ExitCell: 3,3
-	Health:
-		HP: 900
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
@@ -617,16 +193,12 @@ TrainingFacility.cyborg
 	#	Sequence: base
 
 AssemblyPlant.human:
-	Inherits: ^DrAssemblyPlant
-	RenderSprites:
-		Image: nfvcy1l0
+	Inherits: AssemblyPlant.human.Constructing
+	Inherits@4: ^DrAssemblyPlant
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Assembly Plant
-	Buildable:
-		Prerequisites: ~rig.human, hq.human
-	#Exit@2:
-	#	SpawnOffset: 512,-256,0
-	#	ExitCell: 3,1
 	Health:
 		HP: 1000
 	WithIdleOverlay@LAYER1:
@@ -641,24 +213,12 @@ AssemblyPlant.human:
 	#	Sequence: animation
 
 AssemblyPlant.cyborg:
-	Inherits: ^DrAssemblyPlant
-	RenderSprites:
-		Image: nivcy1l0
+	Inherits: AssemblyPlant.cyborg.Constructing
+	Inherits@4: ^DrAssemblyPlant
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Assembly Plant
-	Buildable:
-		Prerequisites: ~rig.cyborg, hq.cyborg
-	Building:
-		Footprint: _xxxx xxxxx xxxxx xxxxx =xxxx
-		Dimensions: 5,5
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 120,120,0,0
-		DecorationBounds: 120,120,0,0
-	HitShape:
-		Type: Rectangle
-			TopLeft: -2560, -2560
-			BottomRight: 2560, 2560
 	Exit@1:
 		SpawnOffset: -768,768,0
 		ExitCell: 1,3
@@ -677,55 +237,15 @@ AssemblyPlant.cyborg:
 	#WithIdleOverlay@LAYER5: # Only for upgraded
 	#	Sequence: base
 
-^SmallTurret:
-	Inherits: ^Defense
-	Inherits@shape: ^2x2Shape
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-	Selectable:
-		Bounds: 40,40,0,0
-		DecorationBounds: 40,40,0,0
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	Valued:
-		Cost: 500
-	Health:
-		HP: 400
-	RevealsShroud:
-		Range: 9c0
-	Power:
-		Amount: -50
-	Armor:
-		Type: BuildingArmour
-	WithSpriteTurret:
-	AttackTurreted:
-	WithMuzzleOverlay:
-	DetectCloaked:
-		Range: 2c0
-	WithIdleOverlay@LAYER1:
-		Sequence: underlay
-	WithIdleOverlay@LAYER2:
-		Sequence: top
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
 # FG laser turret
 LaserTurret:
-	Inherits: ^SmallTurret
-	RenderSprites:
-		Image: base|nfgdt1l0 # Manually set to barren here along with Imperium repair pad and Imp AA.
-		Palette: terrain 
+	Inherits: LaserTurret.Constructing
+	Inherits@4: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Laser Turret
-	Buildable:
-		Prerequisites: ~rig.human
-		Queue: Building
-		Description: Laser Defense Turret
-		BuildPaletteOrder: 50
-		BuildDuration: 22
 	Turreted:
 		TurnSpeed: 16
 		InitialFacing: 56
@@ -737,18 +257,13 @@ LaserTurret:
 
 # Imperium plasma turret
 PlasmaTurret:
-	Inherits: ^SmallTurret
-	RenderSprites:
-		Image: nigdt1l0
+	Inherits: PlasmaTurret.Constructing
+	Inherits@4: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetGround
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Plasma Turret
-	Buildable:
-		Prerequisites: ~rig.cyborg
-		Queue: Building
-		Description: Plasma Defense Turret
-		BuildPaletteOrder: 50
-		BuildDuration: 22
 	Turreted:
 		TurnSpeed: 12
 		InitialFacing: 56
@@ -757,26 +272,76 @@ PlasmaTurret:
 		Weapon: GatPlasma
 		LocalOffset: 512,0,112
 
+# FG anti-air turret
+AntiAirTurret.human:
+	Inherits: AntiAirTurret.human.Constructing
+	Inherits@4: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	-SelfConstructing:
+	-Buildable:
+	Tooltip:
+		Name: Anti-Air Turret
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 12c0
+	Power:
+		Amount: -50
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: FixedGroundToAirLaser
+		LocalOffset: 512,0,112
+	WithIdleOverlay@LAYER1:
+		Sequence: underlay-building
+		Palette: terrain
+	#WithIdleOverlay@LAYER2:
+	#	Sequence: top-building
+	#	Palette: barren
+
+# Imperium anti-air turret
+AntiAirTurret.cyborg:
+	Inherits: AntiAirTurret.cyborg.Constructing
+	Inherits@4: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	-SelfConstructing:
+	-Buildable:
+	Tooltip:
+		Name: Anti-Air Turret
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 720
+	RevealsShroud:
+		Range: 12c0
+	Power:
+		Amount: -50
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: IMPFixedGroundToAirLaser
+		LocalOffset: 512,0,112
+	#-WithIdleOverlay@LAYER1: # Problem with the sprites here
+	WithIdleOverlay@LAYER2:
+		Palette: player
+		Sequence: top
+		IsPlayerPalette: True
+
 # FG heavy rail turret
 HeavyRailTurret:
-	Inherits: ^Defense
-	RenderSprites:
-		Image: nfagt1l0
-	Inherits@shape: ^3x3Shape
+	Inherits: HeavyRailTurret.Constructing
+	Inherits@4: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetGround
-	Building:
-		Footprint: =x_ xxx xx=
-		Dimensions: 3,3
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Heavy Rail Turret
-	Buildable:
-		Prerequisites: ~rig.human, hq.human, upgrade.hq1, vehicles, barracks
-		Queue: Building
-		Description: Heavy Rail Turret
-		BuildPaletteOrder: 50
-		BuildDuration: 51
 	Valued:
 		Cost: 1700
 	Health:
@@ -785,8 +350,9 @@ HeavyRailTurret:
 		Range: 12c0
 	Power:
 		Amount: -100
-	Armor:
-		Type: BuildingArmour
+	Selectable:
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
 	Turreted:
 		TurnSpeed: 12
 		InitialFacing: 56
@@ -810,25 +376,13 @@ HeavyRailTurret:
 
 # Imperium neutron accelerator
 NeutronAccelerator:
-	Inherits: ^Defense
-	RenderSprites:
-		Image: niagt1l0
-	Inherits@shape: ^3x3Shape
+	Inherits: NeutronAccelerator.Constructing
+	Inherits@4: ^Defense
 	Inherits@AUTOTARGET: ^AutoTargetGround
-	Building:
-		Footprint: =x= xxx xxx
-		Dimensions: 3,3
-		#LocalCenterOffset: 384,-256,0
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Neutron Accelerator
-	Buildable:
-		Prerequisites:  ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
-		Queue: Building
-		Description: Neutron Accelerator
-		BuildPaletteOrder: 50
-		BuildDuration: 51
 	Valued:
 		Cost: 1700
 	Health:
@@ -837,8 +391,9 @@ NeutronAccelerator:
 		Range: 8c0
 	Power:
 		Amount: -100
-	Armor:
-		Type: BuildingArmour
+	Selectable:
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
 	Turreted:
 		TurnSpeed: 12
 		InitialFacing: 56
@@ -860,97 +415,14 @@ NeutronAccelerator:
 		Palette: shadow
 		Sequence: shadow
 
-# FG anti-air turret
-AntiAirTurret.human:
-	Inherits: ^SmallTurret
-	RenderSprites:
-		Image: nfaar1l0
-	Inherits@AUTOTARGET: ^AutoTargetAir
-	Tooltip:
-		Name: Anti-Air Turret
-	Buildable:
-		Prerequisites: ~rig.human, hq.human, upgrade.hq1, vehicles, barracks
-		Queue: Building
-		Description: Anti-Air Turret
-		BuildPaletteOrder: 50
-		BuildDuration: 30
-	Valued:
-		Cost: 1000
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 12c0
-	Power:
-		Amount: -50
-	Armor:
-		Type: BuildingArmour
-	Turreted:
-		TurnSpeed: 12
-		InitialFacing: 56
-		Offset: 256,-24,255
-	Armament:
-		Weapon: FixedGroundToAirLaser
-		LocalOffset: 512,0,112
-
-# Imperium anti-air turret
-AntiAirTurret.cyborg:
-	Inherits: ^SmallTurret
-	RenderSprites:
-		Image: niaar1l0
-		Palette: terrain # Manually set to barren here along with Laser Turret.
-	Inherits@AUTOTARGET: ^AutoTargetAir
-	Tooltip:
-		Name: Anti-Air Turret
-	Buildable:
-		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
-		Queue: Building
-		Description: Anti-Air Turret
-		BuildPaletteOrder: 50
-		BuildDuration: 30
-	Valued:
-		Cost: 1000
-	Health:
-		HP: 720
-	RevealsShroud:
-		Range: 12c0
-	Power:
-		Amount: -50
-	Armor:
-		Type: BuildingArmour
-	Turreted:
-		TurnSpeed: 12
-		InitialFacing: 56
-		Offset: 256,-24,255
-	Armament:
-		Weapon: IMPFixedGroundToAirLaser
-		LocalOffset: 512,0,112
-	#-WithIdleOverlay@LAYER1: # Problem with the sprites here
-	WithIdleOverlay@LAYER2:
-		Palette: player
-		Sequence: top
-		IsPlayerPalette: True
-
 # Camera tower
 CameraTower:
-	Inherits: ^DrGenericBuilding
-	RenderSprites:
-		Image: nccam1l0
-	Inherits@shape: ^1x1Shape
-	Building:
-		Footprint: x
-		Dimensions: 1,1
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 24,38,0,-8
-		DecorationBounds: 24,38,0,-8
+	Inherits: CameraTower.Constructing
+	Inherits@4: ^DrGenericBuilding
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Camera Tower
-	Buildable:
-		Prerequisites: ~rig, hq, upgrade.hq1, vehicles, barracks
-		Queue: Building
-		Description: Camera Tower
-		BuildPaletteOrder: 50
-		BuildDuration: 6
 	Valued:
 		Cost: 200
 	Health:
@@ -959,8 +431,6 @@ CameraTower:
 		Range: 16c0
 	Power:
 		Amount: -50
-	Armor:
-		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
@@ -972,23 +442,12 @@ CameraTower:
 
 # FG field hospital
 Hospital.human:
-	Inherits: ^DrGenericBuilding
-	RenderSprites:
-		Image: nfhsp1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+	Inherits: Hospital.human.Constructing
+	Inherits@4: ^DrGenericBuilding
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Field Hospital
-	Buildable:
-		Prerequisites: ~rig.human, hq.human, barracks
-		BuildPaletteOrder: 50
-		BuildDuration: 15
 	ProvidesPrerequisite@hospital:
 		Prerequisite: hospital
 	RepairsUnits:
@@ -1001,18 +460,8 @@ Hospital.human:
 	RallyPoint:
 		Offset: 3,5
 	WithRepairAnimation:
-	Valued:
-		Cost: 500
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
 	Power:
 		Amount: -100
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
@@ -1024,17 +473,10 @@ Hospital.human:
 
 # Imperium field hospital
 Hospital.cyborg:
-	Inherits: ^DrGenericBuilding
-	RenderSprites:
-		Image: nihsp1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: xxx= xxxx =xxx
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+	Inherits: Hospital.cyborg.Constructing
+	Inherits@4: ^DrGenericBuilding
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Field Hospital
 	Buildable:
@@ -1053,18 +495,8 @@ Hospital.cyborg:
 	RallyPoint:
 		Offset: 3,5
 	WithRepairAnimation:
-	Valued:
-		Cost: 500
-	Health:
-		HP: 720
-	RevealsShroud:
-		Range: 8c0
 	Power:
 		Amount: -100
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
@@ -1076,25 +508,14 @@ Hospital.cyborg:
 
 # FG repair pad
 Repair.human:
-	Inherits: ^DrGenericBuilding
-	Inherits@shape: ^4x3Shape
-	RenderSprites:
-		Image: nfrep1l0
+	Inherits: Repair.human.Constructing
+	Inherits@4: ^DrGenericBuilding
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Repair Station
-	Buildable:
-		Prerequisites: ~rig.human, hq.human, vehicles
-		BuildPaletteOrder: 50
-		BuildDuration: 24
-	Building:
-		Footprint: =xx= xxxx =xx=
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
 	ProvidesPrerequisite@repair:
 		Prerequisite: repair
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
 	SelectionDecorations:
 	Reservable:
 	RallyPoint:
@@ -1113,8 +534,6 @@ Repair.human:
 		Range: 8c0
 	Power:
 		Amount: -100
-	Armor:
-		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
@@ -1126,24 +545,12 @@ Repair.human:
 
 # Imperium repair pad
 Repair.cyborg:
-	Inherits: ^DrGenericBuilding
-	RenderSprites:
-		Image: base|nirep1l0
-		Palette: terrain # Manually set to barren here along with Laser Turret.
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: xxx= xxxx =xx=
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+	Inherits: Repair.cyborg.Constructing
+	Inherits@4: ^DrGenericBuilding
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Repair Station
-	Buildable:
-		Prerequisites: ~rig.cyborg, hq.cyborg, vehicles
-		BuildPaletteOrder: 50
-		BuildDuration: 24
 	ProvidesPrerequisite@repair:
 		Prerequisite: repair
 	Reservable:
@@ -1163,8 +570,6 @@ Repair.cyborg:
 		Range: 8c0
 	Power:
 		Amount: -100
-	Armor:
-		Type: BuildingArmour
 	#WithIdleOverlay@LAYER1:
 	#	Palette: terrain
 	#	Sequence: underlay
@@ -1178,25 +583,14 @@ Repair.cyborg:
 
 # Phasing facility
 PhasingFacility:
-	Inherits: ^DrGenericBuilding
-	Inherits@shape: ^4x3Shape
-	RenderSprites:
-		Image: nfphf1l0
+	Inherits: PhasingFacility.Constructing
+	Inherits@4: ^DrGenericBuilding
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Phasing Facility
-	Buildable:
-		Prerequisites: ~rig.human, hq.human
-		BuildPaletteOrder: 50
-		BuildDuration: 36
 	ProvidesPrerequisite@phasing:
 		Prerequisite: phasing
-	Building:
-		Footprint: _xxx xxxx xxx_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
 	Valued:
 		Cost: 1200
 	Health:
@@ -1205,8 +599,6 @@ PhasingFacility:
 		Range: 8c0
 	Power:
 		Amount: -100
-	Armor:
-		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
@@ -1228,25 +620,14 @@ PhasingFacility:
 
 # FG rearming deck
 RearmingDeck.human:
-	Inherits: ^DrGenericBuilding
-	Inherits@shape: ^3x3Shape
-	RenderSprites:
-		Image: nfrrm1l0
+	Inherits: RearmingDeck.human.Constructing
+	Inherits@4: ^DrGenericBuilding
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Rearming Deck
-	Buildable:
-		Prerequisites: ~rig.human, hq.human, upgrade.hq2, vehicles, barracks
-		BuildPaletteOrder: 50
-		BuildDuration: 30
 	ProvidesPrerequisite@air:
 		Prerequisite: air
-	Building:
-		Footprint: === xxx xxx
-		Dimensions: 3,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 72,72,0,16
-		DecorationBounds: 72,72,0,16
 	Valued:
 		Cost: 1000
 	Health:
@@ -1255,8 +636,6 @@ RearmingDeck.human:
 		Range: 8c0
 	Power:
 		Amount: -120
-	Armor:
-		Type: BuildingArmour
 	RallyPoint:
 		Offset: 1,-2
 	Reservable:
@@ -1271,23 +650,12 @@ RearmingDeck.human:
 
 # Imperium rearming deck
 RearmingDeck.cyborg:
-	Inherits: ^DrGenericBuilding
-	Inherits@shape: ^3x3Shape
-	Building:
-		Footprint: === xxx xxx
-		Dimensions: 3,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 72,72,0,16
-		DecorationBounds: 72,72,0,16
-	RenderSprites:
-		Image: nirrm1l0
+	Inherits: RearmingDeck.cyborg.Constructing
+	Inherits@4: ^DrGenericBuilding
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Rearming Deck
-	Buildable:
-		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
-		BuildPaletteOrder: 50
-		BuildDuration: 30
 	ProvidesPrerequisite@air:
 		Prerequisite: air
 	Valued:
@@ -1298,8 +666,6 @@ RearmingDeck.cyborg:
 		Range: 8c0
 	Power:
 		Amount: -100
-	Armor:
-		Type: BuildingArmour
 	RallyPoint:
 		Offset: 1,-2
 	Reservable:
@@ -1314,23 +680,12 @@ RearmingDeck.cyborg:
 
 # Imperium temporal gate
 TemporalGate:
-	Inherits: ^DrGenericBuilding
-	Inherits@shape: ^3x2Shape
-	Building:
-		Footprint: xxx xxx
-		Dimensions: 3,2
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 72,72,0,0
-		DecorationBounds: 72,72,0,0
-	RenderSprites:
-		Image: nitgt1l0
+	Inherits: TemporalGate.Constructing
+	Inherits@4: ^DrGenericBuilding
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Temporal Gate
-	Buildable:
-		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
-		BuildPaletteOrder: 50
-		BuildDuration: 54
 	ProvidesPrerequisite@temporal:
 		Prerequisite: temporal
 	Valued:
@@ -1341,8 +696,6 @@ TemporalGate:
 		Range: 8c0
 	Power:
 		Amount: -200
-	Armor:
-		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
@@ -1354,23 +707,12 @@ TemporalGate:
 
 # Imperium temporal rift creator
 TemporalRiftCreator:
-	Inherits: ^DrGenericBuilding
-	Inherits@shape: ^4x4Shape
-	Building:
-		Footprint: _==_ =xx= xxxx =xxx
-		Dimensions: 4,4
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,96,0,0
-		DecorationBounds: 96,96,0,0
-	RenderSprites:
-		Image: nitrc1l0
+	Inherits: TemporalRiftCreator.Constructing
+	Inherits@4: ^DrGenericBuilding
+	-SelfConstructing:
+	-Buildable:
 	Tooltip:
 		Name: Temporal Rift Creator
-	Buildable:
-		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
-		BuildPaletteOrder: 60
-		BuildDuration: 240
 	ProvidesPrerequisite@temporal:
 		Prerequisite: temporal
 	Valued:
@@ -1381,8 +723,6 @@ TemporalRiftCreator:
 		Range: 8c0
 	Power:
 		Amount: -200
-	Armor:
-		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
@@ -1391,955 +731,3 @@ TemporalRiftCreator:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow
-
-# SmallSHHorizontalBridge
-SmallSHHorizontalBridge:
-	Inherits: ^DrGenericBuilding
-	RenderSprites:
-		Image: tcsbh1l0
-	Inherits@shape: ^4x4Shape
-	Building:
-		Footprint: x=== ____ ____ ===x
-		Dimensions: 4,4
-		LocalCenterOffset: 0,0,0
-		TerrainTypes: Clear,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase, HillSlope1, HillSlope2, Cliff1, Cliff2, Cliff3, Cliff4, Water
-	Buildable:
-		Prerequisites: rig
-		BuildPaletteOrder: 90
-		BuildDuration: 7
-	Valued:
-		Cost: 600
-	Power:
-		Amount: 0
-	Armor:
-		Type: BuildingArmour
-	Selectable:
-		Bounds: 96,96,0,0
-		DecorationBounds: 96,96,0,0
-	Tooltip:
-		Name: Horizontal Bridge
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# SmallSHVerticalBridge
-SmallSHVerticalBridge:
-	Inherits: SmallSHHorizontalBridge
-	Building:
-		Footprint: x__= =__= =__= =__x
-	Tooltip:
-		Name: Vertical Bridge
-	RenderSprites:
-		Image: tcsbv1l0
-
-# SmallSHCentreBridge
-SmallSHCentreBridge:
-	Inherits: SmallSHHorizontalBridge
-	Building:
-		Footprint: x__= ____ ____ =__x
-	Tooltip:
-		Name: Center Bridge
-	RenderSprites:
-		Image: tcsbc1l0
-
-# Civilian stuff now
-
-SmallWall2:
-	Inherits: ^CivBuilding
-	Inherits@shape: ^3x3Shape
-	Building:
-		Footprint: xx= xxx =xx
-		Dimensions: 3,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 72,72,0,0
-		DecorationBounds: 72,72,0,0
-	RenderSprites:
-		Image: tcswm1l0
-	Tooltip:
-		Name: Small Wall
-	Armor:
-		Type: BuildingArmour
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-SmallWall1:
-	Inherits: SmallWall2
-	Building:
-		Footprint: xx= xxx =xx
-		Dimensions: 3,3
-		LocalCenterOffset: 0,0,0
-	RenderSprites:
-		Image: tcswl1l0
-
-LargeWall1:
-	Inherits: ^CivBuilding
-	Inherits@shape: ^3x3Shape
-	Building:
-		Footprint: xx= xxx =xx
-		Dimensions: 3,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 72,72,0,0
-		DecorationBounds: 72,72,0,0
-	RenderSprites:
-		Image: tcbwl1l0
-	Tooltip:
-		Name: Big Wall
-	Armor:
-		Type: BuildingArmour
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-LargeWall2:
-	Inherits: LargeWall1
-	Building:
-		Footprint: =xx xxx xx=
-		Dimensions: 3,3
-		LocalCenterOffset: 0,0,0
-	RenderSprites:
-		Image: tcbwm1l0
-
-# Freedom Guard Treaty Hall
-FreedomGuardTreatyHall:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: totyh1l0
-	Inherits@shape: ^4x4Shape
-	Building:
-		Footprint: _xxx xxxx xxxx ===_
-		Dimensions: 4,4
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,96,0,0
-		DecorationBounds: 96,96,0,0
-	Tooltip:
-		Name: Freedom Guard Treaty Hall
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER2:
-		Sequence: top
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Imperium Desicator
-ImperiumDesicator:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: todes1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Imperium Desicator
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Rendezvous point
-RendezvousPoint:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: torvp1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Rendezvous Point
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER2:
-		Sequence: top
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Imperium Medical research 
-ImperiumMedicalResearch:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tomdr1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Imperium Medical Research 
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Imperium Water research
-ImperiumWaterResearch:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: towat1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Imperium Water Research 
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Imperium Hover research
-ImperiumHoverResearch:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tohov1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Imperium Hover Research 
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# FG Planetary Defense
-FGPlanetaryDefense:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: t0rad1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: FG Planetary Defense
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# FG Planetary Defense 2
-FGPlanetaryDefense2:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: topld1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: FG Planetary Defense 2
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Imperium Prison
-ImperiumPrison:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: topri1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Imperium Prison
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Civilian Entertainment Facility
-CivilianEntertainmentFacility:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tocen1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Entertainment Facility
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Civilian Public Shelter
-CivilianPublicShelter:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: toshl1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Public Shelter
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Civilian SubTransit
-CivilianSubTransit:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tosub1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian SubTransit
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Civilian Transit Centre
-CivilianTransitCentre:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: totcn1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Transit Centre
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Civilian Commercial
-CivilianCommercial:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tocbs1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Commercial
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Civilian Factory
-CivilianFactory:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: towar1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Factory
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Civilian hall
-CivilianHall:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: t0hal1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Hall
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Civilian large hall
-CivilianLargeHall:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: t0lar1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Large Hall
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Civilian small hall
-CivilianSmallHall:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: t0sma1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Small Hall
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Civilian Destiny
-CivilianDestiny:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: t0des1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Destiny
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Civilian Rural
-CivilianRural:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tochm4l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Rural
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Civilian Grain Field
-CivilianGrainFarm:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tofrm1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Grain Field
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-
-# Civilian Hydro Farm
-CivilianHydroFarm:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tofrm1l1
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Hydro Farm
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-
-# Civilian Farmhouse
-CivilianFarmhouse:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tofrm1l2
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Grain Fields
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-
-# Civilian Bridge
-CivilianBridge:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tobrd1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Bridge
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Civilian Vertical Bridge
-CivilianVerticalBridge:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tobrd1l1
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Civilian Bridge
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-
-# Dirt Bridge
-DirtBridge:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tcvbvst0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Dirt Bridge
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-# Togran Monolith
-TogranMonolith:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: tomlt1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Togran Monolith
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
-
-
-# Togran Door
-TogranDoor:
-	Inherits: ^CivBuilding
-	RenderSprites:
-		Image: totdr1l0
-	Inherits@shape: ^4x3Shape
-	Building:
-		Footprint: _xxx xxxx ===_
-		Dimensions: 4,3
-		LocalCenterOffset: 0,0,0
-	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
-	Tooltip:
-		Name: Togran Door
-	Health:
-		HP: 600
-	RevealsShroud:
-		Range: 8c0
-	Armor:
-		Type: BuildingArmour
-	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, Structure
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay

@@ -42,7 +42,6 @@ ncpow1l0:
 	fake-icon: bcpowmn0
 		Offset: 0, 0
 
-
 # Water Launch Pad
 nclnc1l0:
 	building:
@@ -149,129 +148,14 @@ nfhqt1l0:
 	fake-icon: bfhqtmn0
 		Offset: 0, 0
 
-bfhqtmn1:
-	icon:
-		Start: 0
-		
-bfhqtmn2:
-	icon:
-		Start: 0
-
-# Phasing facility upgrade icon
-bfphfmn1:
-	icon:
-		Start: 0
-
-
-# Freedom Guard Training Facility
-nfutf1l0:
-	Defaults:
-		Offset: 0, -2
-	idle:
-		Start: 1
-	make0:
-		Start: 0
-		Length: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: base|nfutf1l0
-		ZOffset: -8192
-		Start: 1
-	up2underlay: base|nfutf2l0
-		ZOffset: -8192
-		Start: 1
-	top: tfutf1l0
-		Start: 1
-	up2base: nfutf2l0
-		ZOffset: -8192
-		Start: 1
-	up2top: tfutf2l0
-		Start: 1
-	animation: tfutf2l0 # flag
-		Start: 3
-		Length: 14
-		Tick: 150
-	shadow: bfutfsh0
-		Start: 1
-		Offset: 12, -2
-	up2shadow: bfutfsh1
-		Start: 1
-		Offset: 12, -2
-	icon: bfutfmn0
-		Offset: 0, 0
-	fake-icon: bfutfmn0
-		Offset: 0, 0
-
-bfutfmn1:
-	icon:
-		Start: 0
-
-# Freedom Guard Assembly Plant
-nfvcy1l0:
-	Defaults:
-		Offset: 12, 0
-	idle:
-		Start: 1
-	make0:
-		Start: 0
-		Length: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: base|nfvcy1l0
-		ZOffset: -8192
-		Start: 1
-	up2underlay: base|nfvcy2l0
-		ZOffset: -8192
-		Start: 1
-	top: tfvcy1l0
-		Start: 1
-	up2top: tfvcy2l0
-		Start: 1
-	animation: tfvcy2l0 # chimney
-		Start: 3
-		Length: 40
-		Tick: 150
-	shadow: bfvcysh0
-		Start: 1
-		Offset: 12, -2
-	up2shadow: bfvcysh1
-		Start: 1
-		Offset: 12, -2
-	icon: bfvcymn0
-		Offset: 0, 0
-	fake-icon: bfvcymn0
-		Offset: 0, 0
-
-bfvcymn1:
-	icon:
-		Start: 0
-
 # Imperium HQ
 nihqt1l0:
 	Defaults:
 		Offset: 6, -22
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make0:
@@ -290,6 +174,9 @@ nihqt1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|nihqt1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|nihqt1l0
 		ZOffset: -8192
 		Start: 1
@@ -299,12 +186,17 @@ nihqt1l0:
 	up3underlay: base|nihqt3l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tihqt1l0
+		Start: 0
 	top: tihqt1l0
 		Start: 1
 	up2top: tihqt2l0
 		Start: 1
 	up3top: tihqt3l0
 		Start: 1
+	shadow-building: bihqtsh0
+		Start: 0
+		Offset: 30, -10
 	shadow: bihqtsh0
 		Start: 1
 		Offset: 30, -10
@@ -319,18 +211,116 @@ nihqt1l0:
 	fake-icon: bihqtmn0
 		Offset: 0, 0
 
-bihqtmn1:
-	icon:
+# Togran HQ
+tothq1l0:
+	building:
 		Start: 0
-		
-bihqtmn2:
-	icon:
+		Length: 1
+		Tick: 8000
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 1
+	underlay-building: nothq1l0 # no base|xx..
+		ZOffset: -8192
 		Start: 0
+	underlay: nothq1l0 # no base|xx..
+		ZOffset: -8192
+		Start: 1
+	top: tothq1l0
+		Start: 3
+		Length: 3
+		Tick: 100
+	shadow-building: tothqsh0
+		Start: 0
+		Offset: 13, 9
+	shadow: tothqsh0
+		Start: 1
+		Offset: 13, 9
+	icon: bothqmn0
+	fake-icon: bothqmn0
+
+# Freedom Guard Training Facility
+nfutf1l0:
+	Defaults:
+		Offset: 0, -2
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
+	idle:
+		Start: 1
+	make0:
+		Start: 0
+		Length: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 1
+	underlay-building: base|nfutf1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: base|nfutf1l0
+		ZOffset: -8192
+		Start: 1
+	up2underlay: base|nfutf2l0
+		ZOffset: -8192
+		Start: 1
+	top-building: tfutf1l0
+		Start: 0
+	top: tfutf1l0
+		Start: 1
+	up2base: nfutf2l0
+		ZOffset: -8192
+		Start: 1
+	up2top: tfutf2l0
+		Start: 1
+	animation: tfutf2l0 # flag
+		Start: 3
+		Length: 14
+		Tick: 150
+	shadow-building: bfutfsh0
+		Start: 0
+		Offset: 12, -2
+	shadow: bfutfsh0
+		Start: 1
+		Offset: 12, -2
+	up2shadow: bfutfsh1
+		Start: 1
+		Offset: 12, -2
+	icon: bfutfmn0
+		Offset: 0, 0
+	fake-icon: bfutfmn0
+		Offset: 0, 0
 
 # Imperium Training Facility
 niutf1l0:
 	Defaults:
 		Offset: 10, 6
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make0:
@@ -349,12 +339,17 @@ niutf1l0:
 	dead:
 		Start: 0
 		Tick: 1
+	underlay-building: base|niutf1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|niutf1l0
 		ZOffset: -8192
 		Start: 1
 	up2underlay: base|niutf2l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tiutf1l0
+		Start: 0
 	top: tiutf1l0
 		Start: 1
 	up2base: niutf2l0
@@ -366,6 +361,9 @@ niutf1l0:
 		Start: 3
 		Length: 5
 		Tick: 500
+	shadow-building: biutfsh0
+		Start: 0
+		Offset: 22, 6
 	shadow: biutfsh0
 		Start: 1
 		Offset: 22, 6
@@ -377,12 +375,71 @@ niutf1l0:
 	fake-icon: biutfmn0
 		Offset: 0, 0
 
-biutfmn1:
-	icon:
+# Freedom Guard Assembly Plant
+nfvcy1l0:
+	Defaults:
+		Offset: 12, 0
+	building:
 		Start: 0
+		Length: 1
+		Tick: 8000
+	idle:
+		Start: 1
+	make0:
+		Start: 0
+		Length: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 1
+	underlay-building: base|nfvcy1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: base|nfvcy1l0
+		ZOffset: -8192
+		Start: 1
+	up2underlay: base|nfvcy2l0
+		ZOffset: -8192
+		Start: 1
+	top-building: tfvcy1l0
+		Start: 0
+	top: tfvcy1l0
+		Start: 1
+	up2top: tfvcy2l0
+		Start: 1
+	animation: tfvcy2l0 # chimney
+		Start: 3
+		Length: 40
+		Tick: 150
+	shadow-building: bfvcysh0
+		Start: 0
+		Offset: 12, -2
+	shadow: bfvcysh0
+		Start: 1
+		Offset: 12, -2
+	up2shadow: bfvcysh1
+		Start: 1
+		Offset: 12, -2
+	icon: bfvcymn0
+		Offset: 0, 0
+	fake-icon: bfvcymn0
+		Offset: 0, 0
 
 # Imperium Assembly Plant
 nivcy1l0:
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make0:
@@ -401,12 +458,17 @@ nivcy1l0:
 	dead:
 		Start: 0
 		Tick: 1
+	underlay-building: base|nivcy1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|nivcy1l0
 		ZOffset: -8192
 		Start: 1
 	up2underlay: base|nivcy2l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tivcy1l0
+		Start: 0
 	top: tivcy1l0
 		Start: 1
 	up2base: nivcy2l0
@@ -414,6 +476,9 @@ nivcy1l0:
 		Start: 1
 	up2top: tivcy2l0
 		Start: 1
+	shadow-building: bivcysh0
+		Start: 0
+		Offset: 11, 12
 	shadow: bivcysh0
 		Start: 1
 		Offset: 11, 12
@@ -423,12 +488,12 @@ nivcy1l0:
 	icon: bivcymn0
 	fake-icon: bivcymn0
 
-bivcymn1:
-	icon:
-		Start: 0
-
 # FG Laser turret
 base|nfgdt1l0:
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -450,11 +515,19 @@ base|nfgdt1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: nfgdt1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: nfgdt1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tfgdt1l0
+		Start: 0
 	top: tfgdt1l0
 		Start: 1
+	shadow-building: bfgdtsh0
+		Start: 0
+		Offset: 0, -1
 	shadow: bfgdtsh0
 		Start: 1
 		Offset: 0, -1
@@ -463,6 +536,10 @@ base|nfgdt1l0:
 
 # Imperium Plasma turret
 nigdt1l0:
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 		ZOffset: -128
@@ -485,10 +562,17 @@ nigdt1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|nigdt1l0
+		Start: 0
 	underlay: base|nigdt1l0
 		Start: 1
+	top-building: tigdt1l0
+		Start: 0
 	top: tigdt1l0
 		Start: 1
+	shadow-building: bigdtsh0
+		Start: 0
+		Offset: 11, 2
 	shadow: bigdtsh0
 		Start: 1
 		Offset: 11, 2
@@ -497,6 +581,10 @@ nigdt1l0:
 
 # FG Anti-air turret
 nfaar1l0:
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -518,11 +606,19 @@ nfaar1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|nfaar1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|nfaar1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tfaar1l0
+		Start: 0
 	top: tfaar1l0
 		Start: 1
+	shadow-building: bfaarsh0
+		Start: 0
+		Offset: 12, 2
 	shadow: bfaarsh0
 		Start: 1
 		Offset: 12, 2
@@ -533,6 +629,10 @@ nfaar1l0:
 niaar1l0:
 	Defaults:
 		Offset: -1, -14
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -554,11 +654,19 @@ niaar1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|niaar1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|niaar1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tiaar1l0
+		Start: 0
 	top: tiaar1l0
 		Start: 1
+	shadow-building: biaarsh0
+		Start: 0
+		Offset: -2, 0
 	shadow: biaarsh0
 		Start: 1
 		Offset: -2, 0
@@ -569,6 +677,10 @@ niaar1l0:
 
 # FG Heavy rail
 nfagt1l0:
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -590,11 +702,19 @@ nfagt1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|nfagt1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|nfagt1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tfagt1l0
+		Start: 0
 	top: tfagt1l0
 		Start: 1
+	shadow-building: bfagtsh0
+		Start: 0
+		Offset: 13, 14
 	shadow: bfagtsh0
 		Start: 1
 		Offset: 13, 14
@@ -603,6 +723,10 @@ nfagt1l0:
 
 # Imperium neutron accelerator
 niagt1l0:
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -624,11 +748,19 @@ niagt1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: base|niagt1l0
+	underlay-building: barren|tiagt1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: barren|tiagt1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tiagt1l0
+		Start: 0
 	top: tiagt1l0
 		Start: 1
+	shadow-building: biagtsh0
+		Start: 0
+		Offset: 12, 6
 	shadow: biagtsh0
 		Start: 1
 		Offset: 12, 6
@@ -639,6 +771,10 @@ niagt1l0:
 nccam1l0:
 	Defaults:
 		Offset: 1, -12
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -654,11 +790,19 @@ nccam1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|nccam1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|nccam1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tccam1l0
+		Start: 0
 	top: tccam1l0
 		Start: 1
+	shadow-building: bccamsh0
+		Start: 0
+		Offset: 13, 0
 	shadow: bccamsh0
 		Start: 1
 		Offset: 13, 0
@@ -671,6 +815,10 @@ nccam1l0:
 nfhsp1l0:
 	Defaults:
 		Offset: -6, 0
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -694,11 +842,19 @@ nfhsp1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|nfhsp1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|nfhsp1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tfhsp1l0
+		Start: 0
 	top: tfhsp1l0
 		Start: 1
+	shadow-building: bfhspsh0
+		Start: 0
+		Offset: -8, 0
 	shadow: bfhspsh0
 		Start: 1
 		Offset: -8, 0
@@ -709,6 +865,10 @@ nfhsp1l0:
 
 # Imperium field hospital
 nihsp1l0:
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -732,11 +892,19 @@ nihsp1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|nihsp1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|nihsp1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tihsp1l0
+		Start: 0
 	top: tihsp1l0
 		Start: 1
+	shadow-building: bihspsh0
+		Start: 0
+		Offset: 1, -2
 	shadow: bihspsh0
 		Start: 1
 		Offset: 1, -2
@@ -745,6 +913,10 @@ nihsp1l0:
 
 # FG Repair
 nfrep1l0:
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -768,11 +940,19 @@ nfrep1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|nfrep1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|nfrep1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tfrep1l0
+		Start: 0
 	top: tfrep1l0
 		Start: 1
+	shadow-building: bfrepsh0
+		Start: 0
+		Offset: 0, 13
 	shadow: bfrepsh0
 		Start: 1
 		Offset: 0, 13
@@ -781,6 +961,10 @@ nfrep1l0:
 
 # Imperium repair
 base|nirep1l0:
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -804,11 +988,19 @@ base|nirep1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: nirep1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: nirep1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tirep1l0
+		Start: 0
 	top: tirep1l0
 		Start: 1
+	shadow-building: birepsh0
+		Start: 0
+		Offset: -1, 0
 	shadow: birepsh0
 		Start: 1
 		Offset: -1, 0
@@ -819,6 +1011,10 @@ base|nirep1l0:
 nfphf1l0:
 	Defaults:
 		Offset: 0, -6
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -834,11 +1030,19 @@ nfphf1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|nfphf1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|nfphf1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tfphf1l0
+		Start: 0
 	top: tfphf1l0
 		Start: 1
+	shadow-building: bfphfsh0
+		Start: 0
+		Offset: 0, 7
 	shadow: bfphfsh0
 		Start: 1
 		Offset: 0, 7
@@ -852,6 +1056,10 @@ nfrrm1l0:
 	Defaults:
 		Offset: 0, 16
 		ZOffset: -1024
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	active:
@@ -873,11 +1081,19 @@ nfrrm1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|nfrrm1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|nfrrm1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tfrrm1l0
+		Start: 0
 	top: tfrrm1l0
 		Start: 1
+	shadow-building: bfrrmsh0
+		Start: 0
+		Offset: 12, 16
 	shadow: bfrrmsh0
 		Start: 1
 		Offset: 12, 16
@@ -891,6 +1107,10 @@ nirrm1l0:
 	Defaults:
 		Offset: 0, 16
 		ZOffset: -1024
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -906,11 +1126,19 @@ nirrm1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|nirrm1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|nirrm1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: tirrm1l0
+		Start: 0
 	top: tirrm1l0
 		Start: 1
+	shadow-building: birrmsh0
+		Start: 0
+		Offset: 23, 37
 	shadow: birrmsh0
 		Start: 1
 		Offset: 23, 37
@@ -921,6 +1149,10 @@ nirrm1l0:
 
 # Imperium temporal gate
 nitgt1l0:
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -936,11 +1168,19 @@ nitgt1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|nitgt1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|nitgt1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: titgt1l0
+		Start: 0
 	top: titgt1l0
 		Start: 1
+	shadow-building: bitgtsh0
+		Start: 0
+		Offset: -1, 1
 	shadow: bitgtsh0
 		Start: 1
 		Offset: -1, 1
@@ -949,6 +1189,10 @@ nitgt1l0:
 
 # Imperium temporal rift creator
 nitrc1l0:
+	building:
+		Start: 0
+		Length: 1
+		Tick: 8000
 	idle:
 		Start: 1
 	make:
@@ -964,937 +1208,21 @@ nitrc1l0:
 	dead:
 		Start: 1
 		Tick: 1
+	underlay-building: base|nitrc1l0
+		ZOffset: -8192
+		Start: 0
 	underlay: base|nitrc1l0
 		ZOffset: -8192
 		Start: 1
+	top-building: titrc1l0
+		Start: 0
 	top: titrc1l0
 		Start: 1
+	shadow-building: bitrcsh0
+		Start: 0
+		Offset: 11, 15
 	shadow: bitrcsh0
 		Start: 1
 		Offset: 11, 15
 	icon: bitrcmn0
 	fake-icon: bitrcmn0
-
-# SmallSHHorizontalBridge
-tcsbh1l0:
-	idle:
-		Start: 0
-	make:
-		Start: 0
-	build:
-		Start: 0
-		Length: 1
-	damaged-idle:
-		Start: 0
-	damaged-build:
-		Start: 0
-		Length: 1
-	dead:
-		Start: 0
-		Tick: 1
-	underlay: ncsbh1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 0
-	shadow: bcsbvmn0
-		Start: 0
-		Offset: 0, 1
-	icon: bcsbhmn0
-	fake-icon: bcsbhmn0
-
-# SmallSHVerticalBridge
-tcsbv1l0:
-	idle:
-		Start: 0
-	make:
-		Start: 0
-	build:
-		Start: 0
-		Length: 1
-	damaged-idle:
-		Start: 0
-	damaged-build:
-		Start: 0
-		Length: 1
-	dead:
-		Start: 0
-		Tick: 1
-	underlay: ncsbv1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 0
-	shadow: bcsbvmn0
-		Start: 0
-		Offset: 0, 1
-	icon: bcsbvmn0
-	fake-icon: bcsbvmn0
-
-# SmallSHCentreBridge
-tcsbc1l0:
-	idle:
-		Start: 0
-	make:
-		Start: 0
-	build:
-		Start: 0
-		Length: 1
-	damaged-idle:
-		Start: 0
-	damaged-build:
-		Start: 0
-		Length: 1
-	dead:
-		Start: 0
-		Tick: 1
-	underlay: ncsbc1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 0
-	shadow: bcsbcsh0
-		Start: 0
-		Offset: 0, 1
-	icon: bcsbcmn0
-	fake-icon: bcsbcmn0
-
-
-# Civilian stuff now
-
-# Small wall left
-tcswm1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	shadow: ncswmsh0
-		Start: 0
-		Offset: 0, 1
-	icon: bcswmmn0
-	fake-icon: bcswmmn0
-
-# Small wall right
-tcswl1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	shadow: ncswlsh0
-		Start: 0
-		Offset: 0, 1
-	icon: bcswlmn0
-	fake-icon: bcswlmn0
-
-# Big wall left
-tcbwl1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	shadow: ncbwlsh0
-		Start: 0
-		Offset: 0, 1
-	icon: bcbwmmn0
-	fake-icon: bcbwmmn0
-
-# Big wall right
-tcbwm1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	shadow: ncbwmsh0
-		Start: 0
-		Offset: 0, 1
-	icon: bcbwlmn0
-	fake-icon: bcbwlmn0
-
-# Freedom Guard Treaty Hall
-totyh1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: notyh1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	top: totyh1l0
-		Start: 3
-		Length: 2
-		Tick: 100
-	shadow: totyhsh0
-		Start: 1
-		Offset: 16, 0
-	icon: botyhmn0
-	fake-icon: botyhmn0
-
-# Togran HQ
-tothq1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nothq1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	top: tothq1l0
-		Start: 3
-		Length: 3
-		Tick: 100
-	shadow: tothqsh0
-		Start: 1
-		Offset: 13, 9
-	icon: bothqmn0
-	fake-icon: bothqmn0
-
-# Imperium Desicator
-todes1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nodes1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: todessh0
-		Start: 1
-		Offset: 6, 4
-	icon: bodesmn0
-	fake-icon: bodesmn0
-
-# Rendezvous point
-torvp1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: norvp1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	top: torvp1l0
-		Start: 3
-		Length: 6
-		Tick: 100
-	shadow: torvpsh0
-		Start: 1
-		Offset: 12, 5
-	icon: borvpmn0
-	fake-icon: borvpmn0
-
-# Imperium Medical research
-tomdr1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nomdr1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: tomdrsh0
-		Start: 1
-		Offset: 9, 8
-	icon: bomdrmn0
-	fake-icon: bomdrmn0
-
-# Imperium Water research
-towat1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nowat1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: towatsh0
-		Start: 1
-		Offset: 12, 0
-	icon: bowatmn0
-	fake-icon: bowatmn0
-
-# Imperium Hover research
-tohov1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nohov1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: tohovsh0
-		Start: 1
-		Offset: 4, 5
-	icon: bohovmn0
-	fake-icon: bohovmn0
-
-# FG Planetary Defense
-t0rad1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: n0rad1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: b0towsh0
-		Start: 1
-		Offset: 54, 37
-	icon: b0radmn0
-	fake-icon: b0radmn0
-
-# FG Planetary Defense 2
-topld1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nopld1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: topldsh0
-		Start: 1
-		Offset: 40, 14
-	icon: bopldmn0
-	fake-icon: bopldmn0
-
-# Imperium Prison
-topri1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nopri1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: toprish0
-		Start: 1
-		Offset: 17, 4
-	icon: boprimn0
-	fake-icon: boprimn0
-	
-# Civilian Entertainment Facility
-tocen1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nocen1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: bocensh0
-		Start: 1
-		Offset: -1, 0
-	icon: bocenmn0
-	fake-icon: bocenmn0
-
-# Civilian Public Shelter
-toshl1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: noshl1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: toshlsh0
-		Start: 1
-		Offset: 5, 1
-	icon: boshlmn0
-	fake-icon: boshlmn0
-
-#  Civilian SubTransit
-tosub1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nosub1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: tosubsh0
-		Start: 1
-		Offset: 0, 0
-	icon: bosubmn0
-	fake-icon: bosubmn0
-
-# Civilian Transit Centre
-totcn1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: notcn1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: totcnsh0
-		Start: 1
-		Offset: 0, 0
-	icon: botcnmn0
-	fake-icon: botcnmn0
-
-# Civilian Commercial
-tocbs1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nocbs1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: bocbssh0
-		Start: 1
-		Offset: 12, 1
-	icon: bocbsmn0
-	fake-icon: bocbsmn0
-
-# Civilian Factory
-towar1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nowar1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: bowarsh0
-		Start: 1
-		Offset: 0, 1
-	icon: bowarmn0
-	fake-icon: bowarmn0
-
-# Civilian hall
-t0hal1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: n0hal1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: b0halsh0
-		Start: 1
-		Offset: 0, 0
-	icon: b0halmn0
-	fake-icon: b0halmn0
-
-# Civilian large hall
-t0lar1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: n0lar1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: b0larsh0
-		Start: 1
-		Offset: 0, 0
-	icon: b0larmn0
-	fake-icon: b0larmn0
-
-# Civilian small hall
-t0sma1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: n0sma1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: b0smash0
-		Start: 1
-		Offset: 0, 0
-	icon: b0smamn0
-	fake-icon: b0smamn0
-
-# Civilian Destiny
-t0des1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: n0des1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: b0dessh0
-		Start: 1
-		Offset: 0, 0
-	icon: b0desmn0
-	fake-icon: b0desmn0
-
-# Civilian Rural
-tochm4l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nochm4l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: bochmsh0
-		Start: 1
-		Offset: 0, 0
-	icon: bochmmn0
-	fake-icon: bochmmn0
-
-# Civilian Grain Farm
-tofrm1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nofrm1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	icon: tofrmmn0
-	fake-icon: tofrmmn0
-
-# Civilian Hydro Farm
-tofrm1l1:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nofrm1l1 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	icon: tofrmmn1
-	fake-icon: tofrmmn1
-
-# Civilian Farmhouse
-tofrm1l2:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nofrm1l2 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	icon: tofrmmn2
-	fake-icon: tofrmmn2
-
-# Civilian Bridge
-tobrd1l0:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nobrd1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: tobrdsh0
-		Start: 1
-		Offset: 10, 11
-	icon: bobrdmn0
-	fake-icon: bobrdmn0
-
-# Civilian Vertical Bridge
-tobrd1l1:
-	idle:
-		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
-	underlay: nobrd1l1 # no base|xx..
-		ZOffset: -8192
-		Start: 1
-	shadow: tobrdsh1
-		Start: 1
-		Offset: 24, 12
-	icon: bobrdmn1
-	fake-icon: bobrdmn1
-
-
-# Dirt bridge
-tcvbvst0:
-	idle:
-		Start: 0
-	make:
-		Start: 0
-	build:
-		Start: 0
-		Length: 1
-	damaged-idle:
-		Start: 0
-	damaged-build:
-		Start: 0
-		Length: 1
-	dead:
-		Start: 0
-		Tick: 1
-	shadow: tcvbvsh0
-		Start: 0
-		Offset: -9, 0
-
-	
-# Togran Monolith
-tomlt1l0:
-	idle:
-		Start: 0
-	make:
-		Start: 0
-	build:
-		Start: 0
-		Length: 1
-	damaged-idle:
-		Start: 0
-	damaged-build:
-		Start: 0
-		Length: 1
-	dead:
-		Start: 0
-		Tick: 1
-	underlay: nomlt1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 0
-	shadow: tomltsh0
-		Start: 0
-		Offset: 14, 6
-	icon: bocenmn0
-	fake-icon: bocenmn0
-
-# Togran Door
-totdr1l0:
-	idle:
-		Start: 0
-	make:
-		Start: 0
-	build:
-		Start: 0
-		Length: 1
-	damaged-idle:
-		Start: 0
-	damaged-build:
-		Start: 0
-		Length: 1
-	dead:
-		Start: 0
-		Tick: 1
-	underlay: notdr1l0 # no base|xx..
-		ZOffset: -8192
-		Start: 0
-	icon: botdrmn0
-	fake-icon: botdrmn0

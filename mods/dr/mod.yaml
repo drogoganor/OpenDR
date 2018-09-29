@@ -44,14 +44,18 @@ MapFolders:
 Rules:
 	dr|rules/palettes.yaml
 	dr|rules.yaml
+	dr|rules/shapes.yaml
 	dr|rules/defaults.yaml
 	dr|rules/misc.yaml
 	dr|rules/structures-building.yaml
 	dr|rules/structures.yaml
+	dr|rules/structures-civilian.yaml
+	dr|rules/upgrades.yaml
 	dr|rules/ai.yaml
-	dr|rules/aircraft.yaml
-	dr|rules/vehicles.yaml
 	dr|rules/infantry.yaml
+	dr|rules/vehicles.yaml
+	dr|rules/aircraft.yaml
+	dr|rules/civilians.yaml
 	dr|rules/decorations.yaml
 #	dr|rules/structures-ex.yaml
 #	dr|rules/aircraft-ex.yaml
@@ -61,6 +65,8 @@ Rules:
 Sequences:
 	dr|sequences/misc.yaml
 	dr|sequences/structures.yaml
+	dr|sequences/structures-civilian.yaml
+	dr|sequences/upgrades.yaml
 	dr|sequences/vehicles.yaml
 	dr|sequences/infantry.yaml
 	dr|sequences/effects.yaml

@@ -100,7 +100,7 @@ namespace OpenRA.Mods.Common.Traits
 		Production[] productionTraits;
 
 		// Will change if the owner changes
-		//protected DeveloperMode developerMode;
+		protected DeveloperMode developerMode;
 
 		public Actor Actor { get { return self; } }
 
@@ -116,7 +116,7 @@ namespace OpenRA.Mods.Common.Traits
 		{
 			self = init.Self;
 			Info = info;
-			//developerMode = playerActor.Trait<DeveloperMode>();
+			developerMode = playerActor.Trait<DeveloperMode>();
 
 			Faction = init.Contains<FactionInit>() ? init.Get<FactionInit, string>() : self.Owner.Faction.InternalName;
 			IsValidFaction = !info.Factions.Any() || info.Factions.Contains(Faction);
@@ -148,7 +148,7 @@ namespace OpenRA.Mods.Common.Traits
 		{
 			ClearQueue();
 
-			//developerMode = newOwner.PlayerActor.Trait<DeveloperMode>();
+			developerMode = newOwner.PlayerActor.Trait<DeveloperMode>();
 
 			if (!Info.Sticky)
 			{
@@ -223,8 +223,8 @@ namespace OpenRA.Mods.Common.Traits
 
 		public virtual IEnumerable<ActorInfo> AllItems()
 		{
-			//if (developerMode.AllTech)
-			//	return producible.Keys;
+			if (developerMode.AllTech)
+				return producible.Keys;
 
 			return allProducibles;
 		}
@@ -233,8 +233,9 @@ namespace OpenRA.Mods.Common.Traits
 		{
 			if (!Enabled)
 				return Enumerable.Empty<ActorInfo>();
-			//if (developerMode.AllTech)
-			//	return producible.Keys;
+
+			if (developerMode.AllTech)
+				return producible.Keys;
 
 			return buildableProducibles;
 		}
@@ -245,7 +246,7 @@ namespace OpenRA.Mods.Common.Traits
 			if (!producible.TryGetValue(actor, out ps))
 				return false;
 
-            return ps.Buildable; // || developerMode.AllTech;
+            return ps.Buildable || developerMode.AllTech;
 		}
 
 		void ITick.Tick(Actor self)
@@ -279,29 +280,29 @@ namespace OpenRA.Mods.Common.Traits
 			if (bi == null)
 				return false;
 
-			// if (!developerMode.AllTech)
-			// {
-				if (Info.QueueLimit > 0 && queue.Count >= Info.QueueLimit)
-				{
-					notificationAudio = Info.LimitedAudio;
-					return false;
-				}
+			if (!developerMode.AllTech)
+			{
+			    if (Info.QueueLimit > 0 && queue.Count >= Info.QueueLimit)
+			    {
+				    notificationAudio = Info.LimitedAudio;
+				    return false;
+			    }
 
-				var queueCount = queue.Count(i => i.Item == actor.Name);
-				if (Info.ItemLimit > 0 && queueCount >= Info.ItemLimit)
-				{
-					notificationAudio = Info.LimitedAudio;
-					return false;
-				}
+			    var queueCount = queue.Count(i => i.Item == actor.Name);
+			    if (Info.ItemLimit > 0 && queueCount >= Info.ItemLimit)
+			    {
+				    notificationAudio = Info.LimitedAudio;
+				    return false;
+			    }
 
-				if (bi.BuildLimit > 0)
-				{
-					var owned = self.Owner.World.ActorsHavingTrait<Buildable>()
-						.Count(a => a.Info.Name == actor.Name && a.Owner == self.Owner);
-					if (queueCount + owned >= bi.BuildLimit)
-						return false;
-				}
-			// }
+			    if (bi.BuildLimit > 0)
+			    {
+				    var owned = self.Owner.World.ActorsHavingTrait<Buildable>()
+					    .Count(a => a.Info.Name == actor.Name && a.Owner == self.Owner);
+				    if (queueCount + owned >= bi.BuildLimit)
+					    return false;
+			    }
+			}
 
 			notificationAudio = Info.QueuedAudio;
 			return true;
@@ -326,7 +327,7 @@ namespace OpenRA.Mods.Common.Traits
 					// You can't build that
 					if (BuildableItems().All(b => b.Name != order.TargetString))
 						return;
-                    
+
 					var time = GetBuildTime(unit, bi);
 
 					var hasPlayedSound = false;
@@ -351,8 +352,8 @@ namespace OpenRA.Mods.Common.Traits
 
 		public virtual int GetBuildTime(ActorInfo unit, BuildableInfo bi)
 		{
-			//if (developerMode.FastBuild)
-			//	return 0;
+			if (developerMode.FastBuild)
+				return 0;
 
 			var time = bi.BuildDuration;
 			if (time == -1)
@@ -429,9 +430,9 @@ namespace OpenRA.Mods.Common.Traits
 			};
 
 			var bi = unit.TraitInfo<BuildableInfo>();
-			var type = (bi.BuildAtProductionType ?? Info.Type);
+            var type = developerMode.AllTech ? Info.Type : (bi.BuildAtProductionType ?? Info.Type);
 
-			if (!mostLikelyProducerTrait.IsTraitPaused && mostLikelyProducerTrait.Produce(self, unit, type, inits))
+            if (!mostLikelyProducerTrait.IsTraitPaused && mostLikelyProducerTrait.Produce(self, unit, type, inits))
 			{
                 CancelProduction(unit.Name);
 				return true;
@@ -440,7 +441,6 @@ namespace OpenRA.Mods.Common.Traits
 			return false;
 		}
 	}
-
 
     // Copy of ProductionItem
     public class BuilderItem
@@ -458,7 +458,7 @@ namespace OpenRA.Mods.Common.Traits
                 return RemainingTime;
             }
         }
-        
+
         public bool Done { get; private set; }
 
         readonly ActorInfo ai;
@@ -486,7 +486,7 @@ namespace OpenRA.Mods.Common.Traits
 
                 return;
             }
-            
+
             RemainingTime -= 1;
             if (RemainingTime > 0)
                 return;

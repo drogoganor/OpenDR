@@ -1,0 +1,88 @@
+
+^Upgrade:
+	AlwaysVisible:
+	Interactable:
+	ScriptTriggers:
+	Buildable:
+		BuildPaletteOrder: 50
+		Queue: Upgrade
+		BuildLimit: 1
+		BuildDurationModifier: 2486 # DR build rate
+		Description: Unlocks additional construction options
+		BuildDuration: 52
+
+upgrade.hq1:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Headquarters 2
+	Buildable:
+		BuildPaletteOrder: 50
+		Queue: Upgrade
+		Prerequisites: ~hq, ~barracks, ~vehicles
+		Description: Unlocks additional construction options
+		BuildDuration: 52
+	Valued:
+		Cost: 2050
+	RenderSprites:
+		Image: bfhqtmn1
+	ProvidesPrerequisite@upgradename:
+
+upgrade.hq2:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Headquarters 3
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~hq, ~upgrade.hq1, ~vehicles, ~barracks, ~upgrade.barracks1, ~upgrade.assemblyplant1
+		Description: Unlocks additional construction options
+		BuildDuration: 89
+	Valued:
+		Cost: 3300
+	RenderSprites:
+		Image: bfhqtmn2
+	ProvidesPrerequisite@upgradename:
+
+upgrade.barracks1:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Advanced Training Facility
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~hq, ~upgrade.hq1, ~barracks
+		Description: Unlocks additional construction options
+		BuildDuration: 68
+	Valued:
+		Cost: 2550
+	RenderSprites:
+		Image: bfutfmn1
+	ProvidesPrerequisite@upgradename:
+
+upgrade.assemblyplant1:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Advanced Assembly Plant
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~hq, ~upgrade.hq1, ~vehicles
+		BuildDuration: 141
+		Description: Unlocks additional construction options
+	Valued:
+		Cost: 5000
+	RenderSprites:
+		Image: bfvcymn1
+	ProvidesPrerequisite@upgradename:
+
+upgrade.phasing:
+	Inherits: ^Upgrade
+	Tooltip:
+		Name: Advanced Phasing Facility Upgrade
+	Buildable:
+		BuildPaletteOrder: 50
+		Prerequisites: ~hq, ~upgrade.hq1, ~phasing
+		BuildDuration: 72
+		Description: Unlocks additional construction options
+	Valued:
+		Cost: 2700
+	RenderSprites:
+		Image: bfphfmn1
+	ProvidesPrerequisite@upgradename:
