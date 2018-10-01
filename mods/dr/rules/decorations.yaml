@@ -5,7 +5,7 @@
 		Terrain: Rock
 	Tooltip:
 		Name: Rock
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Rocks
 
 ^DrCrater:
@@ -14,14 +14,14 @@
 		Terrain: Rock
 	Tooltip:
 		Name: Crater
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Craters
 
 ^DrPlant:
 	Inherits: ^Tree
 	Tooltip:
 		Name: Plant
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Plant
 
 ^DrRubble:
@@ -31,12 +31,12 @@
 	Tooltip:
 		Name: Rubble
 	-HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Rocks
 
 ^DrMisc:
 	Inherits: ^Tree
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Misc
 	-WithIdleOverlay@LAYER1:
 

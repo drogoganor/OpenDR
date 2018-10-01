@@ -57,7 +57,7 @@
 		GenericName: Plane
 	WithFacingSpriteBody:
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Aircraft
 	Explodes:
 		Weapon: GenericExplode

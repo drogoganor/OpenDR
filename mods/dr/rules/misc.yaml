@@ -10,7 +10,7 @@ mpspawn:
 	RenderSpritesEditorOnly:
 	BodyOrientation:
 		QuantizedFacings: 1
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: System
 
 waypoint:
@@ -24,13 +24,13 @@ waypoint:
 	RenderSpritesEditorOnly:
 	BodyOrientation:
 		QuantizedFacings: 1
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: System
 
 freighter.colorpicker:
 	Inherits: Freighter
 	-Buildable:
-	-EditorTilesetFilter:
+	-MapEditorData:
 	RenderSprites:
 		Image: ucfrgst0
 		Palette: colorpicker

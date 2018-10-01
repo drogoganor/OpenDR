@@ -459,7 +459,7 @@ Hospital.human:
 	Reservable:
 	RallyPoint:
 		Offset: 3,5
-	WithRepairAnimation:
+	WithResupplyAnimation:
 	Power:
 		Amount: -100
 	WithIdleOverlay@LAYER1:
@@ -494,7 +494,7 @@ Hospital.cyborg:
 	Reservable:
 	RallyPoint:
 		Offset: 3,5
-	WithRepairAnimation:
+	WithResupplyAnimation:
 	Power:
 		Amount: -100
 	WithIdleOverlay@LAYER1:
@@ -525,7 +525,7 @@ Repair.human:
 		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
-	WithRepairAnimation:
+	WithResupplyAnimation:
 	Valued:
 		Cost: 800
 	Health:
@@ -561,7 +561,7 @@ Repair.cyborg:
 		StartRepairingNotification: Repairing
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
-	WithRepairAnimation:
+	WithResupplyAnimation:
 	Valued:
 		Cost: 800
 	Health:

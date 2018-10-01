@@ -109,7 +109,7 @@
 		Prerequisites: barracks.upgraded
 	DetectCloaked:
 		CloakTypes: Hijacker
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Infantry
 
 ^DrCivilian:
@@ -120,7 +120,7 @@
 		Class: Civ
 	Tooltip:
 		GenericName: Civilian
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Civilian
 	Voiced:
 		VoiceSet: CivilianVoice
@@ -188,7 +188,7 @@
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 	HitShape:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Vehicle
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -212,7 +212,7 @@
 		Range: 4c0
 	Tooltip:
 		GenericName: Civilian Vehicle
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Civilian
 
 # Buildings
@@ -225,7 +225,7 @@
 ^DrCivBuilding:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: CivBuilding
 	RepairableBuilding:
 		RepairStep: 20
@@ -305,12 +305,12 @@
 	Tooltip:
 		GenericName: Structure
 	Demolishable:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: SelfConstructing
 	CommandBarBlacklist:
 
 ^ConstructedBuildingCommon:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Building
 	RepairableBuilding:
 		RepairStep: 5
@@ -612,7 +612,7 @@
 	Inherits: ^SelfConstructingBuilding
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: SelfConstructing
 	Inherits@shape: ^2x2Shape
 	Building:
@@ -668,7 +668,7 @@
 		Prerequisites: hq
 		BuildPaletteOrder: 30
 		BuildDuration: 45
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: SelfConstructing
 	Valued:
 		Cost: 1500
@@ -855,7 +855,7 @@
 		TargetTypes: Trees
 	HiddenUnderShroud:
 	ScriptTriggers:
-	EditorTilesetFilter:
+	MapEditorData:
 		Categories: Tree
 	RadarColorFromTerrain:
 		Terrain: Tree
