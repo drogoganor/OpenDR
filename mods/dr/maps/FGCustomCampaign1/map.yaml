@@ -4,7 +4,7 @@ Title: FG Custom Campaign 1
 Author: DMW
 Tileset: BARREN
 MapSize: 58,74
-Bounds: 1,1,56,72
+Bounds: 1,25,56,48
 Visibility: MissionSelector
 Categories: Campaign
 Players:
@@ -33,41 +33,149 @@ Players:
 		Name: Imperium
 		Faction: imperium
 		Color: FE1100
-		Enemies: Freedom Guard, AbandonedBase
-	PlayerReference@AbandonedBase:
-		Name: AbandonedBase
+		Enemies: Freedom Guard, Abandoned Base
+	PlayerReference@Abandoned Base:
+		Name: Abandoned Base
 		NonCombatant: True
 		Faction: fguard
 		Color: F5D378
 		Enemies: Imperium
+	PlayerReference@Trapped Soldiers 1:
+		Name: Trapped Soldiers 1
+		NonCombatant: True
+		Faction: fguard
+		Color: 70C173
+		Enemies: Imperium
+	PlayerReference@Trapped Soldiers 2:
+		Name: Trapped Soldiers 2
+		NonCombatant: True
+		Faction: fguard
+		Color: BC6DBF
+		Enemies: Imperium
 Actors:
+	EntryWaypoint: waypoint
+		Owner: Neutral
+		Location: 56,70
 	StartWaypoint: waypoint
 		Owner: Neutral
-		Location: 49,65
-	FGCRig: constructionrig
-		Owner: AbandonedBase
-		Location: 8,68
-		Facing: 92
-	FGPower: power
-		Owner: AbandonedBase
-		Location: 7,60
-		FreeActor: False
-	FGFreighter: freighter
-		Owner: AbandonedBase
-		Location: 6,64
-		Facing: 92
-	ImperiumHQ: hq.cyborg
-		Owner: Imperium
-		Location: 38,8
-	ImperiumTrainingFacility: trainingfacility.cyborg
-		Owner: Imperium
-		Location: 27,21
-	ImperiumAssemblyPlant: assemblyplant.cyborg
-		Owner: Imperium
-		Location: 43,16
+		Location: 44,66
+	EntryWaypoint2: waypoint
+		Owner: Neutral
+		Location: 56,66
+	StartWaypoint2: waypoint
+		Owner: Neutral
+		Location: 45,63
 	AttackWaypoint: waypoint
 		Owner: Neutral
-		Location: 15,63
+		Location: 18,63
+	EnemyBaseWaypoint: waypoint
+		Owner: Neutral
+		Location: 32,32
+	FGWater: waterlaunchpad
+		Owner: Abandoned Base
+		Location: 6,65
+		FreeActor: False
+	FGPower: power
+		Owner: Abandoned Base
+		Location: 13,68
+	FGHQ: hq.human
+		Owner: Abandoned Base
+		Location: 10,60
+	FGFreighter: freighter
+		Owner: Abandoned Base
+		Location: 6,68
+		Facing: 92
+	ImpWater: waterlaunchpad
+		Owner: Imperium
+		Location: 35,27
+	ImpBarracks: trainingfacility.cyborg
+		Owner: Imperium
+		Location: 32,35
+	ImpHQ: hq.cyborg
+		Owner: Imperium
+		Location: 26,28
+	ImpPower: power
+		Owner: Imperium
+		Location: 24,34
+	OffenseTroop1: guardian
+		Owner: Imperium
+		Location: 21,51
+		Facing: 92
+	OffenseTroop2: guardian
+		Owner: Imperium
+		Location: 22,52
+		Facing: 92
+	DefenderTank1: plasmatank
+		Owner: Imperium
+		Location: 24,43
+		Facing: 92
+		TurretFacing: 92
+	DefenderTank2: plasmatank
+		Owner: Imperium
+		Location: 25,44
+		Facing: 92
+		TurretFacing: 92
+	AlleyTank: plasmatank
+		Owner: Imperium
+		Location: 20,30
+		Facing: 92
+		TurretFacing: 92
+	TS101: rat
+		Owner: Trapped Soldiers 1
+		Location: 7,47
+		Facing: 92
+	TS102: spiderbike
+		Owner: Trapped Soldiers 1
+		Location: 6,45
+		Facing: 92
+	TS103: spiderbike
+		Owner: Trapped Soldiers 1
+		Location: 5,46
+		Facing: 92
+	TS104: rat
+		Owner: Trapped Soldiers 1
+		Location: 4,48
+		Facing: 92
+	TS105: sniper
+		Owner: Trapped Soldiers 1
+		Location: 6,48
+		Facing: 92
+	TS201: mercenary
+		Owner: Trapped Soldiers 2
+		Location: 45,40
+		Facing: 92
+	TS202: mercenary
+		Owner: Trapped Soldiers 2
+		Location: 46,41
+		Facing: 92
+	TS203: mercenary
+		Owner: Trapped Soldiers 2
+		Location: 47,42
+		Facing: 92
+	TS204: mercenary
+		Owner: Trapped Soldiers 2
+		Location: 46,43
+		Facing: 92
+	TS205: raider
+		Owner: Trapped Soldiers 2
+		Location: 47,40
+		Facing: 92
+	TS206: raider
+		Owner: Trapped Soldiers 2
+		Location: 46,39
+		Facing: 92
+	TS207: raider
+		Owner: Trapped Soldiers 2
+		Location: 47,38
+		Facing: 92
+	TS208: raider
+		Owner: Trapped Soldiers 2
+		Location: 48,39
+		Facing: 92
+	TS209: medic
+		Owner: Trapped Soldiers 2
+		Location: 49,38
+		Facing: 92
 	Actor22: aotre000
 		Owner: Neutral
 		Location: 55,49
@@ -113,12 +221,6 @@ Actors:
 	Actor55: aotre004
 		Owner: Neutral
 		Location: 3,59
-	Actor56: aoroc005
-		Owner: Neutral
-		Location: 8,53
-	Actor57: aoroc004
-		Owner: Neutral
-		Location: 12,52
 	Actor58: aoclf003
 		Owner: Neutral
 		Location: 13,48
@@ -128,33 +230,21 @@ Actors:
 	Actor60: aorub000
 		Owner: Neutral
 		Location: 15,52
-	Actor61: aorub001
-		Owner: Neutral
-		Location: 12,54
 	Actor63: aorub000
 		Owner: Neutral
 		Location: 3,53
 	Actor64: aotre005
 		Owner: Neutral
 		Location: 7,55
-	Actor65: aotre002
-		Owner: Neutral
-		Location: 10,54
 	Actor66: aotre003
 		Owner: Neutral
 		Location: 12,50
 	Actor67: aotre001
 		Owner: Neutral
 		Location: 14,53
-	Actor41: aotre005
-		Owner: Neutral
-		Location: 39,59
 	Actor42: aopln001
 		Owner: Neutral
 		Location: 43,59
-	Actor43: aopln002
-		Owner: Neutral
-		Location: 38,60
 	Actor69: aopln000
 		Owner: Neutral
 		Location: 38,68
@@ -194,9 +284,6 @@ Actors:
 	Actor98: aotre005
 		Owner: Neutral
 		Location: 28,58
-	Actor126: aotre000
-		Owner: Neutral
-		Location: 6,72
 	Actor127: aotre003
 		Owner: Neutral
 		Location: 1,60
@@ -221,9 +308,6 @@ Actors:
 	Actor134: aopln001
 		Owner: Neutral
 		Location: 39,67
-	Actor137: aopln001
-		Owner: Neutral
-		Location: 35,60
 	Actor138: aorub001
 		Owner: Neutral
 		Location: 47,59
@@ -260,61 +344,6 @@ Actors:
 	Actor135: aoroc002
 		Owner: Neutral
 		Location: 42,58
-	Actor148: guardian
-		Owner: Imperium
-		Location: 37,62
-		Facing: 92
-	Actor94: guardian
-		Owner: Imperium
-		Location: 36,64
-		Facing: 92
-	Actor95: guardian
-		Owner: Imperium
-		Location: 33,63
-		Facing: 92
-	Actor92: plasmatank
-		Owner: Imperium
-		Location: 29,62
-		Facing: 92
-		TurretFacing: 92
-	Actor93: plasmatank
-		Owner: Imperium
-		Location: 25,61
-		Facing: 92
-		TurretFacing: 92
-	Actor100: plasmatank
-		Owner: Imperium
-		Location: 26,64
-		Facing: 92
-		TurretFacing: 92
-	Actor101: spiderbike
-		Owner: Freedom Guard
-		Location: 51,64
-		Facing: 92
-	Actor102: spiderbike
-		Owner: Freedom Guard
-		Location: 53,66
-		Facing: 92
-	Actor103: spiderbike
-		Owner: Freedom Guard
-		Location: 53,64
-		Facing: 92
-	Actor104: spiderbike
-		Owner: Freedom Guard
-		Location: 52,65
-		Facing: 92
-	Actor99: sniper
-		Owner: Freedom Guard
-		Location: 48,65
-		Facing: 92
-	Actor105: bion
-		Owner: Imperium
-		Location: 15,58
-		Facing: 92
-	Actor132: guardian
-		Owner: Imperium
-		Location: 17,57
-		Facing: 92
 	Actor170: aoroc003
 		Owner: Neutral
 		Location: 13,46
@@ -351,9 +380,6 @@ Actors:
 	Actor181: aorub000
 		Owner: Neutral
 		Location: 36,48
-	Actor182: aoroc004
-		Owner: Neutral
-		Location: 34,46
 	Actor183: aoroc000
 		Owner: Neutral
 		Location: 47,46
@@ -414,9 +440,6 @@ Actors:
 	Actor202: aoroc001
 		Owner: Neutral
 		Location: 46,31
-	Actor203: aoroc005
-		Owner: Neutral
-		Location: 44,32
 	Actor204: aopln000
 		Owner: Neutral
 		Location: 45,30
@@ -426,9 +449,6 @@ Actors:
 	Actor206: aopln001
 		Owner: Neutral
 		Location: 46,27
-	Actor207: aotre003
-		Owner: Neutral
-		Location: 43,32
 	Actor208: aorub002
 		Owner: Neutral
 		Location: 47,31
@@ -453,45 +473,6 @@ Actors:
 	Actor214: aorub002
 		Owner: Neutral
 		Location: 55,32
-	Actor216: aoclf005
-		Owner: Neutral
-		Location: 41,33
-	Actor217: aorub000
-		Owner: Neutral
-		Location: 45,34
-	Actor218: aoclf001
-		Owner: Neutral
-		Location: 39,35
-	Actor219: aoroc000
-		Owner: Neutral
-		Location: 41,37
-	Actor220: aopln000
-		Owner: Neutral
-		Location: 42,37
-	Actor221: aotre000
-		Owner: Neutral
-		Location: 38,37
-	Actor222: aotre001
-		Owner: Neutral
-		Location: 40,38
-	Actor223: aotre002
-		Owner: Neutral
-		Location: 39,38
-	Actor224: aotre005
-		Owner: Neutral
-		Location: 38,39
-	Actor225: aotre003
-		Owner: Neutral
-		Location: 37,38
-	Actor226: aotre003
-		Owner: Neutral
-		Location: 33,46
-	Actor227: aotre004
-		Owner: Neutral
-		Location: 39,34
-	Actor228: aorub000
-		Owner: Neutral
-		Location: 41,33
 	Actor157: aoroc005
 		Owner: Neutral
 		Location: 4,24
@@ -522,157 +503,15 @@ Actors:
 	Actor167: aopln001
 		Owner: Neutral
 		Location: 1,44
-	Actor169: aotre004
-		Owner: Neutral
-		Location: 2,52
-	Actor229: aotre000
-		Owner: Neutral
-		Location: 7,45
-	Actor230: aotre001
-		Owner: Neutral
-		Location: 8,45
 	Actor231: aoroc003
 		Owner: Neutral
 		Location: 0,44
-	Actor232: aotre004
-		Owner: Neutral
-		Location: 6,40
-	Actor235: aorub002
-		Owner: Neutral
-		Location: 1,40
-	Actor234: aorub000
-		Owner: Neutral
-		Location: 5,40
-	Actor233: aorub001
-		Owner: Neutral
-		Location: 8,40
 	Actor168: aotre002
 		Owner: Neutral
 		Location: 56,40
 	Actor236: aotre005
 		Owner: Neutral
 		Location: 55,43
-	Actor166: guardian
-		Owner: Imperium
-		Location: 27,49
-		Facing: 92
-	Actor237: guardian
-		Owner: Imperium
-		Location: 26,50
-		Facing: 92
-	Actor238: guardian
-		Owner: Imperium
-		Location: 22,48
-		Facing: 92
-	Actor239: guardian
-		Owner: Imperium
-		Location: 23,47
-		Facing: 92
-	Actor240: guardian
-		Owner: Imperium
-		Location: 20,45
-		Facing: 92
-	Actor241: guardian
-		Owner: Imperium
-		Location: 19,46
-		Facing: 92
-	Actor242: bion
-		Owner: Imperium
-		Location: 21,45
-		Facing: 92
-	Actor243: bion
-		Owner: Imperium
-		Location: 26,48
-		Facing: 92
-	Actor244: plasmatank
-		Owner: Imperium
-		Location: 24,47
-		Facing: 92
-		TurretFacing: 92
-	Actor245: plasmatank
-		Owner: Imperium
-		Location: 22,45
-		Facing: 92
-		TurretFacing: 92
-	Actor246: raider
-		Owner: Imperium
-		Location: 17,58
-		Facing: 92
-	Actor247: medic
-		Owner: Freedom Guard
-		Location: 49,66
-		Facing: 92
-	Actor248: guardian
-		Owner: Imperium
-		Location: 16,39
-		Facing: 92
-	Actor249: guardian
-		Owner: Imperium
-		Location: 17,38
-		Facing: 92
-	Actor250: guardian
-		Owner: Imperium
-		Location: 20,36
-		Facing: 92
-	Actor251: guardian
-		Owner: Imperium
-		Location: 19,34
-		Facing: 92
-	Actor252: bion
-		Owner: Imperium
-		Location: 21,37
-		Facing: 92
-	Actor256: plasmaturret
-		Owner: Imperium
-		Location: 24,48
-		TurretFacing: 92
-	Actor257: plasmaturret
-		Owner: Imperium
-		Location: 20,46
-		TurretFacing: 92
-	Actor258: guardian
-		Owner: Imperium
-		Location: 26,47
-		Facing: 92
-	Actor259: guardian
-		Owner: Imperium
-		Location: 23,44
-		Facing: 92
-	Actor260: guardian
-		Owner: Imperium
-		Location: 27,51
-		Facing: 92
-	Actor261: guardian
-		Owner: Imperium
-		Location: 25,46
-		Facing: 92
-	Actor262: plasmaturret
-		Owner: Imperium
-		Location: 31,39
-		TurretFacing: 92
-	Actor264: guardian
-		Owner: Imperium
-		Location: 33,38
-		Facing: 92
-	Actor265: guardian
-		Owner: Imperium
-		Location: 31,41
-		Facing: 92
-	Actor253: aotre000
-		Owner: Neutral
-		Location: 25,35
-	Actor254: aotre001
-		Owner: Neutral
-		Location: 27,34
-	Actor255: aotre003
-		Owner: Neutral
-		Location: 27,33
-	Actor263: aotre002
-		Owner: Neutral
-		Location: 24,36
-	Actor266: aoroc000
-		Owner: Neutral
-		Location: 26,35
 	Actor267: aotre005
 		Owner: Neutral
 		Location: 19,26
@@ -742,4 +581,496 @@ Actors:
 	Actor289: aotre001
 		Owner: Neutral
 		Location: 26,12
+	Actor207: aoclf005
+		Owner: Creeps
+		Location: 51,29
+	Actor261: aoroc000
+		Owner: Creeps
+		Location: 38,47
+	Actor265: aorub000
+		Owner: Creeps
+		Location: 32,49
+	Actor266: aoroc000
+		Owner: Creeps
+		Location: 30,52
+	Actor290: aopln002
+		Owner: Creeps
+		Location: 28,53
+	Actor292: aotre005
+		Owner: Creeps
+		Location: 34,49
+	Actor293: aotre004
+		Owner: Creeps
+		Location: 37,51
+	Actor294: aopln002
+		Owner: Creeps
+		Location: 29,51
+	Actor300: aoroc002
+		Owner: Creeps
+		Location: 15,42
+	Actor303: aoroc004
+		Owner: Creeps
+		Location: 4,31
+	Actor306: aoroc000
+		Owner: Creeps
+		Location: 2,32
+	Actor307: aopln002
+		Owner: Creeps
+		Location: 1,33
+	Actor308: aotre002
+		Owner: Creeps
+		Location: 0,35
+	Actor309: aotre000
+		Owner: Creeps
+		Location: 1,40
+	Actor310: aotre003
+		Owner: Creeps
+		Location: 0,42
+	Actor311: aopln000
+		Owner: Creeps
+		Location: 1,41
+	Actor312: aotre004
+		Owner: Creeps
+		Location: 1,43
+	Actor313: aoroc003
+		Owner: Creeps
+		Location: 0,36
+	Actor314: aoroc005
+		Owner: Creeps
+		Location: 2,34
+	Actor315: aotre000
+		Owner: Creeps
+		Location: 3,36
+	Actor316: aotre005
+		Owner: Creeps
+		Location: 5,36
+	Actor319: aotre001
+		Owner: Creeps
+		Location: 12,34
+	Actor320: aotre002
+		Owner: Creeps
+		Location: 4,36
+	Actor321: aotre003
+		Owner: Creeps
+		Location: 2,37
+	Actor322: aotre002
+		Owner: Creeps
+		Location: 1,41
+	Actor323: aotre002
+		Owner: Creeps
+		Location: 1,53
+	Actor324: aotre002
+		Owner: Creeps
+		Location: 12,46
+	Actor325: aoroc001
+		Owner: Creeps
+		Location: 1,47
+	Actor326: aoroc002
+		Owner: Creeps
+		Location: 11,48
+	Actor328: aoroc003
+		Owner: Creeps
+		Location: 0,50
+	Actor329: aotre004
+		Owner: Creeps
+		Location: 3,52
+	Actor330: aorub000
+		Owner: Creeps
+		Location: 1,48
+	Actor331: aoroc004
+		Owner: Creeps
+		Location: 2,43
+	Actor336: aotre000
+		Owner: Creeps
+		Location: 11,51
+	Actor338: aorub000
+		Owner: Creeps
+		Location: 6,53
+	Actor253: aotre002
+		Owner: Creeps
+		Location: 40,45
+	Actor254: aotre001
+		Owner: Creeps
+		Location: 39,46
+	Actor255: aotre003
+		Owner: Creeps
+		Location: 41,46
+	Actor257: aotre005
+		Owner: Creeps
+		Location: 38,46
+	Actor258: aoroc001
+		Owner: Creeps
+		Location: 39,44
+	Actor259: aoroc003
+		Owner: Creeps
+		Location: 40,42
+	Actor264: aorub001
+		Owner: Creeps
+		Location: 43,43
+	Actor358: aorub002
+		Owner: Creeps
+		Location: 40,41
+	Actor260: aotre004
+		Owner: Creeps
+		Location: 40,39
+	Actor360: aoclf003
+		Owner: Creeps
+		Location: 41,39
+	Actor361: aotre005
+		Owner: Creeps
+		Location: 44,37
+	Actor363: aotre000
+		Owner: Creeps
+		Location: 39,42
+	Actor364: aotre005
+		Owner: Creeps
+		Location: 38,43
+	Actor370: aotre002
+		Owner: Creeps
+		Location: 34,47
+	Actor371: aotre003
+		Owner: Creeps
+		Location: 33,48
+	Actor291: aoroc003
+		Owner: Creeps
+		Location: 30,49
+	Actor372: aoclf001
+		Owner: Creeps
+		Location: 30,46
+	Actor373: aoclf005
+		Owner: Creeps
+		Location: 34,43
+	Actor374: aorub000
+		Owner: Creeps
+		Location: 37,43
+	Actor375: aorub000
+		Owner: Creeps
+		Location: 32,46
+	Actor376: aotre004
+		Owner: Creeps
+		Location: 29,54
+	Actor327: aotre000
+		Owner: Neutral
+		Location: 7,54
+	Actor335: aotre004
+		Owner: Neutral
+		Location: 6,52
+	Actor337: aotre005
+		Owner: Neutral
+		Location: 11,52
+	Actor340: aoroc004
+		Owner: Neutral
+		Location: 12,52
+	Actor341: aoroc001
+		Owner: Neutral
+		Location: 12,54
+	Actor339: aorub001
+		Owner: Neutral
+		Location: 13,54
+	Actor378: aotre001
+		Owner: Neutral
+		Location: 11,53
+	Actor380: aoclf002
+		Owner: Neutral
+		Location: 3,32
+	Actor391: aoroc005
+		Owner: Neutral
+		Location: 16,33
+	Actor392: aoroc002
+		Owner: Neutral
+		Location: 16,35
+	Actor393: aotre004
+		Owner: Neutral
+		Location: 14,35
+	Actor394: aoroc000
+		Owner: Neutral
+		Location: 15,37
+	Actor395: aoroc004
+		Owner: Neutral
+		Location: 15,38
+	Actor396: aoclf000
+		Owner: Neutral
+		Location: 13,34
+	Actor295: aoclf001
+		Owner: Neutral
+		Location: 13,39
+	Actor397: aorub000
+		Owner: Neutral
+		Location: 14,42
+	Actor398: aorub002
+		Owner: Neutral
+		Location: 14,37
+	Actor399: aorub002
+		Owner: Neutral
+		Location: 12,35
+	Actor401: aoroc001
+		Owner: Neutral
+		Location: 16,36
+	Actor404: aotre002
+		Owner: Neutral
+		Location: 12,36
+	Actor405: aotre005
+		Owner: Neutral
+		Location: 13,38
+	Actor406: aotre004
+		Owner: Neutral
+		Location: 10,38
+	Actor344: aoroc005
+		Owner: Neutral
+		Location: 44,32
+	Actor345: aotre004
+		Owner: Neutral
+		Location: 43,33
+	Actor346: aotre003
+		Owner: Neutral
+		Location: 46,33
+	Actor347: aoroc002
+		Owner: Neutral
+		Location: 44,34
+	Actor348: aopln002
+		Owner: Neutral
+		Location: 45,34
+	Actor349: aotre002
+		Owner: Creeps
+		Location: 43,35
+	Actor350: aoroc003
+		Owner: Neutral
+		Location: 44,35
+	Actor351: aoroc001
+		Owner: Neutral
+		Location: 45,35
+	Actor353: aoroc002
+		Owner: Neutral
+		Location: 45,31
+	Actor354: aotre003
+		Owner: Neutral
+		Location: 41,39
+	Actor382: aotre005
+		Owner: Creeps
+		Location: 40,59
+	Actor383: aotre005
+		Owner: Creeps
+		Location: 33,58
+	Actor384: guardian
+		Owner: Imperium
+		Location: 20,44
+		Facing: 92
+	Actor385: guardian
+		Owner: Imperium
+		Location: 21,44
+		Facing: 92
+	Actor386: guardian
+		Owner: Imperium
+		Location: 21,45
+		Facing: 92
+	Actor387: guardian
+		Owner: Imperium
+		Location: 20,45
+		Facing: 92
+	Actor407: guardian
+		Owner: Imperium
+		Location: 28,46
+		Facing: 92
+	Actor408: guardian
+		Owner: Imperium
+		Location: 28,47
+		Facing: 92
+	Actor409: guardian
+		Owner: Imperium
+		Location: 27,47
+		Facing: 92
+	Actor410: guardian
+		Owner: Imperium
+		Location: 27,46
+		Facing: 92
+	Actor411: plasmaturret
+		Owner: Imperium
+		Location: 23,45
+		TurretFacing: 92
+	Actor412: bion
+		Owner: Imperium
+		Location: 21,47
+		Facing: 92
+	Actor413: bion
+		Owner: Imperium
+		Location: 22,47
+		Facing: 92
+	Actor414: bion
+		Owner: Imperium
+		Location: 24,48
+		Facing: 92
+	Actor415: bion
+		Owner: Imperium
+		Location: 25,48
+		Facing: 92
+	Actor416: guardian
+		Owner: Imperium
+		Location: 23,48
+		Facing: 92
+	Actor367: aotre000
+		Owner: Neutral
+		Location: 3,28
+	Actor368: aotre001
+		Owner: Neutral
+		Location: 2,29
+	Actor369: aoroc001
+		Owner: Neutral
+		Location: 6,33
+	Actor417: aoclf000
+		Owner: Neutral
+		Location: 0,29
+	Actor419: aorub000
+		Owner: Neutral
+		Location: 6,30
+	Actor425: aoroc000
+		Owner: Neutral
+		Location: 15,40
+	Actor426: aotre004
+		Owner: Neutral
+		Location: 17,40
+	Actor299: aotre002
+		Owner: Creeps
+		Location: 5,27
+	Actor302: aotre000
+		Owner: Creeps
+		Location: 9,26
+	Actor304: aotre005
+		Owner: Creeps
+		Location: 12,25
+	Actor305: aoroc002
+		Owner: Creeps
+		Location: 16,25
+	Actor317: aoroc003
+		Owner: Creeps
+		Location: 4,28
+	Actor318: aoroc004
+		Owner: Creeps
+		Location: 14,32
+	Actor342: aotre001
+		Owner: Creeps
+		Location: 21,27
+	Actor343: aotre004
+		Owner: Creeps
+		Location: 16,31
+	Actor356: aotre004
+		Owner: Creeps
+		Location: 7,31
+	Actor357: aorub000
+		Owner: Creeps
+		Location: 7,28
+	Actor379: aorub002
+		Owner: Creeps
+		Location: 16,27
+	Actor381: aoroc001
+		Owner: Creeps
+		Location: 15,26
+	Actor402: aoroc001
+		Owner: Creeps
+		Location: 10,25
+	Actor403: aoroc003
+		Owner: Creeps
+		Location: 7,25
+	Actor366: guardian
+		Owner: Imperium
+		Location: 35,32
+		Facing: 92
+	Actor420: guardian
+		Owner: Imperium
+		Location: 29,36
+		Facing: 92
+	Actor301: largewall1
+		Owner: Neutral
+		Location: 16,40
+	Actor400: largewall1
+		Owner: Neutral
+		Location: 31,42
+	Actor421: smallwall2
+		Owner: Neutral
+		Location: 29,42
+	Actor422: smallwall1
+		Owner: Neutral
+		Location: 27,42
+	Actor377: smallwall2
+		Owner: Neutral
+		Location: 19,40
+	Actor423: smallwall1
+		Owner: Neutral
+		Location: 21,40
+	Actor427: aowrk000
+		Owner: Neutral
+		Location: 20,37
+	Actor429: aowrk001
+		Owner: Neutral
+		Location: 35,41
+	Actor430: aowrk002
+		Owner: Neutral
+		Location: 19,39
+	Actor431: aotre003
+		Owner: Neutral
+		Location: 29,53
+	Actor433: aotre005
+		Owner: Neutral
+		Location: 29,49
+	Actor434: aoroc000
+		Owner: Neutral
+		Location: 26,57
+	Actor435: aorub001
+		Owner: Neutral
+		Location: 27,58
+	Actor436: aorub001
+		Owner: Neutral
+		Location: 16,46
+	Actor332: guardian
+		Owner: Imperium
+		Location: 33,62
+		Facing: 92
+	Actor355: guardian
+		Owner: Imperium
+		Location: 21,61
+		Facing: 92
+	Actor359: guardian
+		Owner: Imperium
+		Location: 20,62
+		Facing: 92
+	Actor362: bion
+		Owner: Imperium
+		Location: 23,67
+		Facing: 92
+	Actor333: guardian
+		Owner: Imperium
+		Location: 30,63
+		Facing: 92
+	Actor334: bion
+		Owner: Imperium
+		Location: 20,61
+		Facing: 92
+	Actor352: guardian
+		Owner: Imperium
+		Location: 24,67
+		Facing: 92
+	Actor365: guardian
+		Owner: Imperium
+		Location: 21,62
+		Facing: 92
+	Actor388: aopln000
+		Owner: Neutral
+		Location: 33,47
+	Actor389: aoroc001
+		Owner: Neutral
+		Location: 34,48
+	Actor390: aorub002
+		Owner: Neutral
+		Location: 35,47
+	Actor418: aorub002
+		Owner: Neutral
+		Location: 29,52
+	Actor424: aoroc005
+		Owner: Neutral
+		Location: 28,55
+	Actor428: aoroc000
+		Owner: Neutral
+		Location: 28,54
+	Actor432: aoroc001
+		Owner: Neutral
+		Location: 29,57
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

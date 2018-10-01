@@ -10,9 +10,7 @@
 	QuantizeFacingsFromSequence:
 	RenderSprites:
 
-#
 # Infantry
-#
 
 ^Humanoid:
 	Inherits@1: ^ExistsInWorld
@@ -31,7 +29,7 @@
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
-		Class: E1
+		Class: Humanoid
 		Bounds: 26,30,-4,-2
 		DecorationBounds: 19,22,-2,1
 	Targetable:
@@ -93,6 +91,8 @@
 		Prerequisites: ~barracks, ~techlevel.infonly
 		Description: Generic Soldier
 		BuildDurationModifier: 2486 # DR build rate
+	Selectable:
+		Class: E1
 	Valued:
 		Cost: 100
 	RevealsShroud:
@@ -116,6 +116,8 @@
 	Inherits: ^Humanoid
 	RevealsShroud:
 		Range: 4c0
+	Selectable:
+		Class: Civ
 	Tooltip:
 		GenericName: Civilian
 	EditorTilesetFilter:
@@ -123,9 +125,7 @@
 	Voiced:
 		VoiceSet: CivilianVoice
 
-#
 # Vehicles
-#
 
 ^DrAnimatedVehicle:
 	Inherits@1: ^ExistsInWorld
@@ -153,6 +153,7 @@
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
+		Class: V1
 		Bounds: 28, 28
 		DecorationBounds: 28,28
 	Targetable:
@@ -214,9 +215,7 @@
 	EditorTilesetFilter:
 		Categories: Civilian
 
-#
 # Buildings
-#
 # There are two versions of each building, named "[Building].Constructing" and "[Building]".
 # The .Constructing buildings have a SelfConstructing trait that turns the building into a new actor once built.
 # The .Constructing buildings inherit an instance of ^SelfConstructingBuilding i.e. ^DrGenericBuilding.Constructing/^DrHeadquarters.Constructing/
@@ -239,9 +238,10 @@
 		Dimensions: 1,1
 		Footprint: x
 		TerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
-		SkipMakeAnimation: True
-	RevealsShroud:
-		Range: 3c0
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
 	WithSpriteBody:
 	HitShape@LAYER1:
 	HitShape@LAYER2:
@@ -290,7 +290,6 @@
 		Dimensions: 1,1
 		Footprint: x
 		TerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
-		SkipMakeAnimation: True
 	RevealsShroud:
 		Range: 3c0
 	WithSpriteBody:
@@ -309,6 +308,28 @@
 	EditorTilesetFilter:
 		Categories: SelfConstructing
 	CommandBarBlacklist:
+
+^ConstructedBuildingCommon:
+	EditorTilesetFilter:
+		Categories: Building
+	RepairableBuilding:
+		RepairStep: 5
+		PlayerExperience: 25
+	EngineerRepairable:
+	Capturable:
+	SelectionDecorations:
+	ProximityCaptor:
+		Types: Building
+	CaptureNotification:
+	Explodes:
+		Weapon: GenericExplode
+		EmptyWeapon: GenericExplode
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
 
 ^DrHeadquarters.Constructing:
 	Inherits: ^SelfConstructingBuilding
@@ -345,8 +366,7 @@
 		Type: BuildingArmour
 
 ^DrHeadquarters:
-	EditorTilesetFilter:
-		Categories: Building
+	Inherits: ^ConstructedBuildingCommon
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: hq
@@ -394,8 +414,6 @@
 		Range: 8c0
 	Power:
 		Amount: 100
-	Armor:
-		Type: BuildingArmour
 	ProvidesRadar:
 	GrantConditionOnPrerequisite@con1:
 		Prerequisites: upgrade.hq1
@@ -444,8 +462,7 @@
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 
 ^DrTrainingFacility:
-	EditorTilesetFilter:
-		Categories: Building
+	Inherits: ^ConstructedBuildingCommon
 	Tooltip:
 		Name: Training Facility
 	Valued:
@@ -535,8 +552,7 @@
 		Sequence: shadow-building
 
 ^DrAssemblyPlant:
-	EditorTilesetFilter:
-		Categories: Building
+	Inherits: ^ConstructedBuildingCommon
 	Tooltip:
 		Name: Assembly Plant
 	Valued:
@@ -620,8 +636,7 @@
 		Sequence: shadow-building
 
 ^Defense:
-	EditorTilesetFilter:
-		Categories: Building
+	Inherits: ^ConstructedBuildingCommon
 	Valued:
 		Cost: 500
 	Health:
@@ -672,8 +687,7 @@
 		Sequence: shadow-building
 
 ^DrGenericBuilding:
-	EditorTilesetFilter:
-		Categories: Building
+	Inherits: ^ConstructedBuildingCommon
 	Valued:
 		Cost: 500
 	Health:
@@ -690,12 +704,7 @@
 		Palette: shadow
 		Sequence: shadow
 
-
-
-	
-#
 # Veterancy
-#
 
 ^GainsExperience:
 	GainsExperience:
@@ -775,9 +784,7 @@
 		RequiresCondition: rank-elite
 
 		
-#
 # AutoTarget
-#
 
 ^AutoTargetGround:
 	AutoTarget:
@@ -827,9 +834,7 @@
 	AttackMove:
 		AssaultMoveScanCondition: assault-move
 
-#
 # Decorations
-#
 
 ^Tree:
 	Inherits@1: ^SpriteActor

@@ -10,9 +10,9 @@ ncpow1l0:
 		Length: 1
 		Tick: 8000
 	damaged-idle:
-		Start: 1
+		Start: 2
 	damaged-build:
-		Start: 1
+		Start: 2
 		Length: 1
 	dead:
 		Start: 1
@@ -59,9 +59,9 @@ nclnc1l0:
 		Start: 1
 		Length: 1
 	damaged-idle:
-		Start: 1
+		Start: 2
 	damaged-build:
-		Start: 1
+		Start: 2
 		Length: 1
 	dead:
 		Start: 1

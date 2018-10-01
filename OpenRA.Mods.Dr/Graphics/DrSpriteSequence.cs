@@ -61,6 +61,9 @@ namespace OpenRA.Mods.Dr.Graphics
             var i = (f * Stride) + (frame % Length);
             var j = Frames != null ? Frames[i] : start + i;
 
+            if (j >= sprites.Length)
+                j = 0;
+
 			return sprites[j];
 		}
 	}

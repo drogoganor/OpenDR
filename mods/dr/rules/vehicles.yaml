@@ -11,6 +11,8 @@ ConstructionRig:
 		Prerequisites: ~techlevel.infonly
 		BuildPaletteOrder: 80
 		BuildDuration: 9
+	Selectable:
+		Class: C1
 	Voiced:
 		VoiceSet: ConstructionVoice
 	Valued:
@@ -72,6 +74,8 @@ Freighter:
 		Prerequisites: vehicles
 		BuildPaletteOrder: 80
 		BuildDuration: 30
+	Selectable:
+		Class: F1
 	Voiced:
 		VoiceSet: FreedomGuardVoice
 	Valued:
@@ -108,6 +112,8 @@ HoverFreighter:
 		Prerequisites: vehicles, barracks, hq, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 80
 		BuildDuration: 45
+	Selectable:
+		Class: F2
 	Voiced:
 		VoiceSet: FreedomGuardVoice
 	Valued:
@@ -142,6 +148,8 @@ SpiderBike:
 		Prerequisites: ~vehicles.human
 		BuildPaletteOrder: 90
 		BuildDuration: 15
+	Selectable:
+		Class: V1
 	Voiced:
 		VoiceSet: FreedomGuardVoice
 	Valued:
@@ -170,6 +178,8 @@ RAT:
 		Prerequisites: ~vehicles.fguard
 		BuildPaletteOrder: 90
 		BuildDuration: 14
+	Selectable:
+		Class: V2
 	Valued:
 		Cost: 450
 	Health:
@@ -201,6 +211,8 @@ SkirmishTank:
 		Prerequisites: ~vehicles.human
 		BuildPaletteOrder: 90
 		BuildDuration: 18
+	Selectable:
+		Class: V3
 	Turreted:
 		TurnSpeed: 5
 	Armament:
@@ -234,6 +246,8 @@ TankHunter:
 		Prerequisites: ~vehicles.fguard
 		BuildPaletteOrder: 100
 		BuildDuration: 21
+	Selectable:
+		Class: V4
 	Voiced:
 		VoiceSet: FreedomGuardVoice
 	Valued:
@@ -260,6 +274,8 @@ PhaseTank:
 		Prerequisites: ~vehicles.human, phasing
 		BuildPaletteOrder: 100
 		BuildDuration: 18
+	Selectable:
+		Class: V5
 	Voiced:
 		VoiceSet: PhaseTankVoice
 	Valued:
@@ -287,6 +303,8 @@ FlakJack:
 		Prerequisites: ~vehicles.human, hq, upgrade.hq1
 		BuildPaletteOrder: 100
 		BuildDuration: 15
+	Selectable:
+		Class: V6
 	Voiced:
 		VoiceSet: FlakJackVoice
 	Valued:
@@ -313,6 +331,8 @@ TripleRailHoverTank:
 		Prerequisites: ~vehicles.fguard, hq, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 110
 		BuildDuration: 39
+	Selectable:
+		Class: V7
 	Voiced:
 		VoiceSet: TripleRailTankVoice
 	Valued:
@@ -348,6 +368,8 @@ HellstormArtillery:
 		Prerequisites: ~vehicles.human, hq, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 110
 		BuildDuration: 33
+	Selectable:
+		Class: V8
 	Voiced:
 		VoiceSet: HellstormArtilleryVoice
 	Valued:
@@ -374,6 +396,8 @@ ShockWave:
 		Prerequisites: ~vehicles.human, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1, ~phasing, upgrade.phasing
 		BuildPaletteOrder: 200
 		BuildDuration: 120
+	Selectable:
+		Class: V9
 	Voiced:
 		VoiceSet: ShockWaveVoice
 	Valued:
@@ -409,6 +433,8 @@ WaterContaminator:
 		Prerequisites: ~vehicles, hq, ~upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
 		BuildPaletteOrder: 200
 		BuildDuration: 150
+	Selectable:
+		Class: V10
 	Voiced:
 		VoiceSet: FreedomGuardVoice
 	Valued:
@@ -436,6 +462,8 @@ PhaseRunner:
 	#	Prerequisites: ~vehicles.fguard
 	#	BuildPaletteOrder: 210
 	#	BuildDuration: 40
+	Selectable:
+		Class: V11
 	Valued:
 		Cost: 900
 	Health:
@@ -467,6 +495,8 @@ ScoutRunner:
 		Prerequisites: ~vehicles.cyborg, hq
 		BuildPaletteOrder: 130
 		BuildDuration: 15
+	Selectable:
+		Class: V12
 	Voiced:
 		VoiceSet: ImperiumVoice
 	Valued:
@@ -493,6 +523,8 @@ ITT:
 		Prerequisites: ~vehicles.cyborg, hq
 		BuildPaletteOrder: 130
 		BuildDuration: 18
+	Selectable:
+		Class: V13
 	Voiced:
 		VoiceSet: ImperiumVoice
 	Valued:
@@ -525,6 +557,8 @@ PlasmaTank:
 		Prerequisites: ~vehicles.imperium, hq
 		BuildPaletteOrder: 130
 		BuildDuration: 21
+	Selectable:
+		Class: V14
 	Voiced:
 		VoiceSet: ImperiumVoice
 	Valued:
@@ -562,6 +596,8 @@ Amper:
 		Prerequisites: ~vehicles.imperium, hq, barracks, hospital
 		BuildPaletteOrder: 140
 		BuildDuration: 15
+	Selectable:
+		Class: V15
 	Voiced:
 		VoiceSet: AmperVoice
 	Valued:
@@ -589,6 +625,8 @@ MAD:
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1
 		BuildPaletteOrder: 140
 		BuildDuration: 24
+	Selectable:
+		Class: V6
 	Voiced:
 		VoiceSet: ImperiumVoice
 	Valued:
@@ -615,6 +653,8 @@ Shredder:
 		Prerequisites: ~vehicles.imperium, hq
 		BuildPaletteOrder: 150
 		BuildDuration: 21
+	Selectable:
+		Class: V16
 	Voiced:
 		VoiceSet: ShredderVoice
 	Valued:
@@ -641,6 +681,8 @@ HostageTaker:
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
 		BuildDuration: 18
+	Selectable:
+		Class: V17
 	Voiced:
 		VoiceSet: HostageTakerVoice
 	Valued:
@@ -665,6 +707,8 @@ TachionTank:
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
 		BuildDuration: 45
+	Selectable:
+		Class: V18
 	Voiced:
 		VoiceSet: TachionTankVoice
 	Valued:
@@ -691,6 +735,8 @@ Scarab:
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
 		BuildDuration: 39
+	Selectable:
+		Class: V8
 	Voiced:
 		VoiceSet: ImperiumVoice
 	Valued:

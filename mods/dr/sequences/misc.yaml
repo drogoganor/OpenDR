@@ -172,3 +172,33 @@ pips:
 		Start: 3
 	pip-yellow: pips.png
 		Start: 4
+
+# Generic human death
+humansplat:
+	die: splata
+		Start: 0
+		Length: 15
+		Tick: 100
+	die1: splata
+		Start: 0
+		Length: 15
+		Tick: 100
+	die2: splatc
+		Start: 0
+		Length: 13
+		Tick: 100
+
+# Generic alien death
+aliensplat:
+	die: splatb
+		Start: 0
+		Length: 15
+		Tick: 100
+	die1: splatb
+		Start: 0
+		Length: 15
+		Tick: 100
+	die2: splatd
+		Start: 0
+		Length: 12
+		Tick: 100

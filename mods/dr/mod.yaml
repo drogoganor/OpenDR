@@ -69,6 +69,7 @@ Sequences:
 	dr|sequences/upgrades.yaml
 	dr|sequences/vehicles.yaml
 	dr|sequences/infantry.yaml
+	dr|sequences/civilians.yaml
 	dr|sequences/effects.yaml
 	dr|sequences/decorations.yaml
 #	dr|sequences/structures-ex.yaml

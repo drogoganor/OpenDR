@@ -4,14 +4,22 @@ World:
 	MusicPlaylist:
 		StartingMusic: track1
 	MissionData:
-		Briefing: Freedom Guard scouts have sighted enemy soldiers in the area.\nGet a squad together and destroy the Imperium units.
+		Briefing: An Imperium force is threatening a base we're building near a valley.\n\The Imperium has a heavily fortified gate in the valley, but scouts report undefended entrances to the east and west of the base.\n\nProtect our base and destroy the enemy's production facilities.
 
 Player:
 	EnemyWatcher:
 	PlayerResources:
 		DefaultCash: 10000
 
-^DrBuilding:
+^ConstructedBuildingCommon:
+	AnnounceOnSeen:
+	ScriptTags:
+
+^Humanoid:
+	AnnounceOnSeen:
+	ScriptTags:
+
+^DrAnimatedVehicle:
 	AnnounceOnSeen:
 	ScriptTags:
 

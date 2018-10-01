@@ -10,6 +10,8 @@ Raider:
 		Prerequisites: ~infantry.human
 		BuildPaletteOrder: 10
 		BuildDuration: 6
+	Selectable:
+		Class: E1
 	Voiced:
 		VoiceSet: FreedomGuardVoice
 	Valued:
@@ -37,6 +39,8 @@ Mercenary:
 		Prerequisites: ~infantry.fguard
 		BuildPaletteOrder: 10
 		BuildDuration: 11
+	Selectable:
+		Class: E2
 	Voiced:
 		VoiceSet: MercVoice
 	Valued:
@@ -63,6 +67,8 @@ Sniper:
 		Prerequisites: ~infantry.human, hq, upgrade.hq1, vehicles, barracks, upgrade.barracks1
 		BuildPaletteOrder: 10
 		BuildDuration: 21
+	Selectable:
+		Class: E3
 	Voiced:
 		VoiceSet: SniperVoice
 	Valued:
@@ -89,6 +95,8 @@ Scout:
 		Prerequisites: ~infantry.human
 		BuildPaletteOrder: 20
 		BuildDuration: 9
+	Selectable:
+		Class: E4
 	Voiced:
 		VoiceSet: ScoutVoice
 	Valued:
@@ -113,6 +121,8 @@ Medic:
 		Prerequisites: ~infantry.human, hospital
 		BuildPaletteOrder: 20
 		BuildDuration: 15
+	Selectable:
+		Class: E5
 	Voiced:
 		VoiceSet: MedicVoice
 	Valued:
@@ -147,6 +157,8 @@ Saboteur:
 		BuildPaletteOrder: 20
 		BuildDuration: 24
 		Icon: icon-saboteur
+	Selectable:
+		Class: E6
 	Voiced:
 		VoiceSet: MechanicVoice
 	Valued:
@@ -176,6 +188,8 @@ Mechanic:
 		Prerequisites: ~infantry.human, vehicles, repair
 		BuildPaletteOrder: 30
 		BuildDuration: 15
+	Selectable:
+		Class: E7
 	Voiced:
 		VoiceSet: MechanicVoice
 	Valued:
@@ -209,6 +223,8 @@ Martyr:
 		Prerequisites: ~infantry.fguard
 		BuildPaletteOrder: 30
 		BuildDuration: 18
+	Selectable:
+		Class: E8
 	Voiced:
 		VoiceSet: MartyrVoice
 	Valued:
@@ -243,6 +259,8 @@ Guardian:
 		Prerequisites: ~infantry.imperium
 		BuildPaletteOrder: 10
 		BuildDuration: 6
+	Selectable:
+		Class: E1
 	Voiced:
 		VoiceSet: ImperiumVoice
 	Valued:
@@ -270,6 +288,8 @@ Bion:
 		Prerequisites: ~infantry.cyborg
 		BuildPaletteOrder: 20
 		BuildDuration: 12
+	Selectable:
+		Class: E2
 	Voiced:
 		VoiceSet: ImperiumBionVoice
 	Valued:
@@ -297,6 +317,8 @@ Exterminator:
 		Prerequisites: ~infantry.cyborg, hq, upgrade.hq1, barracks, vehicles, upgrade.assemblyplant1
 		BuildPaletteOrder: 30
 		BuildDuration: 15
+	Selectable:
+		Class: E9
 	Voiced:
 		VoiceSet: ExterminatorVoice
 	Valued:
@@ -327,6 +349,8 @@ Infiltrator:
 		BuildPaletteOrder: 40
 		BuildDuration: 30
 		Prerequisites: hq, upgrade.hq1, vehicles, barracks, upgrade.barracks1
+	Selectable:
+		Class: E10
 	Voiced:
 		VoiceSet: InfiltratorVoice
 	Valued:

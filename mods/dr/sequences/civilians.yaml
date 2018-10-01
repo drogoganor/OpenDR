@@ -1,0 +1,111 @@
+
+# Civilian
+uocvmst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 40
+	idle:
+		Start: 48
+		Facings: 8
+		Length: 7
+		Tick: 60
+	idle2:
+		Start: 104
+		Facings: 8
+		Length: 9
+		Tick: 60
+	stand:
+		Start: 176
+		Facings: 8
+	icon: uocvmmn0
+
+# Rowdy Civilian
+uorcmst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 184
+		Facings: 8
+	idle2:
+		Start: 88
+		Facings: 8
+		Length: 6
+		Tick: 100
+	idle3:
+		Start: 136
+		Facings: 8
+		Length: 6
+		Tick: 100
+	stand:
+		Start: 184
+		Facings: 8
+	icon: uorcmmn0
+
+# Karoch
+uocspst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 4
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 8
+	stand:
+		Start: 0
+		Facings: 8
+	icon: uocspmn0
+
+
+# Dessicator transport
+uohtrst0:
+	idle:
+		Start: 0
+		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
+	run:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 0
+		Facings: 16
+	icon: uohtrmn0
+
+# Civ Troop Transport
+uowtrst0:
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	icon: uowtrmn0
