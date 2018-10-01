@@ -12,14 +12,15 @@
 # to check lua scripts for syntax errors, run:
 #   make check-scripts
 #
-# to check the official mods for erroneous yaml files, run:
-#   make test
-#
-# to check the official mod dlls for StyleCop violations, run:
+# to check the engine and your mod dlls for StyleCop violations, run:
 #   make check
 #
+# the following are internal sdk helpers that are not intended to be run directly:
+#   make check-variables
+#   make check-sdk-scripts
+#   make check-packaging-scripts
 
-.PHONY: utility stylecheck build clean engine version check-scripts check test
+.PHONY: utility stylecheck build clean engine version check check-scripts check-sdk-scripts check-packaging-scripts check-variables
 .DEFAULT_GOAL := build
 
 VERSION = $(shell git name-rev --name-only --tags --no-undefined HEAD 2>/dev/null || echo git-`git rev-parse --short HEAD`)
@@ -34,20 +35,66 @@ HAS_LUAC = $(shell command -v luac 2> /dev/null)
 LUA_FILES = $(shell find mods/*/maps/* -iname '*.lua')
 PROJECT_DIRS = $(shell dirname $$(find . -iname "*.csproj" -not -path "$(ENGINE_DIRECTORY)/*"))
 
-variables:
-	@if [ -z "$(MOD_ID)" ] || [ -z "$(ENGINE_DIRECTORY)" ];then \
-			echo "Required mod.config variables are missing:"; \
-			if [ -z "$(MOD_ID)" ]; then \
-				echo "   MOD_ID"; \
-			fi; \
-			if [ -z "$(ENGINE_DIRECTORY)" ]; then \
-				echo "   ENGINE_DIRECTORY"; \
-			fi; \
-			echo "Repair your mod.config (or user.config) and try again."; \
-			exit 1; \
-		fi
+check-sdk-scripts:
+	@awk '/\r$$/ { exit(1); }' mod.config || (printf "Invalid mod.config format: file must be saved using unix-style (CR, not CRLF) line endings.\n"; exit 1)
+	@if [ ! -x "fetch-engine.sh" ] || [ ! -x "launch-dedicated.sh" ] || [ ! -x "launch-game.sh" ] || [ ! -x "utility.sh" ]; then \
+		echo "Required SDK scripts are not executable:"; \
+		if [ ! -x "fetch-engine.sh" ]; then \
+			echo "   fetch-engine.sh"; \
+		fi; \
+		if [ ! -x "launch-dedicated.sh" ]; then \
+			echo "   launch-dedicated.sh"; \
+		fi; \
+		if [ ! -x "launch-game.sh" ]; then \
+			echo "   launch-game.sh"; \
+		fi; \
+		if [ ! -x "utility.sh" ]; then \
+			echo "   utility.sh"; \
+		fi; \
+		echo "Repair their permissions and try again."; \
+		echo "If you are using git you can repair these permissions by running"; \
+		echo "   git update-index --chmod=+x *.sh"; \
+		echo "and commiting the changed files to your repository."; \
+		exit 1; \
+	fi
 
-engine: variables
+check-packaging-scripts:
+	@if [ ! -x "packaging/package-all.sh" ] || [ ! -x "packaging/linux/buildpackage.sh" ] || [ ! -x "packaging/osx/buildpackage.sh" ] || [ ! -x "packaging/windows/buildpackage.sh" ]; then \
+		echo "Required SDK scripts are not executable:"; \
+		if [ ! -x "packaging/package-all.sh" ]; then \
+			echo "   packaging/package-all.sh"; \
+		fi; \
+		if [ ! -x "packaging/linux/buildpackage.sh" ]; then \
+			echo "   packaging/linux/buildpackage.sh"; \
+		fi; \
+		if [ ! -x "packaging/osx/buildpackage.sh" ]; then \
+			echo "   packaging/osx/buildpackage.sh"; \
+		fi; \
+		if [ ! -x "packaging/windows/buildpackage.sh" ]; then \
+			echo "   packaging/windows/buildpackage.sh"; \
+		fi; \
+		echo "Repair their permissions and try again."; \
+		echo "If you are using git you can repair these permissions by running"; \
+		echo "   git update-index --chmod=+x *.sh"; \
+		echo "in the directories containing the affected files"; \
+		echo "and commiting the changed files to your repository."; \
+		exit 1; \
+	fi
+
+check-variables:
+	@if [ -z "$(MOD_ID)" ] || [ -z "$(ENGINE_DIRECTORY)" ]; then \
+		echo "Required mod.config variables are missing:"; \
+		if [ -z "$(MOD_ID)" ]; then \
+			echo "   MOD_ID"; \
+		fi; \
+		if [ -z "$(ENGINE_DIRECTORY)" ]; then \
+			echo "   ENGINE_DIRECTORY"; \
+		fi; \
+		echo "Repair your mod.config (or user.config) and try again."; \
+		exit 1; \
+	fi
+
+engine: check-variables check-sdk-scripts
 	@./fetch-engine.sh || (printf "Unable to continue without engine files\n"; exit 1)
 	@cd $(ENGINE_DIRECTORY) && make core
 
@@ -73,13 +120,13 @@ endif
 	@cd $(ENGINE_DIRECTORY) && make clean
 	@printf "The engine has been cleaned.\n"
 
-version: variables
+version: check-variables
 	@awk '{sub("Version:.*$$","Version: $(VERSION)"); print $0}' $(MANIFEST_PATH) > $(MANIFEST_PATH).tmp && \
 	awk '{sub("/[^/]*: User$$", "/$(VERSION): User"); print $0}' $(MANIFEST_PATH).tmp > $(MANIFEST_PATH) && \
 	rm $(MANIFEST_PATH).tmp
 	@printf "Version changed to $(VERSION).\n"
 
-check-scripts: variables
+check-scripts: check-variables
 ifeq ("$(HAS_LUAC)","")
 	@printf "'luac' not found.\n" && exit 1
 endif

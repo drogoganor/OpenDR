@@ -1,7 +1,5 @@
 #!/bin/bash
 set -e
-
-command -v curl >/dev/null 2>&1 || { echo >&2 "Windows packaging requires curl."; exit 1; }
 command -v makensis >/dev/null 2>&1 || { echo >&2 "Windows packaging requires makensis."; exit 1; }
 
 require_variables() {
@@ -68,7 +66,7 @@ fi
 MOD_VERSION=$(grep 'Version:' mods/${MOD_ID}/mod.yaml | awk '{print $2}')
 
 if [ "${PACKAGING_OVERWRITE_MOD_VERSION}" == "True" ]; then
-    make version VERSION="${TAG}"
+	make version VERSION="${TAG}"
 else
 	echo "Mod version ${MOD_VERSION} will remain unchanged.";
 fi
@@ -81,8 +79,8 @@ make install-engine gameinstalldir="" DESTDIR="${BUILTDIR}"
 make install-common-mod-files gameinstalldir="" DESTDIR="${BUILTDIR}"
 
 for f in ${PACKAGING_COPY_ENGINE_FILES}; do
-  mkdir -p "${BUILTDIR}/$(dirname "${f}")"
-  cp -r "${f}" "${BUILTDIR}/${f}"
+	mkdir -p "${BUILTDIR}/$(dirname "${f}")"
+	cp -r "${f}" "${BUILTDIR}/${f}"
 done
 
 popd > /dev/null
@@ -92,6 +90,10 @@ popd > /dev/null
 cp -Lr "${TEMPLATE_ROOT}/mods/"* "${BUILTDIR}/mods"
 cp "mod.ico" "${BUILTDIR}/${MOD_ID}.ico"
 cp "${SRC_DIR}/OpenRA.Game.exe.config" "${BUILTDIR}"
+
+# We need to set the loadFromRemoteSources flag for the launcher, but only for the "portable" zip package.
+# Windows automatically un-trusts executables that are extracted from a downloaded zip file
+cp "${SRC_DIR}/OpenRA.Game.exe.config" "${BUILTDIR}/${PACKAGING_WINDOWS_LAUNCHER_NAME}.exe.config"
 
 echo "Compiling Windows launcher"
 sed "s|DISPLAY_NAME|${PACKAGING_DISPLAY_NAME}|" "${SRC_DIR}/packaging/windows/WindowsLauncher.cs.in" | sed "s|MOD_ID|${MOD_ID}|" | sed "s|FAQ_URL|${PACKAGING_FAQ_URL}|" > "${BUILTDIR}/WindowsLauncher.cs"
@@ -110,7 +112,7 @@ popd > /dev/null
 echo "Packaging zip archive"
 pushd "${BUILTDIR}" > /dev/null
 find "${SRC_DIR}/thirdparty/download/windows/" -name '*.dll' -exec cp '{}' '.' ';'
-zip "${PACKAGING_INSTALLER_NAME}-${TAG}-winportable" -r -9 * --quiet
+zip "${PACKAGING_INSTALLER_NAME}-${TAG}-winportable.zip" -r -9 * --quiet
 mv "${PACKAGING_INSTALLER_NAME}-${TAG}-winportable.zip" "${OUTPUTDIR}"
 popd > /dev/null
 
