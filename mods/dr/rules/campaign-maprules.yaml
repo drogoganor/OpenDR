@@ -19,6 +19,9 @@ Player:
 	-ConquestVictoryConditions:
 	MissionObjectives:
 		EarlyGameOver: true
+		WinNotification: Win
+		LoseNotification: Lose
+		LeaveNotification: Leave
 	Shroud:
 		FogCheckboxLocked: False
 		FogCheckboxEnabled: True
@@ -26,3 +29,5 @@ Player:
 		ExploredMapCheckboxEnabled: False
 	PlayerResources:
 		DefaultCash: 10000
+		CashTickUpNotification: CashTickUp
+		CashTickDownNotification: CashTickDown

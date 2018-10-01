@@ -230,6 +230,7 @@
 	RepairableBuilding:
 		RepairStep: 20
 		PlayerExperience: 25
+		RepairingNotification: Repairing
 	Selectable:
 		Priority: 3
 	Targetable:
@@ -238,6 +239,7 @@
 		Dimensions: 1,1
 		Footprint: x
 		TerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
+		BuildSounds: Building
 	Valued:
 		Cost: 500
 	Health:
@@ -271,8 +273,14 @@
 		ReferencePoint: Center
 		Palette: player
 		IsPlayerPalette: True
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
 
-^SelfConstructingBuilding: 
+^SelfConstructingBuilding:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
 	Buildable:
@@ -290,6 +298,7 @@
 		Dimensions: 1,1
 		Footprint: x
 		TerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
+		BuildSounds: Building
 	RevealsShroud:
 		Range: 3c0
 	WithSpriteBody:
@@ -315,6 +324,7 @@
 	RepairableBuilding:
 		RepairStep: 5
 		PlayerExperience: 25
+		RepairingNotification: Repairing
 	EngineerRepairable:
 	Capturable:
 	SelectionDecorations:
@@ -324,6 +334,12 @@
 	Explodes:
 		Weapon: GenericExplode
 		EmptyWeapon: GenericExplode
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
 	WithBuildingRepairDecoration:
 		Image: allyrepair
 		Sequence: repair
@@ -400,9 +416,12 @@
 		Type: Economy
 		#LowPowerSlowdown: 1
 		Group: Economy
-		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
 		BlockedAudio: NoRoom
+		ReadyAudio: UnitReady
+		BlockedAudio: NoRoom
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 	ProductionBar@Economy:
 		ProductionType: Economy
 	ProductionBar@Upgrade:
@@ -483,6 +502,11 @@
 		Type: Infantry
 		Group: Infantry
 		LowPowerSlowdown: 1
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 	ProductionBar:
 	ProvidesPrerequisite@barracks:
 		Prerequisite: barracks
@@ -570,9 +594,13 @@
 		Type: Vehicle
 		Group: Vehicle
 		LowPowerSlowdown: 3
-		QueuedAudio: Building
 		#SpeedUp: True
 		#BuildTimeSpeedReduction: 100, 75, 60, 50
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@vehicles:
 		Prerequisite: vehicles
@@ -708,6 +736,7 @@
 
 ^GainsExperience:
 	GainsExperience:
+		LevelUpNotification: LevelUp
 		Conditions:
 			200: rank-veteran
 			400: rank-veteran
@@ -782,8 +811,8 @@
 		HealIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: rank-elite
-
 		
+
 # AutoTarget
 
 ^AutoTargetGround:

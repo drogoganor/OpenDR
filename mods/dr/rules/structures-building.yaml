@@ -408,7 +408,7 @@ NeutronAccelerator.Constructing:
 		Dimensions: 3,3
 		#LocalCenterOffset: 384,-256,0
 	Buildable:
-		Prerequisites:  ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
+		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
 		Queue: Building
 		Description: Neutron Accelerator
 		BuildPaletteOrder: 50
