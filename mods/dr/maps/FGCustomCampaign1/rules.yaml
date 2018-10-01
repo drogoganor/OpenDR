@@ -4,7 +4,7 @@ World:
 	MusicPlaylist:
 		StartingMusic: track1
 	MissionData:
-		Briefing: An Imperium force is threatening a base we're building near a valley.\n\The Imperium has a heavily fortified gate in the valley, but scouts report undefended entrances to the east and west of the base.\n\nProtect our base and destroy the enemy's production facilities.
+		Briefing: An Imperium force is threatening a base we're building near a valley.\n\nThe Imperium has a heavily fortified gate in the valley, but scouts report undefended entrances to the east and west of the base...\n\nProtect our base and destroy the enemy's production facilities.
 
 Player:
 	EnemyWatcher:
