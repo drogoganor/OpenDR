@@ -1,8 +1,15 @@
 # General dumping-ground for UI element sizes, etc.
 
 Metrics:
-	ButtonDepth: 0
-	ButtonFont: Bold
-	CheckboxPressedState: true
 	ColorPickerActorType: freighter.colorpicker
 	ColorPickerRemapIndices: 39, 38, 37, 36, 35, 34, 33, 32
+	#ButtonDepth: 0
+	#ButtonFont: Bold
+	FactionSuffix-imperium: imperium
+	FactionSuffix-fguard: fguard
+	IncompatibleProtectedGameColor: B22222
+	IncompatibleVersionColor: D3D3D3
+	TextfieldColorHighlight: 562020
+	ChatLineSound: ChatLine
+	ClickDisabledSound: ClickDisabledSound
+	ClickSound: ClickSound

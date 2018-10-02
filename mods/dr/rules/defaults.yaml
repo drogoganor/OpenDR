@@ -273,12 +273,6 @@
 		ReferencePoint: Center
 		Palette: player
 		IsPlayerPalette: True
-	WithBuildingRepairDecoration:
-		Image: allyrepair
-		Sequence: repair
-		ReferencePoint: Center
-		Palette: player
-		IsPlayerPalette: True
 
 ^SelfConstructingBuilding:
 	Inherits@1: ^ExistsInWorld
@@ -334,12 +328,6 @@
 	Explodes:
 		Weapon: GenericExplode
 		EmptyWeapon: GenericExplode
-	WithBuildingRepairDecoration:
-		Image: allyrepair
-		Sequence: repair
-		ReferencePoint: Center
-		Palette: player
-		IsPlayerPalette: True
 	WithBuildingRepairDecoration:
 		Image: allyrepair
 		Sequence: repair
@@ -416,7 +404,6 @@
 		Type: Economy
 		#LowPowerSlowdown: 1
 		Group: Economy
-		BlockedAudio: NoRoom
 		ReadyAudio: UnitReady
 		BlockedAudio: NoRoom
 		QueuedAudio: Building
@@ -501,7 +488,7 @@
 	ProductionQueue@Infantry:
 		Type: Infantry
 		Group: Infantry
-		LowPowerSlowdown: 1
+		#LowPowerSlowdown: 1
 		ReadyAudio: UnitReady
 		BlockedAudio: NoBuild
 		QueuedAudio: Building
