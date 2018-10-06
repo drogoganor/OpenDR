@@ -1,9 +1,3 @@
-Palettes:
-	cursor: units.pal
-
-PaletteLoaders:
-	cursor: JascPalette
-
 Cursors:
 	mouse.crs: cursor
 		default:
