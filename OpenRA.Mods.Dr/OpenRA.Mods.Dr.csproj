@@ -49,7 +49,6 @@
     <Compile Include="SpriteLoaders\DrCrsLoader.cs" />
     <Compile Include="SpriteLoaders\DrTilLoader.cs" />
     <Compile Include="SpriteLoaders\DrSprLoader.cs" />
-    <Compile Include="SpriteLoaders\JascPaletteLoader.cs" />
     <Compile Include="Traits\Player\BuilderUnit.cs" />
     <Compile Include="Traits\Player\BuildUnitPlaceBuilding.cs" />
     <Compile Include="Traits\Player\BuilderQueue.cs" />
