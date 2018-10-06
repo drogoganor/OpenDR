@@ -1,7 +1,7 @@
 ^Palettes:
-	PaletteFromGimpOrJascFile@cursor:
+	PaletteFromDrFile@cursor:
 		Name: cursor
-		Filename: units.pal
+		Filename: BARREN/BARREN.PAL
 		CursorPalette: true
 	PaletteFromDrFile@terrain-barren:
 		Name: terrain
