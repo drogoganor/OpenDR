@@ -50,7 +50,6 @@ namespace OpenRA.Mods.Dr.Traits.Production
             if (init.Contains<PlaceBuildingInit>())
             {
                 var productionQueue = init.Self.Owner.PlayerActor.TraitsImplementing<BuilderQueue>().First(q => q.AllItems().Contains(init.Self.Info));
-                var valued = init.Self.Info.TraitInfoOrDefault<ValuedInfo>();
                 productionItem = new BuilderItem(productionQueue, init.Self.Info.Name, null);
                 productionQueue.BeginProduction(productionItem);
 
