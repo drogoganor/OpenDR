@@ -79,11 +79,9 @@ namespace OpenRA.Mods.Dr.Traits.Production
             if (token != ConditionManager.InvalidConditionToken)
                 token = conditionManager.RevokeCondition(self, token);
 
-            var building = self.TraitOrDefault<Building>();
-
             var actorName = Info.Becomes.ToLowerInvariant();
             var builtBuildingDef = rules.Actors[actorName];
-            var newActor = CreateActor(self, actorName, true);
+            CreateActor(self, actorName, true);
 
             world.Remove(self);
             self.Dispose();
