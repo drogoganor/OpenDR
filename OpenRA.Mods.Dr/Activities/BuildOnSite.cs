@@ -28,19 +28,17 @@ namespace OpenRA.Mods.Dr.Activities
 		readonly CPos target;
 		readonly IMove move;
 		readonly Order order;
-		readonly TraitPair<BuilderUnit> producer;
 		readonly string faction;
 		readonly BuildingInfo buildingInfo;
 		readonly PlayerResources playerResources;
 		readonly ActorInfo buildingActor;
 
-		public BuildOnSite(World world, Actor self, Order order, TraitPair<BuilderUnit> producer, string faction, BuildingInfo buildingInfo)
+		public BuildOnSite(World world, Actor self, Order order, string faction, BuildingInfo buildingInfo)
 		{
 			move = self.Trait<IMove>();
 			this.buildingInfo = buildingInfo;
 			this.world = world;
 			this.order = order;
-			this.producer = producer;
 			this.faction = faction;
 			target = order.TargetLocation;
 			playerResources = order.Player.PlayerActor.Trait<PlayerResources>();

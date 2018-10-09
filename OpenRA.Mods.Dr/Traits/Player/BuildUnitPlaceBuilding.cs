@@ -79,7 +79,7 @@ namespace OpenRA.Mods.Dr.Traits
 					return;
 
 				// Make the actor move to the location
-				var buildActivity = new BuildOnSite(w, targetActor, order, producer, faction, buildingInfo);
+				var buildActivity = new BuildOnSite(w, targetActor, order, faction, buildingInfo);
 				targetActor.QueueActivity(buildActivity);
 			});
 		}

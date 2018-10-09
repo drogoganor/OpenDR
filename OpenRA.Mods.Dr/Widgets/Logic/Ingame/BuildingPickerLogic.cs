@@ -24,7 +24,7 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 		readonly string productionParentName;
 
 		[ObjectCreator.UseCtor]
-		public BuildingPickerLogic(Widget widget, OrderManager orderManager, Dictionary<string, MiniYaml> logicArgs)
+		public BuildingPickerLogic(Widget widget, Dictionary<string, MiniYaml> logicArgs)
 		{
 			palette = widget.Get<BuildSelectPaletteWidget>("BUILD_SELECT_PALETTE");
 

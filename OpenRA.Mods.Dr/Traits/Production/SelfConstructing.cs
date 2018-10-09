@@ -35,11 +35,9 @@ namespace OpenRA.Mods.Dr.Traits.Production
         private List<int> healthSteps;
         private int healthStep = 0;
         private Health health;
-        private World world;
 
         public SelfConstructing(ActorInitializer init, SelfConstructingInfo info) : base(init, info)
         {
-            world = init.World;
             Info = info;
             wsb = init.Self.Trait<WithSpriteBody>();
             conditionManager = init.Self.Trait<ConditionManager>();

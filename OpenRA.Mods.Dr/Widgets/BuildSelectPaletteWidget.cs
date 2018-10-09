@@ -228,7 +228,7 @@ namespace OpenRA.Mods.Dr.Widgets
 			return HandleEvent(icon, mi.Button, mi.Modifiers);
 		}
 
-		bool HandleLeftClick(ProductionItem item, BuildSelectIcon icon, int handleCount)
+		bool HandleLeftClick(BuildSelectIcon icon)
 		{
 			CurrentQueue = icon.BuilderUnit;
 			World.OrderGenerator = new BuilderUnitBuildingOrderGenerator(CurrentQueue, icon.Name, worldRenderer);
@@ -237,10 +237,7 @@ namespace OpenRA.Mods.Dr.Widgets
 
 		bool HandleEvent(BuildSelectIcon icon, MouseButton btn, Modifiers modifiers)
 		{
-			var startCount = modifiers.HasModifier(Modifiers.Shift) ? 5 : 1;
-
-			var item = icon.Item;
-			var handled = btn == MouseButton.Left ? HandleLeftClick(item, icon, startCount) : false;
+			var handled = btn == MouseButton.Left ? HandleLeftClick(icon) : false;
 
 			if (!handled)
 				Game.Sound.Play(SoundType.UI, DisabledTabClick);
