@@ -118,7 +118,6 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public void LoadPalettes(WorldRenderer wr)
 		{
-			var colors = new uint[Palette.Size];
 			Stream s;
 			if (!world.Map.TryOpen(info.Filename, out s))
 			{
