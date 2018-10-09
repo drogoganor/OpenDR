@@ -231,7 +231,6 @@ Player:
 		CheckboxDisplayOrder: 8
 	ClassicProductionQueue@Upgrade:
 		Type: Upgrade
-		LowPowerSlowdown: 2
 		Group: Upgrade
 		QueuedAudio: Upgrading
 		ReadyAudio: ConstructionComplete
@@ -244,7 +243,6 @@ Player:
 		BlockedAudio: Upgrading
 	ClassicProductionQueue@Defense:
 		Type: Defense
-		LowPowerSlowdown: 3
 		Group: Defense
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete

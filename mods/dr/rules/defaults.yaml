@@ -173,12 +173,12 @@
 		GenericName: Vehicle
 	DeathSounds@NORMAL:
 		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath
-	Capturable:
-		Types: vehicle
-		CaptureThreshold: 100
-		CancelActivity: True
-	CaptureNotification:
-		Notification: UnitStolen
+	#Capturable:
+	#	Types: vehicle
+	#	CaptureThreshold: 100
+	#	CancelActivity: True
+	#CaptureNotification:
+	#	Notification: UnitStolen
 	MustBeDestroyed:
 	Armament:
 		Weapon: LaserRifle
@@ -250,7 +250,9 @@
 	HitShape@LAYER3:
 	HitShape@LAYER4:
 	EngineerRepairable:
+	CaptureManager:
 	Capturable:
+		Types: building
 	Guardable:
 		Range: 3c0
 	FrozenUnderFog:
@@ -320,7 +322,9 @@
 		PlayerExperience: 25
 		RepairingNotification: Repairing
 	EngineerRepairable:
+	CaptureManager:
 	Capturable:
+		Types: building
 	SelectionDecorations:
 	ProximityCaptor:
 		Types: Building
@@ -551,14 +555,11 @@
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -580,7 +581,6 @@
 	ProductionQueue@Vehicle:
 		Type: Vehicle
 		Group: Vehicle
-		LowPowerSlowdown: 3
 		#SpeedUp: True
 		#BuildTimeSpeedReduction: 100, 75, 60, 50
 		ReadyAudio: UnitReady
@@ -639,14 +639,11 @@
 	RevealsShroud:
 		Range: 9c0
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -690,14 +687,11 @@
 	RevealsShroud:
 		Range: 8c0
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 

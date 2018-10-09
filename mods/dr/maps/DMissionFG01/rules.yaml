@@ -1,0 +1,147 @@
+World:
+	LuaScript:
+		Scripts: map.lua
+	MusicPlaylist:
+		StartingMusic: track1
+	MissionData:
+		Briefing: An Imperium force is threatening a base we're building near a valley.\n\nThe Imperium has a heavily fortified gate in the valley, but scouts report undefended entrances to the east and west of the base...\n\nProtect our base and destroy the enemy's production facilities.
+
+Player:
+	EnemyWatcher:
+	PlayerResources:
+		DefaultCash: 10000
+
+^ConstructedBuildingCommon:
+	AnnounceOnSeen:
+	ScriptTags:
+
+^Humanoid:
+	AnnounceOnSeen:
+	ScriptTags:
+
+^DrAnimatedVehicle:
+	AnnounceOnSeen:
+	ScriptTags:
+
+# FG Units
+Medic:
+	Buildable:
+		Prerequisites: ~disabled
+
+Saboteur:
+	Buildable:
+		Prerequisites: ~disabled
+
+Sniper:
+	Buildable:
+		Prerequisites: ~disabled
+
+Mechanic:
+	Buildable:
+		Prerequisites: ~disabled
+
+Martyr:
+	Buildable:
+		Prerequisites: ~disabled
+
+Infiltrator:
+	Buildable:
+		Prerequisites: ~disabled
+
+HoverFreighter:
+	Buildable:
+		Prerequisites: ~disabled
+
+SkirmishTank:
+	Buildable:
+		Prerequisites: ~disabled
+
+TankHunter:
+	Buildable:
+		Prerequisites: ~disabled
+
+PhaseTank:
+	Buildable:
+		Prerequisites: ~disabled
+
+FlakJack:
+	Buildable:
+		Prerequisites: ~disabled
+
+TripleRailHoverTank:
+	Buildable:
+		Prerequisites: ~disabled
+
+HellstormArtillery:
+	Buildable:
+		Prerequisites: ~disabled
+
+SkyBike:
+	Buildable:
+		Prerequisites: ~disabled
+
+Outrider:
+	Buildable:
+		Prerequisites: ~disabled
+
+ShockWave:
+	Buildable:
+		Prerequisites: ~disabled
+
+WaterContaminator:
+	Buildable:
+		Prerequisites: ~disabled
+
+# Upgrades
+upgrade.hq1:
+	Buildable:
+		Prerequisites: ~disabled
+
+upgrade.hq2:
+	Buildable:
+		Prerequisites: ~disabled
+
+upgrade.barracks1:
+	Buildable:
+		Prerequisites: ~disabled
+
+upgrade.assemblyplant1:
+	Buildable:
+		Prerequisites: ~disabled
+
+#upgrade.phasing:
+#	Buildable:
+#		Prerequisites: ~disabled
+
+# FG Buildings
+LaserTurret:
+	Buildable:
+		Prerequisites: ~disabled
+
+HeavyRailTurret:
+	Buildable:
+		Prerequisites: ~disabled
+
+AntiAirTurret.human:
+	Buildable:
+		Prerequisites: ~disabled
+
+CameraTower:
+	Buildable:
+		Prerequisites: ~disabled
+
+Hospital.human:
+	Buildable:
+		Prerequisites: ~disabled
+
+Repair.human:
+	Buildable:
+		Prerequisites: ~disabled
+
+PhasingFacility:
+	Buildable:
+		Prerequisites: ~disabled
+
+RearmingDeck.human:
+	Buildable:
+		Prerequisites: ~disabled

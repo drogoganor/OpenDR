@@ -54,8 +54,8 @@ namespace OpenRA.Mods.Dr.Graphics
 
 		protected override Sprite GetSprite(int start, int frame, int facing)
 		{
-            if (facing > 256) // receiving a facing of 320 when unloading an APC
-                facing = 256;
+            if (facing >= 256) // receiving a facing of 320 when unloading an APC
+                facing = 0;
 
             var f = (int)(facing * (Facings / 256f));
             var i = (f * Stride) + (frame % Length);

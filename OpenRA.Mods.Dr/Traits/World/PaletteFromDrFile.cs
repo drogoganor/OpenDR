@@ -127,7 +127,7 @@ namespace OpenRA.Mods.Dr.Traits
 			}
 
             var newPal = PaletteFromStream(s, info);
-            
+
             if (info.Tileset == null || info.Tileset.ToLowerInvariant() == world.Map.Tileset.ToLowerInvariant())
 				wr.AddPalette(info.Name, newPal, info.AllowModifiers);
 

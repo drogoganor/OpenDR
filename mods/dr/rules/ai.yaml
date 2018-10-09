@@ -3,7 +3,7 @@ Player:
 		Name: Normal AI
 		Type: normal
 		MinimumExcessPower: 60
-		BuildingQueues: Building, Upgrade
+		BuildingQueues: Building
 		BuildingCommonNames:
 			ConstructionYard: constructionrig
 			HQ: hq.human,hq.cyborg

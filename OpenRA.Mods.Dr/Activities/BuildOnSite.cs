@@ -74,7 +74,7 @@ namespace OpenRA.Mods.Dr.Activities
 
 				self.World.AddFrameEndTask(w =>
 				{
-					var building = w.CreateActor(true, order.TargetString, new TypeDictionary
+					w.CreateActor(true, order.TargetString, new TypeDictionary
 						{
 							new LocationInit(order.TargetLocation),
 							new OwnerInit(order.Player),

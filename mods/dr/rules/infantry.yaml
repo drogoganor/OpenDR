@@ -172,10 +172,9 @@ Saboteur:
 	Armor:
 		Type: ToughHuman
 	EngineerRepair:
+	CaptureManager:
 	Captures:
 		CaptureTypes: building
-		Sabotage: True
-		SabotageHPRemoval: 50
 
 Mechanic:
 	Inherits: ^DrSoldier
@@ -280,7 +279,7 @@ Bion:
 	Inherits: ^DrSoldier
 	RenderSprites:
 		Image: uibonst0
-	Inherits@AUTOTARGET: ^AutoTargetAll
+	#Inherits@AUTOTARGET: ^AutoTargetAll
 	Tooltip:
 		Name: Bion
 	Buildable:

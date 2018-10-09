@@ -33,14 +33,11 @@ Power.Constructing:
 	Targetable:
 		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 	WithDeathAnimation:
@@ -87,14 +84,11 @@ WaterLaunchPad.Constructing:
 	Armor:
 		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 	WithDeathAnimation:
@@ -115,14 +109,11 @@ HQ.human.Constructing:
 	Health:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -142,14 +133,11 @@ HQ.cyborg.Constructing:
 	Health:
 		HP: 1440
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -167,11 +155,9 @@ HQ.togran.Constructing:
 	Health:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -189,14 +175,11 @@ TrainingFacility.fguard.Constructing:
 	Health:
 		HP: 750
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -219,14 +202,11 @@ TrainingFacility.cyborg.Constructing:
 	Health:
 		HP: 900
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -488,14 +468,11 @@ Hospital.human.Constructing:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -530,14 +507,11 @@ Hospital.cyborg.Constructing:
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -571,14 +545,11 @@ Repair.human.Constructing:
 	RevealsShroud:
 		Range: 8c0
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -618,12 +589,10 @@ Repair.cyborg.Constructing:
 	#	Palette: terrain
 	#	Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Palette: player
 		Sequence: top-building
 		IsPlayerPalette: True
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -656,14 +625,11 @@ PhasingFacility.Constructing:
 	RevealsShroud:
 		Range: 8c0
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -696,14 +662,11 @@ RearmingDeck.human.Constructing:
 	RevealsShroud:
 		Range: 8c0
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -738,14 +701,11 @@ RearmingDeck.cyborg.Constructing:
 	Armor:
 		Type: BuildingArmour
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -778,14 +738,11 @@ TemporalGate.Constructing:
 	RevealsShroud:
 		Range: 8c0
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
 
@@ -818,13 +775,10 @@ TemporalRiftCreator.Constructing:
 	RevealsShroud:
 		Range: 8c0
 	WithIdleOverlay@LAYER1:
-		RenderBeforeBuildComplete: true
 		Palette: terrain
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
-		RenderBeforeBuildComplete: true
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
-		RenderBeforeBuildComplete: true
 		Palette: shadow
 		Sequence: shadow-building
