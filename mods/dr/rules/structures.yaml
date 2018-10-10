@@ -150,6 +150,7 @@ TrainingFacility.fguard:
 		Name: Training Facility
 	Health:
 		HP: 750
+	-WithIdleOverlay@REPEAT:
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
@@ -201,6 +202,7 @@ AssemblyPlant.human:
 		Name: Assembly Plant
 	Health:
 		HP: 1000
+	-WithIdleOverlay@REPEAT:
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
@@ -254,6 +256,7 @@ LaserTurret:
 		Weapon: GatLaser
 		LocalOffset: 512,0,112
 	-WithIdleOverlay@LAYER1: # Problem with the sprites here
+	-WithIdleOverlay@LAYER4:
 
 # Imperium plasma turret
 PlasmaTurret:
@@ -271,6 +274,8 @@ PlasmaTurret:
 	Armament:
 		Weapon: GatPlasma
 		LocalOffset: 512,0,112
+	-WithIdleOverlay@LAYER1:
+	-WithIdleOverlay@LAYER4:
 
 # FG anti-air turret
 AntiAirTurret.human:
@@ -327,11 +332,7 @@ AntiAirTurret.cyborg:
 	Armament:
 		Weapon: IMPFixedGroundToAirLaser
 		LocalOffset: 512,0,112
-	#-WithIdleOverlay@LAYER1: # Problem with the sprites here
-	WithIdleOverlay@LAYER2:
-		Palette: player
-		Sequence: top
-		IsPlayerPalette: True
+	-WithIdleOverlay@LAYER4:
 
 # FG heavy rail turret
 HeavyRailTurret:
@@ -365,14 +366,6 @@ HeavyRailTurret:
 	WithMuzzleOverlay:
 	DetectCloaked:
 		Range: 6c0
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay
-	WithIdleOverlay@LAYER2:
-		Sequence: top
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow
 
 # Imperium neutron accelerator
 NeutronAccelerator:
@@ -570,13 +563,10 @@ Repair.cyborg:
 		Range: 8c0
 	Power:
 		Amount: -100
-	#WithIdleOverlay@LAYER1:
-	#	Palette: terrain
-	#	Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Palette: player
+		#Palette: player
 		Sequence: top
-		IsPlayerPalette: True
+		#IsPlayerPalette: True
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow

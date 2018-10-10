@@ -113,9 +113,9 @@ HQ.human.Constructing:
 		Sequence: underlay-building
 	WithIdleOverlay@LAYER2:
 		Sequence: top-building
-	WithIdleOverlay@LAYER3:
-		Palette: shadow
-		Sequence: shadow-building
+	#WithIdleOverlay@LAYER3:
+	#	Palette: shadow
+	#	Sequence: shadow-building
 
 HQ.cyborg.Constructing:
 	Inherits: ^DrHeadquarters.Constructing
@@ -177,6 +177,8 @@ TrainingFacility.fguard.Constructing:
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay-building
+	WithIdleOverlay@REPEAT:
+		Sequence: building
 	WithIdleOverlay@LAYER2:
 		Sequence: top-building
 	WithIdleOverlay@LAYER3:
@@ -223,6 +225,8 @@ AssemblyPlant.human.Constructing:
 		Becomes: AssemblyPlant.human
 	Health:
 		HP: 1000
+	WithIdleOverlay@REPEAT:
+		Sequence: building
 	#WithIdleOverlay@LAYER4:
 	#	Sequence: animation
 
@@ -257,8 +261,8 @@ AssemblyPlant.cyborg.Constructing:
 LaserTurret.Constructing:
 	Inherits: ^Defense.Constructing
 	RenderSprites:
-		Image: base|nfgdt1l0 # Manually set to barren here along with Imperium repair pad and Imp AA.
-		Palette: terrain
+		Image: nfgdt1l0 # Manually set to barren here along with Imperium repair pad and Imp AA.
+		#Palette: terrain
 	Tooltip:
 		Name: Laser Turret
 	Buildable:
@@ -274,6 +278,9 @@ LaserTurret.Constructing:
 		Cost: 500
 	Health:
 		HP: 400
+	-WithIdleOverlay@LAYER1:
+	WithIdleOverlay@LAYER4:
+		Sequence: building
 
 # Imperium plasma turret
 PlasmaTurret.Constructing:
@@ -295,6 +302,9 @@ PlasmaTurret.Constructing:
 		Cost: 500
 	Health:
 		HP: 400
+	-WithIdleOverlay@LAYER1:
+	WithIdleOverlay@LAYER4:
+		Sequence: building
 
 # FG anti-air turret
 AntiAirTurret.human.Constructing:
@@ -326,7 +336,7 @@ AntiAirTurret.cyborg.Constructing:
 	Inherits: ^Defense.Constructing
 	RenderSprites:
 		Image: niaar1l0
-		Palette: terrain # Manually set to barren here along with Laser Turret.
+		#Palette: terrain # Manually set to barren here along with Laser Turret.
 	Tooltip:
 		Name: Anti-Air Turret
 	Buildable:
@@ -344,6 +354,9 @@ AntiAirTurret.cyborg.Constructing:
 		HP: 720
 	RevealsShroud:
 		Range: 12c0
+	-WithIdleOverlay@LAYER1:
+	WithIdleOverlay@LAYER4:
+		Sequence: building
 
 # FG heavy rail turret
 HeavyRailTurret.Constructing:
@@ -557,8 +570,8 @@ Repair.human.Constructing:
 Repair.cyborg.Constructing:
 	Inherits: ^DrGenericBuilding.Constructing
 	RenderSprites:
-		Image: base|nirep1l0
-		Palette: terrain # Manually set to barren here along with Laser Turret.
+		Image: barren|nirep1l0
+		#Palette: terrain # Manually set to barren here along with Laser Turret.
 	Inherits@shape: ^4x3Shape
 	Building:
 		Footprint: xxx= xxxx =xx=
@@ -584,14 +597,13 @@ Repair.cyborg.Constructing:
 		Range: 8c0
 	Armor:
 		Type: BuildingArmour
-	#WithIdleOverlay@LAYER1:
-	#	RenderBeforeBuildComplete: true
-	#	Palette: terrain
-	#	Sequence: underlay
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
 	WithIdleOverlay@LAYER2:
-		Palette: player
+		#Palette: player
 		Sequence: top-building
-		IsPlayerPalette: True
+		#IsPlayerPalette: True
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building

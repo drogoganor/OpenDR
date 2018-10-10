@@ -7,16 +7,6 @@ ncpow1l0:
 		Start: 1
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
-	damaged-idle:
-		Start: 2
-	damaged-build:
-		Start: 2
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|ncpow1l0
 		ZOffset: -8192
 		Start: 0
@@ -46,26 +36,8 @@ ncpow1l0:
 nclnc1l0:
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	make0:
-		Start: 0
-		Length: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 2
-	damaged-build:
-		Start: 2
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|nclnc1l0
 		ZOffset: -8192
 		Start: 0
@@ -91,30 +63,12 @@ nfhqt1l0:
 		Offset: -6, -12
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make0:
-		Start: 0
-		Length: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 2
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 2
-		Tick: 1
-	underlay-building: base|nfhqt1l0
+	underlay-building: barren|nfhqt1l0
 		ZOffset: -8192
-		Start: 1
-	underlay: base|nfhqt1l0
+		Start: 0
+	underlay: barren|nfhqt1l0
 		ZOffset: -8192
 		Start: 1
 	up2underlay: base|nfhqt2l0
@@ -154,26 +108,8 @@ nihqt1l0:
 		Offset: 6, -22
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make0:
-		Start: 0
-		Length: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|nihqt1l0
 		ZOffset: -8192
 		Start: 0
@@ -215,23 +151,8 @@ nihqt1l0:
 tothq1l0:
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: nothq1l0 # no base|xx..
 		ZOffset: -8192
 		Start: 0
@@ -257,26 +178,8 @@ nfutf1l0:
 		Offset: 0, -2
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make0:
-		Start: 0
-		Length: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|nfutf1l0
 		ZOffset: -8192
 		Start: 0
@@ -319,26 +222,8 @@ niutf1l0:
 		Offset: 10, 6
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make0:
-		Start: 0
-		Length: 1
-	make:
-		Start: 0
-	build:
-		Start: 0
-		Length: 0
-	damaged-idle:
-		Start: 0
-	damaged-build:
-		Start: 0
-		Length: 0
-	dead:
-		Start: 0
-		Tick: 1
 	underlay-building: base|niutf1l0
 		ZOffset: -8192
 		Start: 0
@@ -381,26 +266,8 @@ nfvcy1l0:
 		Offset: 12, 0
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make0:
-		Start: 0
-		Length: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|nfvcy1l0
 		ZOffset: -8192
 		Start: 0
@@ -438,26 +305,8 @@ nfvcy1l0:
 nivcy1l0:
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make0:
-		Start: 0
-		Length: 1
-	make:
-		Start: 0
-	build:
-		Start: 0
-		Length: 1
-	damaged-idle:
-		Start: 0
-	damaged-build:
-		Start: 0
-		Length: 1
-	dead:
-		Start: 0
-		Tick: 1
 	underlay-building: base|nivcy1l0
 		ZOffset: -8192
 		Start: 0
@@ -489,37 +338,22 @@ nivcy1l0:
 	fake-icon: bivcymn0
 
 # FG Laser turret
-base|nfgdt1l0:
+nfgdt1l0:
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
 	recoil: bfgdtsp0
 		Start: 0
 		Facings: 16
 	turret: bfgdtsp0
 		Start: 0
 		Facings: 16
-	dead:
-		Start: 1
-		Tick: 1
-	underlay-building: nfgdt1l0
-		ZOffset: -8192
+	underlay-building: barren|nfgdt1l0
+		#ZOffset: -8192
 		Start: 0
-	underlay: nfgdt1l0
-		ZOffset: -8192
+	underlay: barren|nfgdt1l0
+		#ZOffset: -8192
 		Start: 1
 	top-building: tfgdt1l0
 		Start: 0
@@ -538,33 +372,20 @@ base|nfgdt1l0:
 nigdt1l0:
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
 		ZOffset: -128
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
 	recoil: bigdtsp0
 		Start: 0
 		Facings: 16
 	turret: bigdtsp0
 		Start: 0
 		Facings: 16
-	dead:
-		Start: 1
-		Tick: 1
-	underlay-building: base|nigdt1l0
+	underlay-building: nigdt1l0
+		ZOffset: 128
 		Start: 0
-	underlay: base|nigdt1l0
+	underlay: nigdt1l0
+		ZOffset: 128
 		Start: 1
 	top-building: tigdt1l0
 		Start: 0
@@ -583,29 +404,14 @@ nigdt1l0:
 nfaar1l0:
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
 	recoil: bfaarsp0
 		Start: 0
 		Facings: 16
 	turret: bfaarsp0
 		Start: 0
 		Facings: 16
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|nfaar1l0
 		ZOffset: -8192
 		Start: 0
@@ -631,29 +437,14 @@ niaar1l0:
 		Offset: -1, -14
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
 	recoil: biaarsp0
 		Start: 0
 		Length: 1
 	turret: biaarsp0
 		Start: 0
 		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|niaar1l0
 		ZOffset: -8192
 		Start: 0
@@ -679,38 +470,23 @@ niaar1l0:
 nfagt1l0:
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
 	recoil: bfagtsp0
 		Start: 0
 		Facings: 16
 	turret: bfagtsp0
 		Start: 0
 		Facings: 16
-	dead:
-		Start: 1
-		Tick: 1
-	underlay-building: base|nfagt1l0
+	underlay-building: barren|nfagt1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nfagt1l0
+	underlay: barren|nfagt1l0
 		ZOffset: -8192
 		Start: 1
-	top-building: tfagt1l0
+	top-building: barren|tfagt1l0
 		Start: 0
-	top: tfagt1l0
+	top: barren|tfagt1l0
 		Start: 1
 	shadow-building: bfagtsh0
 		Start: 0
@@ -725,29 +501,14 @@ nfagt1l0:
 niagt1l0:
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
 	recoil: biagtsp0
 		Start: 0
 		Facings: 16
 	turret: biagtsp0
 		Start: 0
 		Facings: 16
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: barren|tiagt1l0
 		ZOffset: -8192
 		Start: 0
@@ -773,23 +534,8 @@ nccam1l0:
 		Offset: 1, -12
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|nccam1l0
 		ZOffset: -8192
 		Start: 0
@@ -817,20 +563,8 @@ nfhsp1l0:
 		Offset: -6, 0
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
 	active:
 		Start: 1
 		Length: 1
@@ -839,9 +573,6 @@ nfhsp1l0:
 		Start: 1
 		Length: 1
 		ZOffset: -1c511
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|nfhsp1l0
 		ZOffset: -8192
 		Start: 0
@@ -867,20 +598,8 @@ nfhsp1l0:
 nihsp1l0:
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
 	active:
 		Start: 1
 		Length: 1
@@ -889,18 +608,15 @@ nihsp1l0:
 		Start: 1
 		Length: 1
 		ZOffset: -1c511
-	dead:
-		Start: 1
-		Tick: 1
-	underlay-building: base|nihsp1l0
+	underlay-building: barren|nihsp1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nihsp1l0
+	underlay: barren|nihsp1l0
 		ZOffset: -8192
 		Start: 1
-	top-building: tihsp1l0
+	top-building: barren|tihsp1l0
 		Start: 0
-	top: tihsp1l0
+	top: barren|tihsp1l0
 		Start: 1
 	shadow-building: bihspsh0
 		Start: 0
@@ -915,20 +631,8 @@ nihsp1l0:
 nfrep1l0:
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
 	active:
 		Start: 1
 		Length: 1
@@ -937,9 +641,6 @@ nfrep1l0:
 		Start: 1
 		Length: 1
 		ZOffset: -1c511
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|nfrep1l0
 		ZOffset: -8192
 		Start: 0
@@ -960,23 +661,11 @@ nfrep1l0:
 	fake-icon: bfrepmn0
 
 # Imperium repair
-base|nirep1l0:
+barren|nirep1l0:
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
 	active:
 		Start: 1
 		Length: 1
@@ -985,14 +674,11 @@ base|nirep1l0:
 		Start: 1
 		Length: 1
 		ZOffset: -1c511
-	dead:
-		Start: 1
-		Tick: 1
-	underlay-building: nirep1l0
-		ZOffset: -8192
+	underlay-building: barren|nirep1l0
+		#ZOffset: -8192
 		Start: 0
-	underlay: nirep1l0
-		ZOffset: -8192
+	underlay: barren|nirep1l0
+		#ZOffset: -8192
 		Start: 1
 	top-building: tirep1l0
 		Start: 0
@@ -1013,23 +699,8 @@ nfphf1l0:
 		Offset: 0, -6
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|nfphf1l0
 		ZOffset: -8192
 		Start: 0
@@ -1058,8 +729,6 @@ nfrrm1l0:
 		ZOffset: -1024
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
 	active:
@@ -1068,19 +737,6 @@ nfrrm1l0:
 	damaged-active:
 		Start: 1
 		Length: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|nfrrm1l0
 		ZOffset: -8192
 		Start: 0
@@ -1109,23 +765,8 @@ nirrm1l0:
 		ZOffset: -1024
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|nirrm1l0
 		ZOffset: -8192
 		Start: 0
@@ -1151,23 +792,8 @@ nirrm1l0:
 nitgt1l0:
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|nitgt1l0
 		ZOffset: -8192
 		Start: 0
@@ -1191,23 +817,8 @@ nitgt1l0:
 nitrc1l0:
 	building:
 		Start: 0
-		Length: 1
-		Tick: 8000
 	idle:
 		Start: 1
-	make:
-		Start: 1
-	build:
-		Start: 1
-		Length: 1
-	damaged-idle:
-		Start: 1
-	damaged-build:
-		Start: 1
-		Length: 1
-	dead:
-		Start: 1
-		Tick: 1
 	underlay-building: base|nitrc1l0
 		ZOffset: -8192
 		Start: 0

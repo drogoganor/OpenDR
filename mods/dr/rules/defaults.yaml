@@ -665,6 +665,7 @@
 	DetectCloaked:
 		Range: 2c0
 	WithIdleOverlay@LAYER1:
+		Palette: terrain
 		Sequence: underlay
 	WithIdleOverlay@LAYER2:
 		Sequence: top
