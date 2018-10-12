@@ -115,13 +115,11 @@ namespace OpenRA.Mods.Dr.Orders
 					Game.Sound.PlayNotification(world.Map.Rules, owner, "Speech", "BuildingCannotPlaceAudio", owner.Faction.InternalName);
 					yield break;
 				}
-                
+
                 yield return new Order(orderType, owner.PlayerActor, Target.FromCell(world, topLeft), false)
 				{
-					// Building to place
 					TargetString = actorInfo.Name,
                     ExtraLocation = topLeft + (buildingInfo.Dimensions / 2),
-                    // Actor to associate the placement with
                     ExtraData = queue.Actor.ActorID,
 					SuppressVisualFeedback = true
 				};

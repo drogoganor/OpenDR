@@ -53,7 +53,7 @@ namespace OpenRA.Mods.Dr.Activities
 		{
             if (IsCanceled)
 				return NextActivity;
- 
+
             if (centerBuildingTarget.IsInRange(self.CenterPosition, minRange))
             {
 				if (!world.CanPlaceBuilding(order.TargetLocation, buildingActor, buildingInfo, self))
