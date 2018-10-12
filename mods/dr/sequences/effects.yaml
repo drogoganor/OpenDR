@@ -349,70 +349,80 @@ eosmlfl0:
 	idle:
 		Start: 0
 		Length: 8
-		Tick: 20
+		Tick: 120
+		ZOffset: 8192
 
 # Flames 2
 eosmlfl1:
 	idle:
 		Start: 0
 		Length: 8
-		Tick: 20
+		Tick: 120
+		ZOffset: 8192
 
 # Flames 3
 eosmlfl2:
 	idle:
 		Start: 0
 		Length: 8
-		Tick: 20
+		Tick: 120
+		ZOffset: 8192
 
 # Flames 4
 eosmlfl3:
 	idle:
 		Start: 0
 		Length: 8
-		Tick: 20
+		Tick: 120
+		ZOffset: 8192
 
 # Flames 5
 eosmlfl4:
 	idle:
 		Start: 0
 		Length: 8
-		Tick: 20
+		Tick: 120
+		ZOffset: 8192
 
 # Smoke 1
 eosmoke1:
 	idle:
 		Start: 0
 		Length: 11
-		Tick: 20
+		Tick: 240
+		ZOffset: 8192
 
 # Smoke 2
 eosmoke2:
 	idle:
 		Start: 0
 		Length: 11
-		Tick: 20
+		Tick: 240
+		ZOffset: 8192
 
 # Smoke 3
 eosmoke3:
 	idle:
 		Start: 0
 		Length: 11
-		Tick: 20
+		Tick: 240
+		ZOffset: 8192
 
 # Smoke 4
 eosmoke4:
 	idle:
 		Start: 0
 		Length: 11
-		Tick: 20
+		Tick: 240
+		ZOffset: 8192
 
 # Smoke 5
 eosmoke5:
 	idle:
 		Start: 0
 		Length: 4 # Should be 6 but this is rectangular
-		Tick: 20
+		Tick: 240
+		ZOffset: 8192
 
 # Smoke puff 1
 eosmopf0:
@@ -464,6 +474,7 @@ eosmosm0:
 		Start: 0
 		Length: 15 # Should be 15 but this is rectangular
 		Tick: 20
+		ZOffset: 8192
 
 # Smoke move 1
 eosmosm1:
@@ -471,6 +482,7 @@ eosmosm1:
 		Start: 0
 		Length: 16 # Should be 16 but this is rectangular
 		Tick: 20
+		ZOffset: 8192
 
 # Smoke move 2
 eosmosm2:
@@ -478,6 +490,7 @@ eosmosm2:
 		Start: 0
 		Length: 20 # Should be 22 but this is rectangular
 		Tick: 20
+		ZOffset: 8192
 
 # Tachion explosion?
 eotacex0:

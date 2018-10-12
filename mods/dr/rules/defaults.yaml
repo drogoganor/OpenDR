@@ -338,6 +338,25 @@
 		ReferencePoint: Center
 		Palette: player
 		IsPlayerPalette: True
+	WithFlamesOverlay@Flames1:
+		Image: eosmlfl0
+		Offset: 512, -1024, 0
+		MinimumDamageState: Light
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Flames2:
+		Image: eosmlfl1
+		Offset: -512, -384, 0
+		MinimumDamageState: Medium
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Flames3:
+		Image: eosmlfl2
+		Offset: 512, 256, 0
+		MinimumDamageState: Heavy
+		MaximumDamageState: Dead
+	#WithFlamesOverlay@Flames4:
+	#	Image: eosmlfl3
+	#	MinimumDamageState: Heavy
+	#	MaximumDamageState: Dead
 
 ^DrHeadquarters.Constructing:
 	Inherits: ^SelfConstructingBuilding

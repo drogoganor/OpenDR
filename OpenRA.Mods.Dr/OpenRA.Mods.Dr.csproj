@@ -54,6 +54,7 @@
     <Compile Include="Traits\Player\BuilderQueue.cs" />
     <Compile Include="Traits\ProductionQueueOrBuildingPickerFromSelection.cs" />
     <Compile Include="Traits\Production\SelfConstructing.cs" />
+    <Compile Include="Traits\Render\WithFlamesOverlay.cs" />
     <Compile Include="Traits\World\PaletteFromDrFile.cs" />
     <Compile Include="UtilityCommands\ImportDrCampaignMapCommand.cs" />
     <Compile Include="UtilityCommands\ImportDrMapCommand.cs" />

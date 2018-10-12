@@ -50,9 +50,6 @@ namespace OpenRA.Mods.Dr.Traits.Production
                 var productionQueue = init.Self.Owner.PlayerActor.TraitsImplementing<BuilderQueue>().First(q => q.AllItems().Contains(init.Self.Info));
                 productionItem = new BuilderItem(productionQueue, init.Self.Info.Name, null);
                 productionQueue.BeginProduction(productionItem);
-
-                wsb.CancelCustomAnimation(init.Self);
-                wsb.PlayCustomAnimationRepeating(init.Self, "building");
             }
         }
 
@@ -68,6 +65,9 @@ namespace OpenRA.Mods.Dr.Traits.Production
                 healthSteps.Add(health.MaxHP * (i + 1) / (Info.Steps + 1));
 
             health.InflictDamage(self, self, new Damage(health.MaxHP - healthSteps[0]), true);
+
+            wsb.CancelCustomAnimation(self);
+            wsb.PlayCustomAnimationRepeating(self, "building");
         }
 
         private void OnComplete(Actor self)

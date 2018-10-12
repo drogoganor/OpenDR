@@ -107,7 +107,7 @@ namespace OpenRA.Mods.Dr.Orders
 				var orderType = "BuildUnitPlaceBuilding";
 				var topLeft = viewport.ViewToWorld(Viewport.LastMousePos + topLeftScreenOffset);
 
-				if (!world.CanPlaceBuilding(topLeft, actorInfo, buildingInfo, queue.Actor))
+                if (!world.CanPlaceBuilding(topLeft, actorInfo, buildingInfo, queue.Actor))
 				{
 					foreach (var order in ClearBlockersOrders(world, topLeft))
 						yield return order;
@@ -115,14 +115,14 @@ namespace OpenRA.Mods.Dr.Orders
 					Game.Sound.PlayNotification(world.Map.Rules, owner, "Speech", "BuildingCannotPlaceAudio", owner.Faction.InternalName);
 					yield break;
 				}
-
-				yield return new Order(orderType, owner.PlayerActor, Target.FromCell(world, topLeft), false)
+                
+                yield return new Order(orderType, owner.PlayerActor, Target.FromCell(world, topLeft), false)
 				{
 					// Building to place
 					TargetString = actorInfo.Name,
-
-					// Actor to associate the placement with
-					ExtraData = queue.Actor.ActorID,
+                    ExtraLocation = topLeft + (buildingInfo.Dimensions / 2),
+                    // Actor to associate the placement with
+                    ExtraData = queue.Actor.ActorID,
 					SuppressVisualFeedback = true
 				};
 			}
@@ -200,8 +200,8 @@ namespace OpenRA.Mods.Dr.Orders
 
 		public string GetCursor(World world, CPos cell, int2 worldPixel, MouseInput mi) { return "default"; }
 
-		// Copied from PlaceBuildingOrderGenerator, also in BuildOnSite
-		IEnumerable<Order> ClearBlockersOrders(World world, CPos topLeft)
+        // Copied from PlaceBuildingOrderGenerator, triplicated in BuildOnSite and BuilderUnitBuildingOrderGenerator
+        IEnumerable<Order> ClearBlockersOrders(World world, CPos topLeft)
 		{
 			var allTiles = buildingInfo.Tiles(topLeft).ToArray();
 			var neightborTiles = Common.Util.ExpandFootprint(allTiles, true).Except(allTiles)

@@ -255,8 +255,10 @@ LaserTurret:
 	Armament:
 		Weapon: GatLaser
 		LocalOffset: 512,0,112
-	-WithIdleOverlay@LAYER1: # Problem with the sprites here
-	-WithIdleOverlay@LAYER4:
+	#-WithIdleOverlay@LAYER1: # Problem with the sprites here
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
 
 # Imperium plasma turret
 PlasmaTurret:
@@ -276,6 +278,8 @@ PlasmaTurret:
 		LocalOffset: 512,0,112
 	-WithIdleOverlay@LAYER1:
 	-WithIdleOverlay@LAYER4:
+	WithFlamesOverlay@Flames1:
+		Offset: 384, -512, 0
 
 # FG anti-air turret
 AntiAirTurret.human:
@@ -301,9 +305,9 @@ AntiAirTurret.human:
 	Armament:
 		Weapon: FixedGroundToAirLaser
 		LocalOffset: 512,0,112
-	WithIdleOverlay@LAYER1:
-		Sequence: underlay-building
-		Palette: terrain
+	#WithIdleOverlay@LAYER1:
+	#	Sequence: underlay-building
+	#	Palette: terrain
 	#WithIdleOverlay@LAYER2:
 	#	Sequence: top-building
 	#	Palette: barren
@@ -332,7 +336,19 @@ AntiAirTurret.cyborg:
 	Armament:
 		Weapon: IMPFixedGroundToAirLaser
 		LocalOffset: 512,0,112
-	-WithIdleOverlay@LAYER4:
+	WithIdleOverlay@LAYER4:
+		Sequence: idle
+	WithFlamesOverlay@Flames1:
+		Image: eosmlfl0
+		Offset: 128, -256, 0
+		MinimumDamageState: Light
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Flames2:
+		Image: eosmlfl1
+		Offset: -256, -128, 0
+		MinimumDamageState: Heavy
+		MaximumDamageState: Dead
+	-WithFlamesOverlay@Flames3:
 
 # FG heavy rail turret
 HeavyRailTurret:
@@ -432,6 +448,17 @@ CameraTower:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow
+	WithFlamesOverlay@Flames1:
+		Image: eosmlfl0
+		Offset: 128, -256, 0
+		MinimumDamageState: Light
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Flames2:
+		Image: eosmlfl1
+		Offset: -256, -128, 0
+		MinimumDamageState: Heavy
+		MaximumDamageState: Dead
+	-WithFlamesOverlay@Flames3:
 
 # FG field hospital
 Hospital.human:

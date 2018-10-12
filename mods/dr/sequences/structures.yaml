@@ -3,14 +3,16 @@
 ncpow1l0:
 	Defaults:
 		Offset: -8, -6
-	idle:
-		Start: 1
 	building:
 		Start: 0
-	underlay-building: base|ncpow1l0
+		Length: 1
+		Tick: 900000
+	idle:
+		Start: 1
+	underlay-building: barren|ncpow1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|ncpow1l0
+	underlay: barren|ncpow1l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tcpow1l0
@@ -289,10 +291,10 @@ nfvcy1l0:
 		Tick: 150
 	shadow-building: bfvcysh0
 		Start: 0
-		Offset: 12, -2
+		Offset: 16, 20
 	shadow: bfvcysh0
 		Start: 1
-		Offset: 12, -2
+		Offset: 16, 20
 	up2shadow: bfvcysh1
 		Start: 1
 		Offset: 12, -2
@@ -412,10 +414,10 @@ nfaar1l0:
 	turret: bfaarsp0
 		Start: 0
 		Facings: 16
-	underlay-building: base|nfaar1l0
+	underlay-building: barren|nfaar1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nfaar1l0
+	underlay: barren|nfaar1l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tfaar1l0
@@ -445,11 +447,11 @@ niaar1l0:
 	turret: biaarsp0
 		Start: 0
 		Length: 1
-	underlay-building: base|niaar1l0
-		ZOffset: -8192
+	underlay-building: barren|niaar1l0
+		#ZOffset: -8192
 		Start: 0
-	underlay: base|niaar1l0
-		ZOffset: -8192
+	underlay: barren|niaar1l0
+		#ZOffset: -8192
 		Start: 1
 	top-building: tiaar1l0
 		Start: 0
@@ -457,7 +459,7 @@ niaar1l0:
 		Start: 1
 	shadow-building: biaarsh0
 		Start: 0
-		Offset: -2, 0
+		Offset: 10, 0
 	shadow: biaarsh0
 		Start: 1
 		Offset: -2, 0
@@ -490,10 +492,10 @@ nfagt1l0:
 		Start: 1
 	shadow-building: bfagtsh0
 		Start: 0
-		Offset: 13, 14
+		Offset: 12, 12
 	shadow: bfagtsh0
 		Start: 1
-		Offset: 13, 14
+		Offset: 12, 12
 	icon: bfagtmn0
 	fake-icon: bfagtmn0
 

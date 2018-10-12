@@ -25,13 +25,15 @@ namespace OpenRA.Mods.Dr.Activities
 	public class BuildOnSite : Activity
 	{
 		readonly World world;
-		readonly CPos target;
-		readonly IMove move;
+		readonly Target centerBuildingTarget;
+        readonly CPos centerTarget;
+        readonly IMove move;
 		readonly Order order;
 		readonly string faction;
 		readonly BuildingInfo buildingInfo;
 		readonly PlayerResources playerResources;
 		readonly ActorInfo buildingActor;
+        readonly WDist minRange;
 
 		public BuildOnSite(World world, Actor self, Order order, string faction, BuildingInfo buildingInfo)
 		{
@@ -40,22 +42,24 @@ namespace OpenRA.Mods.Dr.Activities
 			this.world = world;
 			this.order = order;
 			this.faction = faction;
-			target = order.TargetLocation;
-			playerResources = order.Player.PlayerActor.Trait<PlayerResources>();
+            this.centerTarget = order.ExtraLocation;
+            centerBuildingTarget = Target.FromPos(world.Map.CenterOfCell(centerTarget));
+            minRange = new WDist(2048);
+            playerResources = order.Player.PlayerActor.Trait<PlayerResources>();
 			buildingActor = world.Map.Rules.Actors.FirstOrDefault(x => x.Key == order.TargetString).Value;
 		}
 
 		public override Activity Tick(Actor self)
 		{
-			if (IsCanceled)
+            if (IsCanceled)
 				return NextActivity;
-
-			if (self.Location == target)
-			{
-				if (!world.CanPlaceBuilding(target, buildingActor, buildingInfo, self))
+ 
+            if (centerBuildingTarget.IsInRange(self.CenterPosition, minRange))
+            {
+				if (!world.CanPlaceBuilding(order.TargetLocation, buildingActor, buildingInfo, self))
 				{
 					// Try clear the area
-					foreach (var order in ClearBlockersOrders(self, world, target))
+					foreach (var order in ClearBlockersOrders(self, world, order.TargetLocation))
 						world.IssueOrder(order);
 
 					Game.Sound.PlayNotification(world.Map.Rules, self.Owner, "Speech", "BuildingCannotPlaceAudio", faction);
@@ -87,8 +91,8 @@ namespace OpenRA.Mods.Dr.Activities
             }
 
             return ActivityUtils.SequenceActivities(
-				move.MoveTo(target, 2),
-				this);
+                move.MoveTo(centerTarget, 2),
+                this);
 		}
 
 		// Copied from PlaceBuildingOrderGenerator, triplicated in BuildOnSite and BuilderUnitBuildingOrderGenerator

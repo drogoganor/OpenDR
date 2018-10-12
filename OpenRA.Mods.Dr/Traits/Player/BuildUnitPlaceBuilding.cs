@@ -75,7 +75,7 @@ namespace OpenRA.Mods.Dr.Traits
 				if (buildableInfo != null && buildableInfo.ForceFaction != null)
 					faction = buildableInfo.ForceFaction;
 
-				if (!self.World.CanPlaceBuilding(order.TargetLocation, actorInfo, buildingInfo, null))
+				if (!self.World.CanPlaceBuilding(order.TargetLocation, actorInfo, buildingInfo, targetActor))
 					return;
 
 				// Make the actor move to the location

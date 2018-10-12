@@ -40,9 +40,6 @@ Power.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
 
 WaterLaunchPad.Constructing:
 	Inherits: ^SelfConstructingBuilding
@@ -278,8 +275,8 @@ LaserTurret.Constructing:
 		Cost: 500
 	Health:
 		HP: 400
-	-WithIdleOverlay@LAYER1:
-	WithIdleOverlay@LAYER4:
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
 		Sequence: building
 
 # Imperium plasma turret
@@ -328,7 +325,7 @@ AntiAirTurret.human.Constructing:
 		HP: 600
 	RevealsShroud:
 		Range: 12c0
-	-WithIdleOverlay@LAYER1:
+	#-WithIdleOverlay@LAYER1:
 	#-WithIdleOverlay@LAYER2: # Problem with the sprites here
 
 # Imperium anti-air turret
@@ -336,7 +333,6 @@ AntiAirTurret.cyborg.Constructing:
 	Inherits: ^Defense.Constructing
 	RenderSprites:
 		Image: niaar1l0
-		#Palette: terrain # Manually set to barren here along with Laser Turret.
 	Tooltip:
 		Name: Anti-Air Turret
 	Buildable:
@@ -354,7 +350,6 @@ AntiAirTurret.cyborg.Constructing:
 		HP: 720
 	RevealsShroud:
 		Range: 12c0
-	-WithIdleOverlay@LAYER1:
 	WithIdleOverlay@LAYER4:
 		Sequence: building
 
