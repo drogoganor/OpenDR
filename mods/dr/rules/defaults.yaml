@@ -353,10 +353,11 @@
 		Offset: 512, 256, 0
 		MinimumDamageState: Heavy
 		MaximumDamageState: Dead
-	#WithFlamesOverlay@Flames4:
-	#	Image: eosmlfl3
-	#	MinimumDamageState: Heavy
-	#	MaximumDamageState: Dead
+	WithFlamesOverlay@Smoke1:
+		Image: eosmoke5
+		Offset: -256, -1560, 0
+		MinimumDamageState: Medium
+		MaximumDamageState: Dead
 
 ^DrHeadquarters.Constructing:
 	Inherits: ^SelfConstructingBuilding

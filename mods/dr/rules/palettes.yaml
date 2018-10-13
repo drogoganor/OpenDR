@@ -72,7 +72,7 @@
 		Name: moveflash
 		R: 255
 		G: 255
-		B: 255
+		B: 128
 		A: 64
 	PaletteFromRGBA@highlight:
 		Name: highlight

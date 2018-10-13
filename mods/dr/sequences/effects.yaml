@@ -349,7 +349,7 @@ eosmlfl0:
 	idle:
 		Start: 0
 		Length: 8
-		Tick: 120
+		Tick: 70
 		ZOffset: 8192
 
 # Flames 2
@@ -357,7 +357,7 @@ eosmlfl1:
 	idle:
 		Start: 0
 		Length: 8
-		Tick: 120
+		Tick: 70
 		ZOffset: 8192
 
 # Flames 3
@@ -365,7 +365,7 @@ eosmlfl2:
 	idle:
 		Start: 0
 		Length: 8
-		Tick: 120
+		Tick: 70
 		ZOffset: 8192
 
 # Flames 4
@@ -373,7 +373,7 @@ eosmlfl3:
 	idle:
 		Start: 0
 		Length: 8
-		Tick: 120
+		Tick: 70
 		ZOffset: 8192
 
 # Flames 5
@@ -381,7 +381,7 @@ eosmlfl4:
 	idle:
 		Start: 0
 		Length: 8
-		Tick: 120
+		Tick: 70
 		ZOffset: 8192
 
 # Smoke 1
@@ -389,7 +389,7 @@ eosmoke1:
 	idle:
 		Start: 0
 		Length: 11
-		Tick: 240
+		Tick: 140
 		ZOffset: 8192
 
 # Smoke 2
@@ -397,7 +397,7 @@ eosmoke2:
 	idle:
 		Start: 0
 		Length: 11
-		Tick: 240
+		Tick: 140
 		ZOffset: 8192
 
 # Smoke 3
@@ -405,7 +405,7 @@ eosmoke3:
 	idle:
 		Start: 0
 		Length: 11
-		Tick: 240
+		Tick: 140
 		ZOffset: 8192
 
 # Smoke 4
@@ -413,7 +413,7 @@ eosmoke4:
 	idle:
 		Start: 0
 		Length: 11
-		Tick: 240
+		Tick: 140
 		ZOffset: 8192
 
 # Smoke 5
@@ -429,14 +429,16 @@ eosmopf0:
 	idle:
 		Start: 0
 		Length: 11 # Should be 13 but this is rectangular
-		Tick: 20
+		Tick: 240
+		ZOffset: 8192
 
 # Smoke puff 2
 eosmopf1:
 	idle:
 		Start: 0
 		Length: 10 # Should be 13 but this is rectangular
-		Tick: 20
+		Tick: 240
+		ZOffset: 8192
 
 # eosmopf2 to eosmopf5 are repeats of Flames
 
@@ -445,35 +447,39 @@ eosmopf6:
 	idle:
 		Start: 0
 		Length: 10 # Should be 13 but this is rectangular
-		Tick: 20
+		Tick: 240
+		ZOffset: 8192
 
 # Smoke puff 4
 eosmopf7:
 	idle:
 		Start: 0
 		Length: 10 # Should be 13 but this is rectangular
-		Tick: 20
+		Tick: 240
+		ZOffset: 8192
 
 # Smoke puff 5
 eosmopf8:
 	idle:
 		Start: 0
 		Length: 10 # Should be 13 but this is rectangular
-		Tick: 20
+		Tick: 240
+		ZOffset: 8192
 
 # Smoke puff 6
 eosmopf9:
 	idle:
 		Start: 0
 		Length: 10 # Should be 13 but this is rectangular
-		Tick: 20
+		Tick: 240
+		ZOffset: 8192
 
 # Smoke move 0
 eosmosm0:
 	idle:
 		Start: 0
 		Length: 15 # Should be 15 but this is rectangular
-		Tick: 20
+		Tick: 240
 		ZOffset: 8192
 
 # Smoke move 1
@@ -481,7 +487,7 @@ eosmosm1:
 	idle:
 		Start: 0
 		Length: 16 # Should be 16 but this is rectangular
-		Tick: 20
+		Tick: 240
 		ZOffset: 8192
 
 # Smoke move 2
@@ -489,7 +495,7 @@ eosmosm2:
 	idle:
 		Start: 0
 		Length: 20 # Should be 22 but this is rectangular
-		Tick: 20
+		Tick: 240
 		ZOffset: 8192
 
 # Tachion explosion?

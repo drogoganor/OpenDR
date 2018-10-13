@@ -280,6 +280,8 @@ PlasmaTurret:
 	-WithIdleOverlay@LAYER4:
 	WithFlamesOverlay@Flames1:
 		Offset: 384, -512, 0
+	WithFlamesOverlay@Smoke1:
+		Offset: -384, -1560, 0
 
 # FG anti-air turret
 AntiAirTurret.human:
@@ -349,6 +351,8 @@ AntiAirTurret.cyborg:
 		MinimumDamageState: Heavy
 		MaximumDamageState: Dead
 	-WithFlamesOverlay@Flames3:
+	WithFlamesOverlay@Smoke1:
+		Offset: 128, -512, 0
 
 # FG heavy rail turret
 HeavyRailTurret:
@@ -459,6 +463,8 @@ CameraTower:
 		MinimumDamageState: Heavy
 		MaximumDamageState: Dead
 	-WithFlamesOverlay@Flames3:
+	WithFlamesOverlay@Smoke1:
+		Offset: 128, -768, 0
 
 # FG field hospital
 Hospital.human:
