@@ -1073,8 +1073,4 @@ Actors:
 	Actor432: aoroc001
 		Owner: Neutral
 		Location: 29,57
-	Actor437: rat
-		Owner: Freedom Guard
-		Location: 50,67
-		Facing: 92
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

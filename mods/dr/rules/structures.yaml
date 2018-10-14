@@ -75,9 +75,6 @@ WaterLaunchPad:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
 
 HQ.human:
 	Inherits: HQ.human.Constructing

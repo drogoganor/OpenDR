@@ -1,0 +1,115 @@
+World:
+	LuaScript:
+		Scripts: map.lua
+	MusicPlaylist:
+		StartingMusic: track1
+	MissionData:
+		Briefing: Our vanguard troops have run into a heavily fortified Freedom Guard checkpoint.\n\nTake your battle group and find a way around the checkpoint and destroy their production buildings.
+
+Player:
+	EnemyWatcher:
+	PlayerResources:
+		DefaultCash: 10000
+
+^ConstructedBuildingCommon:
+	AnnounceOnSeen:
+	ScriptTags:
+
+^Humanoid:
+	AnnounceOnSeen:
+	ScriptTags:
+
+^DrAnimatedVehicle:
+	AnnounceOnSeen:
+	ScriptTags:
+
+# Imperium Units
+Exterminator:
+	Buildable:
+		Prerequisites: ~disabled
+
+Infiltrator:
+	Buildable:
+		Prerequisites: ~disabled
+
+HoverFreighter:
+	Buildable:
+		Prerequisites: ~disabled
+
+HostageTaker:
+	Buildable:
+		Prerequisites: ~disabled
+
+Amper:
+	Buildable:
+		Prerequisites: ~disabled
+
+TachionTank:
+	Buildable:
+		Prerequisites: ~disabled
+
+MAD:
+	Buildable:
+		Prerequisites: ~disabled
+
+Scarab:
+	Buildable:
+		Prerequisites: ~disabled
+
+WaterContaminator:
+	Buildable:
+		Prerequisites: ~disabled
+
+ReconDrone:
+	Buildable:
+		Prerequisites: ~disabled
+
+Cyclone:
+	Buildable:
+		Prerequisites: ~disabled
+
+SkyFortress:
+	Buildable:
+		Prerequisites: ~disabled
+
+# Upgrades
+upgrade.hq1:
+	Buildable:
+		Prerequisites: ~disabled
+
+upgrade.hq2:
+	Buildable:
+		Prerequisites: ~disabled
+
+upgrade.barracks1:
+	Buildable:
+		Prerequisites: ~disabled
+
+upgrade.assemblyplant1:
+	Buildable:
+		Prerequisites: ~disabled
+
+# Imperium Buildings
+AntiAirTurret.cyborg.Constructing:
+	Buildable:
+		Prerequisites: ~disabled
+
+CameraTower.Constructing:
+	Buildable:
+		Prerequisites: ~disabled
+
+NeutronAccelerator.Constructing:
+	Buildable:
+		Prerequisites: ~disabled
+
+RearmingDeck.cyborg.Constructing:
+	Buildable:
+		Prerequisites: ~disabled
+
+TemporalRiftCreator.Constructing:
+	Buildable:
+		Prerequisites: ~disabled
+
+TemporalGate.Constructing:
+	Buildable:
+		Prerequisites: ~disabled

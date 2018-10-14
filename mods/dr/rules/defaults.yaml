@@ -195,6 +195,16 @@
 	Explodes:
 		Weapon: GenericExplode
 		EmptyWeapon: GenericExplode
+	WithFlamesOverlay@Flames1:
+		Image: eosmlfl0
+		Offset: 0, 0, 0
+		MinimumDamageState: Medium
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Smoke1:
+		Image: eosmoke5
+		Offset: 128, -512, 0
+		MinimumDamageState: Heavy
+		MaximumDamageState: Dead
 
 ^DrHoverAnimatedVehicle:
 	Inherits: ^DrAnimatedVehicle

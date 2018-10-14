@@ -88,9 +88,6 @@ WaterLaunchPad.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
-	WithDeathAnimation:
-		DeathSequence: dead
-		UseDeathTypeSuffix: false
 
 HQ.human.Constructing:
 	Inherits: ^DrHeadquarters.Constructing
