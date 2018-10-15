@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Primitives;
@@ -17,7 +16,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Common.Traits
 {
-	[Desc("Attach this to an actor (usually a building) to let it construct buildings.",
+    [Desc("Attach this to an actor (usually a building) to let it construct buildings.",
 		"If one builds another actor of this type, he will get a separate queue to create two actors",
 		"at the same time. Will only work together with the Production: trait.")]
 	public class BuilderQueueInfo : ITraitInfo
@@ -441,57 +440,4 @@ namespace OpenRA.Mods.Common.Traits
 			return false;
 		}
 	}
-
-    // Copy of ProductionItem
-    public class BuilderItem
-    {
-        public readonly string Item;
-        public readonly BuilderQueue Queue;
-        public Action OnComplete;
-
-        public int TotalTime { get; private set; }
-        public int RemainingTime { get; private set; }
-        public int RemainingTimeActual
-        {
-            get
-            {
-                return RemainingTime;
-            }
-        }
-
-        public bool Done { get; private set; }
-
-        readonly ActorInfo ai;
-        readonly BuildableInfo bi;
-
-        public BuilderItem(BuilderQueue queue, string item, Action onComplete)
-        {
-            Item = item;
-            RemainingTime = TotalTime = 1;
-            OnComplete = onComplete;
-            Queue = queue;
-            ai = Queue.Actor.World.Map.Rules.Actors[Item];
-            bi = ai.TraitInfo<BuildableInfo>();
-            var time = Queue.GetBuildTime(ai, bi);
-            if (time > 0)
-                RemainingTime = TotalTime = time;
-        }
-
-        public void Tick()
-        {
-            if (Done)
-            {
-                if (OnComplete != null)
-                    OnComplete();
-
-                return;
-            }
-
-            RemainingTime -= 1;
-            if (RemainingTime > 0)
-                return;
-
-            Done = true;
-        }
-    }
 }

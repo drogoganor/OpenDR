@@ -16,7 +16,6 @@
     <PlatformTarget>x86</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
     <OutputPath>bin\Debug\</OutputPath>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
@@ -27,7 +26,6 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <Optimize>true</Optimize>
   </PropertyGroup>
   <ItemGroup>
@@ -49,6 +47,7 @@
     <Compile Include="SpriteLoaders\DrCrsLoader.cs" />
     <Compile Include="SpriteLoaders\DrTilLoader.cs" />
     <Compile Include="SpriteLoaders\DrSprLoader.cs" />
+    <Compile Include="Traits\Player\BuilderItem.cs" />
     <Compile Include="Traits\Player\BuilderUnit.cs" />
     <Compile Include="Traits\Player\BuildUnitPlaceBuilding.cs" />
     <Compile Include="Traits\Player\BuilderQueue.cs" />

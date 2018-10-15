@@ -25,17 +25,8 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.Dr.Widgets
 {
-    // Copied from ProductionIcon, required for BuilderUnit field
-    public class BuildSelectIcon
+    public class BuildSelectIcon : ProductionIcon
 	{
-		public ActorInfo Actor;
-		public string Name;
-		public HotkeyReference Hotkey;
-		public Sprite Sprite;
-		public PaletteReference Palette;
-		public PaletteReference IconClockPalette;
-		public PaletteReference IconDarkenPalette;
-		public float2 Pos;
 		public ProductionItem Item;
 		public BuilderUnit BuilderUnit;
 	}
