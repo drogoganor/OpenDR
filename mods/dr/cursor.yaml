@@ -1,7 +1,8 @@
 Cursors:
 	mouse.crs: cursor
 		default:
-			Start: 322
+			#Start: 322 # Not in demo
+			Start: 289
 			Length: 1
 			X: -15
 			Y: -15
@@ -57,7 +58,8 @@ Cursors:
 			Start: 279
 			Length: 9
 		default-minimap:
-			Start: 322
+			#Start: 322 # Not in demo
+			Start: 289
 			Length: 1
 		generic-blocked:
 			Start: 259
@@ -213,7 +215,9 @@ Cursors:
 			Start: 96
 			Length: 8
 		powerdown:
-			Start: 288
+			#Start: 288 # Not in demo
+			#Length: 8
+			Start: 76
 			Length: 8
 		powerdown-blocked:
 			Start: 259

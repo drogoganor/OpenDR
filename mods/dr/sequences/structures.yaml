@@ -285,10 +285,10 @@ nfvcy1l0:
 		Start: 1
 	up2top: tfvcy2l0
 		Start: 1
-	animation: tfvcy2l0 # chimney
-		Start: 3
-		Length: 40
-		Tick: 150
+	#animation: tfvcy2l0 # chimney # TODO: Not available in demo!
+	#	Start: 3
+	#	Length: 40
+	#	Tick: 150
 	shadow-building: bfvcysh0
 		Start: 0
 		Offset: 16, 20

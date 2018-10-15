@@ -1,12 +1,15 @@
 Metadata:
 	Title: Mod Content Manager
-	Version: release-20180307
+	Version: release-20180923
 	Hidden: true
 
 Packages:
 	.
 	./mods/modcontent: modcontent
 	./mods/common: common
+
+Rules:
+	modcontent|rules.yaml
 
 Cursors:
 	modcontent|cursors.yaml
@@ -31,24 +34,24 @@ ChromeMetrics:
 	modcontent|metrics.yaml
 
 Fonts:
-	Regular:
-		Font: common|FreeSans.ttf
-		Size:14
-	Bold:
-		Font: common|FreeSansBold.ttf
-		Size:14
-	BigBold:
-		Font: common|FreeSansBold.ttf
-		Size:24
-	MediumBold:
-		Font: common|FreeSansBold.ttf
-		Size:18
 	Tiny:
 		Font: common|FreeSans.ttf
-		Size:10
+		Size: 10
 	TinyBold:
 		Font: common|FreeSansBold.ttf
-		Size:10
+		Size: 10
+	Regular:
+		Font: common|FreeSans.ttf
+		Size: 14
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size: 14
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size: 18
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size: 24
 
 SoundFormats:
 
