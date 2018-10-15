@@ -147,8 +147,18 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
             frames.Reverse(263, 8);
             frames.Reverse(279, 9);
 
-            if (frames.Count > 291) // Demo mouse.crs does not include this.
-                frames.Reverse(288, 8);
+            bool isDemo = frames.Count < 296;
+            if (!isDemo)
+            {
+                var cursor1 = frames[304];
+                var cursor2 = frames[321];
+                var cursor3 = frames[322];
+                frames.RemoveAt(304);
+                frames.RemoveRange(320, 2);
+                frames.InsertRange(288, new[] { cursor1, cursor2, cursor3 });
+
+                frames.Reverse(291, 8);
+            }
 
             s.Position = start;
 			return frames.ToArray();
