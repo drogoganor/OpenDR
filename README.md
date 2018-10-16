@@ -6,7 +6,7 @@ This mod is a WIP made available for testing purposes. Many [features](https://g
 
 Click here to see a video of a custom campaign map in action:
 
-[![Custom map test video](https://www.youtube.com/watch?v=L64nlsVsk2E&t=5s)](https://www.youtube.com/watch?v=L64nlsVsk2E)
+[![Custom map test video](https://www.youtube.com/watch?v=L64nlsVsk2E&t=5s)](https://img.youtube.com/vi/L64nlsVsk2E/0.jpg)
 
 This mod uses game content from the freely available Dark Reign demo, or alternatively you can install the content from an original game disc.
 
