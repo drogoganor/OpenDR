@@ -5,8 +5,8 @@
 	ActorMap:
 	LoadWidgetAtGameStart:
 	MusicPlaylist:
-		VictoryMusic: acid
-		DefeatMusic: crazylaf
+	#	VictoryMusic: acid # Not in demo
+	#	DefeatMusic: crazylaf
 	DebugVisualizations:
 	TerrainGeometryOverlay:
 	ShroudRenderer:

@@ -19,7 +19,7 @@ Speech:
 		InsufficientFunds: gvwrncl6
 		InsufficientPower: gvwrncl5 # Power critical
 		Leave: gvintcl2
-		Lose: crazylaf
+		Lose:
 		LowPower: gvwrncl4
 		MissionAccomplished: gvintcl5
 		MissionFailed: gvintcl6
@@ -53,7 +53,7 @@ Speech:
 		UnitStolen: 
 		Upgrading: gvstscl2
 		NoRoom: 
-		Win: acid
+		Win:
 		# DR
 		ExcellentTheresHopeForYouYet: gvitrel0
 		AdequateMoveOn: gvitrel1

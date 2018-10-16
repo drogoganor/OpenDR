@@ -1,6 +1,12 @@
 
 # From TS
 
+command-button: chrome-ingame.png
+	background: 42,458,5,5
+
+panel-black: chrome-ingame.png
+	background: 42,458,5,5
+
 # Used for the menu
 dialog: dialog.png
 	background: 0,0,480,480
