@@ -617,7 +617,7 @@ Container@PLAYER_WIDGETS:
 				BuildSelectPalette@BUILD_SELECT_PALETTE:
 					X: 42
 					Y: 1
-					#TooltipContainer: TOOLTIP_CONTAINER
+					TooltipContainer: TOOLTIP_CONTAINER
 					IconSize: 62, 46
 					IconMargin: 1, 1
 					IconSpriteOffset: -1, -1
