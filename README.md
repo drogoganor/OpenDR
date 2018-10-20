@@ -14,6 +14,8 @@ See the [Installation](https://github.com/drogoganor/DarkReign/wiki/Installation
 
 Join us on the Dark Reign discord [![Discord](https://img.shields.io/discord/102860784329052160.svg)](https://discord.gg/3MKcGSW) if you want to talk about the mod.
 
+[![Travis CI](https://travis-ci.org/drogoganor/DarkReign.svg?branch=master)](https://travis-ci.org/drogoganor/DarkReign/builds#)
+
 ## Thanks to
 
 * [OpenRA](https://github.com/OpenRA/OpenRA) devs

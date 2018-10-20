@@ -263,6 +263,9 @@ ModContent:
 		expansion: Expansion Files
 			TestFiles: ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg, ^Content/dr/ALIEN/ALIEN.TIL, ^Content/dr/ALIEN/ALIEN.PAL, ^Content/dr/ALIEN/SPRITEEX.FTG, ^Content/dr/BARREN/spriteEx.ftg, ^Content/dr/JUNGLE/spriteEx.ftg, ^Content/dr/SNOW/spriteEx.ftg, ^Content/dr/mouse.crs
 			Sources: drexp
+		gog: GOG Install Files
+			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/BARREN/BARREN.PAL, ^Content/dr/JUNGLE/JUNGLE.PAL, ^Content/dr/SNOW/SNOW.PAL, ^Content/dr/BARREN/BARREN.TIL, ^Content/dr/JUNGLE/JUNGLE.TIL, ^Content/dr/SNOW/SNOW.TIL, ^Content/dr/BARREN/SPRITES.FTG, ^Content/dr/JUNGLE/SPRITES.FTG, ^Content/dr/SNOW/SPRITES.FTG, ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg, ^Content/dr/ALIEN/ALIEN.TIL, ^Content/dr/ALIEN/ALIEN.PAL, ^Content/dr/ALIEN/SPRITEEX.FTG, ^Content/dr/BARREN/spriteEx.ftg, ^Content/dr/JUNGLE/spriteEx.ftg, ^Content/dr/SNOW/spriteEx.ftg, ^Content/dr/mouse.crs
+			Sources: drgog
 		tilesets: Extra Tilesets
 			TestFiles: ^Content/dr/aust/AUST.FTG, ^Content/dr/volcanic/VOLCANIC.FTG, ^Content/dr/auralien/AURALIEN.FTG, ^Content/dr/asteroid/ASTEROID.FTG
 			Download: drtilesets
@@ -273,3 +276,4 @@ ModContent:
 		dr|installer/downloads.yaml
 	Sources:
 		dr|installer/drcd.yaml
+		dr|installer/gog.yaml

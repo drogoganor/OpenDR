@@ -6,7 +6,7 @@ Tileset: BARREN
 MapSize: 58,74
 Bounds: 1,25,56,48
 Visibility: MissionSelector
-Categories: D-Missions: F. Guard
+Categories: D-Missions
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral

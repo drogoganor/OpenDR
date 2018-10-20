@@ -6,7 +6,7 @@ Tileset: BARREN
 MapSize: 62,54
 Bounds: 1,1,60,52
 Visibility: MissionSelector
-Categories: D-Missions: Imperium
+Categories: D-Missions
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
