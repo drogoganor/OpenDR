@@ -3,55 +3,56 @@ Player:
 		Name: Normal AI
 		Type: normal
 		MinimumExcessPower: 60
-		BuildingQueues: Building
+		BuildingQueues: AIBuilding
 		BuildingCommonNames:
-			ConstructionYard: constructionrig
-			HQ: hq.human,hq.cyborg
-			Refinery: waterlaunchpad
-			Power: power
-			Barracks: trainingfacility.fguard, trainingfacility.cyborg
-			VehiclesFactory: assemblyplant.human, assemblyplant.cyborg
-			Production: trainingfacility.fguard, trainingfacility.cyborg, assemblyplant.human, assemblyplant.cyborg
-			Rearming: rearmingdeck.human, rearmingdeck.human.cyborg
+			ConstructionYard: constructionrigai
+			Refinery: waterlaunchpad.constructing, waterlaunchpad
+			Power: power.constructing, power
+			Barracks: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing
+			VehiclesFactory: assemblyplant.human.constructing, assemblyplant.cyborg.constructing
+			Production: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing, assemblyplant.human.constructing, assemblyplant.cyborg.constructing
+			Rearming: rearmingdeck.human.constructing, rearmingdeck.human.cyborg.constructing
 		UnitsCommonNames:
-			Mcv: constructionrig
-			ExcludeFromSquads: freighter, hoverfreighter, constructionrig
+			Mcv: constructionrigai
+			ExcludeFromSquads: freighter, hoverfreighter, constructionrig, constructionrigai
 		BuildingLimits:
-			waterlaunchpad: 3
-			power: 3
+			waterlaunchpad.constructing: 1
+			power.constructing: 1
+			hq.human.constructing: 1
 			hq.human: 1
+			hq.cyborg.constructing: 1
 			hq.cyborg: 1
-			trainingfacility.fguard: 2
-			trainingfacility.cyborg: 2
-			assemblyplant.human: 2
-			assemblyplant.cyborg: 2
-			repair.human: 1
+			trainingfacility.fguard.constructing: 2
+			trainingfacility.cyborg.constructing: 2
+			assemblyplant.human.constructing: 2
+			assemblyplant.cyborg.constructing: 2
+			repair.human.constructing: 1
 			repair.cyborg: 1
-			hospital.human: 1
-			hospital.cyborg: 1
-			phasingfacility: 1
-			rearmingdeck.human: 1
-			rearmingdeck.cyborg: 1
+			hospital.human.constructing: 1
+			hospital.cyborg.constructing: 1
+			phasingfacility.constructing: 0
+			rearmingdeck.human.constructing: 1
+			rearmingdeck.cyborg.constructing: 1
 		BuildingFractions:
-			waterlaunchpad: 20%
-			power: 20%
-			hq.human: 1%
-			hq.cyborg: 1%
-			trainingfacility.fguard: 40%
-			trainingfacility.cyborg: 40%
-			assemblyplant.human: 35%
-			assemblyplant.cyborg: 35%
+			waterlaunchpad.constructing: 20%
+			power.constructing: 20%
+			hq.human.constructing: 20%
+			hq.cyborg.constructing: 20%
+			trainingfacility.fguard.constructing: 40%
+			trainingfacility.cyborg.constructing: 40%
+			assemblyplant.human.constructing: 35%
+			assemblyplant.cyborg.constructing: 35%
 			upgrade.hq1: 20%
 			upgrade.barracks1: 20%
 			upgrade.assemblyplant1: 20%
 			upgrade.hq2: 10%
-			repair.human: 1%
-			repair.cyborg: 1%
-			hospital.human: 1%
-			hospital.cyborg: 1%
-			phasingfacility: 1%
-			rearmingdeck.human: 1%
-			rearmingdeck.cyborg: 1%
+			repair.human.constructing: 1%
+			repair.cyborg.constructing: 1%
+			hospital.human.constructing: 1%
+			hospital.cyborg.constructing: 1%
+			#phasingfacility.constructing: 1%
+			rearmingdeck.human.constructing: 1%
+			rearmingdeck.cyborg.constructing: 1%
 		UnitsToBuild:
 			raider: 25%
 			guardian: 25%

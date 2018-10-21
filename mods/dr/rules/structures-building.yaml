@@ -5,7 +5,7 @@ Power.Constructing:
 		Image: ncpow1l0
 	Buildable:
 		Prerequisites: ~techlevel.infonly
-		Queue: Building
+		Queue: Building, AIBuilding
 		Description: Provides power for other structures. Refines Taelon into credits.
 		BuildPaletteOrder: 20
 		BuildDuration: 30
@@ -46,7 +46,7 @@ WaterLaunchPad.Constructing:
 	RenderSprites:
 		Image: nclnc1l0
 	Buildable:
-		Queue: Building
+		Queue: Building, AIBuilding
 		BuildPaletteOrder: 10
 		Prerequisites: ~techlevel.infonly
 		Description: Refines spring water into credits.
@@ -96,6 +96,7 @@ HQ.human.Constructing:
 	Tooltip:
 		Name: Headquarters
 	Buildable:
+		Queue: Building, AIBuilding
 		Prerequisites: ~rig.human
 	SelfConstructing:
 		Steps: 20
@@ -120,6 +121,7 @@ HQ.cyborg.Constructing:
 	Building:
 		Footprint: x==x xxxx xxxx =xxx
 	Buildable:
+		Queue: Building, AIBuilding
 		Prerequisites: ~rig.cyborg
 	SelfConstructing:
 		Steps: 20
@@ -142,6 +144,7 @@ HQ.togran.Constructing:
 	Tooltip:
 		Name: Headquarters
 	Buildable:
+		Queue: Building, AIBuilding
 		Prerequisites: ~rig.togran
 	SelfConstructing:
 		Steps: 20
@@ -162,6 +165,7 @@ TrainingFacility.fguard.Constructing:
 	Tooltip:
 		Name: Training Facility
 	Buildable:
+		Queue: Building, AIBuilding
 		Prerequisites: ~rig.fguard, hq.fguard
 	SelfConstructing:
 		Steps: 20
@@ -187,6 +191,7 @@ TrainingFacility.cyborg.Constructing:
 	Tooltip:
 		Name: Training Facility
 	Buildable:
+		Queue: Building, AIBuilding
 		Prerequisites: ~rig.cyborg, hq.cyborg
 	SelfConstructing:
 		Steps: 20
@@ -213,6 +218,7 @@ AssemblyPlant.human.Constructing:
 	Tooltip:
 		Name: Assembly Plant
 	Buildable:
+		Queue: Building, AIBuilding
 		Prerequisites: ~rig.human, hq.human
 	SelfConstructing:
 		Steps: 20
@@ -231,6 +237,7 @@ AssemblyPlant.cyborg.Constructing:
 	Tooltip:
 		Name: Assembly Plant
 	Buildable:
+		Queue: Building, AIBuilding
 		Prerequisites: ~rig.cyborg, hq.cyborg
 	SelfConstructing:
 		Steps: 20
@@ -261,7 +268,7 @@ LaserTurret.Constructing:
 		Name: Laser Turret
 	Buildable:
 		Prerequisites: ~rig.human
-		Queue: Building
+		Queue: Building, AIBuilding
 		Description: Laser Defense Turret
 		BuildPaletteOrder: 50
 		BuildDuration: 22
@@ -285,7 +292,7 @@ PlasmaTurret.Constructing:
 		Name: Plasma Turret
 	Buildable:
 		Prerequisites: ~rig.cyborg
-		Queue: Building
+		Queue: Building, AIBuilding
 		Description: Plasma Defense Turret
 		BuildPaletteOrder: 50
 		BuildDuration: 22
@@ -309,7 +316,7 @@ AntiAirTurret.human.Constructing:
 		Name: Anti-Air Turret
 	Buildable:
 		Prerequisites: ~rig.human, hq.human, upgrade.hq1, vehicles, barracks
-		Queue: Building
+		Queue: Building, AIBuilding
 		Description: Anti-Air Turret
 		BuildPaletteOrder: 50
 		BuildDuration: 30
@@ -334,7 +341,7 @@ AntiAirTurret.cyborg.Constructing:
 		Name: Anti-Air Turret
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
-		Queue: Building
+		Queue: Building, AIBuilding
 		Description: Anti-Air Turret
 		BuildPaletteOrder: 50
 		BuildDuration: 30
@@ -363,7 +370,7 @@ HeavyRailTurret.Constructing:
 		Dimensions: 3,3
 	Buildable:
 		Prerequisites: ~rig.human, hq.human, upgrade.hq1, vehicles, barracks
-		Queue: Building
+		Queue: Building, AIBuilding
 		Description: Heavy Rail Turret
 		BuildPaletteOrder: 50
 		BuildDuration: 51
@@ -394,7 +401,7 @@ NeutronAccelerator.Constructing:
 		#LocalCenterOffset: 384,-256,0
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
-		Queue: Building
+		Queue: Building, AIBuilding
 		Description: Neutron Accelerator
 		BuildPaletteOrder: 50
 		BuildDuration: 51
@@ -428,7 +435,7 @@ CameraTower.Constructing:
 		Name: Camera Tower
 	Buildable:
 		Prerequisites: ~rig, hq, upgrade.hq1, vehicles, barracks
-		Queue: Building
+		Queue: Building, AIBuilding
 		Description: Camera Tower
 		BuildPaletteOrder: 50
 		BuildDuration: 6

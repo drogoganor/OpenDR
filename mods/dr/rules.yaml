@@ -4,6 +4,7 @@
 	ScreenMap:
 	ActorMap:
 	LoadWidgetAtGameStart:
+	TerrainRenderer:
 	MusicPlaylist:
 	#	VictoryMusic: acid # Not in demo
 	#	DefeatMusic: crazylaf
@@ -194,10 +195,18 @@ World:
 		Class: light
 		ClassName: Three Rigs
 		Factions: fguard, imperium, togran, xenite, shadowhand
-		BaseActor: ConstructionRig
+		BaseActor: ConstructionRigAI
 		SupportActors: ConstructionRig,ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
+	MPStartUnits@fiverigs:
+		Class: medium
+		ClassName: Five Rigs
+		Factions: fguard, imperium, togran, xenite, shadowhand
+		BaseActor: ConstructionRigAI
+		SupportActors: ConstructionRig,ConstructionRig,ConstructionRig,ConstructionRig
+		InnerSupportRadius: 2
+		OuterSupportRadius: 6
 	SpawnMPUnits:
 		StartingUnitsClass: light
 		DropdownDisplayOrder: 0
@@ -247,6 +256,13 @@ Player:
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		#SpeedUp: True
+	ClassicProductionQueue@AIBuilding:
+		Type: AIBuilding
+		Group: AIBuilding
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: Building
+		BuildDurationModifier: 1
 	Shroud:
 		FogCheckboxDisplayOrder: 3
 		ExploredMapCheckboxEnabled: True

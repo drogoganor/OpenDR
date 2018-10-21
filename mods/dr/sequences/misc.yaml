@@ -173,6 +173,26 @@ pips:
 	pip-yellow: pips.png
 		Start: 4
 
+rank:
+	Defaults:
+		AddExtension: False
+	rank-veteran-1: ranks.png
+	rank-veteran-2: ranks.png
+		Start: 1
+	rank-veteran-3: ranks.png
+		Start: 2
+	rank-veteran-4: ranks.png
+		Start: 3
+	rank-elite: ranks.png
+		Start: 4
+
+crate-effects:
+	Defaults:
+		ZOffset: 2047
+		Length: *
+	levelup: eoncnpr1
+		Tick: 50
+
 # Generic human death
 humansplat:
 	die: splata

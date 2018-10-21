@@ -12,6 +12,7 @@ ConstructionRig:
 		BuildPaletteOrder: 80
 		BuildDuration: 9
 	Selectable:
+		Priority: 4
 		Class: C1
 	Voiced:
 		VoiceSet: ConstructionVoice
@@ -34,9 +35,8 @@ ConstructionRig:
 	BuilderUnit@Building:
 		Type: Building
 		Group: Building
-	BaseBuilding:
 	Production:
-		Produces: Building,Defense
+		Produces: Building, Defense
 	ProvidesPrerequisite@rig:
 		Prerequisite: rig
 	ProvidesPrerequisite@human:
@@ -62,6 +62,15 @@ ConstructionRig:
 		Prerequisite: rig.shadowhand
 	-Armament:
 
+ConstructionRigAI:
+	Inherits: ConstructionRig
+	-Buildable:
+	BaseBuilding:
+	Production:
+		Produces: AIBuilding
+	BaseProvider:
+		Range: 18c0
+
 Freighter:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
@@ -75,6 +84,7 @@ Freighter:
 		BuildPaletteOrder: 80
 		BuildDuration: 30
 	Selectable:
+		Priority: 5
 		Class: F1
 	Voiced:
 		VoiceSet: FreedomGuardVoice
@@ -113,6 +123,7 @@ HoverFreighter:
 		BuildPaletteOrder: 80
 		BuildDuration: 45
 	Selectable:
+		Priority: 5
 		Class: F2
 	Voiced:
 		VoiceSet: FreedomGuardVoice

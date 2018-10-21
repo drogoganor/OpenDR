@@ -1,6 +1,8 @@
 ^ExistsInWorld:
 	AppearsOnRadar:
 	CombatDebugOverlay:
+	GivesExperience:
+		PlayerExperienceModifier: 1
 	ScriptTriggers:
 	ConditionManager:
 	RenderDebugState:
@@ -82,7 +84,7 @@
 
 ^DrSoldier:
 	Inherits: ^Humanoid
-	Inherits@2: ^GainsExperience
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Infantry
@@ -374,7 +376,7 @@
 	Tooltip:
 		Name: Headquarters
 	Buildable:
-		Queue: Building
+		Queue: Building, AIBuilding
 		BuildPaletteOrder: 0
 		BuildDuration: 22
 		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
@@ -482,7 +484,7 @@
 		Name: Training Facility
 	Inherits@shape: ^5x4Shape
 	Buildable:
-		Queue: Building
+		Queue: Building, AIBuilding
 		Description: Trains infantry.
 		Prerequisites: hq
 		BuildPaletteOrder: 30
@@ -567,7 +569,7 @@
 		Name: Assembly Plant
 	Inherits@shape: ^5x5Shape
 	Buildable:
-		Queue: Building
+		Queue: Building, AIBuilding
 		BuildPaletteOrder: 40
 		BuildDuration: 66
 		Description: Produces vehicles.
@@ -706,7 +708,7 @@
 ^DrGenericBuilding.Constructing: # Used by field hospital, repair pad, etc.
 	Inherits: ^SelfConstructingBuilding
 	Buildable:
-		Queue: Building
+		Queue: Building, AIBuilding
 		Description: Generic
 		Prerequisites: hq
 		BuildPaletteOrder: 30
@@ -754,8 +756,9 @@
 			400: rank-veteran
 			800: rank-veteran
 			1600: rank-veteran
+			2400: rank-veteran
 	GrantCondition@RANK-ELITE:
-		RequiresCondition: rank-veteran >= 4
+		RequiresCondition: rank-veteran >= 5
 		Condition: rank-elite
 	DamageMultiplier@RANK-1:
 		RequiresCondition: rank-veteran == 1
@@ -766,6 +769,9 @@
 	DamageMultiplier@RANK-3:
 		RequiresCondition: rank-veteran == 3
 		Modifier: 85
+	DamageMultiplier@RANK-4:
+		RequiresCondition: rank-veteran == 4
+		Modifier: 80
 	DamageMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
 		Modifier: 75
@@ -778,6 +784,9 @@
 	FirepowerMultiplier@RANK-3:
 		RequiresCondition: rank-veteran == 3
 		Modifier: 120
+	FirepowerMultiplier@RANK-4:
+		RequiresCondition: rank-veteran == 4
+		Modifier: 125
 	FirepowerMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
 		Modifier: 130
@@ -790,6 +799,9 @@
 	SpeedMultiplier@RANK-3:
 		RequiresCondition: rank-veteran == 3
 		Modifier: 120
+	SpeedMultiplier@RANK-4:
+		RequiresCondition: rank-veteran == 4
+		Modifier: 130
 	SpeedMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
 		Modifier: 140
@@ -802,6 +814,9 @@
 	ReloadDelayMultiplier@RANK-3:
 		RequiresCondition: rank-veteran == 3
 		Modifier: 85
+	ReloadDelayMultiplier@RANK-4:
+		RequiresCondition: rank-veteran == 4
+		Modifier: 80
 	ReloadDelayMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
 		Modifier: 75
@@ -814,6 +829,9 @@
 	InaccuracyMultiplier@RANK-3:
 		RequiresCondition: rank-veteran == 3
 		Modifier: 70
+	InaccuracyMultiplier@RANK-4:
+		RequiresCondition: rank-veteran == 4
+		Modifier: 60
 	InaccuracyMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
 		Modifier: 50
@@ -823,6 +841,36 @@
 		HealIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: rank-elite
+	WithDecoration@RANK-1:
+		Image: rank
+		Sequence: rank-veteran-1
+		ReferencePoint: Bottom, Right
+		RequiresCondition: rank-veteran == 1
+		ZOffset: 256
+	WithDecoration@RANK-2:
+		Image: rank
+		Sequence: rank-veteran-2
+		ReferencePoint: Bottom, Right
+		RequiresCondition: rank-veteran == 2
+		ZOffset: 256
+	WithDecoration@RANK-3:
+		Image: rank
+		Sequence: rank-veteran-3
+		ReferencePoint: Bottom, Right
+		RequiresCondition: rank-veteran == 3
+		ZOffset: 256
+	WithDecoration@RANK-4:
+		Image: rank
+		Sequence: rank-veteran-4
+		ReferencePoint: Bottom, Right
+		RequiresCondition: rank-veteran == 4
+		ZOffset: 256
+	WithDecoration@RANK-ELITE:
+		Image: rank
+		Sequence: rank-elite
+		ReferencePoint: Bottom, Right
+		RequiresCondition: rank-elite
+		ZOffset: 256
 		
 
 # AutoTarget

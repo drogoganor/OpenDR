@@ -59,8 +59,8 @@ namespace OpenRA.Mods.Dr.Activities
 				if (!world.CanPlaceBuilding(order.TargetLocation, buildingActor, buildingInfo, self))
 				{
 					// Try clear the area
-					foreach (var order in ClearBlockersOrders(self, world, order.TargetLocation))
-						world.IssueOrder(order);
+					foreach (var ord in ClearBlockersOrders(self, world, order.TargetLocation))
+						world.IssueOrder(ord);
 
 					Game.Sound.PlayNotification(world.Map.Rules, self.Owner, "Speech", "BuildingCannotPlaceAudio", faction);
 					return NextActivity;
