@@ -1,4 +1,4 @@
-drorig: Dark Reign (Disc, English)
+drorig: Original Game Files
 	IDFiles:
 		INSTALL/DATA/DARK/GRAPHICS/SPRITES.FTG: 5f96e0dbdab314271ef20a1c9a7c11a319c2e813
 	Install:
@@ -16,7 +16,7 @@ drorig: Dark Reign (Disc, English)
 			^Content/dr/JUNGLE/JUNGLE.PAL: INSTALL/DATA/DARK/GRAPHICS/JUNGLE/JUNGLE.PAL
 			^Content/dr/JUNGLE/SPRITES.FTG: INSTALL/DATA/DARK/GRAPHICS/JUNGLE/SPRITES.FTG
 			^Content/dr/mouse.crs: INSTALL/DATA/DARK/GRAPHICS/INTFACE/MOUSE.CRS
-drexp: Dark Reign Expansion (Disc, English)
+drexp: Expansion Files
 	IDFiles:
 		Install/Data/Dark/graphics/spriteEx.ftg: 429667e2fa8c6fa7da727cc64c9d5512ae2c832d
 	Install:

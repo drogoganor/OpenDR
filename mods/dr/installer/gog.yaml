@@ -1,4 +1,4 @@
-drgog: Dark Reign + Expansion (GOG release, English)
+drgog: GOG Install Files
 	Type: Install
 	RegistryPrefixes: HKEY_LOCAL_MACHINE\Software\, HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\
 	RegistryKey: GOG.com\Games\1207658904
