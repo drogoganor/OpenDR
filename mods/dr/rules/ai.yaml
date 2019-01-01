@@ -66,6 +66,10 @@ Player:
 		SquadSize: 20
 		ExcludeFromSquadsTypes: freighter, constructionrig, constructionrigai
 		ConstructionYardTypes: constructionrig, constructionrigai
+	McvManagerBotModule:
+		RequiresCondition: enable-normal-ai
+		McvTypes: constructionrigai
+		ConstructionYardTypes: hq.human.constructing, hq.cyborg.constructing, hq.human, hq.cyborg
 	UnitBuilderBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		UnitsToBuild:
@@ -107,7 +111,3 @@ Player:
 			skyfortress: 2
 		UnitLimits:
 			freighter: 4
-	McvManagerBotModule:
-		RequiresCondition: enable-normal-ai
-		McvTypes: constructionrigai
-		ConstructionYardTypes: hq.human.constructing, hq.cyborg.constructing, hq.human, hq.cyborg

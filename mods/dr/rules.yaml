@@ -330,3 +330,4 @@ Player:
 	GrantConditionOnPrerequisiteManager:
 	EnemyWatcher:
 	PlayerExperience:
+	ConditionManager:
