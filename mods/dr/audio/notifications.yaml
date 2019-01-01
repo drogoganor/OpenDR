@@ -3,12 +3,14 @@ Speech:
 	Notifications:
 		BaseAttack: gvwrncl0 # gvwrnclb  # Enemy engaged
 		Building: gvstscl2
+			RateLimit: 600
 		BuildingCannotPlaceAudio: 
 		BuildingCaptured: 
 		BuildingInfiltrated: gvstscl9
 		BuildingInProgress: gvstscl3
 		BuildingProgress: 
 		Cancelled: gvstscl4
+			RateLimit: 500
 		ConstructionComplete: gvstscl0 # gvstscl5 # Unit complete
 		ConvoyApproaching: 
 		ConvoyUnitLost: 
@@ -45,9 +47,11 @@ Speech:
 		TargetRescued: 
 		TimerStarted: gvwrncl9
 		Training: gvstscl3
+			RateLimit: 800
 		UnitFull: 
 		UnitLost: gvstscl7 # gvstscl8 # building destroyed
 		UnitReady: gvstscl5
+			RateLimit: 900
 		UnitRepaired: gvstscll
 		UnitSold: 
 		UnitStolen: 

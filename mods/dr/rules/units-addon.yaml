@@ -1,6 +1,7 @@
 
 ^DrAddonSoldier:
 	Inherits: ^DrSoldier
+	-Buildable:
 	MapEditorData:
 		Categories: Addon
 

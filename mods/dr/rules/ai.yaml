@@ -1,20 +1,46 @@
 Player:
-	HackyAI@NormalAI:
+	ModularBot@NormalAI:
 		Name: Normal AI
 		Type: normal
+	GrantConditionOnBotOwner@normal:
+		Condition: enable-normal-ai
+		Bots: normal
+	SupportPowerBotModule:
+		RequiresCondition: enable-normal-ai
+		Decisions:
+	HarvesterBotModule:
+		RequiresCondition: enable-normal-ai
+	BaseBuilderBotModule@normal:
+		RequiresCondition: enable-normal-ai
 		MinimumExcessPower: 60
+		#ConstructionYardTypes: constructionrigai
+		RefineryTypes: waterlaunchpad.constructing, waterlaunchpad
+		PowerTypes: power.constructing, power
+		BarracksTypes: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing
+		VehiclesFactoryTypes: assemblyplant.human.constructing, assemblyplant.cyborg.constructing
+		ProductionTypes: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing, assemblyplant.human.constructing, assemblyplant.cyborg.constructing
+		#RearmingTypes: rearmingdeck.human.constructing, rearmingdeck.human.cyborg.constructing
 		BuildingQueues: AIBuilding
-		BuildingCommonNames:
-			ConstructionYard: constructionrigai
-			Refinery: waterlaunchpad.constructing, waterlaunchpad
-			Power: power.constructing, power
-			Barracks: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing
-			VehiclesFactory: assemblyplant.human.constructing, assemblyplant.cyborg.constructing
-			Production: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing, assemblyplant.human.constructing, assemblyplant.cyborg.constructing
-			Rearming: rearmingdeck.human.constructing, rearmingdeck.human.cyborg.constructing
-		UnitsCommonNames:
-			Mcv: constructionrigai
-			ExcludeFromSquads: freighter, hoverfreighter, constructionrig, constructionrigai
+		BuildingFractions:
+			waterlaunchpad.constructing: 50
+			power.constructing: 10
+			#hq.human.constructing: 1
+			#hq.cyborg.constructing: 1
+			trainingfacility.fguard.constructing: 1
+			trainingfacility.cyborg.constructing: 1
+			assemblyplant.human.constructing: 1
+			assemblyplant.cyborg.constructing: 1
+			upgrade.hq1: 2
+			upgrade.barracks1: 2
+			upgrade.assemblyplant1: 2
+			upgrade.hq2: 1
+			repair.human.constructing: 1
+			repair.cyborg.constructing: 1
+			hospital.human.constructing: 1
+			hospital.cyborg.constructing: 1
+			#phasingfacility.constructing: 1
+			rearmingdeck.human.constructing: 1
+			rearmingdeck.cyborg.constructing: 1
 		BuildingLimits:
 			waterlaunchpad.constructing: 1
 			power.constructing: 1
@@ -33,63 +59,55 @@ Player:
 			phasingfacility.constructing: 0
 			rearmingdeck.human.constructing: 1
 			rearmingdeck.cyborg.constructing: 1
-		BuildingFractions:
-			waterlaunchpad.constructing: 20%
-			power.constructing: 20%
-			hq.human.constructing: 20%
-			hq.cyborg.constructing: 20%
-			trainingfacility.fguard.constructing: 40%
-			trainingfacility.cyborg.constructing: 40%
-			assemblyplant.human.constructing: 35%
-			assemblyplant.cyborg.constructing: 35%
-			upgrade.hq1: 20%
-			upgrade.barracks1: 20%
-			upgrade.assemblyplant1: 20%
-			upgrade.hq2: 10%
-			repair.human.constructing: 1%
-			repair.cyborg.constructing: 1%
-			hospital.human.constructing: 1%
-			hospital.cyborg.constructing: 1%
-			#phasingfacility.constructing: 1%
-			rearmingdeck.human.constructing: 1%
-			rearmingdeck.cyborg.constructing: 1%
+	BuildingRepairBotModule:
+		RequiresCondition: enable-normal-ai
+	SquadManagerBotModule@normal:
+		RequiresCondition: enable-normal-ai
+		SquadSize: 20
+		ExcludeFromSquadsTypes: freighter, constructionrig, constructionrigai
+		ConstructionYardTypes: constructionrig, constructionrigai
+	UnitBuilderBotModule@normal:
+		RequiresCondition: enable-normal-ai
 		UnitsToBuild:
-			raider: 25%
-			guardian: 25%
-			mercenary: 15%
-			bion: 15%
-			sniper: 0.5%
-			exterminator: 0.5%
-			#scout: 0.5%
-			medic: 0.1%
-			#saboteur: 0.1%
-			#mechanic: 0.1%
-			martyr: 1%
-			#infiltrator: 0.1%
-			spiderbike: 15%
-			#rat: 1%
-			skirmishtank: 25%
-			tankhunter: 2%
-			#phasetank: 0.1%
-			flakjack: 1%
-			triplerailhovertank: 50%
-			hellstormartillery: 20%
-			skybike: 5%
-			outrider: 15%
-			#shockwave: 1%
-			#watercontaminator: 1%
-			scoutrunner: 10%
-			#itt: 5%
-			plasmatank: 25%
-			#amper: 30%
-			mad: 1%
-			#recondrone: 5%
-			#shredder: 30%
-			#hostagetaker: 15%
-			tachiontank: 50%
-			scarab: 20%
-			cyclone: 15%
-			skyfortress: 2%
+			raider: 25
+			guardian: 25
+			mercenary: 15
+			bion: 15
+			sniper: 1
+			exterminator: 1
+			#scout: 1
+			medic: 1
+			#saboteur: 1
+			#mechanic: 1
+			martyr: 1
+			#infiltrator: 1
+			spiderbike: 15
+			#rat: 1
+			skirmishtank: 25
+			tankhunter: 2
+			#phasetank: 1
+			flakjack: 1
+			triplerailhovertank: 50
+			hellstormartillery: 20
+			skybike: 5
+			outrider: 15
+			#shockwave: 1
+			#watercontaminator: 1
+			scoutrunner: 10
+			#itt: 5
+			plasmatank: 25
+			#amper: 30
+			mad: 1
+			#recondrone: 5
+			#shredder: 30
+			#hostagetaker: 15
+			tachiontank: 50
+			scarab: 20
+			cyclone: 15
+			skyfortress: 2
 		UnitLimits:
 			freighter: 4
-		SquadSize: 20
+	McvManagerBotModule:
+		RequiresCondition: enable-normal-ai
+		McvTypes: constructionrigai
+		ConstructionYardTypes: hq.human.constructing, hq.cyborg.constructing, hq.human, hq.cyborg
