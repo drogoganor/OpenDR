@@ -11,11 +11,11 @@ Packages:
 	./mods/common: common
 	~BARREN/BARREN.TIL
 	~BARREN/BARREN.PAL
-	BARREN/SPRITES.FTG: barren
+	~BARREN/SPRITES.FTG: barren
 	~BARREN/spriteEx.ftg: barrenEx
 	~JUNGLE/JUNGLE.TIL
 	~JUNGLE/JUNGLE.PAL
-	JUNGLE/SPRITES.FTG: jungle
+	~JUNGLE/SPRITES.FTG: jungle
 	~JUNGLE/spriteEx.ftg: jungleEx
 	~SNOW/SNOW.TIL
 	~SNOW/SNOW.PAL
@@ -28,16 +28,16 @@ Packages:
 	~aust/AUST.FTG
 	~volcanic/VOLCANIC.FTG
 	~auralien/AURALIEN.FTG
-	SPRITES.FTG: base
+	~SPRITES.FTG: base
 	~spriteEx.ftg
-	SOUNDS.FTG
+	~SOUNDS.FTG
 	~soundsEx.ftg
 	~mouse.crs
 	~music.zip
-	addon/aurunits/aursound.ftg
-	addon/aurunits/aursprite.ftg
-	addon/terrorist/terrsound.ftg
-	addon/terrorist/terrsprite.ftg
+	~addon/aurunits/aursound.ftg
+	~addon/aurunits/aursprite.ftg
+	~addon/terrorist/terrsound.ftg
+	~addon/terrorist/terrsprite.ftg
 	dr|palettes
 	dr|bits
 	dr|uibits
