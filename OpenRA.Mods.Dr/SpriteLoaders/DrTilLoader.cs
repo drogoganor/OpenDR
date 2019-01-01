@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using OpenRA.Graphics;
+using OpenRA.Primitives;
 
 namespace OpenRA.Mods.Dr.SpriteLoaders
 {
@@ -112,9 +113,10 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			return frames.ToArray();
 		}
 
-		public bool TryParseSprite(Stream s, out ISpriteFrame[] frames)
-		{
-			if (!IsDrTil(s))
+		public bool TryParseSprite(Stream s, out ISpriteFrame[] frames, out TypeDictionary metadata)
+        {
+            metadata = null;
+            if (!IsDrTil(s))
 			{
 				frames = null;
 				return false;
