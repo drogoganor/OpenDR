@@ -7,7 +7,6 @@
 		BuildPaletteOrder: 50
 		Queue: Upgrade
 		BuildLimit: 1
-		BuildDurationModifier: 2486 # DR build rate
 		Description: Unlocks additional construction options
 		BuildDuration: 52
 

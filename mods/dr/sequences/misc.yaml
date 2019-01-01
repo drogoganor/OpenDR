@@ -105,6 +105,7 @@ explosion:
 		ZOffset: 2047
 	eolasex0: eolasex0
 	eolasex1: eolasex1
+		Offset: 13, -10
 	eolasex2: eolasex2
 	eochfex3: eochfex3
 	eorgnex2: eorgnex2 # rail gun (merc)

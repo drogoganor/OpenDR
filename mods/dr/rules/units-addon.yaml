@@ -1,0 +1,920 @@
+
+^DrAddonSoldier:
+	Inherits: ^DrSoldier
+	MapEditorData:
+		Categories: Addon
+
+GoreHunter:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unhvst0
+	Tooltip:
+		Name: Gore Hunter
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: GoreHunterVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+ShockTrooper:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unskst0
+	Tooltip:
+		Name: Shock Trooper
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: ShockTrooperVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+Santa:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unsanst0
+	Tooltip:
+		Name: Satan Clawz
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: SantaVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+GoreBeast:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unmonst0
+	Tooltip:
+		Name: Gore Beast
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: GoreBeastVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+GunWalker:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: ungwtst0
+	Tooltip:
+		Name: Gun Walker
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: GenericHumanFemaleVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+
+ScoutAlt:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unwlkac1
+	Tooltip:
+		Name: Scout Alt
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: GenericHumanFemaleVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+WalkerScout:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unwlkst0
+	Tooltip:
+		Name: Walker Scout
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: GenericHumanFemaleVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+SuicideBot:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unminst0
+	Tooltip:
+		Name: Suicide Bot
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TickTankAlt:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: untikac1
+	Tooltip:
+		Name: Tick Tank Alt
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TickTank:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: untikst0
+	Tooltip:
+		Name: Tick Tank
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+		
+FlamingDeath:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unfdtst0
+	Tooltip:
+		Name: Flaming Death
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: TripleRailTankVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+HoverAssaultTank:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unhovst0
+	Tooltip:
+		Name: Hover Assault Tank
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: TripleRailTankVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+ArmoredGuardWalker:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unmkwst0
+	Tooltip:
+		Name: Armored Guard Walker
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: GuardWalkerVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+ATATWalker:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unfrwst0
+	Tooltip:
+		Name: AT-AT Walker
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: ATATVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+SonicThumperAlternate:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utthdst0
+	Tooltip:
+		Name: Sonic Thumper Alternate
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: SonicThumperVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+SonicThumper:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utthust0
+	Tooltip:
+		Name: Sonic Thumper
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: SonicThumperVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+VortexTank:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unvorst0
+	Tooltip:
+		Name: Vortex Tank
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: VortexTankVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+# Terrorist
+
+ConstructionCrawler:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utconst0
+	Tooltip:
+		Name: Construction Crawler
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: ConstructionCrawlerVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+ConstructionBiot:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utiotst0
+	Tooltip:
+		Name: Construction Biot
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: ConstructionBiotVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TerroristWaterFreighter:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utminst0
+	Tooltip:
+		Name: Terrorist Water Freighter
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: TerroristWaterFreighterVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+RastaTerroristSoldierVeteran:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utravst0
+	Tooltip:
+		Name: Rasta Terrorist Soldier Veteran
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: RastaVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+RastaTerroristSoldier:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utrasst0
+	Tooltip:
+		Name: Rasta Terrorist Soldier
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: RastaVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+AlternateLardriddenTerroristSoldier:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utfadst0
+	Tooltip:
+		Name: Alternate Lardridden Terrorist Soldier
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: LardVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+LardriddenTerroristSoldierVeteran:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utfatst0
+	Tooltip:
+		Name: Lardridden Terrorist Soldier Veteran
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: LardVoice2
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+SkateyScout:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utagsst0
+	Tooltip:
+		Name: Skatey Scout
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: SkateyVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+StealthChopper:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utspnst0
+	Tooltip:
+		Name: Stealth Chopper
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: StealthChopperVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TerroristTransport:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: uttgtst0
+	Tooltip:
+		Name: Terrorist Transport
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: TerroristTransportVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TerroristAirRifterAlternate:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utardst0
+	Tooltip:
+		Name: Terrorist Air Rifter Alternate
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: AirRifterVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TerroristAirRifter:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utarfst0
+	Tooltip:
+		Name: Terrorist Air Rifter
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: AirRifterVoice2
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TerroristMissileTank:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utmttst0
+	Tooltip:
+		Name: Terrorist Missile Tank
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: MissileTankVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TerroristArtillery:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: uttiist0
+	Tooltip:
+		Name: Terrorist Artillery
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: TerroristArtilleryVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TerroristAirborneTroopCarrier:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utattst0
+	Tooltip:
+		Name: Terrorist Airborne Troop Carrier
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: AirborneTroopCarrierVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TerroristWaterborneTroopCarrier:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: uttwtst0
+	Tooltip:
+		Name: Terrorist Water-borne Troop Carrier
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: WaterborneTroopCarrierVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TerroristWAA:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unwaast0
+	Tooltip:
+		Name: Terrorist WAA
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: TerroristWAAVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TerroristWaterTank:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unwtkst0
+	Tooltip:
+		Name: Terrorist Water Tank
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: TerroristWaterTankVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TerroristWaterShock:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: unwswst0
+	Tooltip:
+		Name: Terrorist Water Shock
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: TerroristWaterTankVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TerroristBreakerBoys:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: utboyst0
+	Tooltip:
+		Name: Terrorist Breaker Boys
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: GenericHumanVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+TerroristHospitalUnit:
+	Inherits: ^DrAddonSoldier
+	RenderSprites:
+		Image: btpthst0
+	Tooltip:
+		Name: Terrorist Hospital Unit
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: GenericHumanVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle

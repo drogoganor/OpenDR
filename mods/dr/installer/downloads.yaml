@@ -11,13 +11,17 @@ drdemo: Dark Reign Demo
 		^Content/dr/SOUNDS.FTG: Dark Reign/DATA/DARK/sndfx/SOUNDS.FTG
 		^Content/dr/shell/SOUNDS.FTG: Dark Reign/DATA/DARK/SHELL/SOUNDS.FTG
 		^Content/dr/mouse.crs: Dark Reign/DATA/DARK/GRAPHICS/INTFACE/MOUSE.CRS
-drtilesets: Extra Tilesets
-	MirrorList: http://drogoganor.net/dr/dr-tileset-mirrors.txt
+drauranext: Auran Extra Content
+	MirrorList: http://drogoganor.net/dr/dr-auranext-mirrors.txt
 	Extract:
 		^Content/dr/aust/AUST.FTG: aust/AUST.FTG
 		^Content/dr/volcanic/VOLCANIC.FTG: volcanic/VOLCANIC.FTG
 		^Content/dr/auralien/AURALIEN.FTG: auralien/AURALIEN.FTG
 		^Content/dr/asteroid/ASTEROID.FTG: asteroid/ASTEROID.FTG
+		^Content/dr/addon/aurunits/aursprite.ftg: addon/aurunits/aursprite.ftg
+		^Content/dr/addon/aurunits/aursound.ftg: addon/aurunits/aursound.ftg
+		^Content/dr/addon/terrorist/terrsprite.ftg: addon/terrorist/terrsprite.ftg
+		^Content/dr/addon/terrorist/terrsound.ftg: addon/terrorist/terrsound.ftg
 drmusic: Music Packages
 	MirrorList: http://drogoganor.net/dr/dr-music-mirrors.txt
 	Extract:

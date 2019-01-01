@@ -7,7 +7,6 @@
 		Queue: Vehicle
 		BuildPaletteOrder: 220
 		Prerequisites: ~barracks, ~techlevel.infonly
-		BuildDurationModifier: 2486 # DR build rate
 	Huntable:
 	AppearsOnRadar:
 		UseLocation: true

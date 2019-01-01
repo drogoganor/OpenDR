@@ -9,17 +9,17 @@ Terrain:
 	TerrainType@Clear:
 		Type: Clear
 		TargetTypes: Ground
-		Color: 706031
+		Color: 746858
 		RestrictPlayerColor: true
 	TerrainType@Normal2:
 		Type: Normal2
 		TargetTypes: Ground
-		Color: 64562B
+		Color: 746858
 		RestrictPlayerColor: true
 	TerrainType@Normal3:
 		Type: Normal3
 		TargetTypes: Ground
-		Color: 564A26
+		Color: 6B5F51
 		RestrictPlayerColor: true
 	TerrainType@Muddy1:
 		Type: Muddy1
@@ -29,7 +29,7 @@ Terrain:
 	TerrainType@Muddy2:
 		Type: Muddy2
 		TargetTypes: Ground
-		Color: FFFFFF
+		Color: E2E0E0
 		RestrictPlayerColor: true
 	TerrainType@Rough1:
 		Type: Rough1
@@ -39,12 +39,12 @@ Terrain:
 	TerrainType@Rough2:
 		Type: Rough2
 		TargetTypes: Ground
-		Color: 9E9073
+		Color: 96886D
 		RestrictPlayerColor: true
 	TerrainType@Road:
 		Type: Road
 		TargetTypes: Ground
-		Color: 9E9073
+		Color: 8E7F6F
 		RestrictPlayerColor: true
 	TerrainType@RoadBase:
 		Type: RoadBase
@@ -54,32 +54,32 @@ Terrain:
 	TerrainType@HillSlope1:
 		Type: HillSlope1
 		TargetTypes: Ground
-		Color: 64481C
+		Color: 443B27
 		RestrictPlayerColor: true
 	TerrainType@HillSlope2:
 		Type: HillSlope2
 		TargetTypes: Ground
-		Color: 64481C
+		Color: 443B27
 		RestrictPlayerColor: true
 	TerrainType@Cliff1:
 		Type: Cliff1
 		TargetTypes: Ground
-		Color: A58164
+		Color: 302320
 		RestrictPlayerColor: true
 	TerrainType@Cliff2:
 		Type: Cliff2
 		TargetTypes: Ground
-		Color: A58164
+		Color: 302320
 		RestrictPlayerColor: true
 	TerrainType@Cliff3:
 		Type: Cliff3
 		TargetTypes: Ground
-		Color: A58164
+		Color: 302320
 		RestrictPlayerColor: true
 	TerrainType@Cliff4:
 		Type: Cliff4
 		TargetTypes: Ground
-		Color: A58164
+		Color: 302320
 		RestrictPlayerColor: true
 	TerrainType@SpringWater:
 		Type: SpringWater

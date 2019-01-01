@@ -1,0 +1,1 @@
+"C:\Program Files\ImageMagick-7.0.8-Q16\magick.exe convert -density 384 mod_scalable.svg -define icon:auto-resize icon.ico"

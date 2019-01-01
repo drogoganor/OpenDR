@@ -1,0 +1,392 @@
+
+# Terrorist HQ
+nthqf1l0:
+	Defaults:
+		Offset: -6, -12
+	building:
+		Start: 0
+	idle:
+		Start: 1
+	underlay-building: nthqf1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: nthqf1l0
+		ZOffset: -8192
+		Start: 1
+	up2underlay: nthqf2l0
+		ZOffset: -8192
+		Start: 1
+	up3underlay: nthqf3l0
+		ZOffset: -8192
+		Start: 1
+	top-building: tthqf1l0
+		Start: 0
+	top: tthqf1l0
+		Start: 1
+	up2top: tthqf2l0
+		Start: 1
+	up3top: tthqf3l0
+		Start: 1
+	shadow-building: bfhqtsh0
+		Start: 0
+		Offset: 8, -11
+	shadow: bfhqtsh0
+		Start: 1
+		Offset: 8, -11
+	up2shadow: bfhqtsh1
+		Start: 1
+		Offset: 8, -11
+	up3shadow: bfhqtsh2
+		Start: 1
+		Offset: 8, -11
+	icon: bthqfmn1
+		Offset: 0, 0
+	fake-icon: bthqfmn1
+		Offset: 0, 0
+
+# Terrorist Water Launch Pad
+ntlrf1l0:
+	building:
+		Start: 0
+	idle:
+		Start: 1
+	underlay-building: ntlrf1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: ntlrf1l0
+		ZOffset: -8192
+		Start: 1
+	top-building: ttlrf1l0
+		Start: 0
+	top: ttlrf1l0
+		Start: 1
+	shadow-building: bclncsh0
+		Start: 0
+		Offset: -1, 1
+	shadow: bclncsh0
+		Start: 1
+		Offset: -1, 1
+	icon: btlrfmn0
+	fake-icon: btlrfmn0
+
+# Terrorist Power Generator
+ntwpf1l0:
+	Defaults:
+		Offset: -8, -6
+	building:
+		Start: 0
+		Length: 1
+	idle:
+		Start: 1
+	underlay-building: ntwpf1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: ntwpf1l0
+		ZOffset: -8192
+		Start: 1
+	top-building: ttwpf1l0
+		Start: 0
+	top: ttwpf1l0
+		Start: 1
+	top2: ttwpf1l0
+		Start: 1
+	shadow-building: bcpowsh0
+		Start: 0
+		Offset: 4, -7
+	shadow: bcpowsh0
+		Start: 1
+		Offset: 4, -7
+	icon: btwpfmn0
+		Offset: 0, 0
+	fake-icon: btwpfmn0
+		Offset: 0, 0
+
+# Pulse Blaster Facility
+nnpbt1l0:
+	Defaults:
+		Offset: -8, -6
+	building:
+		Start: 0
+		Length: 1
+	idle:
+		Start: 1
+	turret: bnpbtst0
+		Start: 0
+		Facings: 16
+	turret-fire: bnpbtst0 # Unused
+		Start: 16
+		Facings: 16
+		Length: 2
+		Tick: 40
+	underlay-building: nnpbt1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: nnpbt1l0
+		ZOffset: -8192
+		Start: 1
+	top-building: tnpbt1l0
+		Start: 0
+	top: tnpbt1l0
+		Start: 1
+	shadow-building: bcpowsh0
+		Start: 0
+		Offset: 4, -7
+	shadow: bcpowsh0
+		Start: 1
+		Offset: 4, -7
+	icon: bnpbtmn0
+		Offset: 0, 0
+	fake-icon: bnpbtmn0
+		Offset: 0, 0
+
+# Missile Tower
+nnmth1l0:
+	Defaults:
+		Offset: -8, -6
+	building:
+		Start: 0
+		Length: 1
+	idle:
+		Start: 1
+	turret: bnmthst0
+		Start: 0
+		Facings: 24
+	turret-fire: bnmthst0 # Unused
+		Start: 24
+		Facings: 24
+		Length: 3
+		Tick: 40
+	underlay-building: nnmth1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: nnmth1l0
+		ZOffset: -8192
+		Start: 1
+	shadow-building: bnmtfsh0
+		Start: 0
+		Offset: 4, -7
+	shadow: bnmtfsh0
+		Start: 1
+		Offset: 4, -7
+	icon: bnmtfmn0
+		Offset: 0, 0
+	fake-icon: bnmtfmn0
+		Offset: 0, 0
+
+# Terrorist Flamer Tower
+nnflh1l0:
+	Defaults:
+		Offset: -8, -6
+	building:
+		Start: 0
+		Length: 1
+	idle:
+		Start: 1
+	turret: bnflhst0
+		Start: 0
+		Facings: 24
+	turret-fire: bnflhst0 # Unused
+		Start: 24
+		Facings: 24
+		Length: 3
+		Tick: 40
+	underlay-building: nnflh1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: nnflh1l0
+		ZOffset: -8192
+		Start: 1
+	shadow-building: bnflfsh0
+		Start: 0
+		Offset: 4, -7
+	shadow: bnflfsh0
+		Start: 1
+		Offset: 4, -7
+	icon: bnflfmn0
+		Offset: 0, 0
+	fake-icon: bnflfmn0
+		Offset: 0, 0
+
+# Terrorist Guard Tower
+ntgth1l0:
+	Defaults:
+		Offset: -8, -6
+	building:
+		Start: 0
+		Length: 1
+	idle:
+		Start: 1
+	turret: btgtfst0
+		Start: 0
+		Facings: 24
+	turret-fire: btgtfst0 # Unused
+		Start: 24
+		Facings: 24
+		Length: 2
+		Tick: 40
+	underlay-building: ntgth1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: ntgth1l0
+		ZOffset: -8192
+		Start: 1
+	shadow-building: btgtfsh0
+		Start: 0
+		Offset: 4, -7
+	shadow: btgtfsh0
+		Start: 1
+		Offset: 4, -7
+	icon: btgtfmn0
+		Offset: 0, 0
+	fake-icon: btgtfmn0
+		Offset: 0, 0
+
+# Terrorist Construction Facility
+ntcyf1l0:
+	Defaults:
+		Offset: -8, -6
+	building:
+		Start: 0
+		Length: 1
+	idle:
+		Start: 1
+	underlay-building: ntcyf1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: ntcyf1l0
+		ZOffset: -8192
+		Start: 1
+	top-building: ttcyf1l0
+		Start: 0
+	top: ttcyf1l0
+		Start: 1
+	shadow-building: btcyfsh0
+		Start: 0
+		Offset: 4, -7
+	shadow: btcyfsh0
+		Start: 1
+		Offset: 4, -7
+	icon: btcyfmn0
+		Offset: 0, 0
+	fake-icon: btcyfmn0
+		Offset: 0, 0
+
+# Terrorist Field Hospital
+ntptf1l0:
+	Defaults:
+		Offset: -8, -6
+	building:
+		Start: 0
+		Length: 1
+	idle:
+		Start: 1
+	underlay-building: ntptf1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: ntptf1l0
+		ZOffset: -8192
+		Start: 1
+	top-building: ttptf1l0
+		Start: 0
+	top: ttptf1l0
+		Start: 1
+	shadow-building: btptfsh0
+		Start: 0
+		Offset: 4, -7
+	shadow: btptfsh0
+		Start: 1
+		Offset: 4, -7
+	icon: btptfmn0
+		Offset: 0, 0
+	fake-icon: btptfmn0
+		Offset: 0, 0
+
+# Terrorist Repair Bay
+ntrrf1l0:
+	Defaults:
+		Offset: -8, -6
+	building:
+		Start: 0
+		Length: 1
+	idle:
+		Start: 1
+	underlay-building: ntrrf1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: ntrrf1l0
+		ZOffset: -8192
+		Start: 1
+	top-building: ttrrf1l0
+		Start: 0
+	top: ttrrf1l0
+		Start: 1
+	shadow-building: btrrfsh0
+		Start: 0
+		Offset: 4, -7
+	shadow: btrrfsh0
+		Start: 1
+		Offset: 4, -7
+	icon: btrrfmn0
+		Offset: 0, 0
+	fake-icon: btrrfmn0
+		Offset: 0, 0
+
+# Terrorist Rearming Deck
+ntrrf2l0:
+	Defaults:
+		Offset: -8, -6
+	building:
+		Start: 0
+		Length: 1
+	idle:
+		Start: 1
+	underlay-building: ntrrf2l0
+		ZOffset: -8192
+		Start: 0
+	underlay: ntrrf2l0
+		ZOffset: -8192
+		Start: 1
+	top-building: ttrrf2l0
+		Start: 0
+	top: ttrrf2l0
+		Start: 1
+	shadow-building: btrrfsh1
+		Start: 0
+		Offset: 4, -7
+	shadow: btrrfsh1
+		Start: 1
+		Offset: 4, -7
+	icon: btrrfmn0
+		Offset: 0, 0
+	fake-icon: btrrfmn0
+		Offset: 0, 0
+
+# Terrorist Water-Unit Construction Facility
+ntwyf1l0:
+	Defaults:
+		Offset: -8, -6
+	building:
+		Start: 0
+		Length: 1
+	idle:
+		Start: 1
+	underlay-building: ntwyf1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: ntwyf1l0
+		ZOffset: -8192
+		Start: 1
+	top-building: ttwyf1l0
+		Start: 0
+	top: ttwyf1l0
+		Start: 1
+	shadow-building: btwyfsh0
+		Start: 0
+		Offset: 4, -7
+	shadow: btwyfsh0
+		Start: 1
+		Offset: 4, -7
+	icon: btwyfmn0
+		Offset: 0, 0
+	fake-icon: btwyfmn0
+		Offset: 0, 0

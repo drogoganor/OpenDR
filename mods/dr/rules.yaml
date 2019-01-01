@@ -189,24 +189,35 @@ World:
 	MPStartUnits@mcvonly:
 		Class: none
 		ClassName: One Rig
-		Factions: fguard, imperium, togran, xenite, shadowhand
-		BaseActor: ConstructionRig
+		Factions: fguard, togran, xenite
+		BaseActor: HQ.human
+		SupportActors: ConstructionRigAI
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
+	MPStartUnits@mcvonlyimp:
+		Class: none
+		ClassName: One Rig
+		Factions: imperium, shadowhand
+		BaseActor: HQ.human
+		SupportActors: ConstructionRigAI
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
 	MPStartUnits@threerigs:
 		Class: light
 		ClassName: Three Rigs
-		Factions: fguard, imperium, togran, xenite, shadowhand
-		BaseActor: ConstructionRigAI
-		SupportActors: ConstructionRig,ConstructionRig
+		Factions: fguard, togran, xenite
+		BaseActor: HQ.human
+		SupportActors: ConstructionRigAI,ConstructionRig,ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
-	MPStartUnits@fiverigs:
-		Class: medium
-		ClassName: Five Rigs
-		Factions: fguard, imperium, togran, xenite, shadowhand
-		BaseActor: ConstructionRigAI
-		SupportActors: ConstructionRig,ConstructionRig,ConstructionRig,ConstructionRig
+	MPStartUnits@threerigsimp:
+		Class: light
+		ClassName: Three Rigs
+		Factions: imperium, shadowhand
+		BaseActor: HQ.cyborg
+		SupportActors: ConstructionRigAI,ConstructionRig,ConstructionRig
 		InnerSupportRadius: 2
-		OuterSupportRadius: 6
+		OuterSupportRadius: 4
 	SpawnMPUnits:
 		StartingUnitsClass: light
 		DropdownDisplayOrder: 0
@@ -244,6 +255,7 @@ Player:
 		QueuedAudio: Upgrading
 		ReadyAudio: ConstructionComplete
 		BlockedAudio: Upgrading
+		BuildDurationModifier: 2486 # DR build rate
 	BuilderQueue@Building:
 		Type: Building
 		Group: Building
@@ -255,7 +267,7 @@ Player:
 		Group: Defense
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
-		#SpeedUp: True
+		BuildDurationModifier: 2486 # DR build rate
 	ClassicProductionQueue@AIBuilding:
 		Type: AIBuilding
 		Group: AIBuilding

@@ -364,6 +364,9 @@ LaserRifle:
 		Spread: 64
 		Damage: 11
 	Warhead@3Eff: CreateEffect
+		Explosions: eolasex1
+		ValidTargets: Ground, Ship, Trees
+	Warhead@4Eff: CreateEffect
 		Explosions: eolasex0
 		ValidTargets: Ground, Ship, Trees
 

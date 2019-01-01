@@ -10,7 +10,6 @@ sidebar-bits: chrome-ingame.png
 	indicator-left: 416,48,16,8
 	indicator-right: 416,56,16,8
 
-
 power-icons: chrome-ingame.png
 	power-normal: 350,0,12,18
 	power-critical: 363,0,12,18
@@ -42,7 +41,6 @@ production-icons: chrome-ingame.png
 	upgrade: 384,48,16,16
 	upgrade-disabled: 384,64,16,16
 	upgrade-alert: 384,80,16,16
-
 
 command-icons: chrome-ingame.png
 	attack-move: 512,0,24,24
@@ -101,7 +99,6 @@ order-icons: chrome-ingame.png
 	stats: 368,48,16,16
 	stats-disabled: 368,64,16,16
 	stats-active: 368,80,16,16
-
 
 sidebar-observer: chrome-ingame.png
 	background: 512,167,238,287

@@ -1,0 +1,157 @@
+
+# Same as TripleRailTankVoice but with human death sounds
+GoreHunterVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: gvtrtsl1, gvtrtsl2, gvtrtsl3, gvtrtal0
+		Action: gvtrtrl0, gvtrtrl1, gvtrtrl2, gvtrtrl3
+
+ShockTrooperVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: shocks1
+		Action: shockr1
+
+SantaVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: santas1, santas2
+		Action: santar1, santar2, santar3
+
+GoreBeastVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: gore2
+		Action: gore2
+
+GuardWalkerVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: gdwlks1
+		Action: gdwlkr1
+
+ATATVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: atatws1
+		Action: atatwr1
+
+SonicThumperVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: sonics2
+		Action: sonicr2
+
+VortexTankVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: vortxs1
+		Action: vortxr1
+
+ConstructionCrawlerVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: Constr4, Consts2
+		Action: Constr5, Constr6
+
+ConstructionBiotVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: mcn_s1
+		Action: mcn_r1
+
+TerroristWaterFreighterVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: frghts1
+		Action: frghtr1
+
+RastaVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: rastvs1, rastvs2
+		Action: rastvr1, rastvr2
+
+LardVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: fatsos6, fatsts1, fatst2
+		Action: fatstr1, fatstr2
+
+LardVoice2:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: fatsos5, fatsos3
+		Action: fatsor5, fatsor4
+
+SkateyVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: antigs1, antigs2
+		Action: antigr1
+
+StealthChopperVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: choprs4, choprs2
+		Action: choprr3, choprr2
+
+TerroristTransportVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: tnspts1
+		Action: tnsptr2
+
+AirRifterVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: rift_s1
+		Action: rift_r1
+
+AirRifterVoice2:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: rift_s
+		Action: rift_r
+
+MissileTankVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: msltkr1
+		Action: msltkr1
+
+TerroristArtilleryVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: artils3
+		Action: artilr2
+
+AirborneTroopCarrierVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: trairs1
+		Action: trairr1
+
+WaterborneTroopCarrierVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: waterr1
+		Action: waterr2
+
+TerroristWAAVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: arcghs1
+		Action: arcghr2
+
+TerroristWaterTankVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: punshs3, punshs4
+		Action: punshr4, punshr5
+
+TerroristWaterShockVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: tectns2, tectns3, tectns4
+		Action: tectnr3

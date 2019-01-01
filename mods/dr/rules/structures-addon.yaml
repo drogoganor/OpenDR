@@ -1,0 +1,472 @@
+
+HQ.terrorist.Constructing:
+	Inherits: HQ.human.Constructing
+	RenderSprites:
+		Image: nthqf1l0
+	Tooltip:
+		Name: Headquarters
+	-Buildable:
+	SelfConstructing:
+		Steps: 20
+		Becomes: HQ.terrorist
+	Health:
+		HP: 1200
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		Sequence: top-building
+	#WithIdleOverlay@LAYER3:
+	#	Palette: shadow
+	#	Sequence: shadow-building
+	MapEditorData:
+		Categories: Addon
+
+HQ.terrorist:
+	Inherits: HQ.human
+	RenderSprites:
+		Image: nthqf1l0
+	MapEditorData:
+		Categories: Addon
+
+WaterLaunchPad.terrorist.Constructing:
+	Inherits: WaterLaunchPad.Constructing
+	RenderSprites:
+		Image: ntlrf1l0
+	-Buildable:
+	SelfConstructing:
+		Steps: 20
+		Becomes: WaterLaunchPad.terrorist
+	Health:
+		HP: 1200
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		Sequence: top-building
+	#WithIdleOverlay@LAYER3:
+	#	Palette: shadow
+	#	Sequence: shadow-building
+	MapEditorData:
+		Categories: Addon
+
+WaterLaunchPad.terrorist:
+	Inherits: WaterLaunchPad
+	RenderSprites:
+		Image: ntlrf1l0
+	MapEditorData:
+		Categories: Addon
+
+Power.terrorist.Constructing:
+	Inherits: Power.Constructing
+	RenderSprites:
+		Image: ntwpf1l0
+	-Buildable:
+	SelfConstructing:
+		Steps: 20
+		Becomes: Power.terrorist
+	Tooltip:
+		Name: Wind Power Generator
+	Valued:
+		Cost: 2000
+	Health:
+		HP: 1450
+	MapEditorData:
+		Categories: Addon
+
+Power.terrorist:
+	Inherits: Power
+	RenderSprites:
+		Image: ntwpf1l0
+	Tooltip:
+		Name: Wind Power Generator
+	MapEditorData:
+		Categories: Addon
+
+# Pulse Blaster Turret
+PulseBlasterTurret.Constructing:
+	Inherits: ^Defense.Constructing
+	RenderSprites:
+		Image: nnpbt1l0
+	Tooltip:
+		Name: Pulse Blaster Turret
+	-Buildable:
+	SelfConstructing:
+		Steps: 20
+		Becomes: PulseBlasterTurret
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	-WithIdleOverlay@LAYER1:
+	-WithIdleOverlay@LAYER2:
+	-WithIdleOverlay@LAYER3:
+	MapEditorData:
+		Categories: Addon
+
+PulseBlasterTurret:
+	Inherits: PulseBlasterTurret.Constructing
+	Inherits@4: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	-SelfConstructing:
+	Tooltip:
+		Name: Pulse Blaster Turret
+	Turreted:
+		TurnSpeed: 16
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: GatLaser
+		LocalOffset: 512,0,112
+	-WithIdleOverlay@LAYER1:
+	-WithIdleOverlay@LAYER2:
+	-WithIdleOverlay@LAYER3:
+
+# Missile Tower
+MissileTower.Constructing:
+	Inherits: ^Defense.Constructing
+	RenderSprites:
+		Image: nnmth1l0
+	Tooltip:
+		Name: Missile Tower
+	-Buildable:
+	SelfConstructing:
+		Steps: 20
+		Becomes: MissileTower
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	-WithIdleOverlay@LAYER1:
+	-WithIdleOverlay@LAYER2:
+	-WithIdleOverlay@LAYER3:
+	MapEditorData:
+		Categories: Addon
+
+MissileTower:
+	Inherits: MissileTower.Constructing
+	Inherits@4: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	-SelfConstructing:
+	Tooltip:
+		Name: Missile Tower
+	Turreted:
+		TurnSpeed: 16
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: GatLaser
+		LocalOffset: 512,0,112
+	-WithIdleOverlay@LAYER1:
+	-WithIdleOverlay@LAYER2:
+	-WithIdleOverlay@LAYER3:
+
+# Terrorist Flamer Tower
+TerroristFlamerTower.Constructing:
+	Inherits: ^Defense.Constructing
+	RenderSprites:
+		Image: nnflh1l0
+	Tooltip:
+		Name: Terrorist Flamer Tower
+	-Buildable:
+	SelfConstructing:
+		Steps: 20
+		Becomes: TerroristFlamerTower
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	-WithIdleOverlay@LAYER1:
+	-WithIdleOverlay@LAYER2:
+	-WithIdleOverlay@LAYER3:
+	MapEditorData:
+		Categories: Addon
+
+TerroristFlamerTower:
+	Inherits: TerroristFlamerTower.Constructing
+	Inherits@4: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	-SelfConstructing:
+	Tooltip:
+		Name: Terrorist Flamer Tower
+	Turreted:
+		TurnSpeed: 16
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: GatLaser
+		LocalOffset: 512,0,112
+	-WithIdleOverlay@LAYER1:
+	-WithIdleOverlay@LAYER2:
+	-WithIdleOverlay@LAYER3:
+
+# Terrorist Guard Tower
+TerroristGuardTower.Constructing:
+	Inherits: ^Defense.Constructing
+	RenderSprites:
+		Image: ntgth1l0
+	Tooltip:
+		Name: Terrorist Guard Tower
+	-Buildable:
+	SelfConstructing:
+		Steps: 20
+		Becomes: TerroristGuardTower
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	-WithIdleOverlay@LAYER1:
+	-WithIdleOverlay@LAYER2:
+	-WithIdleOverlay@LAYER3:
+	MapEditorData:
+		Categories: Addon
+
+TerroristGuardTower:
+	Inherits: TerroristGuardTower.Constructing
+	Inherits@4: ^Defense
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	-SelfConstructing:
+	Tooltip:
+		Name: Terrorist Guard Tower
+	Turreted:
+		TurnSpeed: 16
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: GatLaser
+		LocalOffset: 512,0,112
+	-WithIdleOverlay@LAYER1:
+	-WithIdleOverlay@LAYER2:
+	-WithIdleOverlay@LAYER3:
+
+# Terrorist WaterUnit Construction Facility
+TerroristWaterUnit.Constructing:
+	Inherits: ^SelfConstructingBuilding
+	RenderSprites:
+		Image: ntwyf1l0
+	Tooltip:
+		Name: Terrorist WaterUnit Construction Facility
+	-Buildable:
+	SelfConstructing:
+		Steps: 20
+		Becomes: TerroristWaterUnit
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	MapEditorData:
+		Categories: SelfConstructing
+	Inherits@shape: ^2x2Shape
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 48,48,0,0
+		DecorationBounds: 48,48,0,0
+	RevealsShroud:
+		Range: 9c0
+	#WithIdleOverlay@LAYER1:
+	#	Palette: terrain
+	#	Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		Sequence: top-building
+	#WithIdleOverlay@LAYER3:
+	#	Palette: shadow
+	#	Sequence: shadow-building
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	MapEditorData:
+		Categories: Addon
+
+TerroristWaterUnit:
+	Inherits: TerroristWaterUnit.Constructing
+	-SelfConstructing:
+	Tooltip:
+		Name: Terrorist WaterUnit Construction Facility
+	Power:
+		Amount: -100
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+
+# Terrorist Construction Facility
+TerroristConstructionFacility.Constructing:
+	Inherits: ^SelfConstructingBuilding
+	RenderSprites:
+		Image: ntcyf1l0
+	Tooltip:
+		Name: Terrorist Construction Facility
+	-Buildable:
+	SelfConstructing:
+		Steps: 20
+		Becomes: TerroristConstructionFacility
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	MapEditorData:
+		Categories: SelfConstructing
+	Inherits@shape: ^2x2Shape
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 48,48,0,0
+		DecorationBounds: 48,48,0,0
+	RevealsShroud:
+		Range: 9c0
+	#WithIdleOverlay@LAYER1:
+	#	Palette: terrain
+	#	Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		Sequence: top-building
+	#WithIdleOverlay@LAYER3:
+	#	Palette: shadow
+	#	Sequence: shadow-building
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	MapEditorData:
+		Categories: Addon
+
+# Terrorist Construction Facility
+TerroristConstructionFacility:
+	Inherits: TerroristConstructionFacility.Constructing
+	-SelfConstructing:
+	Tooltip:
+		Name: Terrorist Construction Facility
+
+# Terrorist Field Hospital
+TerroristFieldHospital.Constructing:
+	Inherits: ^SelfConstructingBuilding
+	RenderSprites:
+		Image: ntptf1l0
+	Tooltip:
+		Name: Terrorist Field Hospital
+	-Buildable:
+	SelfConstructing:
+		Steps: 20
+		Becomes: TerroristFieldHospital
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	MapEditorData:
+		Categories: SelfConstructing
+	Inherits@shape: ^2x2Shape
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 48,48,0,0
+		DecorationBounds: 48,48,0,0
+	RevealsShroud:
+		Range: 9c0
+	#WithIdleOverlay@LAYER1:
+	#	Palette: terrain
+	#	Sequence: underlay-building
+	#WithIdleOverlay@LAYER2:
+	#	Sequence: top-building
+	#WithIdleOverlay@LAYER3:
+	#	Palette: shadow
+	#	Sequence: shadow-building
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	MapEditorData:
+		Categories: Addon
+
+TerroristFieldHospital:
+	Inherits: TerroristFieldHospital.Constructing
+	-SelfConstructing:
+	Tooltip:
+		Name: Terrorist Field Hospital
+
+# Terrorist Repair Bay
+TerroristRepairBay.Constructing:
+	Inherits: ^SelfConstructingBuilding
+	RenderSprites:
+		Image: ntrrf1l0
+	Tooltip:
+		Name: Terrorist Repair Bay
+	-Buildable:
+	SelfConstructing:
+		Steps: 20
+		Becomes: TerroristRepairBay
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	MapEditorData:
+		Categories: SelfConstructing
+	Inherits@shape: ^2x2Shape
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 48,48,0,0
+		DecorationBounds: 48,48,0,0
+	RevealsShroud:
+		Range: 9c0
+	#WithIdleOverlay@LAYER1:
+	#	Palette: terrain
+	#	Sequence: underlay-building
+	#WithIdleOverlay@LAYER2:
+	#	Sequence: top-building
+	#WithIdleOverlay@LAYER3:
+	#	Palette: shadow
+	#	Sequence: shadow-building
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	MapEditorData:
+		Categories: Addon
+
+TerroristRepairBay:
+	Inherits: TerroristRepairBay.Constructing
+	-SelfConstructing:
+	Tooltip:
+		Name: Terrorist Repair Bay
+
+# Terrorist Rearming Deck
+TerroristRearmingDeck.Constructing:
+	Inherits: ^SelfConstructingBuilding
+	RenderSprites:
+		Image: ntrrf2l0
+	Tooltip:
+		Name: Terrorist Rearming Deck
+	-Buildable:
+	SelfConstructing:
+		Steps: 20
+		Becomes: TerroristRearmingDeck
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	MapEditorData:
+		Categories: SelfConstructing
+	Inherits@shape: ^2x2Shape
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 48,48,0,0
+		DecorationBounds: 48,48,0,0
+	RevealsShroud:
+		Range: 9c0
+	#WithIdleOverlay@LAYER1:
+	#	Palette: terrain
+	#	Sequence: underlay-building
+	#WithIdleOverlay@LAYER2:
+	#	Sequence: top-building
+	#WithIdleOverlay@LAYER3:
+	#	Palette: shadow
+	#	Sequence: shadow-building
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	MapEditorData:
+		Categories: Addon
+
+TerroristRearmingDeck:
+	Inherits: TerroristRearmingDeck.Constructing
+	-SelfConstructing:
+	Tooltip:
+		Name: Terrorist Rearming Deck

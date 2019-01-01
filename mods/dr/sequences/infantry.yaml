@@ -6,12 +6,12 @@ ufradst0:
 		Start: 0
 		Facings: 16
 		Length: 6
-		Tick: 40
+		Tick: 25
 	shoot:
 		Start: 96
 		Facings: 16
 		Length: 2
-		Tick: 100
+		Tick: 25
 	idle:
 		Start: 128
 		Facings: 16
@@ -29,12 +29,12 @@ ufmrcst0:
 		Start: 0
 		Facings: 16
 		Length: 6
-		Tick: 40
+		Tick: 25
 	shoot:
 		Start: 96
 		Facings: 16
 		Length: 2
-		Tick: 100
+		Tick: 25
 	idle:
 		Start: 128
 		Facings: 16

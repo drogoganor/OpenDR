@@ -94,7 +94,7 @@ Terrain:
 	TerrainType@Water:
 		Type: Water
 		TargetTypes: Water
-		Color: FFAC73
+		Color: F98B63
 		RestrictPlayerColor: true
 	TerrainType@Tree:
 		Type: Tree

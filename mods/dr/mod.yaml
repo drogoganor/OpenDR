@@ -11,11 +11,11 @@ Packages:
 	./mods/common: common
 	~BARREN/BARREN.TIL
 	~BARREN/BARREN.PAL
-	~BARREN/SPRITES.FTG: barren
+	BARREN/SPRITES.FTG: barren
 	~BARREN/spriteEx.ftg: barrenEx
 	~JUNGLE/JUNGLE.TIL
 	~JUNGLE/JUNGLE.PAL
-	~JUNGLE/SPRITES.FTG: jungle
+	JUNGLE/SPRITES.FTG: jungle
 	~JUNGLE/spriteEx.ftg: jungleEx
 	~SNOW/SNOW.TIL
 	~SNOW/SNOW.PAL
@@ -28,12 +28,16 @@ Packages:
 	~aust/AUST.FTG
 	~volcanic/VOLCANIC.FTG
 	~auralien/AURALIEN.FTG
-	~SPRITES.FTG: base
+	SPRITES.FTG: base
 	~spriteEx.ftg
-	~SOUNDS.FTG
+	SOUNDS.FTG
 	~soundsEx.ftg
 	~mouse.crs
 	~music.zip
+	addon/aurunits/aursound.ftg
+	addon/aurunits/aursprite.ftg
+	addon/terrorist/terrsound.ftg
+	addon/terrorist/terrsprite.ftg
 	dr|palettes
 	dr|bits
 	dr|uibits
@@ -57,6 +61,8 @@ Rules:
 	dr|rules/aircraft.yaml
 	dr|rules/civilians.yaml
 	dr|rules/decorations.yaml
+	dr|rules/structures-addon.yaml
+	dr|rules/units-addon.yaml
 #	dr|rules/structures-ex.yaml
 #	dr|rules/aircraft-ex.yaml
 #	dr|rules/vehicles-ex.yaml
@@ -72,6 +78,8 @@ Sequences:
 	dr|sequences/civilians.yaml
 	dr|sequences/effects.yaml
 	dr|sequences/decorations.yaml
+	dr|sequences/structures-addon.yaml
+	dr|sequences/units-addon.yaml
 #	dr|sequences/structures-ex.yaml
 #	dr|sequences/vehicles-ex.yaml
 #	dr|sequences/infantry-ex.yaml
@@ -148,6 +156,7 @@ Weapons:
 	
 Voices:
 	dr|audio/voices.yaml
+	dr|audio/voices-addon.yaml
 
 Notifications:
 	dr|audio/notifications.yaml
@@ -266,9 +275,10 @@ ModContent:
 		gog: Dark Reign + Expansion (GOG release)
 			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/BARREN/BARREN.PAL, ^Content/dr/JUNGLE/JUNGLE.PAL, ^Content/dr/SNOW/SNOW.PAL, ^Content/dr/BARREN/BARREN.TIL, ^Content/dr/JUNGLE/JUNGLE.TIL, ^Content/dr/SNOW/SNOW.TIL, ^Content/dr/BARREN/SPRITES.FTG, ^Content/dr/JUNGLE/SPRITES.FTG, ^Content/dr/SNOW/SPRITES.FTG, ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg, ^Content/dr/ALIEN/ALIEN.TIL, ^Content/dr/ALIEN/ALIEN.PAL, ^Content/dr/ALIEN/SPRITEEX.FTG, ^Content/dr/BARREN/spriteEx.ftg, ^Content/dr/JUNGLE/spriteEx.ftg, ^Content/dr/SNOW/spriteEx.ftg, ^Content/dr/mouse.crs
 			Sources: drgog
-		tilesets: Extra Tilesets
-			TestFiles: ^Content/dr/aust/AUST.FTG, ^Content/dr/volcanic/VOLCANIC.FTG, ^Content/dr/auralien/AURALIEN.FTG, ^Content/dr/asteroid/ASTEROID.FTG
-			Download: drtilesets
+		auran: Auran Extras
+			TestFiles: ^Content/dr/aust/AUST.FTG, ^Content/dr/volcanic/VOLCANIC.FTG, ^Content/dr/auralien/AURALIEN.FTG, ^Content/dr/asteroid/ASTEROID.FTG, ^Content/dr/addon/aurunits/aursound.ftg, ^Content/dr/addon/aurunits/aursprite.ftg, ^Content/dr/addon/terrorist/terrsound.ftg, ^Content/dr/addon/terrorist/terrsprite.ftg
+			Download: drauranext
+			Required: true
 		music: Music
 			TestFiles: ^Content/dr/music.zip
 			Download: drmusic

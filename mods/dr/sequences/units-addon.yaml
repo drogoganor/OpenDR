@@ -1,0 +1,1002 @@
+
+
+# Gore Hunter
+unhvst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 40
+	shoot:
+		Start: 54
+		Facings: 6
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 48
+		Facings: 6
+		Length: 1
+		Tick: 60
+	stand:
+		Start: 48
+		Facings: 6
+	icon: unhvmn0
+
+
+
+# Shock Trooper
+unskst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 40
+	shoot:
+		Start: 54
+		Facings: 6
+		Length: 2
+		Tick: 100
+	idle:
+		Start: 48
+		Facings: 6
+		Length: 1
+		Tick: 60
+	stand:
+		Start: 48
+		Facings: 6
+	icon: unskmn0
+
+
+# Santa
+unsanst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 7
+		Tick: 40
+	shoot:
+		Start: 128
+		Facings: 16
+		Length: 6
+		Tick: 50
+	idle:
+		Start: 224
+		Facings: 16
+		Length: 3
+		Tick: 60
+	stand:
+		Start: 112
+		Facings: 16
+	icon: unsanmn0
+
+# Gore Beast
+unmonst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 40
+	shoot:
+		Start: 48
+		Facings: 8
+		Length: 6
+		Tick: 50
+	idle:
+		Start: 96
+		Facings: 8
+		Length: 3
+		Tick: 60
+	stand:
+		Start: 120
+		Facings: 8
+	icon: unmonmn0
+
+# Gun Walker
+ungwtst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 7
+		Tick: 40
+	shoot:
+		Start: 112
+		Facings: 16
+	stand:
+		Start: 112
+		Facings: 16
+	idle:
+		Start: 112
+		Facings: 16
+	turret: ungwtst1
+		Start: 0
+		Facings: 16
+	turret-fire: ungwtst1 # Unused
+		Start: 16
+		Facings: 16
+		Length: 2
+		Tick: 40
+	icon: ungwtmn0
+	
+	
+# Scout Alt
+unwlkac1:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 16
+		Facings: 16
+	stand:
+		Start: 16
+		Facings: 16
+	idle:
+		Start: 16
+		Facings: 16
+	descend: # Collapses wings, unused
+		Start: 32
+		Facings: 16
+		Length: 3
+		Tick: 40
+	turret: unwlkac0
+		Start: 0
+		Facings: 16
+	turret-fire: unwlkac0 # Unused
+		Start: 16
+		Facings: 16
+		Length: 2
+		Tick: 40
+	icon: unwlkmn0
+
+# Walker Scout
+unwlkst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 40
+	shoot:
+		Start: 56
+		Facings: 8
+		Length: 3
+		Tick: 40
+	stand:
+		Start: 48
+		Facings: 8
+	idle:
+		Start: 48
+		Facings: 8
+	turret: unwlkac0
+		Start: 0
+		Facings: 16
+	turret-fire: unwlkac0 # Unused
+		Start: 16
+		Facings: 16
+		Length: 2
+		Tick: 40
+	icon: unwlkmn0
+
+# SuicideBot
+unminst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 40
+	shoot:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 40
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 40
+	icon: unminmn0
+
+# Tick Tank Alt
+untikac1:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 40
+	shoot:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 40
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 40
+	turret: untikac0
+		Start: 0
+		Facings: 16
+	turret-fire: untikac0 # Unused
+		Start: 16
+		Facings: 16
+		Length: 3
+		Tick: 40
+	icon: ufspbmn0
+
+# Tick Tank
+untikst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 40
+	shoot:
+		Start: 48
+		Facings: 8
+	stand:
+		Start: 48
+		Facings: 8
+	idle:
+		Start: 48
+		Facings: 8
+	turret: unvorac0
+		Start: 0
+		Facings: 16
+	turret-fire: unvorac0 # Unused
+		Start: 16
+		Facings: 16
+		Length: 2
+		Tick: 40
+	icon: untikmn0
+
+# Flaming Death
+unfdtst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 40
+	shoot:
+		Start: 48
+		Facings: 8
+	stand:
+		Start: 48
+		Facings: 8
+	idle:
+		Start: 48
+		Facings: 8
+	turret: unfdtac0
+		Start: 0
+		Facings: 16
+	turret-fire: unfdtac0 # Unused
+		Start: 16
+		Facings: 16
+		Length: 3
+		Tick: 40
+	icon: unfdmmn0
+	
+# Hover Assault Tank
+unhovst0:
+	Inherits: humansplat
+	run:
+		Start: 16
+		Facings: 16
+		Length: 3
+		Tick: 40
+	shoot:
+		Start: 16
+		Facings: 16
+		Length: 3
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 16
+	idle:
+		Start: 0
+		Facings: 16
+	turret: unhovac0
+		Start: 0
+		Facings: 16
+	turret-fire: unhovac0 # Unused
+		Start: 16
+		Facings: 16
+		Length: 2
+		Tick: 40
+	icon: unhovmn0
+
+# Armoured Guard Walker
+unmkwst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 8
+		Tick: 40
+	shoot:
+		Start: 128
+		Facings: 16
+	stand:
+		Start: 128
+		Facings: 16
+	idle:
+		Start: 128
+		Facings: 16
+	turret: unmkwst1
+		Start: 0
+		Facings: 16
+	turret-fire: unmkwst1 # Unused
+		Start: 0
+		Facings: 16
+		Length: 2
+		Tick: 40
+	icon: unmkwmn0
+
+# AT-AT Walker
+unfrwst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 8
+		Tick: 40
+	shoot:
+		Start: 128
+		Facings: 16
+	stand:
+		Start: 128
+		Facings: 16
+	idle:
+		Start: 128
+		Facings: 16
+	turret: unfrwst1
+		Start: 0
+		Facings: 16
+	turret-fire: unfrwst1 # Unused
+		Start: 0
+		Facings: 16
+		Length: 2
+		Tick: 40
+	icon: unfrwmn0
+
+# Sonic Thumper Alternate
+utthdst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 40
+	shoot:
+		Start: 48
+		Facings: 8
+		Length: 3
+		Tick: 40
+	stand:
+		Start: 72
+		Facings: 8
+	idle:
+		Start: 72
+		Facings: 8
+	melee-attack: # Unused
+		Start: 80
+		Facings: 8
+		Length: 3
+		Tick: 40
+	icon: utthumn0
+
+# Sonic Thumper
+utthust0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 40
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 3
+		Tick: 40
+	stand:
+		Start: 84
+		Facings: 8
+	idle:
+		Start: 84
+		Facings: 8
+	melee-attack: # Unused
+		Start: 92
+		Facings: 8
+		Length: 3
+		Tick: 40
+	icon: utthumn0
+
+# Alternate Vortex Tank
+unvorst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 40
+	shoot:
+		Start: 24
+		Facings: 8
+	stand:
+		Start: 24
+		Facings: 8
+	idle:
+		Start: 24
+		Facings: 8
+	turret: unvorac1
+		Start: 0
+		Facings: 16
+	turret-fire: unvorac1 # Unused
+		Start: 16
+		Facings: 16
+		Length: 2
+		Tick: 40
+	turret-idle: unvorac1 # Unused
+		Start: 48
+		Facings: 16
+		Length: 2
+		Tick: 40
+	icon: unvormn0
+
+# TERRORIST
+
+# Construction Crawler
+utconst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	shoot: # Unused
+		Start: 48
+		Facings: 16
+		Length: 8
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 16
+	idle:
+		Start: 0
+		Facings: 16
+	icon: utconmn0
+
+# Construction Biot
+utiotst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 40
+	shoot: # Unused
+		Start: 64
+		Facings: 8
+		Length: 6
+		Tick: 40
+	shoot2: # Unused
+		Start: 112
+		Facings: 8
+		Length: 4
+		Tick: 40
+	stand:
+		Start: 144
+		Facings: 8
+	idle:
+		Start: 144
+		Facings: 8
+	icon: utiotmn0
+
+#  Terrorist Water Freighter
+
+utminst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	shoot: # Unused
+		Start: 48
+		Facings: 16
+		Length: 1
+		Tick: 40
+	shoot2: # Unused
+		Start: 64
+		Facings: 16
+		Length: 4
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 16
+	idle:
+		Start: 0
+		Facings: 16
+	icon: utminmn0
+
+# Rasta Terrorist Soldier Veteran Level 5
+
+utravst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 40
+	shoot: # Unused
+		Start: 64
+		Facings: 8
+		Length: 4
+		Tick: 40
+	shoot2: # Unused
+		Start: 96
+		Facings: 8
+		Length: 7
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 8
+	idle:
+		Start: 0
+		Facings: 8
+	icon: utravmn0
+
+# Rasta Terrorist Soldier
+
+utrasst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 40
+	shoot: # Unused
+		Start: 64
+		Facings: 8
+		Length: 9
+		Tick: 40
+	shoot2: # Unused
+		Start: 136
+		Facings: 8
+		Length: 7
+		Tick: 40
+	stand:
+		Start: 192
+		Facings: 8
+	idle:
+		Start: 192
+		Facings: 8
+	icon: utrasmn0
+
+# Alternate Lardridden Terrorist Soldier
+
+utfadst0:
+	Inherits: humansplat
+	run:
+		Start: 16
+		Facings: 8
+		Length: 3
+		Tick: 40
+	shoot: # Unused
+		Start: 40
+		Facings: 8
+		Length: 3
+		Tick: 40
+	shoot2: # Unused
+		Start: 64
+		Facings: 8
+		Length: 2
+		Tick: 40
+	shoot3: # Unused
+		Start: 80
+		Facings: 8
+		Length: 5
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 2
+		Tick: 40
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 2
+		Tick: 40
+	icon: utfadmn0
+
+# Lardridden Terrorist Soldier Veteran
+
+utfatst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 40
+	shoot: # Unused
+		Start: 48
+		Facings: 8
+		Length: 4
+		Tick: 40
+	shoot2: # Unused
+		Start: 80
+		Facings: 8
+		Length: 5
+		Tick: 40
+	shoot3: # Unused
+		Start: 128
+		Facings: 8
+		Length: 5
+		Tick: 40
+	stand:
+		Start: 120
+		Facings: 8
+	idle:
+		Start: 120
+		Facings: 8
+	icon: utfatmn0
+
+# Terrorist SkateyScout
+utagsst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 8
+		Tick: 40
+	shoot: # Unused
+		Start: 128
+		Facings: 16
+		Length: 1
+		Tick: 40
+	stand:
+		Start: 128
+		Facings: 16
+	idle:
+		Start: 128
+		Facings: 16
+	icon: utagsmn0
+
+# Stealth Chopper
+utspnst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	shoot: # Unused
+		Start: 48
+		Facings: 16
+		Length: 3
+		Tick: 40
+	stand:
+		Start: 96
+		Facings: 16
+		Length: 3
+		Tick: 40
+	idle:
+		Start: 96
+		Facings: 16
+		Length: 3
+		Tick: 40
+	icon: utspnmn0
+
+# Terrorist Transport
+uttgtst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	shoot: # Unused
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	icon: uttgtmn0
+
+# Terrorist : Air Rifter Alternate
+utardst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 5
+		Tick: 40
+	shoot:
+		Start: 80
+		Facings: 16
+		Length: 8
+		Tick: 40
+	transform:
+		Start: 208
+		Facings: 16
+		Length: 5
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 5
+		Tick: 40
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 5
+		Tick: 40
+	icon: utardmn0
+
+# Terrorist : Air Rifter
+utarfst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 2
+		Tick: 40
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 2
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 2
+		Tick: 40
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 2
+		Tick: 40
+	icon: utarfmn0
+
+# Terrorist Missile Tank
+utmttst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	shoot:
+		Start: 48
+		Facings: 16
+		Length: 4
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	icon: utmttmn0
+
+# Terrorist Artillery
+uttiist0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	shoot:
+		Start: 48
+		Facings: 16
+		Length: 6
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	icon: uttiimn0
+
+# Terrorist Airborne Troop Carrier
+utattst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 40
+	shoot:
+		Start: 64
+		Facings: 16
+		Length: 4
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 40
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 40
+	icon: utattmn0
+
+# Terrorist Water-borne Troop Carrier
+uttwtst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	shoot:
+		Start: 48
+		Facings: 16
+		Length: 2
+		Tick: 40
+	stand:
+		Start: 48
+		Facings: 16
+		Length: 2
+		Tick: 40
+	idle:
+		Start: 48
+		Facings: 16
+		Length: 2
+		Tick: 40
+	icon: uttwtmn0
+
+# Terrorist WAA
+unwaast0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	shoot:
+		Start: 48
+		Facings: 16
+		Length: 4
+		Tick: 40
+	stand:
+		Start: 112
+		Facings: 16
+	idle:
+		Start: 112
+		Facings: 16
+	icon: unwaamn0
+
+# Terrorist Water Tank
+unwtkst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	shoot:
+		Start: 48
+		Facings: 16
+		Length: 3
+		Tick: 40
+	stand:
+		Start: 48
+		Facings: 16
+		Length: 3
+		Tick: 40
+	idle:
+		Start: 48
+		Facings: 16
+		Length: 3
+		Tick: 40
+	icon: unwtkmn0
+
+# Terrorist WaterShock
+unwswst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	shoot:
+		Start: 48
+		Facings: 16
+		Length: 4
+		Tick: 40
+	stand:
+		Start: 112
+		Facings: 16
+		Length: 4
+		Tick: 40
+	idle:
+		Start: 112
+		Facings: 16
+		Length: 4
+		Tick: 40
+	icon: unwswmn0
+
+# Terrorist Breaker Boys
+utboyst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 7
+		Tick: 40
+	shoot:
+		Start: 112
+		Facings: 16
+	stand:
+		Start: 112
+		Facings: 16
+	idle:
+		Start: 112
+		Facings: 16
+	icon: utboymn0
+
+# Terrorist Hospital Unit
+btpthst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 2
+		Tick: 40
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 2
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 2
+		Tick: 40
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 2
+		Tick: 40
+	icon: bc000000
+
