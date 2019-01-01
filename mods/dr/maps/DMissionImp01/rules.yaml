@@ -10,6 +10,8 @@ Player:
 	EnemyWatcher:
 	PlayerResources:
 		DefaultCash: 10000
+		CashTickUpNotification: CashTickUp
+		CashTickDownNotification: CashTickDown
 
 ^ConstructedBuildingCommon:
 	AnnounceOnSeen:

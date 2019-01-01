@@ -564,7 +564,7 @@ PlasmaTank:
 	Tooltip:
 		Name: Plasma Tank
 	Buildable:
-		Description: Backbone of the Imperium war effort, the Plasma Tank\nis tough and packs a formidable plasma cannon. The\nImperium overruns the enemy with endless waves of\nthese ruinous machines. 
+		Description: Backbone of the Imperium war effort, the Plasma Tank\nis tough and packs a formidable plasma cannon. The\nImperium overruns the enemy with endless waves of\nthese ruinous machines.
 		Prerequisites: ~vehicles.imperium, hq
 		BuildPaletteOrder: 130
 		BuildDuration: 21
@@ -603,7 +603,7 @@ Amper:
 	Tooltip:
 		Name: Amper
 	Buildable:
-		Description: The Imperium's version of first aid, this lunatic\ncyborg fires darts into dying infantry units that\nboost the target’s health to full, but leave the\nunit poisoned so that its health will steadily\ndecrease until the unit dies. The Amper can also be\nused as an offensive weapon, bringing slow death\nto enemy infantry. 
+		Description: The Imperium's version of first aid, this lunatic\ncyborg fires darts into dying infantry units that\nboost the target’s health to full, but leave the\nunit poisoned so that its health will steadily\ndecrease until the unit dies. The Amper can also be\nused as an offensive weapon, bringing slow death\nto enemy infantry.
 		Prerequisites: ~vehicles.imperium, hq, barracks, hospital
 		BuildPaletteOrder: 140
 		BuildDuration: 15
@@ -660,7 +660,7 @@ Shredder:
 	Tooltip:
 		Name: Shredder
 	Buildable:
-		Description: A huge, hovering nightmare, the Shredder tears through\ninfantry like a runaway saw. Although it has no ranged\nattack, it is fast, heavily armoured, and inflicts\nsevere damage on any infantry units foolish enough\nto get near it. 
+		Description: A huge, hovering nightmare, the Shredder tears through\ninfantry like a runaway saw. Although it has no ranged\nattack, it is fast, heavily armoured, and inflicts\nsevere damage on any infantry units foolish enough\nto get near it.
 		Prerequisites: ~vehicles.imperium, hq
 		BuildPaletteOrder: 150
 		BuildDuration: 21
@@ -688,7 +688,7 @@ HostageTaker:
 	Tooltip:
 		Name: Hostage Taker
 	Buildable:
-		Description: This diabolical Imperium vehicle snatches infantry\nunits, lobotomises them and converts them into Suicide\nZombies. Shortly after the infantry unit is run over\nand captured, it is released, now under the player’s\ncontrol and with a high-powered explosive strapped\nto its back. 
+		Description: This diabolical Imperium vehicle snatches infantry\nunits, lobotomises them and converts them into Suicide\nZombies. Shortly after the infantry unit is run over\nand captured, it is released, now under the player’s\ncontrol and with a high-powered explosive strapped\nto its back.
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
 		BuildDuration: 18

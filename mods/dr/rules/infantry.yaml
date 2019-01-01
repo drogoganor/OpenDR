@@ -6,7 +6,7 @@ Raider:
 	Tooltip:
 		Name: Raider
 	Buildable:
-		Description: Stalwart of the Freedom Guard cause, the Raider is\narmed with a laser rifle. Once the Phasing Facility\nis constructed, the Raider gains the ability to\nphase underground. 
+		Description: Stalwart of the Freedom Guard cause, the Raider is\narmed with a laser rifle. Once the Phasing Facility\nis constructed, the Raider gains the ability to\nphase underground.
 		Prerequisites: ~infantry.human
 		BuildPaletteOrder: 10
 		BuildDuration: 6
@@ -373,6 +373,7 @@ Infiltrator:
 		ValidStances: Enemy
 		Types: SpyInfiltrate
 		PlayerExperience: 50
+		Notification: BuildingInfiltrated
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire

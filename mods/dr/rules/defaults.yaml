@@ -73,6 +73,12 @@
 	HitShape:
 		Type: Circle
 			Radius: 256
+	GrantConditionOnDamageState@DAMAGED:
+		Condition: damaged
+		ValidDamageStates: Light, Medium, Heavy, Critical
+	Targetable@HEAL:
+		RequiresCondition: damaged
+		TargetTypes: Heal
 	ExternalCondition@AMPERPOISON:
 		Condition: amperpoison
 	SelfHealing:
@@ -205,6 +211,12 @@
 		Offset: 128, -512, 0
 		MinimumDamageState: Heavy
 		MaximumDamageState: Dead
+	GrantConditionOnDamageState@DAMAGED:
+		Condition: damaged
+		ValidDamageStates: Light, Medium, Heavy, Critical
+	Targetable@REPAIR:
+		RequiresCondition: damaged
+		TargetTypes: Repair
 
 ^DrHoverAnimatedVehicle:
 	Inherits: ^DrAnimatedVehicle
@@ -276,6 +288,7 @@
 		Weapon: GenericExplode
 		EmptyWeapon: GenericExplode
 	Demolishable:
+		Condition: being-demolished
 	Armor:
 		Type: BuildingArmour
 	CommandBarBlacklist:
@@ -320,6 +333,7 @@
 	Tooltip:
 		GenericName: Structure
 	Demolishable:
+		Condition: being-demolished
 	MapEditorData:
 		Categories: SelfConstructing
 	CommandBarBlacklist:
@@ -444,6 +458,7 @@
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 		BuildDurationModifier: 2486 # DR build rate
+		LowPowerModifier: 300
 	ProductionBar@Economy:
 		ProductionType: Economy
 	ProductionBar@Upgrade:
@@ -530,7 +545,9 @@
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 		BuildDurationModifier: 2486 # DR build rate
+		LowPowerModifier: 300
 	ProductionBar:
+		ProductionType: Infantry
 	ProvidesPrerequisite@barracks:
 		Prerequisite: barracks
 	ProvidesPrerequisite@human:
@@ -621,6 +638,7 @@
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
 		BuildDurationModifier: 2486 # DR build rate
+		LowPowerModifier: 300
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@vehicles:
 		Prerequisite: vehicles
@@ -643,6 +661,7 @@
 		Factions: shadowhand, togran
 		Prerequisite: vehicles.shadowhand
 	ProductionBar:
+		ProductionType: Vehicle
 	RallyPoint:
 		Offset: 0,6
 	GrantConditionOnPrerequisite:
@@ -758,6 +777,7 @@
 			800: rank-veteran
 			1600: rank-veteran
 			2400: rank-veteran
+		LevelUpImage: crate-effects
 	GrantCondition@RANK-ELITE:
 		RequiresCondition: rank-veteran >= 5
 		Condition: rank-elite

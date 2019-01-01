@@ -229,7 +229,7 @@ ImperiumMedicalResearch:
 		Bounds: 96,72,0,0
 		DecorationBounds: 96,72,0,0
 	Tooltip:
-		Name: Imperium Medical Research 
+		Name: Imperium Medical Research
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -259,7 +259,7 @@ ImperiumWaterResearch:
 		Bounds: 96,72,0,0
 		DecorationBounds: 96,72,0,0
 	Tooltip:
-		Name: Imperium Water Research 
+		Name: Imperium Water Research
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -289,7 +289,7 @@ ImperiumHoverResearch:
 		Bounds: 96,72,0,0
 		DecorationBounds: 96,72,0,0
 	Tooltip:
-		Name: Imperium Hover Research 
+		Name: Imperium Hover Research
 	Health:
 		HP: 600
 	RevealsShroud:

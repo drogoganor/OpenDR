@@ -19,13 +19,11 @@
 		Offset: 111, 64, 0
 		ZOffset: -129
 	Aircraft:
-		RearmBuildings: rearmingdeck.human, rearmingdeck.cyborg
-		RepairBuildings: repair.human, repair.cyborg
 		AirborneCondition: airborne
 		InitialFacing: 224 # helicopter
 		TurnSpeed: 15
 		Speed: 200
-		LandableTerrainTypes: 
+		LandableTerrainTypes:
 		LandWhenIdle: false
 		AltitudeVelocity: 0c58
 		CanHover: True
@@ -62,6 +60,10 @@
 		Weapon: GenericExplode
 		EmptyWeapon: GenericExplode
 		RequiresCondition: !airborne
+	Repairable:
+		RepairBuildings: repair.human, repair.cyborg
+	Rearmable:
+		RearmActors: rearmingdeck.human, rearmingdeck.cyborg
 
 SkyBike:
 	Inherits: ^DrPlane
@@ -70,7 +72,7 @@ SkyBike:
 	Tooltip:
 		Name: Sky Bike
 	Buildable:
-		Description: Using a modified Spider Bike chassis, the Freedom\nGuard were able to produce cheap, fast aerial units\nwhich could attack enemy ground troops and other\nflyers. Although quicker than the Imperium Cyclone,\nthe Sky Bike is not as heavily armoured and is\noutgunned in even combat. The speed of the Sky Bike,\nhowever, allows it to dictate the circumstance of\nconflict. This unit fires high-velocity mini-missiles\nand, like the Outrider, must re-arm at the Re-Arming\nDeck. 
+		Description: Using a modified Spider Bike chassis, the Freedom\nGuard were able to produce cheap, fast aerial units\nwhich could attack enemy ground troops and other\nflyers. Although quicker than the Imperium Cyclone,\nthe Sky Bike is not as heavily armoured and is\noutgunned in even combat. The speed of the Sky Bike,\nhowever, allows it to dictate the circumstance of\nconflict. This unit fires high-velocity mini-missiles\nand, like the Outrider, must re-arm at the Re-Arming\nDeck.
 		Prerequisites: ~vehicles.human, air, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
 		BuildPaletteOrder: 120
 		BuildDuration: 24
@@ -95,7 +97,7 @@ SkyBike:
 		ReloadDelay: 10 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 336
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20
 
 Outrider:
@@ -130,7 +132,7 @@ Outrider:
 		ReloadDelay: 20 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 288
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20
 
 ReconDrone:
@@ -156,7 +158,7 @@ ReconDrone:
 		Type: FlyingArmour
 	Aircraft:
 		Speed: 192
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20
 
 Cyclone:
@@ -166,7 +168,7 @@ Cyclone:
 	Tooltip:
 		Name: Cyclone
 	Buildable:
-		Description: The Cyclone embodies the core of the Imperium aerial\nforce. The unit is fairly rugged and can engage both\nair and ground units. However, the Cyclone’s neutron\ncannon has a limited energy source and must recharge\nat the Re-Arming Deck. 
+		Description: The Cyclone embodies the core of the Imperium aerial\nforce. The unit is fairly rugged and can engage both\nair and ground units. However, the Cyclone’s neutron\ncannon has a limited energy source and must recharge\nat the Re-Arming Deck.
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
 		BuildDuration: 45
@@ -191,7 +193,7 @@ Cyclone:
 		ReloadDelay: 40 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 288
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20
 
 SkyFortress:
@@ -226,5 +228,5 @@ SkyFortress:
 		ReloadDelay: 200 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 120
-	AttackHeli:
+	AttackAircraft:
 		FacingTolerance: 20

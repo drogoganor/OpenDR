@@ -256,6 +256,7 @@ Player:
 		ReadyAudio: ConstructionComplete
 		BlockedAudio: Upgrading
 		BuildDurationModifier: 2486 # DR build rate
+		LowPowerModifier: 300
 	BuilderQueue@Building:
 		Type: Building
 		Group: Building
@@ -268,6 +269,7 @@ Player:
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		BuildDurationModifier: 2486 # DR build rate
+		LowPowerModifier: 300
 	ClassicProductionQueue@AIBuilding:
 		Type: AIBuilding
 		Group: AIBuilding
@@ -275,6 +277,7 @@ Player:
 		ReadyAudio: ConstructionComplete
 		BlockedAudio: Building
 		BuildDurationModifier: 1
+		LowPowerModifier: 300
 	Shroud:
 		FogCheckboxDisplayOrder: 3
 		ExploredMapCheckboxEnabled: True
