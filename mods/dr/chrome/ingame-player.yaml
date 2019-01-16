@@ -288,7 +288,7 @@ Container@PLAYER_WIDGETS:
 				Container@TOP_BUTTONS:
 					Logic: MenuButtonsChromeLogic
 					X: 9
-					Y: 7
+					Y: 9
 					Children:
 						Button@BEACON_BUTTON:
 							Logic: BeaconOrderButtonLogic, AddFactionSuffixLogic
@@ -440,7 +440,7 @@ Container@PLAYER_WIDGETS:
 							Y: 5
 							ImageCollection: power-icons
 							ImageName: power-normal
-		Container@SIDEBAR_BACKGROUND:
+		Container@SIDEBAR_BACKGROUND: # Unit main panel?
 			X: WINDOW_RIGHT - 250
 			Y: 300
 			Width: 238
@@ -450,7 +450,7 @@ Container@PLAYER_WIDGETS:
 						#Image@ROW_TEMPLATE:
 						#	Logic: AddFactionSuffixLogic
 						#	Width: 238
-						#	Height: 47
+						#	Height: 50
 						#	ClickThrough: false
 						#	ImageCollection: sidebar
 						#	ImageName: background-iconrow
@@ -462,32 +462,32 @@ Container@PLAYER_WIDGETS:
 						#	ImageCollection: sidebar
 						#	ImageName: background-bottom
 				LogicTicker@PRODUCTION_TICKER:
-				Container@PALETTE_FOREGROUND: # row of black boxes surrounding the building icons. Just the one row, meant for templating I guess
+				Container@PALETTE_FOREGROUND: # Row of 3 frames
 					X: 0
-					Y: 20
+					Y: 19
 					Children:
 						Image@ROW_TEMPLATE:
 							Logic: AddFactionSuffixLogic
 							Width: 238
-							Height: 47
+							Height: 49
 							IgnoreMouseOver: true
 							ImageCollection: sidebar
 							ImageName: background-iconrow
-				Container@PALETTE_FOOTER: # row of black boxes surrounding the building icons. Just the one row, meant for templating I guess
+				Container@PALETTE_FOOTER: # Footer graphic
 					X: 0
 					Y: 0
 					Children:
 						Image@ROW_TEMPLATE:
 							X: 0
-							Y: 21
+							Y: 19
 							Logic: AddFactionSuffixLogic
 							Width: 238
-							Height: 9
+							Height: 6
 							IgnoreMouseOver: true
 							ClickThrough: true
 							ImageCollection: sidebar
 							ImageName: background-bottom
-				Container@PRODUCTION_TYPES:
+				Container@PRODUCTION_TYPES: # Queue types, infantry, vehicle, etc.
 					X: 7
 					Y: 22
 					Width: 29
@@ -558,20 +558,21 @@ Container@PLAYER_WIDGETS:
 									Y: 6
 									ImageCollection: production-icons
 				Container@PRODUCTION_BACKGROUND:
-					X: 41
-					Y: 21
+					X: 40
+					Y: 20
 					Children:
 						Background@ICON_TEMPLATE:
-							Width: 66
-							Height: 50
+							Width: 64
+							Height: 49
 							Background: command-button
+							Visible: false
 				ProductionPalette@PRODUCTION_PALETTE: # the actual building icons to click on
-					X: 41
-					Y: 21
+					X: 40
+					Y: 20
 					TooltipContainer: TOOLTIP_CONTAINER
-					IconSize: 62, 46
-					IconMargin: 1, 1
-					IconSpriteOffset: -1, -1
+					IconSize: 64, 49
+					IconMargin: 0, 0
+					IconSpriteOffset: 0, 0
 					ReadyText: Ready
 					HoldText: On Hold
 					HotkeyPrefix: Production
@@ -585,51 +586,51 @@ Container@PLAYER_WIDGETS:
 					BackgroundContainer: PRODUCTION_BACKGROUND
 					PreviousProductionTabKey: PreviousProductionTab
 					NextProductionTabKey: NextProductionTab
-					X: 41
+					X: 40
 					Y: 0
-					Width: 188
-					Height: 20
-		Container@SIDEBAR_BUILDING_SELECT:
+					Width: 191
+					Height: 19
+		Container@SIDEBAR_BUILDING_SELECT: # Building selector
 			Logic: BuildingPickerLogic
 				ProductionParent: SIDEBAR_BACKGROUND
 			X: WINDOW_RIGHT - 250
-			Y: 300
+			Y: 303
 			Width: 238
-			Height: 250
-			#Visible: False
+			Height: 256
 			Children:
 				Container@PALETTE_BACKGROUND:
 					Children:
-						Image@ROW_TEMPLATE:
+						Image@ROW_TEMPLATE: # Row of building icons
 							Logic: AddFactionSuffixLogic
 							Width: 238
-							Height: 47
+							Height: 49
 							ClickThrough: false
 							ImageCollection: sidebar
 							ImageName: background-iconrow
-						Image@BOTTOM_CAP:
+						Image@BOTTOM_CAP: # Footer
 							Logic: AddFactionSuffixLogic
 							Width: 238
-							Height: 8
+							Height: 6
 							ClickThrough: false
 							ImageCollection: sidebar
 							ImageName: background-bottom
-				BuildSelectPalette@BUILD_SELECT_PALETTE:
-					X: 42
+				BuildSelectPalette@BUILD_SELECT_PALETTE: # The actual icons
+					X: 39
 					Y: 1
 					TooltipContainer: TOOLTIP_CONTAINER
-					IconSize: 62, 46
-					IconMargin: 1, 1
-					IconSpriteOffset: -1, -1
+					IconSize: 54, 40
+					IconMargin: 10, 9
+					IconSpriteOffset: 6, 6
 					HotkeyPrefix: Production
 					HotkeyCount: 24
-				Container@PALETTE_FOREGROUND:
-					X: 40
-					Y: 0 - 1
+				Container@PALETTE_FOREGROUND: # Black border
+					X: 39
+					Y: 1
 					Children:
 						Image@ROW_TEMPLATE:
 							Width: 238
-							Height: 47
+							Height: 49
 							IgnoreMouseOver: true
 							ImageCollection: sidebar-bits
 							ImageName: production-iconoverlay
+							Visible: false

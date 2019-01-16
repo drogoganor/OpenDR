@@ -101,10 +101,10 @@ Freighter:
 	WithDockingAnimation:
 	WithFacingSpriteBody:
 	Harvester:
-		Capacity: 10
+		Capacity: 8
 		PipCount: 5
 		Resources: SpringWater,Taelon
-		BaleLoadDelay: 35
+		BaleLoadDelay: 20
 		BaleUnloadDelay: 20
 		SearchFromProcRadius: 30
 		SearchFromOrderRadius: 11
@@ -140,11 +140,11 @@ HoverFreighter:
 	WithDockingAnimation:
 	WithFacingSpriteBody:
 	Harvester:
-		Capacity: 10
+		Capacity: 8
 		PipCount: 5
 		Resources: SpringWater,Taelon
-		BaleLoadDelay: 35
-		BaleUnloadDelay: 20
+		BaleLoadDelay: 20
+		BaleUnloadDelay: 18
 		SearchFromProcRadius: 30
 		SearchFromOrderRadius: 11
 

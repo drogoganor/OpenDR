@@ -107,8 +107,8 @@ sidebar-observer: chrome-ingame.png
 
 sidebar-fguard: chrome-ingame.png
 	background-top: 0,167,238,310
-	background-iconrow: 0,477,238,47
-	background-bottom: 0,524,238,9
+	background-iconrow: 0,476,238,49
+	background-bottom: 0,527,238,6
 	background-supportoverlay: 0,75,64,48
 
 sidebar-button-fguard: chrome-ingame.png
@@ -212,7 +212,7 @@ command-button-fguard-highlighted-disabled: chrome-ingame.png
 sidebar-imperium: chrome-ingame.png
 	background-top: 274,167,238,310
 	background-iconrow: 274,477,238,47
-	background-bottom: 274,524,238,9
+	background-bottom: 274,527,238,6
 	background-supportoverlay: 64,75,64,48
 	
 sidebar-button-imperium: chrome-ingame.png
