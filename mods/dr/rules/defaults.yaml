@@ -306,6 +306,7 @@
 		BuildDurationModifier: 2486 # DR build rate
 	Huntable:
 	UpdatesPlayerStatistics:
+	RequiresBuildableArea:
 	SelfConstructing:
 		Steps: 30
 	ShakeOnDeath:

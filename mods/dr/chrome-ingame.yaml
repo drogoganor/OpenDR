@@ -211,7 +211,7 @@ command-button-fguard-highlighted-disabled: chrome-ingame.png
 
 sidebar-imperium: chrome-ingame.png
 	background-top: 274,167,238,310
-	background-iconrow: 274,477,238,47
+	background-iconrow: 274,476,238,49
 	background-bottom: 274,527,238,6
 	background-supportoverlay: 64,75,64,48
 	
