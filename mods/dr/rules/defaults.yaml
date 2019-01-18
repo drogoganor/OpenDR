@@ -288,7 +288,7 @@
 		Weapon: GenericExplode
 		EmptyWeapon: GenericExplode
 	Demolishable:
-		Condition: being-demolished
+	#	Condition: being-demolished
 	Armor:
 		Type: BuildingArmour
 	CommandBarBlacklist:
@@ -336,7 +336,7 @@
 	Tooltip:
 		GenericName: Structure
 	Demolishable:
-		Condition: being-demolished
+	#	Condition: being-demolished
 	MapEditorData:
 		Categories: SelfConstructing
 	CommandBarBlacklist:
