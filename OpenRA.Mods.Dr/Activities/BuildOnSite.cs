@@ -66,14 +66,6 @@ namespace OpenRA.Mods.Dr.Activities
 					return NextActivity;
 				}
 
-				// Try deduct cost
-				var cost = buildingActor.TraitInfo<ValuedInfo>().Cost;
-				if (!playerResources.TakeCash(cost, true))
-				{
-					Game.Sound.PlayNotification(world.Map.Rules, self.Owner, "Speech", "InsufficientFunds", faction);
-					return NextActivity;
-				}
-
 				self.World.AddFrameEndTask(w =>
 				{
 					w.CreateActor(true, order.TargetString, new TypeDictionary

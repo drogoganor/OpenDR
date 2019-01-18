@@ -43,7 +43,7 @@ namespace OpenRA.Mods.Dr.Traits
 	}
 
 	// Copied from ProductionQueue
-	public class BuilderUnit : IResolveOrder, ITick, ITechTreeElement, INotifyOwnerChanged, INotifyKilled, INotifySold, ISync, INotifyTransform, INotifyCreated
+	public class BuilderUnit : IResolveOrder, ITick, ITechTreeElement, INotifyKilled, INotifySold, ISync, INotifyTransform, INotifyCreated
 	{
 		public readonly BuilderUnitInfo Info;
 		readonly Actor self;
@@ -86,11 +86,6 @@ namespace OpenRA.Mods.Dr.Traits
 			// so we must query other player traits from self, knowing that
 			// it refers to the same actor as self.Owner.PlayerActor
 			productionTraits = self.TraitsImplementing<BuilderUnit>().ToArray();
-		}
-
-		void INotifyOwnerChanged.OnOwnerChanged(Actor self, Player oldOwner, Player newOwner)
-		{
-			// TODO: Ask devs about this
 		}
 
 		void INotifyKilled.Killed(Actor killed, AttackInfo e) { if (killed == self) { Enabled = false; } }

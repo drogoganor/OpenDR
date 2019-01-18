@@ -249,6 +249,14 @@ Player:
 	TechTree:
 	DeveloperMode:
 		CheckboxDisplayOrder: 8
+	PlayerResources:
+		SelectableCash: 10000, 15000, 20000, 30000, 45000, 60000, 90000
+		DefaultCash: 15000
+		InsufficientFundsNotification: InsufficientFunds
+		CashTickUpNotification: CashTickUp
+		CashTickDownNotification: CashTickDown
+	Production:
+		Produces: Building
 	ClassicProductionQueue@Upgrade:
 		Type: Upgrade
 		Group: Upgrade
@@ -257,7 +265,7 @@ Player:
 		BlockedAudio: Upgrading
 		BuildDurationModifier: 2486 # DR build rate
 		LowPowerModifier: 300
-	BuilderQueue@Building:
+	BuilderQueue2@Building:
 		Type: Building
 		Group: Building
 		QueuedAudio: Building
@@ -297,12 +305,6 @@ Player:
 	PowerManager:
 		SpeechNotification: LowPower
 	AllyRepair:
-	PlayerResources:
-		SelectableCash: 10000, 15000, 20000, 30000, 45000, 60000, 90000
-		DefaultCash: 15000
-		InsufficientFundsNotification: InsufficientFunds
-		CashTickUpNotification: CashTickUp
-		CashTickDownNotification: CashTickDown
 	FrozenActorLayer:
 	BaseAttackNotifier:
 	PlayerStatistics:

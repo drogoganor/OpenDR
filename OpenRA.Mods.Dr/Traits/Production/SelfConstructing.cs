@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Eluant;
-using OpenRA.Mods.Common;
+using OpenRA;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Primitives;
@@ -30,7 +30,7 @@ namespace OpenRA.Mods.Dr.Traits.Production
         private readonly ConditionManager conditionManager;
         private int token = ConditionManager.InvalidConditionToken;
 
-        private BuilderItem productionItem;
+        private ProductionItem productionItem;
 
         private List<int> healthSteps;
         private int healthStep = 0;
@@ -47,8 +47,12 @@ namespace OpenRA.Mods.Dr.Traits.Production
 
             if (init.Contains<PlaceBuildingInit>())
             {
+                var valued = init.Self.Info.TraitInfoOrDefault<ValuedInfo>();
+                var cost = valued != null ? valued.Cost : 0;
+                var pm = init.Self.Owner.PlayerActor.TraitOrDefault<PowerManager>();
+
                 var productionQueue = init.Self.Owner.PlayerActor.TraitsImplementing<BuilderQueue>().First(q => q.AllItems().Contains(init.Self.Info));
-                productionItem = new BuilderItem(productionQueue, init.Self.Info.Name, null);
+                productionItem = new ProductionItem(productionQueue, init.Self.Info.Name, cost, pm, null);
                 productionQueue.BeginProduction(productionItem);
             }
         }
