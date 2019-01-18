@@ -31,7 +31,6 @@ namespace OpenRA.Mods.Dr.Activities
 		readonly Order order;
 		readonly string faction;
 		readonly BuildingInfo buildingInfo;
-		readonly PlayerResources playerResources;
 		readonly ActorInfo buildingActor;
         readonly WDist minRange;
 
@@ -45,7 +44,6 @@ namespace OpenRA.Mods.Dr.Activities
             this.centerTarget = order.ExtraLocation;
             centerBuildingTarget = Target.FromPos(world.Map.CenterOfCell(centerTarget));
             minRange = new WDist(2048);
-            playerResources = order.Player.PlayerActor.Trait<PlayerResources>();
 			buildingActor = world.Map.Rules.Actors.FirstOrDefault(x => x.Key == order.TargetString).Value;
 		}
 
