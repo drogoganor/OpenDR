@@ -265,7 +265,7 @@ Player:
 		BlockedAudio: Upgrading
 		BuildDurationModifier: 2486 # DR build rate
 		LowPowerModifier: 300
-	BuilderQueue2@Building:
+	BuilderQueue@Building:
 		Type: Building
 		Group: Building
 		QueuedAudio: Building
