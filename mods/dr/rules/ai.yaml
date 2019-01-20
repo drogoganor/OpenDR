@@ -2,6 +2,7 @@ Player:
 	ModularBot@NormalAI:
 		Name: Normal AI
 		Type: normal
+	AICash: 
 	GrantConditionOnBotOwner@normal:
 		Condition: enable-normal-ai
 		Bots: normal
@@ -10,12 +11,28 @@ Player:
 		Decisions:
 	HarvesterBotModule:
 		RequiresCondition: enable-normal-ai
-	BaseBuilderBotModule@normal:
+	DrBaseBuilderBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		MinimumExcessPower: 60
-		#ConstructionYardTypes: constructionrigai
-		RefineryTypes: waterlaunchpad.constructing, waterlaunchpad
-		PowerTypes: power.constructing, power
+		ConstructionYardTypes: hq.human, hq.cyborg
+		RefineryTypes: waterlaunchpad.constructing
+		PowerTypes: power.constructing
+		BuildingAliases:
+			waterlaunchpad.constructing: waterlaunchpad.constructing, waterlaunchpad
+			power.constructing: power.constructing, power
+			trainingfacility.fguard.constructing: trainingfacility.fguard.constructing, trainingfacility.fguard
+			trainingfacility.cyborg.constructing: trainingfacility.cyborg.constructing, trainingfacility.cyborg
+			assemblyplant.human.constructing: assemblyplant.human.constructing, assemblyplant.human
+			assemblyplant.cyborg.constructing: assemblyplant.cyborg.constructing, assemblyplant.cyborg
+			hq.human.constructing: hq.human.constructing, hq.human
+			hq.cyborg.constructing: hq.cyborg.constructing, hq.cyborg
+			repair.human.constructing: repair.human.constructing, repair.human
+			repair.cyborg.constructing: repair.cyborg.constructing, repair.cyborg
+			hospital.human.constructing: hospital.human.constructing, hospital.human, hospital.cyborg.constructing, hospital.cyborg
+			hospital.cyborg.constructing: hospital.cyborg.constructing, hospital.cyborg, hospital.human.constructing, hospital.human
+			rearmingdeck.human.constructing: rearmingdeck.human.constructing, rearmingdeck.human
+			rearmingdeck.cyborg.constructing: rearmingdeck.cyborg.constructing, rearmingdeck.cyborg
+			phasingfacility.constructing: phasingfacility.constructing, phasingfacility
 		BarracksTypes: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing
 		VehiclesFactoryTypes: assemblyplant.human.constructing, assemblyplant.cyborg.constructing
 		ProductionTypes: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing, assemblyplant.human.constructing, assemblyplant.cyborg.constructing
@@ -42,21 +59,19 @@ Player:
 			rearmingdeck.human.constructing: 1
 			rearmingdeck.cyborg.constructing: 1
 		BuildingLimits:
-			waterlaunchpad.constructing: 1
-			power.constructing: 1
+			waterlaunchpad.constructing: 2
+			power.constructing: 2
 			hq.human.constructing: 1
-			hq.human: 1
 			hq.cyborg.constructing: 1
-			hq.cyborg: 1
-			trainingfacility.fguard.constructing: 2
-			trainingfacility.cyborg.constructing: 2
-			assemblyplant.human.constructing: 2
-			assemblyplant.cyborg.constructing: 2
+			trainingfacility.fguard.constructing: 1
+			trainingfacility.cyborg.constructing: 1
+			assemblyplant.human.constructing: 1
+			assemblyplant.cyborg.constructing: 1
 			repair.human.constructing: 1
-			repair.cyborg: 1
+			repair.cyborg.constructing: 1
 			hospital.human.constructing: 1
 			hospital.cyborg.constructing: 1
-			phasingfacility.constructing: 0
+			phasingfacility.constructing: 1
 			rearmingdeck.human.constructing: 1
 			rearmingdeck.cyborg.constructing: 1
 	BuildingRepairBotModule:
@@ -64,11 +79,11 @@ Player:
 	SquadManagerBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		SquadSize: 20
-		ExcludeFromSquadsTypes: freighter, constructionrig, constructionrigai
-		ConstructionYardTypes: constructionrig, constructionrigai
+		ExcludeFromSquadsTypes: freighter, constructionrig
+		ConstructionYardTypes: constructionrig
 	McvManagerBotModule:
 		RequiresCondition: enable-normal-ai
-		McvTypes: constructionrigai
+		McvTypes: hq.human, hq.cyborg
 		ConstructionYardTypes: hq.human.constructing, hq.cyborg.constructing, hq.human, hq.cyborg
 	UnitBuilderBotModule@normal:
 		RequiresCondition: enable-normal-ai

@@ -47,6 +47,9 @@
     <Compile Include="SpriteLoaders\DrCrsLoader.cs" />
     <Compile Include="SpriteLoaders\DrTilLoader.cs" />
     <Compile Include="SpriteLoaders\DrSprLoader.cs" />
+    <Compile Include="Traits\AI\AICash.cs" />
+    <Compile Include="Traits\BotModules\BotModuleLogic\DrBaseBuilderQueueManager.cs" />
+    <Compile Include="Traits\BotModules\DrBaseBuilderBotModule.cs" />
     <Compile Include="Traits\Player\BuilderUnit.cs" />
     <Compile Include="Traits\Player\BuildUnitPlaceBuilding.cs" />
     <Compile Include="Traits\Player\BuilderQueue.cs" />

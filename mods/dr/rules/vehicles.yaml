@@ -62,14 +62,6 @@ ConstructionRig:
 		Prerequisite: rig.shadowhand
 	-Armament:
 
-ConstructionRigAI:
-	Inherits: ConstructionRig
-	-Buildable:
-	BaseBuilding:
-	Production:
-		Produces: AIBuilding
-	BaseProvider:
-		Range: 18c0
 
 Freighter:
 	Inherits: ^DrAnimatedVehicle

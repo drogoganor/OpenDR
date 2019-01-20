@@ -340,6 +340,9 @@
 	MapEditorData:
 		Categories: SelfConstructing
 	CommandBarBlacklist:
+	#RequiresBuildableArea:
+	#	AreaTypes: building
+	#	Adjacent: 40
 
 ^ConstructedBuildingCommon:
 	MapEditorData:
@@ -410,7 +413,7 @@
 		Bounds: 96,96,0,0
 		DecorationBounds: 96,96,0,0
 	Buildable:
-		Queue: Building
+		Queue: Building, AIBuilding
 		BuildPaletteOrder: 0
 		BuildDuration: 22
 		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
@@ -494,6 +497,11 @@
 		ReferencePoint: Bottom, Left
 		ZOffset: 256
 		RequiresCondition: dec2
+	BaseBuilding:
+	BaseProvider:
+		Range: 18c0
+	GivesBuildableArea:
+		AreaTypes: building
 
 ^DrTrainingFacility.Constructing:
 	Inherits: ^SelfConstructingBuilding

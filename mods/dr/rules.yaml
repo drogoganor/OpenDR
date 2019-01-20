@@ -191,7 +191,7 @@ World:
 		ClassName: One Rig
 		Factions: fguard, togran, xenite
 		BaseActor: HQ.human
-		SupportActors: ConstructionRigAI
+		SupportActors: ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
 	MPStartUnits@mcvonlyimp:
@@ -199,7 +199,7 @@ World:
 		ClassName: One Rig
 		Factions: imperium, shadowhand
 		BaseActor: HQ.human
-		SupportActors: ConstructionRigAI
+		SupportActors: ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
 	MPStartUnits@threerigs:
@@ -207,7 +207,7 @@ World:
 		ClassName: Three Rigs
 		Factions: fguard, togran, xenite
 		BaseActor: HQ.human
-		SupportActors: ConstructionRigAI,ConstructionRig,ConstructionRig
+		SupportActors: ConstructionRig,ConstructionRig,ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
 	MPStartUnits@threerigsimp:
@@ -215,7 +215,7 @@ World:
 		ClassName: Three Rigs
 		Factions: imperium, shadowhand
 		BaseActor: HQ.cyborg
-		SupportActors: ConstructionRigAI,ConstructionRig,ConstructionRig
+		SupportActors: ConstructionRig,ConstructionRig,ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
 	SpawnMPUnits:
@@ -256,7 +256,7 @@ Player:
 		CashTickUpNotification: CashTickUp
 		CashTickDownNotification: CashTickDown
 	Production:
-		Produces: Building
+		Produces: Building, AIBuilding
 	ClassicProductionQueue@Upgrade:
 		Type: Upgrade
 		Group: Upgrade
@@ -271,6 +271,10 @@ Player:
 		QueuedAudio: Building
 		ReadyAudio: ConstructionComplete
 		BlockedAudio: Upgrading
+	BuilderQueue@AIBuilding:
+		Type: Building
+		Group: Building
+		BuildDurationModifier: 0
 	ClassicProductionQueue@Defense:
 		Type: Defense
 		Group: Defense
