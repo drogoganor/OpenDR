@@ -20,14 +20,28 @@ namespace OpenRA.Mods.Dr.Traits.AI
     [Desc("Ugly hack to give the ai cash.")]
     public class AICashInfo : ITraitInfo
     {
-        public object Create(ActorInitializer init) { return new AICash(); }
+        [Desc("Amount per cash infusion.")]
+        public readonly int Amount = 500;
+
+        [Desc("Game tick is modded with this value to determine how often cash is infused.")]
+        public readonly int TickEach = 0;
+
+        public object Create(ActorInitializer init) { return new AICash(this); }
     }
 
     public class AICash : IBotTick
     {
-        public void BotTick(IBot bot)
+        readonly AICashInfo info;
+
+        public AICash(AICashInfo info)
         {
-            bot.Player.PlayerActor.Trait<PlayerResources>().GiveCash(500);
+            this.info = info;
+        }
+
+        void IBotTick.BotTick(IBot bot)
+        {
+            if (info.TickEach == 0 || bot.Player.World.WorldTick % info.TickEach == 0)
+                bot.Player.PlayerActor.Trait<PlayerResources>().GiveCash(info.Amount);
         }
     }
 }
