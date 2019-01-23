@@ -453,7 +453,7 @@
 	Exit@1:
 		SpawnOffset: 0,0,0
 		ExitCell: 2,2
-		ProductionTypes: Upgrade,Economy
+		ProductionTypes: Upgrade, Economy, Building, AIBuilding
 	ProductionQueue@Economy:
 		Type: Economy
 		#LowPowerSlowdown: 1
@@ -463,6 +463,14 @@
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
+		BuildDurationModifier: 2486 # DR build rate
+		LowPowerModifier: 300
+	ParallelProductionQueue@Upgrade:
+		Type: Upgrade
+		Group: Upgrade
+		QueuedAudio: Upgrading
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: Upgrading
 		BuildDurationModifier: 2486 # DR build rate
 		LowPowerModifier: 300
 	ProductionBar@Economy:

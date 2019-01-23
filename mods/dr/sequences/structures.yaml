@@ -343,18 +343,27 @@ nivcy1l0:
 nfgdt1l0:
 	building: tileset|nfgdt1l0
 		Start: 0
-	idle: tileset|nfgdt1l0
-		Start: 1
+	idle: nfgdt1l0_01fixed.png
+		AddExtension: False
+		Start: 0
 	recoil: bfgdtsp0
 		Start: 0
 		Facings: 16
 	turret: bfgdtsp0
 		Start: 0
 		Facings: 16
+	underlay-building: tileset|nfgdt1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: tileset|nfgdt1l0
+		ZOffset: -8192
+		Start: 1
 	top-building: tileset|tfgdt1l0
 		Start: 0
-	top: tileset|tfgdt1l0
-		Start: 1
+	#top: nfgdt1l0_01fixed.png
+	#	AddExtension: False
+	#	Start: 0
+	#	Offset: -40, -40
 	shadow-building: bfgdtsh0
 		Start: 0
 		Offset: 0, -1

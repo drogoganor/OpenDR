@@ -252,10 +252,7 @@ LaserTurret:
 	Armament:
 		Weapon: GatLaser
 		LocalOffset: 512,0,112
-	-WithIdleOverlay@LAYER1: # Problem with the sprites here
-	#WithIdleOverlay@LAYER1:
-	#	Palette: terrain
-	#	Sequence: underlay
+	-WithIdleOverlay@LAYER2:
 
 # Imperium plasma turret
 PlasmaTurret:
