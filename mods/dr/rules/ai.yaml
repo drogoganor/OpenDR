@@ -3,8 +3,9 @@ Player:
 		Name: Normal AI
 		Type: normal
 	AICash: 
-		Amount: 100
+		Amount: 20000
 		TickEach: 10
+		UntilTick: 11
 	GrantConditionOnBotOwner@normal:
 		Condition: enable-normal-ai
 		Bots: normal

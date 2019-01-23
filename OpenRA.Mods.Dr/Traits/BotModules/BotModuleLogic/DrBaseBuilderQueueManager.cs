@@ -116,7 +116,7 @@ namespace OpenRA.Mods.Dr.Traits
 				: baseBuilder.Info.StructureProductionInactiveDelay + randomFactor;
 		}
 
-		bool TickQueue(IBot bot, ProductionQueue queue)
+        bool TickQueue(IBot bot, ProductionQueue queue)
 		{
 			var currentBuilding = queue.AllQueued().FirstOrDefault();
 

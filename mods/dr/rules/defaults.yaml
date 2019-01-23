@@ -447,13 +447,13 @@
 		Factions: shadowhand, togran
 		Prerequisite: hq.shadowhand
 	Production:
-		Produces: Upgrade,Economy
+		Produces: Upgrade,Economy,AIBuilding
 	RallyPoint:
 		Offset: 4,5
 	Exit@1:
 		SpawnOffset: 0,0,0
 		ExitCell: 2,2
-		ProductionTypes: Upgrade, Economy, Building, AIBuilding
+		ProductionTypes: Upgrade,Economy
 	ProductionQueue@Economy:
 		Type: Economy
 		#LowPowerSlowdown: 1

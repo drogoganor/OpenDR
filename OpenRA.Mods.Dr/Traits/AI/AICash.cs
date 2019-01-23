@@ -26,6 +26,9 @@ namespace OpenRA.Mods.Dr.Traits.AI
         [Desc("Game tick is modded with this value to determine how often cash is infused.")]
         public readonly int TickEach = 0;
 
+        [Desc("Infuse cash until this tick has been reached. Zero is infinite.")]
+        public readonly int UntilTick = 0;
+
         public object Create(ActorInitializer init) { return new AICash(this); }
     }
 
@@ -40,7 +43,9 @@ namespace OpenRA.Mods.Dr.Traits.AI
 
         void IBotTick.BotTick(IBot bot)
         {
-            if (info.TickEach == 0 || bot.Player.World.WorldTick % info.TickEach == 0)
+            var tick = bot.Player.World.WorldTick;
+            if ((info.UntilTick == 0 || tick <= info.UntilTick) && 
+                (info.TickEach == 0 || tick % info.TickEach == 0))
                 bot.Player.PlayerActor.Trait<PlayerResources>().GiveCash(info.Amount);
         }
     }
