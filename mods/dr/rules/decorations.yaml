@@ -85,25 +85,46 @@ aotre005:
 # Plant
 aopln000:
 	Inherits: ^DrPlant
+	RenderSprites:
+		Palette: terrain
+		Image: aopln000
 
 aopln001:
 	Inherits: ^DrPlant
+	RenderSprites:
+		Palette: terrain
+		Image: aopln001
 
 aopln002:
 	Inherits: ^DrPlant
+	RenderSprites:
+		Palette: terrain
+		Image: aopln002
 
 # Rocks
 aoroc000:
 	Inherits: ^DrRock
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc000
 
 aoroc001:
 	Inherits: ^DrRock
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc001
 
 aoroc002:
 	Inherits: ^DrRock
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc002
 
 aoroc003:
 	Inherits: ^DrRock
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc003
 	Building:
 		Footprint: x_ xx xx
 		Dimensions: 2,3
@@ -111,6 +132,9 @@ aoroc003:
 
 aoroc004:
 	Inherits: ^DrRock
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc004
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -118,6 +142,9 @@ aoroc004:
 
 aoroc005:
 	Inherits: ^DrRock
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc005
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -126,6 +153,9 @@ aoroc005:
 # Cliff
 aoclf000:
 	Inherits: ^DrRock
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf000
 	Building:
 		Footprint: _x_ xxx xx_
 		Dimensions: 3,3
@@ -133,6 +163,9 @@ aoclf000:
 
 aoclf001:
 	Inherits: ^DrRock
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf001
 	Building:
 		Footprint: _x_ xxx xxx
 		Dimensions: 3,3
@@ -140,6 +173,9 @@ aoclf001:
 
 aoclf002:
 	Inherits: ^DrRock
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf002
 	Building:
 		Footprint: _x_ xxx xxx
 		Dimensions: 3,3
@@ -147,6 +183,9 @@ aoclf002:
 
 aoclf003:
 	Inherits: ^DrRock
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf003
 	Building:
 		Footprint: _x_ xxx xxx xx_
 		Dimensions: 3,4
@@ -154,6 +193,9 @@ aoclf003:
 
 aoclf004:
 	Inherits: ^DrRock
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf004
 	Building:
 		Footprint: _x_ xxx xx= xxx
 		Dimensions: 3,4
@@ -161,6 +203,9 @@ aoclf004:
 
 aoclf005:
 	Inherits: ^DrRock
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf005
 	Building:
 		Footprint: _x__ xxxx xxxx xxx_
 		Dimensions: 4,4

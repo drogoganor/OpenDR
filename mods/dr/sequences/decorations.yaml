@@ -2,169 +2,169 @@
 base|aotre000:
 	Defaults:
 		Offset: -4,-19
-	idle:
+	idle: tileset|aotre000
 		Length: 1
-	shadow: base|aotre0sh
+	shadow: tileset|aotre0sh
 		Offset: 21, 10
 
 base|aotre001:
 	Defaults:
 		Offset: 0,-10
-	idle:
+	idle: tileset|aotre001
 		Length: 1
-	shadow: base|aotre1sh
+	shadow: tileset|aotre1sh
 		Offset: 15, 9
 
 base|aotre002:
 	Defaults:
 		Offset: -1,-14
-	idle:
+	idle: tileset|aotre002
 		Length: 1
-	shadow: base|aotre2sh
+	shadow: tileset|aotre2sh
 		Offset: 19, 11
 
 base|aotre003:
 	Defaults:
 		Offset: 3,-15
-	idle:
+	idle: tileset|aotre003
 		Length: 1
-	shadow: base|aotre3sh
+	shadow: tileset|aotre3sh
 		Offset: 23, 11
 
 base|aotre004:
 	Defaults:
 		Offset: 1,-10
-	idle:
+	idle: tileset|aotre004
 		Length: 1
-	shadow: base|aotre4sh
+	shadow: tileset|aotre4sh
 		Offset: 10, 8
 
 base|aotre005:
 	Defaults:
 		Offset: 2,-9
-	idle:
+	idle: tileset|aotre005
 		Length: 1
-	shadow: base|aotre5sh
+	shadow: tileset|aotre5sh
 		Offset: 13, 6
 
 # Plant
 aopln000:
 	Defaults:
 		Offset: -2,-4
-	idle:
+	idle: tileset|aopln000
 		Length: 1
-	shadow: aopln0sh
+	shadow: tileset|aopln0sh
 		Offset: -4, -3
 
 aopln001:
 	Defaults:
 		Offset: 1,1
-	idle:
+	idle: tileset|aopln001
 		Length: 1
-	shadow: aopln1sh
+	shadow: tileset|aopln1sh
 		Offset: 1, 1
 
 aopln002:
 	Defaults:
 		Offset: 4,2
-	idle:
+	idle: tileset|aopln002
 		Length: 1
-	shadow: aopln2sh
+	shadow: tileset|aopln2sh
 		Offset: 6, 7
 
 # Rocks
 aoroc000:
 	Defaults:
 		Offset: 0,0
-	idle:
+	idle: tileset|aoroc000
 		Length: 1
-	shadow: aoroc0sh
+	shadow: tileset|aoroc0sh
 		Offset: 5, 1
 
 aoroc001:
 	Defaults:
 		Offset: 0,0
-	idle:
+	idle: tileset|aoroc001
 		Length: 1
-	shadow: aoroc1sh
+	shadow: tileset|aoroc1sh
 		Offset: 6, 3
 
 aoroc002:
 	Defaults:
 		Offset: 0,0
-	idle:
+	idle: tileset|aoroc002
 		Length: 1
-	shadow: aoroc2sh
+	shadow: tileset|aoroc2sh
 		Offset: 8, 7
 
 aoroc003:
 	Defaults:
 		Offset: 0,2
-	idle:
+	idle: tileset|aoroc003
 		Length: 1
-	shadow: aoroc3sh
+	shadow: tileset|aoroc3sh
 		Offset: 7, 20
 
 aoroc004:
 	Defaults:
 		Offset: 2,2
-	idle:
+	idle: tileset|aoroc004
 		Length: 1
-	shadow: aoroc4sh
+	shadow: tileset|aoroc4sh
 		Offset: 10, 25
 
 aoroc005:
 	Defaults:
 		Offset: 1,0
-	idle:
+	idle: tileset|aoroc005
 		Length: 1
-	shadow: aoroc5sh
+	shadow: tileset|aoroc5sh
 		Offset: 12, 35
 
 # Cliff
 aoclf000:
 	Defaults:
 		Offset: -3, -2
-	idle:
+	idle: tileset|aoclf000
 		Length: 1
-	shadow: aoclf0sh
+	shadow: tileset|aoclf0sh
 		Offset: 9, 11
 
 aoclf001:
 	Defaults:
 		Offset: -3, -1
-	idle:
+	idle: tileset|aoclf001
 		Length: 1
-	shadow: aoclf1sh
+	shadow: tileset|aoclf1sh
 		Offset: 12, 23
 
 aoclf002:
 	Defaults:
-	idle:
+	idle: tileset|aoclf002
 		Length: 1
-	shadow: aoclf2sh
+	shadow: tileset|aoclf2sh
 		Offset: 12, 25
 
 aoclf003:
 	Defaults:
-	idle:
+	idle: tileset|aoclf003
 		Length: 1
-	shadow: aoclf3sh
+	shadow: tileset|aoclf3sh
 		Offset: 13, 23
 
 aoclf004:
 	Defaults:
-	idle:
+	idle: tileset|aoclf004
 		Length: 1
-	shadow: aoclf4sh
+	shadow: tileset|aoclf4sh
 		Offset: 11, 15
 
 aoclf005:
 	Defaults:
 		Offset: 0, 0
-	idle:
+	idle: tileset|aoclf005
 		Length: 1
-	shadow: aoclf5sh
+	shadow: tileset|aoclf5sh
 		Offset: 8, 25
 
 # Rubble

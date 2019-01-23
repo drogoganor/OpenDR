@@ -9,10 +9,10 @@ ncpow1l0:
 		Tick: 900000
 	idle:
 		Start: 1
-	underlay-building: barren|ncpow1l0
+	underlay-building: tileset|ncpow1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: barren|ncpow1l0
+	underlay: tileset|ncpow1l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tcpow1l0
@@ -40,10 +40,10 @@ nclnc1l0:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: base|nclnc1l0
+	underlay-building: tileset|nclnc1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nclnc1l0
+	underlay: tileset|nclnc1l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tclnc1l0
@@ -67,16 +67,16 @@ nfhqt1l0:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: barren|nfhqt1l0
+	underlay-building: tileset|nfhqt1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: barren|nfhqt1l0
+	underlay: tileset|nfhqt1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: base|nfhqt2l0
+	up2underlay: tileset|nfhqt2l0
 		ZOffset: -8192
 		Start: 1
-	up3underlay: base|nfhqt3l0
+	up3underlay: tileset|nfhqt3l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tfhqt1l0
@@ -112,16 +112,16 @@ nihqt1l0:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: base|nihqt1l0
+	underlay-building: tileset|nihqt1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nihqt1l0
+	underlay: tileset|nihqt1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: base|nihqt2l0
+	up2underlay: tileset|nihqt2l0
 		ZOffset: -8192
 		Start: 1
-	up3underlay: base|nihqt3l0
+	up3underlay: tileset|nihqt3l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tihqt1l0
@@ -155,10 +155,10 @@ tothq1l0:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: nothq1l0 # no base|xx..
+	underlay-building: nothq1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 0
-	underlay: nothq1l0 # no base|xx..
+	underlay: nothq1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	top: tothq1l0
@@ -182,13 +182,13 @@ nfutf1l0:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: base|nfutf1l0
+	underlay-building: tileset|nfutf1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nfutf1l0
+	underlay: tileset|nfutf1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: base|nfutf2l0
+	up2underlay: tileset|nfutf2l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tfutf1l0
@@ -226,13 +226,13 @@ niutf1l0:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: base|niutf1l0
+	underlay-building: tileset|niutf1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|niutf1l0
+	underlay: tileset|niutf1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: base|niutf2l0
+	up2underlay: tileset|niutf2l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tiutf1l0
@@ -270,13 +270,13 @@ nfvcy1l0:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: base|nfvcy1l0
+	underlay-building: tileset|nfvcy1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nfvcy1l0
+	underlay: tileset|nfvcy1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: base|nfvcy2l0
+	up2underlay: tileset|nfvcy2l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tfvcy1l0
@@ -309,13 +309,13 @@ nivcy1l0:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: base|nivcy1l0
+	underlay-building: tileset|nivcy1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nivcy1l0
+	underlay: tileset|nivcy1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: base|nivcy2l0
+	up2underlay: tileset|nivcy2l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tivcy1l0
@@ -341,9 +341,9 @@ nivcy1l0:
 
 # FG Laser turret
 nfgdt1l0:
-	building:
+	building: tileset|nfgdt1l0
 		Start: 0
-	idle:
+	idle: tileset|nfgdt1l0
 		Start: 1
 	recoil: bfgdtsp0
 		Start: 0
@@ -351,15 +351,9 @@ nfgdt1l0:
 	turret: bfgdtsp0
 		Start: 0
 		Facings: 16
-	underlay-building: barren|nfgdt1l0
-		#ZOffset: -8192
+	top-building: tileset|tfgdt1l0
 		Start: 0
-	underlay: barren|nfgdt1l0
-		#ZOffset: -8192
-		Start: 1
-	top-building: tfgdt1l0
-		Start: 0
-	top: tfgdt1l0
+	top: tileset|tfgdt1l0
 		Start: 1
 	shadow-building: bfgdtsh0
 		Start: 0
@@ -372,9 +366,9 @@ nfgdt1l0:
 
 # Imperium Plasma turret
 nigdt1l0:
-	building:
+	building: tileset|nigdt1l0
 		Start: 0
-	idle:
+	idle: tileset|nigdt1l0
 		Start: 1
 		ZOffset: -128
 	recoil: bigdtsp0
@@ -383,10 +377,10 @@ nigdt1l0:
 	turret: bigdtsp0
 		Start: 0
 		Facings: 16
-	underlay-building: nigdt1l0
+	underlay-building: tileset|nigdt1l0
 		ZOffset: 128
 		Start: 0
-	underlay: nigdt1l0
+	underlay: tileset|nigdt1l0
 		ZOffset: 128
 		Start: 1
 	top-building: tigdt1l0
@@ -414,10 +408,10 @@ nfaar1l0:
 	turret: bfaarsp0
 		Start: 0
 		Facings: 16
-	underlay-building: barren|nfaar1l0
+	underlay-building: tileset|nfaar1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: barren|nfaar1l0
+	underlay: tileset|nfaar1l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tfaar1l0
@@ -447,10 +441,10 @@ niaar1l0:
 	turret: biaarsp0
 		Start: 0
 		Length: 1
-	underlay-building: barren|niaar1l0
+	underlay-building: tileset|niaar1l0
 		#ZOffset: -8192
 		Start: 0
-	underlay: barren|niaar1l0
+	underlay: tileset|niaar1l0
 		#ZOffset: -8192
 		Start: 1
 	top-building: tiaar1l0
@@ -470,9 +464,9 @@ niaar1l0:
 
 # FG Heavy rail
 nfagt1l0:
-	building:
+	building: base|nfagt1l0
 		Start: 0
-	idle:
+	idle: base|nfagt1l0
 		Start: 1
 	recoil: bfagtsp0
 		Start: 0
@@ -480,15 +474,15 @@ nfagt1l0:
 	turret: bfagtsp0
 		Start: 0
 		Facings: 16
-	underlay-building: barren|nfagt1l0
+	underlay-building: tileset|nfagt1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: barren|nfagt1l0
+	underlay: tileset|nfagt1l0
 		ZOffset: -8192
 		Start: 1
-	top-building: barren|tfagt1l0
+	top-building: base|tfagt1l0
 		Start: 0
-	top: barren|tfagt1l0
+	top: base|tfagt1l0
 		Start: 1
 	shadow-building: bfagtsh0
 		Start: 0
@@ -501,9 +495,9 @@ nfagt1l0:
 
 # Imperium neutron accelerator
 niagt1l0:
-	building:
+	building: tileset|niagt1l0
 		Start: 0
-	idle:
+	idle: tileset|niagt1l0
 		Start: 1
 	recoil: biagtsp0
 		Start: 0
@@ -511,16 +505,16 @@ niagt1l0:
 	turret: biagtsp0
 		Start: 0
 		Facings: 16
-	underlay-building: barren|tiagt1l0
+	underlay-building: tileset|tiagt1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: barren|tiagt1l0
+	underlay: tileset|tiagt1l0
 		ZOffset: -8192
 		Start: 1
-	top-building: tiagt1l0
-		Start: 0
-	top: tiagt1l0
-		Start: 1
+	#top-building: tileset|tiagt1l0
+	#	Start: 0
+	#top: tileset|tiagt1l0
+	#	Start: 1
 	shadow-building: biagtsh0
 		Start: 0
 		Offset: 12, 6
@@ -538,10 +532,10 @@ nccam1l0:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: base|nccam1l0
+	underlay-building: tileset|nccam1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nccam1l0
+	underlay: tileset|nccam1l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tccam1l0
@@ -575,10 +569,10 @@ nfhsp1l0:
 		Start: 1
 		Length: 1
 		ZOffset: -1c511
-	underlay-building: base|nfhsp1l0
+	underlay-building: tileset|nfhsp1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nfhsp1l0
+	underlay: tileset|nfhsp1l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tfhsp1l0
@@ -610,15 +604,15 @@ nihsp1l0:
 		Start: 1
 		Length: 1
 		ZOffset: -1c511
-	underlay-building: barren|nihsp1l0
+	underlay-building: tileset|nihsp1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: barren|nihsp1l0
+	underlay: tileset|nihsp1l0
 		ZOffset: -8192
 		Start: 1
-	top-building: barren|tihsp1l0
+	top-building: tihsp1l0
 		Start: 0
-	top: barren|tihsp1l0
+	top: tihsp1l0
 		Start: 1
 	shadow-building: bihspsh0
 		Start: 0
@@ -643,10 +637,10 @@ nfrep1l0:
 		Start: 1
 		Length: 1
 		ZOffset: -1c511
-	underlay-building: base|nfrep1l0
+	underlay-building: tileset|nfrep1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nfrep1l0
+	underlay: tileset|nfrep1l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tfrep1l0
@@ -663,7 +657,7 @@ nfrep1l0:
 	fake-icon: bfrepmn0
 
 # Imperium repair
-barren|nirep1l0:
+tirep1l0:
 	building:
 		Start: 0
 	idle:
@@ -676,11 +670,11 @@ barren|nirep1l0:
 		Start: 1
 		Length: 1
 		ZOffset: -1c511
-	underlay-building: barren|nirep1l0
-		#ZOffset: -8192
+	underlay-building: tileset|nirep1l0
+		ZOffset: -8192
 		Start: 0
-	underlay: barren|nirep1l0
-		#ZOffset: -8192
+	underlay: tileset|nirep1l0
+		ZOffset: -8192
 		Start: 1
 	top-building: tirep1l0
 		Start: 0
@@ -703,10 +697,10 @@ nfphf1l0:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: base|nfphf1l0
+	underlay-building: tileset|nfphf1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nfphf1l0
+	underlay: tileset|nfphf1l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tfphf1l0
@@ -739,10 +733,10 @@ nfrrm1l0:
 	damaged-active:
 		Start: 1
 		Length: 1
-	underlay-building: base|nfrrm1l0
+	underlay-building: tileset|nfrrm1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nfrrm1l0
+	underlay: tileset|nfrrm1l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tfrrm1l0
@@ -769,10 +763,10 @@ nirrm1l0:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: base|nirrm1l0
+	underlay-building: tileset|nirrm1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nirrm1l0
+	underlay: tileset|nirrm1l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tirrm1l0
@@ -796,10 +790,10 @@ nitgt1l0:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: base|nitgt1l0
+	underlay-building: tileset|nitgt1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nitgt1l0
+	underlay: tileset|nitgt1l0
 		ZOffset: -8192
 		Start: 1
 	top-building: titgt1l0
@@ -821,10 +815,10 @@ nitrc1l0:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: base|nitrc1l0
+	underlay-building: tileset|nitrc1l0
 		ZOffset: -8192
 		Start: 0
-	underlay: base|nitrc1l0
+	underlay: tileset|nitrc1l0
 		ZOffset: -8192
 		Start: 1
 	top-building: titrc1l0

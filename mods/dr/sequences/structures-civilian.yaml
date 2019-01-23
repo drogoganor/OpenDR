@@ -16,7 +16,7 @@ tcsbh1l0:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: ncsbh1l0 # no base|xx..
+	underlay: ncsbh1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 0
 	shadow: bcsbvmn0
@@ -42,7 +42,7 @@ tcsbv1l0:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: ncsbv1l0 # no base|xx..
+	underlay: ncsbv1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 0
 	shadow: bcsbvmn0
@@ -68,7 +68,7 @@ tcsbc1l0:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: ncsbc1l0 # no base|xx..
+	underlay: ncsbc1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 0
 	shadow: bcsbcsh0
@@ -189,7 +189,7 @@ totyh1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: notyh1l0 # no base|xx..
+	underlay: notyh1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	top: totyh1l0
@@ -219,7 +219,7 @@ todes1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nodes1l0 # no base|xx..
+	underlay: nodes1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: todessh0
@@ -245,7 +245,7 @@ torvp1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: norvp1l0 # no base|xx..
+	underlay: norvp1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	top: torvp1l0
@@ -275,7 +275,7 @@ tomdr1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nomdr1l0 # no base|xx..
+	underlay: nomdr1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: tomdrsh0
@@ -301,7 +301,7 @@ towat1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nowat1l0 # no base|xx..
+	underlay: nowat1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: towatsh0
@@ -327,7 +327,7 @@ tohov1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nohov1l0 # no base|xx..
+	underlay: nohov1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: tohovsh0
@@ -353,7 +353,7 @@ t0rad1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: n0rad1l0 # no base|xx..
+	underlay: n0rad1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: b0towsh0
@@ -379,7 +379,7 @@ topld1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nopld1l0 # no base|xx..
+	underlay: nopld1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: topldsh0
@@ -405,7 +405,7 @@ topri1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nopri1l0 # no base|xx..
+	underlay: nopri1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: toprish0
@@ -431,7 +431,7 @@ tocen1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nocen1l0 # no base|xx..
+	underlay: nocen1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: bocensh0
@@ -457,7 +457,7 @@ toshl1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: noshl1l0 # no base|xx..
+	underlay: noshl1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: toshlsh0
@@ -483,7 +483,7 @@ tosub1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nosub1l0 # no base|xx..
+	underlay: nosub1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: tosubsh0
@@ -509,7 +509,7 @@ totcn1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: notcn1l0 # no base|xx..
+	underlay: notcn1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: totcnsh0
@@ -535,7 +535,7 @@ tocbs1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nocbs1l0 # no base|xx..
+	underlay: nocbs1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: bocbssh0
@@ -561,7 +561,7 @@ towar1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nowar1l0 # no base|xx..
+	underlay: nowar1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: bowarsh0
@@ -587,7 +587,7 @@ t0hal1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: n0hal1l0 # no base|xx..
+	underlay: n0hal1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: b0halsh0
@@ -613,7 +613,7 @@ t0lar1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: n0lar1l0 # no base|xx..
+	underlay: n0lar1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: b0larsh0
@@ -639,7 +639,7 @@ t0sma1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: n0sma1l0 # no base|xx..
+	underlay: n0sma1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: b0smash0
@@ -665,7 +665,7 @@ t0des1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: n0des1l0 # no base|xx..
+	underlay: n0des1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: b0dessh0
@@ -691,7 +691,7 @@ tochm4l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nochm4l0 # no base|xx..
+	underlay: nochm4l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: bochmsh0
@@ -717,7 +717,7 @@ tofrm1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nofrm1l0 # no base|xx..
+	underlay: nofrm1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	icon: tofrmmn0
@@ -740,7 +740,7 @@ tofrm1l1:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nofrm1l1 # no base|xx..
+	underlay: nofrm1l1 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	icon: tofrmmn1
@@ -763,7 +763,7 @@ tofrm1l2:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nofrm1l2 # no base|xx..
+	underlay: nofrm1l2 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	icon: tofrmmn2
@@ -786,7 +786,7 @@ tobrd1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nobrd1l0 # no base|xx..
+	underlay: nobrd1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: tobrdsh0
@@ -812,7 +812,7 @@ tobrd1l1:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nobrd1l1 # no base|xx..
+	underlay: nobrd1l1 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
 	shadow: tobrdsh1
@@ -861,7 +861,7 @@ tomlt1l0:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: nomlt1l0 # no base|xx..
+	underlay: nomlt1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 0
 	shadow: tomltsh0
@@ -887,7 +887,7 @@ totdr1l0:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: notdr1l0 # no base|xx..
+	underlay: notdr1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 0
 	icon: botdrmn0

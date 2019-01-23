@@ -263,7 +263,7 @@ LaserTurret.Constructing:
 	Inherits: ^Defense.Constructing
 	RenderSprites:
 		Image: nfgdt1l0 # Manually set to barren here along with Imperium repair pad and Imp AA.
-		#Palette: terrain
+		Palette: terrain
 	Tooltip:
 		Name: Laser Turret
 	Buildable:
@@ -279,9 +279,7 @@ LaserTurret.Constructing:
 		Cost: 500
 	Health:
 		HP: 400
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: building
+	-WithIdleOverlay@LAYER1:
 
 # Imperium plasma turret
 PlasmaTurret.Constructing:
@@ -417,6 +415,7 @@ NeutronAccelerator.Constructing:
 		HP: 550
 	RevealsShroud:
 		Range: 8c0
+	-WithIdleOverlay@LAYER2:
 
 # Camera tower
 CameraTower.Constructing:
@@ -569,7 +568,7 @@ Repair.human.Constructing:
 Repair.cyborg.Constructing:
 	Inherits: ^DrGenericBuilding.Constructing
 	RenderSprites:
-		Image: barren|nirep1l0
+		Image: tirep1l0
 		#Palette: terrain # Manually set to barren here along with Laser Turret.
 	Inherits@shape: ^4x3Shape
 	Building:
