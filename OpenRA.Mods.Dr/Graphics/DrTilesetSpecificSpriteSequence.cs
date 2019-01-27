@@ -59,7 +59,6 @@ namespace OpenRA.Mods.Dr.Graphics
                 }
             }
 
-
             if (LoadField(d, "AddExtension", true))
 			{
 				return spriteName + loader.DefaultSpriteExtension;

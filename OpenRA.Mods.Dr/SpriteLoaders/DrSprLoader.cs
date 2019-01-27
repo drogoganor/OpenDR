@@ -198,7 +198,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				s.Position = header.OffSections + 16 * sect;
 				int firstanim = s.ReadInt32();
 				int lastanim = s.ReadInt32();
-				int framerate = s.ReadInt32();
+				s.ReadInt32(); // Framerate
 				int numhotspots = s.ReadInt32();
 
 				int bmp_szx = header.Szx * header.Nrots;

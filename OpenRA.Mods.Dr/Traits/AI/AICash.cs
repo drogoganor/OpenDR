@@ -44,7 +44,7 @@ namespace OpenRA.Mods.Dr.Traits.AI
         void IBotTick.BotTick(IBot bot)
         {
             var tick = bot.Player.World.WorldTick;
-            if ((info.UntilTick == 0 || tick <= info.UntilTick) && 
+            if ((info.UntilTick == 0 || tick <= info.UntilTick) &&
                 (info.TickEach == 0 || tick % info.TickEach == 0))
                 bot.Player.PlayerActor.Trait<PlayerResources>().GiveCash(info.Amount);
         }
