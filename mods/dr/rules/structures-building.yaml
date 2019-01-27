@@ -48,7 +48,7 @@ WaterLaunchPad.Constructing:
 	Buildable:
 		Queue: Building, AIBuilding
 		BuildPaletteOrder: 10
-		Prerequisites: ~techlevel.infonly
+		Prerequisites: techlevel.infonly
 		Description: Refines spring water into credits.
 		BuildDuration: 37
 	SelfConstructing:
@@ -97,7 +97,7 @@ HQ.human.Constructing:
 		Name: Headquarters
 	Buildable:
 		Queue: Building, AIBuilding
-		Prerequisites: ~rig.human
+		Prerequisites: rig.human
 	SelfConstructing:
 		Steps: 20
 		Becomes: HQ.human

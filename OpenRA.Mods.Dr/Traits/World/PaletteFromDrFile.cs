@@ -113,6 +113,9 @@ namespace OpenRA.Mods.Dr.Traits
                     colors[i] = (uint)Color.FromArgb(rList[i] * terrainMultiplier, gList[i] * terrainMultiplier, bList[i] * terrainMultiplier).ToArgb();
             }
 
+            // Shadow hack
+            colors[47] = (uint)Color.FromArgb(112, 0, 0, 0).ToArgb();
+
             return new ImmutablePalette(colors);
         }
 

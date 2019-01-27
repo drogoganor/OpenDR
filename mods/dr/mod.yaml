@@ -20,10 +20,10 @@ Packages:
 	~SNOW/SNOW.TIL
 	~SNOW/SNOW.PAL
 	~SNOW/SPRITES.FTG: snow
-	~SNOW/spriteEx.ftg: snowEx
+	~SNOW/spriteEx.ftg: snow
 	~ALIEN/ALIEN.TIL
 	~ALIEN/ALIEN.PAL
-	~ALIEN/spriteEx.ftg: alienEx
+	~ALIEN/spriteEx.ftg: alien
 	~asteroid/ASTEROID.FTG
 	~aust/AUST.FTG
 	~volcanic/VOLCANIC.FTG
@@ -54,35 +54,29 @@ Rules:
 	dr|rules/structures-building.yaml
 	dr|rules/structures.yaml
 	dr|rules/structures-civilian.yaml
+	dr|rules/structures-addon.yaml
+	dr|rules/structures-ex.yaml
 	dr|rules/upgrades.yaml
 	dr|rules/ai.yaml
-	dr|rules/infantry.yaml
-	dr|rules/vehicles.yaml
-	dr|rules/aircraft.yaml
+	dr|rules/units.yaml
+	dr|rules/units-addon.yaml
+	dr|rules/units-ex.yaml
 	dr|rules/civilians.yaml
 	dr|rules/decorations.yaml
-	dr|rules/structures-addon.yaml
-	dr|rules/units-addon.yaml
-#	dr|rules/structures-ex.yaml
-#	dr|rules/aircraft-ex.yaml
-#	dr|rules/vehicles-ex.yaml
-#	dr|rules/infantry-ex.yaml
 
 Sequences:
 	dr|sequences/misc.yaml
 	dr|sequences/structures.yaml
 	dr|sequences/structures-civilian.yaml
+	dr|sequences/structures-addon.yaml
+	dr|sequences/structures-ex.yaml
 	dr|sequences/upgrades.yaml
-	dr|sequences/vehicles.yaml
-	dr|sequences/infantry.yaml
+	dr|sequences/units.yaml
+	dr|sequences/units-addon.yaml
+	dr|sequences/units-ex.yaml
 	dr|sequences/civilians.yaml
 	dr|sequences/effects.yaml
 	dr|sequences/decorations.yaml
-	dr|sequences/structures-addon.yaml
-	dr|sequences/units-addon.yaml
-#	dr|sequences/structures-ex.yaml
-#	dr|sequences/vehicles-ex.yaml
-#	dr|sequences/infantry-ex.yaml
 
 TileSets:
 	dr|tilesets/alien.yaml

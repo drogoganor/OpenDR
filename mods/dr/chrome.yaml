@@ -34,6 +34,8 @@ flags: buttons.png
 	fguard: 30,112,30,15
 	imperium: 0,112,30,15
 	Random: 60,112,30,15
+	RandomExpansion: 60,112,30,15
+	RandomAll: 60,112,30,15
 	togran: 90,112,30,15
 	xenite: 120,112,30,15
 	shadowhand: 150,112,30,15

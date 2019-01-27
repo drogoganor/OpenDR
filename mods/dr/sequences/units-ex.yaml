@@ -1,4 +1,170 @@
 
+# Xenite
+
+# Ranger
+uftrast0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 60
+	shoot:
+		Start: 56
+		Facings: 8
+		Length: 10
+		Tick: 100
+	idle:
+		Start: 48
+		Facings: 8
+	stand:
+		Start: 48
+		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 10, 4
+		ZOffset: -8192
+	icon: uftramn0
+
+# Gant
+ufganst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	shoot:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	idle:
+		Start: 160
+		Facings: 8
+		Length: 10
+		Tick: 60
+	stand:
+		Start: 160
+		Facings: 8
+		Length: 10
+		Tick: 60
+	turret: ufganac0
+		Start: 0
+		Facings: 8
+	icon: ufganmn0
+
+# Power striker
+unpwcst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 60
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 6
+		Tick: 100
+	idle:
+		Start: 112
+		Facings: 8
+		Length: 14
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 60
+	shadow: ucmensh0
+		Length: 1
+		Offset: 10, 3
+		ZOffset: -8192
+	icon: unpwcmn0
+
+# Grendel
+ufgrest0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	shoot:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	turret: ufgreac0 # ufgreac1
+		Start: 0
+		Facings: 8
+		AddExtension: False
+	icon: ufgremn0
+
+# Grendel Rider
+ufridst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	shoot:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	turret: ufridac0
+		Start: 0
+		Facings: 8
+		AddExtension: False
+	icon: ufridmn0
+
+# Shadowhand
+
+# Reaper
+uireast0:
+	Inherits: humansplat
+	run:
+		Facings: 8
+		Length: 8
+		Tick: 60
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 4
+		Tick: 60
+	idle:
+		Facings: 8
+		Length: 8
+		Tick: 60
+	stand:
+		Facings: 8
+		Length: 8
+		Tick: 60
+	icon: uireamn0
+
 # Rapid Armored Transport mk2
 ufrt2st0:
 	run:
@@ -45,6 +211,8 @@ ufomkst0:
 		Length: 4
 		Tick: 100
 	icon: ufomkmn0
+
+# Vehicles
 
 # Gemini tank
 uigemst1: # seems to transform into uigemst0, a slimmer version

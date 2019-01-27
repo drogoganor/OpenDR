@@ -7,45 +7,37 @@
 		Name: terrain
 		Filename: BARREN/BARREN.PAL
 		Tileset: BARREN
-		ShadowIndex: 161
 	PaletteFromDrFile@terrain-aust:
 		Name: terrain
 		Filename: aust.pal
 		Tileset: AUST
-		ShadowIndex: 3,4
 	PaletteFromDrFile@terrain-asteroid:
 		Name: terrain
 		Filename: asteroid.pal
 		Tileset: ASTEROID
-		ShadowIndex: 3,4
 	PaletteFromDrFile@terrain-alien:
 		Name: terrain
 		Filename: ALIEN/ALIEN.PAL
 		Tileset: ALIEN
-		ShadowIndex: 3,4
 	PaletteFromDrFile@terrain-auralien:
 		Name: terrain
 		Filename: auralien.pal
 		Tileset: AURALIEN
-		ShadowIndex: 3,4
 	PaletteFromDrFile@terrain-snow:
 		Name: terrain
 		Filename: SNOW/SNOW.PAL
 		Tileset: SNOW
-		ShadowIndex: 3,4
 	PaletteFromDrFile@terrain-volcanic:
 		Name: terrain
 		Filename: volcanic.pal
 		Tileset: VOLCANIC
-		ShadowIndex: 3,4
 	PaletteFromDrFile@terrain-jungle:
 		Name: terrain
 		Filename: JUNGLE/JUNGLE.PAL
 		Tileset: JUNGLE
-		ShadowIndex: 3,4
-	PaletteFromGimpOrJascFile@player:
+	PaletteFromDrFile@player:
 		Name: player
-		Filename: units.pal
+		Filename: BARREN/BARREN.PAL
 	PaletteFromGimpOrJascFile@chrome:
 		Name: chrome
 		Filename: units.pal
@@ -67,7 +59,7 @@
 		R: 0
 		G: 0
 		B: 0
-		A: 136
+		A: 112
 	PaletteFromRGBA@moveflash:
 		Name: moveflash
 		R: 255

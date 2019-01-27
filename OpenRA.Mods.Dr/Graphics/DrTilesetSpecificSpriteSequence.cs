@@ -33,13 +33,6 @@ namespace OpenRA.Mods.Dr.Graphics
 		public DrTilesetSpecificSpriteSequence(ModData modData, TileSet tileSet, SpriteCache cache, ISpriteSequenceLoader loader, string sequence, string animation, MiniYaml info)
 			: base(modData, tileSet, cache, loader, sequence, animation, info) { }
 
-		string ResolveTilesetId(TileSet tileSet, Dictionary<string, MiniYaml> d)
-		{
-			var tsId = tileSet.Id;
-
-			return tsId;
-		}
-
 		protected override string GetSpriteSrc(ModData modData, TileSet tileSet, string sequence, string animation, string sprite, Dictionary<string, MiniYaml> d)
 		{
 			var loader = (DrTilesetSpecificSpriteSequenceLoader)Loader;
@@ -48,13 +41,24 @@ namespace OpenRA.Mods.Dr.Graphics
 
             var validTilesetIds = new string[] { "BARREN", "JUNGLE", "SNOW" };
 
-            if (spriteName.StartsWith("tileset|") && !spriteName.EndsWith(".shp"))
+            if (!spriteName.EndsWith(".shp"))
             {
-                if (validTilesetIds.Contains(tileSet.Id))
-                    spriteName = spriteName.Replace("tileset", tileSet.Id.ToLower());
-                else
-                    spriteName = spriteName.Replace("tileset", "barren");
+                if (spriteName.StartsWith("tileset|"))
+                {
+                    if (validTilesetIds.Contains(tileSet.Id))
+                        spriteName = spriteName.Replace("tileset", tileSet.Id.ToLower());
+                    else
+                        spriteName = spriteName.Replace("tileset", "barren");
+                }
+                else if (spriteName.StartsWith("tilesetEx|"))
+                {
+                    if (validTilesetIds.Contains(tileSet.Id))
+                        spriteName = spriteName.Replace("tilesetEx", tileSet.Id.ToLower() + "Ex");
+                    else
+                        spriteName = spriteName.Replace("tilesetEx", "barrenEx");
+                }
             }
+
 
             if (LoadField(d, "AddExtension", true))
 			{

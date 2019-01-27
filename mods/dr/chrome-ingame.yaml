@@ -316,11 +316,10 @@ command-button-imperium-highlighted-disabled: chrome-ingame.png
 
 
 
-
 sidebar-xenite: chrome-ingame.png
-	background-top: 0,167,238,290
-	background-iconrow: 0,457,238,47
-	background-bottom: 0,504,238,8
+	background-top: 0,167,238,310
+	background-iconrow: 0,476,238,49
+	background-bottom: 0,527,238,6
 	background-supportoverlay: 0,75,64,48
 
 sidebar-button-xenite: chrome-ingame.png
@@ -421,13 +420,12 @@ command-button-xenite-disabled: chrome-ingame.png
 command-button-xenite-highlighted-disabled: chrome-ingame.png
 	background: 87,31,22,22
 
-
 sidebar-shadowhand: chrome-ingame.png
-	background-top: 274,167,238,290
-	background-iconrow: 274,457,238,47
-	background-bottom: 274,504,238,8
+	background-top: 274,167,238,310
+	background-iconrow: 274,476,238,49
+	background-bottom: 274,527,238,6
 	background-supportoverlay: 64,75,64,48
-
+	
 sidebar-button-shadowhand: chrome-ingame.png
 	background: 3,31,22,22
 	border-r: 25,31,3,22
@@ -526,11 +524,10 @@ command-button-shadowhand-disabled: chrome-ingame.png
 command-button-shadowhand-highlighted-disabled: chrome-ingame.png
 	background: 31,31,22,22
 
-
 sidebar-togran: chrome-ingame.png
-	background-top: 0,167,238,290
-	background-iconrow: 0,457,238,47
-	background-bottom: 0,504,238,8
+	background-top: 0,167,238,310
+	background-iconrow: 0,476,238,49
+	background-bottom: 0,527,238,6
 	background-supportoverlay: 0,75,64,48
 
 sidebar-button-togran: chrome-ingame.png
@@ -630,6 +627,7 @@ command-button-togran-disabled: chrome-ingame.png
 	background: 59,31,22,22
 command-button-togran-highlighted-disabled: chrome-ingame.png
 	background: 87,31,22,22
+
 
 # In-game observer
 

@@ -25,28 +25,38 @@
 		Side: Original
 		Description:
 	Faction@2:
-		Name: Togran
-		InternalName: togran
-		Side: Original
-		Description:
-		Selectable: False
+		Name: Any
+		InternalName: Random
+		RandomFactionMembers: fguard, imperium
+		Description: Random Faction\nA random faction will be chosen when the game starts.
 	Faction@3:
 		Name: Xenite
 		InternalName: xenite
 		Side: Expansion
 		Description:
-		Selectable: False
 	Faction@4:
 		Name: Shadowhand
 		InternalName: shadowhand
 		Side: Expansion
 		Description:
-		Selectable: False
 	Faction@5:
-		Name: Any
-		InternalName: Random
-		RandomFactionMembers: fguard, imperium
+		Name: Any (Expansion)
+		InternalName: RandomExpansion
+		Side: Expansion
+		RandomFactionMembers: xenite, shadowhand
 		Description: Random Faction\nA random faction will be chosen when the game starts.
+	Faction@6:
+		Name: Any (All)
+		InternalName: RandomAll
+		Side: Expansion
+		RandomFactionMembers: fguard, imperium, xenite, shadowhand
+		Description: Random Faction\nA random faction will be chosen when the game starts.
+	Faction@7:
+		Name: Togran
+		InternalName: togran
+		Side: Original
+		Description:
+		Selectable: False
 	ResourceType@water:
 		Type: SpringWater
 		Name: Water Spring

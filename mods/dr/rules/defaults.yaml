@@ -237,6 +237,74 @@
 	MapEditorData:
 		Categories: Civilian
 
+# Aircraft
+
+^DrPlane:
+	Inherits@1: ^ExistsInWorld
+	Inherits@4: ^SpriteActor
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 220
+		Prerequisites: ~barracks, ~techlevel.infonly
+	Huntable:
+	AppearsOnRadar:
+		UseLocation: true
+	SelectionDecorations:
+	#WithSpriteControlGroupDecoration:
+	Selectable:
+		Bounds: 24,24
+		DecorationBounds: 26,24
+	WithShadow:
+		Offset: 111, 64, 0
+		ZOffset: -129
+	Aircraft:
+		AirborneCondition: airborne
+		InitialFacing: 224 # helicopter
+		TurnSpeed: 15
+		Speed: 200
+		LandableTerrainTypes:
+		LandWhenIdle: false
+		AltitudeVelocity: 0c58
+		CanHover: True
+		#CruisingCondition: cruising
+		WaitDistanceFromResupplyBase: 4c0
+		TakeOffOnResupply: true
+		VTOL: true
+		#LandAltitude: 1
+	Targetable@GROUND:
+		TargetTypes: Ground, Repair, Vehicle
+		RequiresCondition: !airborne
+	Targetable@AIRBORNE:
+		TargetTypes: Air
+		RequiresCondition: airborne
+	HiddenUnderFog:
+		Type: CenterPosition
+	RevealsShroud:
+		Range: 14c0
+		Type: CenterPosition
+	AttackMove:
+	Guard:
+	Guardable:
+	ActorLostNotification:
+		Notification: UnitLost
+	ProximityCaptor:
+		Types: Plane
+	Tooltip:
+		GenericName: Plane
+	WithFacingSpriteBody:
+	HitShape:
+	MapEditorData:
+		Categories: Aircraft
+	Explodes:
+		Weapon: GenericExplode
+		EmptyWeapon: GenericExplode
+		RequiresCondition: !airborne
+	Repairable:
+		RepairBuildings: repair.human, repair.cyborg
+	Rearmable:
+		RearmActors: rearmingdeck.human, rearmingdeck.cyborg
+
 # Buildings
 # There are two versions of each building, named "[Building].Constructing" and "[Building]".
 # The .Constructing buildings have a SelfConstructing trait that turns the building into a new actor once built.

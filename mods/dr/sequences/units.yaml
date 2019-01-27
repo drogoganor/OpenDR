@@ -1,16 +1,360 @@
-# Construction Rig
-ucfcnst0:
+
+# Raider
+ufradst0:
+	Inherits: humansplat
+	run:
+		Combine:
+			ufradst0:
+				Length: 96
+			ufradsh0:
+				Length: 96
+		Facings: 16
+		Length: 6
+		Tick: 25
+		ShadowStart: 96
+	shoot:
+		Combine:
+			ufradst0:
+				Start: 96
+				Length: 32
+			ufradsh0:
+				Start: 96
+				Length: 32
+		Facings: 16
+		Length: 2
+		Tick: 25
+	idle:
+		Combine:
+			ufradst0:
+				Start: 128
+				Length: 112
+			ufradsh0:
+				Start: 128
+				Length: 112
+		Facings: 16
+		Length: 7
+		Tick: 60
+		ShadowStart: 112
+	stand:
+		Combine:
+			ufradst0:
+				Start: 240
+				Length: 16
+			ufradsh0:
+				Start: 240
+				Length: 16
+		Facings: 16
+		Length: 1
+		ShadowStart: 16
+	icon: ufradmn0
+
+# Mercenary
+ufmrcst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 16
+		Length: 6
+		Tick: 25
+	shoot:
+		Start: 96
+		Facings: 16
+		Length: 2
+		Tick: 25
+	idle:
+		Start: 128
+		Facings: 16
+		Length: 5
+		Tick: 60
+	idle2:
+		Start: 208
+		Facings: 16
+		Length: 5
+		Tick: 60
+	stand:
+		Start: 288
+		Facings: 16
+	shadow: ucmensh0
+		Length: 1
+		Offset: 9, 8
+		ZOffset: -8192
+	icon: ufmrcmn0
+
+# Sniper
+ufsnpst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 24
+		Length: 6
+		Tick: 100
+	shoot:
+		Start: 144
+		Facings: 24
+		Length: 4
+		Tick: 100
+	idle2:
+		Start: 240
+		Facings: 24
+		Length: 10
+		Tick: 100
+	stand:
+		Start: 480
+		Facings: 24
+	shadow: ucmensh0
+		Length: 1
+		Offset: 9, 4
+		ZOffset: -8192
+	icon: ufsnpmn0
+
+# Scout
+ufsctst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 88
+		Facings: 8
+		Length: 8
+		Tick: 100
+	stand:
+		Start: 152
+		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 9, 7
+		ZOffset: -8192
+	icon: ufsctmn0
+
+# Field Medic
+ufmedst0:
+	Inherits: humansplat
 	run:
 		Start: 0
 		Facings: 8
 		Length: 6
-		Tick: 60
-	stand:
+		Tick: 100
+	shoot:
 		Start: 48
 		Facings: 8
+		Length: 10
+		Tick: 100
 	idle:
+		Start: 128
+		Facings: 8
+		Length: 6
+		Tick: 100
+	stand:
+		Start: 176
+		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 10, 3
+		ZOffset: -8192
+	icon: ufmedmn0
+
+# Mechanic
+ufmecst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 8
+		Tick: 100
+	shoot2:
+		Start: 128
+		Facings: 8
+		Length: 8
+		Tick: 100
+	idle:
+		Start: 192
+		Facings: 8
+	stand:
+		Start: 192
+		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 10, 2
+		ZOffset: -8192
+	icon: ufmecmn0
+	icon-saboteur: ufsabmn0
+
+# Martyr
+ufmtrst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 100
+	shoot:
 		Start: 48
 		Facings: 8
+		Length: 16
+		Tick: 100
+	idle:
+		Start: 176
+		Facings: 8
+		Length: 4
+		Tick: 100
+	stand:
+		Start: 202
+		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 9, 3
+		ZOffset: -8192
+	icon: ufmtrmn0
+
+# Infiltrator
+ucinfst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	idle:
+		Start: 64
+		Facings: 8
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 64
+		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 9, 4
+		ZOffset: -8192
+	icon: ucinfmn0
+
+# Imperium
+
+# Guardian
+uigrdst0:
+	Inherits: aliensplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 100
+	shoot:
+		Start: 48
+		Facings: 8
+		Length: 2
+		Tick: 100
+	idle:
+		Start: 64
+		Facings: 8
+	stand:
+		Start: 64
+		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 10, 3
+		ZOffset: -8192
+	icon: uigrdmn0
+
+# Bion
+uibonst0:
+	Inherits: aliensplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 88
+		Facings: 8
+		Length: 8
+		Tick: 100
+	idle2:
+		Start: 152
+		Facings: 8
+		Length: 6
+		Tick: 100
+	stand:
+		Start: 200
+		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 9, 7
+		ZOffset: -8192
+	icon: uibonmn0
+
+# Exterminator
+uiextst0:
+	Inherits: aliensplat
+	run:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 16
+		Facings: 16
+		Length: 2
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
+	icon: uiextmn0
+
+# Vehicles
+
+# Construction Rig
+ucfcnst0:
+	run:
+		Combine:
+			ucfcnst0:
+				Length: 48
+			ucfcnsh0:
+				Length: 48
+		Facings: 8
+		Length: 6
+		Tick: 60
+		ShadowStart: 48
+	stand:
+		Combine:
+			ucfcnst0:
+				Start: 48
+				Length: 8
+			ucfcnsh0:
+				Start: 48
+				Length: 8
+		Facings: 8
+		Length: 1
+		ShadowStart: 8
+	idle:
+		Combine:
+			ucfcnst0:
+				Start: 48
+				Length: 8
+			ucfcnsh0:
+				Start: 48
+				Length: 8
+		Facings: 8
+		Length: 1
+		ShadowStart: 8
 	icon: ucfcnmn0
 
 # Freighter
@@ -78,21 +422,48 @@ uchfrst0:
 # Spider Bike
 ufspbst0:
 	idle:
-		Start: 64
+		Combine:
+			ufspbst0:
+				Start: 64
+				Length: 16
+			ufspbsh0:
+				Start: 64
+				Length: 16
 		Facings: 16
+		ShadowStart: 16
 	run:
-		Start: 0
+		Combine:
+			ufspbst0:
+				Length: 48
+			ufspbsh0:
+				Length: 48
 		Facings: 16
 		Length: 3
 		Tick: 100
+		ShadowStart: 48
 	shoot:
-		Start: 48
+		Combine:
+			ufspbst0:
+				Start: 48
+				Length: 16
+			ufspbsh0:
+				Start: 48
+				Length: 16
 		Facings: 16
 		Length: 1
 		Tick: 100
+		ShadowStart: 16
 	stand:
-		Start: 64
+		Combine:
+			ufspbst0:
+				Start: 64
+				Length: 16
+			ufspbsh0:
+				Start: 64
+				Length: 16
 		Facings: 16
+		Length: 1
+		ShadowStart: 16
 	icon: ufspbmn0
 
 # Rapid Armored Transport
@@ -360,7 +731,6 @@ ufphrst0:
 		Length: 3
 		Tick: 100
 	icon: ufphrmn0
-
 
 # Scout Runner
 uisttst0:

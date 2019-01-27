@@ -1,4 +1,419 @@
 
+Raider:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: ufradst0
+	Tooltip:
+		Name: Raider
+	Buildable:
+		Description: Stalwart of the Freedom Guard cause, the Raider is\narmed with a laser rifle. Once the Phasing Facility\nis constructed, the Raider gains the ability to\nphase underground.
+		Prerequisites: ~infantry.human
+		BuildPaletteOrder: 10
+		BuildDuration: 6
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: FreedomGuardVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+
+Mercenary:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: ufmrcst0
+	Tooltip:
+		Name: Mercenary
+	Buildable:
+		Description: Recruited from outside the Freedom Guard ranks,\nthese paid guns carry a massive shoulder-mounted\nrail gun. Highly trained and ruthless, the Mercenary\nis tougher and deadlier than the Raider.
+		Prerequisites: ~infantry.fguard
+		BuildPaletteOrder: 10
+		BuildDuration: 11
+	Selectable:
+		Class: E2
+	Voiced:
+		VoiceSet: MercVoice
+	Valued:
+		Cost: 300
+	Health:
+		HP: 125
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		Weapon: RailGun
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+Sniper:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: ufsnpst0
+	Tooltip:
+		Name: Sniper
+	Buildable:
+		Description: With a long range electro magnetic needle gun, the\nSniper is lethal against infantry targets. Like the\nScout, the Sniper can morph into objects for\ncamouflage.
+		Prerequisites: ~infantry.human, hq, upgrade.hq1, vehicles, barracks, upgrade.barracks1
+		BuildPaletteOrder: 10
+		BuildDuration: 21
+	Selectable:
+		Class: E3
+	Voiced:
+		VoiceSet: SniperVoice
+	Valued:
+		Cost: 700
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 12c0
+	Mobile:
+		Speed: 144
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		Weapon: SniperRifle
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+Scout:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: ufsctst0
+	Tooltip:
+		Name: Scout
+	Buildable:
+		Description: Used mainly for front line surveillance, the Scout\nis able to morph into inanimate objects such as\ntrees and rocks to conceal her position. The Scout\nis relatively fast but wears no body armour, so\ncombat is not her speciality.
+		Prerequisites: ~infantry.human
+		BuildPaletteOrder: 20
+		BuildDuration: 9
+	Selectable:
+		Class: E4
+	Voiced:
+		VoiceSet: ScoutVoice
+	Valued:
+		Cost: 300
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 12c0
+	Mobile:
+		Speed: 144
+	Armor:
+		Type: ToughHuman
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+Medic:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: ufmedst0
+	Tooltip:
+		Name: Field Medic
+	Buildable:
+		Description: The Field Medic can restore the health of wounded\ninfantry units and administer an antitoxin to\ncounteract the effects of the Amper. The Field Medic\nwill automatically heal damaged units that are nearby\nor can be directed to heal a specific unit. The\nField Medic has no attack capability and does not\nwear body armour.
+		Prerequisites: ~infantry.human, hospital
+		BuildPaletteOrder: 20
+		BuildDuration: 15
+	Selectable:
+		Class: E5
+	Voiced:
+		VoiceSet: MedicVoice
+	Valued:
+		Cost: 500
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		Weapon: Heal
+		Cursor: heal
+		OutsideRangeCursor: heal
+		TargetStances: Ally
+		ForceTargetStances: None
+	AutoTarget:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Infantry
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+Saboteur:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: ufmecst0
+	Tooltip:
+		Name: Saboteur
+	Buildable:
+		Description: The Saboteur can damage any building to half its\nmaximum health.
+		Prerequisites: ~infantry.fguard, hq, upgrade.hq1, vehicles, barracks, upgrade.barracks1
+		BuildPaletteOrder: 20
+		BuildDuration: 24
+		Icon: icon-saboteur
+	Selectable:
+		Class: E6
+	Voiced:
+		VoiceSet: MechanicVoice
+	Valued:
+		Cost: 800
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 144
+	Armor:
+		Type: ToughHuman
+	EngineerRepair:
+	CaptureManager:
+	Captures:
+		CaptureTypes: building
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+Mechanic:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: ufmecst0
+	Tooltip:
+		Name: Mechanic
+	Buildable:
+		Description: The Mechanic functions similarly to the Field Medic,\nrepairing damaged vehicles in the field. The Mechanic\nhas no attack capability.
+		Prerequisites: ~infantry.human, vehicles, repair
+		BuildPaletteOrder: 30
+		BuildDuration: 15
+	Selectable:
+		Class: E7
+	Voiced:
+		VoiceSet: MechanicVoice
+	Valued:
+		Cost: 500
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 144
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		Weapon: Repair
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetStances: Ally
+		ForceTargetStances: None
+	AutoTarget:
+	AutoTargetPriority@DEFAULT:
+		ValidTargets: Vehicle
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+Martyr:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: ufmtrst0
+	Tooltip:
+		Name: Martyr
+	Buildable:
+		Description: Freedom Guard soldiers who are approaching their\n25th birthday, and therefore certain death, are\noutfitted with a high-powered explosive device and\nthen sent screaming into the enemy to die for the\ncause. Sometimes soldiers not popular with their\ncommanding officers are "volunteered" for this service\nbefore their 25th birthday.
+		Prerequisites: ~infantry.fguard
+		BuildPaletteOrder: 30
+		BuildDuration: 18
+	Selectable:
+		Class: E8
+	Voiced:
+		VoiceSet: MartyrVoice
+	Valued:
+		Cost: 600
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 192
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		Weapon: SuicideNuke
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+		ScanRadius: 5
+	Explodes:
+		Weapon: SuicideNuke
+		EmptyWeapon: SuicideNuke
+		DamageSource: Killer
+	AttackSuicides:
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+Guardian:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: uigrdst0
+	Tooltip:
+		Name: Guardian
+	Buildable:
+		Description: Known as the Guardians of Order in the peaceful era\nbefore the Freedom Guard uprising, the basic Imperium\ninfantry unit is armed with a laser rifle and wears\na powered armour suit.
+		Prerequisites: ~infantry.imperium
+		BuildPaletteOrder: 10
+		BuildDuration: 6
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: ImperiumVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: PowerHuman
+	Armament@PRIMARY:
+		Weapon: LaserRifle
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+Bion:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: uibonst0
+	#Inherits@AUTOTARGET: ^AutoTargetAll
+	Tooltip:
+		Name: Bion
+	Buildable:
+		Description: A fearless mechanical killer, the Bion is armoured\nlike a walking tank. This one-man cyborg death\nsquad carries a massive plasma rifle, and can fire\nat both ground and air units.
+		Prerequisites: ~infantry.cyborg
+		BuildPaletteOrder: 20
+		BuildDuration: 12
+	Selectable:
+		Class: E2
+	Voiced:
+		VoiceSet: ImperiumBionVoice
+	Valued:
+		Cost: 350
+	Health:
+		HP: 150
+	-Crushable:
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 72
+	Armor:
+		Type: PowerHuman
+	Armament@PRIMARY:
+		Weapon: PlasmaRifle
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+Exterminator:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: uiextst0
+	Tooltip:
+		Name: Exterminator
+	Buildable:
+		Description: These infantry units are equipped with anti-gravity\ngenerators which allow them to hover over water.\nAs infantry, they can also move over steep gradients\nthat are generally inaccessible to hover vehicles.\nExterminators are armed with chemical grenades that\ndissolve metal. They are very effective at attacking\narmour.
+		Prerequisites: ~infantry.cyborg, hq, upgrade.hq1, barracks, vehicles, upgrade.assemblyplant1
+		BuildPaletteOrder: 30
+		BuildDuration: 15
+	Selectable:
+		Class: E9
+	Voiced:
+		VoiceSet: ExterminatorVoice
+	Valued:
+		Cost: 500
+	WithShadow:
+		Offset: 111, 64, 0
+		ZOffset: -129
+	Health:
+		HP: 75
+	-Crushable:
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 192
+	Armor:
+		Type: PowerHuman
+	Armament@PRIMARY:
+		Weapon: PolyAcid
+	Hovers:
+
+Infiltrator:
+	Inherits: ^DrSoldier
+	RenderSprites:
+		Image: ucinfst0
+	Buildable:
+		Description: The Infiltrator can morph into enemy infantry and\nis able to steal plans for enemy units and buildings.\nThe unit can also observe the opponent’s Minimap\nat the HQ building. Plans for units are obtained\nat the building where that unit is produced. The\nInfiltrator must return safely to his own HQ with\nall stolen plans.
+		BuildPaletteOrder: 40
+		BuildDuration: 30
+		Prerequisites: hq, upgrade.hq1, vehicles, barracks, upgrade.barracks1
+	Selectable:
+		Class: E10
+	Voiced:
+		VoiceSet: InfiltratorVoice
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 144
+	Armor:
+		Type: ToughHuman
+	Disguise:
+		DisguisedCondition: disguise
+	-Tooltip:
+	DisguiseTooltip:
+		Name: Infiltrator
+		GenericName: Soldier
+	-Guard:
+	Infiltrates:
+		ValidStances: Enemy
+		Types: SpyInfiltrate
+		PlayerExperience: 50
+		Notification: BuildingInfiltrated
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+		ScanRadius: 5
+	-WithInfantryBody:
+	WithDisguisingInfantryBody:
+		DefaultAttackSequence: shoot
+		IdleSequences: idle
+		StandSequences: stand
+	WithDecoration@disguise:
+		Image: pips
+		Sequence: pip-blue
+		Palette: effect
+		ReferencePoint: Top, Right
+		ZOffset: 256
+		RequiresCondition: disguise
+	IgnoresDisguise:
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+# Vehicles
+
 ConstructionRig:
 	Inherits: ^DrAnimatedVehicle
 	RenderSprites:
@@ -101,6 +516,9 @@ Freighter:
 		SearchFromProcRadius: 30
 		SearchFromOrderRadius: 11
 	-Armament:
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 HoverFreighter:
 	Inherits: ^DrHoverAnimatedVehicle
@@ -200,6 +618,9 @@ RAT:
 	Armor:
 		Type: TankPlating
 	-Armament:
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 SkirmishTank:
 	Inherits: ^DrAnimatedVehicle
@@ -237,6 +658,9 @@ SkirmishTank:
 		Speed: 192
 	Armor:
 		Type: TankPlating
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 TankHunter:
 	Inherits: ^DrAnimatedVehicle
@@ -265,6 +689,9 @@ TankHunter:
 		Type: TankPlating
 	Armament:
 		Weapon: TankHunterGun
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 PhaseTank:
 	Inherits: ^DrAnimatedVehicle
@@ -293,6 +720,9 @@ PhaseTank:
 		Type: TankPlating
 	Armament:
 		Weapon: PhaseTankCannon
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 FlakJack:
 	Inherits: ^DrAnimatedVehicle
@@ -322,6 +752,9 @@ FlakJack:
 		Type: TankPlating
 	Armament:
 		Weapon: Chaff
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 TripleRailHoverTank:
 	Inherits: ^DrHoverAnimatedVehicle
@@ -387,6 +820,9 @@ HellstormArtillery:
 		Type: TankPlating
 	Armament:
 		Weapon: ArtilleryShell
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 ShockWave:
 	Inherits: ^DrAnimatedVehicle
@@ -424,6 +860,9 @@ ShockWave:
 	-AttackFrontal:
 	AttackTurreted:
 	WithSpriteTurret:
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 WaterContaminator:
 	Inherits: ^DrAnimatedVehicle
@@ -450,6 +889,9 @@ WaterContaminator:
 		Speed: 48
 	Armor:
 		Type: TankPlating
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 # Phase Runner
 PhaseRunner:
@@ -484,6 +926,9 @@ PhaseRunner:
 	Armor:
 		Type: TankPlating
 	-Armament:
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 # Imperium
 
@@ -615,6 +1060,9 @@ Amper:
 		Type: TankPlating
 	Armament:
 		Weapon: AmperAmp
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 MAD:
 	Inherits: ^DrHoverAnimatedVehicle
@@ -698,6 +1146,9 @@ HostageTaker:
 		Speed: 240
 	Armor:
 		Type: TankPlating
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 TachionTank:
 	Inherits: ^DrHoverAnimatedVehicle
@@ -754,3 +1205,171 @@ Scarab:
 		Type: TankPlating
 	Armament:
 		Weapon: IMPArtilleryShell
+
+# Aircraft
+
+SkyBike:
+	Inherits: ^DrPlane
+	RenderSprites:
+		Image: ufskbst0
+	Tooltip:
+		Name: Sky Bike
+	Buildable:
+		Description: Using a modified Spider Bike chassis, the Freedom\nGuard were able to produce cheap, fast aerial units\nwhich could attack enemy ground troops and other\nflyers. Although quicker than the Imperium Cyclone,\nthe Sky Bike is not as heavily armoured and is\noutgunned in even combat. The speed of the Sky Bike,\nhowever, allows it to dictate the circumstance of\nconflict. This unit fires high-velocity mini-missiles\nand, like the Outrider, must re-arm at the Re-Arming\nDeck.
+		Prerequisites: ~vehicles.human, air, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
+		BuildPaletteOrder: 120
+		BuildDuration: 24
+	Voiced:
+		VoiceSet: AirUnitVoice
+	Valued:
+		Cost: 800
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 9c0
+	Armor:
+		Type: FlyingArmour
+	Armament:
+		Weapon: BkLaser
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 20
+		PipCount: 5
+		PipType: Red
+		AmmoCondition: ammo
+		ReloadDelay: 10 # Hack attribute to be removed, see AmmoPool.cs
+	Aircraft:
+		Speed: 336
+	AttackAircraft:
+		FacingTolerance: 20
+
+Outrider:
+	Inherits: ^DrPlane
+	RenderSprites:
+		Image: ufoutst0
+	Tooltip:
+		Name: Outrider
+	Buildable:
+		Description: This ground attack aerial unit is slower and less\nmanoeuvrable than the Sky Bike, but considerably\ntougher and fires air to ground missiles. Deadly\neffective against Imperium armour, it cannot engage\nother air units and should be escorted by air defence\nunits. The Outrider has limited ammunition and must\nre-arm at the Re-Arming Deck.
+		Prerequisites: ~vehicles.fguard, air, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
+		BuildPaletteOrder: 120
+		BuildDuration: 42
+	Voiced:
+		VoiceSet: AirUnitVoice
+	Valued:
+		Cost: 1400
+	Health:
+		HP: 200
+	RevealsShroud:
+		Range: 9c0
+	Armor:
+		Type: FlyingArmour
+	Armament:
+		Weapon: OutriderMissile
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 10
+		PipCount: 5
+		PipType: Red
+		AmmoCondition: ammo
+		ReloadDelay: 20 # Hack attribute to be removed, see AmmoPool.cs
+	Aircraft:
+		Speed: 288
+	AttackAircraft:
+		FacingTolerance: 20
+
+ReconDrone:
+	Inherits: ^DrPlane
+	RenderSprites:
+		Image: uirdrst0
+	Tooltip:
+		Name: Recon Drone
+	Buildable:
+		Description: This small unmanned drone is lightly armoured and\nhas no offensive capability. It is used solely to\nscout enemy targets.
+		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1
+		BuildPaletteOrder: 150
+		BuildDuration: 12
+	Voiced:
+		VoiceSet: ReconDroneVoice
+	Valued:
+		Cost: 400
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 9c0
+	Armor:
+		Type: FlyingArmour
+	Aircraft:
+		Speed: 192
+	AttackAircraft:
+		FacingTolerance: 20
+
+Cyclone:
+	Inherits: ^DrPlane
+	RenderSprites:
+		Image: uicycst0
+	Tooltip:
+		Name: Cyclone
+	Buildable:
+		Description: The Cyclone embodies the core of the Imperium aerial\nforce. The unit is fairly rugged and can engage both\nair and ground units. However, the Cyclone’s neutron\ncannon has a limited energy source and must recharge\nat the Re-Arming Deck.
+		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
+		BuildPaletteOrder: 160
+		BuildDuration: 45
+	Voiced:
+		VoiceSet: CycloneVoice
+	Valued:
+		Cost: 1500
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 9c0
+	Armor:
+		Type: FlyingArmour
+	Armament:
+		Weapon: CycloneCannon
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 5
+		PipCount: 5
+		PipType: Red
+		AmmoCondition: ammo
+		ReloadDelay: 40 # Hack attribute to be removed, see AmmoPool.cs
+	Aircraft:
+		Speed: 288
+	AttackAircraft:
+		FacingTolerance: 20
+
+SkyFortress:
+	Inherits: ^DrPlane
+	RenderSprites:
+		Image: uiskyst0
+	Tooltip:
+		Name: Sky Fortress
+	Buildable:
+		Description: Death from above. This floating platform of wreckage\nhouses the largest plasma cannon known to humanity.\nIt's slow to recharge but makes a lasting impact.
+		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
+		BuildPaletteOrder: 160
+		BuildDuration: 75
+	Voiced:
+		VoiceSet: SkyFortressVoice
+	Valued:
+		Cost: 2500
+	Health:
+		HP: 266
+	RevealsShroud:
+		Range: 9c0
+	Armor:
+		Type: FlyingArmour
+	Armament:
+		Weapon: SkyFortressWeapon
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 1
+		PipCount: 1
+		PipType: Red
+		AmmoCondition: ammo
+		ReloadDelay: 200 # Hack attribute to be removed, see AmmoPool.cs
+	Aircraft:
+		Speed: 120
+	AttackAircraft:
+		FacingTolerance: 20
