@@ -343,11 +343,11 @@ RoadTerraformer:
 		Image: uiterst0
 	Tooltip:
 		Name: Road Terraformer
-	Buildable:
-		Description: When detonated, transforms the terrain within the\nblast radius to Road.
-		Prerequisites: ~vehicles, hq, barracks
-		BuildPaletteOrder: 150
-		BuildDuration: 39
+	-Buildable:
+	#	Description: When detonated, transforms the terrain within the\nblast radius to Road.
+	#	Prerequisites: ~vehicles, hq, barracks
+	#	BuildPaletteOrder: 150
+	#	BuildDuration: 39
 	Voiced:
 		VoiceSet: TerraformerVoice
 	Valued:
@@ -372,11 +372,11 @@ MarshTerraformer:
 		Image: uiterst1
 	Tooltip:
 		Name: Marsh Terraformer
-	Buildable:
-		Description: When detonated, transforms the terrain within the\nblast radius to Marsh.
-		Prerequisites: ~vehicles, hq, barracks
-		BuildPaletteOrder: 150
-		BuildDuration: 39
+	-Buildable:
+	#	Description: When detonated, transforms the terrain within the\nblast radius to Marsh.
+	#	Prerequisites: ~vehicles, hq, barracks
+	#	BuildPaletteOrder: 150
+	#	BuildDuration: 39
 	Voiced:
 		VoiceSet: TerraformerVoice
 	Valued:
