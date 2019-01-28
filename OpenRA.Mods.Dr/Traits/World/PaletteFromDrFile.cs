@@ -34,13 +34,19 @@ namespace OpenRA.Mods.Dr.Traits
 		[Desc("filename to load")]
 		public readonly string Filename = null;
 
-		[Desc("Map listed indices to shadow. Ignores previous color.")]
-		public readonly int[] ShadowIndex = { };
+		[Desc("Map listed index to shadow. Ignores previous color.")]
+		public readonly int ShadowIndex = 47;
 
 		public readonly bool AllowModifiers = true;
 
         [Desc("Whether this palette is available for cursors.")]
         public readonly bool CursorPalette = false;
+
+        [Desc("Multiply palette values by this ( < 160).")]
+        public readonly int StandardPaletteMultiplier = 4;
+
+        [Desc("Multiply terrain palette values by this ( >= 160).")]
+        public readonly int TerrainPaletteMultiplier = 4;
 
         public object Create(ActorInitializer init) { return new PaletteFromDrFile(init.World, this); }
 
@@ -92,29 +98,23 @@ namespace OpenRA.Mods.Dr.Traits
             var gList = list.Skip(256).Take(256).ToList();
             var bList = list.Skip(512).Take(256).ToList();
 
-            int standardMultiplier = 4;
-            int terrainMultiplier = 4; // 6: jungle, barren   5 possibly: aust, auralien, asteroid   4: all others
-
-            // Nasty hack to brighten dark palettes
-            var lowerFilename = info.Filename.ToLowerInvariant();
-            if (lowerFilename.Contains("jungle") || lowerFilename.Contains("barren")) // Or asteroid
-                terrainMultiplier = 6;
-            else if (lowerFilename.Contains("aust") || lowerFilename.Contains("auralien") || lowerFilename.Contains("asteroid"))
-                terrainMultiplier = 5;
-
             for (int i = 0; i < Palette.Size; i++)
             {
                 // Index 0 should always be completely transparent/background color
                 if (i == 0)
                     colors[i] = 0;
                 else if (i < 160 || i == 255)
-                    colors[i] = (uint)Color.FromArgb(rList[i] * standardMultiplier, gList[i] * standardMultiplier, bList[i] * standardMultiplier).ToArgb();
+                    colors[i] = (uint)Color.FromArgb(rList[i] * info.StandardPaletteMultiplier,
+                        gList[i] * info.StandardPaletteMultiplier,
+                        bList[i] * info.StandardPaletteMultiplier).ToArgb();
                 else
-                    colors[i] = (uint)Color.FromArgb(rList[i] * terrainMultiplier, gList[i] * terrainMultiplier, bList[i] * terrainMultiplier).ToArgb();
+                    colors[i] = (uint)Color.FromArgb(rList[i] * info.TerrainPaletteMultiplier,
+                        gList[i] * info.TerrainPaletteMultiplier,
+                        bList[i] * info.TerrainPaletteMultiplier).ToArgb();
             }
 
             // Shadow hack
-            colors[47] = (uint)Color.FromArgb(112, 0, 0, 0).ToArgb();
+            colors[info.ShadowIndex] = (uint)Color.FromArgb(112, 0, 0, 0).ToArgb();
 
             return new ImmutablePalette(colors);
         }

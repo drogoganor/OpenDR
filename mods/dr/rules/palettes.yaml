@@ -7,37 +7,64 @@
 		Name: terrain
 		Filename: BARREN/BARREN.PAL
 		Tileset: BARREN
+		ShadowIndex: 47
+		StandardPaletteMultiplier: 4
+		TerrainPaletteMultiplier: 6
 	PaletteFromDrFile@terrain-aust:
 		Name: terrain
 		Filename: aust.pal
 		Tileset: AUST
+		ShadowIndex: 47
+		StandardPaletteMultiplier: 4
+		TerrainPaletteMultiplier: 5
 	PaletteFromDrFile@terrain-asteroid:
 		Name: terrain
 		Filename: asteroid.pal
 		Tileset: ASTEROID
+		ShadowIndex: 47
+		StandardPaletteMultiplier: 4
+		TerrainPaletteMultiplier: 5
 	PaletteFromDrFile@terrain-alien:
 		Name: terrain
 		Filename: ALIEN/ALIEN.PAL
 		Tileset: ALIEN
+		ShadowIndex: 47
+		StandardPaletteMultiplier: 4
+		TerrainPaletteMultiplier: 4
 	PaletteFromDrFile@terrain-auralien:
 		Name: terrain
 		Filename: auralien.pal
 		Tileset: AURALIEN
+		ShadowIndex: 47
+		StandardPaletteMultiplier: 4
+		TerrainPaletteMultiplier: 5
 	PaletteFromDrFile@terrain-snow:
 		Name: terrain
 		Filename: SNOW/SNOW.PAL
 		Tileset: SNOW
+		ShadowIndex: 47
+		StandardPaletteMultiplier: 4
+		TerrainPaletteMultiplier: 4
 	PaletteFromDrFile@terrain-volcanic:
 		Name: terrain
 		Filename: volcanic.pal
 		Tileset: VOLCANIC
+		ShadowIndex: 47
+		StandardPaletteMultiplier: 4
+		TerrainPaletteMultiplier: 4
 	PaletteFromDrFile@terrain-jungle:
 		Name: terrain
 		Filename: JUNGLE/JUNGLE.PAL
 		Tileset: JUNGLE
+		ShadowIndex: 47
+		StandardPaletteMultiplier: 4
+		TerrainPaletteMultiplier: 6
 	PaletteFromDrFile@player:
 		Name: player
 		Filename: BARREN/BARREN.PAL
+		ShadowIndex: 47
+		StandardPaletteMultiplier: 4
+		TerrainPaletteMultiplier: 6
 	PaletteFromGimpOrJascFile@chrome:
 		Name: chrome
 		Filename: units.pal

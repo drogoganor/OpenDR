@@ -423,6 +423,7 @@
 	CaptureManager:
 	Capturable:
 		Types: building
+	Sellable:
 	SelectionDecorations:
 	ProximityCaptor:
 		Types: Building
