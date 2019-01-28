@@ -238,6 +238,7 @@ World:
 		PanelName: SKIRMISH_STATS
 	RadarPings:
 	LoadWidgetAtGameStart:
+		ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
 
 EditorWorld:
 	Inherits: ^BaseWorld

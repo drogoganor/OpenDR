@@ -62,6 +62,7 @@
     <Compile Include="UtilityCommands\ImportDrMapCommand.cs" />
     <Compile Include="Widgets\BuildSelectPaletteWidget.cs" />
     <Compile Include="Widgets\Logic\Ingame\BuildingPickerLogic.cs" />
+    <Compile Include="Widgets\Logic\PreReleaseWarningPrompt.cs" />
     <Compile Include="Widgets\Logic\ProductionTabsWithRowsAndFooterLogic.cs" />
     <Compile Include="Widgets\ProductionTabsWithRowsAndFooterWidget.cs" />
   </ItemGroup>

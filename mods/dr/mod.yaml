@@ -106,6 +106,7 @@ ChromeLayout:
 	dr|chrome/ingame-observer.yaml
 	dr|chrome/ingame-player.yaml
 	dr|chrome/color-picker.yaml
+	dr|chrome/mainmenu-prerelease-notification.yaml
 	common|chrome/ingame-menu.yaml
 	common|chrome/dropdowns.yaml
 	common|chrome/settings.yaml
