@@ -2,14 +2,14 @@ Heal:
 	ReloadDelay: 135
 	Range: 2c512
 	Report: gxheaoc0.wav
-	ValidTargets: Infantry
+	ValidTargets: Heal
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		Damage: -85
 		ValidStances: Ally
-		ValidTargets: Infantry
+		ValidTargets: Heal
 		DebugOverlayColor: 00FF00
 
 Repair:

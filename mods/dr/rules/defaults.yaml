@@ -163,7 +163,7 @@
 		Bounds: 28, 28
 		DecorationBounds: 28,28
 	Targetable:
-		TargetTypes: Ground, Repair, Vehicle
+		TargetTypes: Ground, Vehicle
 	Repairable:
 		RepairBuildings: repair.human, repair.cyborg
 	Passenger:
@@ -217,6 +217,9 @@
 	Targetable@REPAIR:
 		RequiresCondition: damaged
 		TargetTypes: Repair
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 ^DrHoverAnimatedVehicle:
 	Inherits: ^DrAnimatedVehicle

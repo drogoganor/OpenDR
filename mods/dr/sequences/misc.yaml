@@ -103,6 +103,7 @@ explosion:
 	Defaults:
 		Length: *
 		ZOffset: 2047
+		BlendMode: Additive
 	eolasex0: eolasex0
 	eolasex1: eolasex1
 		Offset: 13, -10
@@ -113,8 +114,10 @@ explosion:
 	eorgnex0: eorgnex0 # triple rail gun (hover tank)
 	eosktex0: eosktex0 # skirmish tank
 	eoblatr0: eoblatr0 # skirmish tank 2
+		BlendMode: Additive
 	eoblatr1: eoblatr1 # skirmish tank 3
 	eothnex0: eothnex0 # tank hunter
+		BlendMode: DoubleMultiplicative
 	eofarex0: eofarex0 # hellstorm
 	eoiarex2: eoiarex2 # scarab explosion
 	eoiarex0: eoiarex0 # scarab explosion 2
@@ -140,6 +143,22 @@ explosion:
 	eochfex2: eochfex2 # flak jack 1
 	ecexpmd0: ecexpmd0 # generic explosion 1
 	ecexpmd1: ecexpmd1 # generic explosion 2
+	ecexpsm1: ecexpsm1 # generic explosion
+		BlendMode: DoubleMultiplicative
+	eochkex0: eochkex0 # 
+		BlendMode: Additive
+	eochfex1: eochfex1 # 
+		BlendMode: Additive
+	eoblalg1: eoblalg1
+		BlendMode: None
+	eoblalg1: eoblalg1
+		BlendMode: None
+	eoblamd1: eoblamd1
+		BlendMode: Additive
+	eosmlfl3: eosmlfl3
+		BlendMode: Additive
+	eochkex0alt: eochkex0
+		BlendMode: Additive
 	
 
 allyrepair:

@@ -40,11 +40,15 @@
   <ItemGroup>
     <Compile Include="Activities\BuildOnSite.cs" />
     <Compile Include="DrFrameMetadata.cs" />
+    <Compile Include="Effects\ShockWaveProjectileEffect.cs" />
+    <Compile Include="Effects\WarheadTrailProjectileEffect.cs" />
     <Compile Include="FileFormats\ScnFile.cs" />
     <Compile Include="FileSystem\Ftg.cs" />
     <Compile Include="Graphics\DrSpriteSequence.cs" />
     <Compile Include="Graphics\DrTilesetSpecificSpriteSequence.cs" />
     <Compile Include="Orders\BuilderUnitBuildingOrderGenerator.cs" />
+    <Compile Include="Projectiles\ShockWaveProjectile.cs" />
+    <Compile Include="Projectiles\WarheadTrailProjectile.cs" />
     <Compile Include="SpriteLoaders\DrCrsLoader.cs" />
     <Compile Include="SpriteLoaders\DrTilLoader.cs" />
     <Compile Include="SpriteLoaders\DrSprLoader.cs" />

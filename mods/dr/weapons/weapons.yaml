@@ -38,6 +38,19 @@
 # V1 is the offense for the vortex (temporal rift)
 # W1 is the offense for the Seismic Wave
 
+^FullDamage:
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 10
+		Versus:
+			ToughHuman: 100
+			PowerHuman: 100
+			FlyingArmour: 100
+			TankPlating: 100
+			ForcePlating: 100
+			BuildingArmour: 100
+		DamageTypes: DefaultDeath
+
 ^A1: # is the air defence laser, used on ImpMAD and AntiAircraftSite
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
@@ -768,6 +781,41 @@ TankHunterGun:
 	Warhead@3Eff: CreateEffect
 		Explosions: eothnex0
 		ValidTargets: Ground, Ship, Trees
+
+ShockWaveGun:
+	Inherits: ^FullDamage
+	ReloadDelay: 68
+	Range: 34c0
+	Report: gxthnwc0.wav
+	Projectile: ShockWaveProjectile
+		Inaccuracy: 0c0
+		Weapon: ShockWaveShock
+		Speed: 220
+		ExplosionInterval: 4
+		ExplodeUnderThisAltitude: -9999
+		Blockable: False
+		KillProjectilesWhenReachedTargetLocation: false #try putting true
+		Splay: 5
+		NumProjectiles: 15
+		SpreadUntilDistance: 5c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 1
+
+ShockWaveShock:
+	Inherits: ^FullDamage
+	ReloadDelay: 28
+	Range: 3c0
+	#Report: gxthnwc0.wav
+	Projectile: Bullet
+		Speed: 427
+		#Image: eothnpr0
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 50
+	Warhead@3Eff: CreateEffect
+		Explosions: eochkex0alt # ok: eochkex0
+		ValidTargets: Ground, Ship, Trees, Structures
 
 OutriderMissile:
 	Inherits: ^M1

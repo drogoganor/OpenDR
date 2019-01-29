@@ -516,9 +516,6 @@ Freighter:
 		SearchFromProcRadius: 30
 		SearchFromOrderRadius: 11
 	-Armament:
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 HoverFreighter:
 	Inherits: ^DrHoverAnimatedVehicle
@@ -618,9 +615,6 @@ RAT:
 	Armor:
 		Type: TankPlating
 	-Armament:
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 SkirmishTank:
 	Inherits: ^DrAnimatedVehicle
@@ -658,9 +652,6 @@ SkirmishTank:
 		Speed: 192
 	Armor:
 		Type: TankPlating
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 TankHunter:
 	Inherits: ^DrAnimatedVehicle
@@ -689,9 +680,6 @@ TankHunter:
 		Type: TankPlating
 	Armament:
 		Weapon: TankHunterGun
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 PhaseTank:
 	Inherits: ^DrAnimatedVehicle
@@ -720,9 +708,6 @@ PhaseTank:
 		Type: TankPlating
 	Armament:
 		Weapon: PhaseTankCannon
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 FlakJack:
 	Inherits: ^DrAnimatedVehicle
@@ -752,9 +737,6 @@ FlakJack:
 		Type: TankPlating
 	Armament:
 		Weapon: Chaff
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 TripleRailHoverTank:
 	Inherits: ^DrHoverAnimatedVehicle
@@ -820,9 +802,6 @@ HellstormArtillery:
 		Type: TankPlating
 	Armament:
 		Weapon: ArtilleryShell
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 ShockWave:
 	Inherits: ^DrAnimatedVehicle
@@ -852,17 +831,15 @@ ShockWave:
 	Turreted:
 		TurnSpeed: 5
 	Armament:
-		Weapon: LaserRifle
+		Weapon: ShockWaveGun
 		Recoil: 128
 		RecoilRecovery: 38
 		LocalOffset: 720,0,80
 		MuzzleSequence: muzzle
+	AttackSuicides:
 	-AttackFrontal:
 	AttackTurreted:
 	WithSpriteTurret:
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 WaterContaminator:
 	Inherits: ^DrAnimatedVehicle
@@ -889,9 +866,6 @@ WaterContaminator:
 		Speed: 48
 	Armor:
 		Type: TankPlating
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 # Phase Runner
 PhaseRunner:
@@ -926,9 +900,6 @@ PhaseRunner:
 	Armor:
 		Type: TankPlating
 	-Armament:
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 # Imperium
 
@@ -1060,9 +1031,6 @@ Amper:
 		Type: TankPlating
 	Armament:
 		Weapon: AmperAmp
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 MAD:
 	Inherits: ^DrHoverAnimatedVehicle
@@ -1146,9 +1114,6 @@ HostageTaker:
 		Speed: 240
 	Armor:
 		Type: TankPlating
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 TachionTank:
 	Inherits: ^DrHoverAnimatedVehicle
