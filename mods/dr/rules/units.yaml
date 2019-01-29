@@ -836,7 +836,9 @@ ShockWave:
 		RecoilRecovery: 38
 		LocalOffset: 720,0,80
 		MuzzleSequence: muzzle
-	AttackSuicides:
+		ReloadingCondition: reloading
+	KillsSelf:
+		RequiresCondition: reloading
 	-AttackFrontal:
 	AttackTurreted:
 	WithSpriteTurret:
