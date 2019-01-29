@@ -1,0 +1,70 @@
+Background@MAINMENU_PRERELEASE_NOTIFICATION:
+	Logic: PreReleaseWarningPrompt
+	X: (WINDOW_RIGHT - WIDTH) / 2
+	Y: (WINDOW_BOTTOM - HEIGHT) / 2
+	Width: 560
+	Height: 265
+	Children:
+		Label@PROMPT_TITLE:
+			Width: PARENT_RIGHT
+			Y: 20
+			Height: 25
+			Font: Bold
+			Align: Center
+			Text: Dark Reign release disclaimer
+		Label@PROMPT_TEXT_A:
+			X: 15
+			Y: 50
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: This mod is a work in progress. Key features are missing and gameplay tuning is still an 
+		Label@PROMPT_TEXT_B:
+			X: 15
+			Y: 68
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: on-going process.
+		Label@PROMPT_TEXT_C:
+			X: 15
+			Y: 104
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: If you have trouble playing the mod, please visit the DR Discord channel, or open a new
+		Label@PROMPT_TEXT_D:
+			X: 15
+			Y: 122
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: issue on Github describing the problem, ensuring that you include any relevant log files.
+		Label@PROMPT_TEXT_E:
+			X: 15
+			Y: 154
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: Discord: https://discord.gg/3MKcGSW
+		Label@PROMPT_TEXT_F:
+			X: 15
+			Y: 172
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text: Github: https://github.com/drogoganor/DarkReign
+		Label@PROMPT_TEXT_G:
+			X: 15
+			Y: 208
+			Width: PARENT_RIGHT - 30
+			Height: 16
+			Align: Left
+			Text:  Thanks for trying out the mod!
+		Button@CONTINUE_BUTTON:
+			X: PARENT_RIGHT - WIDTH - 20
+			Y: PARENT_BOTTOM - 45
+			Width: 120
+			Height: 25
+			Text: OK
+			Font: Bold
