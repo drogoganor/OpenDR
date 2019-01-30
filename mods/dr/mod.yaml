@@ -38,7 +38,6 @@ Packages:
 	~addon/aurunits/aursprite.ftg
 	~addon/terrorist/terrsound.ftg
 	~addon/terrorist/terrsprite.ftg
-	dr|palettes
 	dr|bits
 	dr|uibits
 
@@ -87,6 +86,7 @@ TileSets:
 	dr|tilesets/jungle.yaml
 	dr|tilesets/snow.yaml
 	dr|tilesets/volcanic.yaml
+	dr|tilesets/calypso.yaml
 
 Cursors:
 	dr|cursor.yaml

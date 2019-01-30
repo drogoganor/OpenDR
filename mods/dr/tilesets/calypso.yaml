@@ -1,0 +1,197 @@
+General:
+	Name: Calypso
+	Id: CALYPSO
+	SheetSize: 1024
+	EditorTemplateOrder: Terrain
+	HeightDebugColors: AA0000
+
+Terrain:
+	TerrainType@Clear: # Grass
+		Type: Clear
+		TargetTypes: Ground
+		Color: 41AA55
+		RestrictPlayerColor: true
+	TerrainType@Normal2: # Grass light
+		Type: Normal2
+		TargetTypes: Ground
+		Color: 60966A
+		RestrictPlayerColor: true
+	TerrainType@Normal3: # Grass dark
+		Type: Normal3
+		TargetTypes: Ground
+		Color: 184E22
+		RestrictPlayerColor: true
+	TerrainType@Muddy1: # Sand
+		Type: Muddy1
+		TargetTypes: Ground
+		Color: DBA482
+		RestrictPlayerColor: true
+	TerrainType@Muddy2: # Sand dark
+		Type: Muddy2
+		TargetTypes: Ground
+		Color: A87E64
+		RestrictPlayerColor: true
+	TerrainType@Rough1: # Black
+		Type: Rough1
+		TargetTypes: Ground
+		Color: 222222
+		RestrictPlayerColor: true
+	TerrainType@Rough2: # Maroon pastel
+		Type: Rough2
+		TargetTypes: Ground
+		Color: 986C6E
+		RestrictPlayerColor: true
+	TerrainType@Road: # Blue pastel
+		Type: Road
+		TargetTypes: Ground
+		Color: 687187
+		RestrictPlayerColor: true
+	TerrainType@RoadBase: # Gray
+		Type: RoadBase
+		TargetTypes: Ground
+		Color: 7C7C7C
+		RestrictPlayerColor: true
+	TerrainType@SpringWater:
+		Type: SpringWater
+		TargetTypes: Ground
+		Color: 8470FF
+		RestrictPlayerColor: true
+	TerrainType@Taelon:
+		Type: Taelon
+		TargetTypes: Ground
+		Color: 948060
+		RestrictPlayerColor: true
+	TerrainType@Water:
+		Type: Water
+		TargetTypes: Water
+		Color: 54B5F9
+		RestrictPlayerColor: true
+	TerrainType@Tree:
+		Type: Tree
+		TargetTypes: Ground
+		Color: 545B22
+	TerrainType@Rock:
+		Type: Rock
+		TargetTypes: Ground
+		Color: 877F70
+
+Templates:
+	Template@1:
+		Id: 1
+		Images: calypso.png
+		Size: 1,1
+		PickAny: True
+		Frames: 4, 5, 6, 7
+		Categories: Terrain
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@2:
+		Id: 2
+		Images: calypso.png
+		Size: 1,1
+		PickAny: True
+		Frames: 8, 9, 10, 11
+		Categories: Terrain
+		Tiles:
+			0: Normal2
+			1: Normal2
+			2: Normal2
+			3: Normal2
+	Template@3:
+		Id: 3
+		Images: calypso.png
+		Size: 1,1
+		PickAny: True
+		Frames: 12, 13, 14, 15
+		Categories: Terrain
+		Tiles:
+			0: Normal3
+			1: Normal3
+			2: Normal3
+			3: Normal3
+	Template@4:
+		Id: 4
+		Images: calypso.png
+		Size: 1,1
+		PickAny: True
+		Frames: 16, 17, 18, 19
+		Categories: Terrain
+		Tiles:
+			0: Muddy1
+			1: Muddy1
+			2: Muddy1
+			3: Muddy1
+	Template@5:
+		Id: 5
+		Images: calypso.png
+		Size: 1,1
+		PickAny: True
+		Frames: 20, 21, 22, 23
+		Categories: Terrain
+		Tiles:
+			0: Muddy2
+			1: Muddy2
+			2: Muddy2
+			3: Muddy2
+	Template@6:
+		Id: 6
+		Images: calypso.png
+		Size: 1,1
+		PickAny: True
+		Frames: 24, 25, 26, 27
+		Categories: Terrain
+		Tiles:
+			0: Rough1
+			1: Rough1
+			2: Rough1
+			3: Rough1
+	Template@7:
+		Id: 7
+		Images: calypso.png
+		Size: 1,1
+		PickAny: True
+		Frames: 28, 29, 30, 31
+		Categories: Terrain
+		Tiles:
+			0: Rough2
+			1: Rough2
+			2: Rough2
+			3: Rough2
+	Template@8:
+		Id: 8
+		Images: calypso.png
+		Size: 1,1
+		PickAny: True
+		Frames: 32, 33, 34, 35
+		Categories: Terrain
+		Tiles:
+			0: Road
+			1: Road
+			2: Road
+			3: Road
+	Template@9:
+		Id: 9
+		Images: calypso.png
+		Size: 1,1
+		PickAny: True
+		Frames: 36, 37, 38, 39
+		Categories: Terrain
+		Tiles:
+			0: RoadBase
+			1: RoadBase
+			2: RoadBase
+			3: RoadBase
+	Template@0:
+		Id: 0
+		Images: calypso.png
+		Size: 1,1
+		PickAny: True
+		Categories: Terrain
+		Tiles:
+			0: Water
+			1: Water
+			2: Water
+			3: Water

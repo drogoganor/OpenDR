@@ -18,6 +18,8 @@ overlay:
 		Start: 0
 	build-valid-jungle: overlay.png
 		Start: 0
+	build-valid-calypso: overlay.png
+		Start: 0
 	build-invalid: overlay.png
 		Start: 1
 	target-select: overlay.png
@@ -37,6 +39,8 @@ overlay:
 	target-valid-snow: overlay.png
 		Start: 0
 	target-valid-jungle: overlay.png
+		Start: 0
+	target-valid-calypso: overlay.png
 		Start: 0
 	target-invalid: overlay.png
 		Start: 1

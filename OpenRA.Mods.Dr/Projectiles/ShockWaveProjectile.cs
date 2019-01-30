@@ -170,7 +170,6 @@ namespace OpenRA.Mods.Dr.Projectiles
 
             projectiles = new ShockWaveProjectileEffect[info.NumProjectiles];
 
-            var range = OpenRA.Mods.Common.Util.ApplyPercentageModifiers(args.Weapon.Range.Length, args.RangeModifiers);
 			var mainFacing = (targetpos - sourcepos).Yaw.Facing;
 
 			// used for lerping projectiles at the same pace

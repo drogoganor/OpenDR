@@ -59,6 +59,10 @@
 		ShadowIndex: 47
 		StandardPaletteMultiplier: 4
 		TerrainPaletteMultiplier: 6
+	PaletteFromJascFile@terrain-calypso:
+		Name: terrain
+		Filename: calypso.pal
+		Tileset: CALYPSO
 	PaletteFromDrFile@player:
 		Name: player
 		Filename: BARREN/BARREN.PAL

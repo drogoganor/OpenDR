@@ -55,6 +55,7 @@
     <Compile Include="Traits\AI\AICash.cs" />
     <Compile Include="Traits\BotModules\BotModuleLogic\DrBaseBuilderQueueManager.cs" />
     <Compile Include="Traits\BotModules\DrBaseBuilderBotModule.cs" />
+    <Compile Include="Traits\PaletteFromJascFile.cs" />
     <Compile Include="Traits\Player\BuilderUnit.cs" />
     <Compile Include="Traits\Player\BuildUnitPlaceBuilding.cs" />
     <Compile Include="Traits\Player\BuilderQueue.cs" />
