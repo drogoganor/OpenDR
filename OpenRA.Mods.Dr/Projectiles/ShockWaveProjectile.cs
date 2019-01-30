@@ -135,10 +135,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 		readonly ProjectileArgs args;
 		[Sync]
 		readonly WDist speed;
-
-		[Sync]
-		WPos projectilepos, targetpos, sourcepos, offsetTargetPos = WPos.Zero;
-		WPos offsetSourcePos = WPos.Zero;
+		WPos targetpos, sourcepos;
 		int lifespan;
 		int ticks;
 		int mindelay;
@@ -152,7 +149,6 @@ namespace OpenRA.Mods.Dr.Projectiles
 			this.info = info;
 			this.args = args;
 
-			projectilepos = args.Source;
 			sourcepos = args.Source;
 
 			var firedBy = args.SourceActor;
