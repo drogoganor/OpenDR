@@ -502,7 +502,4 @@ Actors:
 	Actor159: aotre005
 		Owner: Neutral
 		Location: 20,11
-	Actor160: temporalriftspewer
-		Owner: Imperium
-		Location: 18,21
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

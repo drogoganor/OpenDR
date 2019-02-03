@@ -47,6 +47,7 @@ overlay:
 
 icon:
 	bitrcmn0: bitrcmn0
+	bitgtmn0: bitgtmn0
 
 editor-overlay:
 	Defaults:

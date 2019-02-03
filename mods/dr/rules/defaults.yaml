@@ -118,6 +118,8 @@
 		CloakTypes: Hijacker
 	MapEditorData:
 		Categories: Infantry
+	Chronoshiftable:
+		ReturnToOrigin: False
 
 ^DrCivilian:
 	Inherits: ^Humanoid
@@ -220,6 +222,8 @@
 	WithShadow:
 		Offset: 122, 56, 0
 		ZOffset: -129
+	Chronoshiftable:
+		ReturnToOrigin: False
 
 ^DrHoverAnimatedVehicle:
 	Inherits: ^DrAnimatedVehicle
@@ -521,7 +525,7 @@
 	Production:
 		Produces: Upgrade,Economy,AIBuilding
 	RallyPoint:
-		Offset: 4,5
+		Offset: 3,4
 	Exit@1:
 		SpawnOffset: 0,0,0
 		ExitCell: 2,2
@@ -619,7 +623,7 @@
 	Power:
 		Amount: -100
 	RallyPoint:
-		Offset: 4,5
+		Offset: 4,4
 	Exit@1:
 		SpawnOffset: 512,256,0
 		ExitCell: 3,3

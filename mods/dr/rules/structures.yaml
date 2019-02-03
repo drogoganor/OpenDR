@@ -104,7 +104,7 @@ HQ.cyborg:
 	Health:
 		HP: 1440
 	RallyPoint:
-		Offset: 0,5
+		Offset: 0,4
 	Exit@1:
 		SpawnOffset: -512,1536,0
 		ExitCell: 0,4
@@ -222,7 +222,7 @@ AssemblyPlant.cyborg:
 		SpawnOffset: -768,768,0
 		ExitCell: 1,3
 	RallyPoint:
-		Offset: 1,6
+		Offset: 1,5
 	Health:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
@@ -720,6 +720,23 @@ TemporalGate:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow
+	SupportPowerChargeBar:
+	ChronoshiftPower@chronoshift:
+		OrderName: TemporalGate
+		PauseOnCondition: disabled
+		Icon: bitgtmn0
+		ChargeInterval: 1000
+		Description: Temporal Gate
+		LongDesc: Teleports a group of units across\nthe map for 20 seconds.
+		#SelectTargetSpeechNotification: SelectTarget
+		#InsufficientPowerSpeechNotification: InsufficientPower
+		#BeginChargeSpeechNotification: ChronosphereCharging
+		EndChargeSpeechNotification: TemporalGateReady
+		Duration: 500
+		KillCargo: no
+		DisplayRadarPing: True
+		SelectionCursor: move
+		TargetCursor: attack
 
 # Imperium temporal rift creator
 TemporalRiftCreator:
@@ -748,11 +765,6 @@ TemporalRiftCreator:
 		Palette: shadow
 		Sequence: shadow
 	SupportPowerChargeBar:
-	ExternalCondition@PRODUCED:
-		Condition: produced
-	VoiceAnnouncement:
-		RequiresCondition: produced
-		Voice: Build
 	DetonateWeaponPower@temporalrift:
 		#Cursor: ioncannon
 		Icon: bitrcmn0
@@ -763,8 +775,8 @@ TemporalRiftCreator:
 		Weapon: TemporalRiftCreatorGun
 		#TargetCircleRange: 7c0
 		BeginChargeSound:
-		#EndChargeSound: SuperWeaponReady
-		#EndChargeSpeechNotification: SuperWeaponReady
+		EndChargeSound: RiftCreatorCharged
+		EndChargeSpeechNotification: RiftCreatorCharged
 		#DisplayTimer: True
 		DisplayBeacon: True
 		ChargeInterval: 3000
