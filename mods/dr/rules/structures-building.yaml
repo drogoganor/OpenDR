@@ -97,7 +97,7 @@ HQ.human.Constructing:
 		Name: Headquarters
 	Buildable:
 		Queue: Building, AIBuilding
-		Prerequisites: rig.human
+		Prerequisites: ~rig.human
 	SelfConstructing:
 		Steps: 20
 		Becomes: HQ.human

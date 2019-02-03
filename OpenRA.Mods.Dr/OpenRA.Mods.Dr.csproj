@@ -40,6 +40,7 @@
   <ItemGroup>
     <Compile Include="Activities\BuildOnSite.cs" />
     <Compile Include="DrFrameMetadata.cs" />
+    <Compile Include="Effects\VortexProjectileEffect.cs" />
     <Compile Include="Effects\ShockWaveProjectileEffect.cs" />
     <Compile Include="Effects\WarheadTrailProjectileEffect.cs" />
     <Compile Include="FileFormats\ScnFile.cs" />
@@ -47,6 +48,7 @@
     <Compile Include="Graphics\DrSpriteSequence.cs" />
     <Compile Include="Graphics\DrTilesetSpecificSpriteSequence.cs" />
     <Compile Include="Orders\BuilderUnitBuildingOrderGenerator.cs" />
+    <Compile Include="Projectiles\VortexProjectile.cs" />
     <Compile Include="Projectiles\ShockWaveProjectile.cs" />
     <Compile Include="Projectiles\WarheadTrailProjectile.cs" />
     <Compile Include="SpriteLoaders\DrCrsLoader.cs" />
@@ -62,6 +64,9 @@
     <Compile Include="Traits\ProductionQueueOrBuildingPickerFromSelection.cs" />
     <Compile Include="Traits\Production\SelfConstructing.cs" />
     <Compile Include="Traits\Render\WithFlamesOverlay.cs" />
+    <Compile Include="Traits\SupportPowers\Vortex.cs" />
+    <Compile Include="Traits\SupportPowers\DetonateWeaponPower.cs" />
+    <Compile Include="Traits\Warheads\SpawnActorWarhead.cs" />
     <Compile Include="Traits\World\PaletteFromDrFile.cs" />
     <Compile Include="UtilityCommands\ImportDrCampaignMapCommand.cs" />
     <Compile Include="UtilityCommands\ImportDrMapCommand.cs" />

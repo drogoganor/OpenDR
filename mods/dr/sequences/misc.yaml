@@ -45,6 +45,9 @@ overlay:
 	target-invalid: overlay.png
 		Start: 1
 
+icon:
+	bitrcmn0: bitrcmn0
+
 editor-overlay:
 	Defaults:
 		AddExtension: False
@@ -163,7 +166,24 @@ explosion:
 		BlendMode: Additive
 	eochkex0alt: eochkex0
 		BlendMode: Additive
-	
+	eothnex0alt: eothnex0
+		BlendMode: Multiplicative
+	eowcost1: eowcost1
+		BlendMode: Multiplicative
+	eoomktr0: eoomktr0
+		BlendMode: Multiplicative
+	eothnpr0: eothnpr0
+		BlendMode: Multiplicative
+	eovapex0: eovapex0
+		BlendMode: Multiplicative
+	eolasex5: eolasex5
+		BlendMode: None
+	eoiarex1: eoiarex1
+		BlendMode: Subtractive
+	eoblatr1alt: eoblatr1 # skirmish tank 3
+		BlendMode: Subtractive
+	ecfirsm2: ecfirsm2
+		BlendMode: Subtractive
 
 allyrepair:
 	repair: repricon

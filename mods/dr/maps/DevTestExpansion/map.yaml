@@ -1,0 +1,285 @@
+MapFormat: 11
+RequiresMod: dr
+Title: Dev Test Expansion
+Author: DMW
+Tileset: BARREN
+MapSize: 38,44
+Bounds: 1,1,36,42
+Visibility: MissionSelector
+Categories: Dev
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: fguard
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: fguard
+	PlayerReference@Imperium:
+		Name: Imperium
+		AllowBots: False
+		Playable: True
+		Required: True
+		LockFaction: True
+		Faction: imperium
+		LockColor: True
+		Color: FE1100
+		LockSpawn: True
+		LockTeam: True
+		Enemies: Freedom Guard
+	PlayerReference@Freedom Guard:
+		Name: Freedom Guard
+		Faction: fguard
+		Color: FF7B07
+		Enemies: Imperium, Abandoned Base
+	PlayerReference@Abandoned Base:
+		Name: Abandoned Base
+		NonCombatant: True
+		Faction: imperium
+		Color: 1C73FF
+		Enemies: Freedom Guard
+	PlayerReference@Trapped Soldiers 1:
+		Name: Trapped Soldiers 1
+		NonCombatant: True
+		Faction: imperium
+		Color: 70C173
+		Enemies: Freedom Guard
+	PlayerReference@Trapped Soldiers 2:
+		Name: Trapped Soldiers 2
+		NonCombatant: True
+		Faction: imperium
+		Color: BC6DBF
+		Enemies: Freedom Guard
+Actors:
+	Actor1: aotre005
+		Owner: Neutral
+		Location: 36,37
+	Actor2: aotre003
+		Owner: Neutral
+		Location: 35,38
+	Actor4: aotre002
+		Owner: Neutral
+		Location: 19,42
+	Actor5: aotre001
+		Owner: Neutral
+		Location: 17,41
+	Actor6: aotre000
+		Owner: Neutral
+		Location: 16,42
+	Actor7: aotre005
+		Owner: Neutral
+		Location: 17,42
+	Actor8: aoroc004
+		Owner: Neutral
+		Location: 13,42
+	Actor9: aotre003
+		Owner: Neutral
+		Location: 8,43
+	Actor10: aoroc001
+		Owner: Neutral
+		Location: 10,42
+	Actor11: aorub001
+		Owner: Neutral
+		Location: 12,41
+	Actor12: aorub002
+		Owner: Neutral
+		Location: 19,41
+	Actor13: aoclf005
+		Owner: Neutral
+		Location: 34,40
+	Actor14: aoclf002
+		Owner: Neutral
+		Location: 30,41
+	Actor15: aoclf001
+		Owner: Neutral
+		Location: 32,41
+	Actor16: aoroc002
+		Owner: Neutral
+		Location: 29,42
+	Actor17: aoroc005
+		Owner: Neutral
+		Location: 27,42
+	Actor18: aoroc001
+		Owner: Neutral
+		Location: 25,42
+	Actor19: aotre004
+		Owner: Neutral
+		Location: 34,40
+	Actor20: aotre004
+		Owner: Neutral
+		Location: 22,42
+	Actor21: aorub002
+		Owner: Neutral
+		Location: 24,41
+	Actor22: aorub001
+		Owner: Neutral
+		Location: 31,40
+	Actor23: aorub000
+		Owner: Neutral
+		Location: 35,39
+	Actor24: aoroc000
+		Owner: Neutral
+		Location: 28,40
+	Actor32: aoroc003
+		Owner: Neutral
+		Location: 34,21
+	Actor33: aoroc005
+		Owner: Neutral
+		Location: 35,24
+	Actor34: aorub002
+		Owner: Neutral
+		Location: 34,24
+	Actor35: aorub001
+		Owner: Neutral
+		Location: 35,26
+	Actor36: aoclf005
+		Owner: Neutral
+		Location: 34,18
+	Actor37: aoclf002
+		Owner: Neutral
+		Location: 35,16
+	Actor38: aorub001
+		Owner: Neutral
+		Location: 34,16
+	Actor39: aoroc002
+		Owner: Neutral
+		Location: 35,15
+	Actor40: aotre001
+		Owner: Neutral
+		Location: 12,42
+	Actor41: aotre005
+		Owner: Neutral
+		Location: 6,42
+	Actor42: aotre002
+		Owner: Neutral
+		Location: 5,43
+	Actor48: aorub000
+		Owner: Neutral
+		Location: 33,20
+	Actor49: aorub002
+		Owner: Neutral
+		Location: 34,18
+	Actor52: aotre003
+		Owner: Neutral
+		Location: 33,5
+	Actor53: aotre003
+		Owner: Neutral
+		Location: 34,11
+	Actor54: aotre002
+		Owner: Neutral
+		Location: 34,6
+	Actor55: aotre002
+		Owner: Neutral
+		Location: 31,2
+	Actor56: aotre001
+		Owner: Neutral
+		Location: 28,1
+	Actor57: aotre001
+		Owner: Neutral
+		Location: 35,9
+	Actor58: aotre003
+		Owner: Neutral
+		Location: 30,2
+	Actor59: aotre003
+		Owner: Neutral
+		Location: 33,2
+	Actor60: aotre000
+		Owner: Neutral
+		Location: 32,4
+	Actor61: aotre000
+		Owner: Neutral
+		Location: 36,8
+	Actor62: aotre004
+		Owner: Neutral
+		Location: 26,2
+	Actor63: aoroc000
+		Owner: Neutral
+		Location: 33,3
+	Actor64: aoroc001
+		Owner: Neutral
+		Location: 33,7
+	Actor144: power
+		Owner: Freedom Guard
+		Location: 2,2
+	Actor69: matrix
+		Owner: Imperium
+		Location: 4,34
+	Actor67: trainingfacility.xenite
+		Owner: Imperium
+		Location: 11,34
+	Actor65: hq.human
+		Owner: Imperium
+		Location: 19,33
+	Actor66: power
+		Owner: Imperium
+		Location: 25,34
+	Actor68: waterlaunchpad
+		Owner: Imperium
+		Location: 29,35
+	Actor70: gant
+		Owner: Imperium
+		Location: 6,26
+		Facing: 92
+		TurretFacing: 92
+	Actor71: ranger
+		Owner: Imperium
+		Location: 9,26
+		Facing: 92
+	Actor72: powerspiker
+		Owner: Imperium
+		Location: 11,26
+		Facing: 92
+	Actor73: grendel
+		Owner: Imperium
+		Location: 13,26
+		Facing: 92
+	Actor74: grendelrider
+		Owner: Imperium
+		Location: 16,26
+		Facing: 92
+	Actor75: reaper
+		Owner: Imperium
+		Location: 6,29
+		Facing: 92
+	Actor76: ratmk2
+		Owner: Imperium
+		Location: 9,29
+		Facing: 92
+		TurretFacing: 92
+	Actor77: geminitank
+		Owner: Imperium
+		Location: 12,29
+		Facing: 92
+		TurretFacing: 92
+	Actor78: shadowblade
+		Owner: Imperium
+		Location: 15,29
+		Facing: 92
+	Actor79: fury
+		Owner: Imperium
+		Location: 18,29
+		Facing: 92
+		TurretFacing: 92
+	Actor80: empdevice
+		Owner: Imperium
+		Location: 20,26
+		Facing: 92
+	Actor81: roadterraformer
+		Owner: Imperium
+		Location: 22,29
+		Facing: 92
+	Actor82: marshterraformer
+		Owner: Imperium
+		Location: 24,29
+		Facing: 92
+	Actor83: avenger
+		Owner: Imperium
+		Location: 10,23
+		Facing: 92
+	Actor84: hadesbomber
+		Owner: Imperium
+		Location: 14,23
+		Facing: 92
+Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

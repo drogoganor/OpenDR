@@ -580,6 +580,7 @@ CycloneCannon:
 SuicideNuke:
 	Inherits: ^B1
 	Range: 2c0
+	ReloadDelay: 14
 	Projectile: Bullet
 		Speed: 4096
 		Shadow: False
@@ -816,6 +817,43 @@ ShockWaveShock:
 	Warhead@3Eff: CreateEffect
 		Explosions: eochkex0alt # ok: eochkex0
 		ValidTargets: Ground, Ship, Trees, Structures
+
+TemporalRiftVortexWeapon:
+	Inherits: ^FullDamage
+	ReloadDelay: 18
+	Range: 34c0
+	Report: gxthnwc0.wav
+	Projectile: VortexProjectile
+		Inaccuracy: 0c0
+		Weapon: TemporalRiftVortexBolt
+		Speed: 350
+		ExplosionInterval: 4
+		ExplodeUnderThisAltitude: -9999
+		Blockable: False
+		KillProjectilesWhenReachedTargetLocation: false #try putting true
+		NumProjectiles: 4
+	Warhead@1Dam: SpreadDamage
+		Damage: 1
+
+TemporalRiftCreatorGun:
+	Warhead@1Dam: SpawnActor
+		Actors: temporalriftspewer
+
+TemporalRiftVortexBolt:
+	Inherits: ^E5
+	ReloadDelay: 28
+	Range: 3c0
+	#Report: gxthnwc0.wav
+	Projectile: Bullet
+		Speed: 427
+		#Image: eothnpr0
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 64
+		Damage: 30
+	Warhead@3Eff: CreateEffect
+		Explosions: eoiarex1 # eoiarex1
+		ValidTargets: Ground, Ship, Trees
 
 OutriderMissile:
 	Inherits: ^M1

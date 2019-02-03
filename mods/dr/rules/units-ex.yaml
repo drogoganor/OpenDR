@@ -35,9 +35,6 @@ Gant:
 	-AttackFrontal:
 	AttackTurreted:
 	WithSpriteTurret:
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 Ranger:
 	Inherits: ^DrSoldier
@@ -114,9 +111,6 @@ Grendel:
 		Speed: 120
 	Armor:
 		Type: PowerHuman
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 GrendelRider:
 	Inherits: ^DrSoldier
@@ -141,9 +135,6 @@ GrendelRider:
 		Speed: 120
 	Armor:
 		Type: PowerHuman
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 # Shadowhand
 
@@ -304,9 +295,6 @@ Fury:
 	-AttackFrontal:
 	AttackTurreted:
 	WithSpriteTurret:
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 EMPDevice:
 	Inherits: ^DrAnimatedVehicle
@@ -333,9 +321,6 @@ EMPDevice:
 		Type: TankPlating
 	Armament:
 		Weapon: TachyonCannon
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 RoadTerraformer:
 	Inherits: ^DrAnimatedVehicle
@@ -362,9 +347,6 @@ RoadTerraformer:
 		Type: Tank
 	Armament:
 		Weapon: TachyonCannon
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 MarshTerraformer:
 	Inherits: ^DrAnimatedVehicle
@@ -391,9 +373,6 @@ MarshTerraformer:
 		Type: Tank
 	Armament:
 		Weapon: TachyonCannon
-	WithShadow:
-		Offset: 122, 56, 0
-		ZOffset: -129
 
 # Aircraft
 

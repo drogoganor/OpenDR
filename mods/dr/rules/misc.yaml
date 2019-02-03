@@ -34,3 +34,26 @@ freighter.colorpicker:
 	RenderSprites:
 		Image: ucfrgst0
 		Palette: colorpicker
+
+temporalriftspewer:
+	Interactable:
+	WithSpriteBody:
+	QuantizeFacingsFromSequence:
+	AlwaysVisible:
+	BodyOrientation:
+	Mobile:
+		Speed: 96
+		Locomotor: foot
+		TurnSpeed: 30
+	RenderSpritesEditorOnly:
+		Image: mpspawn
+	MapEditorData:
+		Categories: System
+	AttackFrontal:
+	Armament:
+		LocalOffset: 0,0,112
+		Weapon: TemporalRiftVortexWeapon
+	Vortex:
+		BurstDelay: 18
+		BurstTotal: 10
+		RotationRate: 35

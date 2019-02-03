@@ -747,3 +747,35 @@ TemporalRiftCreator:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow
+	SupportPowerChargeBar:
+	ExternalCondition@PRODUCED:
+		Condition: produced
+	VoiceAnnouncement:
+		RequiresCondition: produced
+		Voice: Build
+	DetonateWeaponPower@temporalrift:
+		#Cursor: ioncannon
+		Icon: bitrcmn0
+		ActivationSequence: 
+		Description: Temporal Rift
+		LongDesc: Opens a temporal rift at the target location.
+		OrderName: TemporalRift
+		Weapon: TemporalRiftCreatorGun
+		#TargetCircleRange: 7c0
+		BeginChargeSound:
+		#EndChargeSound: SuperWeaponReady
+		#EndChargeSpeechNotification: SuperWeaponReady
+		#DisplayTimer: True
+		DisplayBeacon: True
+		ChargeInterval: 3000
+		DisplayRadarPing: True
+		#DisplayTimerStances: Ally, Neutral, Enemy
+		#PauseOnCondition: empdisable || disabled
+		#LaunchSpeechNotification: SuperweaponFired
+		#IncomingSpeechNotification: SuperweaponFired
+		#IncomingSound: SuperweaponFired
+		#LaunchSound: n_swlaunch.aud
+		#CameraActor: camera
+		CameraRange: 10c0
+		CameraSpawnAdvance: 25
+		CameraRemoveDelay: 350

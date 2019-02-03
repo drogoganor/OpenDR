@@ -314,74 +314,72 @@ command-button-imperium-highlighted-disabled: chrome-ingame.png
 	background: 31,31,22,22
 
 
-
-
 sidebar-xenite: chrome-ingame.png
-	background-top: 0,167,238,310
-	background-iconrow: 0,476,238,49
-	background-bottom: 0,527,238,6
+	background-top: 0,567,238,310
+	background-iconrow: 0,876,238,49
+	background-bottom: 0,927,238,6
 	background-supportoverlay: 0,75,64,48
 
 sidebar-button-xenite: chrome-ingame.png
-	background: 59,31,22,22
-	border-r: 81,31,3,22
-	border-l: 56,31,3,22
-	border-b: 59,53,22,3
-	border-t: 59,28,22,3
-	corner-tl: 56,28,3,3
-	corner-tr: 81,28,3,3
-	corner-bl: 56,53,3,3
-	corner-br: 81,53,3,3
+	background: 255,31,22,22
+	border-r: 277,31,3,22
+	border-l: 252,31,3,22
+	border-b: 255,53,22,3
+	border-t: 255,28,22,3
+	corner-tl: 252,28,3,3
+	corner-tr: 277,28,3,3
+	corner-bl: 252,53,3,3
+	corner-br: 277,53,3,3
 sidebar-button-xenite-hover: chrome-ingame.png
-	background: 59,3,22,22
-	border-r: 81,3,3,22
-	border-l: 56,3,3,22
-	border-b: 59,25,22,3
-	border-t: 59,0,22,3
-	corner-tl: 56,0,3,3
-	corner-tr: 81,0,3,3
-	corner-bl: 56,25,3,3
-	corner-br: 81,25,3,3
+	background: 255,3,22,22
+	border-r: 277,3,3,22
+	border-l: 252,3,3,22
+	border-b: 255,25,22,3
+	border-t: 255,0,22,3
+	corner-tl: 252,0,3,3
+	corner-tr: 277,0,3,3
+	corner-bl: 252,25,3,3
+	corner-br: 277,25,3,3
 sidebar-button-xenite-pressed: chrome-ingame.png
-	background: 59,31,22,22
-	border-r: 81,31,3,22
-	border-l: 56,31,3,22
-	border-b: 59,53,22,3
-	border-t: 59,28,22,3
-	corner-tl: 56,28,3,3
-	corner-tr: 81,28,3,3
-	corner-bl: 56,53,3,3
-	corner-br: 81,53,3,3
+	background: 255,31,22,22
+	border-r: 277,31,3,22
+	border-l: 252,31,3,22
+	border-b: 255,53,22,3
+	border-t: 255,28,22,3
+	corner-tl: 252,28,3,3
+	corner-tr: 277,28,3,3
+	corner-bl: 252,53,3,3
+	corner-br: 277,53,3,3
 sidebar-button-xenite-highlighted: chrome-ingame.png
-	background: 87,31,22,22
-	border-r: 109,31,3,22
-	border-l: 84,31,3,22
-	border-b: 87,53,22,3
-	border-t: 87,28,22,3
-	corner-tl: 84,28,3,3
-	corner-tr: 109,28,3,3
-	corner-bl: 84,53,3,3
-	corner-br: 109,53,3,3
+	background: 283,31,22,22
+	border-r: 305,31,3,22
+	border-l: 280,31,3,22
+	border-b: 283,53,22,3
+	border-t: 283,28,22,3
+	corner-tl: 280,28,3,3
+	corner-tr: 305,28,3,3
+	corner-bl: 280,53,3,3
+	corner-br: 305,53,3,3
 sidebar-button-xenite-highlighted-hover: chrome-ingame.png
-	background: 87,3,22,22
-	border-r: 109,3,3,22
-	border-l: 84,3,3,22
-	border-b: 87,25,22,3
-	border-t: 87,0,22,3
-	corner-tl: 84,0,3,3
-	corner-tr: 109,0,3,3
-	corner-bl: 84,25,3,3
-	corner-br: 109,25,3,3
+	background: 283,3,22,22
+	border-r: 305,3,3,22
+	border-l: 280,3,3,22
+	border-b: 283,25,22,3
+	border-t: 283,0,22,3
+	corner-tl: 280,0,3,3
+	corner-tr: 305,0,3,3
+	corner-bl: 280,25,3,3
+	corner-br: 305,25,3,3
 sidebar-button-xenite-highlighted-pressed: chrome-ingame.png
-	background: 87,31,22,22
-	border-r: 109,31,3,22
-	border-l: 84,31,3,22
-	border-b: 87,53,22,3
-	border-t: 87,28,22,3
-	corner-tl: 84,28,3,3
-	corner-tr: 109,28,3,3
-	corner-bl: 84,53,3,3
-	corner-br: 109,53,3,3
+	background: 283,31,22,22
+	border-r: 305,31,3,22
+	border-l: 280,31,3,22
+	border-b: 283,53,22,3
+	border-t: 283,28,22,3
+	corner-tl: 280,28,3,3
+	corner-tr: 305,28,3,3
+	corner-bl: 280,53,3,3
+	corner-br: 305,53,3,3
 sidebar-button-xenite-disabled: chrome-ingame.png
 	background: 171,3,22,22
 	border-r: 193,3,3,22
@@ -404,88 +402,88 @@ sidebar-button-xenite-highlighted-disabled: chrome-ingame.png
 	corner-br: 193,25,3,3
 
 command-button-xenite: chrome-ingame.png
-	background: 59,31,22,22
+	background: 255,31,22,22
 command-button-xenite-hover: chrome-ingame.png
-	background: 59,3,22,22
+	background: 255,3,22,22
 command-button-xenite-pressed: chrome-ingame.png
-	background: 59,31,22,22
+	background: 255,31,22,22
 command-button-xenite-highlighted: chrome-ingame.png
-	background: 87,31,22,22
+	background: 283,31,22,22
 command-button-xenite-highlighted-hover: chrome-ingame.png
-	background: 87,3,22,22
+	background: 283,3,22,22
 command-button-xenite-highlighted-pressed: chrome-ingame.png
-	background: 87,31,22,22
+	background: 283,31,22,22
 command-button-xenite-disabled: chrome-ingame.png
-	background: 59,31,22,22
+	background: 255,31,22,22
 command-button-xenite-highlighted-disabled: chrome-ingame.png
-	background: 87,31,22,22
+	background: 283,31,22,22
 
 sidebar-shadowhand: chrome-ingame.png
-	background-top: 274,167,238,310
-	background-iconrow: 274,476,238,49
-	background-bottom: 274,527,238,6
+	background-top: 274,567,238,310
+	background-iconrow: 274,876,238,49
+	background-bottom: 274,927,238,6
 	background-supportoverlay: 64,75,64,48
 	
 sidebar-button-shadowhand: chrome-ingame.png
-	background: 3,31,22,22
-	border-r: 25,31,3,22
-	border-l: 0,31,3,22
-	border-b: 3,53,22,3
-	border-t: 3,28,22,3
-	corner-tl: 0,28,3,3
-	corner-tr: 25,28,3,3
-	corner-bl: 0,53,3,3
-	corner-br: 25,53,3,3
+	background: 199,31,22,22
+	border-r: 221,31,3,22
+	border-l: 196,31,3,22
+	border-b: 199,53,22,3
+	border-t: 199,28,22,3
+	corner-tl: 196,28,3,3
+	corner-tr: 221,28,3,3
+	corner-bl: 196,53,3,3
+	corner-br: 221,53,3,3
 sidebar-button-shadowhand-hover: chrome-ingame.png
-	background: 3,3,22,22
-	border-r: 25,3,3,22
-	border-l: 0,3,3,22
-	border-b: 3,25,22,3
-	border-t: 3,0,22,3
-	corner-tl: 0,0,3,3
-	corner-tr: 25,0,3,3
-	corner-bl: 0,25,3,3
-	corner-br: 25,25,3,3
+	background: 199,3,22,22
+	border-r: 221,3,3,22
+	border-l: 196,3,3,22
+	border-b: 199,25,22,3
+	border-t: 199,0,22,3
+	corner-tl: 196,0,3,3
+	corner-tr: 221,0,3,3
+	corner-bl: 196,25,3,3
+	corner-br: 221,25,3,3
 sidebar-button-shadowhand-pressed: chrome-ingame.png
-	background: 3,31,22,22
-	border-r: 25,31,3,22
-	border-l: 0,31,3,22
-	border-b: 3,53,22,3
-	border-t: 3,28,22,3
-	corner-tl: 0,28,3,3
-	corner-tr: 25,28,3,3
-	corner-bl: 0,53,3,3
-	corner-br: 25,53,3,3
+	background: 199,31,22,22
+	border-r: 221,31,3,22
+	border-l: 196,31,3,22
+	border-b: 199,53,22,3
+	border-t: 199,28,22,3
+	corner-tl: 196,28,3,3
+	corner-tr: 221,28,3,3
+	corner-bl: 196,53,3,3
+	corner-br: 221,53,3,3
 sidebar-button-shadowhand-highlighted: chrome-ingame.png
-	background: 31,31,22,22
-	border-r: 53,31,3,22
-	border-l: 28,31,3,22
-	border-b: 31,53,22,3
-	border-t: 31,28,22,3
-	corner-tl: 28,28,3,3
-	corner-tr: 53,28,3,3
-	corner-bl: 28,53,3,3
-	corner-br: 53,53,3,3
+	background: 227,31,22,22
+	border-r: 249,31,3,22
+	border-l: 224,31,3,22
+	border-b: 227,53,22,3
+	border-t: 227,28,22,3
+	corner-tl: 224,28,3,3
+	corner-tr: 249,28,3,3
+	corner-bl: 224,53,3,3
+	corner-br: 249,53,3,3
 sidebar-button-shadowhand-highlighted-hover: chrome-ingame.png
-	background: 31,3,22,22
-	border-r: 53,3,3,22
-	border-l: 28,3,3,22
-	border-b: 31,25,22,3
-	border-t: 31,0,22,3
-	corner-tl: 28,0,3,3
-	corner-tr: 53,0,3,3
-	corner-bl: 28,25,3,3
-	corner-br: 53,25,3,3
+	background: 227,3,22,22
+	border-r: 249,3,3,22
+	border-l: 224,3,3,22
+	border-b: 227,25,22,3
+	border-t: 227,0,22,3
+	corner-tl: 224,0,3,3
+	corner-tr: 249,0,3,3
+	corner-bl: 224,25,3,3
+	corner-br: 249,25,3,3
 sidebar-button-shadowhand-highlighted-pressed: chrome-ingame.png
-	background: 31,31,22,22
-	border-r: 53,31,3,22
-	border-l: 28,31,3,22
-	border-b: 31,53,22,3
-	border-t: 31,28,22,3
-	corner-tl: 28,28,3,3
-	corner-tr: 53,28,3,3
-	corner-bl: 28,53,3,3
-	corner-br: 53,53,3,3
+	background: 227,31,22,22
+	border-r: 249,31,3,22
+	border-l: 224,31,3,22
+	border-b: 227,53,22,3
+	border-t: 227,28,22,3
+	corner-tl: 224,28,3,3
+	corner-tr: 249,28,3,3
+	corner-bl: 224,53,3,3
+	corner-br: 249,53,3,3
 sidebar-button-shadowhand-disabled: chrome-ingame.png
 	background: 171,3,22,22
 	border-r: 193,3,3,22
@@ -508,21 +506,22 @@ sidebar-button-shadowhand-highlighted-disabled: chrome-ingame.png
 	corner-br: 193,25,3,3
 
 command-button-shadowhand: chrome-ingame.png
-	background: 3,31,22,22
+	background: 199,31,22,22
 command-button-shadowhand-hover: chrome-ingame.png
-	background: 3,3,22,22
+	background: 199,3,22,22
 command-button-shadowhand-pressed: chrome-ingame.png
-	background: 3,31,22,22
+	background: 199,31,22,22
 command-button-shadowhand-highlighted: chrome-ingame.png
-	background: 31,31,22,22
+	background: 227,31,22,22
 command-button-shadowhand-highlighted-hover: chrome-ingame.png
-	background: 31,3,22,22
+	background: 227,3,22,22
 command-button-shadowhand-highlighted-pressed: chrome-ingame.png
-	background: 31,31,22,22
+	background: 227,31,22,22
 command-button-shadowhand-disabled: chrome-ingame.png
-	background: 3,31,22,22
+	background: 199,31,22,22
 command-button-shadowhand-highlighted-disabled: chrome-ingame.png
-	background: 31,31,22,22
+	background: 227,31,22,22
+
 
 sidebar-togran: chrome-ingame.png
 	background-top: 0,167,238,310
