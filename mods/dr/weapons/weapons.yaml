@@ -593,6 +593,13 @@ SuicideNuke:
 		ImpactSounds: gxmtrwc0.wav
 		ImpactActors: true
 
+SuicideNukeTargeting:
+	#ValidTargets: DetonateAttack
+	Range: 2c0
+	Projectile: InstantHit
+	Warhead@1Dam: TargetDamage
+		#ValidTargets: DetonateAttack
+
 PhaseTankCannon:
 	Inherits: ^E2
 	ReloadDelay: 18

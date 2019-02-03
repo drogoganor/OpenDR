@@ -87,6 +87,33 @@ Sniper:
 		Weapon: SniperRifle
 	WithIdleOverlay@SHADOW: # No animated shadow
 		Sequence: shadow
+	Disguise:
+		DisguisedCondition: disguise
+		ValidStances: Neutral
+		TargetTypes: Trees
+		RevealDisguiseOn: Move, Attack
+	-Tooltip:
+	DisguiseTooltip:
+		Name: Sniper
+		GenericName: Tree
+	-Guard:
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+		ScanRadius: 5
+	-WithInfantryBody:
+	WithDisguisingInfantryBody:
+		MoveSequence: idle
+		DefaultAttackSequence: idle
+		IdleSequences: idle
+		StandSequences: idle
+	WithDecoration@disguise:
+		Image: pips
+		Sequence: pip-blue
+		Palette: effect
+		ReferencePoint: Top, Right
+		ZOffset: 256
+		RequiresCondition: disguise
 
 Scout:
 	Inherits: ^DrSoldier
@@ -115,6 +142,33 @@ Scout:
 		Type: ToughHuman
 	WithIdleOverlay@SHADOW: # No animated shadow
 		Sequence: shadow
+	Disguise:
+		DisguisedCondition: disguise
+		ValidStances: Neutral
+		TargetTypes: Trees
+		RevealDisguiseOn: Move
+	-Tooltip:
+	DisguiseTooltip:
+		Name: Scout
+		GenericName: Tree
+	-Guard:
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+		ScanRadius: 5
+	-WithInfantryBody:
+	WithDisguisingInfantryBody:
+		MoveSequence: idle
+		DefaultAttackSequence: idle
+		IdleSequences: idle
+		StandSequences: idle
+	WithDecoration@disguise:
+		Image: pips
+		Sequence: pip-blue
+		Palette: effect
+		ReferencePoint: Top, Right
+		ZOffset: 256
+		RequiresCondition: disguise
 
 Medic:
 	Inherits: ^DrSoldier
@@ -249,16 +303,19 @@ Martyr:
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
-		Weapon: SuicideNuke
+		Weapon: SuicideNukeTargeting
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: HoldFire
 		ScanRadius: 5
+	GrantConditionOnAttack:
+		Condition: triggered
+	KillsSelf:
+		RequiresCondition: triggered
 	Explodes:
 		Weapon: SuicideNuke
 		EmptyWeapon: SuicideNuke
 		DamageSource: Killer
-	AttackSuicides:
 	WithIdleOverlay@SHADOW: # No animated shadow
 		Sequence: shadow
 
@@ -842,6 +899,10 @@ ShockWave:
 	-AttackFrontal:
 	AttackTurreted:
 	WithSpriteTurret:
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: HoldFire
+		ScanRadius: 5
 
 WaterContaminator:
 	Inherits: ^DrAnimatedVehicle

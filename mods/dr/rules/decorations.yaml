@@ -3,6 +3,8 @@
 	Inherits: ^Tree
 	RadarColorFromTerrain:
 		Terrain: Rock
+	Targetable:
+		TargetTypes: Rocks
 	Tooltip:
 		Name: Rock
 	MapEditorData:
@@ -12,6 +14,8 @@
 	Inherits: ^Tree
 	RadarColorFromTerrain:
 		Terrain: Rock
+	Targetable:
+		TargetTypes: Craters
 	Tooltip:
 		Name: Crater
 	MapEditorData:
@@ -21,6 +25,8 @@
 	Inherits: ^Tree
 	Tooltip:
 		Name: Plant
+	Targetable:
+		TargetTypes: Plants
 	MapEditorData:
 		Categories: Plant
 
@@ -28,6 +34,8 @@
 	Inherits: ^Tree
 	RadarColorFromTerrain:
 		Terrain: Rock
+	Targetable:
+		TargetTypes: Rubble
 	Tooltip:
 		Name: Rubble
 	-HitShape:
@@ -38,6 +46,8 @@
 	Inherits: ^Tree
 	MapEditorData:
 		Categories: Misc
+	Targetable:
+		TargetTypes: Misc
 	-WithIdleOverlay@LAYER1:
 
 aotre000:

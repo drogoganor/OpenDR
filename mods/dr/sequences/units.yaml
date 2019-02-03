@@ -93,6 +93,9 @@ ufsnpst0:
 		Facings: 24
 		Length: 4
 		Tick: 100
+	idle:
+		Start: 480
+		Facings: 24
 	idle2:
 		Start: 240
 		Facings: 24
