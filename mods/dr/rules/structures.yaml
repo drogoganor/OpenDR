@@ -723,7 +723,7 @@ TemporalGate:
 	SupportPowerChargeBar:
 	ChronoshiftPower@chronoshift:
 		OrderName: TemporalGate
-		PauseOnCondition: disabled
+		#PauseOnCondition: disabled
 		Icon: bitgtmn0
 		ChargeInterval: 1000
 		Description: Temporal Gate
