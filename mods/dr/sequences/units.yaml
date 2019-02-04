@@ -96,6 +96,7 @@ ufsnpst0:
 	idle:
 		Start: 480
 		Facings: 24
+		Length: 1
 	idle2:
 		Start: 240
 		Facings: 24
@@ -104,6 +105,7 @@ ufsnpst0:
 	stand:
 		Start: 480
 		Facings: 24
+		Length: 1
 	shadow: ucmensh0
 		Length: 1
 		Offset: 9, 4
@@ -124,6 +126,9 @@ ufsctst0:
 		Length: 3
 		Tick: 100
 	idle:
+		Start: 152
+		Facings: 8
+	idle2:
 		Start: 88
 		Facings: 8
 		Length: 8

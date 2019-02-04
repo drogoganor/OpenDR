@@ -786,7 +786,7 @@ TemporalRiftCreator:
 		#LaunchSpeechNotification: SuperweaponFired
 		#IncomingSpeechNotification: SuperweaponFired
 		#IncomingSound: SuperweaponFired
-		#LaunchSound: n_swlaunch.aud
+		LaunchSound: gxtmpoc0.wav
 		#CameraActor: camera
 		CameraRange: 10c0
 		CameraSpawnAdvance: 25

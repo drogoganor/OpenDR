@@ -103,10 +103,10 @@ Sniper:
 		ScanRadius: 5
 	-WithInfantryBody:
 	WithDisguisingInfantryBody:
-		MoveSequence: idle
-		DefaultAttackSequence: idle
+		MoveSequence: run
+		DefaultAttackSequence: attack
 		IdleSequences: idle
-		StandSequences: idle
+		StandSequences: stand
 	WithDecoration@disguise:
 		Image: pips
 		Sequence: pip-blue
@@ -158,10 +158,10 @@ Scout:
 		ScanRadius: 5
 	-WithInfantryBody:
 	WithDisguisingInfantryBody:
-		MoveSequence: idle
-		DefaultAttackSequence: idle
+		MoveSequence: run
+		DefaultAttackSequence: attack
 		IdleSequences: idle
-		StandSequences: idle
+		StandSequences: stand
 	WithDecoration@disguise:
 		Image: pips
 		Sequence: pip-blue
@@ -868,7 +868,7 @@ ShockWave:
 		Name: Shock Wave
 	Buildable:
 		Description: A single-use unit that creates an immense earth wave\nthat travels across the map, causing severe damage\nto everything in its wake. The unit is armed by\ndouble-clicking on it and then fired at an enemy\ntarget to determine the direction of the wave. The\nShock Wave unit then embeds in the ground and\ndetonates, self-destructing in the discharge. The\nShock Wave is expensive and slow to build but well\nworth the wait.
-		Prerequisites: ~vehicles.human, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1, ~phasing, upgrade.phasing
+		Prerequisites: ~vehicles.human, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1, phasing, upgrade.phasing
 		BuildPaletteOrder: 200
 		BuildDuration: 120
 	Selectable:

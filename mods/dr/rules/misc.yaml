@@ -55,5 +55,5 @@ temporalriftspewer:
 		Weapon: TemporalRiftVortexWeapon
 	Vortex:
 		BurstDelay: 18
-		BurstTotal: 10
+		BurstTotal: 25
 		RotationRate: 35

@@ -794,7 +794,7 @@ ShockWaveGun:
 	Inherits: ^FullDamage
 	ReloadDelay: 68
 	Range: 34c0
-	Report: gxthnwc0.wav
+	Report: gxterac0.wav
 	Projectile: ShockWaveProjectile
 		Inaccuracy: 0c0
 		Weapon: ShockWaveShock
@@ -829,7 +829,6 @@ TemporalRiftVortexWeapon:
 	Inherits: ^FullDamage
 	ReloadDelay: 18
 	Range: 34c0
-	Report: gxthnwc0.wav
 	Projectile: VortexProjectile
 		Inaccuracy: 0c0
 		Weapon: TemporalRiftVortexBolt
@@ -837,7 +836,7 @@ TemporalRiftVortexWeapon:
 		ExplosionInterval: 4
 		ExplodeUnderThisAltitude: -9999
 		Blockable: False
-		KillProjectilesWhenReachedTargetLocation: false #try putting true
+		KillProjectilesWhenReachedTargetLocation: False
 		NumProjectiles: 4
 	Warhead@1Dam: SpreadDamage
 		Damage: 1

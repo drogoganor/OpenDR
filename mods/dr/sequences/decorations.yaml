@@ -4,6 +4,12 @@ base|aotre000:
 		Offset: -4,-19
 	idle: tileset|aotre000
 		Length: 1
+	run: tileset|aotre000 # for sniper and scout disguise
+		Length: 1
+	attack: tileset|aotre000 # for sniper and scout disguise
+		Length: 1
+	stand: tileset|aotre000 # for sniper and scout disguise
+		Length: 1
 	shadow: tileset|aotre0sh
 		Offset: 21, 10
 
@@ -11,6 +17,12 @@ base|aotre001:
 	Defaults:
 		Offset: 0,-10
 	idle: tileset|aotre001
+		Length: 1
+	run: tileset|aotre001 # for sniper and scout disguise
+		Length: 1
+	attack: tileset|aotre001 # for sniper and scout disguise
+		Length: 1
+	stand: tileset|aotre001 # for sniper and scout disguise
 		Length: 1
 	shadow: tileset|aotre1sh
 		Offset: 15, 9
@@ -20,6 +32,12 @@ base|aotre002:
 		Offset: -1,-14
 	idle: tileset|aotre002
 		Length: 1
+	run: tileset|aotre002 # for sniper and scout disguise
+		Length: 1
+	attack: tileset|aotre002 # for sniper and scout disguise
+		Length: 1
+	stand: tileset|aotre002 # for sniper and scout disguise
+		Length: 1
 	shadow: tileset|aotre2sh
 		Offset: 19, 11
 
@@ -27,6 +45,12 @@ base|aotre003:
 	Defaults:
 		Offset: 3,-15
 	idle: tileset|aotre003
+		Length: 1
+	run: tileset|aotre003 # for sniper and scout disguise
+		Length: 1
+	attack: tileset|aotre003 # for sniper and scout disguise
+		Length: 1
+	stand: tileset|aotre003 # for sniper and scout disguise
 		Length: 1
 	shadow: tileset|aotre3sh
 		Offset: 23, 11
@@ -36,6 +60,12 @@ base|aotre004:
 		Offset: 1,-10
 	idle: tileset|aotre004
 		Length: 1
+	run: tileset|aotre004 # for sniper and scout disguise
+		Length: 1
+	attack: tileset|aotre004 # for sniper and scout disguise
+		Length: 1
+	stand: tileset|aotre004 # for sniper and scout disguise
+		Length: 1
 	shadow: tileset|aotre4sh
 		Offset: 10, 8
 
@@ -43,6 +73,12 @@ base|aotre005:
 	Defaults:
 		Offset: 2,-9
 	idle: tileset|aotre005
+		Length: 1
+	run: tileset|aotre005 # for sniper and scout disguise
+		Length: 1
+	attack: tileset|aotre005 # for sniper and scout disguise
+		Length: 1
+	stand: tileset|aotre005 # for sniper and scout disguise
 		Length: 1
 	shadow: tileset|aotre5sh
 		Offset: 13, 6
