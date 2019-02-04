@@ -262,7 +262,7 @@ ModContent:
 			Download: drdemo
 			Required: true
 		auran: Auran Extras
-			TestFiles: ^Content/dr/aust/AUST.FTG, ^Content/dr/volcanic/VOLCANIC.FTG, ^Content/dr/auralien/AURALIEN.FTG, ^Content/dr/asteroid/ASTEROID.FTG, ^Content/dr/addon/aurunits/aursound.ftg, ^Content/dr/addon/aurunits/aursprite.ftg, ^Content/dr/addon/terrorist/terrsound.ftg, ^Content/dr/addon/terrorist/terrsprite.ftg
+			TestFiles: ^Content/dr/aust/AUST.FTG, ^Content/dr/volcanic/VOLCANIC.FTG, ^Content/dr/auralien/AURALIEN.FTG, ^Content/dr/asteroid/ASTEROID.FTG, ^Content/dr/addon/aurunits/aursound.ftg, ^Content/dr/addon/aurunits/aursprite.ftg, ^Content/dr/addon/terrorist/terrsound.ftg, ^Content/dr/addon/terrorist/terrsprite.ftg, ^Content/dr/legal.txt
 			Download: drauranext
 			Required: true
 		gog: Dark Reign + Expansion (GOG release)

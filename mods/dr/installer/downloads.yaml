@@ -22,6 +22,7 @@ drauranext: Auran Extra Content
 		^Content/dr/addon/aurunits/aursound.ftg: addon/aurunits/aursound.ftg
 		^Content/dr/addon/terrorist/terrsprite.ftg: addon/terrorist/terrsprite.ftg
 		^Content/dr/addon/terrorist/terrsound.ftg: addon/terrorist/terrsound.ftg
+		^Content/dr/legal.txt: legal.txt
 drmusic: Music Packages
 	MirrorList: http://drogoganor.net/dr/dr-music-mirrors.txt
 	Extract:

@@ -10,17 +10,20 @@ You can get the latest release from the [Releases page](https://github.com/drogo
 
 This mod uses game content from the freely available Dark Reign demo, or alternatively you can install content from an original game disc or [GOG install](https://www.gog.com/game/dark_reign_expansion).
 
-Click here to see a video of a skirmish game in action:
+Click the images below to see skirmish games in action:
 
 [![Skirmish video](http://img.youtube.com/vi/ZoCelizVw2w/0.jpg)](https://www.youtube.com/watch?v=ZoCelizVw2w "Skirmish video")
+
+[![Skirmish video 2](http://img.youtube.com/vi/zB4KJKKh0ww/0.jpg)](https://www.youtube.com/watch?v=zB4KJKKh0ww "Skirmish video 2")
 
 Join us on the [Dark Reign discord](https://discord.gg/3MKcGSW) if you want to talk about the mod.
 
 ## Thanks to
 
-* [OpenRA](https://github.com/OpenRA/OpenRA) and associates
-* [darkreign.ws](http://darkreign.ws/) DR community site
-* IceReaper for [KKnD](https://www.kknd-game.com/) and [PixelMagic](https://eiveo.net/pixelmagic.html)
+* [OpenRA](http://www.openra.net/) and associates
+* IceReaper and friends for [KKnD](https://www.kknd-game.com/) and [PixelMagic](https://eiveo.net/pixelmagic.html)
+* Nolt and friends for [Shattered Paradise](https://www.moddb.com/mods/shattered-paradise/downloads)
+* [darkreign.ws](http://darkreign.ws/), DR community site
 * dr_zaphod for readspr.c
 * btigi for [drExplorer](https://github.com/btigi/drExplorer)
 * My family and friends
