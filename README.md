@@ -1,25 +1,26 @@
+[![Travis CI](https://travis-ci.org/drogoganor/DarkReign.svg?branch=master)](https://travis-ci.org/drogoganor/DarkReign/builds#) [![Discord](https://img.shields.io/discord/102860784329052160.svg)](https://discord.gg/3MKcGSW)
+
 # Dark Reign mod for OpenRA
 
 A Dark Reign mod for the [OpenRA](https://github.com/OpenRA/OpenRA) strategy game engine. Created using the [OpenRAModSDK](https://github.com/OpenRA/OpenRAModSDK).
 
-This mod is a WIP made available for testing purposes. Many [features](https://github.com/drogoganor/DarkReign/wiki/Dark-Reign-features) are missing or incomplete and the game might crash. Most notably, the Skirmish AI is broken in the most recent build and will not build anything. Only multiplayer and a couple of custom campaign maps are available.
+Please note this mod is a work-in-progress. Many features are missing or incomplete at this stage.
 
-Click here to see a video of a custom campaign map in action:
+You can get the latest release from the [Releases page](https://github.com/drogoganor/DarkReign/releases). If you have trouble installing or would like to compile from source, please see the [Installation page](https://github.com/drogoganor/DarkReign/wiki/Installation).
 
-[![Custom map test video](http://img.youtube.com/vi/L64nlsVsk2E/0.jpg)](https://www.youtube.com/watch?v=L64nlsVsk2E "Custom map test video")
+This mod uses game content from the freely available Dark Reign demo, or alternatively you can install content from an original game disc or [GOG install](https://www.gog.com/game/dark_reign_expansion).
 
-This mod uses game content from the freely available Dark Reign demo, or alternatively you can install the content from an original game disc.
+Click here to see a video of a skirmish game in action:
 
-See the [Installation](https://github.com/drogoganor/DarkReign/wiki/Installation) page if you want to install it, or the [wiki](https://github.com/drogoganor/DarkReign/wiki) for other information about the mod and OpenRA.
+[![Skirmish video](http://img.youtube.com/vi/ZoCelizVw2w/0.jpg)](https://www.youtube.com/watch?v=ZoCelizVw2w "Skirmish video")
 
-Join us on the Dark Reign discord [![Discord](https://img.shields.io/discord/102860784329052160.svg)](https://discord.gg/3MKcGSW) if you want to talk about the mod.
-
-[![Travis CI](https://travis-ci.org/drogoganor/DarkReign.svg?branch=master)](https://travis-ci.org/drogoganor/DarkReign/builds#)
+Join us on the [Dark Reign discord](https://discord.gg/3MKcGSW) if you want to talk about the mod.
 
 ## Thanks to
 
-* [OpenRA](https://github.com/OpenRA/OpenRA) devs
-* [darkreign.ws](http://darkreign.ws/)
+* [OpenRA](https://github.com/OpenRA/OpenRA) and associates
+* [darkreign.ws](http://darkreign.ws/) DR community site
+* IceReaper for [KKnD](https://www.kknd-game.com/) and [PixelMagic](https://eiveo.net/pixelmagic.html)
 * dr_zaphod for readspr.c
 * btigi for [drExplorer](https://github.com/btigi/drExplorer)
-* IceReaper for [PixelMagic](https://eiveo.net/pixelmagic.html)
+* My family and friends
