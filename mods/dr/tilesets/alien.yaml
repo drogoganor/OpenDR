@@ -11,76 +11,91 @@ Terrain:
 		TargetTypes: Ground
 		Color: B8D367
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@Normal2:
 		Type: Normal2
 		TargetTypes: Ground
 		Color: B4D064
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@Normal3:
 		Type: Normal3
 		TargetTypes: Ground
 		Color: A9C15E
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@Muddy1:
 		Type: Muddy1
 		TargetTypes: Ground
 		Color: 647315
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@Muddy2:
 		Type: Muddy2
 		TargetTypes: Ground
 		Color: 6B7A17
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@Rough1:
 		Type: Rough1
 		TargetTypes: Ground
 		Color: D0BB1C
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@Rough2:
 		Type: Rough2
 		TargetTypes: Ground
 		Color: C4B01B
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@Road:
 		Type: Road
 		TargetTypes: Ground
 		Color: A5975D
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@RoadBase:
 		Type: RoadBase
 		TargetTypes: Ground
 		Color: B4B490
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@HillSlope1:
 		Type: HillSlope1
 		TargetTypes: Ground
 		Color: 4F734F
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@HillSlope2:
 		Type: HillSlope2
 		TargetTypes: Ground
 		Color: 4F734F
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@Cliff1:
 		Type: Cliff1
 		TargetTypes: Ground
 		Color: 885640
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@Cliff2:
 		Type: Cliff2
 		TargetTypes: Ground
 		Color: 885640
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@Cliff3:
 		Type: Cliff3
 		TargetTypes: Ground
 		Color: 885640
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@Cliff4:
 		Type: Cliff4
 		TargetTypes: Ground
 		Color: 885640
 		RestrictPlayerColor: true
+		AcceptsSmudgeType: MiniCrater, SmallCrater, MediumCrater, BigCrater, HugeCrater
 	TerrainType@SpringWater:
 		Type: SpringWater
 		TargetTypes: Ground
