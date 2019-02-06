@@ -20,3 +20,24 @@ Repair:
 	Warhead@1Dam: SpreadDamage
 		Damage: -85
 		ValidTargets: Repair
+
+MiniCrater:
+	Warhead: LeaveSmudge
+		SmudgeType: MiniCrater
+
+SmallCrater:
+	Warhead: LeaveSmudge
+		SmudgeType: SmallCrater
+
+MediumCrater:
+	Warhead: LeaveSmudge
+		SmudgeType: MediumCrater
+
+BigCrater:
+	Warhead: LeaveSmudge
+		SmudgeType: BigCrater
+
+HugeCrater:
+	Warhead: LeaveSmudge
+		SmudgeType: HugeCrater
+

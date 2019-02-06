@@ -40,6 +40,10 @@ Power.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: SmallCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 WaterLaunchPad.Constructing:
 	Inherits: ^SelfConstructingBuilding
@@ -88,6 +92,10 @@ WaterLaunchPad.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: SmallCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 HQ.human.Constructing:
 	Inherits: ^DrHeadquarters.Constructing
@@ -111,6 +119,10 @@ HQ.human.Constructing:
 	#WithIdleOverlay@LAYER3:
 	#	Palette: shadow
 	#	Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 HQ.cyborg.Constructing:
 	Inherits: ^DrHeadquarters.Constructing
@@ -136,6 +148,10 @@ HQ.cyborg.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 HQ.togran.Constructing:
 	Inherits: ^DrHeadquarters.Constructing
@@ -157,6 +173,10 @@ HQ.togran.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 TrainingFacility.fguard.Constructing:
 	Inherits: ^DrTrainingFacility.Constructing
@@ -182,6 +202,10 @@ TrainingFacility.fguard.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: BigCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 TrainingFacility.cyborg.Constructing:
 	Inherits: ^DrTrainingFacility.Constructing
@@ -210,6 +234,10 @@ TrainingFacility.cyborg.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: BigCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 AssemblyPlant.human.Constructing:
 	Inherits: ^DrAssemblyPlant.Constructing
@@ -229,6 +257,10 @@ AssemblyPlant.human.Constructing:
 		Sequence: building
 	#WithIdleOverlay@LAYER4:
 	#	Sequence: animation
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 AssemblyPlant.cyborg.Constructing:
 	Inherits: ^DrAssemblyPlant.Constructing
@@ -257,6 +289,10 @@ AssemblyPlant.cyborg.Constructing:
 		HP: 1200
 	#WithIdleOverlay@LAYER5: # Only for upgraded
 	#	Sequence: base
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # FG laser turret
 LaserTurret.Constructing:
@@ -279,6 +315,10 @@ LaserTurret.Constructing:
 		Cost: 500
 	Health:
 		HP: 400
+	ExplosionOnDamageTransition:
+		Weapon: MiniCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # Imperium plasma turret
 PlasmaTurret.Constructing:
@@ -303,6 +343,10 @@ PlasmaTurret.Constructing:
 	-WithIdleOverlay@LAYER1:
 	WithIdleOverlay@LAYER4:
 		Sequence: building
+	ExplosionOnDamageTransition:
+		Weapon: MiniCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # FG anti-air turret
 AntiAirTurret.human.Constructing:
@@ -328,6 +372,10 @@ AntiAirTurret.human.Constructing:
 		Range: 12c0
 	#-WithIdleOverlay@LAYER1:
 	#-WithIdleOverlay@LAYER2: # Problem with the sprites here
+	ExplosionOnDamageTransition:
+		Weapon: SmallCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # Imperium anti-air turret
 AntiAirTurret.cyborg.Constructing:
@@ -353,6 +401,10 @@ AntiAirTurret.cyborg.Constructing:
 		Range: 12c0
 	WithIdleOverlay@LAYER4:
 		Sequence: building
+	ExplosionOnDamageTransition:
+		Weapon: SmallCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # FG heavy rail turret
 HeavyRailTurret.Constructing:
@@ -383,6 +435,10 @@ HeavyRailTurret.Constructing:
 		HP: 550
 	RevealsShroud:
 		Range: 12c0
+	ExplosionOnDamageTransition:
+		Weapon: MediumCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # Imperium neutron accelerator
 NeutronAccelerator.Constructing:
@@ -415,6 +471,10 @@ NeutronAccelerator.Constructing:
 	RevealsShroud:
 		Range: 8c0
 	-WithIdleOverlay@LAYER2:
+	ExplosionOnDamageTransition:
+		Weapon: MediumCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # Camera tower
 CameraTower.Constructing:
@@ -446,6 +506,10 @@ CameraTower.Constructing:
 		HP: 150
 	RevealsShroud:
 		Range: 16c0
+	ExplosionOnDamageTransition:
+		Weapon: MiniCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # FG field hospital
 Hospital.human.Constructing:
@@ -485,6 +549,10 @@ Hospital.human.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: SmallCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # Imperium field hospital
 Hospital.cyborg.Constructing:
@@ -524,6 +592,10 @@ Hospital.cyborg.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: MediumCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # FG repair pad
 Repair.human.Constructing:
@@ -562,6 +634,10 @@ Repair.human.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: BigCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # Imperium repair pad
 Repair.cyborg.Constructing:
@@ -604,6 +680,10 @@ Repair.cyborg.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: BigCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # Phasing facility
 PhasingFacility.Constructing:
@@ -641,6 +721,10 @@ PhasingFacility.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: MediumCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # FG rearming deck
 RearmingDeck.human.Constructing:
@@ -678,6 +762,10 @@ RearmingDeck.human.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: MediumCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # Imperium rearming deck
 RearmingDeck.cyborg.Constructing:
@@ -717,6 +805,10 @@ RearmingDeck.cyborg.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: BigCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # Imperium temporal gate
 TemporalGate.Constructing:
@@ -754,6 +846,10 @@ TemporalGate.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: SmallCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 # Imperium temporal rift creator
 TemporalRiftCreator.Constructing:
@@ -791,3 +887,7 @@ TemporalRiftCreator.Constructing:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow-building
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True

@@ -88,11 +88,48 @@ HQ.human:
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
+		RequiresCondition: !dec1 && !dec2
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: dec1 && !dec2
+	WithIdleOverlay@LAYER1b:
+		Palette: terrain
+		Sequence: underlay3
+		RequiresCondition: dec2
 	WithIdleOverlay@LAYER2:
 		Sequence: top
+		RequiresCondition: !dec1 && !dec2
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: dec1 && !dec2
+	WithIdleOverlay@LAYER2b:
+		Sequence: top3
+		RequiresCondition: dec2
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow
+		RequiresCondition: !dec1 && !dec2
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: dec1 && !dec2
+	WithIdleOverlay@LAYER3b:
+		Palette: shadow
+		Sequence: shadow3
+		RequiresCondition: dec2
+	WithSpriteBody:
+		RequiresCondition: !dec1 && !dec2
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
+		RequiresCondition: dec1
+	WithSpriteBody@3:
+		Name: upgraded2
+		StartSequence: building3
+		Sequence: idle3
+		RequiresCondition: dec2
 
 HQ.cyborg:
 	Inherits: HQ.cyborg.Constructing
@@ -112,11 +149,48 @@ HQ.cyborg:
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
+		RequiresCondition: !dec1 && !dec2
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: dec1 && !dec2
+	WithIdleOverlay@LAYER1b:
+		Palette: terrain
+		Sequence: underlay3
+		RequiresCondition: dec2
 	WithIdleOverlay@LAYER2:
 		Sequence: top
+		RequiresCondition: !dec1 && !dec2
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: dec1 && !dec2
+	WithIdleOverlay@LAYER2b:
+		Sequence: top3
+		RequiresCondition: dec2
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow
+		RequiresCondition: !dec1 && !dec2
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: dec1 && !dec2
+	WithIdleOverlay@LAYER3b:
+		Palette: shadow
+		Sequence: shadow3
+		RequiresCondition: dec2
+	WithSpriteBody:
+		RequiresCondition: !dec1 && !dec2
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
+		RequiresCondition: dec1 && !dec2
+	WithSpriteBody@3:
+		Name: upgraded2
+		StartSequence: building3
+		Sequence: idle3
+		RequiresCondition: dec2
 
 HQ.togran:
 	Inherits: HQ.togran.Constructing
@@ -151,15 +225,36 @@ TrainingFacility.fguard:
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: stardecoration
 	WithIdleOverlay@LAYER2:
 		Sequence: top
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: stardecoration
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: stardecoration
 	#WithIdleOverlay@LAYER4:
 	#	Sequence: animation
 	#WithIdleOverlay@LAYER5: # Only for upgraded
 	#	Sequence: base
+	WithSpriteBody:
+		RequiresCondition: !stardecoration
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
+		RequiresCondition: stardecoration
 
 TrainingFacility.cyborg:
 	Inherits: TrainingFacility.cyborg.Constructing
@@ -180,15 +275,36 @@ TrainingFacility.cyborg:
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: stardecoration
 	WithIdleOverlay@LAYER2:
 		Sequence: top
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: stardecoration
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: stardecoration
 	WithIdleOverlay@LAYER4:
 		Sequence: animation
 	#WithIdleOverlay@LAYER5: # Only for upgraded
 	#	Sequence: base
+	WithSpriteBody:
+		RequiresCondition: !stardecoration
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
+		RequiresCondition: stardecoration
 
 AssemblyPlant.human:
 	Inherits: AssemblyPlant.human.Constructing
@@ -199,17 +315,40 @@ AssemblyPlant.human:
 		Name: Assembly Plant
 	Health:
 		HP: 1000
+	RallyPoint:
+		Offset: 0,5
 	-WithIdleOverlay@REPEAT:
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: stardecoration
 	WithIdleOverlay@LAYER2:
 		Sequence: top
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: stardecoration
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: stardecoration
 	#WithIdleOverlay@LAYER4:
 	#	Sequence: animation
+	WithSpriteBody:
+		RequiresCondition: !stardecoration
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
+		RequiresCondition: stardecoration
 
 AssemblyPlant.cyborg:
 	Inherits: AssemblyPlant.cyborg.Constructing
@@ -220,21 +359,42 @@ AssemblyPlant.cyborg:
 		Name: Assembly Plant
 	Exit@1:
 		SpawnOffset: -768,768,0
-		ExitCell: 1,3
+		ExitCell: 0,3
 	RallyPoint:
-		Offset: 1,5
+		Offset: 0,5
 	Health:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: stardecoration
 	WithIdleOverlay@LAYER2:
 		Sequence: top
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: stardecoration
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: stardecoration
 	#WithIdleOverlay@LAYER5: # Only for upgraded
 	#	Sequence: base
+	WithSpriteBody:
+		RequiresCondition: !stardecoration
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
+		RequiresCondition: stardecoration
 
 # FG laser turret
 LaserTurret:
@@ -477,7 +637,7 @@ Hospital.human:
 		PlayerExperience: 5
 	Reservable:
 	RallyPoint:
-		Offset: 3,5
+		Offset: 3,3
 	WithResupplyAnimation:
 	Power:
 		Amount: -100
@@ -512,7 +672,7 @@ Hospital.cyborg:
 		PlayerExperience: 5
 	Reservable:
 	RallyPoint:
-		Offset: 3,5
+		Offset: 3,3
 	WithResupplyAnimation:
 	Power:
 		Amount: -100
@@ -618,11 +778,25 @@ PhasingFacility:
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: stardecoration
 	WithIdleOverlay@LAYER2:
 		Sequence: top
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: stardecoration
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: stardecoration
 	GrantConditionOnPrerequisite:
 		Prerequisites: upgrade.phasing
 		Condition: stardecoration
@@ -632,6 +806,13 @@ PhasingFacility:
 		Sequence: pip-red
 		ReferencePoint: Bottom, Left
 		ZOffset: 256
+		RequiresCondition: stardecoration
+	WithSpriteBody:
+		RequiresCondition: !stardecoration
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
 		RequiresCondition: stardecoration
 
 # FG rearming deck

@@ -183,6 +183,26 @@ World:
 	ResourceClaimLayer:
 	WarheadDebugOverlay:
 	CustomTerrainDebugOverlay:
+	SmudgeLayer@MiniCrater:
+		Type: MiniCrater
+		Sequence: aoctr000
+		SmokeType: aoctr000
+	SmudgeLayer@SmallCrater:
+		Type: SmallCrater
+		Sequence: aoctr001
+		SmokeType: aoctr001
+	SmudgeLayer@MediumCrater:
+		Type: MediumCrater
+		Sequence: aoctr002
+		SmokeType: aoctr002
+	SmudgeLayer@BigCrater:
+		Type: BigCrater
+		Sequence: aoctr003
+		SmokeType: aoctr003
+	SmudgeLayer@HugeCrater:
+		Type: HugeCrater
+		Sequence: aoctr004
+		SmokeType: aoctr004
 	MapCreeps:
 		CheckboxVisible: False
 	SpawnMapActors:

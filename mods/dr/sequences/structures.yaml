@@ -65,7 +65,15 @@ nfhqt1l0:
 		Offset: -6, -12
 	building:
 		Start: 0
+	building2: nfhqt2l0
+		Start: 0
+	building3: nfhqt3l0
+		Start: 0
 	idle:
+		Start: 1
+	idle2: nfhqt2l0
+		Start: 1
+	idle3: nfhqt3l0
 		Start: 1
 	underlay-building: tileset|nfhqt1l0
 		ZOffset: -8192
@@ -73,19 +81,19 @@ nfhqt1l0:
 	underlay: tileset|nfhqt1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: tileset|nfhqt2l0
+	underlay2: tileset|nfhqt2l0
 		ZOffset: -8192
 		Start: 1
-	up3underlay: tileset|nfhqt3l0
+	underlay3: tileset|nfhqt3l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tfhqt1l0
 		Start: 0
 	top: tfhqt1l0
 		Start: 1
-	up2top: tfhqt2l0
+	top2: tfhqt2l0
 		Start: 1
-	up3top: tfhqt3l0
+	top3: tfhqt3l0
 		Start: 1
 	shadow-building: bfhqtsh0
 		Start: 0
@@ -93,10 +101,10 @@ nfhqt1l0:
 	shadow: bfhqtsh0
 		Start: 1
 		Offset: 8, -11
-	up2shadow: bfhqtsh1
+	shadow2: bfhqtsh1
 		Start: 1
 		Offset: 8, -11
-	up3shadow: bfhqtsh2
+	shadow3: bfhqtsh2
 		Start: 1
 		Offset: 8, -11
 	icon: bfhqtmn0
@@ -112,25 +120,33 @@ nihqt1l0:
 		Start: 0
 	idle:
 		Start: 1
+	building2: nihqt2l0
+		Start: 0
+	idle2: nihqt2l0
+		Start: 1
+	building3: nihqt3l0
+		Start: 0
+	idle3: nihqt3l0
+		Start: 1
 	underlay-building: tileset|nihqt1l0
 		ZOffset: -8192
 		Start: 0
 	underlay: tileset|nihqt1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: tileset|nihqt2l0
+	underlay2: tileset|nihqt2l0
 		ZOffset: -8192
 		Start: 1
-	up3underlay: tileset|nihqt3l0
+	underlay3: tileset|nihqt3l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tihqt1l0
 		Start: 0
 	top: tihqt1l0
 		Start: 1
-	up2top: tihqt2l0
+	top2: tihqt2l0
 		Start: 1
-	up3top: tihqt3l0
+	top3: tihqt3l0
 		Start: 1
 	shadow-building: bihqtsh0
 		Start: 0
@@ -138,10 +154,10 @@ nihqt1l0:
 	shadow: bihqtsh0
 		Start: 1
 		Offset: 30, -10
-	up2shadow: bihqtsh1
+	shadow2: bihqtsh1
 		Start: 1
 		Offset: 30, -10
-	up3shadow: bihqtsh2
+	shadow3: bihqtsh2
 		Start: 1
 		Offset: 30, -10
 	icon: bihqtmn0
@@ -182,23 +198,27 @@ nfutf1l0:
 		Start: 0
 	idle:
 		Start: 1
+	building2: nfutf2l0
+		Start: 0
+	idle2: nfutf2l0
+		Start: 1
 	underlay-building: tileset|nfutf1l0
 		ZOffset: -8192
 		Start: 0
 	underlay: tileset|nfutf1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: tileset|nfutf2l0
+	underlay2: tileset|nfutf2l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tfutf1l0
 		Start: 0
 	top: tfutf1l0
 		Start: 1
+	top2: tfutf2l0
+		Start: 1
 	up2base: nfutf2l0
 		ZOffset: -8192
-		Start: 1
-	up2top: tfutf2l0
 		Start: 1
 	animation: tfutf2l0 # flag
 		Start: 3
@@ -210,7 +230,7 @@ nfutf1l0:
 	shadow: bfutfsh0
 		Start: 1
 		Offset: 12, -2
-	up2shadow: bfutfsh1
+	shadow2: bfutfsh1
 		Start: 1
 		Offset: 12, -2
 	icon: bfutfmn0
@@ -226,20 +246,24 @@ niutf1l0:
 		Start: 0
 	idle:
 		Start: 1
+	building2: niutf2l0
+		Start: 0
+	idle2: niutf2l0
+		Start: 1
 	underlay-building: tileset|niutf1l0
 		ZOffset: -8192
 		Start: 0
 	underlay: tileset|niutf1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: tileset|niutf2l0
+	underlay2: tileset|niutf2l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tiutf1l0
 		Start: 0
 	top: tiutf1l0
 		Start: 1
-	up2base: niutf2l0
+	top2: tiutf2l0
 		ZOffset: -8192
 		Start: 1
 	up2top: tiutf2l0
@@ -254,7 +278,7 @@ niutf1l0:
 	shadow: biutfsh0
 		Start: 1
 		Offset: 22, 6
-	up2shadow: biutfsh1
+	shadow2: biutfsh1
 		Start: 1
 		Offset: 22, 6
 	icon: biutfmn0
@@ -270,20 +294,24 @@ nfvcy1l0:
 		Start: 0
 	idle:
 		Start: 1
+	building2: nfvcy2l0
+		Start: 0
+	idle2: nfvcy2l0
+		Start: 1
 	underlay-building: tileset|nfvcy1l0
 		ZOffset: -8192
 		Start: 0
 	underlay: tileset|nfvcy1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: tileset|nfvcy2l0
+	underlay2: tileset|nfvcy2l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tfvcy1l0
 		Start: 0
 	top: tfvcy1l0
 		Start: 1
-	up2top: tfvcy2l0
+	top2: tfvcy2l0
 		Start: 1
 	#animation: tfvcy2l0 # chimney # TODO: Not available in demo!
 	#	Start: 3
@@ -295,7 +323,7 @@ nfvcy1l0:
 	shadow: bfvcysh0
 		Start: 1
 		Offset: 16, 20
-	up2shadow: bfvcysh1
+	shadow2: bfvcysh1
 		Start: 1
 		Offset: 12, -2
 	icon: bfvcymn0
@@ -309,21 +337,24 @@ nivcy1l0:
 		Start: 0
 	idle:
 		Start: 1
+	building2: nivcy2l0
+		Start: 0
+	idle2: nivcy2l0
+		Start: 1
 	underlay-building: tileset|nivcy1l0
 		ZOffset: -8192
 		Start: 0
 	underlay: tileset|nivcy1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: tileset|nivcy2l0
+	underlay2: tileset|nivcy2l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tivcy1l0
 		Start: 0
 	top: tivcy1l0
 		Start: 1
-	up2base: nivcy2l0
-		ZOffset: -8192
+	top2: tivcy2l0
 		Start: 1
 	up2top: tivcy2l0
 		Start: 1
@@ -333,7 +364,7 @@ nivcy1l0:
 	shadow: bivcysh0
 		Start: 1
 		Offset: 11, 12
-	up2shadow: bivcysh1
+	shadow2: bivcysh1
 		Start: 1
 		Offset: 11, 12
 	icon: bivcymn0
@@ -706,20 +737,32 @@ nfphf1l0:
 		Start: 0
 	idle:
 		Start: 1
+	building2: nfphf2l0
+		Start: 0
+	idle2: nfphf2l0
+		Start: 1
 	underlay-building: tileset|nfphf1l0
 		ZOffset: -8192
 		Start: 0
 	underlay: tileset|nfphf1l0
 		ZOffset: -8192
 		Start: 1
+	underlay2: tileset|nfphf2l0
+		ZOffset: -8192
+		Start: 1
 	top-building: tfphf1l0
 		Start: 0
 	top: tfphf1l0
+		Start: 1
+	top2: tfphf2l0
 		Start: 1
 	shadow-building: bfphfsh0
 		Start: 0
 		Offset: 0, 7
 	shadow: bfphfsh0
+		Start: 1
+		Offset: 0, 7
+	shadow2: bfphfsh1
 		Start: 1
 		Offset: 0, 7
 	icon: bfphfmn0

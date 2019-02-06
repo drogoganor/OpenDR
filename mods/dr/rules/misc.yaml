@@ -57,3 +57,17 @@ temporalriftspewer:
 		BurstDelay: 18
 		BurstTotal: 25
 		RotationRate: 35
+
+# craters:
+# 	RenderSprites:
+# 		Image: ncpow1l0
+# 	Defaults:
+# 		UseTilesetExtension: true
+# 		Offset: 0, -12, 1
+# 		ZRamp: 1
+# 	sc1: burnt01
+# 	sc2: burnt02
+# 	sc3: burnt03
+# 	sc4: burnt04
+# 	sc5: burnt05
+# 	sc6: burnt06
