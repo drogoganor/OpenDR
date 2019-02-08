@@ -116,13 +116,13 @@ nfhqt1l0:
 nihqt1l0:
 	Defaults:
 		Offset: 6, -22
-	building:
+	building: tileset|nihqt1l0
 		Start: 0
-	idle:
+	idle: tileset|nihqt1l0
 		Start: 1
-	building2: nihqt2l0
+	building2: tileset|nihqt2l0
 		Start: 0
-	idle2: nihqt2l0
+	idle2: tileset|nihqt2l0
 		Start: 1
 	building3: nihqt3l0
 		Start: 0
@@ -140,13 +140,13 @@ nihqt1l0:
 	underlay3: tileset|nihqt3l0
 		ZOffset: -8192
 		Start: 1
-	top-building: tihqt1l0
+	top-building: tileset|tihqt1l0
 		Start: 0
-	top: tihqt1l0
+	top: tileset|tihqt1l0
 		Start: 1
-	top2: tihqt2l0
+	top2: tileset|tihqt2l0
 		Start: 1
-	top3: tihqt3l0
+	top3: tileset|tihqt3l0
 		Start: 1
 	shadow-building: bihqtsh0
 		Start: 0

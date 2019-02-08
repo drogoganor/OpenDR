@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -47,6 +48,9 @@ namespace OpenRA.Mods.Dr.Traits
 
         [Desc("Multiply terrain palette values by this ( >= 160).")]
         public readonly int TerrainPaletteMultiplier = 4;
+
+        [Desc("Increase all RGB values by this amount.")]
+        public readonly int Gamma = 0;
 
         public object Create(ActorInitializer init) { return new PaletteFromDrFile(init.World, this); }
 
@@ -104,13 +108,15 @@ namespace OpenRA.Mods.Dr.Traits
                 if (i == 0)
                     colors[i] = 0;
                 else if (i < 160 || i == 255)
-                    colors[i] = (uint)Color.FromArgb(rList[i] * info.StandardPaletteMultiplier,
-                        gList[i] * info.StandardPaletteMultiplier,
-                        bList[i] * info.StandardPaletteMultiplier).ToArgb();
+                    colors[i] = (uint)Color.FromArgb(
+                        Math.Min((rList[i] * info.StandardPaletteMultiplier) + info.Gamma, 255),
+                        Math.Min((gList[i] * info.StandardPaletteMultiplier) + info.Gamma, 255),
+                        Math.Min((bList[i] * info.StandardPaletteMultiplier) + info.Gamma, 255)).ToArgb();
                 else
-                    colors[i] = (uint)Color.FromArgb(rList[i] * info.TerrainPaletteMultiplier,
-                        gList[i] * info.TerrainPaletteMultiplier,
-                        bList[i] * info.TerrainPaletteMultiplier).ToArgb();
+                    colors[i] = (uint)Color.FromArgb(
+                        Math.Min((rList[i] * info.TerrainPaletteMultiplier) + info.Gamma, 255),
+                        Math.Min((gList[i] * info.TerrainPaletteMultiplier) + info.Gamma, 255),
+                        Math.Min((bList[i] * info.TerrainPaletteMultiplier) + info.Gamma, 255)).ToArgb();
             }
 
             // Shadow hack

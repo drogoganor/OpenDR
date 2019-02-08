@@ -36,6 +36,16 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
         private static string[] knownUnknownThings = new string[]
         {
+            "smcrater", // Not sure if these are ever deliberately placed on a map
+			"medcrater",
+            "bigcrater",
+            "largercrater",
+            "hugecrater1",
+            "hugecrater2", // Rubble and ruins
+            "hugecrater3",
+            "hugecrater4",
+            "hugecrater5",
+            "hugecrater6"
         };
 
         private static string[] knownUnknownBuildings = new string[]
@@ -90,16 +100,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "misc1", "aomsc000" },
             { "misc2", "aomsc001" },
             { "misc3", "aomsc002" },
-            { "smcrater", "aoctr000" }, // Not sure if these are ever deliberately placed on a map
-			{ "medcrater", "aoctr001" },
-            { "bigcrater", "aoctr002" },
-            { "largercrater", "aoctr003" },
-            { "hugecrater1", "aoctr004" },
-            { "hugecrater2", "aoctr005" },
-            { "hugecrater3", "aoctr006" },
-            { "hugecrater4", "aoctr007" },
-            { "hugecrater5", "aoctr008" },
-            { "hugecrater6", "aoctr009" },
             { "water1", "aowtr000" },
             { "water2", "aowtr001" },
             { "water3", "aowtr002" },

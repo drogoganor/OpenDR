@@ -44,7 +44,10 @@ namespace OpenRA.Mods.Common.Traits
 		[Desc("Whether this palette is available for cursors.")]
 		public readonly bool CursorPalette = false;
 
-		public object Create(ActorInitializer init) { return new PaletteFromJascFile(init.World, this); }
+        [Desc("Increase all RGB values by this amount.")]
+        public readonly int Gamma = 0;
+
+        public object Create(ActorInitializer init) { return new PaletteFromJascFile(init.World, this); }
 
 		string IProvidesCursorPaletteInfo.Palette { get { return CursorPalette ? Name : null; } }
 
@@ -83,6 +86,10 @@ namespace OpenRA.Mods.Common.Traits
 
                         if (!byte.TryParse(rgba[2], out b))
                             throw new InvalidDataException("Invalid B value: {0}".F(rgba[2]));
+
+                        r = (byte)Math.Min(r + Gamma, 255);
+                        g = (byte)Math.Min(g + Gamma, 255);
+                        b = (byte)Math.Min(b + Gamma, 255);
 
                         // Check if color has a (valid) alpha value.
                         // Note: We can't throw on "rgba.Length > 3 but parse failed", because in GIMP palettes the 'invalid' value is probably a color name string.
