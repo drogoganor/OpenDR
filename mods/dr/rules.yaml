@@ -286,6 +286,8 @@ Player:
 		InsufficientFundsNotification: InsufficientFunds
 		CashTickUpNotification: CashTickUp
 		CashTickDownNotification: CashTickDown
+	Production:
+		Produces: Building
 	BuilderQueue@Building:
 		Type: Building
 		Group: Building
