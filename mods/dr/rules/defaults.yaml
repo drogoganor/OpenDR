@@ -381,9 +381,6 @@
 		BuildDurationModifier: 2486 # DR build rate
 	Huntable:
 	UpdatesPlayerStatistics:
-	#RequiresBuildableArea:
-	#	AreaTypes: building
-	#	Adjacent: 12
 	SelfConstructing:
 		Steps: 30
 	ShakeOnDeath:
@@ -415,9 +412,14 @@
 	MapEditorData:
 		Categories: SelfConstructing
 	CommandBarBlacklist:
-	#RequiresBuildableArea:
-	#	AreaTypes: building
-	#	Adjacent: 40
+	Production:
+		Produces: Building, AIBuilding
+	BuilderQueue@Building:
+		Type: Building
+		Group: Building
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: Upgrading
 
 ^ConstructedBuildingCommon:
 	MapEditorData:

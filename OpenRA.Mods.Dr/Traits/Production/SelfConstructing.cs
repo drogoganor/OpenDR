@@ -44,21 +44,18 @@ namespace OpenRA.Mods.Dr.Traits.Production
 
             if (!string.IsNullOrEmpty(Info.Condition) && token == ConditionManager.InvalidConditionToken)
                 token = conditionManager.GrantCondition(init.Self, Info.Condition);
-
-            if (init.Contains<PlaceBuildingInit>())
-            {
-                var valued = init.Self.Info.TraitInfoOrDefault<ValuedInfo>();
-                var cost = valued != null ? valued.Cost : 0;
-                var pm = init.Self.Owner.PlayerActor.TraitOrDefault<PowerManager>();
-
-                var productionQueue = init.Self.Owner.PlayerActor.TraitsImplementing<BuilderQueue>().First(q => q.AllItems().Contains(init.Self.Info));
-                productionItem = new ProductionItem(productionQueue, init.Self.Info.Name, cost, pm, null);
-                productionQueue.BeginProduction(productionItem);
-            }
         }
 
         void INotifyCreated.Created(Actor self)
         {
+            var valued = self.Info.TraitInfoOrDefault<ValuedInfo>();
+            var cost = valued != null ? valued.Cost : 0;
+            var pm = self.Owner.PlayerActor.TraitOrDefault<PowerManager>();
+
+            var productionQueue = self.TraitsImplementing<BuilderQueue>().First(q => q.AllItems().Contains(self.Info));
+            productionItem = new ProductionItem(productionQueue, self.Info.Name, cost, pm, null);
+            productionQueue.BeginProduction(productionItem);
+
             if (productionItem == null)
                 return;
 
