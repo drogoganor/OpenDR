@@ -1,94 +1,43 @@
 
-^DrRock:
-	Inherits: ^Tree
-	RadarColorFromTerrain:
-		Terrain: Rock
-	Targetable:
-		TargetTypes: Rocks
-	Tooltip:
-		Name: Rock
-	MapEditorData:
-		Categories: Rocks
-
-^DrCrater:
-	Inherits: ^Tree
-	RadarColorFromTerrain:
-		Terrain: Rock
-	Targetable:
-		TargetTypes: Craters
-	Tooltip:
-		Name: Crater
-	MapEditorData:
-		Categories: Craters
-
-^DrPlant:
-	Inherits: ^Tree
-	Tooltip:
-		Name: Plant
-	Targetable:
-		TargetTypes: Plants
-	MapEditorData:
-		Categories: Plant
-
-^DrRubble:
-	Inherits: ^Tree
-	RadarColorFromTerrain:
-		Terrain: Rock
-	Targetable:
-		TargetTypes: Rubble
-	Tooltip:
-		Name: Rubble
-	-HitShape:
-	MapEditorData:
-		Categories: Rocks
-
-^DrMisc:
-	Inherits: ^Tree
-	MapEditorData:
-		Categories: Misc
-	Targetable:
-		TargetTypes: Misc
-	-WithIdleOverlay@LAYER1:
-
 aotre000:
 	RenderSprites:
 		Palette: terrain
-		Image: base|aotre000
+		Image: aotre000
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
 aotre001:
 	RenderSprites:
 		Palette: terrain
-		Image: base|aotre001
+		Image: aotre001
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
 aotre002:
 	RenderSprites:
 		Palette: terrain
-		Image: base|aotre002
+		Image: aotre002
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
 aotre003:
 	RenderSprites:
 		Palette: terrain
-		Image: base|aotre003
+		Image: aotre003
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
 aotre004:
 	RenderSprites:
 		Palette: terrain
-		Image: base|aotre004
+		Image: aotre004
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 
 aotre005:
 	RenderSprites:
 		Palette: terrain
-		Image: base|aotre005
+		Image: aotre005
 	Inherits: ^Tree
 	Inherits@shape: ^1x1Shape
 

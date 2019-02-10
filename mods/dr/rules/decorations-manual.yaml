@@ -1,0 +1,192 @@
+
+aotre000.base:
+	RenderSprites:
+		Image: aotre000.base
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Base
+	Inherits@shape: ^1x1Shape
+
+aotre001.base:
+	RenderSprites:
+		Image: aotre001.base
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Base
+	Inherits@shape: ^1x1Shape
+
+aotre002.base:
+	RenderSprites:
+		Image: aotre002.base
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Base
+	Inherits@shape: ^1x1Shape
+
+aotre003.base:
+	RenderSprites:
+		Image: aotre003.base
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Base
+	Inherits@shape: ^1x1Shape
+
+aotre004.base:
+	RenderSprites:
+		Image: aotre004.base
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Base
+	Inherits@shape: ^1x1Shape
+
+aotre005.base:
+	RenderSprites:
+		Image: aotre005.base
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Base
+	Inherits@shape: ^1x1Shape
+
+# Plant
+aopln000.base:
+	Inherits: ^DrPlant
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aopln000.base
+
+aopln001.base:
+	Inherits: ^DrPlant
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aopln001.base
+
+aopln002.base:
+	Inherits: ^DrPlant
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aopln002.base
+
+# Rocks
+aoroc000.base:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aoroc000.base
+
+aoroc001.base:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aoroc001.base
+
+aoroc002.base:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aoroc002.base
+
+aoroc003.base:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aoroc003.base
+	Building:
+		Footprint: x_ xx xx
+		Dimensions: 2,3
+		LocalCenterOffset: 0,0,0
+
+aoroc004.base:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aoroc004.base
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+
+aoroc005.base:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aoroc005.base
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+
+# Cliff
+aoclf000.base:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aoclf000.base
+	Building:
+		Footprint: _x_ xxx xx_
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+
+aoclf001.base:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aoclf001.base
+	Building:
+		Footprint: _x_ xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+
+aoclf002.base:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aoclf002.base
+	Building:
+		Footprint: _x_ xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+
+aoclf003.base:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aoclf003.base
+	Building:
+		Footprint: _x_ xxx xxx xx_
+		Dimensions: 3,4
+		LocalCenterOffset: 0,0,0
+
+aoclf004.base:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aoclf004.base
+	Building:
+		Footprint: _x_ xxx xx= xxx
+		Dimensions: 3,4
+		LocalCenterOffset: 0,0,0
+
+aoclf005.base:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Base
+	RenderSprites:
+		Image: aoclf005.base
+	Building:
+		Footprint: _x__ xxxx xxxx xxx_
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0

@@ -1,0 +1,213 @@
+
+aotre000.snow:
+	RenderSprites:
+		Palette: terrain
+		Image: aotre000.snow
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Snow
+	Inherits@shape: ^1x1Shape
+
+aotre001.snow:
+	RenderSprites:
+		Palette: terrain
+		Image: aotre001.snow
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Snow
+	Inherits@shape: ^1x1Shape
+
+aotre002.snow:
+	RenderSprites:
+		Palette: terrain
+		Image: aotre002.snow
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Snow
+	Inherits@shape: ^1x1Shape
+
+aotre003.snow:
+	RenderSprites:
+		Palette: terrain
+		Image: aotre003.snow
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Snow
+	Inherits@shape: ^1x1Shape
+
+aotre004.snow:
+	RenderSprites:
+		Palette: terrain
+		Image: aotre004.snow
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Snow
+	Inherits@shape: ^1x1Shape
+
+aotre005.snow:
+	RenderSprites:
+		Palette: terrain
+		Image: aotre005.snow
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Snow
+	Inherits@shape: ^1x1Shape
+
+# Plant
+aopln000.snow:
+	Inherits: ^DrPlant
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aopln000.snow
+
+aopln001.snow:
+	Inherits: ^DrPlant
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aopln001.snow
+
+aopln002.snow:
+	Inherits: ^DrPlant
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aopln002.snow
+
+# Rocks
+aoroc000.snow:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc000.snow
+
+aoroc001.snow:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc001.snow
+
+aoroc002.snow:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc002.snow
+
+aoroc003.snow:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc003.snow
+	Building:
+		Footprint: x_ xx xx
+		Dimensions: 2,3
+		LocalCenterOffset: 0,0,0
+
+aoroc004.snow:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc004.snow
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+
+aoroc005.snow:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc005.snow
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+
+# Cliff
+aoclf000.snow:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf000.snow
+	Building:
+		Footprint: _x_ xxx xx_
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+
+aoclf001.snow:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf001.snow
+	Building:
+		Footprint: _x_ xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+
+aoclf002.snow:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf002.snow
+	Building:
+		Footprint: _x_ xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+
+aoclf003.snow:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf003.snow
+	Building:
+		Footprint: _x_ xxx xxx xx_
+		Dimensions: 3,4
+		LocalCenterOffset: 0,0,0
+
+aoclf004.snow:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf004.snow
+	Building:
+		Footprint: _x_ xxx xx= xxx
+		Dimensions: 3,4
+		LocalCenterOffset: 0,0,0
+
+aoclf005.snow:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Snow
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf005.snow
+	Building:
+		Footprint: _x__ xxxx xxxx xxx_
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0

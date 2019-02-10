@@ -1,0 +1,205 @@
+
+aotre000.base:
+	Defaults:
+		Offset: -4,-19
+	idle: aotre000
+		Length: 1
+	run: aotre000 # for sniper and scout disguise
+		Length: 1
+	attack: aotre000 # for sniper and scout disguise
+		Length: 1
+	stand: aotre000 # for sniper and scout disguise
+		Length: 1
+	shadow: aotre0sh
+		Offset: 21, 10
+
+aotre001.base:
+	Defaults:
+		Offset: 0,-10
+	idle: aotre001
+		Length: 1
+	run: aotre001 # for sniper and scout disguise
+		Length: 1
+	attack: aotre001 # for sniper and scout disguise
+		Length: 1
+	stand: aotre001 # for sniper and scout disguise
+		Length: 1
+	shadow: aotre1sh
+		Offset: 15, 9
+
+aotre002.base:
+	Defaults:
+		Offset: -1,-14
+	idle: aotre002
+		Length: 1
+	run: aotre002 # for sniper and scout disguise
+		Length: 1
+	attack: aotre002 # for sniper and scout disguise
+		Length: 1
+	stand: aotre002 # for sniper and scout disguise
+		Length: 1
+	shadow: aotre2sh
+		Offset: 19, 11
+
+aotre003.base:
+	Defaults:
+		Offset: 3,-15
+	idle: aotre003
+		Length: 1
+	run: aotre003 # for sniper and scout disguise
+		Length: 1
+	attack: aotre003 # for sniper and scout disguise
+		Length: 1
+	stand: aotre003 # for sniper and scout disguise
+		Length: 1
+	shadow: aotre3sh
+		Offset: 23, 11
+
+aotre004.base:
+	Defaults:
+		Offset: 1,-10
+	idle: aotre004
+		Length: 1
+	run: aotre004 # for sniper and scout disguise
+		Length: 1
+	attack: aotre004 # for sniper and scout disguise
+		Length: 1
+	stand: aotre004 # for sniper and scout disguise
+		Length: 1
+	shadow: aotre4sh
+		Offset: 10, 8
+
+aotre005.base:
+	Defaults:
+		Offset: 2,-9
+	idle: aotre005
+		Length: 1
+	run: aotre005 # for sniper and scout disguise
+		Length: 1
+	attack: aotre005 # for sniper and scout disguise
+		Length: 1
+	stand: aotre005 # for sniper and scout disguise
+		Length: 1
+	shadow: aotre5sh
+		Offset: 13, 6
+
+# Plant
+aopln000.base:
+	Defaults:
+		Offset: -2,-4
+	idle: aopln000
+		Length: 1
+	shadow: aopln0sh
+		Offset: -4, -3
+
+aopln001.base:
+	Defaults:
+		Offset: 1,1
+	idle: aopln001
+		Length: 1
+	shadow: aopln1sh
+		Offset: 1, 1
+
+aopln002.base:
+	Defaults:
+		Offset: 4,2
+	idle: aopln002
+		Length: 1
+	shadow: aopln2sh
+		Offset: 6, 7
+
+# Rocks
+aoroc000.base:
+	Defaults:
+		Offset: 0,0
+	idle: aoroc000
+		Length: 1
+	shadow: aoroc0sh
+		Offset: 5, 1
+
+aoroc001.base:
+	Defaults:
+		Offset: 0,0
+	idle: aoroc001
+		Length: 1
+	shadow: aoroc1sh
+		Offset: 6, 3
+
+aoroc002.base:
+	Defaults:
+		Offset: 0,0
+	idle: aoroc002
+		Length: 1
+	shadow: aoroc2sh
+		Offset: 8, 7
+
+aoroc003.base:
+	Defaults:
+		Offset: 0,2
+	idle: aoroc003
+		Length: 1
+	shadow: aoroc3sh
+		Offset: 7, 20
+
+aoroc004.base:
+	Defaults:
+		Offset: 2,2
+	idle: aoroc004
+		Length: 1
+	shadow: aoroc4sh
+		Offset: 10, 25
+
+aoroc005.base:
+	Defaults:
+		Offset: 1,0
+	idle: aoroc005
+		Length: 1
+	shadow: aoroc5sh
+		Offset: 12, 35
+
+# Cliff
+aoclf000.base:
+	Defaults:
+		Offset: -3, -2
+	idle: aoclf000
+		Length: 1
+	shadow: aoclf0sh
+		Offset: 9, 11
+
+aoclf001.base:
+	Defaults:
+		Offset: -3, -1
+	idle: aoclf001
+		Length: 1
+	shadow: aoclf1sh
+		Offset: 12, 23
+
+aoclf002.base:
+	Defaults:
+	idle: aoclf002
+		Length: 1
+	shadow: aoclf2sh
+		Offset: 12, 25
+
+aoclf003.base:
+	Defaults:
+	idle: aoclf003
+		Length: 1
+	shadow: aoclf3sh
+		Offset: 13, 23
+
+aoclf004.base:
+	Defaults:
+	idle: aoclf004
+		Length: 1
+	shadow: aoclf4sh
+		Offset: 11, 15
+
+aoclf005.base:
+	Defaults:
+		Offset: 0, 0
+	idle: aoclf005
+		Length: 1
+	shadow: aoclf5sh
+		Offset: 8, 25
+

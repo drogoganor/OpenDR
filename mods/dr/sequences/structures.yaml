@@ -116,13 +116,13 @@ nfhqt1l0:
 nihqt1l0:
 	Defaults:
 		Offset: 6, -22
-	building: tileset|nihqt1l0
+	building: nihqt1l0
 		Start: 0
-	idle: tileset|nihqt1l0
+	idle: nihqt1l0
 		Start: 1
-	building2: tileset|nihqt2l0
+	building2: nihqt2l0
 		Start: 0
-	idle2: tileset|nihqt2l0
+	idle2: nihqt2l0
 		Start: 1
 	building3: nihqt3l0
 		Start: 0

@@ -20,7 +20,7 @@ Join us on the [Dark Reign discord](https://discord.gg/3MKcGSW) if you want to t
 
 ## A note on running the mod in Visual Studio
 
-You will need to set the command line arguments for OpenRA.Game as: Game.Mod=dr Engine.ModSearchPaths=..\mods
+You will need to set the command line arguments for OpenRA.Game as: `Game.Mod=dr Engine.ModSearchPaths=..\mods`
 
 ## Thanks to
 

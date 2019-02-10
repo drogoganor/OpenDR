@@ -62,6 +62,8 @@ Rules:
 	dr|rules/units-ex.yaml
 	dr|rules/civilians.yaml
 	dr|rules/decorations.yaml
+	dr|rules/decorations-manual.yaml
+	dr|rules/decorations-snow.yaml
 
 Sequences:
 	dr|sequences/misc.yaml
@@ -76,6 +78,8 @@ Sequences:
 	dr|sequences/civilians.yaml
 	dr|sequences/effects.yaml
 	dr|sequences/decorations.yaml
+	dr|sequences/decorations-manual.yaml
+	dr|sequences/decorations-snow.yaml
 
 TileSets:
 	dr|tilesets/alien.yaml

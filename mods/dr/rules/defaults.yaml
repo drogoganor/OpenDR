@@ -1069,3 +1069,54 @@
 	WithIdleOverlay@LAYER1:
 		Palette: shadow
 		Sequence: shadow
+
+^DrRock:
+	Inherits: ^Tree
+	RadarColorFromTerrain:
+		Terrain: Rock
+	Targetable:
+		TargetTypes: Rocks
+	Tooltip:
+		Name: Rock
+	MapEditorData:
+		Categories: Rocks
+
+^DrCrater:
+	Inherits: ^Tree
+	RadarColorFromTerrain:
+		Terrain: Rock
+	Targetable:
+		TargetTypes: Craters
+	Tooltip:
+		Name: Crater
+	MapEditorData:
+		Categories: Craters
+
+^DrPlant:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Plant
+	Targetable:
+		TargetTypes: Plants
+	MapEditorData:
+		Categories: Plant
+
+^DrRubble:
+	Inherits: ^Tree
+	RadarColorFromTerrain:
+		Terrain: Rock
+	Targetable:
+		TargetTypes: Rubble
+	Tooltip:
+		Name: Rubble
+	-HitShape:
+	MapEditorData:
+		Categories: Rocks
+
+^DrMisc:
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Misc
+	Targetable:
+		TargetTypes: Misc
+	-WithIdleOverlay@LAYER1:

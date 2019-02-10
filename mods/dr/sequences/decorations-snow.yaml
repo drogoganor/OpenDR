@@ -1,5 +1,5 @@
 
-aotre000:
+aotre000.snow:
 	Defaults:
 		Offset: -4,-19
 	idle: tileset|aotre000
@@ -11,9 +11,9 @@ aotre000:
 	stand: tileset|aotre000 # for sniper and scout disguise
 		Length: 1
 	shadow: tileset|aotre0sh
-		Offset: 21, 10
+		Offset: 15, 3
 
-aotre001:
+aotre001.snow:
 	Defaults:
 		Offset: 0,-10
 	idle: tileset|aotre001
@@ -25,9 +25,9 @@ aotre001:
 	stand: tileset|aotre001 # for sniper and scout disguise
 		Length: 1
 	shadow: tileset|aotre1sh
-		Offset: 15, 9
+		Offset: 11, 3
 
-aotre002:
+aotre002.snow:
 	Defaults:
 		Offset: -1,-14
 	idle: tileset|aotre002
@@ -39,9 +39,9 @@ aotre002:
 	stand: tileset|aotre002 # for sniper and scout disguise
 		Length: 1
 	shadow: tileset|aotre2sh
-		Offset: 19, 11
+		Offset: 10, 2
 
-aotre003:
+aotre003.snow:
 	Defaults:
 		Offset: 3,-15
 	idle: tileset|aotre003
@@ -53,9 +53,9 @@ aotre003:
 	stand: tileset|aotre003 # for sniper and scout disguise
 		Length: 1
 	shadow: tileset|aotre3sh
-		Offset: 23, 11
+		Offset: 12, 0
 
-aotre004:
+aotre004.snow:
 	Defaults:
 		Offset: 1,-10
 	idle: tileset|aotre004
@@ -67,9 +67,9 @@ aotre004:
 	stand: tileset|aotre004 # for sniper and scout disguise
 		Length: 1
 	shadow: tileset|aotre4sh
-		Offset: 10, 8
+		Offset: 10, 13
 
-aotre005:
+aotre005.snow:
 	Defaults:
 		Offset: 2,-9
 	idle: tileset|aotre005
@@ -81,18 +81,18 @@ aotre005:
 	stand: tileset|aotre005 # for sniper and scout disguise
 		Length: 1
 	shadow: tileset|aotre5sh
-		Offset: 13, 6
+		Offset: 12, 0
 
 # Plant
-aopln000:
+aopln000.snow:
 	Defaults:
 		Offset: -2,-4
 	idle: tileset|aopln000
 		Length: 1
 	shadow: tileset|aopln0sh
-		Offset: -4, -3
+		Offset: -2, -4
 
-aopln001:
+aopln001.snow:
 	Defaults:
 		Offset: 1,1
 	idle: tileset|aopln001
@@ -100,246 +100,105 @@ aopln001:
 	shadow: tileset|aopln1sh
 		Offset: 1, 1
 
-aopln002:
+aopln002.snow:
 	Defaults:
 		Offset: 4,2
 	idle: tileset|aopln002
 		Length: 1
 	shadow: tileset|aopln2sh
-		Offset: 6, 7
+		Offset: 6, 8
 
 # Rocks
-aoroc000:
+aoroc000.snow:
 	Defaults:
 		Offset: 0,0
 	idle: tileset|aoroc000
 		Length: 1
 	shadow: tileset|aoroc0sh
-		Offset: 5, 1
+		Offset: 5, 2
 
-aoroc001:
+aoroc001.snow:
 	Defaults:
 		Offset: 0,0
 	idle: tileset|aoroc001
 		Length: 1
 	shadow: tileset|aoroc1sh
-		Offset: 6, 3
+		Offset: 8, 1
 
-aoroc002:
+aoroc002.snow:
 	Defaults:
 		Offset: 0,0
 	idle: tileset|aoroc002
 		Length: 1
 	shadow: tileset|aoroc2sh
-		Offset: 8, 7
+		Offset: 8, 1
 
-aoroc003:
+aoroc003.snow:
 	Defaults:
 		Offset: 0,2
 	idle: tileset|aoroc003
 		Length: 1
 	shadow: tileset|aoroc3sh
-		Offset: 7, 20
+		Offset: 2, 2
 
-aoroc004:
+aoroc004.snow:
 	Defaults:
 		Offset: 2,2
 	idle: tileset|aoroc004
 		Length: 1
 	shadow: tileset|aoroc4sh
-		Offset: 10, 25
+		Offset: 7, 2
 
-aoroc005:
+aoroc005.snow:
 	Defaults:
 		Offset: 1,0
 	idle: tileset|aoroc005
 		Length: 1
 	shadow: tileset|aoroc5sh
-		Offset: 12, 35
+		Offset: 11, 0
 
 # Cliff
-aoclf000:
+aoclf000.snow:
 	Defaults:
 		Offset: -3, -2
 	idle: tileset|aoclf000
 		Length: 1
 	shadow: tileset|aoclf0sh
-		Offset: 9, 11
+		Offset: 12, 15
 
-aoclf001:
+aoclf001.snow:
 	Defaults:
 		Offset: -3, -1
 	idle: tileset|aoclf001
 		Length: 1
 	shadow: tileset|aoclf1sh
-		Offset: 12, 23
+		Offset: 9, 15
 
-aoclf002:
+aoclf002.snow:
 	Defaults:
 	idle: tileset|aoclf002
 		Length: 1
 	shadow: tileset|aoclf2sh
-		Offset: 12, 25
+		Offset: 19, 23
 
-aoclf003:
+aoclf003.snow:
 	Defaults:
 	idle: tileset|aoclf003
 		Length: 1
 	shadow: tileset|aoclf3sh
-		Offset: 13, 23
+		Offset: 12, 12
 
-aoclf004:
+aoclf004.snow:
 	Defaults:
 	idle: tileset|aoclf004
 		Length: 1
 	shadow: tileset|aoclf4sh
-		Offset: 11, 15
+		Offset: 12, 13
 
-aoclf005:
+aoclf005.snow:
 	Defaults:
 		Offset: 0, 0
 	idle: tileset|aoclf005
 		Length: 1
 	shadow: tileset|aoclf5sh
-		Offset: 8, 25
-
-# Rubble
-aorub000:
-	Defaults:
-	idle:
-		Length: 1
-	shadow: aorub0sh
-		Offset: 0, 0
-
-aorub001:
-	Defaults:
-	idle:
-		Length: 1
-	shadow: aorub1sh
-		Offset: 0, 0
-
-aorub002:
-	Defaults:
-	idle:
-		Length: 1
-	shadow: aorub2sh
-		Offset: 0, 0
-
-# Scoring
-aomsc000:
-	Defaults:
-	idle:
-		Length: *
-
-aomsc001:
-	Defaults:
-	idle:
-		Length: *
-
-aomsc002:
-	Defaults:
-	idle:
-		Length: *
-
-# Crater
-aoctr000:
-	Defaults:
-	idle:
-		Length: *
-
-aoctr001:
-	Defaults:
-	idle:
-		Length: *
-
-aoctr002:
-	Defaults:
-	idle:
-		Length: *
-
-aoctr003:
-	Defaults:
-		Offset: 0,4
-	idle:
-		Length: *
-
-aoctr004:
-	Defaults:
-		Offset: 0,-2
-	idle:
-		Length: *
-
-aoctr005:
-	Defaults:
-		Offset: 0,-2
-	idle:
-		Length: *
-
-aoctr006:
-	Defaults:
-		Offset: 0,-2
-	idle:
-		Length: *
-
-aoctr007:
-	Defaults:
-		Offset: 0,-2
-	idle:
-		Length: *
-
-aoctr008:
-	Defaults:
-		Offset: 0,-2
-	idle:
-		Length: *
-
-aoctr009:
-	Defaults:
-		Offset: 0,-2
-	idle:
-		Length: *
-
-# Crashed space ship
-aospc000:
-	Defaults:
-	idle:
-		Length: *
-
-# Water rocks
-aowtr000:
-	Defaults:
-	idle:
-		Length: *
-
-aowtr001:
-	Defaults:
-	idle:
-		Length: *
-
-aowtr002:
-	Defaults:
-	idle:
-		Length: *
-
-# Wrecks
-aowrk000:
-	Defaults:
-	idle:
-		Length: *
-
-aowrk001:
-	Defaults:
-	idle:
-		Length: *
-
-aowrk002:
-	Defaults:
-	idle:
-		Length: *
-
-# contaminated water
-eowcocr0:
-	Defaults:
-		Offset: 0,0
-	idle:
-		Length: 1
+		Offset: 17, 9
