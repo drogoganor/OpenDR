@@ -1,0 +1,24 @@
+Permission to use the manual contained in this site ("Manual") is conditional upon you agreeing to the terms set out below. Do not proceed to download the manual until you have read and accepted all the conditions. If you do not wish to accept the conditions, do not download the Manual. The user is granted a non-exclusive licence to download and use the Manual contained in this site on the following conditions;
+
+1. The Manual download from this site remains the property of Auran;
+
+2. The Manual downloaded from this site, in whole or in part may be used: 
+(a) to configure the Tactics software engine; or 
+(b) in conjunction with other software packages or programs, provided that: 
+(c) such use is not for a commercial purpose or any financial gain; and 
+(d) these conditions are included without alteration wherever the Manual is reproduced;
+
+3. Auran cannot warrant the performance or the results obtained from using the Manual contained in this site;
+
+4. Auran makes no warranties, express or implied with respect to the Manual as to merchantability or fitness for purpose or nonconfringement of third parties rights but in the event that any legislation implies terms which cannot be lawfully excluded, such terms will apply except that the liability of Auran for breach of any such implied term will be limited to replacement of the Manual to which the breach relates or the supply of an equivalent manual;
+
+5. Auran will not be liable for any damages whatsoever including; 
+(a) direct, indirect, incidental, consequential damages; or 
+(b) loss of business profits; or 
+(c) special damages,
+
+arising from the use of the Manual contained in this site, even if Auran has been notified of the potential for such damages to arise;
+
+6. The user acknowledges: 
+(a) they have not made known to Auran any particular purpose for which the Manual contained in this site is required; and 
+(b) they have not relied on Auran to provide the Manual as being suitable for any such purpose.
