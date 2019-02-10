@@ -8,7 +8,7 @@ Please note this mod is a work-in-progress. Many features are missing or incompl
 
 You can get the latest release from the [Releases page](https://github.com/drogoganor/DarkReign/releases). If you have trouble installing or would like to compile from source, please see the [Installation page](https://github.com/drogoganor/DarkReign/wiki/Installation).
 
-This mod installs content from both the original and expansion game discs or alternatively a [GOG install](https://www.gog.com/game/dark_reign_expansion) of the original + expansion.
+This mod installs content from both the original and expansion game discs, or alternatively a [GOG install](https://www.gog.com/game/dark_reign_expansion) of the original + expansion.
 
 Click the images below to see skirmish games in action:
 
@@ -17,6 +17,10 @@ Click the images below to see skirmish games in action:
 [![Skirmish video 2](http://img.youtube.com/vi/zB4KJKKh0ww/0.jpg)](https://www.youtube.com/watch?v=zB4KJKKh0ww "Skirmish video 2")
 
 Join us on the [Dark Reign discord](https://discord.gg/3MKcGSW) if you want to talk about the mod.
+
+## A note on running the mod in Visual Studio
+
+You will need to set the command line arguments for OpenRA.Game as: Game.Mod=dr Engine.ModSearchPaths=..\mods
 
 ## Thanks to
 
