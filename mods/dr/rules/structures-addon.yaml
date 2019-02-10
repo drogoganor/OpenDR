@@ -283,6 +283,8 @@ TerroristWaterUnit.Constructing:
 TerroristWaterUnit:
 	Inherits: TerroristWaterUnit.Constructing
 	-SelfConstructing:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Terrorist WaterUnit Construction Facility
 	Power:
@@ -333,6 +335,7 @@ TerroristConstructionFacility.Constructing:
 TerroristConstructionFacility:
 	Inherits: TerroristConstructionFacility.Constructing
 	-SelfConstructing:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Terrorist Construction Facility
 
@@ -378,6 +381,8 @@ TerroristFieldHospital.Constructing:
 TerroristFieldHospital:
 	Inherits: TerroristFieldHospital.Constructing
 	-SelfConstructing:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Terrorist Field Hospital
 
@@ -423,6 +428,8 @@ TerroristRepairBay.Constructing:
 TerroristRepairBay:
 	Inherits: TerroristRepairBay.Constructing
 	-SelfConstructing:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Terrorist Repair Bay
 
@@ -468,5 +475,7 @@ TerroristRearmingDeck.Constructing:
 TerroristRearmingDeck:
 	Inherits: TerroristRearmingDeck.Constructing
 	-SelfConstructing:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Terrorist Rearming Deck

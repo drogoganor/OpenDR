@@ -253,27 +253,30 @@ ColorValidator:
 	TeamColorPresets: ffc9ca, f50606, 98331f, f57606, f7bb06, f861a4, da06f3, ddb8ff, 06f739, cef7b2, 200738, 280df6, 2f86f2, 76d2f8, 34ba93, 000000
 
 ModContent:
-	InstallPromptMessage: Dark Reign requires artwork and audio from the original game.\n\nQuick Install will automatically download this content (without music\nor videos) from a mirror of the demo release.\n\nAdvanced Install includes options for downloading the music and for\ncopying the videos and other content from an original game disc.
-	QuickDownloads: drdemo, drauranext
-	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting digital install. OpenRA can also download the base game\nfiles from an online mirror of the demo release.
+	InstallPromptMessage: Dark Reign requires artwork and audio from both original and\nexpansion game discs, or alternatively a GOG install.\n\nPlease select Advanced Install and choose a source for installing\nthe game content.
+	QuickDownloads: # drdemo, drauranext
+	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting GOG install. You will also need to download the Auran Extras.
 	Packages:
-		demo: Dark Reign Demo
-			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/BARREN/BARREN.PAL, ^Content/dr/JUNGLE/JUNGLE.PAL, ^Content/dr/BARREN/BARREN.TIL, ^Content/dr/JUNGLE/JUNGLE.TIL, ^Content/dr/BARREN/SPRITES.FTG, ^Content/dr/JUNGLE/SPRITES.FTG, ^Content/dr/mouse.crs
-			Download: drdemo
+		base: Dark Reign (Disc)
+			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/BARREN/BARREN.PAL, ^Content/dr/JUNGLE/JUNGLE.PAL, ^Content/dr/SNOW/SNOW.PAL, ^Content/dr/BARREN/BARREN.TIL, ^Content/dr/JUNGLE/JUNGLE.TIL, ^Content/dr/SNOW/SNOW.TIL, ^Content/dr/BARREN/SPRITES.FTG, ^Content/dr/JUNGLE/SPRITES.FTG, ^Content/dr/SNOW/SPRITES.FTG, ^Content/dr/mouse.crs
+			Sources: drorig
 			Required: true
+		expansion: Dark Reign Expansion (Disc)
+			TestFiles: ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg, ^Content/dr/ALIEN/ALIEN.TIL, ^Content/dr/ALIEN/ALIEN.PAL, ^Content/dr/ALIEN/SPRITEEX.FTG, ^Content/dr/BARREN/spriteEx.ftg, ^Content/dr/JUNGLE/spriteEx.ftg, ^Content/dr/SNOW/spriteEx.ftg, ^Content/dr/mouse.crs
+			Sources: drexp
+			Required: true
+		gog: Dark Reign + Exp. (GOG)
+			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/BARREN/BARREN.PAL, ^Content/dr/JUNGLE/JUNGLE.PAL, ^Content/dr/SNOW/SNOW.PAL, ^Content/dr/BARREN/BARREN.TIL, ^Content/dr/JUNGLE/JUNGLE.TIL, ^Content/dr/SNOW/SNOW.TIL, ^Content/dr/BARREN/SPRITES.FTG, ^Content/dr/JUNGLE/SPRITES.FTG, ^Content/dr/SNOW/SPRITES.FTG, ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg, ^Content/dr/ALIEN/ALIEN.TIL, ^Content/dr/ALIEN/ALIEN.PAL, ^Content/dr/ALIEN/SPRITEEX.FTG, ^Content/dr/BARREN/spriteEx.ftg, ^Content/dr/JUNGLE/spriteEx.ftg, ^Content/dr/SNOW/spriteEx.ftg, ^Content/dr/mouse.crs
+			Sources: drgog
+			Required: true
+		#demo: Dark Reign Demo
+		#	TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/BARREN/BARREN.PAL, ^Content/dr/JUNGLE/JUNGLE.PAL, ^Content/dr/BARREN/BARREN.TIL, ^Content/dr/JUNGLE/JUNGLE.TIL, ^Content/dr/BARREN/SPRITES.FTG, ^Content/dr/JUNGLE/SPRITES.FTG, ^Content/dr/mouse.crs
+		#	Download: drdemo
+		#	Required: true
 		auran: Auran Extras
 			TestFiles: ^Content/dr/aust/AUST.FTG, ^Content/dr/volcanic/VOLCANIC.FTG, ^Content/dr/auralien/AURALIEN.FTG, ^Content/dr/asteroid/ASTEROID.FTG, ^Content/dr/addon/aurunits/aursound.ftg, ^Content/dr/addon/aurunits/aursprite.ftg, ^Content/dr/addon/terrorist/terrsound.ftg, ^Content/dr/addon/terrorist/terrsprite.ftg, ^Content/dr/legal.txt
 			Download: drauranext
 			Required: true
-		gog: Dark Reign + Expansion (GOG release)
-			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/BARREN/BARREN.PAL, ^Content/dr/JUNGLE/JUNGLE.PAL, ^Content/dr/SNOW/SNOW.PAL, ^Content/dr/BARREN/BARREN.TIL, ^Content/dr/JUNGLE/JUNGLE.TIL, ^Content/dr/SNOW/SNOW.TIL, ^Content/dr/BARREN/SPRITES.FTG, ^Content/dr/JUNGLE/SPRITES.FTG, ^Content/dr/SNOW/SPRITES.FTG, ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg, ^Content/dr/ALIEN/ALIEN.TIL, ^Content/dr/ALIEN/ALIEN.PAL, ^Content/dr/ALIEN/SPRITEEX.FTG, ^Content/dr/BARREN/spriteEx.ftg, ^Content/dr/JUNGLE/spriteEx.ftg, ^Content/dr/SNOW/spriteEx.ftg, ^Content/dr/mouse.crs
-			Sources: drgog
-		base: Dark Reign (Disc)
-			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/BARREN/BARREN.PAL, ^Content/dr/JUNGLE/JUNGLE.PAL, ^Content/dr/SNOW/SNOW.PAL, ^Content/dr/BARREN/BARREN.TIL, ^Content/dr/JUNGLE/JUNGLE.TIL, ^Content/dr/SNOW/SNOW.TIL, ^Content/dr/BARREN/SPRITES.FTG, ^Content/dr/JUNGLE/SPRITES.FTG, ^Content/dr/SNOW/SPRITES.FTG, ^Content/dr/mouse.crs
-			Sources: drorig
-		expansion: Dark Reign Expansion (Disc)
-			TestFiles: ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg, ^Content/dr/ALIEN/ALIEN.TIL, ^Content/dr/ALIEN/ALIEN.PAL, ^Content/dr/ALIEN/SPRITEEX.FTG, ^Content/dr/BARREN/spriteEx.ftg, ^Content/dr/JUNGLE/spriteEx.ftg, ^Content/dr/SNOW/spriteEx.ftg, ^Content/dr/mouse.crs
-			Sources: drexp
 		music: Music
 			TestFiles: ^Content/dr/music.zip
 			Download: drmusic

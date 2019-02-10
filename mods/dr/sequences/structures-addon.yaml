@@ -3,9 +3,17 @@
 nthqf1l0:
 	Defaults:
 		Offset: -6, -12
-	building:
+	building: nthqf1l0
 		Start: 0
-	idle:
+	idle: nthqf1l0
+		Start: 1
+	building2: nthqf2l0
+		Start: 0
+	idle2: nthqf2l0
+		Start: 1
+	building3: nthqf3l0
+		Start: 0
+	idle3: nthqf3l0
 		Start: 1
 	underlay-building: nthqf1l0
 		ZOffset: -8192
@@ -13,19 +21,19 @@ nthqf1l0:
 	underlay: nthqf1l0
 		ZOffset: -8192
 		Start: 1
-	up2underlay: nthqf2l0
+	underlay2: nthqf2l0
 		ZOffset: -8192
 		Start: 1
-	up3underlay: nthqf3l0
+	underlay3: nthqf3l0
 		ZOffset: -8192
 		Start: 1
 	top-building: tthqf1l0
 		Start: 0
 	top: tthqf1l0
 		Start: 1
-	up2top: tthqf2l0
+	top2: tthqf2l0
 		Start: 1
-	up3top: tthqf3l0
+	top3: tthqf3l0
 		Start: 1
 	shadow-building: bfhqtsh0
 		Start: 0
@@ -33,10 +41,10 @@ nthqf1l0:
 	shadow: bfhqtsh0
 		Start: 1
 		Offset: 8, -11
-	up2shadow: bfhqtsh1
+	shadow2: bfhqtsh1
 		Start: 1
 		Offset: 8, -11
-	up3shadow: bfhqtsh2
+	shadow3: bfhqtsh2
 		Start: 1
 		Offset: 8, -11
 	icon: bthqfmn1

@@ -8,7 +8,7 @@ Please note this mod is a work-in-progress. Many features are missing or incompl
 
 You can get the latest release from the [Releases page](https://github.com/drogoganor/DarkReign/releases). If you have trouble installing or would like to compile from source, please see the [Installation page](https://github.com/drogoganor/DarkReign/wiki/Installation).
 
-This mod uses game content from the freely available Dark Reign demo, or alternatively you can install content from an original game disc or [GOG install](https://www.gog.com/game/dark_reign_expansion).
+This mod installs content from both the original and expansion game discs or alternatively a [GOG install](https://www.gog.com/game/dark_reign_expansion) of the original + expansion.
 
 Click the images below to see skirmish games in action:
 

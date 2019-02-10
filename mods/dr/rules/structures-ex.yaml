@@ -29,6 +29,7 @@ TrainingFacility.xenite:
 	Inherits@4: ^DrTrainingFacility
 	-SelfConstructing:
 	-Buildable:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Training Facility
 	Health:
@@ -89,6 +90,8 @@ Matrix:
 	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Matrix
 	ProvidesPrerequisite@matrix:

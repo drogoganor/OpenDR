@@ -7,6 +7,8 @@ Power:
 	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	RenderSprites:
 		Image: ncpow1l0
 	ProvidesPrerequisite:
@@ -43,6 +45,8 @@ WaterLaunchPad:
 	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: waterlaunch
@@ -81,6 +85,7 @@ HQ.human:
 	Inherits@4: ^DrHeadquarters
 	-SelfConstructing:
 	-Buildable:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Headquarters
 	Health:
@@ -136,6 +141,7 @@ HQ.cyborg:
 	Inherits@4: ^DrHeadquarters
 	-SelfConstructing:
 	-Buildable:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Headquarters
 	Health:
@@ -197,6 +203,7 @@ HQ.togran:
 	Inherits@4: ^DrHeadquarters
 	-SelfConstructing:
 	-Buildable:
+	-BuilderQueue@Building:
 	RenderSprites:
 		Image: tothq1l0
 	Tooltip:
@@ -217,6 +224,7 @@ TrainingFacility.fguard:
 	Inherits@4: ^DrTrainingFacility
 	-SelfConstructing:
 	-Buildable:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Training Facility
 	Health:
@@ -261,6 +269,7 @@ TrainingFacility.cyborg:
 	Inherits@4: ^DrTrainingFacility
 	-SelfConstructing:
 	-Buildable:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Training Facility
 	Health:
@@ -311,6 +320,7 @@ AssemblyPlant.human:
 	Inherits@4: ^DrAssemblyPlant
 	-SelfConstructing:
 	-Buildable:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Assembly Plant
 	Health:
@@ -355,6 +365,7 @@ AssemblyPlant.cyborg:
 	Inherits@4: ^DrAssemblyPlant
 	-SelfConstructing:
 	-Buildable:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Assembly Plant
 	Exit@1:
@@ -403,6 +414,8 @@ LaserTurret:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Laser Turret
 	Turreted:
@@ -421,6 +434,8 @@ PlasmaTurret:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Plasma Turret
 	Turreted:
@@ -444,6 +459,8 @@ AntiAirTurret.human:
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Anti-Air Turret
 	Valued:
@@ -475,6 +492,8 @@ AntiAirTurret.cyborg:
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Anti-Air Turret
 	Valued:
@@ -515,6 +534,8 @@ HeavyRailTurret:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Heavy Rail Turret
 	Valued:
@@ -548,6 +569,8 @@ NeutronAccelerator:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Neutron Accelerator
 	Valued:
@@ -587,6 +610,8 @@ CameraTower:
 	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Camera Tower
 	Valued:
@@ -625,6 +650,8 @@ Hospital.human:
 	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Field Hospital
 	ProvidesPrerequisite@hospital:
@@ -656,6 +683,8 @@ Hospital.cyborg:
 	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Field Hospital
 	Buildable:
@@ -691,6 +720,8 @@ Repair.human:
 	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Repair Station
 	ProvidesPrerequisite@repair:
@@ -728,6 +759,8 @@ Repair.cyborg:
 	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Repair Station
 	ProvidesPrerequisite@repair:
@@ -763,6 +796,8 @@ PhasingFacility:
 	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Phasing Facility
 	ProvidesPrerequisite@phasing:
@@ -821,6 +856,8 @@ RearmingDeck.human:
 	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Rearming Deck
 	ProvidesPrerequisite@air:
@@ -851,6 +888,8 @@ RearmingDeck.cyborg:
 	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Rearming Deck
 	ProvidesPrerequisite@air:
@@ -881,6 +920,8 @@ TemporalGate:
 	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Temporal Gate
 	ProvidesPrerequisite@temporal:
@@ -925,6 +966,8 @@ TemporalRiftCreator:
 	Inherits@4: ^DrGenericBuilding
 	-SelfConstructing:
 	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
 	Tooltip:
 		Name: Temporal Rift Creator
 	ProvidesPrerequisite@temporal:
