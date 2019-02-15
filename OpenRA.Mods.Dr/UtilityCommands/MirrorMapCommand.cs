@@ -128,8 +128,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "aoclf000", new int2(1, 2) },
             { "aoclf001", new int2(1, 2) },
             { "aoclf002", new int2(1, 2) },
-            { "aoclf003", new int2(2, 3) },
-            { "aoclf004", new int2(2, 3) },
+            { "aoclf003", new int2(1, 3) },
+            { "aoclf004", new int2(1, 3) },
             { "aoclf005", new int2(3, 3) },
 
             { "aotre000.snow", new int2(0, -1) },
@@ -143,8 +143,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "aoclf000.snow", new int2(1, 2) },
             { "aoclf001.snow", new int2(1, 2) },
             { "aoclf002.snow", new int2(1, 2) },
-            { "aoclf003.snow", new int2(2, 3) },
-            { "aoclf004.snow", new int2(2, 3) },
+            { "aoclf003.snow", new int2(1, 3) },
+            { "aoclf004.snow", new int2(1, 3) },
             { "aoclf005.snow", new int2(3, 3) },
 
             { "aotre000.base", new int2(0, -1) },
@@ -158,8 +158,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "aoclf000.base", new int2(1, 2) },
             { "aoclf001.base", new int2(1, 2) },
             { "aoclf002.base", new int2(1, 2) },
-            { "aoclf003.base", new int2(2, 3) },
-            { "aoclf004.base", new int2(2, 3) },
+            { "aoclf003.base", new int2(1, 3) },
+            { "aoclf004.base", new int2(1, 3) },
             { "aoclf005.base", new int2(3, 3) },
         };
 
