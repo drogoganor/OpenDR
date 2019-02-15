@@ -311,7 +311,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
                 foreach (var at in actor.GetTransforms(Map))
                 {
-                    var newPos = at.Position;
                     var ar = new ActorReference(actor.Actor.Type)
                     {
                         new LocationInit(at.Position),
