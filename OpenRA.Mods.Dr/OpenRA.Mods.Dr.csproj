@@ -69,6 +69,7 @@
     <Compile Include="Traits\Warheads\SpawnActorWarhead.cs" />
     <Compile Include="Traits\World\PaletteFromDrFile.cs" />
     <Compile Include="UtilityCommands\ImportDrCampaignMapCommand.cs" />
+    <Compile Include="UtilityCommands\MirrorMapCommand.cs" />
     <Compile Include="UtilityCommands\ImportDrMapCommand.cs" />
     <Compile Include="Widgets\BuildSelectPaletteWidget.cs" />
     <Compile Include="Widgets\Logic\Ingame\BuildingPickerLogic.cs" />

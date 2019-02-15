@@ -465,10 +465,10 @@ namespace OpenRA.Mods.Dr.UtilityCommands
                             if (x >= 0 && y >= 0 && !string.IsNullOrEmpty(matchingActor))
                             {
                                 var ar = new ActorReference(matchingActor)
-                            {
-                                new LocationInit(new CPos(x + 1, y + 1)),
-                                new OwnerInit(MapPlayers.Players.Values.First(p => p.Team == playerIndex).Name)
-                            };
+                                {
+                                    new LocationInit(new CPos(x + 1, y + 1)),
+                                    new OwnerInit(MapPlayers.Players.Values.First(p => p.Team == playerIndex).Name)
+                                };
 
                                 Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
                             }
