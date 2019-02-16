@@ -1,0 +1,213 @@
+
+aotre000.jungle:
+	RenderSprites:
+		Palette: terrain
+		Image: aotre000.jungle
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Jungle
+	Inherits@shape: ^1x1Shape
+
+aotre001.jungle:
+	RenderSprites:
+		Palette: terrain
+		Image: aotre001.jungle
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Jungle
+	Inherits@shape: ^1x1Shape
+
+aotre002.jungle:
+	RenderSprites:
+		Palette: terrain
+		Image: aotre002.jungle
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Jungle
+	Inherits@shape: ^1x1Shape
+
+aotre003.jungle:
+	RenderSprites:
+		Palette: terrain
+		Image: aotre003.jungle
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Jungle
+	Inherits@shape: ^1x1Shape
+
+aotre004.jungle:
+	RenderSprites:
+		Palette: terrain
+		Image: aotre004.jungle
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Jungle
+	Inherits@shape: ^1x1Shape
+
+aotre005.jungle:
+	RenderSprites:
+		Palette: terrain
+		Image: aotre005.jungle
+	Inherits: ^Tree
+	MapEditorData:
+		Categories: Decorations Jungle
+	Inherits@shape: ^1x1Shape
+
+# Plant
+aopln000.jungle:
+	Inherits: ^DrPlant
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aopln000.jungle
+
+aopln001.jungle:
+	Inherits: ^DrPlant
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aopln001.jungle
+
+aopln002.jungle:
+	Inherits: ^DrPlant
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aopln002.jungle
+
+# Rocks
+aoroc000.jungle:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc000.jungle
+
+aoroc001.jungle:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc001.jungle
+
+aoroc002.jungle:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc002.jungle
+
+aoroc003.jungle:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc003.jungle
+	Building:
+		Footprint: x_ xx xx
+		Dimensions: 2,3
+		LocalCenterOffset: 0,0,0
+
+aoroc004.jungle:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc004.jungle
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+
+aoroc005.jungle:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aoroc005.jungle
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+		LocalCenterOffset: 0,0,0
+
+# Cliff
+aoclf000.jungle:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf000.jungle
+	Building:
+		Footprint: _x_ xxx xx_
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+
+aoclf001.jungle:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf001.jungle
+	Building:
+		Footprint: _x_ xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+
+aoclf002.jungle:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf002.jungle
+	Building:
+		Footprint: _x_ xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+
+aoclf003.jungle:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf003.jungle
+	Building:
+		Footprint: _x_ xxx xxx xx_
+		Dimensions: 3,4
+		LocalCenterOffset: 0,0,0
+
+aoclf004.jungle:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf004.jungle
+	Building:
+		Footprint: _x_ xxx xx= xxx
+		Dimensions: 3,4
+		LocalCenterOffset: 0,0,0
+
+aoclf005.jungle:
+	Inherits: ^DrRock
+	MapEditorData:
+		Categories: Decorations Jungle
+	RenderSprites:
+		Palette: terrain
+		Image: aoclf005.jungle
+	Building:
+		Footprint: _x__ xxxx xxxx xxx_
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0

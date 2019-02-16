@@ -1,0 +1,204 @@
+
+aotre000.jungle:
+	Defaults:
+		Offset: -4,-19
+	idle: tileset|aotre000
+		Length: 1
+	run: tileset|aotre000 # for sniper and scout disguise
+		Length: 1
+	attack: tileset|aotre000 # for sniper and scout disguise
+		Length: 1
+	stand: tileset|aotre000 # for sniper and scout disguise
+		Length: 1
+	shadow: tileset|aotre0sh
+		Offset: 12, 8
+
+aotre001.jungle:
+	Defaults:
+		Offset: 0,-10
+	idle: tileset|aotre001
+		Length: 1
+	run: tileset|aotre001 # for sniper and scout disguise
+		Length: 1
+	attack: tileset|aotre001 # for sniper and scout disguise
+		Length: 1
+	stand: tileset|aotre001 # for sniper and scout disguise
+		Length: 1
+	shadow: tileset|aotre1sh
+		Offset: 14, 14
+
+aotre002.jungle:
+	Defaults:
+		Offset: -1,-14
+	idle: tileset|aotre002
+		Length: 1
+	run: tileset|aotre002 # for sniper and scout disguise
+		Length: 1
+	attack: tileset|aotre002 # for sniper and scout disguise
+		Length: 1
+	stand: tileset|aotre002 # for sniper and scout disguise
+		Length: 1
+	shadow: tileset|aotre2sh
+		Offset: 16, 8
+
+aotre003.jungle:
+	Defaults:
+		Offset: 3,-15
+	idle: tileset|aotre003
+		Length: 1
+	run: tileset|aotre003 # for sniper and scout disguise
+		Length: 1
+	attack: tileset|aotre003 # for sniper and scout disguise
+		Length: 1
+	stand: tileset|aotre003 # for sniper and scout disguise
+		Length: 1
+	shadow: tileset|aotre3sh
+		Offset: 12, 4
+
+aotre004.jungle:
+	Defaults:
+		Offset: 1,-10
+	idle: tileset|aotre004
+		Length: 1
+	run: tileset|aotre004 # for sniper and scout disguise
+		Length: 1
+	attack: tileset|aotre004 # for sniper and scout disguise
+		Length: 1
+	stand: tileset|aotre004 # for sniper and scout disguise
+		Length: 1
+	shadow: tileset|aotre4sh
+		Offset: 10, 5
+
+aotre005.jungle:
+	Defaults:
+		Offset: 2,-9
+	idle: tileset|aotre005
+		Length: 1
+	run: tileset|aotre005 # for sniper and scout disguise
+		Length: 1
+	attack: tileset|aotre005 # for sniper and scout disguise
+		Length: 1
+	stand: tileset|aotre005 # for sniper and scout disguise
+		Length: 1
+	shadow: tileset|aotre5sh
+		Offset: 10, 4
+
+# Plant
+aopln000.jungle:
+	Defaults:
+		Offset: -2,-4
+	idle: tileset|aopln000
+		Length: 1
+	shadow: tileset|aopln0sh
+		Offset: -2, -4
+
+aopln001.jungle:
+	Defaults:
+		Offset: 1,1
+	idle: tileset|aopln001
+		Length: 1
+	shadow: tileset|aopln1sh
+		Offset: 1, 1
+
+aopln002.jungle:
+	Defaults:
+		Offset: 4,2
+	idle: tileset|aopln002
+		Length: 1
+	shadow: tileset|aopln2sh
+		Offset: 6, 8
+
+# Rocks
+aoroc000.jungle:
+	Defaults:
+		Offset: 0,0
+	idle: tileset|aoroc000
+		Length: 1
+	shadow: tileset|aoroc0sh
+		Offset: 5, 2
+
+aoroc001.jungle:
+	Defaults:
+		Offset: 0,0
+	idle: tileset|aoroc001
+		Length: 1
+	shadow: tileset|aoroc1sh
+		Offset: 5, 0
+
+aoroc002.jungle:
+	Defaults:
+		Offset: 0,0
+	idle: tileset|aoroc002
+		Length: 1
+	shadow: tileset|aoroc2sh
+		Offset: 5, 1
+
+aoroc003.jungle:
+	Defaults:
+		Offset: 0,2
+	idle: tileset|aoroc003
+		Length: 1
+	shadow: tileset|aoroc3sh
+		Offset: 2, 2
+
+aoroc004.jungle:
+	Defaults:
+		Offset: 2,2
+	idle: tileset|aoroc004
+		Length: 1
+	shadow: tileset|aoroc4sh
+		Offset: 7, 2
+
+aoroc005.jungle:
+	Defaults:
+		Offset: 1,0
+	idle: tileset|aoroc005
+		Length: 1
+	shadow: tileset|aoroc5sh
+		Offset: 11, 0
+
+# Cliff
+aoclf000.jungle:
+	Defaults:
+		Offset: -3, -2
+	idle: tileset|aoclf000
+		Length: 1
+	shadow: tileset|aoclf0sh
+		Offset: 12, 19
+
+aoclf001.jungle:
+	Defaults:
+		Offset: -3, -1
+	idle: tileset|aoclf001
+		Length: 1
+	shadow: tileset|aoclf1sh
+		Offset: 9, 17
+
+aoclf002.jungle:
+	Defaults:
+	idle: tileset|aoclf002
+		Length: 1
+	shadow: tileset|aoclf2sh
+		Offset: 19, 24
+
+aoclf003.jungle:
+	Defaults:
+	idle: tileset|aoclf003
+		Length: 1
+	shadow: tileset|aoclf3sh
+		Offset: 11, 20
+
+aoclf004.jungle:
+	Defaults:
+	idle: tileset|aoclf004
+		Length: 1
+	shadow: tileset|aoclf4sh
+		Offset: 12, 12
+
+aoclf005.jungle:
+	Defaults:
+		Offset: 0, 0
+	idle: tileset|aoclf005
+		Length: 1
+	shadow: tileset|aoclf5sh
+		Offset: 9, 22

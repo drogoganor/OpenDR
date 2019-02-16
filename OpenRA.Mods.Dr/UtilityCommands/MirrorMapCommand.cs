@@ -29,6 +29,50 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
     class TileTransform
     {
+        static Dictionary<ushort, ushort> horizontalDictionary = new Dictionary<ushort, ushort>()
+        {
+            { 24, 21 }, // LR
+            { 21, 24 },
+            { 19, 23 }, // TLRI
+            { 23, 19 },
+            { 16, 17 }, // BLRI
+            { 17, 16 },
+            { 26, 22 }, // TLRO
+            { 22, 26 },
+            { 29, 28 }, // BLRO
+            { 28, 29 },
+        };
+
+        static Dictionary<ushort, ushort> verticalDictionary = new Dictionary<ushort, ushort>()
+        {
+            { 27, 18 }, // TB
+            { 18, 27 },
+            { 16, 23 }, // TBRI
+            { 23, 16 },
+            { 19, 17 }, // TBLI
+            { 17, 19 },
+            { 29, 22 }, // TBRO
+            { 22, 29 },
+            { 26, 28 }, // TBLO
+            { 28, 26 },
+        };
+
+        static Dictionary<ushort, ushort> horizontalAndVerticalDictionary = new Dictionary<ushort, ushort>()
+        {
+            { 24, 21 }, // LR
+            { 21, 24 },
+            { 27, 18 }, // TB
+            { 18, 27 },
+            { 17, 23 }, // TRBLI
+            { 23, 17 },
+            { 19, 16 }, // TLBRI
+            { 16, 19 },
+            { 28, 22 }, // TRBLO
+            { 22, 28 },
+            { 26, 29 }, // TLBRO
+            { 29, 26 },
+        };
+
         public MirrorType MirrorType;
         public TerrainTile Tile;
         public CPos Position;
@@ -38,19 +82,19 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             var horizontalTransform = new TileTransform()
             {
                 Position = new CPos(map.MapSize.X - Position.X - 1, Position.Y),
-                Tile = Tile
+                Tile = GetFlippedTerrainTile(MirrorType.Horizontal)
             };
 
             var verticalTransform = new TileTransform()
             {
                 Position = new CPos(Position.X, map.MapSize.Y - Position.Y - 1),
-                Tile = Tile
+                Tile = GetFlippedTerrainTile(MirrorType.Vertical)
             };
 
             var horizontalAndVerticalTransform = new TileTransform()
             {
                 Position = new CPos(map.MapSize.X - Position.X - 1, map.MapSize.Y - Position.Y - 1),
-                Tile = Tile
+                Tile = GetFlippedTerrainTile(MirrorType.HorizontalAndVertical)
             };
 
             switch (MirrorType)
@@ -67,6 +111,27 @@ namespace OpenRA.Mods.Dr.UtilityCommands
                     yield return horizontalAndVerticalTransform;
                     break;
             }
+        }
+
+        TerrainTile GetFlippedTerrainTile(MirrorType mirrorType)
+        {
+            switch (mirrorType)
+            {
+                case MirrorType.Horizontal:
+                    if (horizontalDictionary.ContainsKey(Tile.Type))
+                        return new TerrainTile(horizontalDictionary[Tile.Type], Tile.Index);
+                    break;
+                case MirrorType.Vertical:
+                    if (verticalDictionary.ContainsKey(Tile.Type))
+                        return new TerrainTile(verticalDictionary[Tile.Type], Tile.Index);
+                    break;
+                case MirrorType.HorizontalAndVertical:
+                    if (horizontalAndVerticalDictionary.ContainsKey(Tile.Type))
+                        return new TerrainTile(horizontalAndVerticalDictionary[Tile.Type], Tile.Index);
+                    break;
+            }
+
+            return Tile;
         }
     }
 
@@ -146,6 +211,21 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "aoclf003.snow", new int2(1, 3) },
             { "aoclf004.snow", new int2(1, 3) },
             { "aoclf005.snow", new int2(3, 3) },
+
+            { "aotre000.jungle", new int2(0, -1) },
+            { "aotre001.jungle", new int2(0, -1) },
+            { "aotre002.jungle", new int2(0, -1) },
+            { "aotre003.jungle", new int2(0, -1) },
+            { "aotre005.jungle", new int2(0, -1) },
+            { "aoroc003.jungle", new int2(1, 2) },
+            { "aoroc004.jungle", new int2(1, 1) },
+            { "aoroc005.jungle", new int2(1, 1) },
+            { "aoclf000.jungle", new int2(1, 2) },
+            { "aoclf001.jungle", new int2(1, 2) },
+            { "aoclf002.jungle", new int2(1, 2) },
+            { "aoclf003.jungle", new int2(1, 3) },
+            { "aoclf004.jungle", new int2(1, 3) },
+            { "aoclf005.jungle", new int2(3, 3) },
 
             { "aotre000.base", new int2(0, -1) },
             { "aotre001.base", new int2(0, -1) },
@@ -291,6 +371,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
             // Actors
             actorIndex = GetHighestActorIndex();
+            int multiCount = 0;
+
             var actorDefs = new List<ActorReference>();
             foreach (var a in Map.ActorDefinitions)
             {
@@ -309,6 +391,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
                     MirrorType = mirrorType,
                 };
 
+                if (actor.Actor.Type == "mpspawn")
+                    multiCount++;
+
                 foreach (var at in actor.GetTransforms(Map))
                 {
                     var ar = new ActorReference(actor.Actor.Type)
@@ -318,12 +403,21 @@ namespace OpenRA.Mods.Dr.UtilityCommands
                     };
 
                     actorDefs.Add(ar);
+
+                    if (at.Actor.Type == "mpspawn")
+                        multiCount++;
                 }
             }
 
             foreach (var a in actorDefs)
             {
                 Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + ++actorIndex, a.Save()));
+            }
+
+            if (multiCount > 0)
+            {
+                var mapPlayers = new MapPlayers(Map.Rules, multiCount);
+                Map.PlayerDefinitions = mapPlayers.ToMiniYaml();
             }
 
             // Resources
@@ -355,7 +449,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
         int GetHighestActorIndex()
         {
-            var pattern = new Regex(@"Actor(?<actorId>\d$)");
+            var pattern = new Regex(@"Actor(?<actorId>\d+)");
+
             return Map.ActorDefinitions
                 .Select(x => pattern.Match(x.Key).Groups["actorId"])
                 .Where(x => !string.IsNullOrEmpty(x.Value))
