@@ -290,6 +290,11 @@ Player:
 		Type: AIBuilding
 		Group: AIBuilding
 		BuildDurationModifier: 1
+	ClassicProductionQueue@DummyQueue:
+		Type: Dummy
+		Group: Dummy
+		BuildDurationModifier: 2486 # DR build rate
+		LowPowerModifier: 10
 	Shroud:
 		FogCheckboxDisplayOrder: 3
 		ExploredMapCheckboxEnabled: True

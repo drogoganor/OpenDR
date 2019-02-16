@@ -282,7 +282,10 @@ namespace OpenRA.Mods.Dr.Widgets
 				var bi = item.TraitInfo<BuildableInfo>();
 				icon.Play(bi.Icon);
 
-				var pi = new BuildSelectIcon()
+                var dummyQueue = currentQueue.Actor.Owner.PlayerActor.TraitsImplementing<ProductionQueue>()
+                    .First(q => q.Info.Type == "Dummy");
+
+                var pi = new BuildSelectIcon()
 				{
 					Actor = item,
 					Name = item.Name,
@@ -292,8 +295,9 @@ namespace OpenRA.Mods.Dr.Widgets
 					IconClockPalette = worldRenderer.Palette(ClockPalette),
 					IconDarkenPalette = worldRenderer.Palette(NotBuildablePalette),
 					Pos = new float2(rect.Location),
-					BuilderUnit = currentQueue
-				};
+					BuilderUnit = currentQueue,
+                    ProductionQueue = dummyQueue
+                };
 
 				icons.Add(rect, pi);
 				DisplayedIconCount++;

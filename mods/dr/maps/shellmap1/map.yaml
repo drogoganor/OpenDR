@@ -5,7 +5,7 @@ Author: Dark Reign
 Tileset: BARREN
 MapSize: 94,58
 Bounds: 1,1,92,56
-Visibility: Lobby, Shellmap
+Visibility: Shellmap
 Categories: Shellmap
 Players:
 	PlayerReference@Neutral:
