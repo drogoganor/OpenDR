@@ -1167,13 +1167,13 @@ uireast0:
 		Length: 4
 		Tick: 60
 	idle:
+		Start: 96
 		Facings: 8
 		Length: 8
 		Tick: 60
 	stand:
+		Start: 160
 		Facings: 8
-		Length: 8
-		Tick: 60
 	icon: uireamn0
 
 # Rapid Armored Transport mk2 RAT

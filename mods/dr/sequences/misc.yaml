@@ -186,7 +186,8 @@ explosion:
 	ecfirsm2: ecfirsm2
 		BlendMode: Subtractive
 	eifurex0: eifurex0 # Fury
-	eoiarex3: eoiarex3 # Hades
+	eoiarex5: eoiarex5 # Hades
+	eoiarex1hades: eoiarex1 # Hades 2
 
 allyrepair:
 	repair: repricon

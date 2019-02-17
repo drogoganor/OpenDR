@@ -1073,7 +1073,10 @@ HadesBomb: # Hades bomber. 5 shots.
 		Spread: 640
 		Damage: 63
 	Warhead@3Eff: CreateEffect
-		Explosions: eoiarex3
+		Explosions: eoiarex5
+		ValidTargets: Ground, Ship, Trees
+	Warhead@4Eff: CreateEffect
+		Explosions: eoiarex1hades
 		ValidTargets: Ground, Ship, Trees
 
 OutriderMissileMk2: # Avenger. 1 shot.
