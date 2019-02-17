@@ -20,6 +20,10 @@ uocvmst0:
 	stand:
 		Start: 176
 		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 9, 5
+		ZOffset: -8192
 	icon: uocvmmn0
 
 # Rowdy Civilian
@@ -51,6 +55,10 @@ uorcmst0:
 	stand:
 		Start: 184
 		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 9, 7
+		ZOffset: -8192
 	icon: uorcmmn0
 
 # Karoch
@@ -67,6 +75,10 @@ uocspst0:
 	stand:
 		Start: 0
 		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 11, 3
+		ZOffset: -8192
 	icon: uocspmn0
 
 

@@ -27,7 +27,9 @@ GoreHunter:
 		Type: ToughHuman
 	Armament@PRIMARY:
 		LocalOffset: 512,0,112
-		Weapon: LaserRifle
+		Weapon: GoreHunterWeapon
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
 
 ShockTrooper:
 	Inherits: ^DrAddonSoldier
@@ -52,6 +54,8 @@ ShockTrooper:
 	Armament@PRIMARY:
 		LocalOffset: 512,0,112
 		Weapon: LaserRifle
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
 
 Santa:
 	Inherits: ^DrAddonSoldier
@@ -511,6 +515,8 @@ RastaTerroristSoldierVeteran:
 	Armament@PRIMARY:
 		LocalOffset: 512,0,112
 		Weapon: LaserRifle
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
 
 RastaTerroristSoldier:
 	Inherits: ^DrAddonSoldier
@@ -535,6 +541,8 @@ RastaTerroristSoldier:
 	Armament@PRIMARY:
 		LocalOffset: 512,0,112
 		Weapon: LaserRifle
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
 
 AlternateLardriddenTerroristSoldier:
 	Inherits: ^DrAddonSoldier

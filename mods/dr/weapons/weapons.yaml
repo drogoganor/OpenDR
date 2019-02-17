@@ -585,17 +585,19 @@ SuicideNuke:
 		Speed: 4096
 		Shadow: False
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1280
+		Spread: 2c512
 		Damage: 180
 		AffectsParent: true
 	Warhead@3Eff_impact: CreateEffect
 		Explosions: ecexpsp1
 		ImpactSounds: gxmtrwc0.wav
 		ImpactActors: true
+	Warhead@Spy: SpawnActor
+		Actors: detonationspy
 
 SuicideNukeTargeting:
 	#ValidTargets: DetonateAttack
-	Range: 2c0
+	Range: 1c256
 	Projectile: InstantHit
 	Warhead@1Dam: TargetDamage
 		#ValidTargets: DetonateAttack
@@ -824,6 +826,8 @@ ShockWaveShock:
 	Warhead@3Eff: CreateEffect
 		Explosions: eochkex0alt # ok: eochkex0
 		ValidTargets: Ground, Ship, Trees, Structures
+	Warhead@Spy: SpawnActor
+		Actors: detonationspysmall
 
 TemporalRiftVortexWeapon:
 	Inherits: ^FullDamage
@@ -948,3 +952,8 @@ NeutronAss:
 	Warhead@3Eff: CreateEffect
 		Explosions: eoncnex0
 		ValidTargets: Ground, Ship, Trees
+
+# Addon
+
+GoreHunterWeapon:
+	Inherits: TripleRailGun

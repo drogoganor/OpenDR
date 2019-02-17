@@ -6,7 +6,7 @@ Tileset: SNOW
 MapSize: 98,98
 Bounds: 1,1,96,96
 Visibility: Lobby
-Categories: Conquest
+Categories: Competitive
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral

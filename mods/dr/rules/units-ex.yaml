@@ -35,6 +35,9 @@ Gant:
 	-AttackFrontal:
 	AttackTurreted:
 	WithSpriteTurret:
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 Ranger:
 	Inherits: ^DrSoldier
@@ -111,6 +114,9 @@ Grendel:
 		Speed: 120
 	Armor:
 		Type: PowerHuman
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 GrendelRider:
 	Inherits: ^DrSoldier
@@ -135,6 +141,9 @@ GrendelRider:
 		Speed: 120
 	Armor:
 		Type: PowerHuman
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
 
 # Shadowhand
 
@@ -161,6 +170,8 @@ Reaper:
 		Speed: 120
 	Armor:
 		Type: PowerHuman
+	Armament:
+		Weapon: NeutronAss
 	WithShadow: # Reaper re-uses the flak shadow, ufflksh0, but its sequences don't match up exactly to the reaper sprite so we can't use it via Combine syntax
 		Offset: 122, 56, 0
 		ZOffset: -129

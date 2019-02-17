@@ -441,7 +441,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
                 }
             }
 
-            var dest = Path.Combine(targetPath, Path.GetFileNameWithoutExtension(filename) + "-mirrored.oramap");
+            var dest = Path.Combine(targetPath, Path.GetFileNameWithoutExtension(filename) + ".oramap");
 
             Map.Save(ZipFileLoader.Create(dest));
             Console.WriteLine(dest + " saved.");

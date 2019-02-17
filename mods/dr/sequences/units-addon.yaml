@@ -21,6 +21,10 @@ unhvst0:
 	stand:
 		Start: 48
 		Facings: 6
+	shadow: ucmensh0
+		Length: 1
+		Offset: 10, 5
+		ZOffset: -8192
 	icon: unhvmn0
 
 
@@ -46,6 +50,10 @@ unskst0:
 	stand:
 		Start: 48
 		Facings: 6
+	shadow: ucmensh0
+		Length: 1
+		Offset: 10, 4
+		ZOffset: -8192
 	icon: unskmn0
 
 
@@ -70,6 +78,10 @@ unsanst0:
 	stand:
 		Start: 112
 		Facings: 16
+	shadow: ucmensh0
+		Length: 1
+		Offset: 10, 4
+		ZOffset: -8192
 	icon: unsanmn0
 
 # Gore Beast
@@ -562,6 +574,10 @@ utravst0:
 	idle:
 		Start: 0
 		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 10, 6
+		ZOffset: -8192
 	icon: utravmn0
 
 # Rasta Terrorist Soldier
@@ -589,6 +605,10 @@ utrasst0:
 	idle:
 		Start: 192
 		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 10, 6
+		ZOffset: -8192
 	icon: utrasmn0
 
 # Alternate Lardridden Terrorist Soldier

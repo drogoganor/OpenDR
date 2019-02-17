@@ -9,6 +9,8 @@ Civilian:
 		HP: 40
 	Mobile:
 		Speed: 72
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
 
 RowdyCivilian:
 	Inherits: ^DrCivilian
@@ -24,6 +26,8 @@ RowdyCivilian:
 		Speed: 96
 	Armament@PRIMARY:
 		Weapon: LaserRifle
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
 
 ColonelMartel: # Campaign
 	Inherits: ^DrCivilian
@@ -33,6 +37,8 @@ ColonelMartel: # Campaign
 		Name: Colonel Martel
 	Health:
 		HP: 500
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
 
 JebRadec: # Campaign
 	Inherits: RowdyCivilian
@@ -44,6 +50,8 @@ JebRadec: # Campaign
 		HP: 500
 	Armament@PRIMARY:
 		Weapon: LaserRifle
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
 
 Karoch: # Campaign
 	Inherits: ^DrCivilian
@@ -62,6 +70,8 @@ Karoch: # Campaign
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry, Civilian
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
 
 DessicatorTransport:
 	Inherits: ^DrCivVehicle
