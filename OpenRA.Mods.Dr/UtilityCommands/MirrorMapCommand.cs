@@ -182,6 +182,33 @@ namespace OpenRA.Mods.Dr.UtilityCommands
     {
         static Dictionary<string, int2> mirrorOffsets = new Dictionary<string, int2>()
         {
+            { "mpspawn", new int2(3, 3) },
+            { "power", new int2(2, 3) },
+            { "waterlaunchpad", new int2(3, 2) },
+            { "hq.human", new int2(3, 3) },
+            { "hq.cyborg", new int2(3, 3) },
+            { "hq.togran", new int2(3, 3) },
+            { "trainingfacility.fguard", new int2(4, 3) },
+            { "trainingfacility.cyborg", new int2(4, 3) },
+            { "assemblyplant.human", new int2(4, 4) },
+            { "assemblyplant.cyborg", new int2(4, 4) },
+            { "laserturret", new int2(1, 1) },
+            { "plasmaturret", new int2(1, 1) },
+            { "antiairturret.human", new int2(1, 1) },
+            { "heavyrailturret", new int2(2, 2) },
+            { "neutronaccelerator", new int2(2, 2) },
+            { "hospital.human", new int2(3, 2) },
+            { "hospital.cyborg", new int2(3, 2) },
+            { "repair.human", new int2(3, 2) },
+            { "repair.cyborg", new int2(3, 2) },
+            { "phasingfacility", new int2(3, 2) },
+            { "rearmingdeck.human", new int2(2, 2) },
+            { "rearmingdeck.cyborg", new int2(2, 2) },
+            { "temporalgate", new int2(2, 1) },
+            { "temporalriftcreator", new int2(3, 3) },
+            { "trainingfacility.xenite", new int2(4, 3) },
+            { "matrix", new int2(3, 3) },
+
             { "aotre000", new int2(0, -1) },
             { "aotre001", new int2(0, -1) },
             { "aotre002", new int2(0, -1) },
@@ -374,6 +401,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             int multiCount = 0;
 
             var actorDefs = new List<ActorReference>();
+            var removeActors = new List<MiniYamlNode>();
             foreach (var a in Map.ActorDefinitions)
             {
                 var existing = new ActorReference(a.Value.Value, a.Value.ToDictionary());
@@ -382,7 +410,10 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
                 if (pos.X < 0 || pos.X >= size.X ||
                     pos.Y < 0 || pos.Y >= size.Y)
+                {
+                    removeActors.Add(a);
                     continue;
+                }
 
                 var actor = new ActorTransform()
                 {
@@ -412,6 +443,11 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             foreach (var a in actorDefs)
             {
                 Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + ++actorIndex, a.Save()));
+            }
+
+            foreach (var a in removeActors)
+            {
+                Map.ActorDefinitions.Remove(a);
             }
 
             if (multiCount > 0)
