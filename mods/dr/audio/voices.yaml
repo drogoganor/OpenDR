@@ -218,6 +218,18 @@ TerraformerVoice:
 		Select: gxtersc0,gxtersc3,gxtersc4
 		Action: gxterrc1,gxterac0
 
+JebRadecVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: gvmtrrl0, gvmtrrl1
+		Action: gvmtrrl2, gvmtrrl3, gvmtrrl4
+
+RowdyMaleCivilianVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: 
+		Action: 
+
 # Xenite
 
 RangerVoice:
@@ -230,12 +242,12 @@ GantVoice:
 	Inherits: ImperiumVoice
 	Voices:
 		Select: gxgansc1,gxgansc2,gxgansc4
-		Action: gxganrc1,gxganrc2,gxganac0
+		Action: gxganrc2,gxganac0 # gxganrc1, sounds horrible
 
 GrendelVoice:
 	Inherits: ImperiumVoice
 	Voices:
-		Select: gxgresc1, gxgresc2, gxgresc3
+		Select: gxgresc2, gxgresc3 # gxgresc1, sounds horrible
 		Action: gxgrerc1, gxgrerc2, gxgrerc3
 
 GrendelRiderVoice:

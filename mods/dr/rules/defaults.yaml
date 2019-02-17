@@ -32,8 +32,10 @@
 	WithSpriteControlGroupDecoration:
 	Selectable:
 		Class: Humanoid
-		Bounds: 26,30,-4,-2
-		DecorationBounds: 19,22,-2,1
+		#Bounds: 26,30,-4,-2
+		#DecorationBounds: 19,22,-2,1
+		Bounds: 26,28,1,2
+		DecorationBounds: 18,22,0,0
 	Targetable:
 		TargetTypes: Ground, Infantry, Disguise
 	QuantizeFacingsFromSequence:
@@ -162,8 +164,8 @@
 	WithSpriteControlGroupDecoration:
 	Selectable:
 		Class: V1
-		Bounds: 28, 28
-		DecorationBounds: 28,28
+		Bounds: 36,36,0,0
+		DecorationBounds: 28,28,0,0
 	Targetable:
 		TargetTypes: Ground, Vehicle
 	Repairable:

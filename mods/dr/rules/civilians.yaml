@@ -18,6 +18,8 @@ RowdyCivilian:
 		Image: uorcmst0
 	Tooltip:
 		Name: Rowdy Civilian
+	Voiced:
+		VoiceSet: RowdyMaleCivilianVoice
 	Health:
 		HP: 120
 	RevealsShroud:
@@ -33,6 +35,8 @@ ColonelMartel: # Campaign
 	Inherits: ^DrCivilian
 	RenderSprites:
 		Image: uocvmst0
+	Voiced:
+		VoiceSet: FreedomGuardVoice
 	Tooltip:
 		Name: Colonel Martel
 	Health:
@@ -46,6 +50,8 @@ JebRadec: # Campaign
 		Image: uorcmst0
 	Tooltip:
 		Name: Jeb Radec
+	Voiced:
+		VoiceSet: JebRadecVoice
 	Health:
 		HP: 500
 	Armament@PRIMARY:
@@ -61,6 +67,8 @@ Karoch: # Campaign
 		Name: Karoch
 	Health:
 		HP: 500
+	Voiced:
+		VoiceSet: MedicVoice
 	Armament@PRIMARY:
 		Weapon: Heal
 		Cursor: heal
@@ -91,6 +99,11 @@ DessicatorTransport:
 	Armor:
 		Type: TankPlating
 	-Armament:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+		LoadingCondition: notmobile
 
 # Civ Troop Transport
 CivWheelTransporter:
@@ -111,3 +124,8 @@ CivWheelTransporter:
 	Armor:
 		Type: TankPlating
 	-Armament:
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+		LoadingCondition: notmobile

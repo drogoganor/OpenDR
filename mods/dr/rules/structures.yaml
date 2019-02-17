@@ -1015,3 +1015,55 @@ TemporalRiftCreator:
 		CameraRange: 10c0
 		CameraSpawnAdvance: 25
 		CameraRemoveDelay: 350
+
+TrainingFacility.xenite:
+	Inherits: TrainingFacility.xenite.Constructing
+	Inherits@4: ^DrTrainingFacility
+	-SelfConstructing:
+	-Buildable:
+	-BuilderQueue@Building:
+	Tooltip:
+		Name: Training Facility
+	Health:
+		HP: 750
+	-WithIdleOverlay@REPEAT:
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	#WithIdleOverlay@LAYER4:
+	#	Sequence: animation
+	#WithIdleOverlay@LAYER5: # Only for upgraded
+	#	Sequence: base
+
+Matrix:
+	Inherits: Matrix.Constructing
+	Inherits@4: ^DrGenericBuilding
+	-SelfConstructing:
+	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
+	Tooltip:
+		Name: Matrix
+	ProvidesPrerequisite@matrix:
+		Prerequisite: matrix
+	Valued:
+		Cost: 1800
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow

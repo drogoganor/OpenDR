@@ -1280,6 +1280,11 @@ uifurst0:
 	shoot:
 		Start: 0
 		Facings: 8
+	muzzle: uifurac1
+		Start: 16
+		Facings: 16
+		Length: 4
+		Tick: 40
 	turret: uifurac1
 		Start: 0
 		Facings: 16

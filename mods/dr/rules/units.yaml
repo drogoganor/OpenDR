@@ -183,6 +183,8 @@ Medic:
 		BuildDuration: 15
 	Selectable:
 		Class: E5
+		Bounds: 26,28,2,-1
+		DecorationBounds: 18,22,0,-2
 	Voiced:
 		VoiceSet: MedicVoice
 	Valued:
@@ -486,6 +488,8 @@ ConstructionRig:
 	Selectable:
 		Priority: 4
 		Class: C1
+		Bounds: 32,32,1,3
+		DecorationBounds: 27,28,1,2
 	Voiced:
 		VoiceSet: ConstructionVoice
 	Valued:
@@ -550,6 +554,8 @@ Freighter:
 	Selectable:
 		Priority: 5
 		Class: F1
+		Bounds: 36,36,0,0
+		DecorationBounds: 32,32,0,0
 	Voiced:
 		VoiceSet: FreedomGuardVoice
 	Valued:
@@ -589,6 +595,8 @@ HoverFreighter:
 	Selectable:
 		Priority: 5
 		Class: F2
+		Bounds: 36,36,0,0
+		DecorationBounds: 32,32,0,0
 	Voiced:
 		VoiceSet: FreedomGuardVoice
 	Valued:
@@ -655,6 +663,8 @@ RAT:
 		BuildDuration: 14
 	Selectable:
 		Class: V2
+		Bounds: 36,36,0,0
+		DecorationBounds: 36,36,0,0
 	Valued:
 		Cost: 450
 	Health:
@@ -810,6 +820,8 @@ TripleRailHoverTank:
 		BuildDuration: 39
 	Selectable:
 		Class: V7
+		Bounds: 44,44,0,4
+		DecorationBounds: 38,38,0,4
 	Voiced:
 		VoiceSet: TripleRailTankVoice
 	Valued:
@@ -849,6 +861,8 @@ HellstormArtillery:
 		BuildDuration: 33
 	Selectable:
 		Class: V8
+		Bounds: 36,36,0,4
+		DecorationBounds: 28,28,0,4
 	Voiced:
 		VoiceSet: HellstormArtilleryVoice
 	Valued:
@@ -1011,6 +1025,8 @@ ITT:
 		BuildDuration: 18
 	Selectable:
 		Class: V13
+		Bounds: 36,36,0,0
+		DecorationBounds: 32,32,0,0
 	Voiced:
 		VoiceSet: ImperiumVoice
 	Valued:
@@ -1126,6 +1142,8 @@ MAD:
 		BuildDuration: 24
 	Selectable:
 		Class: V6
+		Bounds: 36,36,0,0
+		DecorationBounds: 32,32,0,-3
 	Voiced:
 		VoiceSet: ImperiumVoice
 	Valued:
@@ -1182,6 +1200,8 @@ HostageTaker:
 		BuildDuration: 18
 	Selectable:
 		Class: V17
+		Bounds: 36,36,0,0
+		DecorationBounds: 32,32,0,0
 	Voiced:
 		VoiceSet: HostageTakerVoice
 	Valued:
@@ -1208,6 +1228,8 @@ TachionTank:
 		BuildDuration: 45
 	Selectable:
 		Class: V18
+		Bounds: 36,36,0,0
+		DecorationBounds: 34,34,0,0
 	Voiced:
 		VoiceSet: TachionTankVoice
 	Valued:
@@ -1236,6 +1258,8 @@ Scarab:
 		BuildDuration: 39
 	Selectable:
 		Class: V8
+		Bounds: 36,36,0,4
+		DecorationBounds: 28,28,0,4
 	Voiced:
 		VoiceSet: ImperiumVoice
 	Valued:
@@ -1395,6 +1419,9 @@ SkyFortress:
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
 		BuildDuration: 75
+	Selectable:
+		Bounds: 28,28,0,0
+		DecorationBounds: 32,32,0,0
 	Voiced:
 		VoiceSet: SkyFortressVoice
 	Valued:
@@ -1434,6 +1461,9 @@ Gant:
 		BuildPaletteOrder: 50
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
+	Selectable:
+		Bounds: 28,28,0,0
+		DecorationBounds: 28,28,0,0
 	Voiced:
 		VoiceSet: GantVoice
 	Valued:
@@ -1524,6 +1554,9 @@ Grendel:
 		BuildPaletteOrder: 70
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
+	Selectable:
+		Bounds: 36,36,0,0
+		DecorationBounds: 32,32,0,0
 	Voiced:
 		VoiceSet: GrendelVoice
 	Valued:
@@ -1551,6 +1584,9 @@ GrendelRider:
 		BuildPaletteOrder: 80
 		BuildDuration: 30
 		Prerequisites: ~hq.xenite, ~barracks
+	Selectable:
+		Bounds: 36,36,0,0
+		DecorationBounds: 32,32,0,0
 	Voiced:
 		VoiceSet: GrendelRiderVoice
 	Valued:
@@ -1580,6 +1616,10 @@ Reaper:
 		BuildPaletteOrder: 20
 		BuildDuration: 30
 		Prerequisites: ~hq.shadowhand, ~barracks
+	Selectable:
+		#Class: Humanoid
+		Bounds: 36,36,0,0
+		DecorationBounds: 36,36,0,0
 	Voiced:
 		VoiceSet: ReaperVoice
 	Valued:
@@ -1613,6 +1653,10 @@ RATmk2:
 		Prerequisites: ~vehicles.xenite
 		BuildPaletteOrder: 90
 		BuildDuration: 14
+	Selectable:
+		#Class: Humanoid
+		Bounds: 36,36,0,0
+		DecorationBounds: 32,32,0,0
 	Valued:
 		Cost: 450
 	Health:
@@ -1656,6 +1700,10 @@ GeminiTank:
 		BuildDuration: 39
 	Voiced:
 		VoiceSet: GeminiTankVoice
+	Selectable:
+		#Class: Humanoid
+		Bounds: 36,36,0,0
+		DecorationBounds: 32,32,0,0
 	Valued:
 		Cost: 700
 	Health:
@@ -1717,6 +1765,10 @@ Fury:
 		BuildDuration: 39
 	Voiced:
 		VoiceSet: FuryVoice
+	Selectable:
+		#Class: Humanoid
+		Bounds: 36,36,0,0
+		DecorationBounds: 36,36,0,0
 	Valued:
 		Cost: 700
 	Health:
@@ -1734,7 +1786,9 @@ Fury:
 		Recoil: 128
 		RecoilRecovery: 38
 		LocalOffset: 720,0,80
-		MuzzleSequence: muzzle
+		#MuzzleSequence: muzzle
+	WithTurretAttackAnimation:
+		Sequence: muzzle
 	-AttackFrontal:
 	AttackTurreted:
 	WithSpriteTurret:
@@ -1778,6 +1832,10 @@ RoadTerraformer:
 	#	BuildDuration: 39
 	Voiced:
 		VoiceSet: TerraformerVoice
+	Selectable:
+		#Class: Humanoid
+		Bounds: 36,36,0,0
+		DecorationBounds: 36,34,0,0
 	Valued:
 		Cost: 700
 	Health:
@@ -1804,6 +1862,10 @@ MarshTerraformer:
 	#	BuildDuration: 39
 	Voiced:
 		VoiceSet: TerraformerVoice
+	Selectable:
+		#Class: Humanoid
+		Bounds: 36,36,0,0
+		DecorationBounds: 36,34,0,0
 	Valued:
 		Cost: 700
 	Health:
@@ -1830,6 +1892,9 @@ Avenger:
 		Prerequisites: ~vehicles.xenite, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
 		BuildDuration: 45
+	Selectable:
+		Bounds: 28,28,0,0
+		DecorationBounds: 32,32,0,0
 	Voiced:
 		VoiceSet: AvengerVoice
 	Valued:
@@ -1858,6 +1923,9 @@ HadesBomber:
 		Prerequisites: ~vehicles.shadowhand, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
 		BuildDuration: 45
+	Selectable:
+		Bounds: 28,28,0,-4
+		DecorationBounds: 32,32,0,-4
 	Voiced:
 		VoiceSet: HadesBomberVoice
 	Valued:

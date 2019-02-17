@@ -54,7 +54,6 @@ Rules:
 	dr|rules/structures.yaml
 	dr|rules/structures-civilian.yaml
 	dr|rules/structures-addon.yaml
-	dr|rules/structures-ex.yaml
 	dr|rules/upgrades.yaml
 	dr|rules/ai.yaml
 	dr|rules/units.yaml
@@ -70,7 +69,6 @@ Sequences:
 	dr|sequences/structures.yaml
 	dr|sequences/structures-civilian.yaml
 	dr|sequences/structures-addon.yaml
-	dr|sequences/structures-ex.yaml
 	dr|sequences/upgrades.yaml
 	dr|sequences/units.yaml
 	dr|sequences/units-addon.yaml
