@@ -515,6 +515,11 @@ ufsktst0:
 		Facings: 16
 		Length: 3
 		Tick: 100
+	muzzle: ufsktac0
+		Start: 16
+		Facings: 16
+		Length: 3
+		Tick: 40
 	turret: ufsktac0
 		Start: 0
 		Facings: 16
@@ -604,6 +609,11 @@ uftrtst0:
 	idle:
 		Start: 0
 		Facings: 16
+	muzzle: uftrtac0
+		Start: 16
+		Facings: 16
+		Length: 3
+		Tick: 40
 	turret: uftrtac0
 		Start: 0
 		Facings: 16
@@ -774,6 +784,13 @@ uiittst0:
 		Facings: 16
 		Length: 1
 		Tick: 100
+	muzzle: uchfrac0
+		Start: 16
+		Facings: 16
+		Tick: 90
+	turret: uchfrac0
+		Start: 0
+		Facings: 16
 	icon: uiittmn0
 
 # Plasma Tank
@@ -790,6 +807,11 @@ uipltst0:
 	idle:
 		Start: 0
 		Facings: 16
+	muzzle: uipltac0
+		Start: 16
+		Facings: 16
+		Length: 3
+		Tick: 40
 	turret: uipltac0
 		Start: 0
 		Facings: 16
@@ -973,3 +995,384 @@ uiskyst0:
 		Length: 3
 		Tick: 100
 	icon: uiskymn0
+
+# Xenite
+
+# Ranger
+uftrast0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 6
+		Tick: 60
+	shoot:
+		Start: 56
+		Facings: 8
+		Length: 10
+		Tick: 100
+	idle:
+		Start: 48
+		Facings: 8
+	stand:
+		Start: 48
+		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 10, 4
+		ZOffset: -8192
+	icon: uftramn0
+
+# Gant
+ufganst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	shoot:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	idle:
+		Start: 160
+		Facings: 8
+		Length: 10
+		Tick: 60
+	stand:
+		Start: 160
+		Facings: 8
+		Length: 10
+		Tick: 60
+	turret: ufganac0
+		Start: 0
+		Facings: 8
+	icon: ufganmn0
+
+# Power striker
+unpwcst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 60
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 6
+		Tick: 100
+	idle:
+		Start: 112
+		Facings: 8
+		Length: 14
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 60
+	shadow: ucmensh0
+		Length: 1
+		Offset: 10, 3
+		ZOffset: -8192
+	icon: unpwcmn0
+
+# Grendel
+ufgrest0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	shoot:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	turret: ufgreac0 # ufgreac1
+		Start: 0
+		Facings: 8
+		AddExtension: False
+	icon: ufgremn0
+
+# Grendel Rider
+ufridst0:
+	Inherits: humansplat
+	run:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	shoot:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 60
+	turret: ufridac0
+		Start: 0
+		Facings: 8
+		AddExtension: False
+	icon: ufridmn0
+
+# Shadowhand
+
+# Reaper
+uireast0:
+	Inherits: humansplat
+	run:
+		Facings: 8
+		Length: 8
+		Tick: 60
+	shoot:
+		Start: 64
+		Facings: 8
+		Length: 4
+		Tick: 60
+	idle:
+		Facings: 8
+		Length: 8
+		Tick: 60
+	stand:
+		Facings: 8
+		Length: 8
+		Tick: 60
+	icon: uireamn0
+
+# Rapid Armored Transport mk2 RAT
+ufrt2st0:
+	run:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 100
+	muzzle: ufrt2ac0
+		Start: 16
+		Facings: 16
+		Length: 3
+		Tick: 50
+	turret: ufrt2ac0
+		Start: 0
+		Facings: 16
+	icon: ufrt2mn0
+
+# Avenger
+ufomkst0:
+	idle:
+		Start: 0
+		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
+	run:
+		Start: 16
+		Facings: 16
+		Length: 4
+		Tick: 100
+	shoot:
+		Start: 16
+		Facings: 16
+		Length: 4
+		Tick: 100
+	icon: ufomkmn0
+
+# Vehicles
+
+# Gemini tank
+uigemst1: # seems to transform into uigemst0, a slimmer version
+	idle:
+		Start: 0
+		Facings: 16
+	stand:
+		Start: 0
+		Facings: 16
+	run:
+		Start: 0
+		Facings: 16
+	shoot:
+		Start: 0
+		Facings: 16
+	muzzle: uigemac0
+		Start: 16
+		Facings: 16
+		Length: 2
+		Tick: 40
+	turret: uigemac0
+		Start: 0
+		Facings: 16
+	icon: uigemmn1
+
+# Shadowblade (clone of Shredder)
+uishrst1:
+	run:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	shoot:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 100
+	icon: uishrmn1
+
+# Fury
+uifurst0:
+	idle:
+		Start: 0
+		Facings: 8
+	stand:
+		Start: 0
+		Facings: 8
+	run:
+		Start: 0
+		Facings: 8
+		Length: 10
+		Tick: 40
+	shoot:
+		Start: 0
+		Facings: 8
+	turret: uifurac1
+		Start: 0
+		Facings: 16
+		#Length: 4
+		#Tick: 20
+	icon: uifurmn0
+
+# Hades Bomber
+uiarbst0:
+	idle:
+		Start: 0
+		Facings: 24
+	stand:
+		Start: 0
+		Facings: 24
+	run:
+		Start: 0
+		Facings: 24
+	shoot:
+		Start: 24
+		Facings: 24
+		Length: 3
+		Tick: 100
+	icon: uiarbmn0
+
+# EMP
+uiempst0:
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	run:
+		Start: 0
+		Facings: 8
+		Length: 8
+		Tick: 100
+	shoot:
+		Start: 8
+		Facings: 8
+		Length: 24
+		Tick: 100
+	icon: uiempmn0
+
+# Road Terraformer (Gold)
+uiterst0:
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+	run:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+	shoot:
+		Start: 24
+		Facings: 8
+		Length: 4
+		Tick: 100
+	icon: uitermn0
+
+# Marsh Terraformer (Green)
+uiterst1:
+	idle:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+	stand:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+	run:
+		Start: 0
+		Facings: 8
+		Length: 3
+		Tick: 100
+	shoot:
+		Start: 24
+		Facings: 8
+		Length: 4
+		Tick: 100
+	icon: uitermn1

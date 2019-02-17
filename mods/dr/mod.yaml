@@ -59,7 +59,6 @@ Rules:
 	dr|rules/ai.yaml
 	dr|rules/units.yaml
 	dr|rules/units-addon.yaml
-	dr|rules/units-ex.yaml
 	dr|rules/civilians.yaml
 	dr|rules/decorations.yaml
 	dr|rules/decorations-manual.yaml
@@ -75,7 +74,6 @@ Sequences:
 	dr|sequences/upgrades.yaml
 	dr|sequences/units.yaml
 	dr|sequences/units-addon.yaml
-	dr|sequences/units-ex.yaml
 	dr|sequences/civilians.yaml
 	dr|sequences/effects.yaml
 	dr|sequences/decorations.yaml
