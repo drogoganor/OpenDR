@@ -1,0 +1,128 @@
+MapFormat: 11
+RequiresMod: dr
+Title: A Dry Heat
+Author: DMW
+Tileset: BARREN
+MapSize: 70,34
+Bounds: 1,1,68,32
+Visibility: Lobby
+Categories: Conquest
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: fguard
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: fguard
+		Enemies: Multi0
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+Actors:
+	Actor0: mpspawn
+		Owner: Neutral
+		Location: 13,14
+	Actor1: aotre000
+		Owner: Neutral
+		Location: 21,26
+	Actor2: aotre000
+		Owner: Neutral
+		Location: 17,28
+	Actor3: aotre001
+		Owner: Neutral
+		Location: 20,27
+	Actor4: aotre002
+		Owner: Neutral
+		Location: 19,28
+	Actor5: aotre003
+		Owner: Neutral
+		Location: 14,29
+	Actor6: aotre004
+		Owner: Neutral
+		Location: 19,26
+	Actor7: aotre004
+		Owner: Neutral
+		Location: 12,27
+	Actor8: aotre005
+		Owner: Neutral
+		Location: 10,28
+	Actor9: aoroc001
+		Owner: Neutral
+		Location: 16,29
+	Actor10: aoroc004
+		Owner: Neutral
+		Location: 8,26
+	Actor11: aoroc002
+		Owner: Neutral
+		Location: 7,28
+	Actor12: aoroc000
+		Owner: Neutral
+		Location: 11,26
+	Actor13: aorub000
+		Owner: Neutral
+		Location: 6,26
+	Actor14: aorub001
+		Owner: Neutral
+		Location: 7,25
+	Actor15: aorub001
+		Owner: Neutral
+		Location: 14,27
+	Actor16: aorub002
+		Owner: Neutral
+		Location: 11,29
+	Actor17: aorub001
+		Owner: Neutral
+		Location: 23,27
+	Actor18: aorub000
+		Owner: Neutral
+		Location: 12,5
+	Actor19: aorub002
+		Owner: Neutral
+		Location: 16,6
+	Actor20: aorub001
+		Owner: Neutral
+		Location: 14,5
+	Actor21: aorub000
+		Owner: Neutral
+		Location: 4,15
+	Actor22: aotre004
+		Owner: Neutral
+		Location: 5,13
+	Actor23: aotre004
+		Owner: Neutral
+		Location: 7,7
+	Actor24: aotre004
+		Owner: Neutral
+		Location: 29,10
+	Actor25: aorub000
+		Owner: Neutral
+		Location: 27,9
+	Actor26: aorub001
+		Owner: Neutral
+		Location: 30,10
+	Actor27: aorub002
+		Owner: Neutral
+		Location: 25,9
+	Actor28: aorub000
+		Owner: Neutral
+		Location: 8,6
+	Actor29: aorub002
+		Owner: Neutral
+		Location: 6,8
+	Actor30: aorub001
+		Owner: Neutral
+		Location: 5,12
+	Actor31: aoroc002
+		Owner: Neutral
+		Location: 18,5
+	Actor32: aoroc001
+		Owner: Neutral
+		Location: 28,10
+	Actor33: aotre005
+		Owner: Neutral
+		Location: 22,26
