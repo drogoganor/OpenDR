@@ -1046,6 +1046,11 @@ ufganst0:
 		Facings: 8
 		Length: 10
 		Tick: 60
+	muzzle: ufganac0
+		Start: 8
+		Facings: 8
+		Length: 4
+		Tick: 40
 	turret: ufganac0
 		Start: 0
 		Facings: 8
@@ -1103,6 +1108,11 @@ ufgrest0:
 		Facings: 8
 		Length: 10
 		Tick: 60
+	muzzle: ufgreac0
+		Start: 8
+		Facings: 8
+		Length: 6
+		Tick: 40
 	turret: ufgreac0 # ufgreac1
 		Start: 0
 		Facings: 8
@@ -1132,10 +1142,14 @@ ufridst0:
 		Facings: 8
 		Length: 10
 		Tick: 60
-	turret: ufridac0
+	muzzle: ufgreac0
+		Start: 8
+		Facings: 8
+		Length: 6
+		Tick: 40
+	turret: ufgreac0
 		Start: 0
 		Facings: 8
-		AddExtension: False
 	icon: ufridmn0
 
 # Shadowhand
@@ -1269,9 +1283,13 @@ uifurst0:
 	idle:
 		Start: 0
 		Facings: 8
+		Length: 10
+		Tick: 4000000
 	stand:
 		Start: 0
 		Facings: 8
+		Length: 10
+		Tick: 4000000
 	run:
 		Start: 0
 		Facings: 8
@@ -1280,6 +1298,8 @@ uifurst0:
 	shoot:
 		Start: 0
 		Facings: 8
+		Length: 10
+		Tick: 4000000
 	muzzle: uifurac1
 		Start: 16
 		Facings: 16

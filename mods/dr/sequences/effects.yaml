@@ -533,3 +533,24 @@ eothnpr0:
 		Length: 7
 		Tick: 20
 
+# Expansion
+
+eolgtpr2: # Gemini tank
+	idle:
+		Start: 0
+		Length: 1
+		Facings: 24
+
+eoifury1: # Fury
+	idle:
+		Start: 0
+		Length: 4
+		Facings: 16
+		Tick: 40
+
+eoiarpr1: # Hades
+	idle:
+		Start: 0
+		Length: 3
+		Facings: 24
+		Tick: 40

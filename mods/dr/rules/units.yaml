@@ -1479,7 +1479,7 @@ Gant:
 	Turreted:
 		TurnSpeed: 5
 	Armament:
-		Weapon: PlasmaCannon
+		Weapon: Claws
 		Recoil: 128
 		RecoilRecovery: 38
 		LocalOffset: 720,0,80
@@ -1490,6 +1490,8 @@ Gant:
 	WithShadow:
 		Offset: 122, 56, 0
 		ZOffset: -129
+	WithTurretAttackAnimation:
+		Sequence: muzzle
 
 Ranger:
 	Inherits: ^DrSoldier
@@ -1572,6 +1574,8 @@ Grendel:
 	WithShadow:
 		Offset: 122, 56, 0
 		ZOffset: -129
+	Armament:
+		Weapon: ElectroBlast
 
 GrendelRider:
 	Inherits: ^DrSoldier
@@ -1602,6 +1606,8 @@ GrendelRider:
 	WithShadow:
 		Offset: 122, 56, 0
 		ZOffset: -129
+	Armament:
+		Weapon: ElectroBlast
 
 # Shadowhand
 
@@ -1617,9 +1623,8 @@ Reaper:
 		BuildDuration: 30
 		Prerequisites: ~hq.shadowhand, ~barracks
 	Selectable:
-		#Class: Humanoid
-		Bounds: 36,36,0,0
-		DecorationBounds: 36,36,0,0
+		Bounds: 36,36,0,-3
+		DecorationBounds: 32,32,0,-6
 	Voiced:
 		VoiceSet: ReaperVoice
 	Valued:
@@ -1633,7 +1638,7 @@ Reaper:
 	Armor:
 		Type: PowerHuman
 	Armament:
-		Weapon: NeutronAss
+		Weapon: HunterGun
 	WithShadow: # Reaper re-uses the flak shadow, ufflksh0, but its sequences don't match up exactly to the reaper sprite so we can't use it via Combine syntax
 		Offset: 122, 56, 0
 		ZOffset: -129
@@ -1717,7 +1722,7 @@ GeminiTank:
 	Turreted:
 		TurnSpeed: 5
 	Armament:
-		Weapon: PlasmaCannon
+		Weapon: GeminiFull
 		Recoil: 128
 		RecoilRecovery: 38
 		LocalOffset: 720,0,80
@@ -1729,7 +1734,7 @@ GeminiTank:
 	WithSpriteTurret:
 
 Shadowblade:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: Shredder
 	RenderSprites:
 		Image: uishrst1
 	Tooltip:
@@ -1739,8 +1744,6 @@ Shadowblade:
 		Prerequisites: ~vehicles.shadowhand, hq
 		BuildPaletteOrder: 150
 		BuildDuration: 21
-	Voiced:
-		VoiceSet: ShredderVoice
 	Valued:
 		Cost: 700
 	Health:
@@ -1782,7 +1785,7 @@ Fury:
 	Turreted:
 		TurnSpeed: 5
 	Armament:
-		Weapon: PlasmaCannon
+		Weapon: FuryGun1
 		Recoil: 128
 		RecoilRecovery: 38
 		LocalOffset: 720,0,80
@@ -1906,7 +1909,14 @@ Avenger:
 	Armor:
 		Type: FlyingArmour
 	Armament:
-		Weapon: CycloneCannon
+		Weapon: OutriderMissileMk2
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 1
+		PipCount: 1
+		PipType: Red
+		AmmoCondition: ammo
+		ReloadDelay: 40 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 240
 	AttackAircraft:
@@ -1937,7 +1947,14 @@ HadesBomber:
 	Armor:
 		Type: FlyingArmour
 	Armament:
-		Weapon: CycloneCannon
+		Weapon: HadesBomb
+		PauseOnCondition: !ammo
+	AmmoPool:
+		Ammo: 5
+		PipCount: 5
+		PipType: Red
+		AmmoCondition: ammo
+		ReloadDelay: 40 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 240
 	AttackAircraft:

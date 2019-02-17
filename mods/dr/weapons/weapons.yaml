@@ -38,6 +38,9 @@
 # V1 is the offense for the vortex (temporal rift)
 # W1 is the offense for the Seismic Wave
 
+# E6 is the electro blast
+# E7 is the Gant claws 
+
 ^FullDamage:
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
@@ -166,6 +169,32 @@
 			TankPlating: 150 # 10
 			ForcePlating: 150 # 10
 			BuildingArmour: 40 # 10
+		DamageTypes: DefaultDeath
+
+^E6: # is the electro blast
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 60
+		Versus:
+			ToughHuman: 100 # 10
+			PowerHuman: 100 # 10
+			FlyingArmour: 0
+			TankPlating: 130 # 10
+			ForcePlating: 130 # 10
+			BuildingArmour: 30 # 10
+		DamageTypes: DefaultDeath
+
+^E7: # is the gant claws
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 60
+		Versus:
+			ToughHuman: 150 # 10
+			PowerHuman: 150 # 10
+			FlyingArmour: 0
+			TankPlating: 100 # 10
+			ForcePlating: 100 # 10
+			BuildingArmour: 25 # 10
 		DamageTypes: DefaultDeath
 
 ^G1: # is the neutron weapons
@@ -952,6 +981,133 @@ NeutronAss:
 	Warhead@3Eff: CreateEffect
 		Explosions: eoncnex0
 		ValidTargets: Ground, Ship, Trees
+
+# Expansion
+
+HunterGun:
+	Inherits: ^G1
+	ReloadDelay: 42
+	Range: 5c0
+	Report: gxsngwc0.wav
+	Projectile: Bullet
+		Speed: 1067
+		Image: eoncnpr0
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 64
+		Damage: 30
+	Warhead@3Eff: CreateEffect
+		Explosions: eoncnex0
+		ValidTargets: Ground, Ship, Trees
+
+Claws:
+	Inherits: ^E7
+	ReloadDelay: 13
+	Range: 2c0
+	Report: gxganac0.wav
+	Projectile: Bullet
+		Speed: 1280
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 64
+		Damage: 25
+
+ElectroBlast:
+	Inherits: ^E6
+	ReloadDelay: 28
+	Range: 7c0
+	Report: gxgebwc0.wav
+	Projectile: Bullet
+		Speed: 853
+		Image: eothnpr0
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 80
+		Damage: 50
+	Warhead@3Eff: CreateEffect
+		Explosions: eothnex0
+		ValidTargets: Ground, Ship, Trees
+
+FuryGun1: # Fury weapon 1. Min range 2.
+	Inherits: ^E4
+	ReloadDelay: 28
+	Range: 8c0
+	Report: gxpltwc0.wav
+	Projectile: Bullet
+		Speed: 853
+		Image: eoifury1
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 160
+		Damage: 50
+	Warhead@3Eff: CreateEffect
+		Explosions: eifurex0
+		ValidTargets: Ground, Ship, Trees
+
+FuryGun2: # Fury weapon 2. 1 shots.
+	Inherits: ^E4
+	ReloadDelay: 1
+	Range: 1c0
+	Report: gxfgtwc0.wav
+	Projectile: Bullet
+		Speed: 43
+		Image: eolaspr2
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 64
+		Damage: 22
+	Warhead@3Eff: CreateEffect
+		Explosions: eolasex1
+		ValidTargets: Ground, Ship, Trees
+
+HadesBomb: # Hades bomber. 5 shots.
+	Inherits: ^K2
+	ReloadDelay: 21
+	Range: 7c0
+	Report: gxnpbdc0.wav
+	Projectile: Bullet
+		Speed: 555
+		Image: eoiarpr1
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 640
+		Damage: 63
+	Warhead@3Eff: CreateEffect
+		Explosions: eoiarex3
+		ValidTargets: Ground, Ship, Trees
+
+OutriderMissileMk2: # Avenger. 1 shot.
+	Inherits: ^M1
+	ReloadDelay: 14
+	Range: 12c0
+	Report: gxphtwc2.wav
+	Projectile: Bullet
+		Speed: 1280
+		Image: eomispr3
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 64
+		Damage: 400
+	Warhead@3Eff: CreateEffect
+		Explosions: eooutex0
+		ValidTargets: Ground, Ship, Trees
+
+GeminiFull: # Gemini tank, full power.
+	Inherits: ^E3
+	ReloadDelay: 6
+	Range: 5c0
+	Report: gxigtwc0.wav
+	Projectile: Bullet
+		Speed: 853
+		Image: eolgtpr2
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 64
+		Damage: 9
+	Warhead@3Eff: CreateEffect
+		Explosions: eolasex0
+		ValidTargets: Ground, Ship, Trees
+
 
 # Addon
 
