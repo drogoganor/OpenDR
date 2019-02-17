@@ -1467,13 +1467,13 @@ Gant:
 	Voiced:
 		VoiceSet: GantVoice
 	Valued:
-		Cost: 1000
+		Cost: 250
 	Health:
-		HP: 66
+		HP: 150
 	RevealsShroud:
-		Range: 9c0
+		Range: 8c0
 	Mobile:
-		Speed: 120
+		Speed: 168
 	Armor:
 		Type: ToughHuman
 	Turreted:
@@ -1507,13 +1507,13 @@ Ranger:
 	Voiced:
 		VoiceSet: RangerVoice
 	Valued:
-		Cost: 1000
+		Cost: 300
 	Health:
-		HP: 66
+		HP: 100
 	RevealsShroud:
-		Range: 9c0
+		Range: 8c0
 	Mobile:
-		Speed: 120
+		Speed: 144
 	Armor:
 		Type: ToughHuman
 	WithIdleOverlay@SHADOW: # No animated shadow
@@ -1533,13 +1533,13 @@ PowerSpiker:
 	Voiced:
 		VoiceSet: PowerSpikerVoice
 	Valued:
-		Cost: 1000
+		Cost: 2800
 	Health:
-		HP: 66
+		HP: 100
 	RevealsShroud:
-		Range: 9c0
+		Range: 8c0
 	Mobile:
-		Speed: 120
+		Speed: 96
 	Armor:
 		Type: ToughHuman
 	WithIdleOverlay@SHADOW: # No animated shadow
@@ -1562,9 +1562,9 @@ Grendel:
 	Voiced:
 		VoiceSet: GrendelVoice
 	Valued:
-		Cost: 1000
+		Cost: 1100
 	Health:
-		HP: 66
+		HP: 250
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -1594,9 +1594,9 @@ GrendelRider:
 	Voiced:
 		VoiceSet: GrendelRiderVoice
 	Valued:
-		Cost: 1000
+		Cost: 1700
 	Health:
-		HP: 66
+		HP: 300
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -1628,13 +1628,13 @@ Reaper:
 	Voiced:
 		VoiceSet: ReaperVoice
 	Valued:
-		Cost: 1000
+		Cost: 400
 	Health:
-		HP: 66
+		HP: 175
 	RevealsShroud:
-		Range: 9c0
+		Range: 8c0
 	Mobile:
-		Speed: 120
+		Speed: 96
 	Armor:
 		Type: PowerHuman
 	Armament:
@@ -1669,7 +1669,7 @@ RATmk2:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 180
+		Speed: 216
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -1712,11 +1712,11 @@ GeminiTank:
 	Valued:
 		Cost: 700
 	Health:
-		HP: 250
+		HP: 340
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 160
+		Speed: 120
 	Armor:
 		Type: ForcePlating
 	Turreted:
@@ -1747,11 +1747,11 @@ Shadowblade:
 	Valued:
 		Cost: 700
 	Health:
-		HP: 100
+		HP: 115
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 200
+		Speed: 240
 	Armor:
 		Type: ForcePlating
 
@@ -1773,13 +1773,13 @@ Fury:
 		Bounds: 36,36,0,0
 		DecorationBounds: 36,36,0,0
 	Valued:
-		Cost: 700
+		Cost: 1600
 	Health:
-		HP: 250
+		HP: 400
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 160
+		Speed: 120
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -1797,7 +1797,7 @@ Fury:
 	WithSpriteTurret:
 
 EMPDevice:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^DrPlane
 	RenderSprites:
 		Image: uiempst0
 	Tooltip:
@@ -1810,17 +1810,19 @@ EMPDevice:
 	Voiced:
 		VoiceSet: EMPVoice
 	Valued:
-		Cost: 700
+		Cost: 2600
 	Health:
-		HP: 250
+		HP: 150
 	RevealsShroud:
 		Range: 9c0
-	Mobile:
-		Speed: 160
 	Armor:
 		Type: TankPlating
 	Armament:
 		Weapon: TachyonCannon
+	Aircraft:
+		Speed: 144
+	AttackAircraft:
+		FacingTolerance: 20
 
 RoadTerraformer:
 	Inherits: ^DrAnimatedVehicle
@@ -1840,13 +1842,13 @@ RoadTerraformer:
 		Bounds: 36,36,0,0
 		DecorationBounds: 36,34,0,0
 	Valued:
-		Cost: 700
+		Cost: 400
 	Health:
-		HP: 250
+		HP: 100
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 160
+		Speed: 96
 	Armor:
 		Type: Tank
 	Armament:
@@ -1870,13 +1872,13 @@ MarshTerraformer:
 		Bounds: 36,36,0,0
 		DecorationBounds: 36,34,0,0
 	Valued:
-		Cost: 700
+		Cost: 400
 	Health:
-		HP: 250
+		HP: 100
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 160
+		Speed: 96
 	Armor:
 		Type: Tank
 	Armament:
@@ -1901,9 +1903,9 @@ Avenger:
 	Voiced:
 		VoiceSet: AvengerVoice
 	Valued:
-		Cost: 1500
+		Cost: 2200
 	Health:
-		HP: 150
+		HP: 115
 	RevealsShroud:
 		Range: 9c0
 	Armor:
@@ -1918,7 +1920,7 @@ Avenger:
 		AmmoCondition: ammo
 		ReloadDelay: 40 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
-		Speed: 240
+		Speed: 216
 	AttackAircraft:
 		FacingTolerance: 20
 
@@ -1939,7 +1941,7 @@ HadesBomber:
 	Voiced:
 		VoiceSet: HadesBomberVoice
 	Valued:
-		Cost: 1500
+		Cost: 2200
 	Health:
 		HP: 150
 	RevealsShroud:

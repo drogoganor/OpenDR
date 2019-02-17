@@ -39,7 +39,7 @@ namespace OpenRA.Mods.Dr.Graphics
 
 			var spriteName = sprite ?? sequence;
 
-            var validTilesetIds = new string[] { "BARREN", "JUNGLE", "SNOW" };
+            var validTilesetIds = new string[] { "BARREN", "JUNGLE", "SNOW" }; // Alien?
 
             if (!spriteName.EndsWith(".shp"))
             {

@@ -888,9 +888,13 @@ nitrc1l0:
 
 # Xenite biotech compound
 nfnes1l0:
-	building:
+	building: tilesetEx|nfnes1l0
 		Start: 0
-	idle:
+	idle: tilesetEx|nfnes1l0
+		Start: 1
+	building2: tilesetEx|nfnes1l0
+		Start: 0
+	idle2: tilesetEx|nfnes1l0
 		Start: 1
 	underlay-building: tilesetEx|nfnes1l0
 		ZOffset: -8192
@@ -898,14 +902,22 @@ nfnes1l0:
 	underlay: tilesetEx|nfnes1l0
 		ZOffset: -8192
 		Start: 1
-	top-building: tfnes1l0
+	underlay2: tilesetEx|nfnes1l0
+		ZOffset: -8192
+		Start: 1
+	top-building: tilesetEx|tfnes1l0
 		Start: 0
 	top: tfnes1l0
+		Start: 1
+	top2: tfnes1l0
 		Start: 1
 	shadow-building: bfnessh0
 		Start: 0
 		Offset: 4, -7
 	shadow: bfnessh0
+		Start: 1
+		Offset: 4, -7
+	shadow2: bfnessh0
 		Start: 1
 		Offset: 4, -7
 	icon: bfnesmn0

@@ -20,7 +20,7 @@ Packages:
 	~SNOW/SNOW.TIL
 	~SNOW/SNOW.PAL
 	~SNOW/SPRITES.FTG: snow
-	~SNOW/spriteEx.ftg: snow
+	~SNOW/spriteEx.ftg: snowEx
 	~ALIEN/ALIEN.TIL
 	~ALIEN/ALIEN.PAL
 	~ALIEN/spriteEx.ftg: alien
