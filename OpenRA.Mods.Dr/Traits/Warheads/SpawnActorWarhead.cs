@@ -102,7 +102,7 @@ namespace OpenRA.Mods.Dr.Warheads
 					break;
                 }
 
-				if (!placed)
+				if (!placed && unit != null)
 					unit.Dispose();
 			}
 		}
