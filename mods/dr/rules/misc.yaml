@@ -49,8 +49,6 @@ detonationspy:
 		Image: mpspawn
 	#RenderSprites:
 	#	Image: mpspawn
-	MapEditorData:
-		Categories: Do Not Use
 	DetonationSpy:
 		StaysFor: 30
 	RevealsShroud:
@@ -62,7 +60,6 @@ detonationspysmall:
 		StaysFor: 25
 	RevealsShroud:
 		Range: 2c0
-	
 
 temporalriftspewer:
 	Interactable:
@@ -76,8 +73,6 @@ temporalriftspewer:
 		TurnSpeed: 30
 	RenderSpritesEditorOnly:
 		Image: mpspawn
-	MapEditorData:
-		Categories: Do Not Use
 	AttackFrontal:
 	Armament:
 		LocalOffset: 0,0,112

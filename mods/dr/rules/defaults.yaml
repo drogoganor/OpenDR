@@ -776,8 +776,6 @@
 	Inherits: ^SelfConstructingBuilding
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	MapEditorData:
-		Categories: SelfConstructing
 	Inherits@shape: ^2x2Shape
 	Building:
 		Footprint: xx xx
@@ -830,8 +828,6 @@
 		Prerequisites: hq
 		BuildPaletteOrder: 30
 		BuildDuration: 45
-	MapEditorData:
-		Categories: SelfConstructing
 	Valued:
 		Cost: 1500
 	RevealsShroud:
@@ -851,6 +847,8 @@
 		Cost: 500
 	Health:
 		HP: 400
+	MapEditorData:
+		Categories: Building
 	RevealsShroud:
 		Range: 9c0
 	Power:
