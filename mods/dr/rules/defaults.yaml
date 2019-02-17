@@ -409,8 +409,8 @@
 		GenericName: Structure
 	Demolishable:
 	#	Condition: being-demolished
-	MapEditorData:
-		Categories: SelfConstructing
+	#MapEditorData:
+	#	Categories: SelfConstructing
 	CommandBarBlacklist:
 	Production:
 		Produces: Building, AIBuilding

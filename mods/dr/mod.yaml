@@ -260,7 +260,7 @@ ColorValidator:
 
 ModContent:
 	InstallPromptMessage: Dark Reign requires artwork and audio from both original and\nexpansion game discs, or alternatively a GOG install.\n\nPlease select Advanced Install and choose a source for installing\nthe game content.
-	QuickDownloads: # drdemo, drauranext
+	QuickDownload: # drdemo, drauranext
 	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting GOG install. You will also need to download the Auran Extras.
 	Packages:
 		base: Dark Reign (Disc)
