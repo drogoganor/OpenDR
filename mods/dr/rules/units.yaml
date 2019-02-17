@@ -1459,7 +1459,7 @@ Gant:
 	Buildable:
 		Description: Your basic Xenite. Has a melee attack and can self\nheal. Replaces Mercenaries.
 		BuildPaletteOrder: 50
-		BuildDuration: 30
+		BuildDuration: 8
 		Prerequisites: ~hq.xenite, ~barracks
 	Selectable:
 		Bounds: 28,28,0,0
@@ -1502,7 +1502,7 @@ Ranger:
 	Buildable:
 		Description: Your basic controller unit. Has no attack. Replaces Martyrs.
 		BuildPaletteOrder: 60
-		BuildDuration: 30
+		BuildDuration: 9
 		Prerequisites: ~hq.xenite, ~barracks
 	Voiced:
 		VoiceSet: RangerVoice
@@ -1528,7 +1528,7 @@ PowerSpiker:
 	Buildable:
 		Description: This unit can fully shut down enemy powered buildings\nif you can get him next to an enemy power plant.
 		BuildPaletteOrder: 60
-		BuildDuration: 30
+		BuildDuration: 84
 		Prerequisites: ~hq.xenite, ~barracks
 	Voiced:
 		VoiceSet: PowerSpikerVoice
@@ -1554,7 +1554,7 @@ Grendel:
 	Buildable:
 		Description: The Grendel has a ranged attack that's effective\nagainst basically everything and can outrange basic\nturrets. Only downside is that it can go feral on\nyou if it goes outside the range of a controller.\nReplaces Tank Hunters.
 		BuildPaletteOrder: 70
-		BuildDuration: 30
+		BuildDuration: 33
 		Prerequisites: ~hq.xenite, ~barracks
 	Selectable:
 		Bounds: 36,36,0,0
@@ -1586,7 +1586,7 @@ GrendelRider:
 	Buildable:
 		Description: Essentially a Grendel with a Ranger on top. Is a\ncontroller, so if you want the easiest to use force\npossible just make a force of these rather than a\nmixed force of Grendels and Riders. Replaces Triple\nRail Hovertanks.
 		BuildPaletteOrder: 80
-		BuildDuration: 30
+		BuildDuration: 51
 		Prerequisites: ~hq.xenite, ~barracks
 	Selectable:
 		Bounds: 36,36,0,0
@@ -1620,7 +1620,7 @@ Reaper:
 	Buildable:
 		Description: Your new heavy infantry, these guys lay a massive\nhurting on pretty much everything. They do bonus\ndamage to Xenites, basically making your Bions only\nworthwhile when you want some incidental air defense.\nReplaces Guardians.
 		BuildPaletteOrder: 20
-		BuildDuration: 30
+		BuildDuration: 13
 		Prerequisites: ~hq.shadowhand, ~barracks
 	Selectable:
 		Bounds: 36,36,0,-3
@@ -1702,7 +1702,7 @@ GeminiTank:
 		Description: Fairly straightforward hovering tank. What makes the\nGemini unique is the ability to morph into a fast\nmode where you deal less damage, have your health\nhalved, and move twice as fast. Replaces the Plasma\nTank.
 		Prerequisites: ~vehicles.shadowhand, hq, barracks
 		BuildPaletteOrder: 150
-		BuildDuration: 39
+		BuildDuration: 21
 	Voiced:
 		VoiceSet: GeminiTankVoice
 	Selectable:
@@ -1765,7 +1765,7 @@ Fury:
 		Description: Now this is a heavy hitter. At long ranges it uses\nits paired guns to do heavy damage on par with the\nTachyon tank. Anything that closes to point blank\nwill come under fire from its rapid fire Tachyon\nlaser. Plus, it's a walker. Replaces the Tachyon\nTank.
 		Prerequisites: ~vehicles.shadowhand, hq, barracks
 		BuildPaletteOrder: 150
-		BuildDuration: 39
+		BuildDuration: 48
 	Voiced:
 		VoiceSet: FuryVoice
 	Selectable:
@@ -1806,7 +1806,7 @@ EMPDevice:
 		Description: When detonated, shuts down either structures or\nmechanical units within the blast area.
 		Prerequisites: ~vehicles.shadowhand, hq, barracks
 		BuildPaletteOrder: 150
-		BuildDuration: 39
+		BuildDuration: 78
 	Voiced:
 		VoiceSet: EMPVoice
 	Valued:
@@ -1834,7 +1834,7 @@ RoadTerraformer:
 	#	Description: When detonated, transforms the terrain within the\nblast radius to Road.
 	#	Prerequisites: ~vehicles, hq, barracks
 	#	BuildPaletteOrder: 150
-	#	BuildDuration: 39
+	#	BuildDuration: 12
 	Voiced:
 		VoiceSet: TerraformerVoice
 	Selectable:
@@ -1864,7 +1864,7 @@ MarshTerraformer:
 	#	Description: When detonated, transforms the terrain within the\nblast radius to Marsh.
 	#	Prerequisites: ~vehicles, hq, barracks
 	#	BuildPaletteOrder: 150
-	#	BuildDuration: 39
+	#	BuildDuration: 12
 	Voiced:
 		VoiceSet: TerraformerVoice
 	Selectable:
@@ -1896,7 +1896,7 @@ Avenger:
 		Description: The Avenger is the heavy air unit designed for base\nbusting. It can only fire a single shot before having\nto reload but it has a fairly long range and does\na lot of damage.
 		Prerequisites: ~vehicles.xenite, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
-		BuildDuration: 45
+		BuildDuration: 66
 	Selectable:
 		Bounds: 28,28,0,0
 		DecorationBounds: 32,32,0,0
@@ -1934,7 +1934,7 @@ HadesBomber:
 		Description: This heavy bomber moves slower than the Cyclone but\nhas a powerful payload of missiles with a large area\nof effect and a high amount of damage. Replaces the\nSky Fortress.
 		Prerequisites: ~vehicles.shadowhand, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
-		BuildDuration: 45
+		BuildDuration: 66
 	Selectable:
 		Bounds: 28,28,0,-4
 		DecorationBounds: 32,32,0,-4

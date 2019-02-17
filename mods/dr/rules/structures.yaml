@@ -1024,8 +1024,12 @@ TrainingFacility.xenite:
 	-BuilderQueue@Building:
 	Tooltip:
 		Name: Training Facility
+	Valued:
+		Cost: 1900
 	Health:
 		HP: 750
+	RevealsShroud:
+		Range: 8c0
 	-WithIdleOverlay@REPEAT:
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
@@ -1052,9 +1056,9 @@ Matrix:
 	ProvidesPrerequisite@matrix:
 		Prerequisite: matrix
 	Valued:
-		Cost: 1800
+		Cost: 1000
 	Health:
-		HP: 1000
+		HP: 1400
 	RevealsShroud:
 		Range: 8c0
 	Power:

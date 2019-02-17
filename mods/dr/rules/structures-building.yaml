@@ -901,9 +901,12 @@ TrainingFacility.xenite.Constructing:
 	Buildable:
 		Queue: Building, AIBuilding
 		Prerequisites: ~rig.xenite, hq.xenite
+		BuildDuration: 57
 	SelfConstructing:
 		Steps: 20
 		Becomes: TrainingFacility.xenite
+	Valued:
+		Cost: 1900
 	Health:
 		HP: 750
 	WithIdleOverlay@LAYER1:
@@ -935,7 +938,7 @@ Matrix.Constructing:
 	Buildable:
 		Prerequisites: ~rig.shadowhand, hq.shadowhand
 		BuildPaletteOrder: 30
-		BuildDuration: 10
+		BuildDuration: 30
 	SelfConstructing:
 		Steps: 20
 		Becomes: Matrix
