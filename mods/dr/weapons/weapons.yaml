@@ -1116,3 +1116,8 @@ GeminiFull: # Gemini tank, full power.
 
 GoreHunterWeapon:
 	Inherits: TripleRailGun
+	ReloadDelay: 6
+	Range: 8c0
+
+
+

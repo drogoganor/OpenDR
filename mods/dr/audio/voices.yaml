@@ -1,5 +1,5 @@
 
-GenericHumanVoice:
+GenericHumanVoice: # Civilian
 	DefaultVariant: .wav
 	Voices:
 		Select: gvcivsl0,gvcivsl1,gvcivsl2
@@ -7,8 +7,8 @@ GenericHumanVoice:
 		Die: gvmaldc1,gvmaldc2
 		Burned: gvmaldc1,gvmaldc2
 		Zapped: gvmaldc1,gvmaldc2
-		
-GenericHumanFemaleVoice:
+
+GenericHumanFemaleVoice: # Sniper and scout
 	DefaultVariant: .wav
 	Voices:
 		Select: gvfg4sl0,gvfg4sl1,gvfg4sl2
@@ -16,14 +16,14 @@ GenericHumanFemaleVoice:
 		Die: gvfemdc0,gvfemdc1,gvfemdc2
 		Burned: gvfemdc3
 		Zapped: gvfemdc3
-		
-FreedomGuardVoice:
+
+FreedomGuardVoice: # Raider
 	Inherits: GenericHumanVoice
 	Voices:
 		Select: gvfg2sl0,gvfg2sl1,gvfg2sl2,gvfg2sl3
 		Action: gvfg2rl0,gvfg2rl1,gvfg2rl2,gvfg2rl4
 
-ImperiumVoice:
+ImperiumVoice: # Guardian
 	DefaultVariant: .wav
 	Voices:
 		Select: gvig1sl0,gvig1sl1,gvig1sl2,gvig1sl3,gvig1sl5
@@ -32,23 +32,26 @@ ImperiumVoice:
 		Burned: gxscmdc0
 		Zapped: gxscmdc0
 
-GenericVehicleVoice:
+GenericVehicleVoice: # Death explosion sounds for  vehicles
 	DefaultVariant: .wav
 	Voices:
 		Die: gxexpoc2
+		Burned: gxexpoc2
+		Zapped: gxexpoc2
 
-CivilianVoice:
-	Inherits: GenericHumanVoice
-	Voices:
-		Select: gvcivsl0,gvcivsl1,gvcivsl2
-		Action: gvcivrl0,gvcivrl1,gvcivrl2
+FreedomGuardVehicleVoice: # Generic Freedom Guard vehicle (Freighter, Spider Bike, Skirmish Tank)
+	Inherits: FreedomGuardVoice
+	Inherits@2: GenericVehicleVoice
+
+ImperiumVehicleVoice: # Generic Imperium vehicle (Scout Runner, Plasma Tank)
+	Inherits: ImperiumVoice
+	Inherits@2: GenericVehicleVoice
 
 ConstructionVoice:
-	Inherits: GenericHumanVoice
+	Inherits: FreedomGuardVehicleVoice
 	Voices:
 		Select: gvfg1sl0,gvfg1sl1,gvfg1sl2
 		Action: gvfg1rl0,gvfg1rl1,gvfg1rl2
-		Die: gxexpoc2
 
 RaiderVoice:
 	Inherits: FreedomGuardVoice
@@ -128,7 +131,7 @@ HellstormArtilleryVoice:
 		Burned: gvmaldc1,gvmaldc2
 		Zapped: gvmaldc1,gvmaldc2
 
-AirUnitVoice:
+AirUnitVoice: # Sky Bike and Outrider
 	Inherits: GenericVehicleVoice
 	Voices:
 		Select: gvfg3sl0,gvfg3sl1,gvfg3sl2,gvfg3sl3
@@ -146,20 +149,20 @@ ImperiumRigVoice:
 		Select: gvicnsl0,gvicnsl1,gvicnsl2
 		Action: gvicnrl0,gvicnrl1,gvicnrl2
 
-ImperiumBionVoice:
+BionVoice:
 	Inherits: ImperiumVoice
 	Voices:
 		Select: gxbonsc0,gxbonsc1
 		Action: gxbonrc0,gxbonrc1
 
 CycloneVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericVehicleVoice
 	Voices:
 		Select: gvcycsl0,gvcycsl1,gvcycsl2
 		Action: gvcycrl0,gvcycrl1,gvcycrl2,gvcycrl3
 
 SkyFortressVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericVehicleVoice
 	Voices:
 		Select: gvskyal3,gvskyal4,gvskysl0,gvskysl2
 		Action: gvskyrl0,gvskyrl1,gvskyrl2,gvskyrl3
@@ -171,7 +174,7 @@ ExterminatorVoice:
 		Action: gvextrl0,gvextrl1,gvextrl2
 
 HostageTakerVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericVehicleVoice
 	Voices:
 		Select: gvhosal0,gvhossl0,gvhossl1
 		Action: gvhosrl0,gvhosrl2
@@ -183,7 +186,7 @@ SuicideZombieVoice:
 		Action: gvszmrl0
 
 TachionTankVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericVehicleVoice
 	Voices:
 		Select: gvtctal2,gvtctsl0,gvtctsl1,gvtctsl2
 		Action: gvtctrl0,gvtctrl2,gvtctrl3
@@ -194,20 +197,20 @@ AmperVoice:
 		Select: gvampsl1,gvampsl2,gvampsl3
 		Action: gvampal0,gvamprl0,gvamprl2
 
-ExpansionHumanVoiceMaybe:
+ExpansionHumanVoiceMaybe: # What is this?
 	Inherits: ImperiumVoice
 	Voices:
-		Select: gvsabal0,gvsabal2
-		Action: gvsabal1,gvsabal3
+		Select: gvsabal2 # I love this job
+		Action: gvsabal0,gvsabal1,gvsabal3 # cover me, they won't miss this, no problem
 
 ReconDroneVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericVehicleVoice
 	Voices:
 		Select: gxrdrsc0,gxrdrsc1,gxrdrsc2
 		Action: gxrdrrc0,gxrdrrc1,gxrdrrc2
 
 ShredderVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericVehicleVoice
 	Voices:
 		Select: gxshrsc0,gxshrsc1,gxshrsc2
 		Action: gxshrrc0,gxshrrc1
@@ -226,6 +229,7 @@ JebRadecVoice:
 
 RowdyMaleCivilianVoice:
 	Inherits: GenericHumanVoice
+	-Voices:
 	Voices:
 		Select: 
 		Action: 
@@ -239,38 +243,36 @@ RangerVoice:
 		Action: gvranrl1, gvranrl2, gvranrl5, gvranrl6
 
 GantVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericHumanVoice
 	Voices:
 		Select: gxgansc1,gxgansc2,gxgansc4
 		Action: gxganrc2,gxganac0 # gxganrc1, sounds horrible
 
 GrendelVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericHumanVoice
 	Voices:
 		Select: gxgresc2, gxgresc3 # gxgresc1, sounds horrible
 		Action: gxgrerc1, gxgrerc2, gxgrerc3
 
 GrendelRiderVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericHumanVoice
 	Voices:
 		Select: gvgrrsl1, gvgrrsl2, gvgrrsl3, gvgrrsl4
 		Action: gvgrrrl1, gvgrrrl2, gvgrrrl3, gvgrrrl4
 
 PowerSpikerVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericHumanVoice
 	Voices:
 		Select: gvcirrl1, gvcirsl1, gvcirrl4, gvcirrl1
 		Action: gvcirrl2, gvcirsl2, gvcirrl3, gvcirrl5
 
 AvengerVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericVehicleVoice
 	Voices:
 		Select: gvaverl1, gvavesl3, gvavesl4, gvaverl5
 		Action: gvavesl1, gvavesl2, gvaverl3, gvavesl5
 
-
 # Shadowhand
-
 
 ReaperVoice:
 	Inherits: ImperiumVoice
@@ -279,25 +281,25 @@ ReaperVoice:
 		Action: gvrearl1,gvrearl2,gvrearl3,gvrearl4
 
 GeminiTankVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericVehicleVoice
 	Voices:
 		Select: gvgemsl1,gvgemsl2,gvgemsl3,gvgemsl5
 		Action: gvgemrl1,gvgemrl2,gvgemrl3,gvgemrl4
 
 FuryVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericVehicleVoice
 	Voices:
 		Select: gxfursc0,gxfursc1,gxfursc2
 		Action: gxfurrc0 #,gxfurrc1,gxfurrc2
 
 EMPVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericVehicleVoice
 	Voices:
 		Select: gxempsc0,gxempsc1,gxempsc2
 		Action: gxemprc0,gxemprc1,gxemprc2,gxempac0
 
 HadesBomberVoice:
-	Inherits: ImperiumVoice
+	Inherits: GenericVehicleVoice
 	Voices:
 		Select: gvhadsl1, gvhadsl2, gvhadrl3, gvhadsl4
 		Action: gvhadrl1, gvhadrl6, gvhadsl3, gvhadrl8

@@ -257,6 +257,7 @@ World:
 	ValidateOrder:
 	DebugPauseState:
 	ObjectivesPanel:
+		ExitDelay: 1650
 		PanelName: SKIRMISH_STATS
 	RadarPings:
 	LoadWidgetAtGameStart:

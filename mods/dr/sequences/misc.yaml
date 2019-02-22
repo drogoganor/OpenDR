@@ -247,11 +247,11 @@ humansplat:
 		Start: 0
 		Length: 15
 		Tick: 100
-	die1: splata
+	diesoft: splata
 		Start: 0
 		Length: 15
 		Tick: 100
-	die2: splatc
+	diehard: splatc
 		Start: 0
 		Length: 13
 		Tick: 100
@@ -262,11 +262,11 @@ aliensplat:
 		Start: 0
 		Length: 15
 		Tick: 100
-	die1: splatb
+	diesoft: splatb
 		Start: 0
 		Length: 15
 		Tick: 100
-	die2: splatd
+	diehard: splatd
 		Start: 0
 		Length: 12
 		Tick: 100

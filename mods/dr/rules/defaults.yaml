@@ -46,20 +46,22 @@
 		StandSequences: stand,stand2
 	WithDeathAnimation:
 		DeathSequence: die
+		CrushedSequence: diehard
+		FallbackSequence: die
 		DeathTypes:
-			DefaultDeath: 1
-			BulletDeath: 1
-			SmallExplosionDeath: 1
-			ExplosionDeath: 2
-			FireDeath: 2
-			ElectricityDeath: 2
-		CrushedSequence: die
+			DefaultDeath: soft
+			BulletDeath: soft
+			SmallExplosionDeath: soft
+			ExplosionDeath: hard
+			FireDeath: hard
+			ElectricityDeath: hard
 	AttackMove:
 	Passenger:
 		CargoType: Infantry
 	HiddenUnderFog:
 	AttackFrontal:
 	Crushable:
+		WarnProbability: 0
 	Guard:
 	Guardable:
 	DeathSounds@NORMAL:
@@ -114,6 +116,7 @@
 	ProximityCaptor:
 		Types: Infantry
 	Crushable:
+		WarnProbability: 0
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	DetectCloaked:

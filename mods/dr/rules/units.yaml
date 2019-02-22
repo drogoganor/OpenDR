@@ -224,7 +224,7 @@ Saboteur:
 	Selectable:
 		Class: E6
 	Voiced:
-		VoiceSet: MechanicVoice
+		VoiceSet: ExpansionHumanVoiceMaybe
 	Valued:
 		Cost: 800
 	Health:
@@ -366,7 +366,7 @@ Bion:
 	Selectable:
 		Class: E2
 	Voiced:
-		VoiceSet: ImperiumBionVoice
+		VoiceSet: BionVoice
 	Valued:
 		Cost: 350
 	Health:
