@@ -93,7 +93,7 @@ explosion:
 		BlendMode: Multiplicative
 	eoomktr0: eoomktr0 # small blue lightning ball
 		BlendMode: Multiplicative
-	eothnpr0: eothnpr0
+	eothnpr0: eothnpr0 # Projectile, origins uncertain
 		BlendMode: Multiplicative
 	eovapex0: eovapex0
 		BlendMode: Multiplicative
@@ -166,561 +166,35 @@ explosion:
 	eovapor2: eovapor2 # Unused, vapor puff
 	eovapor3: eovapor3 # Unused, vapor puff
 	eovapor4: eovapor4 # Unused, vapor puff
+	ecprj005: ecprj005 # Unused, tiny ricochet, named as projectile
+	eotcnex0: eotcnex0 # Unused, big explosion
+	eowcost2: eowcost2 # Unused, electrical distortion
 
-# Projectiles
+# eo Projectiles
 
 eoambex1: # Unused, dual red bolt, named explosion nonetheless (ex)
 	idle:
 		Facings: 24
 
-
-# Animated dual red bolt
-eolaspr0:
+eochfpr0: # dual rockets 2
 	idle:
 		Start: 0
 		Facings: 24
 		Length: 3
 		Tick: 40
 
-# Non-Animated dual red bolt
-eolaspr1:
-	idle:
-		Start: 0
-		Facings: 24
-
-# Small red bolt (laser rifle)
-eolaspr2:
+eofarpr0: # big honkin rocket
 	idle:
 		Start: 0
 		Facings: 24
 		Length: 3
 		Tick: 40
 
-# Large red bolt
-eolaspr3:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 3
-		Tick: 40
-
-# Non-Animated dual red bolt, stubby
-eolaspr4:
-	idle:
-		Start: 0
-		Facings: 24
-
-# Small white bolt 
-eorgnpr0:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 3 # Bugged - crashes if shooting north north east
-		Tick: 40
-	
-# Medium white bolt (Sniper weapon)
-eorgnpr1:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 4 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# Triple white bolt
-eorgnpr2:
-	idle:
-		Start: 0
-		Facings: 24
-
-# Double small white bolt
-eorgnpr3:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 3 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# Tiny white bolt
-eorgnpr4:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 3 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# Large white bolt (Merc weapon)
-eorgnpr5:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 4 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# MAD projectile
-eomadpr0:
-	idle:
-		Start: 0
-		Facings: 16
-		Length: 4
-		Tick: 40
-
-# missile
-eomispr0:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 3
-		Tick: 40
-
-# missile, dual
-eomispr1:
-	idle:
-		Start: 0
-		Facings: 16
-		Length: 3 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# missile, large grey
-eomispr2:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 3 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# missile, medium turqoise
-eomispr3:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 3 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# missile, stumpy
-eomispr4:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 3 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# NCN projectile, blue fireball. Cyclone?
-eoncnpr0:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 4 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# NCN projectile, blue spark
-eoncnpr1:
-	idle:
-		Start: 0
-		Facings: 1
-		Length: 6 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# orb projectile?
-eoorbpr0:
-	idle:
-		Start: 0
-		Facings: 16
-		Length: 4 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# small green booger with wiggly tail
-eoplspr0:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 4 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# medium green booger with wiggly tail
-eoplspr1:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 4 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# large green booger with wiggly tail
-eoplspr2:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 4 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# freighter projectile? small green-eyed probe
-eorfgpr0:
-	idle:
-		Start: 0
-		Facings: 24
-
-# dual rockets 2
-eochfpr0:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 3
-		Tick: 40
-
-# big honkin rocket
-eofarpr0:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 3
-		Tick: 40
-
-# cool fireball
-eoiarpr0:
+eoiarpr0: # cool fireball
 	idle:
 		Start: 0
 		Facings: 24
 		Length: 5
-		Tick: 40
-
-# generic red greenish orb
-ecprj000:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 3
-		Tick: 40
-
-# cool white blue laser bolt
-ecprj001:
-	idle:
-		Start: 0
-		Facings: 24
-
-# small purple bolt
-ecprj003:
-	idle:
-		Start: 0
-		Facings: 24
-
-# blue teardrop bolt
-ecprj004:
-	idle:
-		Start: 0
-		Facings: 24
-
-# explosion effect: bullet ricochet, marked as projectile for some reason. Flak?
-ecprj005:
-	idle:
-		Start: 0
-		Facings: 1
-		Length: 6
-		Tick: 40
-
-# large purple bolt
-ecprj006:
-	idle:
-		Start: 0
-		Facings: 24
-
-# arrow
-ecprj007:
-	idle:
-		Start: 24 # hacked
-		Facings: 24
-		#Length: 3
-		#Tick: 40
-
-# chicken nugget
-ecprjsp0:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 5 # Bugged - crashes if shooting north north east
-		Tick: 40
-
-# sparkly electric explosion that's not really a projectile
-ecprjsp1:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 8
-		Tick: 40
-
-# smaller greenish electric explosion that's not really a projectile
-ecprjsp2:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 8
-		Tick: 40
-
-# small blue bolt
-ecprjsp3:
-	idle:
-		Start: 0
-		Facings: 24
-		Length: 6
-		Tick: 40
-
-# big widely spaced dual bolts
-ecprjsp5:
-	idle:
-		Start: 0
-		Facings: 24
-
-# Explosions
-
-# Red laser bolt 1
-eolasex0:
-	idle:
-		Start: 0
-		Length: 7
-		Tick: 8
-
-# Red explosion cloud 2
-eolasex1:
-	idle:
-		Start: 0
-		Length: 16
-		Tick: 8
-
-# Merc weapon explosion
-eochfex3:
-	idle:
-		Start: 0
-		Length: 15
-		Tick: 20
-
-# Explosion 1
-eosktex0:
-	idle:
-		Start: 0
-		Length: 15
-		Tick: 20
-
-# Electric orb
-eowcost2:
-	idle:
-		Start: 0
-		Length: 7
-		Tick: 20
-
-# Electric ground ring
-eoskyex0:
-	idle:
-		Start: 0
-		Length: 10
-		Tick: 20
-
-# Same as above, eoskyex0 Sky fortress
-eoskypr0:
-	idle:
-		Start: 0
-		Length: 10
-		Tick: 20
-
-# Flames 1
-eosmlfl0:
-	idle:
-		Start: 0
-		Length: 8
-		Tick: 70
-		ZOffset: 8192
-
-# Flames 2
-eosmlfl1:
-	idle:
-		Start: 0
-		Length: 8
-		Tick: 70
-		ZOffset: 8192
-
-# Flames 3
-eosmlfl2:
-	idle:
-		Start: 0
-		Length: 8
-		Tick: 70
-		ZOffset: 8192
-
-# Flames 4
-eosmlfl3:
-	idle:
-		Start: 0
-		Length: 8
-		Tick: 70
-		ZOffset: 8192
-
-# Flames 5
-eosmlfl4:
-	idle:
-		Start: 0
-		Length: 8
-		Tick: 70
-		ZOffset: 8192
-
-# Smoke 1
-eosmoke1:
-	idle:
-		Start: 0
-		Length: 11
-		Tick: 140
-		ZOffset: 8192
-
-# Smoke 2
-eosmoke2:
-	idle:
-		Start: 0
-		Length: 11
-		Tick: 140
-		ZOffset: 8192
-
-# Smoke 3
-eosmoke3:
-	idle:
-		Start: 0
-		Length: 11
-		Tick: 140
-		ZOffset: 8192
-
-# Smoke 4
-eosmoke4:
-	idle:
-		Start: 0
-		Length: 11
-		Tick: 140
-		ZOffset: 8192
-
-# Smoke 5
-eosmoke5:
-	idle:
-		Start: 0
-		Length: 4 # Should be 6 but this is rectangular
-		Tick: 240
-		ZOffset: 8192
-
-# Smoke puff 1
-eosmopf0:
-	idle:
-		Start: 0
-		Length: 11 # Should be 13 but this is rectangular
-		Tick: 240
-		ZOffset: 8192
-
-# Smoke puff 2
-eosmopf1:
-	idle:
-		Start: 0
-		Length: 10 # Should be 13 but this is rectangular
-		Tick: 240
-		ZOffset: 8192
-
-# eosmopf2 to eosmopf5 are repeats of Flames
-
-# Smoke puff 3
-eosmopf6:
-	idle:
-		Start: 0
-		Length: 10 # Should be 13 but this is rectangular
-		Tick: 240
-		ZOffset: 8192
-
-# Smoke puff 4
-eosmopf7:
-	idle:
-		Start: 0
-		Length: 10 # Should be 13 but this is rectangular
-		Tick: 240
-		ZOffset: 8192
-
-# Smoke puff 5
-eosmopf8:
-	idle:
-		Start: 0
-		Length: 10 # Should be 13 but this is rectangular
-		Tick: 240
-		ZOffset: 8192
-
-# Smoke puff 6
-eosmopf9:
-	idle:
-		Start: 0
-		Length: 10 # Should be 13 but this is rectangular
-		Tick: 240
-		ZOffset: 8192
-
-# Smoke move 0
-eosmosm0:
-	idle:
-		Start: 0
-		Length: 15 # Should be 15 but this is rectangular
-		Tick: 240
-		ZOffset: 8192
-
-# Smoke move 1
-eosmosm1:
-	idle:
-		Start: 0
-		Length: 16 # Should be 16 but this is rectangular
-		Tick: 240
-		ZOffset: 8192
-
-# Smoke move 2
-eosmosm2:
-	idle:
-		Start: 0
-		Length: 20 # Should be 22 but this is rectangular
-		Tick: 240
-		ZOffset: 8192
-
-# Tachion explosion?
-eotacex0:
-	idle:
-		Start: 0
-		Length: 17 # Should be 17 but this is rectangular
-		Tick: 20
-
-# Tachion bolt?
-eotacpr0:
-	idle:
-		Start: 0
-		Length: 6
-		Tick: 20
-
-# TCN explosion?
-eotcnex0:
-	idle:
-		Start: 0
-		Length: 17 # Should be 17 but this is rectangular
-		Tick: 20
-
-# THN explosion?
-eothnex0:
-	idle:
-		Start: 0
-		Length: 31 # Should be 31 but this is rectangular
-		Tick: 20
-
-# THN bolt?
-eothnpr0:
-	idle:
-		Start: 0
-		Length: 7
-		Tick: 20
-
-# Expansion
-
-eolgtpr2: # Gemini tank
-	idle:
-		Start: 0
-		Length: 1
-		Facings: 24
-
-eoifury1: # Fury
-	idle:
-		Start: 0
-		Length: 4
-		Facings: 16
 		Tick: 40
 
 eoiarpr1: # Hades
@@ -729,3 +203,413 @@ eoiarpr1: # Hades
 		Length: 3
 		Facings: 24
 		Tick: 40
+
+eoifury1: # Fury
+	idle:
+		Start: 0
+		Length: 4
+		Facings: 16
+		Tick: 40
+
+eolaspr0: # Animated dual red bolt
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+eolaspr1: # Non-Animated dual red bolt
+	idle:
+		Start: 0
+		Facings: 24
+
+eolaspr2: # Small red bolt (laser rifle)
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+eolaspr3: # Large red bolt
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+eolaspr4: # Non-Animated dual red bolt, stubby
+	idle:
+		Start: 0
+		Facings: 24
+
+eolgtpr1: # Unused gemini tank
+	idle:
+		Start: 0
+		Facings: 24
+
+eolgtpr2: # Gemini tank
+	idle:
+		Start: 0
+		Length: 1
+		Facings: 24
+
+eomadpr0: # MAD projectile
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 40
+
+eomispr0: # missile
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+eomispr1: # missile, dual
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+
+eomispr2: # missile, large grey
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+eomispr3: # missile, medium turqoise
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+eomispr4: # missile, stumpy
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+eoncnpr0: # NCN projectile, blue fireball. Cyclone?
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 4
+		Tick: 40
+
+eoncnpr1: # NCN projectile, blue spark
+	idle:
+		Start: 0
+		Facings: 1
+		Length: 6
+		Tick: 40
+
+eoorbpr0: # orb projectile?
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 4
+		Tick: 40
+
+eoplspr0: # small green booger with wiggly tail
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 4
+		Tick: 40
+
+eoplspr1: # medium green booger with wiggly tail
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 4
+		Tick: 40
+
+eoplspr2: # large green booger with wiggly tail
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 4
+		Tick: 40
+
+eorfgpr0: # small green-eyed probe
+	idle:
+		Start: 0
+		Facings: 24
+
+eorgnpr0: # Small white bolt 
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+eorgnpr1: # Medium white bolt (Sniper weapon)
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 4
+		Tick: 40
+
+eorgnpr2: # Triple white bolt
+	idle:
+		Start: 0
+		Facings: 24
+
+eorgnpr3: # Double small white bolt
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+eorgnpr4: # Tiny white bolt
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+eorgnpr5: # Large white bolt (Merc weapon)
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 4
+		Tick: 40
+
+eoskypr0: # sky fortress
+	idle:
+		Start: 0
+		Length: 10
+		Tick: 20
+
+eotacpr0: # Tachion bolt?
+	idle:
+		Start: 0
+		Length: 6
+		Tick: 20
+
+eothnpr0: # Tank Hunter, Grendel
+	idle:
+		Start: 0
+		Length: 7
+		Tick: 20
+
+# ec Projectiles
+
+ecprj000: # generic red greenish orb
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 3
+		Tick: 40
+
+ecprj001: # cool white blue laser bolt
+	idle:
+		Start: 0
+		Facings: 24
+
+ecprj003: # small purple bolt
+	idle:
+		Start: 0
+		Facings: 24
+
+ecprj004: # blue teardrop bolt
+	idle:
+		Start: 0
+		Facings: 24
+
+ecprj005: # explosion effect: bullet ricochet, marked as projectile for some reason. Flak?
+	idle:
+		Start: 0
+		Facings: 1
+		Length: 6
+		Tick: 40
+
+ecprj006: # large purple bolt
+	idle:
+		Start: 0
+		Facings: 24
+
+ecprj007: # arrow
+	idle:
+		Start: 24 # hacked
+		Facings: 24
+		#Length: 3
+		#Tick: 40
+
+ecprjsp0: # chicken nugget
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 5
+		Tick: 40
+
+ecprjsp1: # sparkly electric explosion that's not really a projectile
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 8
+		Tick: 40
+
+ecprjsp2: # smaller greenish electric explosion that's not really a projectile
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 8
+		Tick: 40
+
+ecprjsp3: # small blue bolt
+	idle:
+		Start: 0
+		Facings: 24
+		Length: 6
+		Tick: 40
+
+ecprjsp5: # big widely spaced dual bolts
+	idle:
+		Start: 0
+		Facings: 24
+
+# Flames and Smoke
+
+eosmlfl0: # Flames 1
+	idle:
+		Start: 0
+		Length: 8
+		Tick: 70
+		ZOffset: 8192
+
+eosmlfl1: # Flames 2
+	idle:
+		Start: 0
+		Length: 8
+		Tick: 70
+		ZOffset: 8192
+
+eosmlfl2: # Flames 3
+	idle:
+		Start: 0
+		Length: 8
+		Tick: 70
+		ZOffset: 8192
+
+eosmlfl3: # Flames 4
+	idle:
+		Start: 0
+		Length: 8
+		Tick: 70
+		ZOffset: 8192
+
+eosmlfl4: # Flames 5
+	idle:
+		Start: 0
+		Length: 8
+		Tick: 70
+		ZOffset: 8192
+
+eosmoke1: # Smoke 1
+	idle:
+		Start: 0
+		Length: 11
+		Tick: 140
+		ZOffset: 8192
+
+eosmoke2: # Smoke 2
+	idle:
+		Start: 0
+		Length: 11
+		Tick: 140
+		ZOffset: 8192
+
+eosmoke3: # Smoke 3
+	idle:
+		Start: 0
+		Length: 11
+		Tick: 140
+		ZOffset: 8192
+
+eosmoke4: # Smoke 4
+	idle:
+		Start: 0
+		Length: 11
+		Tick: 140
+		ZOffset: 8192
+
+eosmoke5: # Smoke 5
+	idle:
+		Start: 0
+		Length: 4 # Should be 6 but this is rectangular
+		Tick: 240
+		ZOffset: 8192
+
+eosmopf0: # Smoke puff 1
+	idle:
+		Start: 0
+		Length: 11 # Should be 13 but this is rectangular
+		Tick: 240
+		ZOffset: 8192
+
+eosmopf1: # Smoke puff 2
+	idle:
+		Start: 0
+		Length: 10 # Should be 13 but this is rectangular
+		Tick: 240
+		ZOffset: 8192
+
+# eosmopf2 to eosmopf5 are repeats of Flames
+
+eosmopf6: # Smoke puff 3
+	idle:
+		Start: 0
+		Length: 10 # Should be 13 but this is rectangular
+		Tick: 240
+		ZOffset: 8192
+
+eosmopf7: # Smoke puff 4
+	idle:
+		Start: 0
+		Length: 10 # Should be 13 but this is rectangular
+		Tick: 240
+		ZOffset: 8192
+
+eosmopf8: # Smoke puff 5
+	idle:
+		Start: 0
+		Length: 10 # Should be 13 but this is rectangular
+		Tick: 240
+		ZOffset: 8192
+
+eosmopf9: # Smoke puff 6
+	idle:
+		Start: 0
+		Length: 10 # Should be 13 but this is rectangular
+		Tick: 240
+		ZOffset: 8192
+
+eosmosm0: # Smoke move 0
+	idle:
+		Start: 0
+		Length: 15 # Should be 15 but this is rectangular
+		Tick: 240
+		ZOffset: 8192
+
+eosmosm1: # Smoke move 1
+	idle:
+		Start: 0
+		Length: 16 # Should be 16 but this is rectangular
+		Tick: 240
+		ZOffset: 8192
+
+eosmosm2: # Smoke move 2
+	idle:
+		Start: 0
+		Length: 20 # Should be 22 but this is rectangular
+		Tick: 240
+		ZOffset: 8192
+
