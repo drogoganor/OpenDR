@@ -3,45 +3,26 @@ overlay:
 	Defaults:
 		AddExtension: False
 	build-valid-barren: overlay.png
-		Start: 0
 	build-valid-aust: overlay.png
-		Start: 0
 	build-valid-alien: overlay.png
-		Start: 0
 	build-valid-asteroid: overlay.png
-		Start: 0
 	build-valid-auralien: overlay.png
-		Start: 0
 	build-valid-volcanic: overlay.png
-		Start: 0
 	build-valid-snow: overlay.png
-		Start: 0
 	build-valid-jungle: overlay.png
-		Start: 0
 	build-valid-calypso: overlay.png
-		Start: 0
 	build-invalid: overlay.png
 		Start: 1
 	target-select: overlay.png
-		Start: 0
 	target-valid-barren: overlay.png
-		Start: 0
 	target-valid-aust: overlay.png
-		Start: 0
 	target-valid-alien: overlay.png
-		Start: 0
 	target-valid-asteroid: overlay.png
-		Start: 0
 	target-valid-auralien: overlay.png
-		Start: 0
 	target-valid-volcanic: overlay.png
-		Start: 0
 	target-valid-snow: overlay.png
-		Start: 0
 	target-valid-jungle: overlay.png
-		Start: 0
 	target-valid-calypso: overlay.png
-		Start: 0
 	target-invalid: overlay.png
 		Start: 1
 
@@ -53,14 +34,11 @@ editor-overlay:
 	Defaults:
 		AddExtension: False
 	copy: overlay.png
-		Start: 0
 	paste: overlay.png
-		Start: 0
 
 shroud:
 	shroud: shadow.shp
 		AddExtension: False
-		Length: *
 
 resources:
 	water1: ncwel1l0
@@ -71,123 +49,30 @@ resources:
 mpspawn:
 	idle: mpspawn.png
 		AddExtension: False
-		Length: *
 
 waypoint:
 	idle: waypoint.png
 		AddExtension: False
-		Length: *
 
 clock:
 	idle: clock.png
 		AddExtension: False
-		Length: *
 
 moveflsh:
 	idle: cursortarget.png
 		AddExtension: False
-		Length: *
 
 beacon:
 	Defaults:
 		AddExtension: False
 		ZOffset: 2535
 	arrow: mpspawn.png
-		Length: *
 	circles: mpspawn.png
-		Length: *
 	atomicon: mpspawn.png
-		Length: *
 	pbmbicon: mpspawn.png
-		Length: *
 	camicon: mpspawn.png
-		Length: *
 	pinficon: mpspawn.png
-		Length: *
 	clock: mpspawn.png
-		Length: *
-
-explosion:
-	Defaults:
-		Length: *
-		ZOffset: 2047
-		BlendMode: Additive
-	eolasex0: eolasex0
-	eolasex1: eolasex1
-		Offset: 13, -10
-	eolasex2: eolasex2
-	eochfex3: eochfex3
-	eorgnex2: eorgnex2 # rail gun (merc)
-	eorgnex1: eorgnex1 # double rail gun (spider bike), sniper
-	eorgnex0: eorgnex0 # triple rail gun (hover tank)
-	eosktex0: eosktex0 # skirmish tank
-	eoblatr0: eoblatr0 # skirmish tank 2
-		BlendMode: Additive
-	eoblatr1: eoblatr1 # skirmish tank 3
-	eothnex0: eothnex0 # tank hunter
-		BlendMode: DoubleMultiplicative
-	eofarex0: eofarex0 # hellstorm
-	eoiarex2: eoiarex2 # scarab explosion
-	eoiarex0: eoiarex0 # scarab explosion 2
-	eoskyex0: eoskyex0 # sky fortress explosion - seems to be the exact same as the projectile
-	eorfgex1: eorfgex1 # sky fortress explosion 2
-	eoncnex0: eoncnex0 # cyclone explosion
-	eoplsex0: eoplsex0 # bion
-	eoplsex1: eoplsex1 # exterminator?
-	eoplsex2: eoplsex2 # plasma tank
-	eoplsex3: eoplsex3 # plasma tank
-	eoplsex4: eoplsex4 # fortress cannon
-	ecexpsp1: ecexpsp1 # martyr
-	eoblatr0: eoblatr0 # mobile air defense MAD
-	eotacex0: eotacex0 # tachion tank
-	eorfgex0: eorfgex0 # exterminator
-	eosmosm0: eosmosm0 # sky bike
-	eosmosm2: eosmosm2 # sky bike 2
-	eooutex0: eooutex0 # outrider
-	eoexpsp1: eoexpsp1 # nuke
-	eopamex0: eopamex0 # amper explosion
-	eochfex0: eochfex0 # flak jack 1
-	eochfex1: eochfex1 # flak jack 1
-	eochfex2: eochfex2 # flak jack 1
-	ecexpmd0: ecexpmd0 # generic explosion 1
-	ecexpmd1: ecexpmd1 # generic explosion 2
-	ecexpsm1: ecexpsm1 # generic explosion
-		BlendMode: DoubleMultiplicative
-	eochkex0: eochkex0 # 
-		BlendMode: Additive
-	eochfex1: eochfex1 # 
-		BlendMode: Additive
-	eoblalg1: eoblalg1
-		BlendMode: None
-	eoblalg1: eoblalg1
-		BlendMode: None
-	eoblamd1: eoblamd1
-		BlendMode: Additive
-	eosmlfl3: eosmlfl3
-		BlendMode: Additive
-	eochkex0alt: eochkex0
-		BlendMode: Additive
-	eothnex0alt: eothnex0
-		BlendMode: Multiplicative
-	eowcost1: eowcost1
-		BlendMode: Multiplicative
-	eoomktr0: eoomktr0
-		BlendMode: Multiplicative
-	eothnpr0: eothnpr0
-		BlendMode: Multiplicative
-	eovapex0: eovapex0
-		BlendMode: Multiplicative
-	eolasex5: eolasex5
-		BlendMode: None
-	eoiarex1: eoiarex1
-		BlendMode: Subtractive
-	eoblatr1alt: eoblatr1 # skirmish tank 3
-		BlendMode: Subtractive
-	ecfirsm2: ecfirsm2
-		BlendMode: Subtractive
-	eifurex0: eifurex0 # Fury
-	eoiarex5: eoiarex5 # Hades
-	eoiarex1hades: eoiarex1 # Hades 2
 
 allyrepair:
 	repair: repricon
@@ -241,32 +126,3 @@ crate-effects:
 	levelup: eoncnpr1
 		Tick: 50
 
-# Generic human death
-humansplat:
-	die: splata
-		Start: 0
-		Length: 15
-		Tick: 100
-	diesoft: splata
-		Start: 0
-		Length: 15
-		Tick: 100
-	diehard: splatc
-		Start: 0
-		Length: 13
-		Tick: 100
-
-# Generic alien death
-aliensplat:
-	die: splatb
-		Start: 0
-		Length: 15
-		Tick: 100
-	diesoft: splatb
-		Start: 0
-		Length: 15
-		Tick: 100
-	diehard: splatd
-		Start: 0
-		Length: 12
-		Tick: 100

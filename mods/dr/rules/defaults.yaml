@@ -137,7 +137,7 @@
 	MapEditorData:
 		Categories: Civilian
 	Voiced:
-		VoiceSet: CivilianVoice
+		VoiceSet: GenericHumanVoice
 
 # Vehicles
 

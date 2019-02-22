@@ -3,13 +3,9 @@ aotre000:
 	Defaults:
 		Offset: -4,-19
 	idle: tileset|aotre000
-		Length: 1
 	run: tileset|aotre000 # for sniper and scout disguise
-		Length: 1
-	attack: tileset|aotre000 # for sniper and scout disguise
-		Length: 1
-	stand: tileset|aotre000 # for sniper and scout disguise
-		Length: 1
+	attack: tileset|aotre000
+	stand: tileset|aotre000
 	shadow: tileset|aotre0sh
 		Offset: 21, 10
 
@@ -17,13 +13,9 @@ aotre001:
 	Defaults:
 		Offset: 0,-10
 	idle: tileset|aotre001
-		Length: 1
 	run: tileset|aotre001 # for sniper and scout disguise
-		Length: 1
-	attack: tileset|aotre001 # for sniper and scout disguise
-		Length: 1
-	stand: tileset|aotre001 # for sniper and scout disguise
-		Length: 1
+	attack: tileset|aotre001
+	stand: tileset|aotre001
 	shadow: tileset|aotre1sh
 		Offset: 15, 9
 
@@ -31,13 +23,9 @@ aotre002:
 	Defaults:
 		Offset: -1,-14
 	idle: tileset|aotre002
-		Length: 1
 	run: tileset|aotre002 # for sniper and scout disguise
-		Length: 1
-	attack: tileset|aotre002 # for sniper and scout disguise
-		Length: 1
-	stand: tileset|aotre002 # for sniper and scout disguise
-		Length: 1
+	attack: tileset|aotre002
+	stand: tileset|aotre002
 	shadow: tileset|aotre2sh
 		Offset: 19, 11
 
@@ -45,13 +33,9 @@ aotre003:
 	Defaults:
 		Offset: 3,-15
 	idle: tileset|aotre003
-		Length: 1
 	run: tileset|aotre003 # for sniper and scout disguise
-		Length: 1
-	attack: tileset|aotre003 # for sniper and scout disguise
-		Length: 1
-	stand: tileset|aotre003 # for sniper and scout disguise
-		Length: 1
+	attack: tileset|aotre003
+	stand: tileset|aotre003
 	shadow: tileset|aotre3sh
 		Offset: 23, 11
 
@@ -59,13 +43,9 @@ aotre004:
 	Defaults:
 		Offset: 1,-10
 	idle: tileset|aotre004
-		Length: 1
 	run: tileset|aotre004 # for sniper and scout disguise
-		Length: 1
-	attack: tileset|aotre004 # for sniper and scout disguise
-		Length: 1
-	stand: tileset|aotre004 # for sniper and scout disguise
-		Length: 1
+	attack: tileset|aotre004
+	stand: tileset|aotre004
 	shadow: tileset|aotre4sh
 		Offset: 10, 8
 
@@ -73,13 +53,9 @@ aotre005:
 	Defaults:
 		Offset: 2,-9
 	idle: tileset|aotre005
-		Length: 1
 	run: tileset|aotre005 # for sniper and scout disguise
-		Length: 1
-	attack: tileset|aotre005 # for sniper and scout disguise
-		Length: 1
-	stand: tileset|aotre005 # for sniper and scout disguise
-		Length: 1
+	attack: tileset|aotre005
+	stand: tileset|aotre005
 	shadow: tileset|aotre5sh
 		Offset: 13, 6
 
@@ -88,7 +64,6 @@ aopln000:
 	Defaults:
 		Offset: -2,-4
 	idle: tileset|aopln000
-		Length: 1
 	shadow: tileset|aopln0sh
 		Offset: -4, -3
 
@@ -96,7 +71,6 @@ aopln001:
 	Defaults:
 		Offset: 1,1
 	idle: tileset|aopln001
-		Length: 1
 	shadow: tileset|aopln1sh
 		Offset: 1, 1
 
@@ -104,7 +78,6 @@ aopln002:
 	Defaults:
 		Offset: 4,2
 	idle: tileset|aopln002
-		Length: 1
 	shadow: tileset|aopln2sh
 		Offset: 6, 7
 
@@ -113,7 +86,6 @@ aoroc000:
 	Defaults:
 		Offset: 0,0
 	idle: tileset|aoroc000
-		Length: 1
 	shadow: tileset|aoroc0sh
 		Offset: 5, 1
 
@@ -121,7 +93,6 @@ aoroc001:
 	Defaults:
 		Offset: 0,0
 	idle: tileset|aoroc001
-		Length: 1
 	shadow: tileset|aoroc1sh
 		Offset: 6, 3
 
@@ -129,7 +100,6 @@ aoroc002:
 	Defaults:
 		Offset: 0,0
 	idle: tileset|aoroc002
-		Length: 1
 	shadow: tileset|aoroc2sh
 		Offset: 8, 7
 
@@ -137,7 +107,6 @@ aoroc003:
 	Defaults:
 		Offset: 0,2
 	idle: tileset|aoroc003
-		Length: 1
 	shadow: tileset|aoroc3sh
 		Offset: 7, 20
 
@@ -145,7 +114,6 @@ aoroc004:
 	Defaults:
 		Offset: 2,2
 	idle: tileset|aoroc004
-		Length: 1
 	shadow: tileset|aoroc4sh
 		Offset: 10, 25
 
@@ -153,7 +121,6 @@ aoroc005:
 	Defaults:
 		Offset: 1,0
 	idle: tileset|aoroc005
-		Length: 1
 	shadow: tileset|aoroc5sh
 		Offset: 12, 35
 
@@ -162,7 +129,6 @@ aoclf000:
 	Defaults:
 		Offset: -3, -2
 	idle: tileset|aoclf000
-		Length: 1
 	shadow: tileset|aoclf0sh
 		Offset: 9, 11
 
@@ -170,56 +136,45 @@ aoclf001:
 	Defaults:
 		Offset: -3, -1
 	idle: tileset|aoclf001
-		Length: 1
 	shadow: tileset|aoclf1sh
 		Offset: 12, 23
 
 aoclf002:
 	Defaults:
 	idle: tileset|aoclf002
-		Length: 1
 	shadow: tileset|aoclf2sh
 		Offset: 12, 25
 
 aoclf003:
 	Defaults:
 	idle: tileset|aoclf003
-		Length: 1
 	shadow: tileset|aoclf3sh
 		Offset: 13, 23
 
 aoclf004:
 	Defaults:
 	idle: tileset|aoclf004
-		Length: 1
 	shadow: tileset|aoclf4sh
 		Offset: 11, 15
 
 aoclf005:
 	Defaults:
-		Offset: 0, 0
 	idle: tileset|aoclf005
-		Length: 1
 	shadow: tileset|aoclf5sh
 		Offset: 8, 25
 
 # Rubble
 aorub000:
-	Defaults:
 	idle:
-		Length: 1
 	shadow: aorub0sh
 		Offset: 0, 0
 
 aorub001:
-	Defaults:
 	idle:
-		Length: 1
 	shadow: aorub1sh
 		Offset: 0, 0
 
 aorub002:
-	Defaults:
 	idle:
 		Length: 1
 	shadow: aorub2sh
@@ -227,119 +182,97 @@ aorub002:
 
 # Scoring
 aomsc000:
-	Defaults:
 	idle:
 		Length: *
 
 aomsc001:
 	Defaults:
 	idle:
-		Length: *
 
 aomsc002:
 	Defaults:
 	idle:
-		Length: *
 
 # Crater
 aoctr000:
 	Defaults:
 	idle:
-		Length: *
 
 aoctr001:
 	Defaults:
 	idle:
-		Length: *
 
 aoctr002:
 	Defaults:
 	idle:
-		Length: *
 
 aoctr003:
 	Defaults:
 		Offset: 0,4
 	idle:
-		Length: *
 
 aoctr004:
 	Defaults:
 		Offset: 0,-2
 	idle:
-		Length: *
 
 aoctr005:
 	Defaults:
 		Offset: 0,-2
 	idle:
-		Length: *
 
 aoctr006:
 	Defaults:
 		Offset: 0,-2
 	idle:
-		Length: *
 
 aoctr007:
 	Defaults:
 		Offset: 0,-2
 	idle:
-		Length: *
 
 aoctr008:
 	Defaults:
 		Offset: 0,-2
 	idle:
-		Length: *
 
 aoctr009:
 	Defaults:
 		Offset: 0,-2
 	idle:
-		Length: *
 
 # Crashed space ship
 aospc000:
 	Defaults:
 	idle:
-		Length: *
 
 # Water rocks
 aowtr000:
 	Defaults:
 	idle:
-		Length: *
 
 aowtr001:
 	Defaults:
 	idle:
-		Length: *
 
 aowtr002:
 	Defaults:
 	idle:
-		Length: *
 
 # Wrecks
 aowrk000:
 	Defaults:
 	idle:
-		Length: *
 
 aowrk001:
 	Defaults:
 	idle:
-		Length: *
 
 aowrk002:
 	Defaults:
 	idle:
-		Length: *
 
 # contaminated water
 eowcocr0:
 	Defaults:
-		Offset: 0,0
 	idle:
-		Length: 1

@@ -33,12 +33,12 @@ uorcmst0:
 		Start: 0
 		Facings: 8
 		Length: 8
-		Tick: 100
+		Tick: 40
 	shoot:
 		Start: 64
 		Facings: 8
 		Length: 3
-		Tick: 100
+		Tick: 60
 	idle:
 		Start: 184
 		Facings: 8
@@ -46,12 +46,12 @@ uorcmst0:
 		Start: 88
 		Facings: 8
 		Length: 6
-		Tick: 100
+		Tick: 40
 	idle3:
 		Start: 136
 		Facings: 8
 		Length: 6
-		Tick: 100
+		Tick: 40
 	stand:
 		Start: 184
 		Facings: 8
@@ -64,11 +64,12 @@ uorcmst0:
 # Karoch
 uocspst0:
 	Inherits: humansplat
+	Defaults:
 	run:
 		Start: 0
 		Facings: 8
 		Length: 4
-		Tick: 100
+		Tick: 40
 	idle:
 		Start: 0
 		Facings: 8
@@ -81,43 +82,29 @@ uocspst0:
 		ZOffset: -8192
 	icon: uocspmn0
 
-
 # Dessicator transport
 uohtrst0:
+	Defaults:
+		Start: 0
+		Facings: 16
 	idle:
-		Start: 0
-		Facings: 16
 	stand:
-		Start: 0
-		Facings: 16
 	run:
-		Start: 0
-		Facings: 16
 	shoot:
-		Start: 0
-		Facings: 16
 	icon: uohtrmn0
+		Facings: 1
 
 # Civ Troop Transport
 uowtrst0:
+	Defaults:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
 	run:
-		Start: 0
-		Facings: 16
-		Length: 3
-		Tick: 100
 	shoot:
-		Start: 0
-		Facings: 16
-		Length: 3
-		Tick: 100
 	stand:
-		Start: 0
-		Facings: 16
-		Length: 3
-		Tick: 100
 	idle:
-		Start: 0
-		Facings: 16
-		Length: 3
-		Tick: 100
 	icon: uowtrmn0
+		Facings: 1
+		Length: 1
