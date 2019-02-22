@@ -39,6 +39,8 @@ editor-overlay:
 shroud:
 	shroud: shadow.shp
 		AddExtension: False
+		Length: *
+
 
 resources:
 	water1: ncwel1l0
@@ -49,23 +51,28 @@ resources:
 mpspawn:
 	idle: mpspawn.png
 		AddExtension: False
+		Length: *
 
 waypoint:
 	idle: waypoint.png
 		AddExtension: False
+		Length: *
 
 clock:
 	idle: clock.png
 		AddExtension: False
+		Length: *
 
 moveflsh:
 	idle: cursortarget.png
 		AddExtension: False
+		Length: *
 
 beacon:
 	Defaults:
 		AddExtension: False
 		ZOffset: 2535
+		Length: *
 	arrow: mpspawn.png
 	circles: mpspawn.png
 	atomicon: mpspawn.png

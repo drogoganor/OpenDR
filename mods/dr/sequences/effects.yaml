@@ -36,88 +36,54 @@ explosion:
 		Length: *
 		ZOffset: 2047
 		BlendMode: Additive
-	eolasex0: eolasex0
-	eolasex1: eolasex1
-		Offset: 13, -10
-	eolasex2: eolasex2
-	eorgnex2: eorgnex2 # rail gun (merc)
-	eorgnex1: eorgnex1 # double rail gun (spider bike), sniper
-	eorgnex0: eorgnex0 # triple rail gun (hover tank)
-	eosktex0: eosktex0 # skirmish tank
-	eoblatr0: eoblatr0 # skirmish tank 2
-		BlendMode: Additive
-	eoblatr1: eoblatr1 # skirmish tank 3
-	eothnex0: eothnex0 # tank hunter
-		BlendMode: DoubleMultiplicative
-	eofarex0: eofarex0 # hellstorm
-	eoiarex2: eoiarex2 # scarab explosion
-	eoiarex0: eoiarex0 # scarab explosion 2
-	eoskyex0: eoskyex0 # sky fortress explosion - seems to be the exact same as the projectile
-	eorfgex1: eorfgex1 # sky fortress explosion 2
-	eoncnex0: eoncnex0 # cyclone explosion
-	eoplsex0: eoplsex0 # bion
-	eoplsex1: eoplsex1 # exterminator?
-	eoplsex2: eoplsex2 # plasma tank
-	eoplsex3: eoplsex3 # plasma tank
-	eoplsex4: eoplsex4 # fortress cannon
-	ecexpsp1: ecexpsp1 # martyr
-	eoblatr0: eoblatr0 # mobile air defense MAD
-	eotacex0: eotacex0 # tachion tank
-	eorfgex0: eorfgex0 # exterminator
-	eosmosm0: eosmosm0 # sky bike
-	eosmosm2: eosmosm2 # sky bike 2
-	eooutex0: eooutex0 # outrider
-	eoexpsp1: eoexpsp1 # nuke
-	eopamex0: eopamex0 # amper explosion
-	eochfex0: eochfex0 # flak jack 1
-	eochfex1: eochfex1 # flak jack 1
-	eochfex2: eochfex2 # flak jack 1
-	eochfex3: eochfex3
+	ecexplg1: ecexplg1 # Unused, Big energy explosion
+	ecexplg2: ecexplg2 # Unused, Big normal explosion
 	ecexpmd0: ecexpmd0 # generic explosion 1
 	ecexpmd1: ecexpmd1 # generic explosion 2
+	ecexpsm0: ecexpsm0 # Unused, kind of dark orange explosion cloud
 	ecexpsm1: ecexpsm1 # generic explosion
 		BlendMode: DoubleMultiplicative
-	eochkex0: eochkex0 # 
-		BlendMode: Additive
-	eoblalg1: eoblalg1
-		BlendMode: None
-	eoblamd1: eoblamd1
-		BlendMode: Additive
-	eosmlfl3: eosmlfl3
-		BlendMode: Additive
-	eochkex0alt: eochkex0
-		BlendMode: Additive
-	eothnex0alt: eothnex0
-		BlendMode: Multiplicative
-	eowcost1: eowcost1
-		BlendMode: Multiplicative
-	eoomktr0: eoomktr0 # small blue lightning ball
-		BlendMode: Multiplicative
-	eothnpr0: eothnpr0 # Projectile, origins uncertain
-		BlendMode: Multiplicative
-	eovapex0: eovapex0
-		BlendMode: Multiplicative
-	eolasex5: eolasex5
-		BlendMode: None
-	eoiarex1: eoiarex1
+	ecexpsp0: ecexpsp0 # Unused, scattered flames
+	ecexpsp1: ecexpsp1 # martyr
+	ecexpsp2: ecexpsp2 # Unused, martyr, dark shadow
+	ecfirlg0: ecfirlg0 # Unused, fire large
+	ecfirsm0: ecfirsm0 # Unused, fire small
+	ecfirsm1: ecfirsm1 # Unused, fire small
+	ecfirsm2: ecfirsm2 # fire small
 		BlendMode: Subtractive
-	eoblatr1alt: eoblatr1 # skirmish tank 3
-		BlendMode: Subtractive
-	ecfirsm2: ecfirsm2
-		BlendMode: Subtractive
+	ecprj005: ecprj005 # Unused, tiny ricochet, named as projectile
+	ecsmolg0: ecsmolg0 # Unused, black smoke
+	ecsmolg1: ecsmolg1 # Unused, black smoke
+	ecsmolg2: ecsmolg2 # Unused, black smoke
+	ecsmolg3: ecsmolg3 # Unused, black smoke
+	ecsmolg4: ecsmolg4 # Unused, black smoke
+	ecsmolg5: ecsmolg5 # Unused, black smoke
+	ecsmosm0: ecsmosm0 # Unused, smoke puff, bad
+	ecsmosm1: ecsmosm1 # Unused, smoke puff, bad
+	efgebex0: efgebex0 # Unused, blue swirly
 	eifurex0: eifurex0 # Fury
-	eoiarex5: eoiarex5 # Hades
-	eoiarex1hades: eoiarex1 # Hades 2
-	# Start of full reorganize
 	eoampex0: eoampex0 # Unused, amper bolt explosion
 	eoblalg0: eoblalg0 # Unused, cool explosion !!!
+	eoblalg1: eoblalg1
+		BlendMode: None
 	eoblalg2: eoblalg2 # Unused, cool explosion
 	eoblamd0: eoblamd0 # Unused, cool explosion
+	eoblamd1: eoblamd1 # Explosion
+		BlendMode: Additive
+	eoblatr0: eoblatr0 # skirmish tank 2, mobile air defense MAD
+		BlendMode: Additive
+	eoblatr1: eoblatr1 # skirmish tank 3
 	eobpfsm0: eobpfsm0 # Unused, funny lookin mushroom cloud
 	eobpfsm1: eobpfsm1 # Unused, funny lookin mushroom cloud, clipped
 	eobpfsm2: eobpfsm2 # Unused, funny lookin mushroom cloud
 	eobpfsm3: eobpfsm3 # Unused, funny lookin mushroom cloud
 	eobpfsm4: eobpfsm4 # Unused, funny lookin mushroom cloud
+	eochfex0: eochfex0 # flak jack 1
+	eochfex1: eochfex1 # flak jack 1
+	eochfex2: eochfex2 # flak jack 1
+	eochfex3: eochfex3
+	eochkex0: eochkex0 # big explosion
+		BlendMode: Additive
 	eodeblg0: eodeblg0 # Unused, funny lookin debris scatter
 	eodeblg1: eodeblg1 # Unused, funny lookin debris scatter
 	eodeblg2: eodeblg2 # Unused, funny lookin debris scatter
@@ -135,15 +101,28 @@ explosion:
 	eodebsp8: eodebsp8 # Unused, ricochet or something
 	eodebsp9: eodebsp9 # Unused, ricochet or something
 	eodebspa: eodebspa # Unused, ricochet or something
+	eoexpsp1: eoexpsp1 # nuke
 	eoexpsp2: eoexpsp2 # Unused, nuke, harsh edge
-	eofarex1: eofarex1 # Unused, hellstorm 2
 	eofirlg0: eofirlg0 # Unused, old school flame gif
 	eofirmd0: eofirmd0 # Unused, med old school flame gif
 	eofirsm0: eofirsm0 # Unused, tiny old school flame gif
-	eoiarex4: eoiarex4 # Unused, ring of fire
+	eofarex0: eofarex0 # hellstorm
+	eofarex1: eofarex1 # Unused, hellstorm 2
+	eoiarex0: eoiarex0 # scarab explosion 2
+	eoiarex1: eoiarex1 # scarab explosion
+		BlendMode: Subtractive
+	eoiarex2: eoiarex2 # scarab explosion
+	eoiarex4: eoiarex4 # scarab explosion
+	eoiarex5: eoiarex5 # Hades
 	eoiempw0: eoiempw0 # Unused, teleport effect
+	eolasex0: eolasex0
+	eolasex1: eolasex1
+		Offset: 13, -10
+	eolasex2: eolasex2
 	eolasex3: eolasex3 # Unused, laser explosion
 	eolasex4: eolasex4 # Unused, laser explosion
+	eolasex5: eolasex5
+		BlendMode: None
 	eolasex6: eolasex6 # Unused, laser explosion
 	eolasex7: eolasex7 # Unused, laser explosion
 	eolasex8: eolasex8 # Unused, laser explosion
@@ -156,19 +135,66 @@ explosion:
 	eomedsm0: eomedsm0 # Unused, smoke
 	eomedsm1: eomedsm1 # Unused, smoke
 	eomedsm2: eomedsm2 # Unused, smoke
+	eoncnex0: eoncnex0 # cyclone explosion
+	eoncnpr1: eoncnpr1 # Small blue spark projectile that's good as an explosion too
 	eonukex0: eonukex0 # Unused, stumpy mushroom cloud
-	eosmopf2: eosmopf2 # Unused, repeat of flames named as smoke apparently
-	eosmopf3: eosmopf3 # Unused, repeat of flames named as smoke apparently
-	eosmopf4: eosmopf4 # Unused, repeat of flames named as smoke apparently
-	eosmopf5: eosmopf5 # Unused, repeat of flames named as smoke apparently
+	eoomktr0: eoomktr0 # small blue lightning ball
+		BlendMode: Multiplicative
+	eooutex0: eooutex0 # outrider
+	eopamex0: eopamex0 # amper explosion
+	eoplsex0: eoplsex0 # bion
+	eoplsex1: eoplsex1 # exterminator?
+	eoplsex2: eoplsex2 # plasma tank
+	eoplsex3: eoplsex3 # plasma tank
+	eoplsex4: eoplsex4 # fortress cannon
+	eorfgex0: eorfgex0 # exterminator
+	eorfgex1: eorfgex1 # sky fortress explosion 2
+	eorgnex0: eorgnex0 # triple rail gun (hover tank)
+	eorgnex1: eorgnex1 # double rail gun (spider bike), sniper
+	eorgnex2: eorgnex2 # rail gun (merc)
+	# Lots of fire and smoke
+	eosktex0: eosktex0 # skirmish tank
+	eoskyex0: eoskyex0 # sky fortress explosion - seems to be the exact same as the projectile
+	eosmlfl3: eosmlfl3
+		BlendMode: Additive
+	eosmopf0: eosmopf0 # smoke puff
+	eosmopf1: eosmopf1 # smoke puff
+	eosmopf2: eosmopf2 # Unused, repeat of flames named as smoke apparently, probably should be removed from explosions
+	eosmopf3: eosmopf3 # Unused, repeat of flames named as smoke apparently, probably should be removed from explosions
+	eosmopf4: eosmopf4 # Unused, repeat of flames named as smoke apparently, probably should be removed from explosions
+	eosmopf5: eosmopf5 # Unused, repeat of flames named as smoke apparently, probably should be removed from explosions
+	eosmopf6: eosmopf6 # smoke puff
+	eosmopf7: eosmopf7 # smoke puff
+	eosmopf8: eosmopf8 # smoke puff
+	eosmopf9: eosmopf9 # smoke puff
+	eosmosm0: eosmosm0 # sky bike
+	eosmosm1: eosmosm1 # sky bike
+	eosmosm2: eosmosm2 # sky bike 2
 	eosmosm3: eosmosm3 # Unused, smoke
+	eotacex0: eotacex0 # tachion tank
+	eotcnex0: eotcnex0 # Unused, big explosion
+	eothnex0: eothnex0 # tank hunter
+		BlendMode: DoubleMultiplicative
+	eothnpr0: eothnpr0 # tiny white electricy, named as projectile
+		BlendMode: Multiplicative
+	eovapex0: eovapex0
+		BlendMode: Multiplicative
 	eovapor1: eovapor1 # Unused, tiny vapor puff
 	eovapor2: eovapor2 # Unused, vapor puff
 	eovapor3: eovapor3 # Unused, vapor puff
 	eovapor4: eovapor4 # Unused, vapor puff
-	ecprj005: ecprj005 # Unused, tiny ricochet, named as projectile
-	eotcnex0: eotcnex0 # Unused, big explosion
-	eowcost2: eowcost2 # Unused, electrical distortion
+	eowcost1: eowcost1 # Unused, electrical distortion
+		BlendMode: Multiplicative
+	eowcost2: eowcost2 # Unused, electrical distortion repeat
+	eowcost3: eowcost3 # Unused, electrical distortion repeat
+	# Custom blends below
+	eoblatr1alt: eoblatr1 # skirmish tank 3
+		BlendMode: Subtractive
+	eochkex0alt: eochkex0
+		BlendMode: Additive
+	eoiarex1hades: eoiarex1 # Hades 2
+	eothnex0alt: eothnex0
+		BlendMode: Multiplicative
 
 # eo Projectiles
 
