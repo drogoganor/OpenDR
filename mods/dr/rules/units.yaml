@@ -1670,6 +1670,7 @@ RATmk2:
 		Range: 9c0
 	Mobile:
 		Speed: 216
+		RequiresCondition: !notmobile
 	Armor:
 		Type: TankPlating
 	Turreted:

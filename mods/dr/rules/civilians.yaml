@@ -96,6 +96,7 @@ DessicatorTransport:
 		Range: 9c0
 	Mobile:
 		Speed: 72
+		RequiresCondition: !notmobile
 	Armor:
 		Type: TankPlating
 	-Armament:
@@ -121,6 +122,7 @@ CivWheelTransporter:
 		Range: 9c0
 	Mobile:
 		Speed: 72
+		RequiresCondition: !notmobile
 	Armor:
 		Type: TankPlating
 	-Armament:

@@ -32,8 +32,6 @@
 	WithSpriteControlGroupDecoration:
 	Selectable:
 		Class: Humanoid
-		#Bounds: 26,30,-4,-2
-		#DecorationBounds: 19,22,-2,1
 		Bounds: 26,28,1,2
 		DecorationBounds: 18,22,0,0
 	Targetable:
@@ -65,13 +63,7 @@
 	Guard:
 	Guardable:
 	DeathSounds@NORMAL:
-		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath
-	DeathSounds@BURNED:
-		Voice: Burned
-		DeathTypes: FireDeath
-	DeathSounds@ZAPPED:
-		Voice: Zapped
-		DeathTypes: ElectricityDeath
+		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath, FireDeath, ElectricityDeath
 	Voiced:
 		VoiceSet: GenericVoice
 	HitShape:
