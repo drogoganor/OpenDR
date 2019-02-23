@@ -8,6 +8,12 @@ GenericHumanVoice: # Civilian
 		Burned: gvmaldc1,gvmaldc2
 		Zapped: gvmaldc1,gvmaldc2
 
+RowdyMaleCivilianVoice:
+	Inherits: GenericHumanVoice
+	Voices:
+		Select: 
+		Action: 
+
 GenericHumanFemaleVoice: # Sniper and scout
 	DefaultVariant: .wav
 	Voices:
@@ -227,12 +233,6 @@ JebRadecVoice:
 		Select: gvmtrrl0, gvmtrrl1
 		Action: gvmtrrl2, gvmtrrl3, gvmtrrl4
 
-RowdyMaleCivilianVoice:
-	Inherits: GenericHumanVoice
-	-Voices:
-	Voices:
-		Select: 
-		Action: 
 
 # Xenite
 
