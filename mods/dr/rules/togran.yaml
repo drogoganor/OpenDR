@@ -1,0 +1,68 @@
+
+TogranMechanic:
+	Inherits: Mechanic
+	-MapEditorData:
+	Buildable:
+		Prerequisites: ~infantry.togran, vehicles, repair
+
+HQ.togran.Constructing:
+	Inherits: HQ.human.Constructing
+	Buildable:
+		Queue: Building, AIBuilding
+		Prerequisites: ~rig.togran
+	SelfConstructing:
+		Becomes: HQ.human
+
+TrainingFacility.togran.Constructing:
+	Inherits: TrainingFacility.fguard.Constructing
+	Buildable:
+		Queue: Building, AIBuilding
+		Prerequisites: ~rig.togran
+	SelfConstructing:
+		Becomes: TrainingFacility.fguard
+
+AssemblyPlant.togran.Constructing:
+	Inherits: AssemblyPlant.human.Constructing
+	Buildable:
+		Queue: Building, AIBuilding
+		Prerequisites: ~rig.togran
+	SelfConstructing:
+		Becomes: AssemblyPlant.human
+
+TogranLaserTurret.Constructing:
+	Inherits: LaserTurret.Constructing
+	Buildable:
+		Queue: Building, AIBuilding
+		Prerequisites: ~rig.togran
+
+AntiAirTurret.togran.Constructing:
+	Inherits: AntiAirTurret.human.Constructing
+	Buildable:
+		Queue: Building, AIBuilding
+		Prerequisites: ~rig.togran, hq.togran, upgrade.hq1, vehicles, barracks
+
+TogranHeavyRailTurret.Constructing:
+	Inherits: HeavyRailTurret.Constructing
+	Buildable:
+		Queue: Building, AIBuilding
+		Prerequisites: ~rig.togran, hq.togran, upgrade.hq1, vehicles, barracks
+
+Hospital.togran.Constructing:
+	Inherits: Hospital.human.Constructing
+	Buildable:
+		Prerequisites: ~rig.togran, hq.togran, barracks
+
+Repair.togran.Constructing:
+	Inherits: Repair.human.Constructing
+	Buildable:
+		Prerequisites: ~rig.togran, hq.togran, vehicles
+
+RearmingDeck.togran.Constructing:
+	Inherits: RearmingDeck.human.Constructing
+	Buildable:
+		Prerequisites: ~rig.togran, hq.togran, upgrade.hq2, vehicles, barracks
+
+TogranPhasingFacility.Constructing:
+	Inherits: PhasingFacility.Constructing
+	Buildable:
+		Prerequisites: ~rig.togran, hq.togran

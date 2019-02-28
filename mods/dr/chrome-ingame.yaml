@@ -524,71 +524,71 @@ command-button-shadowhand-highlighted-disabled: chrome-ingame.png
 
 
 sidebar-togran: chrome-ingame.png
-	background-top: 0,167,238,310
-	background-iconrow: 0,476,238,49
-	background-bottom: 0,527,238,6
-	background-supportoverlay: 0,75,64,48
-
+	background-top: 574,567,238,310
+	background-iconrow: 574,876,238,49
+	background-bottom: 574,927,238,6
+	background-supportoverlay: 64,75,64,48
+	
 sidebar-button-togran: chrome-ingame.png
-	background: 59,31,22,22
-	border-r: 81,31,3,22
-	border-l: 56,31,3,22
-	border-b: 59,53,22,3
-	border-t: 59,28,22,3
-	corner-tl: 56,28,3,3
-	corner-tr: 81,28,3,3
-	corner-bl: 56,53,3,3
-	corner-br: 81,53,3,3
+	background: 733,31,22,22
+	border-r: 755,31,3,22
+	border-l: 730,31,3,22
+	border-b: 733,53,22,3
+	border-t: 733,28,22,3
+	corner-tl: 730,28,3,3
+	corner-tr: 755,28,3,3
+	corner-bl: 730,53,3,3
+	corner-br: 755,53,3,3
 sidebar-button-togran-hover: chrome-ingame.png
-	background: 59,3,22,22
-	border-r: 81,3,3,22
-	border-l: 56,3,3,22
-	border-b: 59,25,22,3
-	border-t: 59,0,22,3
-	corner-tl: 56,0,3,3
-	corner-tr: 81,0,3,3
-	corner-bl: 56,25,3,3
-	corner-br: 81,25,3,3
+	background: 733,3,22,22
+	border-r: 755,3,3,22
+	border-l: 730,3,3,22
+	border-b: 733,25,22,3
+	border-t: 733,0,22,3
+	corner-tl: 730,0,3,3
+	corner-tr: 755,0,3,3
+	corner-bl: 730,25,3,3
+	corner-br: 755,25,3,3
 sidebar-button-togran-pressed: chrome-ingame.png
-	background: 59,31,22,22
-	border-r: 81,31,3,22
-	border-l: 56,31,3,22
-	border-b: 59,53,22,3
-	border-t: 59,28,22,3
-	corner-tl: 56,28,3,3
-	corner-tr: 81,28,3,3
-	corner-bl: 56,53,3,3
-	corner-br: 81,53,3,3
+	background: 733,31,22,22
+	border-r: 755,31,3,22
+	border-l: 730,31,3,22
+	border-b: 733,53,22,3
+	border-t: 733,28,22,3
+	corner-tl: 730,28,3,3
+	corner-tr: 755,28,3,3
+	corner-bl: 730,53,3,3
+	corner-br: 755,53,3,3
 sidebar-button-togran-highlighted: chrome-ingame.png
-	background: 87,31,22,22
-	border-r: 109,31,3,22
-	border-l: 84,31,3,22
-	border-b: 87,53,22,3
-	border-t: 87,28,22,3
-	corner-tl: 84,28,3,3
-	corner-tr: 109,28,3,3
-	corner-bl: 84,53,3,3
-	corner-br: 109,53,3,3
+	background: 761,31,22,22
+	border-r: 783,31,3,22
+	border-l: 758,31,3,22
+	border-b: 761,53,22,3
+	border-t: 761,28,22,3
+	corner-tl: 758,28,3,3
+	corner-tr: 783,28,3,3
+	corner-bl: 758,53,3,3
+	corner-br: 783,53,3,3
 sidebar-button-togran-highlighted-hover: chrome-ingame.png
-	background: 87,3,22,22
-	border-r: 109,3,3,22
-	border-l: 84,3,3,22
-	border-b: 87,25,22,3
-	border-t: 87,0,22,3
-	corner-tl: 84,0,3,3
-	corner-tr: 109,0,3,3
-	corner-bl: 84,25,3,3
-	corner-br: 109,25,3,3
+	background: 761,3,22,22
+	border-r: 783,3,3,22
+	border-l: 758,3,3,22
+	border-b: 761,25,22,3
+	border-t: 761,0,22,3
+	corner-tl: 758,0,3,3
+	corner-tr: 783,0,3,3
+	corner-bl: 758,25,3,3
+	corner-br: 783,25,3,3
 sidebar-button-togran-highlighted-pressed: chrome-ingame.png
-	background: 87,31,22,22
-	border-r: 109,31,3,22
-	border-l: 84,31,3,22
-	border-b: 87,53,22,3
-	border-t: 87,28,22,3
-	corner-tl: 84,28,3,3
-	corner-tr: 109,28,3,3
-	corner-bl: 84,53,3,3
-	corner-br: 109,53,3,3
+	background: 761,31,22,22
+	border-r: 783,31,3,22
+	border-l: 758,31,3,22
+	border-b: 761,53,22,3
+	border-t: 761,28,22,3
+	corner-tl: 758,28,3,3
+	corner-tr: 783,28,3,3
+	corner-bl: 758,53,3,3
+	corner-br: 783,53,3,3
 sidebar-button-togran-disabled: chrome-ingame.png
 	background: 171,3,22,22
 	border-r: 193,3,3,22
@@ -611,21 +611,125 @@ sidebar-button-togran-highlighted-disabled: chrome-ingame.png
 	corner-br: 193,25,3,3
 
 command-button-togran: chrome-ingame.png
-	background: 59,31,22,22
+	background: 733,31,22,22
 command-button-togran-hover: chrome-ingame.png
-	background: 59,3,22,22
+	background: 733,3,22,22
 command-button-togran-pressed: chrome-ingame.png
-	background: 59,31,22,22
+	background: 733,31,22,22
 command-button-togran-highlighted: chrome-ingame.png
-	background: 87,31,22,22
+	background: 761,31,22,22
 command-button-togran-highlighted-hover: chrome-ingame.png
-	background: 87,3,22,22
+	background: 761,3,22,22
 command-button-togran-highlighted-pressed: chrome-ingame.png
-	background: 87,31,22,22
+	background: 761,31,22,22
 command-button-togran-disabled: chrome-ingame.png
-	background: 59,31,22,22
+	background: 733,31,22,22
 command-button-togran-highlighted-disabled: chrome-ingame.png
-	background: 87,31,22,22
+	background: 761,31,22,22
+
+sidebar-terrorist: chrome-ingame.png
+	background-top: 750,167,238,310
+	background-iconrow: 750,476,238,49
+	background-bottom: 750,527,238,6
+	background-supportoverlay: 64,75,64,48
+	
+sidebar-button-terrorist: chrome-ingame.png
+	background: 733,31,22,22
+	border-r: 755,31,3,22
+	border-l: 730,31,3,22
+	border-b: 733,53,22,3
+	border-t: 733,28,22,3
+	corner-tl: 730,28,3,3
+	corner-tr: 755,28,3,3
+	corner-bl: 730,53,3,3
+	corner-br: 755,53,3,3
+sidebar-button-terrorist-hover: chrome-ingame.png
+	background: 733,3,22,22
+	border-r: 755,3,3,22
+	border-l: 730,3,3,22
+	border-b: 733,25,22,3
+	border-t: 733,0,22,3
+	corner-tl: 730,0,3,3
+	corner-tr: 755,0,3,3
+	corner-bl: 730,25,3,3
+	corner-br: 755,25,3,3
+sidebar-button-terrorist-pressed: chrome-ingame.png
+	background: 733,31,22,22
+	border-r: 755,31,3,22
+	border-l: 730,31,3,22
+	border-b: 733,53,22,3
+	border-t: 733,28,22,3
+	corner-tl: 730,28,3,3
+	corner-tr: 755,28,3,3
+	corner-bl: 730,53,3,3
+	corner-br: 755,53,3,3
+sidebar-button-terrorist-highlighted: chrome-ingame.png
+	background: 761,31,22,22
+	border-r: 783,31,3,22
+	border-l: 758,31,3,22
+	border-b: 761,53,22,3
+	border-t: 761,28,22,3
+	corner-tl: 758,28,3,3
+	corner-tr: 783,28,3,3
+	corner-bl: 758,53,3,3
+	corner-br: 783,53,3,3
+sidebar-button-terrorist-highlighted-hover: chrome-ingame.png
+	background: 761,3,22,22
+	border-r: 783,3,3,22
+	border-l: 758,3,3,22
+	border-b: 761,25,22,3
+	border-t: 761,0,22,3
+	corner-tl: 758,0,3,3
+	corner-tr: 783,0,3,3
+	corner-bl: 758,25,3,3
+	corner-br: 783,25,3,3
+sidebar-button-terrorist-highlighted-pressed: chrome-ingame.png
+	background: 761,31,22,22
+	border-r: 783,31,3,22
+	border-l: 758,31,3,22
+	border-b: 761,53,22,3
+	border-t: 761,28,22,3
+	corner-tl: 758,28,3,3
+	corner-tr: 783,28,3,3
+	corner-bl: 758,53,3,3
+	corner-br: 783,53,3,3
+sidebar-button-terrorist-disabled: chrome-ingame.png
+	background: 171,3,22,22
+	border-r: 193,3,3,22
+	border-l: 168,3,3,22
+	border-b: 171,25,22,3
+	border-t: 171,0,22,3
+	corner-tl: 168,0,3,3
+	corner-tr: 193,0,3,3
+	corner-bl: 168,25,3,3
+	corner-br: 193,25,3,3
+sidebar-button-terrorist-highlighted-disabled: chrome-ingame.png
+	background: 171,3,22,22
+	border-r: 193,3,3,22
+	border-l: 168,3,3,22
+	border-b: 171,25,22,3
+	border-t: 171,0,22,3
+	corner-tl: 168,0,3,3
+	corner-tr: 193,0,3,3
+	corner-bl: 168,25,3,3
+	corner-br: 193,25,3,3
+
+command-button-terrorist: chrome-ingame.png
+	background: 733,31,22,22
+command-button-terrorist-hover: chrome-ingame.png
+	background: 733,3,22,22
+command-button-terrorist-pressed: chrome-ingame.png
+	background: 733,31,22,22
+command-button-terrorist-highlighted: chrome-ingame.png
+	background: 761,31,22,22
+command-button-terrorist-highlighted-hover: chrome-ingame.png
+	background: 761,3,22,22
+command-button-terrorist-highlighted-pressed: chrome-ingame.png
+	background: 761,31,22,22
+command-button-terrorist-disabled: chrome-ingame.png
+	background: 733,31,22,22
+command-button-terrorist-highlighted-disabled: chrome-ingame.png
+	background: 761,31,22,22
 
 
 # In-game observer

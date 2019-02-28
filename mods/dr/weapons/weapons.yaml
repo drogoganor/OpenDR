@@ -1115,9 +1115,73 @@ GeminiFull: # Gemini tank, full power.
 # Addon
 
 GoreHunterWeapon:
-	Inherits: TripleRailGun
-	ReloadDelay: 6
-	Range: 8c0
+	Inherits: DoubleRailGun
+	ReloadDelay: 19
+	#Range: 8c0
 
+ShockTrooperWeapon:
+	Inherits: LaserRifle
+	ReloadDelay: 21
+	Range: 4c0
+	Burst: 3
+	#Report: gxlgnwc0.wav
+	#ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 853
+		Image: ecprj001
+		Shadow: False
+	Warhead@1Dam: SpreadDamage
+		Spread: 64
+		Damage: 11
+	Warhead@3Eff: CreateEffect
+		Explosions: eoomktr0
+		ValidTargets: Ground, Ship, Trees
+	-Warhead@4Eff: CreateEffect
 
+SantaWeapon:
+	Inherits: PhaseTankCannon
+	ReloadDelay: 25
+	Range: 5c0
+	Burst: 6
+	BurstDelays: 3
 
+GoreBeastWeapon:
+	Inherits: PolyAcid
+	ReloadDelay: 26
+	Range: 5c0
+
+GunWalkerWeapon:
+	Inherits: PlasmaCannon
+
+WalkerScoutWeapon:
+	Inherits: LaserRifle
+
+TickTankWeapon:
+	Inherits: GeminiFull
+
+FlamingDeathWeapon:
+	Inherits: GeminiFull
+
+HoverAssaultTankWeapon:
+	Inherits: PlasmaCannon
+
+VortexTankWeapon:
+	Inherits: TachyonCannon
+
+ArmoredGuardWalkerWeapon:
+	Inherits: TachyonCannon
+
+ATATWalkerWeapon:
+	Inherits: TachyonCannon
+
+SonicThumperWeapon:
+	Inherits: PlasmaCannon
+
+AirRifterWeapon:
+	Inherits: GeminiFull
+
+TerroristMissileTankWeapon:
+	Inherits: PlasmaCannon
+
+TerroristArtilleryWeapon:
+	Inherits: IMPArtilleryShell

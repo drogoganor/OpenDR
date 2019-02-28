@@ -1,6 +1,6 @@
 
 Civilian:
-	Inherits: ^DrCivilian
+	Inherits: ^Civilian
 	RenderSprites:
 		Image: uocvmst0
 	Tooltip:
@@ -13,7 +13,7 @@ Civilian:
 		Sequence: shadow
 
 RowdyCivilian:
-	Inherits: ^DrCivilian
+	Inherits: ^Civilian
 	RenderSprites:
 		Image: uorcmst0
 	Tooltip:
@@ -32,7 +32,7 @@ RowdyCivilian:
 		Sequence: shadow
 
 ColonelMartel: # Campaign
-	Inherits: ^DrCivilian
+	Inherits: ^Civilian
 	RenderSprites:
 		Image: uocvmst0
 	Voiced:
@@ -60,7 +60,7 @@ JebRadec: # Campaign
 		Sequence: shadow
 
 Karoch: # Campaign
-	Inherits: ^DrCivilian
+	Inherits: ^Civilian
 	RenderSprites:
 		Image: uocspst0
 	Tooltip:

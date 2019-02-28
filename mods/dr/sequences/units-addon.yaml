@@ -9,18 +9,18 @@ unhvst0:
 		Length: 6
 		Tick: 40
 	shoot:
-		Start: 54
-		Facings: 6
+		Start: 56
+		Facings: 8
 		Length: 3
 		Tick: 100
 	idle:
 		Start: 48
-		Facings: 6
+		Facings: 8
 		Length: 1
-		Tick: 60
 	stand:
 		Start: 48
-		Facings: 6
+		Facings: 8
+		Length: 1
 	shadow: ucmensh0
 		Length: 1
 		Offset: 10, 5
@@ -38,18 +38,18 @@ unskst0:
 		Length: 6
 		Tick: 40
 	shoot:
-		Start: 54
-		Facings: 6
+		Start: 56
+		Facings: 8
 		Length: 2
 		Tick: 100
 	idle:
 		Start: 48
-		Facings: 6
+		Facings: 8
 		Length: 1
-		Tick: 60
 	stand:
 		Start: 48
-		Facings: 6
+		Facings: 8
+		Length: 1
 	shadow: ucmensh0
 		Length: 1
 		Offset: 10, 4
@@ -114,7 +114,7 @@ ungwtst0:
 		Start: 0
 		Facings: 16
 		Length: 7
-		Tick: 40
+		Tick: 60
 	shoot:
 		Start: 112
 		Facings: 16
@@ -124,17 +124,16 @@ ungwtst0:
 	idle:
 		Start: 112
 		Facings: 16
-	turret: ungwtst1
-		Start: 0
-		Facings: 16
-	turret-fire: ungwtst1 # Unused
+	muzzle: ungwtst1
 		Start: 16
 		Facings: 16
 		Length: 2
 		Tick: 40
+	turret: ungwtst1
+		Start: 0
+		Facings: 16
 	icon: ungwtmn0
-	
-	
+
 # Scout Alt
 unwlkac1:
 	Inherits: humansplat
@@ -172,8 +171,8 @@ unwlkst0:
 		Start: 0
 		Facings: 8
 		Length: 6
-		Tick: 40
-	shoot:
+		Tick: 60
+	transform:
 		Start: 56
 		Facings: 8
 		Length: 3
@@ -187,7 +186,7 @@ unwlkst0:
 	turret: unwlkac0
 		Start: 0
 		Facings: 16
-	turret-fire: unwlkac0 # Unused
+	muzzle: unwlkac0
 		Start: 16
 		Facings: 16
 		Length: 2
@@ -221,7 +220,6 @@ unminst0:
 
 # Tick Tank Alt
 untikac1:
-	Inherits: humansplat
 	run:
 		Start: 0
 		Facings: 8
@@ -245,7 +243,7 @@ untikac1:
 	turret: untikac0
 		Start: 0
 		Facings: 16
-	turret-fire: untikac0 # Unused
+	muzzle: untikac0
 		Start: 16
 		Facings: 16
 		Length: 3
@@ -269,13 +267,13 @@ untikst0:
 	idle:
 		Start: 48
 		Facings: 8
-	turret: unvorac0
+	turret: untikac0
 		Start: 0
 		Facings: 16
-	turret-fire: unvorac0 # Unused
+	muzzle: untikac0
 		Start: 16
 		Facings: 16
-		Length: 2
+		Length: 3
 		Tick: 40
 	icon: untikmn0
 
@@ -299,7 +297,7 @@ unfdtst0:
 	turret: unfdtac0
 		Start: 0
 		Facings: 16
-	turret-fire: unfdtac0 # Unused
+	muzzle: unfdtac0
 		Start: 16
 		Facings: 16
 		Length: 3
@@ -328,7 +326,7 @@ unhovst0:
 	turret: unhovac0
 		Start: 0
 		Facings: 16
-	turret-fire: unhovac0 # Unused
+	muzzle: unhovac0
 		Start: 16
 		Facings: 16
 		Length: 2
@@ -342,7 +340,7 @@ unmkwst0:
 		Start: 0
 		Facings: 16
 		Length: 8
-		Tick: 40
+		Tick: 90
 	shoot:
 		Start: 128
 		Facings: 16
@@ -355,10 +353,10 @@ unmkwst0:
 	turret: unmkwst1
 		Start: 0
 		Facings: 16
-	turret-fire: unmkwst1 # Unused
-		Start: 0
+	muzzle: unmkwst1
+		Start: 16
 		Facings: 16
-		Length: 2
+		Length: 1
 		Tick: 40
 	icon: unmkwmn0
 
@@ -369,7 +367,7 @@ unfrwst0:
 		Start: 0
 		Facings: 16
 		Length: 8
-		Tick: 40
+		Tick: 90
 	shoot:
 		Start: 128
 		Facings: 16
@@ -382,10 +380,10 @@ unfrwst0:
 	turret: unfrwst1
 		Start: 0
 		Facings: 16
-	turret-fire: unfrwst1 # Unused
-		Start: 0
+	muzzle: unfrwst1
+		Start: 16
 		Facings: 16
-		Length: 2
+		Length: 1
 		Tick: 40
 	icon: unfrwmn0
 
@@ -429,13 +427,13 @@ utthust0:
 		Length: 3
 		Tick: 40
 	stand:
-		Start: 84
+		Start: 88
 		Facings: 8
 	idle:
-		Start: 84
+		Start: 88
 		Facings: 8
 	melee-attack: # Unused
-		Start: 92
+		Start: 96
 		Facings: 8
 		Length: 3
 		Tick: 40
@@ -458,16 +456,11 @@ unvorst0:
 	idle:
 		Start: 24
 		Facings: 8
-	turret: unvorac1
+	turret: unvorac0
 		Start: 0
 		Facings: 16
-	turret-fire: unvorac1 # Unused
+	muzzle: unvorac0
 		Start: 16
-		Facings: 16
-		Length: 2
-		Tick: 40
-	turret-idle: unvorac1 # Unused
-		Start: 48
 		Facings: 16
 		Length: 2
 		Tick: 40
@@ -491,9 +484,13 @@ utconst0:
 	stand:
 		Start: 0
 		Facings: 16
+		Length: 3
+		Tick: 40
 	idle:
 		Start: 0
 		Facings: 16
+		Length: 3
+		Tick: 40
 	icon: utconmn0
 
 # Construction Biot
@@ -531,23 +528,39 @@ utminst0:
 		Facings: 16
 		Length: 3
 		Tick: 40
+	idle:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
+	stand:
+		Start: 0
+		Facings: 16
+		Length: 3
+		Tick: 40
 	shoot: # Unused
 		Start: 48
 		Facings: 16
 		Length: 1
 		Tick: 40
-	shoot2: # Unused
+	harvest:
 		Start: 64
 		Facings: 16
 		Length: 4
 		Tick: 40
-	stand:
-		Start: 0
+	dock:
+		Start: 64
 		Facings: 16
-	idle:
-		Start: 0
+		Length: 4
+		Tick: 40
+	dock-loop:
+		Start: 64
 		Facings: 16
+		Length: 4
+		Tick: 40
 	icon: utminmn0
+
+
 
 # Rasta Terrorist Soldier Veteran Level 5
 
@@ -558,21 +571,21 @@ utravst0:
 		Facings: 8
 		Length: 8
 		Tick: 40
-	shoot: # Unused
+	shoot:
 		Start: 64
 		Facings: 8
 		Length: 4
 		Tick: 40
-	shoot2: # Unused
+	idle1:
 		Start: 96
 		Facings: 8
 		Length: 7
 		Tick: 40
 	stand:
-		Start: 0
+		Start: 152
 		Facings: 8
 	idle:
-		Start: 0
+		Start: 152
 		Facings: 8
 	shadow: ucmensh0
 		Length: 1
@@ -677,6 +690,10 @@ utfatst0:
 	idle:
 		Start: 120
 		Facings: 8
+	shadow: ucmensh0
+		Length: 1
+		Offset: 10, 6
+		ZOffset: -8192
 	icon: utfatmn0
 
 # Terrorist SkateyScout

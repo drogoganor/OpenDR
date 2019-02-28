@@ -39,6 +39,7 @@ flags: buttons.png
 	togran: 90,112,30,15
 	xenite: 120,112,30,15
 	shadowhand: 150,112,30,15
+	terrorist: 180,112,30,15
 	spectator: 60,112,30,15
 
 music: buttons.png

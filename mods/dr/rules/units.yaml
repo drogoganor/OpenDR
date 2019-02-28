@@ -1,6 +1,6 @@
 
 Raider:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: ufradst0
 	Tooltip:
@@ -29,7 +29,7 @@ Raider:
 		Weapon: LaserRifle
 
 Mercenary:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: ufmrcst0
 	Tooltip:
@@ -59,7 +59,7 @@ Mercenary:
 		Sequence: shadow
 
 Sniper:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: ufsnpst0
 	Tooltip:
@@ -116,7 +116,7 @@ Sniper:
 		RequiresCondition: disguise
 
 Scout:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: ufsctst0
 	Tooltip:
@@ -171,7 +171,7 @@ Scout:
 		RequiresCondition: disguise
 
 Medic:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: ufmedst0
 	Tooltip:
@@ -210,7 +210,7 @@ Medic:
 		Sequence: shadow
 
 Saboteur:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: ufmecst0
 	Tooltip:
@@ -243,7 +243,7 @@ Saboteur:
 		Sequence: shadow
 
 Mechanic:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: ufmecst0
 	Tooltip:
@@ -280,7 +280,7 @@ Mechanic:
 		Sequence: shadow
 
 Martyr:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: ufmtrst0
 	Tooltip:
@@ -322,7 +322,7 @@ Martyr:
 		Sequence: shadow
 
 Guardian:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: uigrdst0
 	Tooltip:
@@ -352,7 +352,7 @@ Guardian:
 		Sequence: shadow
 
 Bion:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: uibonst0
 	#Inherits@AUTOTARGET: ^AutoTargetAll
@@ -384,7 +384,7 @@ Bion:
 		Sequence: shadow
 
 Exterminator:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: uiextst0
 	Tooltip:
@@ -417,7 +417,7 @@ Exterminator:
 	Hovers:
 
 Infiltrator:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: ucinfst0
 	Buildable:
@@ -474,7 +474,7 @@ Infiltrator:
 # Vehicles
 
 ConstructionRig:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: ucfcnst0
 	Tooltip:
@@ -516,31 +516,34 @@ ConstructionRig:
 	ProvidesPrerequisite@rig:
 		Prerequisite: rig
 	ProvidesPrerequisite@human:
-		Factions: fguard, xenite, togran
+		Factions: fguard, xenite
 		Prerequisite: rig.human
 	ProvidesPrerequisite@cyborg:
-		Factions: imperium, shadowhand, togran
+		Factions: imperium, shadowhand
 		Prerequisite: rig.cyborg
 	ProvidesPrerequisite@fguard:
-		Factions: fguard, togran
+		Factions: fguard
 		Prerequisite: rig.fguard
 	ProvidesPrerequisite@imperium:
-		Factions: imperium, togran
+		Factions: imperium
 		Prerequisite: rig.imperium
+	ProvidesPrerequisite@xenite:
+		Factions: xenite
+		Prerequisite: rig.xenite
+	ProvidesPrerequisite@shadowhand:
+		Factions: shadowhand
+		Prerequisite: rig.shadowhand
 	ProvidesPrerequisite@togran:
 		Factions: togran
 		Prerequisite: rig.togran
-	ProvidesPrerequisite@xenite:
-		Factions: xenite, togran
-		Prerequisite: rig.xenite
-	ProvidesPrerequisite@shadowhand:
-		Factions: shadowhand, togran
-		Prerequisite: rig.shadowhand
+	ProvidesPrerequisite@terrorist:
+		Factions: terrorist
+		Prerequisite: rig.terrorist
 	-Armament:
 
 
 Freighter:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: ucfrgst0
 	Tooltip:
@@ -581,7 +584,7 @@ Freighter:
 	-Armament:
 
 HoverFreighter:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: ^HoverVehicle
 	RenderSprites:
 		Image: uchfrst0
 	Tooltip:
@@ -621,7 +624,7 @@ HoverFreighter:
 		SearchFromOrderRadius: 11
 
 SpiderBike:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: ufspbst0
 	Tooltip:
@@ -649,7 +652,7 @@ SpiderBike:
 		Weapon: DoubleRailGun
 
 RAT:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: ^HoverVehicle
 	RenderSprites:
 		Image: ufratst0
 	Tooltip:
@@ -684,7 +687,7 @@ RAT:
 	-Armament:
 
 SkirmishTank:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: ufsktst0
 	Tooltip:
@@ -723,7 +726,7 @@ SkirmishTank:
 		Type: TankPlating
 
 TankHunter:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: ufthnst0
 	Tooltip:
@@ -751,7 +754,7 @@ TankHunter:
 		Weapon: TankHunterGun
 
 PhaseTank:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: ufphtst0
 	Tooltip:
@@ -779,7 +782,7 @@ PhaseTank:
 		Weapon: PhaseTankCannon
 
 FlakJack:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	RenderSprites:
 		Image: ufflkst0
@@ -808,7 +811,7 @@ FlakJack:
 		Weapon: Chaff
 
 TripleRailHoverTank:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: ^HoverVehicle
 	RenderSprites:
 		Image: uftrtst0
 	Tooltip:
@@ -849,7 +852,7 @@ TripleRailHoverTank:
 	WithSpriteTurret:
 
 HellstormArtillery:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: uffarst0
 	Tooltip:
@@ -879,7 +882,7 @@ HellstormArtillery:
 		Weapon: ArtilleryShell
 
 ShockWave:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: ufswvst0
 	Tooltip:
@@ -923,7 +926,7 @@ ShockWave:
 		ScanRadius: 5
 
 WaterContaminator:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: ucwcost0
 	Tooltip:
@@ -950,7 +953,7 @@ WaterContaminator:
 
 # Phase Runner
 PhaseRunner:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: ^HoverVehicle
 	RenderSprites:
 		Image: ufphrst0
 	Tooltip:
@@ -985,7 +988,7 @@ PhaseRunner:
 # Imperium
 
 ScoutRunner:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: ^HoverVehicle
 	RenderSprites:
 		Image: uisttst0
 	Tooltip:
@@ -1013,7 +1016,7 @@ ScoutRunner:
 		Weapon: LaserCannon
 
 ITT:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: ^HoverVehicle
 	RenderSprites:
 		Image: uiittst0
 	Tooltip:
@@ -1060,7 +1063,7 @@ ITT:
 	WithSpriteTurret:
 
 PlasmaTank:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: ^HoverVehicle
 	RenderSprites:
 		Image: uipltst0
 	Tooltip:
@@ -1101,7 +1104,7 @@ PlasmaTank:
 # poison darts can probably be done with the existing external condition warhead
 # and the other thing should be straightforward with custom projectiles/warheads/traits
 Amper:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: uiampst0
 	Tooltip:
@@ -1129,7 +1132,7 @@ Amper:
 		Weapon: AmperAmp
 
 MAD:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: ^HoverVehicle
 	Inherits@AUTOTARGET: ^AutoTargetAir
 	RenderSprites:
 		Image: uimadst0
@@ -1160,7 +1163,7 @@ MAD:
 		Weapon: GroundToAirLaser
 
 Shredder:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: ^HoverVehicle
 	RenderSprites:
 		Image: uishrst0
 	Tooltip:
@@ -1188,7 +1191,7 @@ Shredder:
 	-Armament:
 
 HostageTaker:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: uihosst0
 	Tooltip:
@@ -1216,7 +1219,7 @@ HostageTaker:
 		Type: TankPlating
 
 TachionTank:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: ^HoverVehicle
 	RenderSprites:
 		Image: uitctst0
 	Tooltip:
@@ -1246,7 +1249,7 @@ TachionTank:
 		Weapon: TachyonCannon
 
 Scarab:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: ^HoverVehicle
 	RenderSprites:
 		Image: uiiarst0
 	Tooltip:
@@ -1451,7 +1454,7 @@ SkyFortress:
 # Infantry
 
 Gant:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: ufganst0
 	Tooltip:
@@ -1494,7 +1497,7 @@ Gant:
 		Sequence: muzzle
 
 Ranger:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: uftrast0
 	Tooltip:
@@ -1520,7 +1523,7 @@ Ranger:
 		Sequence: shadow
 
 PowerSpiker:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: unpwcst0
 	Tooltip:
@@ -1546,7 +1549,7 @@ PowerSpiker:
 		Sequence: shadow
 
 Grendel:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: ufgrest0
 	Tooltip:
@@ -1578,7 +1581,7 @@ Grendel:
 		Weapon: ElectroBlast
 
 GrendelRider:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: ufridst0
 	Tooltip:
@@ -1612,7 +1615,7 @@ GrendelRider:
 # Shadowhand
 
 Reaper:
-	Inherits: ^DrSoldier
+	Inherits: ^Soldier
 	RenderSprites:
 		Image: uireast0
 	Tooltip:
@@ -1646,7 +1649,7 @@ Reaper:
 # Vehicles
 
 RATmk2:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: ^HoverVehicle
 	RenderSprites:
 		Image: ufrt2st0
 	Tooltip:
@@ -1694,7 +1697,7 @@ RATmk2:
 		LoadingCondition: notmobile
 
 GeminiTank:
-	Inherits: ^DrHoverAnimatedVehicle
+	Inherits: ^HoverVehicle
 	RenderSprites:
 		Image: uigemst1
 	Tooltip:
@@ -1757,7 +1760,7 @@ Shadowblade:
 		Type: ForcePlating
 
 Fury:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: uifurst0
 	Tooltip:
@@ -1826,7 +1829,7 @@ EMPDevice:
 		FacingTolerance: 20
 
 RoadTerraformer:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: uiterst0
 	Tooltip:
@@ -1856,7 +1859,7 @@ RoadTerraformer:
 		Weapon: TachyonCannon
 
 MarshTerraformer:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RenderSprites:
 		Image: uiterst1
 	Tooltip:

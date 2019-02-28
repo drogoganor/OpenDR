@@ -4,7 +4,7 @@ Power.Constructing:
 	RenderSprites:
 		Image: ncpow1l0
 	Buildable:
-		Prerequisites: ~techlevel.infonly
+		Prerequisites: ~rig
 		Queue: Building, AIBuilding
 		Description: Provides power for other structures. Refines Taelon into credits.
 		BuildPaletteOrder: 20
@@ -52,7 +52,7 @@ WaterLaunchPad.Constructing:
 	Buildable:
 		Queue: Building, AIBuilding
 		BuildPaletteOrder: 10
-		Prerequisites: techlevel.infonly
+		Prerequisites: ~rig
 		Description: Refines spring water into credits.
 		BuildDuration: 37
 	SelfConstructing:

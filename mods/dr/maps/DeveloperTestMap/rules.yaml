@@ -23,6 +23,6 @@ Player:
 	AnnounceOnSeen:
 	ScriptTags:
 
-^DrAnimatedVehicle:
+^Vehicle:
 	AnnounceOnSeen:
 	ScriptTags:

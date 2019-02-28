@@ -84,7 +84,7 @@
 		DamageTypes: DefaultDeath
 		RequiresCondition: amperpoison
 
-^DrSoldier:
+^Soldier:
 	Inherits: ^Humanoid
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
@@ -118,7 +118,7 @@
 	Chronoshiftable:
 		ReturnToOrigin: False
 
-^DrCivilian:
+^Civilian:
 	Inherits: ^Humanoid
 	RevealsShroud:
 		Range: 4c0
@@ -131,9 +131,15 @@
 	Voiced:
 		VoiceSet: GenericHumanVoice
 
+^AddonSoldier:
+	Inherits: ^Soldier
+	-Buildable:
+	MapEditorData:
+		Categories: Addon
+
 # Vehicles
 
-^DrAnimatedVehicle:
+^Vehicle:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
@@ -222,8 +228,8 @@
 	Chronoshiftable:
 		ReturnToOrigin: False
 
-^DrHoverAnimatedVehicle:
-	Inherits: ^DrAnimatedVehicle
+^HoverVehicle:
+	Inherits: ^Vehicle
 	WithShadow:
 		Offset: 111, 64, 0
 		ZOffset: -129
@@ -233,7 +239,7 @@
 		Locomotor: hovering
 
 ^DrCivVehicle:
-	Inherits: ^DrAnimatedVehicle
+	Inherits: ^Vehicle
 	RevealsShroud:
 		Range: 4c0
 	Tooltip:
@@ -308,6 +314,87 @@
 		RepairBuildings: repair.human, repair.cyborg
 	Rearmable:
 		RearmActors: rearmingdeck.human, rearmingdeck.cyborg
+
+# Naval
+
+^Ship:
+	Inherits@1: ^ExistsInWorld
+	Inherits@4: ^SpriteActor
+	Inherits@GAINSEXPERIENCE: ^GainsExperience
+	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	#Buildable:
+	#	Queue: Vehicle
+	#	BuildPaletteOrder: 80
+	#	Prerequisites: ~barracks, ~techlevel.infonly
+	Huntable:
+	Valued:
+		Cost: 900
+	Health:
+		HP: 2500
+	Armor:
+		Type: TankPlating
+	RevealsShroud:
+		Range: 4c0
+	Mobile:
+		Speed: 72
+		Locomotor: water
+		TurnSpeed: 10
+	SelectionDecorations:
+	WithSpriteControlGroupDecoration:
+	Selectable:
+		Class: N1
+		Bounds: 36,36,0,0
+		DecorationBounds: 28,28,0,0
+	Targetable:
+		TargetTypes: Ground, Vehicle
+	#Repairable:
+	#	RepairBuildings: repair.human, repair.cyborg
+	AttackMove:
+	HiddenUnderFog:
+	ActorLostNotification:
+	ProximityCaptor:
+		Types: Ship
+	Guard:
+	Guardable:
+	Tooltip:
+		GenericName: Ship
+	DeathSounds@NORMAL:
+		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath
+	#MustBeDestroyed:
+	AttackFrontal:
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithInfantryBody:
+		DefaultAttackSequence: shoot
+	HitShape:
+	MapEditorData:
+		Categories: Naval
+	#ProducibleWithLevel:
+	#	Prerequisites: barracks.upgraded
+	Explodes:
+		Weapon: GenericExplode
+		EmptyWeapon: GenericExplode
+	WithFlamesOverlay@Flames1:
+		Image: eosmlfl0
+		Offset: 0, 0, 0
+		MinimumDamageState: Medium
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Smoke1:
+		Image: eosmoke5
+		Offset: 128, -512, 0
+		MinimumDamageState: Heavy
+		MaximumDamageState: Dead
+	GrantConditionOnDamageState@DAMAGED:
+		Condition: damaged
+		ValidDamageStates: Light, Medium, Heavy, Critical
+	Targetable@REPAIR:
+		RequiresCondition: damaged
+		TargetTypes: Repair
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
+	Chronoshiftable:
+		ReturnToOrigin: False
 
 # Buildings
 # There are two versions of each building, named "[Building].Constructing" and "[Building]".
@@ -504,23 +591,29 @@
 	ProvidesPrerequisite:
 		Prerequisite: hq
 	ProvidesPrerequisite@human:
-		Factions: fguard, xenite, togran
+		Factions: fguard, xenite
 		Prerequisite: hq.human
 	ProvidesPrerequisite@cyborg:
-		Factions: imperium, shadowhand, togran
+		Factions: imperium, shadowhand
 		Prerequisite: hq.cyborg
 	ProvidesPrerequisite@fguard:
-		Factions: fguard, togran
+		Factions: fguard
 		Prerequisite: hq.fguard
 	ProvidesPrerequisite@imperium:
-		Factions: imperium, togran
+		Factions: imperium
 		Prerequisite: hq.imperium
 	ProvidesPrerequisite@xenite:
-		Factions: xenite, togran
+		Factions: xenite
 		Prerequisite: hq.xenite
 	ProvidesPrerequisite@shadowhand:
-		Factions: shadowhand, togran
+		Factions: shadowhand
 		Prerequisite: hq.shadowhand
+	ProvidesPrerequisite@togran:
+		Factions: togran
+		Prerequisite: hq.togran
+	ProvidesPrerequisite@terrorist:
+		Factions: terrorist
+		Prerequisite: hq.terrorist
 	Production:
 		Produces: Upgrade,Economy,AIBuilding
 	RallyPoint:
@@ -626,9 +719,9 @@
 	Exit@1:
 		SpawnOffset: 512,256,0
 		ExitCell: 3,3
-		ProductionTypes: Soldier, Infantry, DrSoldier
+		ProductionTypes: Soldier, Infantry, Soldier
 	Production:
-		Produces: Infantry, Soldier, DrSoldier
+		Produces: Infantry, Soldier, Soldier
 	ProductionQueue@Infantry:
 		Type: Infantry
 		Group: Infantry
@@ -645,23 +738,29 @@
 	ProvidesPrerequisite@barracks:
 		Prerequisite: barracks
 	ProvidesPrerequisite@human:
-		Factions: fguard, xenite, togran
+		Factions: fguard, xenite
 		Prerequisite: infantry.human
 	ProvidesPrerequisite@cyborg:
-		Factions: imperium, shadowhand, togran
+		Factions: imperium, shadowhand
 		Prerequisite: infantry.cyborg
 	ProvidesPrerequisite@fguard:
-		Factions: fguard, togran
+		Factions: fguard
 		Prerequisite: infantry.fguard
 	ProvidesPrerequisite@imperium:
-		Factions: imperium, togran
+		Factions: imperium
 		Prerequisite: infantry.imperium
 	ProvidesPrerequisite@xenite:
-		Factions: xenite, togran
+		Factions: xenite
 		Prerequisite: infantry.xenite
 	ProvidesPrerequisite@shadowhand:
-		Factions: shadowhand, togran
+		Factions: shadowhand
 		Prerequisite: infantry.shadowhand
+	ProvidesPrerequisite@togran:
+		Factions: togran
+		Prerequisite: infantry.togran
+	ProvidesPrerequisite@terrorist:
+		Factions: terrorist
+		Prerequisite: infantry.terrorist
 	ProvidesPrerequisite@buildingname:
 	GrantConditionOnPrerequisite:
 		Prerequisites: upgrade.barracks1
@@ -720,7 +819,7 @@
 		SpawnOffset: -512,768,0
 		ExitCell: 1,2
 	Production:
-		Produces: Vehicle, DrVehicle, DrAnimatedVehicle
+		Produces: Vehicle, DrVehicle, Vehicle
 	ProductionQueue@Vehicle:
 		Type: Vehicle
 		Group: Vehicle
@@ -737,23 +836,29 @@
 	ProvidesPrerequisite@vehicles:
 		Prerequisite: vehicles
 	ProvidesPrerequisite@human:
-		Factions: fguard, xenite, togran
+		Factions: fguard, xenite
 		Prerequisite: vehicles.human
 	ProvidesPrerequisite@cyborg:
-		Factions: imperium, shadowhand, togran
+		Factions: imperium, shadowhand
 		Prerequisite: vehicles.cyborg
 	ProvidesPrerequisite@fguard:
-		Factions: fguard, togran
+		Factions: fguard
 		Prerequisite: vehicles.fguard
 	ProvidesPrerequisite@imperium:
-		Factions: imperium, togran
+		Factions: imperium
 		Prerequisite: vehicles.imperium
 	ProvidesPrerequisite@xenite:
-		Factions: xenite, togran
+		Factions: xenite
 		Prerequisite: vehicles.xenite
 	ProvidesPrerequisite@shadowhand:
-		Factions: shadowhand, togran
+		Factions: shadowhand
 		Prerequisite: vehicles.shadowhand
+	ProvidesPrerequisite@togran:
+		Factions: togran
+		Prerequisite: vehicles.togran
+	ProvidesPrerequisite@terrorist:
+		Factions: terrorist
+		Prerequisite: vehicles.terrorist
 	ProductionBar:
 		ProductionType: Vehicle
 	RallyPoint:

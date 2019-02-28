@@ -1,0 +1,37 @@
+
+TerroristRaider:
+	Inherits: Raider
+	-MapEditorData:
+	Buildable:
+		#Description: Stalwart of the Freedom Guard cause, the Raider is\narmed with a laser rifle. Once the Phasing Facility\nis constructed, the Raider gains the ability to\nphase underground.
+		Prerequisites: ~infantry.terrorist
+
+TerroristMedic:
+	Inherits: Medic
+	-MapEditorData:
+	Buildable:
+		Prerequisites: ~infantry.terrorist, hospital
+
+HQ.terrorist.Constructing:
+	Inherits: HQ.human.Constructing
+	Buildable:
+		Queue: Building, AIBuilding
+		Prerequisites: ~rig.terrorist
+	SelfConstructing:
+		Becomes: HQ.human
+
+TrainingFacility.terrorist.Constructing:
+	Inherits: TrainingFacility.fguard.Constructing
+	Buildable:
+		Queue: Building, AIBuilding
+		Prerequisites: ~rig.terrorist
+	SelfConstructing:
+		Becomes: TrainingFacility.fguard
+
+AssemblyPlant.terrorist.Constructing:
+	Inherits: AssemblyPlant.human.Constructing
+	Buildable:
+		Queue: Building, AIBuilding
+		Prerequisites: ~rig.terrorist
+	SelfConstructing:
+		Becomes: AssemblyPlant.human

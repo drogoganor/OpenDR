@@ -167,9 +167,17 @@ nihqt1l0:
 
 # Togran HQ
 tothq1l0:
-	building:
+	building: tothq1l0
 		Start: 0
-	idle:
+	idle: tothq1l0
+		Start: 1
+	building2: tothq1l0
+		Start: 0
+	idle2: tothq1l0
+		Start: 1
+	building3: tothq1l0
+		Start: 0
+	idle3: tothq1l0
 		Start: 1
 	underlay-building: nothq1l0 # no tileset|xx..
 		ZOffset: -8192
@@ -177,7 +185,25 @@ tothq1l0:
 	underlay: nothq1l0 # no tileset|xx..
 		ZOffset: -8192
 		Start: 1
+	underlay2: nothq1l0
+		ZOffset: -8192
+		Start: 1
+	underlay3: nothq1l0
+		ZOffset: -8192
+		Start: 1
+	top-building: tothq1l0
+		Start: 3
+		Length: 3
+		Tick: 100
 	top: tothq1l0
+		Start: 3
+		Length: 3
+		Tick: 100
+	top2: tothq1l0
+		Start: 3
+		Length: 3
+		Tick: 100
+	top3: tothq1l0
 		Start: 3
 		Length: 3
 		Tick: 100
@@ -185,6 +211,12 @@ tothq1l0:
 		Start: 0
 		Offset: 13, 9
 	shadow: tothqsh0
+		Start: 1
+		Offset: 13, 9
+	shadow2: tothqsh0
+		Start: 1
+		Offset: 13, 9
+	shadow3: tothqsh0
 		Start: 1
 		Offset: 13, 9
 	icon: bothqmn0

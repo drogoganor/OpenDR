@@ -4,7 +4,7 @@
 	ScreenMap:
 	ActorMap:
 	LoadWidgetAtGameStart:
-	TerrainRenderer:
+	DrTerrainRenderer:
 	MusicPlaylist:
 		VictoryMusic: acid
 		DefeatMusic: crazylaf
@@ -25,38 +25,38 @@
 		Side: Original
 		Description:
 	Faction@2:
-		Name: Any
-		InternalName: Random
-		RandomFactionMembers: fguard, imperium
-		Description: Random Faction\nA random faction will be chosen when the game starts.
-	Faction@3:
 		Name: Xenite
 		InternalName: xenite
-		Side: Expansion
-		Description:
-	Faction@4:
-		Name: Shadowhand
-		InternalName: shadowhand
-		Side: Expansion
-		Description:
-	Faction@5:
-		Name: Any (Expansion)
-		InternalName: RandomExpansion
-		Side: Expansion
-		RandomFactionMembers: xenite, shadowhand
-		Description: Random Faction\nA random faction will be chosen when the game starts.
-	Faction@6:
-		Name: Any (All)
-		InternalName: RandomAll
-		Side: Expansion
-		RandomFactionMembers: fguard, imperium, xenite, shadowhand
-		Description: Random Faction\nA random faction will be chosen when the game starts.
-	Faction@7:
-		Name: Togran
-		InternalName: togran
 		Side: Original
 		Description:
-		Selectable: False
+	Faction@3:
+		Name: Shadowhand
+		InternalName: shadowhand
+		Side: Original
+		Description:
+	Faction@4:
+		Name: Any
+		InternalName: Random
+		Side: Original
+		RandomFactionMembers: fguard, imperium, xenite, shadowhand
+		Description: Randomly select Freedom Guard, Imperium, Xenite or Shadowhand.
+	Faction@5:
+		Name: Togran
+		InternalName: togran
+		Side: Addon
+		Description: 
+	Faction@6:
+		Name: Terrorist
+		InternalName: terrorist
+		Side: Addon
+		Description:
+		Selectable: false
+	Faction@7:
+		Name: Any (All)
+		InternalName: RandomAll
+		Side: Addon
+		RandomFactionMembers: fguard, imperium, xenite, shadowhand, togran, terrorist
+		Description: Randomly select any faction.
 	ResourceType@water:
 		Type: SpringWater
 		Name: Water Spring
@@ -121,6 +121,25 @@
 			Cliff4: 50
 			SpringWater: 100
 			Taelon: 100
+	Locomotor@WATER:
+		Name: water
+		TerrainSpeeds:
+			Water: 100
+			Clear: 0
+			Normal2: 0
+			Normal3: 0
+			Muddy1: 0
+			Muddy2: 0
+			Rough1: 0
+			Rough2: 0
+			Road: 0
+			RoadBase: 0
+			HillSlope1: 0
+			HillSlope2: 0
+			Cliff1: 0
+			Cliff2: 0
+			Cliff3: 0
+			Cliff4: 0
 	Locomotor@HOVERING:
 		Name: hovering
 		TerrainSpeeds:
@@ -221,7 +240,7 @@ World:
 	MPStartUnits@mcvonly:
 		Class: none
 		ClassName: One Rig
-		Factions: fguard, togran, xenite
+		Factions: fguard, xenite, terrorist
 		BaseActor: HQ.human
 		SupportActors: ConstructionRig
 		InnerSupportRadius: 2
@@ -230,14 +249,22 @@ World:
 		Class: none
 		ClassName: One Rig
 		Factions: imperium, shadowhand
-		BaseActor: HQ.human
+		BaseActor: HQ.cyborg
+		SupportActors: ConstructionRig
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
+	MPStartUnits@mcvonlytogran:
+		Class: none
+		ClassName: One Rig
+		Factions: togran
+		BaseActor: HQ.togran
 		SupportActors: ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
 	MPStartUnits@threerigs:
 		Class: light
 		ClassName: Three Rigs
-		Factions: fguard, togran, xenite
+		Factions: fguard, xenite, terrorist
 		BaseActor: HQ.human
 		SupportActors: ConstructionRig,ConstructionRig,ConstructionRig
 		InnerSupportRadius: 2
@@ -247,6 +274,14 @@ World:
 		ClassName: Three Rigs
 		Factions: imperium, shadowhand
 		BaseActor: HQ.cyborg
+		SupportActors: ConstructionRig,ConstructionRig,ConstructionRig
+		InnerSupportRadius: 2
+		OuterSupportRadius: 4
+	MPStartUnits@threerigstogran:
+		Class: light
+		ClassName: Three Rigs
+		Factions: togran
+		BaseActor: HQ.togran
 		SupportActors: ConstructionRig,ConstructionRig,ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4

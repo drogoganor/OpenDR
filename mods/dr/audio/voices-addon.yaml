@@ -30,7 +30,7 @@ GuardWalkerVoice:
 		Select: gdwlks1
 		Action: gdwlkr1
 
-ATATVoice:
+ATATVoice: # seems to be silent
 	Inherits: GenericHumanVoice
 	Voices:
 		Select: atatws1
