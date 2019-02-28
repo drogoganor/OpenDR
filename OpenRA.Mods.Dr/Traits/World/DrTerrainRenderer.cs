@@ -168,11 +168,7 @@ namespace OpenRA.Mods.Common.Traits
         TerrainTile GetShoreTile(CPos cell)
         {
             var tile = map.Tiles[cell];
-
-            var ourType = tile.Type;
-
             var matchShorelines = info.Shorelines.Values.Where(x => tile.IsMatch(x.Match));
-
             int numIndices = 4;
 
             foreach (var m in matchShorelines)
