@@ -21,7 +21,8 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 		readonly ProductionTabsWithRowsAndFooterWidget tabs;
 
 		[ObjectCreator.UseCtor]
-		public ProductionTabsWithRowsAndFooterLogic(Widget widget, World world) : base(widget, world)
+		public ProductionTabsWithRowsAndFooterLogic(Widget widget, World world)
+            : base(widget, world)
 		{
 			tabs = widget.Get<ProductionTabsWithRowsAndFooterWidget>("PRODUCTION_TABS");
 			var rowWidget = tabs.Parent.GetOrNull(tabs.RowWidget);

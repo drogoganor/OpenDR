@@ -10,11 +10,10 @@
 
 using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
 using OpenRA.GameRules;
 using OpenRA.Graphics;
 using OpenRA.Mods.Dr.Effects;
+using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Projectiles
@@ -26,7 +25,7 @@ namespace OpenRA.Mods.Dr.Projectiles
     }
 
     [Desc("Detonates all warheads attached to Weapon each ExplosionInterval ticks.")]
-	public class VortexProjectileInfo : IProjectileInfo, IRulesetLoaded<WeaponInfo>
+    public class VortexProjectileInfo : IProjectileInfo, IRulesetLoaded<WeaponInfo>
 	{
 		[Desc("Projectile speed in WDist / tick, two values indicate variable velocity.")]
 		public readonly WDist[] Speed = { new WDist(17) };
@@ -108,10 +107,10 @@ namespace OpenRA.Mods.Dr.Projectiles
 		[Desc("If projectile touches an actor with one of these stances during or after the first bounce, trigger explosion.")]
 		public readonly Stance ValidBounceBlockerStances = Stance.Enemy | Stance.Neutral | Stance.Ally;
 
-        [Desc("Number of projectiles to fire.")]
-        public readonly int NumProjectiles = 12;
+		[Desc("Number of projectiles to fire.")]
+		public readonly int NumProjectiles = 12;
 
-        public IProjectile Create(ProjectileArgs args) { return new VortexProjectile(this, args); }
+		public IProjectile Create(ProjectileArgs args) { return new VortexProjectile(this, args); }
 
 		void IRulesetLoaded<WeaponInfo>.RulesetLoaded(Ruleset rules, WeaponInfo info)
 		{
@@ -122,7 +121,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 		}
 	}
 
-	public class VortexProjectile : IProjectile, ISync
+    public class VortexProjectile : IProjectile, ISync
 	{
 		readonly VortexProjectileInfo info;
 		readonly ProjectileArgs args;
@@ -157,7 +156,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 
 			mindelay = args.Weapon.MinRange.Length / speed.Length;
 
-            projectiles = new VortexProjectileEffect[info.NumProjectiles];
+			projectiles = new VortexProjectileEffect[info.NumProjectiles];
 
 			var mainFacing = (targetpos - sourcepos).Yaw.Facing;
 
@@ -170,9 +169,9 @@ namespace OpenRA.Mods.Dr.Projectiles
 			// subprojectiles facing
 			int facing = 0;
 
-            int facingsInterval = 256 / info.NumProjectiles;
+			int facingsInterval = 256 / info.NumProjectiles;
 
-            for (int i = 0; i < info.NumProjectiles; i++)
+			for (int i = 0; i < info.NumProjectiles; i++)
             {
                 target = Target.FromPos(targetpos);
 
@@ -209,7 +208,7 @@ namespace OpenRA.Mods.Dr.Projectiles
                 projectiles[i] = new VortexProjectileEffect(info, projectileArgs, lifespan, estimatedLifespan);
             }
 
-            foreach (var p in projectiles)
+			foreach (var p in projectiles)
 			world.AddFrameEndTask(w => w.Add(p));
 		}
 

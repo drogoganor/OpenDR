@@ -26,13 +26,13 @@ namespace OpenRA.Mods.Dr.Activities
 	{
 		readonly World world;
 		readonly Target centerBuildingTarget;
-        readonly CPos centerTarget;
-        readonly IMove move;
+		readonly CPos centerTarget;
+		readonly IMove move;
 		readonly Order order;
 		readonly string faction;
 		readonly BuildingInfo buildingInfo;
 		readonly ActorInfo buildingActor;
-        readonly WDist minRange;
+		readonly WDist minRange;
 
 		public BuildOnSite(World world, Actor self, Order order, string faction, BuildingInfo buildingInfo)
 		{
@@ -41,48 +41,53 @@ namespace OpenRA.Mods.Dr.Activities
 			this.world = world;
 			this.order = order;
 			this.faction = faction;
-            this.centerTarget = order.ExtraLocation;
-            centerBuildingTarget = Target.FromPos(world.Map.CenterOfCell(centerTarget));
-            minRange = new WDist(2048);
+			centerTarget = order.ExtraLocation;
+			centerBuildingTarget = Target.FromPos(world.Map.CenterOfCell(centerTarget));
+			minRange = new WDist(4096);
 			buildingActor = world.Map.Rules.Actors.FirstOrDefault(x => x.Key == order.TargetString).Value;
 		}
 
-		public override Activity Tick(Actor self)
+		public override bool Tick(Actor self)
 		{
-            if (IsCanceled)
-				return NextActivity;
+            if (IsCanceling || self.IsDead)
+                return true;
 
             if (centerBuildingTarget.IsInRange(self.CenterPosition, minRange))
             {
-				if (!world.CanPlaceBuilding(order.TargetLocation, buildingActor, buildingInfo, self))
+				if (!world.CanPlaceBuilding(centerTarget, buildingActor, buildingInfo, self))
 				{
 					// Try clear the area
-					foreach (var ord in ClearBlockersOrders(self, world, order.TargetLocation))
+					foreach (var ord in ClearBlockersOrders(self, world, centerTarget))
 						world.IssueOrder(ord);
 
 					Game.Sound.PlayNotification(world.Map.Rules, self.Owner, "Speech", "BuildingCannotPlaceAudio", faction);
-					return NextActivity;
-				}
+					return true;
+                }
 
 				self.World.AddFrameEndTask(w =>
 				{
-					w.CreateActor(true, order.TargetString, new TypeDictionary
+                    w.CreateActor(true, order.TargetString, new TypeDictionary
 						{
-							new LocationInit(order.TargetLocation),
+							new LocationInit(centerTarget),
 							new OwnerInit(order.Player),
 							new FactionInit(faction),
-                            new PlaceBuildingInit()
-                        });
+							new PlaceBuildingInit()
+						});
 
-					Game.Sound.PlayNotification(self.World.Map.Rules, order.Player, "Speech", "Building", faction);
+                    Game.Sound.PlayNotification(self.World.Map.Rules, order.Player, "Speech", "Building", faction);
                 });
 
-                return new RemoveSelf();
+				self.QueueActivity(new RemoveSelf());
+
+				return true;
+
+				// return new RemoveSelf();
             }
 
-            return ActivityUtils.SequenceActivities(
-                move.MoveTo(centerTarget, 2),
-                this);
+            // return ActivityUtils.SequenceActivities(
+            //    move.MoveTo(centerTarget, 2),
+            //    this);
+            return true;
 		}
 
 		// Copied from PlaceBuildingOrderGenerator, triplicated in BuildOnSite and BuilderUnitBuildingOrderGenerator

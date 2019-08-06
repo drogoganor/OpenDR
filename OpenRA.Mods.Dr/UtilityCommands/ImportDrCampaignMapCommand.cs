@@ -11,11 +11,9 @@
 
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using OpenRA.FileSystem;
-using OpenRA.Graphics;
 using OpenRA.Mods.Dr.FileFormats;
+using OpenRA.Primitives;
 
 namespace OpenRA.Mods.Dr.UtilityCommands
 {
@@ -75,7 +73,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
                 { "Imperium", "imperium" },
             };
 
-            var factionColors = new[] { HSLColor.FromRGB(234, 189, 25), HSLColor.FromRGB(124, 60, 234) };
+            var factionColors = new[] { Color.FromArgb(234, 189, 25), Color.FromArgb(124, 60, 234) };
             var newPlayers = new List<PlayerReference>();
 
             // Add players

@@ -64,7 +64,7 @@ namespace OpenRA.Mods.Common.Traits
         }
     }
 
-	public class DrTerrainRendererInfo : ITraitInfo
+    public class DrTerrainRendererInfo : ITraitInfo
     {
         [FieldLoader.LoadUsing("LoadShorelines")]
         public Dictionary<string, DrTerrainShorelineInfo> Shorelines;
@@ -109,21 +109,21 @@ namespace OpenRA.Mods.Common.Traits
         }
     }
 
-	public sealed class DrTerrainRenderer : IRenderTerrain, IWorldLoaded, INotifyActorDisposing
+    public sealed class DrTerrainRenderer : IRenderTerrain, IWorldLoaded, INotifyActorDisposing
 	{
         readonly DrTerrainRendererInfo info;
         readonly Map map;
-		readonly Dictionary<string, TerrainSpriteLayer> spriteLayers = new Dictionary<string, TerrainSpriteLayer>();
-		Theater theater;
-		bool disposed;
+        readonly Dictionary<string, TerrainSpriteLayer> spriteLayers = new Dictionary<string, TerrainSpriteLayer>();
+        Theater theater;
+        bool disposed;
 
-		public DrTerrainRenderer(World world, DrTerrainRendererInfo info)
+        public DrTerrainRenderer(World world, DrTerrainRendererInfo info)
 		{
 			map = world.Map;
-            this.info = info;
+			this.info = info;
 		}
 
-		void IWorldLoaded.WorldLoaded(World world, WorldRenderer wr)
+        void IWorldLoaded.WorldLoaded(World world, WorldRenderer wr)
 		{
 			theater = wr.Theater;
 
@@ -141,7 +141,7 @@ namespace OpenRA.Mods.Common.Traits
 			map.Height.CellEntryChanged += UpdateCell;
 		}
 
-		public void UpdateCell(CPos cell)
+        public void UpdateCell(CPos cell)
         {
             for (int x = -1; x < 2; x++)
             {
@@ -206,7 +206,7 @@ namespace OpenRA.Mods.Common.Traits
 				r.Render(wr);
 		}
 
-		void INotifyActorDisposing.Disposing(Actor self)
+        void INotifyActorDisposing.Disposing(Actor self)
 		{
 			if (disposed)
 				return;

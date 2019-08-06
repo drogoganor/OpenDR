@@ -31,6 +31,7 @@ freighter.colorpicker:
 	Inherits: Freighter
 	-Buildable:
 	-MapEditorData:
+	-Repairable:
 	RenderSprites:
 		Image: ucfrgst0
 		Palette: colorpicker

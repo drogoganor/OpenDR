@@ -10,12 +10,10 @@
 
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using OpenRA.Effects;
 using OpenRA.GameRules;
 using OpenRA.Graphics;
-using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Graphics;
 using OpenRA.Mods.Common.Traits;
@@ -82,7 +80,7 @@ namespace OpenRA.Mods.Dr.Traits
 		public DetonateWeaponPower(Actor self, DetonateWeaponPowerInfo info)
 			: base(self, info)
 		{
-			this.Info = info;
+			Info = info;
 		}
 
 		public override void Activate(Actor self, Order order, SupportPowerManager manager)
@@ -100,7 +98,7 @@ namespace OpenRA.Mods.Dr.Traits
 				wsb.PlayCustomAnimation(self, Info.ActivationSequence);
 			}
 
-			var targetPosition = self.World.Map.CenterOfCell(order.TargetLocation) + new WVec(WDist.Zero, WDist.Zero, Info.AirburstAltitude);
+			var targetPosition = order.Target.CenterPosition + new WVec(WDist.Zero, WDist.Zero, Info.AirburstAltitude);
 
 			Action detonateWeapon = () => self.World.AddFrameEndTask(w => Info.WeaponInfo.Impact(Target.FromPos(targetPosition), self, Enumerable.Empty<int>()));
 
@@ -125,10 +123,12 @@ namespace OpenRA.Mods.Dr.Traits
 					Info.BeaconImage,
 					Info.BeaconPoster,
 					Info.BeaconPosterPalette,
+					Info.BeaconSequence,
 					Info.ArrowSequence,
 					Info.CircleSequence,
 					Info.ClockSequence,
-					() => FractionComplete);
+					() => FractionComplete,
+					Info.BeaconDelay);
 
 				Action removeBeacon = () => self.World.AddFrameEndTask(w =>
 					{
@@ -205,7 +205,7 @@ namespace OpenRA.Mods.Dr.Traits
 					world.Map.CenterOfCell(xy),
 					power.Info.TargetCircleRange,
 					0,
-					power.Info.TargetCircleUsePlayerColor ? power.Self.Owner.Color.RGB : power.Info.TargetCircleColor,
+					power.Info.TargetCircleUsePlayerColor ? power.Self.Owner.Color : power.Info.TargetCircleColor,
 					Color.FromArgb(96, Color.Black));
 			}
 		}
@@ -214,5 +214,16 @@ namespace OpenRA.Mods.Dr.Traits
 		{
 			return world.Map.Contains(cell) ? power.Info.Cursor : "generic-blocked";
 		}
-	}
+
+		public void Deactivate()
+        {
+            // throw new NotImplementedException();
+        }
+
+		public bool HandleKeyPress(KeyInput e)
+        {
+            // throw new NotImplementedException();
+            return true;
+        }
+    }
 }

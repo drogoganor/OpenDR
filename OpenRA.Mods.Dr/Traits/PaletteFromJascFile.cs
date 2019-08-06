@@ -22,7 +22,8 @@ namespace OpenRA.Mods.Common.Traits
 	[Desc("Load JASC palette. Used for tileset JASC palettes.")]
 	class PaletteFromJascFileInfo : ITraitInfo, IProvidesCursorPaletteInfo
 	{
-		[FieldLoader.Require, PaletteDefinition]
+		[FieldLoader.Require]
+		[PaletteDefinition]
 		[Desc("internal palette name")]
 		public readonly string Name = null;
 
@@ -36,18 +37,18 @@ namespace OpenRA.Mods.Common.Traits
 		[Desc("Map listed indices to shadow. Ignores previous color.")]
 		public readonly int[] ShadowIndex = { };
 
-        [Desc("Premultiply colors with their alpha values.")]
-        public readonly bool Premultiply = false;
+		[Desc("Premultiply colors with their alpha values.")]
+		public readonly bool Premultiply = false;
 
-        public readonly bool AllowModifiers = true;
+		public readonly bool AllowModifiers = true;
 
 		[Desc("Whether this palette is available for cursors.")]
 		public readonly bool CursorPalette = false;
 
-        [Desc("Increase all RGB values by this amount.")]
-        public readonly int Gamma = 0;
+		[Desc("Increase all RGB values by this amount.")]
+		public readonly int Gamma = 0;
 
-        public object Create(ActorInitializer init) { return new PaletteFromJascFile(init.World, this); }
+		public object Create(ActorInitializer init) { return new PaletteFromJascFile(init.World, this); }
 
 		string IProvidesCursorPaletteInfo.Palette { get { return CursorPalette ? Name : null; } }
 

@@ -11,7 +11,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Lint;
@@ -21,6 +20,7 @@ using OpenRA.Mods.Common.Widgets;
 using OpenRA.Mods.Dr.Orders;
 using OpenRA.Mods.Dr.Traits;
 using OpenRA.Network;
+using OpenRA.Primitives;
 using OpenRA.Widgets;
 
 namespace OpenRA.Mods.Dr.Widgets
@@ -31,8 +31,8 @@ namespace OpenRA.Mods.Dr.Widgets
 		public BuilderUnit BuilderUnit;
 	}
 
-	// Copied from ProductionPaletteWidget.
-	public class BuildSelectPaletteWidget : Widget
+    // Copied from ProductionPaletteWidget.
+    public class BuildSelectPaletteWidget : Widget
 	{
 		public readonly int Columns = 3;
 		public readonly int2 IconSize = new int2(64, 48);
@@ -282,10 +282,10 @@ namespace OpenRA.Mods.Dr.Widgets
 				var bi = item.TraitInfo<BuildableInfo>();
 				icon.Play(bi.Icon);
 
-                var dummyQueue = currentQueue.Actor.Owner.PlayerActor.TraitsImplementing<ProductionQueue>()
+				var dummyQueue = currentQueue.Actor.Owner.PlayerActor.TraitsImplementing<ProductionQueue>()
                     .First(q => q.Info.Type == "Dummy");
 
-                var pi = new BuildSelectIcon()
+				var pi = new BuildSelectIcon()
 				{
 					Actor = item,
 					Name = item.Name,
@@ -296,8 +296,8 @@ namespace OpenRA.Mods.Dr.Widgets
 					IconDarkenPalette = worldRenderer.Palette(NotBuildablePalette),
 					Pos = new float2(rect.Location),
 					BuilderUnit = currentQueue,
-                    ProductionQueue = dummyQueue
-                };
+					ProductionQueue = dummyQueue
+				};
 
 				icons.Add(rect, pi);
 				DisplayedIconCount++;

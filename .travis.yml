@@ -1,18 +1,21 @@
 # Travis-CI Build for OpenRAModSDK
 # see travis-ci.org for details
 
+dist: xenial
 language: csharp
-mono: 4.6.1
-sudo: false
+mono: 5.20.1
 
 addons:
   apt:
     packages:
+    - dpkg
     - liblua5.1-0
-    - nsis
-    - nsis-common
 
 script:
+ - wget http://mirrors.kernel.org/ubuntu/pool/universe/n/nsis/nsis-common_3.03-2_all.deb
+ - wget http://mirrors.kernel.org/ubuntu/pool/universe/n/nsis/nsis_3.03-2_amd64.deb
+ - sudo dpkg -i nsis-common_3.03-2_all.deb
+ - sudo dpkg -i nsis_3.03-2_amd64.deb
  - make
  - . mod.config;
    awk '/\r$$/ { exit(1); }' mod.config || (printf "Invalid mod.config format. File must be saved using unix-style (CR, not CRLF) line endings.\n"; travis_terminate 1);
@@ -22,20 +25,17 @@ script:
 before_deploy:
  - mkdir build
  - make check-packaging-scripts && cd build && ../packaging/package-all.sh ${TRAVIS_TAG} ${PWD} && cd ..
- - . mod.config
 
 deploy:
   provider: releases
   api_key: ${GH_DEPLOY_API_KEY}
   file:
-    - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}.exe
+    - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}-x86.exe
+    - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}-x64.exe
+    - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}-x86-winportable.zip
+    - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}-x64-winportable.zip
     - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}-macOS.zip
-    - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}-winportable.zip
-    - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}.AppImage
+    - build/${PACKAGING_INSTALLER_NAME}-${TRAVIS_TAG}-x86_64.AppImage
   skip_cleanup: true
   on:
     tags: true
-
-branches:
-  except:
-  - sdk

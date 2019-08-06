@@ -108,7 +108,7 @@ namespace OpenRA.Mods.Dr.Effects
 			}
 		}
 
-        bool Side(WPos p1, WPos p2, WPos p)
+		bool Side(WPos p1, WPos p2, WPos p)
         {
             WVec diff = p2 - p1;
             WVec perp = new WVec(-diff.Y, diff.X, 0);
@@ -116,12 +116,12 @@ namespace OpenRA.Mods.Dr.Effects
             return d < 0;
         }
 
-        int Dot2d(WVec a, WVec b)
+		int Dot2d(WVec a, WVec b)
         {
             return a.X * b.X + a.Y * b.Y;
         }
 
-        public void Tick(World world)
+		public void Tick(World world)
 		{
 			ticks++;
 			if (anim != null)
@@ -129,14 +129,14 @@ namespace OpenRA.Mods.Dr.Effects
 
 			var lastPos = projectilepos;
 
-            var dx = projectilepos.X - source.X;
-            var dy = projectilepos.Y - source.Y;
-            var normal = new WVec(dy, -dx, 0);
+			var dx = projectilepos.X - source.X;
+			var dy = projectilepos.Y - source.Y;
+			var normal = new WVec(dy, -dx, 0);
 
-            targetpos = projectilepos;
-            var originalVec = projectilepos - source;
+			targetpos = projectilepos;
+			var originalVec = projectilepos - source;
 
-            if (dx != 0 || dy != 0)
+			if (dx != 0 || dy != 0)
             {
                 int circSpeed = 1 + (ticks * 3);
                 int maxSpeed = 200;
@@ -152,9 +152,9 @@ namespace OpenRA.Mods.Dr.Effects
                 targetpos += args.VecNormalized;
             }
 
-            projectilepos = targetpos;
+			projectilepos = targetpos;
 
-            if (ticks > 90)
+			if (ticks > 90)
                 DetonateSelf = true;
 
 			// Check for walls or other blocking obstacles.

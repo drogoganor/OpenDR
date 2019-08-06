@@ -116,7 +116,7 @@ namespace OpenRA.Mods.Dr.Traits
 				: baseBuilder.Info.StructureProductionInactiveDelay + randomFactor;
 		}
 
-        bool TickQueue(IBot bot, ProductionQueue queue)
+		bool TickQueue(IBot bot, ProductionQueue queue)
 		{
 			var currentBuilding = queue.AllQueued().FirstOrDefault();
 
@@ -311,14 +311,14 @@ namespace OpenRA.Mods.Dr.Traits
 					continue;
 
                 // TODO: This is a DR hack
-                if (baseBuilder.Info.BuildingAliases.ContainsKey(name))
+				if (baseBuilder.Info.BuildingAliases.ContainsKey(name))
                 {
                     var aliases = baseBuilder.Info.BuildingAliases[name];
                     if (playerBuildings.Count(a => aliases.Contains(a.Info.Name)) >= baseBuilder.Info.BuildingLimits[name])
                         continue;
                 }
 
-                if (baseBuilder.Info.BuildingLimits.ContainsKey(name) && baseBuilder.Info.BuildingLimits[name] <= count)
+				if (baseBuilder.Info.BuildingLimits.ContainsKey(name) && baseBuilder.Info.BuildingLimits[name] <= count)
 					continue;
 
 				// If we're considering to build a naval structure, check whether there is enough water inside the base perimeter

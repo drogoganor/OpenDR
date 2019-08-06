@@ -10,28 +10,31 @@
 #endregion
 
 using System.Linq;
+using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Dr.Activities;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits
 {
-    [Desc("Allows the player to execute build orders.", " Attach this to the player actor.")]
+	[Desc("Allows the player to execute build orders.", " Attach this to the player actor.")]
 	public class BuildUnitPlaceBuildingInfo : ITraitInfo
 	{
-		[Desc("Palette to use for rendering the placement sprite.")]
-		[PaletteReference] public readonly string Palette = TileSet.TerrainPaletteInternalName;
+        [Desc("Palette to use for rendering the placement sprite.")]
+        [PaletteReference]
+        public readonly string Palette = TileSet.TerrainPaletteInternalName;
 
-		[Desc("Palette to use for rendering the placement sprite for line build segments.")]
-		[PaletteReference] public readonly string LineBuildSegmentPalette = TileSet.TerrainPaletteInternalName;
+        [Desc("Palette to use for rendering the placement sprite for line build segments.")]
+        [PaletteReference]
+        public readonly string LineBuildSegmentPalette = TileSet.TerrainPaletteInternalName;
 
-		[Desc("Play NewOptionsNotification this many ticks after building placement.")]
-		public readonly int NewOptionsNotificationDelay = 10;
+        [Desc("Play NewOptionsNotification this many ticks after building placement.")]
+        public readonly int NewOptionsNotificationDelay = 10;
 
-		[Desc("Notification to play after building placement if new construction options are available.")]
-		public readonly string NewOptionsNotification = "NewOptions";
+        [Desc("Notification to play after building placement if new construction options are available.")]
+        public readonly string NewOptionsNotification = "NewOptions";
 
-		public object Create(ActorInitializer init) { return new BuildUnitPlaceBuilding(this); }
+        public object Create(ActorInitializer init) { return new BuildUnitPlaceBuilding(this); }
 	}
 
 	// Copied from PlaceBuilding
@@ -75,11 +78,13 @@ namespace OpenRA.Mods.Dr.Traits
 				if (buildableInfo != null && buildableInfo.ForceFaction != null)
 					faction = buildableInfo.ForceFaction;
 
-				if (!self.World.CanPlaceBuilding(order.TargetLocation, actorInfo, buildingInfo, targetActor))
+				if (!self.World.CanPlaceBuilding(self.World.Map.CellContaining(order.Target.CenterPosition), actorInfo, buildingInfo, targetActor))
 					return;
 
 				// Make the actor move to the location
 				var buildActivity = new BuildOnSite(w, targetActor, order, faction, buildingInfo);
+				var moveActivity = new Move(targetActor, self.World.Map.CellContaining(order.Target.CenterPosition));
+				targetActor.QueueActivity(moveActivity);
 				targetActor.QueueActivity(buildActivity);
 			});
 		}

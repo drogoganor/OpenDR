@@ -20,13 +20,14 @@ namespace OpenRA.Mods.Common.Traits.Render
 	{
 		public readonly string Image = "eosmlfl0";
 
-        [SequenceReference("Image")] public readonly string Sequence = "idle";
+		[SequenceReference("Image")]
+		public readonly string Sequence = "idle";
 
 		[Desc("Damage types that this should be used for (defined on the warheads).",
 			"Leave empty to disable all filtering.")]
 		public readonly BitSet<DamageType> DamageTypes = default(BitSet<DamageType>);
 
-        public readonly WVec Offset = WVec.Zero;
+		public readonly WVec Offset = WVec.Zero;
 
 		[Desc("Trigger when Undamaged, Light, Medium, Heavy, Critical or Dead.")]
 		public readonly DamageState MinimumDamageState = DamageState.Heavy;
@@ -40,20 +41,20 @@ namespace OpenRA.Mods.Common.Traits.Render
 		readonly WithFlamesOverlayInfo info;
 		readonly Animation anim;
 
-        bool isBurning;
+		bool isBurning;
 
-        public WithFlamesOverlay(Actor self, WithFlamesOverlayInfo info)
+		public WithFlamesOverlay(Actor self, WithFlamesOverlayInfo info)
 		{
 			this.info = info;
 
-            var rs = self.Trait<RenderSprites>();
+			var rs = self.Trait<RenderSprites>();
 
 			anim = new Animation(self.World, info.Image);
 			rs.Add(new AnimationWithOffset(anim, () => info.Offset, () => !isBurning));
-            anim.PlayRepeating(info.Sequence);
+			anim.PlayRepeating(info.Sequence);
         }
 
-        void ITick.Tick(Actor self)
+		void ITick.Tick(Actor self)
         {
             var dmgState = self.GetDamageState();
             isBurning = dmgState > info.MinimumDamageState && dmgState <= info.MaximumDamageState;

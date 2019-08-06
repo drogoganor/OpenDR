@@ -11,9 +11,7 @@
 
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
-using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Primitives;
 
@@ -114,42 +112,42 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				frames.Add(frame);
 			}
 
-            frames.Reverse(19, 9);
-            frames.Reverse(28, 4);
-            frames.Reverse(32, 8);
-            frames.Reverse(40, 10);
-            frames.Reverse(50, 7);
-            frames.Reverse(62, 6);
-            frames.Reverse(68, 8);
-            frames.Reverse(76, 8);
-            frames.Reverse(90, 6);
-            frames.Reverse(96, 8);
-            frames.Reverse(104, 8);
-            frames.Reverse(112, 4);
-            frames.Reverse(116, 4);
-            frames.Reverse(120, 4);
-            frames.Reverse(124, 4);
-            frames.Reverse(128, 7);
-            frames.Reverse(135, 7);
-            frames.Reverse(142, 7);
-            frames.Reverse(149, 7);
-            frames.Reverse(156, 7);
-            frames.Reverse(163, 7);
-            frames.Reverse(170, 7);
-            frames.Reverse(177, 7);
-            frames.Reverse(185, 9);
-            frames.Reverse(194, 7);
-            frames.Reverse(202, 8);
-            frames.Reverse(210, 5);
-            frames.Reverse(215, 5);
-            frames.Reverse(229, 11);
-            frames.Reverse(240, 11);
-            frames.Reverse(251, 8);
-            frames.Reverse(263, 8);
-            frames.Reverse(279, 9);
+			frames.Reverse(19, 9);
+			frames.Reverse(28, 4);
+			frames.Reverse(32, 8);
+			frames.Reverse(40, 10);
+			frames.Reverse(50, 7);
+			frames.Reverse(62, 6);
+			frames.Reverse(68, 8);
+			frames.Reverse(76, 8);
+			frames.Reverse(90, 6);
+			frames.Reverse(96, 8);
+			frames.Reverse(104, 8);
+			frames.Reverse(112, 4);
+			frames.Reverse(116, 4);
+			frames.Reverse(120, 4);
+			frames.Reverse(124, 4);
+			frames.Reverse(128, 7);
+			frames.Reverse(135, 7);
+			frames.Reverse(142, 7);
+			frames.Reverse(149, 7);
+			frames.Reverse(156, 7);
+			frames.Reverse(163, 7);
+			frames.Reverse(170, 7);
+			frames.Reverse(177, 7);
+			frames.Reverse(185, 9);
+			frames.Reverse(194, 7);
+			frames.Reverse(202, 8);
+			frames.Reverse(210, 5);
+			frames.Reverse(215, 5);
+			frames.Reverse(229, 11);
+			frames.Reverse(240, 11);
+			frames.Reverse(251, 8);
+			frames.Reverse(263, 8);
+			frames.Reverse(279, 9);
 
-            bool isDemo = frames.Count < 296;
-            if (!isDemo)
+			bool isDemo = frames.Count < 296;
+			if (!isDemo)
             {
                 var cursor1 = frames[304];
                 var cursor2 = frames[321];
@@ -161,7 +159,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
                 frames.Reverse(291, 8);
             }
 
-            s.Position = start;
+			s.Position = start;
 			return frames.ToArray();
 		}
 
@@ -174,8 +172,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				return false;
 			}
 
-			frames = ParseFrames(s);
-			return true;
+            frames = ParseFrames(s);
+            return true;
 		}
 	}
 }

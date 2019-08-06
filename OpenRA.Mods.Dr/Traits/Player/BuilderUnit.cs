@@ -17,7 +17,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits
 {
-    [Desc("Attach this to an actor (a builder unit) to let it select buildings to construct.")]
+	[Desc("Attach this to an actor (a builder unit) to let it select buildings to construct.")]
 	public class BuilderUnitInfo : ITraitInfo
 	{
 		[FieldLoader.Require]
@@ -59,10 +59,12 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public Actor Actor { get { return self; } }
 
-		[Sync] public bool Enabled { get; protected set; }
+		[Sync]
+		public bool Enabled { get; protected set; }
 
 		public string Faction { get; private set; }
-		[Sync] public bool IsValidFaction { get; private set; }
+		[Sync]
+		public bool IsValidFaction { get; private set; }
 
 		public BuilderUnit(ActorInitializer init, Actor playerActor, BuilderUnitInfo info)
 		{

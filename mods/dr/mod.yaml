@@ -1,6 +1,6 @@
 Metadata:
 	Title: Dark Reign
-	Version: {DEV_VERSION}
+	Version: release-20190314
 
 PackageFormats: FtgFile
 
@@ -122,7 +122,7 @@ ChromeLayout:
 	common|chrome/ingame-infobriefing.yaml
 	common|chrome/ingame-infoobjectives.yaml
 	common|chrome/ingame-infostats.yaml
-	common|chrome/ingame-observerstats.yaml
+	common|chrome/ingame-debuginfo.yaml
 	common|chrome/ingame-perf.yaml
 	common|chrome/ingame-debug.yaml
 	common|chrome/ingame-infochat.yaml
@@ -144,6 +144,8 @@ ChromeLayout:
 	common|chrome/missionbrowser.yaml
 	common|chrome/confirmation-dialogs.yaml
 	common|chrome/replaybrowser.yaml
+	common|chrome/gamesave-browser.yaml
+	common|chrome/gamesave-loading.yaml
 	common|chrome/musicplayer.yaml
 	common|chrome/assetbrowser.yaml
 	common|chrome/credits.yaml
@@ -192,22 +194,28 @@ ChromeMetrics:
 Fonts:
 	Tiny:
 		Font: common|FreeSansBold.ttf
-		Size:9
+		Size: 9
+		Ascender: 7
 	TinyBold:
 		Font: common|FreeSansBold.ttf
-		Size:9
+		Size: 9
+		Ascender: 7
 	Small:
 		Font: common|FreeSansBold.ttf
-		Size:10
+		Size: 10
+		Ascender: 8
 	MediumBold:
 		Font: common|FreeSansBold.ttf
-		Size:11
+		Size: 11
+		Ascender: 8
 	Regular:
 		Font: common|FreeSansBold.ttf
-		Size:12
+		Size: 12
+		Ascender: 9
 	Bold:
 		Font: common|FreeSansBold.ttf
-		Size:14
+		Size: 14
+		Ascender: 11
 
 Missions:
 	dr|missions.yaml

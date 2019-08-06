@@ -16,6 +16,7 @@ using System.Linq;
 using OpenRA.FileSystem;
 using OpenRA.Graphics;
 using OpenRA.Mods.Dr.FileFormats;
+using OpenRA.Primitives;
 
 namespace OpenRA.Mods.Dr.UtilityCommands
 {
@@ -37,7 +38,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
         private static string[] knownUnknownThings = new string[]
         {
             "smcrater", // Not sure if these are ever deliberately placed on a map
-			"medcrater",
+            "medcrater",
             "bigcrater",
             "largercrater",
             "hugecrater1",
@@ -51,8 +52,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
         private static string[] knownUnknownBuildings = new string[]
         {
             "impmn", // Taelon resource
-			"impww", // Water resource
-			"fh1_decoy",
+            "impww", // Water resource
+            "fh1_decoy",
             "ih1_decoy",
             "fu1_decoy",
             "iu1_decoy",
@@ -105,7 +106,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "water3", "aowtr002" },
             { "brdh", "DirtBridge" },
             { "brdv", "DirtBridge" }, // Allow it to face the other way
-			{ "wreck1", "aowrk000" },
+            { "wreck1", "aowrk000" },
             { "wreck2", "aowrk001" },
             { "wreck3", "aowrk002" },
             { "watercrater", "eowcocr0" },
@@ -139,7 +140,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "FGContaminator", "WaterContaminator" },
 
 			// { "FGundergtunnel", "PhaseRunner" },
-			{ "IMPConstructionCrew", "ConstructionRig" },
+            { "IMPConstructionCrew", "ConstructionRig" },
             { "ImpGroundTransporter", "Freighter" },
             { "ImpHoverTransporter", "HoverFreighter" },
             { "IMPStrikeMarine", "Guardian" },
@@ -148,7 +149,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "IMPSpy", "Infiltrator" },
 
 			// { "IMPSuicideZombie", "SuicideZombie" },
-			{ "IMPScoutTank", "ScoutRunner" },
+            { "IMPScoutTank", "ScoutRunner" },
             { "IMPAssaultVehicle", "ITT" },
             { "IMPPlasmaTank", "PlasmaTank" },
             { "IMPAmper", "Amper" },
@@ -157,7 +158,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "IMPShredder", "Shredder" },
             { "IMPHostageTaker", "HostageTaker" },
             { "IMPTachyonTank", "TachionTank" }, // Note spelling difference
-			{ "IMPShieldedSPA", "SCARAB" },
+            { "IMPShieldedSPA", "SCARAB" },
             { "IMPSPA", "SCARAB" },
             { "ImpVTOL", "Cyclone" },
             { "IMPSkyFortress", "SkyFortress" },
@@ -171,8 +172,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "JebRadec", "JebRadec" },
             { "Karoch", "Karoch" },
             { "IMPSuicideZombie", "Martyr" }, // Hostage taker output
-			{ "TVTOL", "Cyclone" }, // Togran cyclone
-			{ "TSkyFortress", "SkyFortress" },
+            { "TVTOL", "Cyclone" }, // Togran cyclone
+            { "TSkyFortress", "SkyFortress" },
             { "TPlasmaTank", "PlasmaTank" },
             { "TShredder", "Shredder" },
             { "TMechanic", "Mechanic" },
@@ -220,7 +221,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "impar", "RearmingDeck.cyborg" },
             { "ft1", "PhasingFacility" },
             { "ft2", "PhasingFacility" }, // Should be upgraded
-			{ "it", "TemporalGate" },
+            { "it", "TemporalGate" },
             { "itrc", "TemporalRiftCreator" },
             { "fgth", "FreedomGuardTreatyHall" },
             { "impdr", "ImperiumDesicator" },
@@ -247,7 +248,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "SmallHorizontalBridge", "SmallSHHorizontalBridge" },
             { "SmallVerticalBridge", "SmallSHVerticalBridge" },
             { "tfgpp", "Power" }, // Togran
-			{ "tfg", "LaserTurret" },
+            { "tfg", "LaserTurret" },
             { "tfa", "HeavyRailTurret" },
             { "tfglp", "WaterLaunchPad" },
             { "tfgre", "Repair.human" },
@@ -566,18 +567,18 @@ namespace OpenRA.Mods.Dr.UtilityCommands
         }
 
         // TODO: fix this -- will have bitrotted pretty badly.
-        protected Dictionary<string, HSLColor> namedColorMapping = new Dictionary<string, HSLColor>()
+        protected Dictionary<string, Color> namedColorMapping = new Dictionary<string, Color>()
         {
-            { "blue", HSLColor.FromRGB(46, 92, 244) },
-            { "red", HSLColor.FromRGB(255, 20, 0) },
-            { "green", HSLColor.FromRGB(160, 240, 140) },
-            { "teal", HSLColor.FromRGB(93, 194, 165) },
-            { "salmon", HSLColor.FromRGB(210, 153, 125) },
-            { "black", HSLColor.FromRGB(80, 80, 80) },
-            { "gold", HSLColor.FromRGB(246, 214, 121) },
-            { "pink", HSLColor.FromRGB(232, 85, 212) },
-            { "orange", HSLColor.FromRGB(255, 230, 149) },
-            { "lime", HSLColor.FromRGB(0, 255, 0) },
+            { "blue", Color.FromArgb(46, 92, 244) },
+            { "red", Color.FromArgb(255, 20, 0) },
+            { "green", Color.FromArgb(160, 240, 140) },
+            { "teal", Color.FromArgb(93, 194, 165) },
+            { "salmon", Color.FromArgb(210, 153, 125) },
+            { "black", Color.FromArgb(80, 80, 80) },
+            { "gold", Color.FromArgb(246, 214, 121) },
+            { "pink", Color.FromArgb(232, 85, 212) },
+            { "orange", Color.FromArgb(255, 230, 149) },
+            { "lime", Color.FromArgb(0, 255, 0) },
         };
 
         protected void SetNeutralPlayer(MapPlayers mapPlayers)
@@ -589,7 +590,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
                 OwnsWorld = true,
                 NonCombatant = true,
                 Faction = "fguard",
-                Color = HSLColor.FromRGB(255, 255, 255)
+                Color = Color.FromArgb(255, 255, 255)
             };
 
             // Overwrite default player definitions if needed

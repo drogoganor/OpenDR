@@ -35,8 +35,8 @@ namespace OpenRA.Mods.Dr.Effects
 		[Sync]
 		int facing;
 		int ticks, smokeTicks;
-        [Sync]
-        bool converged;
+		[Sync]
+		bool converged;
 		World world;
 		public bool DetonateSelf { get; private set; }
 		public WPos Position { get { return projectilepos; } }
@@ -110,7 +110,7 @@ namespace OpenRA.Mods.Dr.Effects
 			}
 		}
 
-        bool Side(WPos p1, WPos p2, WPos p)
+		bool Side(WPos p1, WPos p2, WPos p)
         {
             WVec diff = p2 - p1;
             WVec perp = new WVec(-diff.Y, diff.X, 0);
@@ -118,12 +118,12 @@ namespace OpenRA.Mods.Dr.Effects
             return d < 0;
         }
 
-        int Dot2d(WVec a, WVec b)
+		int Dot2d(WVec a, WVec b)
         {
             return a.X * b.X + a.Y * b.Y;
         }
 
-        public void Tick(World world)
+		public void Tick(World world)
 		{
 			ticks++;
 			if (anim != null)
@@ -131,7 +131,7 @@ namespace OpenRA.Mods.Dr.Effects
 
 			var lastPos = projectilepos;
 
-            if (!converged)
+			if (!converged)
             {
                 var p1 = args.ConvergePoint;
                 var p2 = p1 + args.Normal;

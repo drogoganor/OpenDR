@@ -24,7 +24,8 @@ namespace OpenRA.Mods.Dr.Traits
 	[Desc("Load a Dark Reign .PAL palette file. Index 0 is hardcoded to be fully transparent/invisible.")]
 	class PaletteFromDrFileInfo : ITraitInfo, IProvidesCursorPaletteInfo
     {
-		[FieldLoader.Require, PaletteDefinition]
+		[FieldLoader.Require]
+		[PaletteDefinition]
 		[Desc("internal palette name")]
 		public readonly string Name = null;
 
@@ -40,23 +41,23 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public readonly bool AllowModifiers = true;
 
-        [Desc("Whether this palette is available for cursors.")]
-        public readonly bool CursorPalette = false;
+		[Desc("Whether this palette is available for cursors.")]
+		public readonly bool CursorPalette = false;
 
-        [Desc("Multiply palette values by this ( < 160).")]
-        public readonly int StandardPaletteMultiplier = 4;
+		[Desc("Multiply palette values by this ( < 160).")]
+		public readonly int StandardPaletteMultiplier = 4;
 
-        [Desc("Multiply terrain palette values by this ( >= 160).")]
-        public readonly int TerrainPaletteMultiplier = 4;
+		[Desc("Multiply terrain palette values by this ( >= 160).")]
+		public readonly int TerrainPaletteMultiplier = 4;
 
-        [Desc("Increase all RGB values by this amount.")]
-        public readonly int Gamma = 0;
+		[Desc("Increase all RGB values by this amount.")]
+		public readonly int Gamma = 0;
 
-        public object Create(ActorInitializer init) { return new PaletteFromDrFile(init.World, this); }
+		public object Create(ActorInitializer init) { return new PaletteFromDrFile(init.World, this); }
 
-        string IProvidesCursorPaletteInfo.Palette { get { return CursorPalette ? Name : null; } }
+		string IProvidesCursorPaletteInfo.Palette { get { return CursorPalette ? Name : null; } }
 
-        ImmutablePalette IProvidesCursorPaletteInfo.ReadPalette(IReadOnlyFileSystem fileSystem)
+		ImmutablePalette IProvidesCursorPaletteInfo.ReadPalette(IReadOnlyFileSystem fileSystem)
         {
             using (var s = fileSystem.Open(Filename))
             {
@@ -75,7 +76,7 @@ namespace OpenRA.Mods.Dr.Traits
 			this.info = info;
 		}
 
-        public static ImmutablePalette PaletteFromStream(Stream s, PaletteFromDrFileInfo info)
+		public static ImmutablePalette PaletteFromStream(Stream s, PaletteFromDrFileInfo info)
         {
             var colors = new uint[Palette.Size];
             var headerName = s.ReadASCII(4);
@@ -134,9 +135,9 @@ namespace OpenRA.Mods.Dr.Traits
 				return;
 			}
 
-            var newPal = PaletteFromStream(s, info);
+			var newPal = PaletteFromStream(s, info);
 
-            if (info.Tileset == null || info.Tileset.ToLowerInvariant() == world.Map.Tileset.ToLowerInvariant())
+			if (info.Tileset == null || info.Tileset.ToLowerInvariant() == world.Map.Tileset.ToLowerInvariant())
 				wr.AddPalette(info.Name, newPal, info.AllowModifiers);
 
 			s.Close();

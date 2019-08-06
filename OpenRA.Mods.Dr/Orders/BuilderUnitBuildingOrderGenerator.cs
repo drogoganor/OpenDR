@@ -32,6 +32,7 @@ namespace OpenRA.Mods.Dr.Orders
 		readonly ActorInfo actorInfo;
 		readonly BuildingInfo buildingInfo;
 		readonly PlaceBuildingInfo placeBuildingInfo;
+		readonly FootprintPlaceBuildingPreviewInfo footprintPlaceBuildingPreviewInfo;
 		readonly string faction;
 		readonly Sprite buildOk;
 		readonly Sprite buildBlocked;
@@ -49,7 +50,7 @@ namespace OpenRA.Mods.Dr.Orders
 			viewport = worldRenderer.Viewport;
 			placeBuildingInfo = queue.Actor.Owner.PlayerActor.Info.TraitInfo<PlaceBuildingInfo>();
 
-			// Clear selection if using Left-Click Orders
+            // Clear selection if using Left-Click Orders
 			if (Game.Settings.Game.UseClassicMouseStyle)
 				world.Selection.Clear();
 
@@ -57,6 +58,7 @@ namespace OpenRA.Mods.Dr.Orders
 			var tileset = world.Map.Tileset.ToLowerInvariant();
 
 			actorInfo = map.Rules.Actors[name];
+			footprintPlaceBuildingPreviewInfo = actorInfo.TraitInfo<FootprintPlaceBuildingPreviewInfo>();
 			buildingInfo = actorInfo.TraitInfo<BuildingInfo>();
 			centerOffset = buildingInfo.CenterOffset(world);
 			topLeftScreenOffset = -worldRenderer.ScreenPxOffset(centerOffset);
@@ -107,7 +109,7 @@ namespace OpenRA.Mods.Dr.Orders
 				var orderType = "BuildUnitPlaceBuilding";
 				var topLeft = viewport.ViewToWorld(Viewport.LastMousePos + topLeftScreenOffset);
 
-                if (!world.CanPlaceBuilding(topLeft, actorInfo, buildingInfo, queue.Actor))
+				if (!world.CanPlaceBuilding(topLeft, actorInfo, buildingInfo, queue.Actor))
 				{
 					foreach (var order in ClearBlockersOrders(world, topLeft))
 						yield return order;
@@ -116,11 +118,11 @@ namespace OpenRA.Mods.Dr.Orders
 					yield break;
 				}
 
-                yield return new Order(orderType, owner.PlayerActor, Target.FromCell(world, topLeft), false)
+				yield return new Order(orderType, owner.PlayerActor, Target.FromCell(world, topLeft), false)
 				{
 					TargetString = actorInfo.Name,
-                    ExtraLocation = topLeft + (buildingInfo.Dimensions / 2),
-                    ExtraData = queue.Actor.ActorID,
+					ExtraLocation = topLeft + (buildingInfo.Dimensions / 2),
+					ExtraData = queue.Actor.ActorID,
 					SuppressVisualFeedback = true
 				};
 			}
@@ -183,8 +185,8 @@ namespace OpenRA.Mods.Dr.Orders
 			foreach (var t in buildingInfo.Tiles(topLeft))
 				cells.Add(t, MakeCellType(isCloseEnough && world.IsCellBuildable(t, actorInfo, buildingInfo) && (res == null || res.GetResource(t) == null)));
 
-			var cellPalette = wr.Palette(placeBuildingInfo.Palette);
-			var linePalette = wr.Palette(placeBuildingInfo.LineBuildSegmentPalette);
+			var cellPalette = wr.Palette(footprintPlaceBuildingPreviewInfo.Palette);
+			var linePalette = wr.Palette(footprintPlaceBuildingPreviewInfo.LineBuildSegmentPalette);
 			var topLeftPos = world.Map.CenterOfCell(topLeft);
 			foreach (var c in cells)
 			{
@@ -199,7 +201,7 @@ namespace OpenRA.Mods.Dr.Orders
 		public string GetCursor(World world, CPos cell, int2 worldPixel, MouseInput mi) { return "default"; }
 
         // Copied from PlaceBuildingOrderGenerator, triplicated in BuildOnSite and BuilderUnitBuildingOrderGenerator
-        IEnumerable<Order> ClearBlockersOrders(World world, CPos topLeft)
+		IEnumerable<Order> ClearBlockersOrders(World world, CPos topLeft)
 		{
 			var allTiles = buildingInfo.Tiles(topLeft).ToArray();
 			var neightborTiles = Common.Util.ExpandFootprint(allTiles, true).Except(allTiles)
@@ -221,5 +223,16 @@ namespace OpenRA.Mods.Dr.Orders
 				};
 			}
 		}
-	}
+
+		public void Deactivate()
+        {
+            // throw new NotImplementedException();
+        }
+
+		public bool HandleKeyPress(KeyInput e)
+        {
+            // throw new NotImplementedException();
+            return true;
+        }
+    }
 }

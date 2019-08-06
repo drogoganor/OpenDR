@@ -39,9 +39,9 @@ namespace OpenRA.Mods.Dr.Graphics
 
 			var spriteName = sprite ?? sequence;
 
-            var validTilesetIds = new string[] { "BARREN", "JUNGLE", "SNOW" }; // Alien?
+			var validTilesetIds = new string[] { "BARREN", "JUNGLE", "SNOW" }; // Alien?
 
-            if (!spriteName.EndsWith(".shp"))
+			if (!spriteName.EndsWith(".shp"))
             {
                 if (spriteName.StartsWith("tileset|"))
                 {
@@ -59,7 +59,7 @@ namespace OpenRA.Mods.Dr.Graphics
                 }
             }
 
-            if (LoadField(d, "AddExtension", true))
+			if (LoadField(d, "AddExtension", true))
 			{
 				return spriteName + loader.DefaultSpriteExtension;
 			}

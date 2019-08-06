@@ -39,7 +39,8 @@ namespace OpenRA.Mods.Common.Traits
         WVec targetVec = new WVec(8192, 0, 0);
         int ticks = 0;
 
-        public Vortex(Actor self, VortexInfo info) : base(info)
+        public Vortex(Actor self, VortexInfo info)
+            : base(info)
 		{
             this.info = info;
 		}

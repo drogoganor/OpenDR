@@ -72,17 +72,17 @@ namespace OpenRA.Mods.Dr.Warheads
 				var ai = map.Rules.Actors[a.ToLowerInvariant()];
 
 				td.Add(new OwnerInit(firedBy.Owner));
-                Actor unit = null;
+				Actor unit = null;
 				while (cell.MoveNext())
 				{
 					var cellpos = firedBy.World.Map.CenterOfCell(cell.Current);
 					var pos = cellpos;
 
-                    td.Add(new LocationInit(cell.Current));
+					td.Add(new LocationInit(cell.Current));
 
-                    unit = firedBy.World.CreateActor(false, a.ToLowerInvariant(), td);
+					unit = firedBy.World.CreateActor(false, a.ToLowerInvariant(), td);
 
-                    firedBy.World.AddFrameEndTask(w =>
+					firedBy.World.AddFrameEndTask(w =>
 					{
 						w.Add(unit);
 

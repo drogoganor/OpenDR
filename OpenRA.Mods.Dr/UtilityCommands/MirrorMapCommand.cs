@@ -208,7 +208,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "temporalriftcreator", new int2(3, 3) },
             { "trainingfacility.xenite", new int2(4, 3) },
             { "matrix", new int2(3, 3) },
-
             { "aotre000", new int2(0, -1) },
             { "aotre001", new int2(0, -1) },
             { "aotre002", new int2(0, -1) },
@@ -223,7 +222,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "aoclf003", new int2(1, 3) },
             { "aoclf004", new int2(1, 3) },
             { "aoclf005", new int2(3, 3) },
-
             { "aotre000.snow", new int2(0, -1) },
             { "aotre001.snow", new int2(0, -1) },
             { "aotre002.snow", new int2(0, -1) },
@@ -238,7 +236,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "aoclf003.snow", new int2(1, 3) },
             { "aoclf004.snow", new int2(1, 3) },
             { "aoclf005.snow", new int2(3, 3) },
-
             { "aotre000.jungle", new int2(0, -1) },
             { "aotre001.jungle", new int2(0, -1) },
             { "aotre002.jungle", new int2(0, -1) },
@@ -253,7 +250,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
             { "aoclf003.jungle", new int2(1, 3) },
             { "aoclf004.jungle", new int2(1, 3) },
             { "aoclf005.jungle", new int2(3, 3) },
-
             { "aotre000.base", new int2(0, -1) },
             { "aotre001.base", new int2(0, -1) },
             { "aotre002.base", new int2(0, -1) },

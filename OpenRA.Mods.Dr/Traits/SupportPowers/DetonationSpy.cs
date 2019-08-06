@@ -29,7 +29,8 @@ namespace OpenRA.Mods.Common.Traits
 
         int ticks = 0;
 
-        public DetonationSpy(Actor self, DetonationSpyInfo info) : base(info)
+        public DetonationSpy(Actor self, DetonationSpyInfo info)
+            : base(info)
 		{
             this.info = info;
 		}

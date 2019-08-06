@@ -10,11 +10,10 @@
 
 using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
 using OpenRA.GameRules;
 using OpenRA.Graphics;
 using OpenRA.Mods.Dr.Effects;
+using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Projectiles
@@ -27,7 +26,7 @@ namespace OpenRA.Mods.Dr.Projectiles
     }
 
     [Desc("Detonates all warheads attached to Weapon each ExplosionInterval ticks.")]
-	public class ShockWaveProjectileInfo : IProjectileInfo, IRulesetLoaded<WeaponInfo>
+    public class ShockWaveProjectileInfo : IProjectileInfo, IRulesetLoaded<WeaponInfo>
 	{
 		[Desc("Projectile speed in WDist / tick, two values indicate variable velocity.")]
 		public readonly WDist[] Speed = { new WDist(17) };
@@ -109,16 +108,16 @@ namespace OpenRA.Mods.Dr.Projectiles
 		[Desc("If projectile touches an actor with one of these stances during or after the first bounce, trigger explosion.")]
 		public readonly Stance ValidBounceBlockerStances = Stance.Enemy | Stance.Neutral | Stance.Ally;
 
-        [Desc("Number of projectiles to fire.")]
-        public readonly int NumProjectiles = 12;
+		[Desc("Number of projectiles to fire.")]
+		public readonly int NumProjectiles = 12;
 
-        [Desc("Projectiles will spread until this distance has been reached.")]
-        public readonly WDist SpreadUntilDistance = new WDist(6144);
+		[Desc("Projectiles will spread until this distance has been reached.")]
+		public readonly WDist SpreadUntilDistance = new WDist(6144);
 
-        [Desc("Projectile spread value.")]
-        public readonly int Splay = 4;
+		[Desc("Projectile spread value.")]
+		public readonly int Splay = 4;
 
-        public IProjectile Create(ProjectileArgs args) { return new ShockWaveProjectile(this, args); }
+		public IProjectile Create(ProjectileArgs args) { return new ShockWaveProjectile(this, args); }
 
 		void IRulesetLoaded<WeaponInfo>.RulesetLoaded(Ruleset rules, WeaponInfo info)
 		{
@@ -129,7 +128,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 		}
 	}
 
-	public class ShockWaveProjectile : IProjectile, ISync
+    public class ShockWaveProjectile : IProjectile, ISync
 	{
 		readonly ShockWaveProjectileInfo info;
 		readonly ProjectileArgs args;
@@ -164,7 +163,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 
 			mindelay = args.Weapon.MinRange.Length / speed.Length;
 
-            projectiles = new ShockWaveProjectileEffect[info.NumProjectiles];
+			projectiles = new ShockWaveProjectileEffect[info.NumProjectiles];
 
 			var mainFacing = (targetpos - sourcepos).Yaw.Facing;
 
@@ -177,12 +176,12 @@ namespace OpenRA.Mods.Dr.Projectiles
 			// subprojectiles facing
 			int facing = 0;
 
-            var convergePoint = WPos.Lerp(sourcepos, targetpos, info.SpreadUntilDistance.Length, (targetpos - sourcepos).Length);
-            var dx = targetpos.X - sourcepos.X;
-            var dy = targetpos.Y - sourcepos.Y;
-            var normal = new WVec(-dy, dx, 0);
+			var convergePoint = WPos.Lerp(sourcepos, targetpos, info.SpreadUntilDistance.Length, (targetpos - sourcepos).Length);
+			var dx = targetpos.X - sourcepos.X;
+			var dy = targetpos.Y - sourcepos.Y;
+			var normal = new WVec(-dy, dx, 0);
 
-            for (int i = 0; i < info.NumProjectiles; i++)
+			for (int i = 0; i < info.NumProjectiles; i++)
             {
                 target = Target.FromPos(targetpos);
 
@@ -217,8 +216,8 @@ namespace OpenRA.Mods.Dr.Projectiles
                 projectiles[i] = new ShockWaveProjectileEffect(info, projectileArgs, lifespan, estimatedLifespan);
             }
 
-            foreach (var p in projectiles)
-			world.AddFrameEndTask(w => w.Add(p));
+			foreach (var p in projectiles)
+			    world.AddFrameEndTask(w => w.Add(p));
 		}
 
 		// gets where main projectile should fly to

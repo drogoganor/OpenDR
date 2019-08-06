@@ -18,7 +18,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
 	Repairable:
-		RepairBuildings: hospital.human, hospital.cyborg
+		RepairActors: hospital.human, hospital.cyborg
 	Huntable:
 	Health:
 		HP: 2500
@@ -170,7 +170,7 @@
 	Targetable:
 		TargetTypes: Ground, Vehicle
 	Repairable:
-		RepairBuildings: repair.human, repair.cyborg
+		RepairActors: repair.human, repair.cyborg
 	Passenger:
 		CargoType: Vehicle
 	AttackMove:
@@ -311,7 +311,7 @@
 		EmptyWeapon: GenericExplode
 		RequiresCondition: !airborne
 	Repairable:
-		RepairBuildings: repair.human, repair.cyborg
+		RepairActors: repair.human, repair.cyborg
 	Rearmable:
 		RearmActors: rearmingdeck.human, rearmingdeck.cyborg
 
@@ -348,7 +348,7 @@
 	Targetable:
 		TargetTypes: Ground, Vehicle
 	#Repairable:
-	#	RepairBuildings: repair.human, repair.cyborg
+	#	RepairActors: repair.human, repair.cyborg
 	AttackMove:
 	HiddenUnderFog:
 	ActorLostNotification:
@@ -465,6 +465,7 @@
 		BuildDurationModifier: 2486 # DR build rate
 	Huntable:
 	UpdatesPlayerStatistics:
+	FootprintPlaceBuildingPreview:
 	SelfConstructing:
 		Steps: 30
 	ShakeOnDeath:

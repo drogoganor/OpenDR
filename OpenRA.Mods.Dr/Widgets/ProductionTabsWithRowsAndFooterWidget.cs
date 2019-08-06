@@ -19,7 +19,8 @@ namespace OpenRA.Mods.Dr.Widgets
 		public readonly string FooterWidget = null;
 
 		[ObjectCreator.UseCtor]
-		public ProductionTabsWithRowsAndFooterWidget(World world) : base(world)
+		public ProductionTabsWithRowsAndFooterWidget(World world)
+            : base(world)
 		{
 		}
 	}

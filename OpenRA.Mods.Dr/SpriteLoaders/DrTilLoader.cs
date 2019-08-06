@@ -9,9 +9,7 @@
  */
 #endregion
 
-using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using OpenRA.Graphics;
 using OpenRA.Primitives;
@@ -122,8 +120,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				return false;
 			}
 
-			frames = ParseFrames(s);
-			return true;
+            frames = ParseFrames(s);
+            return true;
 		}
 	}
 }

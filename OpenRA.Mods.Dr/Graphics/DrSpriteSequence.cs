@@ -19,7 +19,8 @@ namespace OpenRA.Mods.Dr.Graphics
     {
         public readonly string DefaultSpriteExtension = ".spr";
 
-		public DrSpriteSequenceLoader(ModData modData) : base(modData)
+        public DrSpriteSequenceLoader(ModData modData)
+            : base(modData)
         {
             var metadata = modData.Manifest.Get<SpriteSequenceFormat>().Metadata;
             MiniYaml yaml;
@@ -33,7 +34,7 @@ namespace OpenRA.Mods.Dr.Graphics
 		}
 	}
 
-	public class DrSpriteSequence : DefaultSpriteSequence
+    public class DrSpriteSequence : DefaultSpriteSequence
 	{
 		protected override string GetSpriteSrc(ModData modData, TileSet tileSet, string sequence, string animation, string sprite, Dictionary<string, MiniYaml> d)
         {
@@ -64,7 +65,7 @@ namespace OpenRA.Mods.Dr.Graphics
             if (j >= sprites.Length)
                 j = 0;
 
-			return sprites[j];
+            return sprites[j];
 		}
 	}
 }

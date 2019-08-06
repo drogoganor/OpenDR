@@ -31,7 +31,7 @@ namespace OpenRA.Mods.Dr.Traits
 
     // Copied from ProductionQueueFromSelection
     // Now performs extraordinary hacking to show two different types of build palettes - regular production queues and building picker
-    class ProductionQueueOrBuildingPickerFromSelection : INotifySelection
+	class ProductionQueueOrBuildingPickerFromSelection : INotifySelection
 	{
 		readonly World world;
 		readonly Lazy<ProductionTabsWidget> tabsWidget;

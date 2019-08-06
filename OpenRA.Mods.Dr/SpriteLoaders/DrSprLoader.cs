@@ -11,9 +11,7 @@
 
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
-using System.Runtime.InteropServices;
 using OpenRA.Graphics;
 using OpenRA.Primitives;
 
@@ -59,7 +57,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			public float2 Offset { get; private set; }
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
-            public int2 Hotspot { get; set; }
+			public int2 Hotspot { get; set; }
 
 			public int Growto4(int x)
 			{
@@ -191,8 +189,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 		{
 			var start = s.Position;
 
-            metadata = new TypeDictionary();
-            var frames = new List<DrSprFrame>();
+			metadata = new TypeDictionary();
+			var frames = new List<DrSprFrame>();
 			for (int sect = 0; sect < header.Nsects; ++sect)
 			{
 				s.Position = header.OffSections + 16 * sect;
@@ -230,7 +228,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					}
 				}
 
-                if (numhotspots > 0)
+				if (numhotspots > 0)
                 {
                     int off_hotspots, h;
                     s.Seek(header.OffPicoffs + 8 * header.Npics, SeekOrigin.Begin);
@@ -282,8 +280,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				return false;
 			}
 
-			frames = ParseFrames(s, out metadata);
-			return true;
+            frames = ParseFrames(s, out metadata);
+            return true;
 		}
 	}
 }

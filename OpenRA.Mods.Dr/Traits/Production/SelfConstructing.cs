@@ -36,7 +36,8 @@ namespace OpenRA.Mods.Dr.Traits.Production
         private int healthStep = 0;
         private Health health;
 
-        public SelfConstructing(ActorInitializer init, SelfConstructingInfo info) : base(init, info)
+        public SelfConstructing(ActorInitializer init, SelfConstructingInfo info)
+            : base(init, info)
         {
             Info = info;
             wsb = init.Self.Trait<WithSpriteBody>();
