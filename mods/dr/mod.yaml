@@ -107,7 +107,6 @@ Assemblies:
 
 ChromeLayout:
 	dr|chrome/mainmenu.yaml
-	dr|chrome/ingame-observer.yaml
 	dr|chrome/ingame-player.yaml
 	dr|chrome/color-picker.yaml
 	dr|chrome/mainmenu-prerelease-notification.yaml
@@ -126,6 +125,7 @@ ChromeLayout:
 	common|chrome/ingame-perf.yaml
 	common|chrome/ingame-debug.yaml
 	common|chrome/ingame-infochat.yaml
+	common|chrome/ingame-observer.yaml
 	common|chrome/connection.yaml
 	common|chrome/lobby.yaml
 	common|chrome/lobby-mappreview.yaml
@@ -216,6 +216,10 @@ Fonts:
 		Font: common|FreeSansBold.ttf
 		Size: 14
 		Ascender: 11
+	Title:
+		Font: common|FreeSansBold.ttf
+		Size: 32
+		Ascender: 24
 
 Missions:
 	dr|missions.yaml
