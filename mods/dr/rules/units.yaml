@@ -1314,6 +1314,7 @@ SkyBike:
 		Speed: 336
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
 
 Outrider:
 	Inherits: ^DrPlane
@@ -1349,6 +1350,7 @@ Outrider:
 		Speed: 288
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
 
 ReconDrone:
 	Inherits: ^DrPlane
@@ -1375,6 +1377,7 @@ ReconDrone:
 		Speed: 192
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
 
 Cyclone:
 	Inherits: ^DrPlane
@@ -1410,6 +1413,7 @@ Cyclone:
 		Speed: 288
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
 
 SkyFortress:
 	Inherits: ^DrPlane
@@ -1448,6 +1452,7 @@ SkyFortress:
 		Speed: 120
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
 
 # Expansion
 
@@ -1827,6 +1832,7 @@ EMPDevice:
 		Speed: 144
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
 
 RoadTerraformer:
 	Inherits: ^Vehicle
@@ -1927,6 +1933,7 @@ Avenger:
 		Speed: 216
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
 
 HadesBomber:
 	Inherits: ^DrPlane
@@ -1965,3 +1972,4 @@ HadesBomber:
 		Speed: 240
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover

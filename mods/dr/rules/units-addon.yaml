@@ -325,6 +325,7 @@ ScoutAlt:
 		Speed: 288
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
 
 # Terrorist units
 
@@ -459,6 +460,7 @@ StealthChopper:
 		Speed: 288
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
 
 TerroristTransport:
 	Inherits: ^Vehicle
@@ -514,6 +516,7 @@ TerroristAirRifterAlternate:
 		Speed: 192
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
 
 TerroristMissileTank:
 	Inherits: ^Vehicle
@@ -591,6 +594,7 @@ TerroristAirborneTroopCarrier:
 		Speed: 240
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
 
 # Third blue faction
 
@@ -838,6 +842,7 @@ SuicideBot:
 		Speed: 96
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
 	Armor:
 		Type: FlyingArmour
 	Armament@PRIMARY:
@@ -967,6 +972,7 @@ TerroristAirRifter:
 		Speed: 160
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
 	Armament:
 		LocalOffset: 512,0,112
 		Weapon: AirRifterWeapon
@@ -1103,3 +1109,4 @@ TerroristHospitalUnit:
 		Speed: 188
 	AttackAircraft:
 		FacingTolerance: 20
+		AttackType: Hover
