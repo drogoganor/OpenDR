@@ -234,7 +234,7 @@
 		Offset: 111, 64, 0
 		ZOffset: -129
 	Hovers:
-		BobDistance: 0
+		BobDistance: -1
 	Mobile:
 		Locomotor: hovering
 
