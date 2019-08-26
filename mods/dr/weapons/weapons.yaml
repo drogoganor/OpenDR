@@ -28,13 +28,13 @@
 # M2 is the air to air missile
 # M3 is the PolyAcid
 # M4 is the ground to air missile
-#
+#:
 # R1 is the mechanic's repair
 # R2 is the construction crew's repair
-#
+#:
 # S1 is the sniper rifle
 # S2 is the shredder
-#
+#:
 # V1 is the offense for the vortex (temporal rift)
 # W1 is the offense for the Seismic Wave
 
@@ -1136,7 +1136,7 @@ ShockTrooperWeapon:
 	Warhead@3Eff: CreateEffect
 		Explosions: eoomktr0
 		ValidTargets: Ground, Ship, Trees
-	-Warhead@4Eff: CreateEffect
+	-Warhead@4Eff:
 
 SantaWeapon:
 	Inherits: PhaseTankCannon

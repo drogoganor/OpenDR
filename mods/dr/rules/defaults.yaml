@@ -234,7 +234,7 @@
 		Offset: 111, 64, 0
 		ZOffset: -129
 	Hovers:
-		OffsetModifier: 0
+		BobDistance: 0
 	Mobile:
 		Locomotor: hovering
 
@@ -274,7 +274,6 @@
 		TurnSpeed: 15
 		Speed: 200
 		LandableTerrainTypes:
-		LandWhenIdle: false
 		AltitudeVelocity: 0c58
 		CanHover: True
 		#CruisingCondition: cruising
@@ -282,6 +281,7 @@
 		TakeOffOnResupply: true
 		VTOL: true
 		#LandAltitude: 1
+		CanSlide: True
 	Targetable@GROUND:
 		TargetTypes: Ground, Repair, Vehicle
 		RequiresCondition: !airborne

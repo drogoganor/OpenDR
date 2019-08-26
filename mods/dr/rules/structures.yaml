@@ -992,7 +992,7 @@ TemporalRiftCreator:
 	DetonateWeaponPower@temporalrift:
 		#Cursor: ioncannon
 		Icon: bitrcmn0
-		ActivationSequence: 
+		ActivationSequence:
 		Description: Temporal Rift
 		LongDesc: Opens a temporal rift at the target location.
 		OrderName: TemporalRift

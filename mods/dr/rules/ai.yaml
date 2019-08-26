@@ -2,7 +2,7 @@ Player:
 	ModularBot@NormalAI:
 		Name: Normal AI
 		Type: normal
-	AICash: 
+	AICash:
 		Amount: 20000
 		TickEach: 10
 		UntilTick: 11

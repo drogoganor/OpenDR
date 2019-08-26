@@ -580,7 +580,7 @@ Freighter:
 		BaleLoadDelay: 20
 		BaleUnloadDelay: 20
 		SearchFromProcRadius: 30
-		SearchFromOrderRadius: 11
+		SearchFromHarvesterRadius: 11
 	-Armament:
 
 HoverFreighter:
@@ -621,7 +621,7 @@ HoverFreighter:
 		BaleLoadDelay: 20
 		BaleUnloadDelay: 18
 		SearchFromProcRadius: 30
-		SearchFromOrderRadius: 11
+		SearchFromHarvesterRadius: 11
 
 SpiderBike:
 	Inherits: ^Vehicle
@@ -676,7 +676,7 @@ RAT:
 		Range: 9c0
 	Mobile:
 		Speed: 216
-		RequiresCondition: !notmobile
+		PauseOnCondition: notmobile
 	Cargo:
 		Types: Infantry
 		MaxWeight: 5
@@ -975,7 +975,7 @@ PhaseRunner:
 		Range: 9c0
 	Mobile:
 		Speed: 156
-		RequiresCondition: !notmobile
+		PauseOnCondition: notmobile
 	Cargo:
 		Types: Infantry
 		MaxWeight: 5
@@ -1040,7 +1040,7 @@ ITT:
 		Range: 9c0
 	Mobile:
 		Speed: 240
-		RequiresCondition: !notmobile
+		PauseOnCondition: notmobile
 	Cargo:
 		Types: Infantry
 		MaxWeight: 5
@@ -1673,7 +1673,7 @@ RATmk2:
 		Range: 9c0
 	Mobile:
 		Speed: 216
-		RequiresCondition: !notmobile
+		PauseOnCondition: notmobile
 	Armor:
 		Type: TankPlating
 	Turreted:

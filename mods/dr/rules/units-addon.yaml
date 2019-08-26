@@ -128,7 +128,7 @@ WalkerScout:
 		Type: TankPlating
 	Mobile:
 		Speed: 160
-		RequiresCondition: !notmobile
+		PauseOnCondition: notmobile
 	Cargo:
 		Types: Infantry
 		MaxWeight: 1
@@ -481,7 +481,7 @@ TerroristTransport:
 		Range: 9c0
 	Mobile:
 		Speed: 128
-		RequiresCondition: !notmobile
+		PauseOnCondition: notmobile
 	Cargo:
 		Types: Infantry
 		MaxWeight: 8
