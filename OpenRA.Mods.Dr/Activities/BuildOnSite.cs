@@ -27,7 +27,6 @@ namespace OpenRA.Mods.Dr.Activities
 		readonly World world;
 		readonly Target centerBuildingTarget;
 		readonly CPos centerTarget;
-		readonly IMove move;
 		readonly Order order;
 		readonly string faction;
 		readonly BuildingInfo buildingInfo;
@@ -36,14 +35,13 @@ namespace OpenRA.Mods.Dr.Activities
 
 		public BuildOnSite(World world, Actor self, Order order, string faction, BuildingInfo buildingInfo)
 		{
-			move = self.Trait<IMove>();
 			this.buildingInfo = buildingInfo;
 			this.world = world;
 			this.order = order;
 			this.faction = faction;
 			centerTarget = order.ExtraLocation;
-			centerBuildingTarget = Target.FromPos(world.Map.CenterOfCell(centerTarget));
-			minRange = new WDist(4096);
+			centerBuildingTarget = order.Target;
+			minRange = new WDist(1024);
 			buildingActor = world.Map.Rules.Actors.FirstOrDefault(x => x.Key == order.TargetString).Value;
 		}
 
@@ -68,7 +66,7 @@ namespace OpenRA.Mods.Dr.Activities
 				{
                     w.CreateActor(true, order.TargetString, new TypeDictionary
 						{
-							new LocationInit(centerTarget),
+							new LocationInit(world.Map.CellContaining(order.Target.CenterPosition)),
 							new OwnerInit(order.Player),
 							new FactionInit(faction),
 							new PlaceBuildingInit()

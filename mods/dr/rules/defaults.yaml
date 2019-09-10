@@ -20,6 +20,7 @@
 	Repairable:
 		RepairActors: hospital.human, hospital.cyborg
 	Huntable:
+	DrawLineToTarget:
 	Health:
 		HP: 2500
 	Armor:
@@ -149,6 +150,7 @@
 		BuildPaletteOrder: 80
 		Prerequisites: ~barracks, ~techlevel.infonly
 	Huntable:
+	DrawLineToTarget:
 	Valued:
 		Cost: 900
 	Health:
@@ -258,6 +260,7 @@
 		BuildPaletteOrder: 220
 		Prerequisites: ~barracks, ~techlevel.infonly
 	Huntable:
+	DrawLineToTarget:
 	AppearsOnRadar:
 		UseLocation: true
 	SelectionDecorations:

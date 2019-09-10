@@ -81,10 +81,17 @@ namespace OpenRA.Mods.Dr.Traits
 				if (!self.World.CanPlaceBuilding(self.World.Map.CellContaining(order.Target.CenterPosition), actorInfo, buildingInfo, targetActor))
 					return;
 
+				if (!order.Queued)
+					targetActor.CancelActivity();
+
+				var cell = self.World.Map.Clamp(self.World.Map.CellContaining(order.Target.CenterPosition));
+
 				// Make the actor move to the location
+				var moveActivity = new Move(targetActor, cell, WDist.FromCells(1), null, true, Primitives.Color.Green);
 				var buildActivity = new BuildOnSite(w, targetActor, order, faction, buildingInfo);
-				var moveActivity = new Move(targetActor, self.World.Map.CellContaining(order.Target.CenterPosition));
+
 				targetActor.QueueActivity(moveActivity);
+				targetActor.ShowTargetLines();
 				targetActor.QueueActivity(buildActivity);
 			});
 		}
