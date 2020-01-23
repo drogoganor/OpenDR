@@ -365,42 +365,6 @@ Actors:
 		Owner: Imperium
 		Location: 57,68
 		Facing: 92
-	Actor106: hq.terrorist
-		Owner: Imperium
-		Location: 43,84
-	Actor107: waterlaunchpad.terrorist
-		Owner: Imperium
-		Location: 43,89
-	Actor108: power.terrorist
-		Owner: Imperium
-		Location: 44,93
-	Actor109: terroristwaterunit
-		Owner: Imperium
-		Location: 39,85
-	Actor110: terroristconstructionfacility
-		Owner: Imperium
-		Location: 38,90
-	Actor111: terroristfieldhospital
-		Owner: Imperium
-		Location: 40,95
-	Actor112: terroristrepairbay
-		Owner: Imperium
-		Location: 33,85
-	Actor113: terroristrearmingdeck
-		Owner: Imperium
-		Location: 31,91
-	Actor114: terroristguardtower
-		Owner: Imperium
-		Location: 36,95
-		TurretFacing: 92
-	Actor115: terroristflamertower
-		Owner: Imperium
-		Location: 33,95
-		TurretFacing: 92
-	Actor116: missiletower
-		Owner: Imperium
-		Location: 30,95
-		TurretFacing: 92
 	Actor155: civilian
 		Owner: Imperium
 		Location: 51,56

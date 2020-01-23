@@ -877,7 +877,6 @@ Repair.human:
 	Selectable:
 		Bounds: 96,72,0,0
 		DecorationBounds: 96,72,0,0
-	SelectionDecorations:
 	Valued:
 		Cost: 800
 	Health:
@@ -894,10 +893,6 @@ Repair.human:
 		FinishRepairingNotification: UnitRepaired
 		PlayerExperience: 15
 	WithResupplyAnimation:
-	Valued:
-		Cost: 800
-	Health:
-		HP: 600
 	RevealsShroud:
 		Range: 8c0
 	Power:

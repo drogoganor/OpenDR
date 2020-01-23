@@ -414,9 +414,8 @@ World:
 	#GlobalLightingPaletteEffect:
 	#	Ambient: 1.05
 	ProductionQueueFromSelection:
-		ProductionParent: SIDEBAR_BACKGROUND
 		ProductionTabsWidget: PRODUCTION_TABS
-		BuildSelectPalette: BUILD_SELECT_PALETTE
+		ProductionPaletteWidget: PRODUCTION_PALETTE
 	DomainIndex:
 	ResourceLayer:
 	ResourceClaimLayer:
