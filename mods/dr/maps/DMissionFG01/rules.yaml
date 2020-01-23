@@ -116,34 +116,34 @@ upgrade.phasing:
 		Prerequisites: ~disabled
 
 # FG Buildings
-LaserTurret.Constructing:
+LaserTurret:
 	Buildable:
 		Prerequisites: ~disabled
 
-HeavyRailTurret.Constructing:
+HeavyRailTurret:
 	Buildable:
 		Prerequisites: ~disabled
 
-AntiAirTurret.human.Constructing:
+AntiAirTurret.human:
 	Buildable:
 		Prerequisites: ~disabled
 
-CameraTower.Constructing:
+CameraTower:
 	Buildable:
 		Prerequisites: ~disabled
 
-Hospital.human.Constructing:
+Hospital.human:
 	Buildable:
 		Prerequisites: ~disabled
 
-Repair.human.Constructing:
+Repair.human:
 	Buildable:
 		Prerequisites: ~disabled
 
-PhasingFacility.Constructing:
+PhasingFacility:
 	Buildable:
 		Prerequisites: ~disabled
 
-RearmingDeck.human.Constructing:
+RearmingDeck.human:
 	Buildable:
 		Prerequisites: ~disabled

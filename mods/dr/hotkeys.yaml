@@ -2,8 +2,8 @@ ProductionTypeBuilding: E
 	Description: Building Tab
 	Types: Production
 
-ProductionTypeUpgrade: R
-	Description: Upgrade Tab
+ProductionTypeDefense: R
+	Description: Defense Tab
 	Types: Production
 
 ProductionTypeInfantry: T
@@ -16,6 +16,10 @@ ProductionTypeVehicle: Y
 
 ProductionTypeEconomy: U
 	Description: Economy Tab
+	Types: Production
+
+ProductionTypeUpgrade: I
+	Description: Upgrade Tab
 	Types: Production
 
 PowerDown: X

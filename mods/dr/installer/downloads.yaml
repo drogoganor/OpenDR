@@ -27,3 +27,37 @@ drmusic: Music Packages
 	MirrorList: http://drogoganor.net/dr/dr-music-mirrors.txt
 	Extract:
 		^Content/dr/music.zip: music.zip
+drdevtest: Dev Test Package (Full)
+	MirrorList: http://drogoganor.net/dr/dr-devtest-mirrors.txt
+	Extract:
+		^Content/dr/SPRITES.FTG: dark/graphics/SPRITES.FTG
+		^Content/dr/SOUNDS.FTG: dark/sndfx/SOUNDS.FTG
+		^Content/dr/shell/SOUNDS.FTG: dark/shell/SOUNDS.FTG
+		^Content/dr/SNOW/SNOW.TIL: dark/graphics/SNOW/SNOW.TIL
+		^Content/dr/SNOW/SNOW.PAL: dark/graphics/SNOW/SNOW.PAL
+		^Content/dr/SNOW/SPRITES.FTG: dark/graphics/SNOW/SPRITES.FTG
+		^Content/dr/BARREN/BARREN.TIL: dark/graphics/BARREN/BARREN.TIL
+		^Content/dr/BARREN/BARREN.PAL: dark/graphics/BARREN/BARREN.PAL
+		^Content/dr/BARREN/SPRITES.FTG: dark/graphics/BARREN/SPRITES.FTG
+		^Content/dr/JUNGLE/JUNGLE.TIL: dark/graphics/JUNGLE/JUNGLE.TIL
+		^Content/dr/JUNGLE/JUNGLE.PAL: dark/graphics/JUNGLE/JUNGLE.PAL
+		^Content/dr/JUNGLE/SPRITES.FTG: dark/graphics/JUNGLE/SPRITES.FTG
+		^Content/dr/spriteEx.ftg: dark/graphics/spriteEx.ftg
+		^Content/dr/soundsEx.ftg: dark/sndfx/soundsEx.ftg
+		^Content/dr/ALIEN/ALIEN.TIL: dark/graphics/alien/ALIEN.TIL
+		^Content/dr/ALIEN/ALIEN.PAL: dark/graphics/alien/ALIEN.PAL
+		^Content/dr/ALIEN/SPRITEEX.FTG: dark/graphics/alien/SPRITEEX.FTG
+		^Content/dr/BARREN/spriteEx.ftg: dark/graphics/BARREN/spriteEx.ftg
+		^Content/dr/JUNGLE/spriteEx.ftg: dark/graphics/JUNGLE/spriteEx.ftg
+		^Content/dr/SNOW/spriteEx.ftg: dark/graphics/SNOW/spriteEx.ftg
+		^Content/dr/mouse.crs: dark/graphics/INTFACE/MOUSE.CRS
+		^Content/dr/music.zip: music.zip
+		^Content/dr/aust/AUST.FTG: aust/AUST.FTG
+		^Content/dr/volcanic/VOLCANIC.FTG: volcanic/VOLCANIC.FTG
+		^Content/dr/auralien/AURALIEN.FTG: auralien/AURALIEN.FTG
+		^Content/dr/asteroid/ASTEROID.FTG: asteroid/ASTEROID.FTG
+		^Content/dr/addon/aurunits/aursprite.ftg: addon/aurunits/aursprite.ftg
+		^Content/dr/addon/aurunits/aursound.ftg: addon/aurunits/aursound.ftg
+		^Content/dr/addon/terrorist/terrsprite.ftg: addon/terrorist/terrsprite.ftg
+		^Content/dr/addon/terrorist/terrsound.ftg: addon/terrorist/terrsound.ftg
+		^Content/dr/legal.txt: legal.txt

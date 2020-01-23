@@ -92,26 +92,26 @@ upgrade.assemblyplant1:
 		Prerequisites: ~disabled
 
 # Imperium Buildings
-AntiAirTurret.cyborg.Constructing:
+AntiAirTurret.cyborg:
 	Buildable:
 		Prerequisites: ~disabled
 
-CameraTower.Constructing:
+CameraTower:
 	Buildable:
 		Prerequisites: ~disabled
 
-NeutronAccelerator.Constructing:
+NeutronAccelerator:
 	Buildable:
 		Prerequisites: ~disabled
 
-RearmingDeck.cyborg.Constructing:
+RearmingDeck.cyborg:
 	Buildable:
 		Prerequisites: ~disabled
 
-TemporalRiftCreator.Constructing:
+TemporalRiftCreator:
 	Buildable:
 		Prerequisites: ~disabled
 
-TemporalGate.Constructing:
+TemporalGate:
 	Buildable:
 		Prerequisites: ~disabled
