@@ -1,0 +1,1352 @@
+
+Power:
+	Inherits: ^FactionBuilding
+	Inherits@shape: ^3x4Shape
+	Buildable:
+		Prerequisites: ~hq
+		Queue: Building
+		Description: Provides power for other structures. Refines Taelon into credits.
+		BuildPaletteOrder: 10
+		BuildDuration: 8 # 30
+		BuildDurationModifier: 100
+	RenderSprites:
+		Image: ncpow1l0
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Tooltip:
+		Name: Taelon Power Generator
+	Selectable:
+		Bounds: 72,84,0,-12
+		DecorationBounds: 72,84,0,-12
+	Building:
+		Footprint: _== xxx =xx ===
+		Dimensions: 3,4
+		LocalCenterOffset: 0,0,0
+	Power:
+		Amount: 500
+	Valued:
+		Cost: 2000
+	Health:
+		HP: 1450
+	ScalePowerWithHealth:
+	Refinery:
+		DockAngle: 32
+		DockOffset: 0,2
+	StoresResources:
+		PipColor: Green
+		PipCount: 12
+		Capacity: 3000
+	#FreeActor:
+	#	Actor: Freighter
+	#	SpawnOffset: 0,2
+	#	Facing: 64
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	WithIdleOverlay@LAYER4:
+		Sequence: top2
+	ExplosionOnDamageTransition:
+		Weapon: SmallCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+WaterLaunchPad:
+	Inherits: ^FactionBuilding
+	RenderSprites:
+		Image: nclnc1l0
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite:
+		Prerequisite: waterlaunch
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 20
+		Prerequisites: ~hq
+		Description: Refines spring water into credits.
+		BuildDuration: 34 # 37
+	Tooltip:
+		Name: Water Launch Pad
+	Inherits@shape: ^4x3Shape
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Building:
+		Footprint: _xx_ xxxx ==x=
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Targetable:
+		TargetTypes: Ground, Structure, C4, DetonateAttack, SpyInfiltrate
+	HitShape:
+		Type: Rectangle
+			TopLeft: -2048, -1536
+			BottomRight: 2048, 1536
+	Valued:
+		Cost: 2500
+	CustomSellValue:
+		Value: 600
+	Health:
+		HP: 1300
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	Refinery:
+		DockAngle: 32
+		DockOffset: 1,2
+	StoresResources:
+		PipColor: Blue
+		PipCount: 18
+		Capacity: 3000
+	FreeActor:
+		Actor: Freighter
+		SpawnOffset: 1,2
+		Facing: 64
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+HQ.human:
+	Inherits: ^Headquarters
+	RenderSprites:
+		Image: nfhqt1l0
+	#Buildable:
+	#Queue: Building
+	#Prerequisites: ~rig.human
+	Building:
+		Footprint: _xx_ xxxx xxxx xxx_
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+	Valued:
+		Cost: 750
+	Health:
+		HP: 1200
+	WithSpriteBody:
+		RequiresCondition: !dec1 && !dec2
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
+		RequiresCondition: dec1
+	WithSpriteBody@3:
+		Name: upgraded2
+		StartSequence: building3
+		Sequence: idle3
+		RequiresCondition: dec2
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+		RequiresCondition: !dec1 && !dec2
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: dec1 && !dec2
+	WithIdleOverlay@LAYER1b:
+		Palette: terrain
+		Sequence: underlay3
+		RequiresCondition: dec2
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+		RequiresCondition: !dec1 && !dec2
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: dec1 && !dec2
+	WithIdleOverlay@LAYER2b:
+		Sequence: top3
+		RequiresCondition: dec2
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+		RequiresCondition: !dec1 && !dec2
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: dec1 && !dec2
+	WithIdleOverlay@LAYER3b:
+		Palette: shadow
+		Sequence: shadow3
+		RequiresCondition: dec2
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+HQ.cyborg:
+	Inherits: ^Headquarters
+	RenderSprites:
+		Image: nihqt1l0
+	Valued:
+		Cost: 750
+	Health:
+		HP: 1440
+	Building:
+		Footprint: x==x xxxx xxxx =xxx
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+		RequiresCondition: !dec1 && !dec2
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: dec1 && !dec2
+	WithIdleOverlay@LAYER1b:
+		Palette: terrain
+		Sequence: underlay3
+		RequiresCondition: dec2
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+		RequiresCondition: !dec1 && !dec2
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: dec1 && !dec2
+	WithIdleOverlay@LAYER2b:
+		Sequence: top3
+		RequiresCondition: dec2
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+		RequiresCondition: !dec1 && !dec2
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: dec1 && !dec2
+	WithIdleOverlay@LAYER3b:
+		Palette: shadow
+		Sequence: shadow3
+		RequiresCondition: dec2
+	WithSpriteBody:
+		RequiresCondition: !dec1 && !dec2
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
+		RequiresCondition: dec1 && !dec2
+	WithSpriteBody@3:
+		Name: upgraded2
+		StartSequence: building3
+		Sequence: idle3
+		RequiresCondition: dec2
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+TrainingFacility.fguard:
+	Inherits: ^TrainingFacility
+	RenderSprites:
+		Image: nfutf1l0
+	Buildable:
+		Queue: Building
+		Prerequisites: ~hq.fguard, anypower
+	Health:
+		HP: 750
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: stardecoration
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: stardecoration
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: stardecoration
+	#WithIdleOverlay@LAYER4:
+	#	Sequence: animation
+	#WithIdleOverlay@LAYER5: # Only for upgraded
+	#	Sequence: base
+	WithSpriteBody:
+		RequiresCondition: !stardecoration
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
+		RequiresCondition: stardecoration
+	ExplosionOnDamageTransition:
+		Weapon: BigCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+TrainingFacility.cyborg:
+	Inherits: ^TrainingFacility
+	RenderSprites:
+		Image: niutf1l0
+	Health:
+		HP: 900
+	Buildable:
+		Queue: Building
+		Prerequisites: ~hq.cyborg, anypower
+	Building:
+		Footprint: =xxx= xxxxx xxxxx =xxx=
+		Dimensions: 5,4
+		LocalCenterOffset: 0,0,0
+	Exit@1:
+		SpawnOffset: 1280,768,0
+		ExitCell: 3,3
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: stardecoration
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: stardecoration
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: stardecoration
+	WithIdleOverlay@LAYER4:
+		Sequence: animation
+	#WithIdleOverlay@LAYER5: # Only for upgraded
+	#	Sequence: base
+	WithSpriteBody:
+		RequiresCondition: !stardecoration
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
+		RequiresCondition: stardecoration
+	ExplosionOnDamageTransition:
+		Weapon: BigCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+AssemblyPlant.human:
+	Inherits: ^AssemblyPlant
+	RenderSprites:
+		Image: nfvcy1l0
+	Buildable:
+		Queue: Building
+		Prerequisites: ~hq.human, anypower, waterlaunch
+	Health:
+		HP: 1000
+	RallyPoint:
+		Offset: 0,5
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: stardecoration
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: stardecoration
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: stardecoration
+	#WithIdleOverlay@LAYER4:
+	#	Sequence: animation
+	WithSpriteBody:
+		RequiresCondition: !stardecoration
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
+		RequiresCondition: stardecoration
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+AssemblyPlant.cyborg:
+	Inherits: ^AssemblyPlant
+	RenderSprites:
+		Image: nivcy1l0
+	Buildable:
+		Queue: Building
+		Prerequisites: ~hq.cyborg, anypower, waterlaunch
+	Building:
+		Footprint: _xxxx xxxxx xxxxx xxxxx =xxxx
+		Dimensions: 5,5
+		LocalCenterOffset: 0,0,0
+	Exit@1:
+		SpawnOffset: -768,768,0
+		ExitCell: 0,3
+	RallyPoint:
+		Offset: 0,5
+	Health:
+		HP: 1200
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: stardecoration
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: stardecoration
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: stardecoration
+	#WithIdleOverlay@LAYER5: # Only for upgraded
+	#	Sequence: base
+	WithSpriteBody:
+		RequiresCondition: !stardecoration
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
+		RequiresCondition: stardecoration
+
+# FG laser turret
+LaserTurret:
+	Inherits: ^Turret
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	RenderSprites:
+		Image: nfgdt1l0 # Manually set to barren here along with Imperium repair pad and Imp AA.
+		#Palette: terrain
+	Buildable:
+		Prerequisites: ~hq.human
+		Queue: Defense
+		Description: Laser Defense Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 22
+	Tooltip:
+		Name: Laser Turret
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	Turreted:
+		TurnSpeed: 16
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: GatLaser
+		LocalOffset: 512,0,112
+	-WithIdleOverlay@LAYER2:
+	ExplosionOnDamageTransition:
+		Weapon: MiniCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# Imperium plasma turret
+PlasmaTurret:
+	Inherits: ^Turret
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	RenderSprites:
+		Image: nigdt1l0
+	Buildable:
+		Prerequisites: ~hq.cyborg
+		Queue: Defense
+		Description: Plasma Defense Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 22
+	Tooltip:
+		Name: Plasma Turret
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+		Offset: 0,0,-24
+	Armament:
+		Weapon: GatPlasma
+		LocalOffset: 512,0,112
+	-WithIdleOverlay@LAYER1:
+	WithFlamesOverlay@Flames1:
+		Offset: 384, -512, 0
+	WithFlamesOverlay@Smoke1:
+		Offset: -384, -1560, 0
+	ExplosionOnDamageTransition:
+		Weapon: MiniCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# FG anti-air turret
+AntiAirTurret.human:
+	Inherits: ^Turret
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	RenderSprites:
+		Image: nfaar1l0
+	Buildable:
+		Prerequisites: ~hq.human, upgrade.hq1, vehicles, barracks
+		Queue: Defense
+		Description: Anti-Air Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 30 # 30
+	Tooltip:
+		Name: Anti-Air Turret
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 12c0
+	Power:
+		Amount: -50
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: FixedGroundToAirLaser
+		LocalOffset: 512,0,112
+	#WithIdleOverlay@LAYER1:
+	#	Sequence: underlay-building
+	#	Palette: terrain
+	#WithIdleOverlay@LAYER2:
+	#	Sequence: top-building
+	#	Palette: barren
+	ExplosionOnDamageTransition:
+		Weapon: SmallCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# Imperium anti-air turret
+AntiAirTurret.cyborg:
+	Inherits: ^Turret
+	Inherits@AUTOTARGET: ^AutoTargetAir
+	RenderSprites:
+		Image: niaar1l0
+	Buildable:
+		Prerequisites: ~hq.cyborg, upgrade.hq1, vehicles, barracks
+		Queue: Defense
+		Description: Anti-Air Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 30
+	Tooltip:
+		Name: Anti-Air Turret
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 720
+	RevealsShroud:
+		Range: 12c0
+	Power:
+		Amount: -50
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: IMPFixedGroundToAirLaser
+		LocalOffset: 512,0,112
+	WithIdleOverlay@LAYER4:
+		Sequence: idle
+	WithFlamesOverlay@Flames1:
+		Image: eosmlfl0
+		Offset: 128, -256, 0
+		MinimumDamageState: Light
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Flames2:
+		Image: eosmlfl1
+		Offset: -256, -128, 0
+		MinimumDamageState: Heavy
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Smoke1:
+		Offset: 128, -512, 0
+	ExplosionOnDamageTransition:
+		Weapon: SmallCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# FG heavy rail turret
+HeavyRailTurret:
+	Inherits: ^Turret
+	Inherits@shape: ^3x3Shape
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	RenderSprites:
+		Image: nfagt1l0
+	Building:
+		Footprint: =x_ xxx xx=
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
+	Buildable:
+		Prerequisites: ~hq.human, upgrade.hq1, vehicles, barracks
+		Queue: Defense
+		Description: Heavy Rail Turret
+		BuildPaletteOrder: 50
+		BuildDuration: 51
+	Tooltip:
+		Name: Heavy Rail Turret
+	Valued:
+		Cost: 1700
+	Health:
+		HP: 550
+	RevealsShroud:
+		Range: 12c0
+	Power:
+		Amount: -100
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: FixedLaserPlat
+		LocalOffset: 512,0,112
+	WithSpriteTurret:
+	AttackTurreted:
+	WithMuzzleOverlay:
+	DetectCloaked:
+		Range: 6c0
+	ExplosionOnDamageTransition:
+		Weapon: MediumCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# Imperium neutron accelerator
+NeutronAccelerator:
+	Inherits: ^Turret
+	Inherits@shape: ^3x3Shape
+	Inherits@AUTOTARGET: ^AutoTargetGround
+	RenderSprites:
+		Image: niagt1l0
+	Building:
+		Footprint: =x= xxx xxx
+		Dimensions: 3,3
+		#LocalCenterOffset: 384,-256,0
+	Selectable:
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
+	Buildable:
+		Prerequisites: ~hq.cyborg, upgrade.hq1, vehicles, barracks
+		Queue: Defense
+		Description: Neutron Accelerator
+		BuildPaletteOrder: 50
+		BuildDuration: 51
+	Tooltip:
+		Name: Neutron Accelerator
+	Valued:
+		Cost: 1700
+	Health:
+		HP: 550
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	Turreted:
+		TurnSpeed: 12
+		InitialFacing: 56
+		Offset: 256,-24,255
+	Armament:
+		Weapon: NeutronAss
+		LocalOffset: 0,-256,0
+	WithSpriteTurret:
+	AttackTurreted:
+	WithMuzzleOverlay:
+	DetectCloaked:
+		Range: 6c0
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	-WithIdleOverlay@LAYER2:
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	ExplosionOnDamageTransition:
+		Weapon: MediumCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# Camera tower
+CameraTower:
+	Inherits: ^FactionBuilding
+	Inherits@shape: ^1x1Shape
+	RenderSprites:
+		Image: nccam1l0
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 24,38,0,-8
+		DecorationBounds: 24,38,0,-8
+	Buildable:
+		Prerequisites: ~hq
+		Queue: Defense
+		Description: Camera Tower
+		BuildPaletteOrder: 50
+		BuildDuration: 6
+	Tooltip:
+		Name: Camera Tower
+	Valued:
+		Cost: 200
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 16c0
+	Power:
+		Amount: -50
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	WithFlamesOverlay@Flames1:
+		Image: eosmlfl0
+		Offset: 128, -256, 0
+		MinimumDamageState: Light
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Flames2:
+		Image: eosmlfl1
+		Offset: -256, -128, 0
+		MinimumDamageState: Heavy
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Smoke1:
+		Offset: 128, -768, 0
+	ExplosionOnDamageTransition:
+		Weapon: MiniCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# FG field hospital
+Hospital.human:
+	Inherits: ^FactionBuilding
+	Inherits@shape: ^4x3Shape
+	RenderSprites:
+		Image: nfhsp1l0
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Field Hospital
+	Buildable:
+		Prerequisites: ~hq.human, barracks
+		Queue: Building
+		Description: Field Hospital
+		BuildPaletteOrder: 50
+		BuildDuration: 15
+	Valued:
+		Cost: 500
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	ProvidesPrerequisite@hospital:
+		Prerequisite: hospital
+	RepairsUnits:
+		HpPerStep: 5
+		Interval: 5
+		StartRepairingNotification: Repairing
+		FinishRepairingNotification: UnitRepaired
+		PlayerExperience: 5
+	Reservable:
+	RallyPoint:
+		Offset: 3,3
+	WithResupplyAnimation:
+	Power:
+		Amount: -100
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	ExplosionOnDamageTransition:
+		Weapon: SmallCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# Imperium field hospital
+Hospital.cyborg:
+	Inherits: ^FactionBuilding
+	Inherits@shape: ^4x3Shape
+	RenderSprites:
+		Image: nihsp1l0
+	Building:
+		Footprint: xxx= xxxx =xxx
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Field Hospital
+	Buildable:
+		Prerequisites: ~hq.cyborg, barracks
+		Queue: Building
+		Description: Field Hospital
+		BuildPaletteOrder: 50
+		BuildDuration: 15
+	Valued:
+		Cost: 500
+	Health:
+		HP: 720
+	RevealsShroud:
+		Range: 8c0
+	ProvidesPrerequisite@hospital:
+		Prerequisite: hospital
+	RepairsUnits:
+		HpPerStep: 5
+		Interval: 5
+		StartRepairingNotification: Repairing
+		FinishRepairingNotification: UnitRepaired
+		PlayerExperience: 5
+	Reservable:
+	RallyPoint:
+		Offset: 3,3
+	WithResupplyAnimation:
+	Power:
+		Amount: -100
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	ExplosionOnDamageTransition:
+		Weapon: MediumCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# FG repair pad
+Repair.human:
+	Inherits: ^FactionBuilding
+	Inherits@shape: ^4x3Shape
+	RenderSprites:
+		Image: nfrep1l0
+	Tooltip:
+		Name: Repair Station
+	Buildable:
+		Prerequisites: ~hq.human, vehicles
+		Queue: Building
+		Description: Repair Station
+		BuildPaletteOrder: 50
+		BuildDuration: 24
+	Building:
+		Footprint: =xx= xxxx =xx=
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	SelectionDecorations:
+	Valued:
+		Cost: 800
+	Health:
+		HP: 600
+	ProvidesPrerequisite@repair:
+		Prerequisite: repair
+	SelectionDecorations:
+	Reservable:
+	RallyPoint:
+	RepairsUnits:
+		HpPerStep: 10
+		Interval: 7
+		StartRepairingNotification: Repairing
+		FinishRepairingNotification: UnitRepaired
+		PlayerExperience: 15
+	WithResupplyAnimation:
+	Valued:
+		Cost: 800
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	ExplosionOnDamageTransition:
+		Weapon: BigCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# Imperium repair pad
+Repair.cyborg:
+	Inherits: ^FactionBuilding
+	Inherits@shape: ^4x3Shape
+	RenderSprites:
+		Image: tirep1l0
+	Building:
+		Footprint: xxx= xxxx =xx=
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Repair Station
+	Buildable:
+		Prerequisites: ~hq.cyborg, vehicles
+		Queue: Building
+		Description: Repair Station
+		BuildPaletteOrder: 50
+		BuildDuration: 24
+	Valued:
+		Cost: 800
+	Health:
+		HP: 720
+	RevealsShroud:
+		Range: 8c0
+	ProvidesPrerequisite@repair:
+		Prerequisite: repair
+	SelectionDecorations:
+	Reservable:
+	RallyPoint:
+	RepairsUnits:
+		HpPerStep: 10
+		Interval: 7
+		StartRepairingNotification: Repairing
+		FinishRepairingNotification: UnitRepaired
+		PlayerExperience: 15
+	WithResupplyAnimation:
+	Valued:
+		Cost: 800
+	Health:
+		HP: 720
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	WithIdleOverlay@LAYER2:
+		#Palette: player
+		Sequence: top
+		#IsPlayerPalette: True
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	ExplosionOnDamageTransition:
+		Weapon: BigCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# Phasing facility
+PhasingFacility:
+	Inherits: ^FactionBuilding
+	Inherits@shape: ^4x3Shape
+	RenderSprites:
+		Image: nfphf1l0
+	Building:
+		Footprint: _xxx xxxx xxx_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Phasing Facility
+	Buildable:
+		Prerequisites: ~hq.human
+		Queue: Building
+		Description: Phasing Facility
+		BuildPaletteOrder: 50
+		BuildDuration: 36
+	ProvidesPrerequisite@phasing:
+		Prerequisite: phasing
+	Valued:
+		Cost: 1200
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER1a:
+		Palette: terrain
+		Sequence: underlay2
+		RequiresCondition: stardecoration
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER2a:
+		Sequence: top2
+		RequiresCondition: stardecoration
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+		RequiresCondition: !stardecoration
+	WithIdleOverlay@LAYER3a:
+		Palette: shadow
+		Sequence: shadow2
+		RequiresCondition: stardecoration
+	GrantConditionOnPrerequisite:
+		Prerequisites: upgrade.phasing
+		Condition: stardecoration
+	WithDecoration@upgraded:
+		RequiresSelection: true
+		Image: pips
+		Sequence: pip-red
+		ReferencePoint: Bottom, Left
+		ZOffset: 256
+		RequiresCondition: stardecoration
+	WithSpriteBody:
+		RequiresCondition: !stardecoration
+	WithSpriteBody@2:
+		Name: upgraded1
+		StartSequence: building2
+		Sequence: idle2
+		RequiresCondition: stardecoration
+	ExplosionOnDamageTransition:
+		Weapon: MediumCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# FG rearming deck
+RearmingDeck.human:
+	Inherits: ^FactionBuilding
+	Inherits@shape: ^3x3Shape
+	RenderSprites:
+		Image: nfrrm1l0
+	Building:
+		Footprint: === xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 72,72,0,16
+		DecorationBounds: 72,72,0,16
+	Tooltip:
+		Name: Rearming Deck
+	Buildable:
+		Prerequisites: ~hq.human, upgrade.hq2, vehicles, barracks
+		Queue: Building
+		Description: Rearming Deck
+		BuildPaletteOrder: 50
+		BuildDuration: 30
+	ProvidesPrerequisite@air:
+		Prerequisite: air
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -120
+	RallyPoint:
+		Offset: 1,-2
+	Reservable:
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	ExplosionOnDamageTransition:
+		Weapon: MediumCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# Imperium rearming deck
+RearmingDeck.cyborg:
+	Inherits: ^FactionBuilding
+	Inherits@shape: ^3x3Shape
+	RenderSprites:
+		Image: nirrm1l0
+	Building:
+		Footprint: === xxx xxx
+		Dimensions: 3,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 72,72,0,16
+		DecorationBounds: 72,72,0,16
+	Tooltip:
+		Name: Rearming Deck
+	Buildable:
+		Prerequisites: ~hq.cyborg, upgrade.hq2, vehicles, barracks
+		Queue: Building
+		Description: Rearming Deck
+		BuildPaletteOrder: 50
+		BuildDuration: 30
+	ProvidesPrerequisite@air:
+		Prerequisite: air
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 960
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	RallyPoint:
+		Offset: 1,-2
+	Reservable:
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	ExplosionOnDamageTransition:
+		Weapon: BigCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# Imperium temporal gate
+TemporalGate:
+	Inherits: ^FactionBuilding
+	Inherits@shape: ^3x2Shape
+	RenderSprites:
+		Image: nitgt1l0
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
+	Tooltip:
+		Name: Temporal Gate
+	Buildable:
+		Prerequisites: ~hq.cyborg, upgrade.hq2, vehicles, barracks
+		Queue: Building
+		Description: Temporal Gate
+		BuildPaletteOrder: 50
+		BuildDuration: 54
+	ProvidesPrerequisite@temporal:
+		Prerequisite: temporal
+	Valued:
+		Cost: 1800
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -200
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	SupportPowerChargeBar:
+	ChronoshiftPower@chronoshift:
+		OrderName: TemporalGate
+		#PauseOnCondition: disabled
+		Icon: bitgtmn0
+		ChargeInterval: 1000
+		Description: Temporal Gate
+		LongDesc: Teleports a group of units across\nthe map for 20 seconds.
+		#SelectTargetSpeechNotification: SelectTarget
+		#InsufficientPowerSpeechNotification: InsufficientPower
+		#BeginChargeSpeechNotification: ChronosphereCharging
+		EndChargeSpeechNotification: TemporalGateReady
+		Duration: 500
+		KillCargo: no
+		DisplayRadarPing: True
+		SelectionCursor: move
+		TargetCursor: attack
+	ExplosionOnDamageTransition:
+		Weapon: SmallCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# Imperium temporal rift creator
+TemporalRiftCreator:
+	Inherits: ^FactionBuilding
+	Inherits@shape: ^4x4Shape
+	RenderSprites:
+		Image: nitrc1l0
+	Building:
+		Footprint: _==_ =xx= xxxx =xxx
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
+	Tooltip:
+		Name: Temporal Rift Creator
+	Buildable:
+		Prerequisites: ~hq.cyborg, upgrade.hq2, vehicles, barracks
+		Queue: Building
+		Description: Temporal Rift Creator
+		BuildPaletteOrder: 60
+		BuildDuration: 240
+	ProvidesPrerequisite@temporal:
+		Prerequisite: temporal
+	Valued:
+		Cost: 8000
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -200
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	SupportPowerChargeBar:
+	DetonateWeaponPower@temporalrift:
+		#Cursor: ioncannon
+		Icon: bitrcmn0
+		ActivationSequence:
+		Description: Temporal Rift
+		LongDesc: Opens a temporal rift at the target location.
+		OrderName: TemporalRift
+		Weapon: TemporalRiftCreatorGun
+		#TargetCircleRange: 7c0
+		BeginChargeSound:
+		EndChargeSound: RiftCreatorCharged
+		EndChargeSpeechNotification: RiftCreatorCharged
+		#DisplayTimer: True
+		DisplayBeacon: True
+		ChargeInterval: 3000
+		DisplayRadarPing: True
+		#DisplayTimerStances: Ally, Neutral, Enemy
+		#PauseOnCondition: empdisable || disabled
+		#LaunchSpeechNotification: SuperweaponFired
+		#IncomingSpeechNotification: SuperweaponFired
+		#IncomingSound: SuperweaponFired
+		LaunchSound: gxtmpoc0.wav
+		#CameraActor: camera
+		CameraRange: 10c0
+		CameraSpawnAdvance: 25
+		CameraRemoveDelay: 350
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+TrainingFacility.xenite:
+	Inherits: ^TrainingFacility
+	RenderSprites:
+		Image: nfnes1l0
+	Tooltip:
+		Name: Training Facility
+	Buildable:
+		Prerequisites: ~hq.xenite, anypower
+		Queue: Building
+	Valued:
+		Cost: 1900
+	Health:
+		HP: 750
+	RevealsShroud:
+		Range: 8c0
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	#WithIdleOverlay@LAYER4:
+	#	Sequence: animation
+	#WithIdleOverlay@LAYER5: # Only for upgraded
+	#	Sequence: base
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
+
+# Shadowhand matrix
+Matrix:
+	Inherits: ^FactionBuilding
+	Inherits@shape: ^4x4Shape
+	RenderSprites:
+		Image: ninex1l0
+	Building:
+		Footprint: _xx_ xxxx xxxx xxxx
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 120,144,0,0
+		DecorationBounds: 120,144,0,0
+	Tooltip:
+		Name: Matrix
+	Buildable:
+		Prerequisites: ~hq.shadowhand, anypower
+		Queue: Building
+		Description: Matrix
+		BuildPaletteOrder: 30
+		BuildDuration: 20
+	ProvidesPrerequisite@matrix:
+		Prerequisite: matrix
+	Valued:
+		Cost: 1800
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True

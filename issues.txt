@@ -1,0 +1,2 @@
+- Skirmish tank makes a human death sound
+- Skirmish tank shoots air but does not connect

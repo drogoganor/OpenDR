@@ -49,11 +49,13 @@ Rules:
 	dr|rules.yaml
 	dr|rules/shapes.yaml
 	dr|rules/defaults.yaml
+	dr|rules/defaults-buildings.yaml
 	dr|rules/misc.yaml
-	dr|rules/structures-building.yaml
-	dr|rules/structures.yaml
-	dr|rules/structures-civilian.yaml
-	dr|rules/structures-addon.yaml
+	#dr|rules/structures-building.yaml
+	dr|rules/structures2.yaml
+	#dr|rules/structures.yaml
+	#dr|rules/structures-civilian.yaml
+	#dr|rules/structures-addon.yaml
 	dr|rules/upgrades.yaml
 	dr|rules/ai.yaml
 	dr|rules/units.yaml
@@ -63,8 +65,8 @@ Rules:
 	dr|rules/decorations-manual.yaml
 	dr|rules/decorations-snow.yaml
 	dr|rules/decorations-jungle.yaml
-	dr|rules/togran.yaml
-	dr|rules/terrorist.yaml
+	#dr|rules/togran.yaml
+	#dr|rules/terrorist.yaml
 
 Sequences:
 	dr|sequences/misc.yaml

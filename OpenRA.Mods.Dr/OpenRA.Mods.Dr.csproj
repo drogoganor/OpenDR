@@ -34,6 +34,13 @@
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
     <AdditionalFiles Include="../engine/stylecop.json" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Activities\" />
+    <Folder Include="Traits\BotModules\" />
+    <Folder Include="Traits\Player\" />
+    <Folder Include="Traits\Production\" />
+    <Folder Include="Widgets\Logic\Ingame\" />
+  </ItemGroup>
   <Target Name="DisableAnalyzers" BeforeTargets="CoreCompile" Condition="'$(Configuration)'=='Release'">
     <!-- Disable code style analysis on Release builds to improve compile-time performance -->
     <ItemGroup Condition="'$(Configuration)'=='Release'">

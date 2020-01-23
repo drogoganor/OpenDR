@@ -13,69 +13,53 @@ Player:
 		Decisions:
 	HarvesterBotModule:
 		RequiresCondition: enable-normal-ai
-	DrBaseBuilderBotModule@normal:
+	BaseBuilderBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		MinimumExcessPower: 60
 		ConstructionYardTypes: hq.human, hq.cyborg
-		RefineryTypes: waterlaunchpad.constructing
-		PowerTypes: power.constructing
-		BuildingAliases:
-			waterlaunchpad.constructing: waterlaunchpad.constructing, waterlaunchpad
-			power.constructing: power.constructing, power
-			trainingfacility.fguard.constructing: trainingfacility.fguard.constructing, trainingfacility.fguard
-			trainingfacility.cyborg.constructing: trainingfacility.cyborg.constructing, trainingfacility.cyborg
-			assemblyplant.human.constructing: assemblyplant.human.constructing, assemblyplant.human
-			assemblyplant.cyborg.constructing: assemblyplant.cyborg.constructing, assemblyplant.cyborg
-			hq.human.constructing: hq.human.constructing, hq.human
-			hq.cyborg.constructing: hq.cyborg.constructing, hq.cyborg
-			repair.human.constructing: repair.human.constructing, repair.human
-			repair.cyborg.constructing: repair.cyborg.constructing, repair.cyborg
-			hospital.human.constructing: hospital.human.constructing, hospital.human, hospital.cyborg.constructing, hospital.cyborg
-			hospital.cyborg.constructing: hospital.cyborg.constructing, hospital.cyborg, hospital.human.constructing, hospital.human
-			rearmingdeck.human.constructing: rearmingdeck.human.constructing, rearmingdeck.human
-			rearmingdeck.cyborg.constructing: rearmingdeck.cyborg.constructing, rearmingdeck.cyborg
-			phasingfacility.constructing: phasingfacility.constructing, phasingfacility
-		BarracksTypes: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing
-		VehiclesFactoryTypes: assemblyplant.human.constructing, assemblyplant.cyborg.constructing
-		ProductionTypes: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing, assemblyplant.human.constructing, assemblyplant.cyborg.constructing
-		#RearmingTypes: rearmingdeck.human.constructing, rearmingdeck.human.cyborg.constructing
-		BuildingQueues: AIBuilding
+		RefineryTypes: waterlaunchpad
+		PowerTypes: power
+		BarracksTypes: trainingfacility.fguard, trainingfacility.cyborg
+		VehiclesFactoryTypes: assemblyplant.human, assemblyplant.cyborg
+		ProductionTypes: trainingfacility.fguard, trainingfacility.cyborg, assemblyplant.human, assemblyplant.cyborg
+		#RearmingTypes: rearmingdeck.human, rearmingdeck.human.cyborg
+		BuildingQueues: Building, Defense
 		BuildingFractions:
-			waterlaunchpad.constructing: 50
-			power.constructing: 10
-			#hq.human.constructing: 1
-			#hq.cyborg.constructing: 1
-			trainingfacility.fguard.constructing: 1
-			trainingfacility.cyborg.constructing: 1
-			assemblyplant.human.constructing: 1
-			assemblyplant.cyborg.constructing: 1
+			waterlaunchpad: 50
+			power: 10
+			#hq.human: 1
+			#hq.cyborg: 1
+			trainingfacility.fguard: 1
+			trainingfacility.cyborg: 1
+			assemblyplant.human: 1
+			assemblyplant.cyborg: 1
 			upgrade.hq1: 2
 			upgrade.barracks1: 2
 			upgrade.assemblyplant1: 2
 			upgrade.hq2: 1
-			repair.human.constructing: 1
-			repair.cyborg.constructing: 1
-			hospital.human.constructing: 1
-			hospital.cyborg.constructing: 1
-			#phasingfacility.constructing: 1
-			rearmingdeck.human.constructing: 1
-			rearmingdeck.cyborg.constructing: 1
+			repair.human: 1
+			repair.cyborg: 1
+			hospital.human: 1
+			hospital.cyborg: 1
+			#phasingfacility: 1
+			rearmingdeck.human: 1
+			rearmingdeck.cyborg: 1
 		BuildingLimits:
-			waterlaunchpad.constructing: 2
-			power.constructing: 2
-			hq.human.constructing: 1
-			hq.cyborg.constructing: 1
-			trainingfacility.fguard.constructing: 1
-			trainingfacility.cyborg.constructing: 1
-			assemblyplant.human.constructing: 1
-			assemblyplant.cyborg.constructing: 1
-			repair.human.constructing: 1
-			repair.cyborg.constructing: 1
-			hospital.human.constructing: 1
-			hospital.cyborg.constructing: 1
-			phasingfacility.constructing: 1
-			rearmingdeck.human.constructing: 1
-			rearmingdeck.cyborg.constructing: 1
+			waterlaunchpad: 2
+			power: 2
+			hq.human: 1
+			hq.cyborg: 1
+			trainingfacility.fguard: 1
+			trainingfacility.cyborg: 1
+			assemblyplant.human: 1
+			assemblyplant.cyborg: 1
+			repair.human: 1
+			repair.cyborg: 1
+			hospital.human: 1
+			hospital.cyborg: 1
+			phasingfacility: 1
+			rearmingdeck.human: 1
+			rearmingdeck.cyborg: 1
 	BuildingRepairBotModule:
 		RequiresCondition: enable-normal-ai
 	SquadManagerBotModule@normal:
@@ -86,7 +70,7 @@ Player:
 	McvManagerBotModule:
 		RequiresCondition: enable-normal-ai
 		McvTypes: hq.human, hq.cyborg
-		ConstructionYardTypes: hq.human.constructing, hq.cyborg.constructing, hq.human, hq.cyborg
+		ConstructionYardTypes: hq.human, hq.cyborg, hq.human, hq.cyborg
 	UnitBuilderBotModule@normal:
 		RequiresCondition: enable-normal-ai
 		UnitsToBuild:

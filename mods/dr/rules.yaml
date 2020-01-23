@@ -413,7 +413,7 @@ World:
 	BuildingInfluence:
 	#GlobalLightingPaletteEffect:
 	#	Ambient: 1.05
-	ProductionQueueOrBuildingPickerFromSelection:
+	ProductionQueueFromSelection:
 		ProductionParent: SIDEBAR_BACKGROUND
 		ProductionTabsWidget: PRODUCTION_TABS
 		BuildSelectPalette: BUILD_SELECT_PALETTE
@@ -455,54 +455,45 @@ World:
 		GameSpeedDropdownDisplayOrder: 3
 	MPStartLocations:
 	CreateMPPlayers:
-	MPStartUnits@mcvonly:
+	MPStartUnits@hqonly:
 		Class: none
-		ClassName: One Rig
+		ClassName: HQ only
 		Factions: fguard, xenite, terrorist
 		BaseActor: HQ.human
-		SupportActors: ConstructionRig
-		InnerSupportRadius: 2
-		OuterSupportRadius: 4
-	MPStartUnits@mcvonlyimp:
+	MPStartUnits@hqonlyimp:
 		Class: none
-		ClassName: One Rig
+		ClassName: HQ only
 		Factions: imperium, shadowhand
 		BaseActor: HQ.cyborg
-		SupportActors: ConstructionRig
-		InnerSupportRadius: 2
-		OuterSupportRadius: 4
-	MPStartUnits@mcvonlytogran:
+	MPStartUnits@hqonlytogran:
 		Class: none
-		ClassName: One Rig
+		ClassName: HQ only
 		Factions: togran
 		BaseActor: HQ.togran
-		SupportActors: ConstructionRig
-		InnerSupportRadius: 2
-		OuterSupportRadius: 4
-	MPStartUnits@threerigs:
+	MPStartUnits@hqscouts:
 		Class: light
-		ClassName: Three Rigs
+		ClassName: HQ + Scouts
 		Factions: fguard, xenite, terrorist
 		BaseActor: HQ.human
-		SupportActors: ConstructionRig,ConstructionRig,ConstructionRig
-		InnerSupportRadius: 2
-		OuterSupportRadius: 4
-	MPStartUnits@threerigsimp:
+		SupportActors: Scout,Scout
+		InnerSupportRadius: 5
+		OuterSupportRadius: 6
+	MPStartUnits@hqscoutsimp:
 		Class: light
-		ClassName: Three Rigs
+		ClassName: HQ + Scouts
 		Factions: imperium, shadowhand
 		BaseActor: HQ.cyborg
-		SupportActors: ConstructionRig,ConstructionRig,ConstructionRig
-		InnerSupportRadius: 2
-		OuterSupportRadius: 4
-	MPStartUnits@threerigstogran:
+		SupportActors: ReconDrone
+		InnerSupportRadius: 5
+		OuterSupportRadius: 6
+	MPStartUnits@hqscoutstogran:
 		Class: light
-		ClassName: Three Rigs
+		ClassName: HQ + Scouts
 		Factions: togran
 		BaseActor: HQ.togran
-		SupportActors: ConstructionRig,ConstructionRig,ConstructionRig
-		InnerSupportRadius: 2
-		OuterSupportRadius: 4
+		SupportActors: Scout,Scout
+		InnerSupportRadius: 5
+		OuterSupportRadius: 6
 	SpawnMPUnits:
 		StartingUnitsClass: light
 		DropdownDisplayOrder: 0
@@ -542,15 +533,6 @@ Player:
 		InsufficientFundsNotification: InsufficientFunds
 		CashTickUpNotification: CashTickUp
 		CashTickDownNotification: CashTickDown
-	ClassicProductionQueue@AIBuilding:
-		Type: AIBuilding
-		Group: AIBuilding
-		BuildDurationModifier: 1
-	ClassicProductionQueue@DummyQueue:
-		Type: Dummy
-		Group: Dummy
-		BuildDurationModifier: 2486 # DR build rate
-		LowPowerModifier: 10
 	Shroud:
 		FogCheckboxDisplayOrder: 3
 		ExploredMapCheckboxEnabled: True

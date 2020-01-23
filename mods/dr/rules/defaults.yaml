@@ -85,13 +85,13 @@
 		DamageTypes: DefaultDeath
 		RequiresCondition: amperpoison
 
-^Soldier:
+^Infantry:
 	Inherits: ^Humanoid
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
 	Buildable:
 		Queue: Infantry
-		BuildAtProductionType: Soldier
+		BuildAtProductionType: Infantry
 		BuildPaletteOrder: 10
 		Prerequisites: ~barracks, ~techlevel.infonly
 		Description: Generic Soldier
@@ -102,7 +102,7 @@
 	RevealsShroud:
 		Range: 8c0
 	Tooltip:
-		GenericName: Soldier
+		GenericName: Infantry
 	UpdatesPlayerStatistics:
 	ActorLostNotification:
 	MustBeDestroyed:
@@ -132,8 +132,8 @@
 	Voiced:
 		VoiceSet: GenericHumanVoice
 
-^AddonSoldier:
-	Inherits: ^Soldier
+^AddonInfantry:
+	Inherits: ^Infantry
 	-Buildable:
 	MapEditorData:
 		Categories: Addon
@@ -276,7 +276,7 @@
 		InitialFacing: 224 # helicopter
 		TurnSpeed: 15
 		Speed: 200
-		LandableTerrainTypes:
+		LandableTerrainTypes: Clear, Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase, HillSlope1, HillSlope2, Cliff1, Cliff2, Cliff3, Cliff4
 		AltitudeVelocity: 0c58
 		CanHover: True
 		#CruisingCondition: cruising
@@ -460,6 +460,103 @@
 		ReferencePoint: Center
 		Palette: player
 		IsPlayerPalette: True
+		
+^DrBuilding:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	MapEditorData:
+		Categories: Building
+	Buildable:
+		BuildDurationModifier: 2486 # DR build rate
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Power:
+		Amount: -50
+	Armor:
+		Type: BuildingArmour
+	Huntable:
+	UpdatesPlayerStatistics:
+	FootprintPlaceBuildingPreview:
+	ShakeOnDeath:
+	Selectable:
+		Priority: 3
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		TerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
+		BuildSounds: Building
+	RevealsShroud:
+		Range: 3c0
+	WithSpriteBody:
+	HitShape@LAYER1:
+	HitShape@LAYER2:
+	HitShape@LAYER3:
+	HitShape@LAYER4:
+	Guardable:
+		Range: 3c0
+	Armor:
+		Type: BuildingArmour
+	FrozenUnderFog:
+	Tooltip:
+		GenericName: Structure
+	Demolishable:
+	#	Condition: being-demolished
+	CommandBarBlacklist:
+	WithIdleOverlay@LAYER1:
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	RepairableBuilding:
+		RepairStep: 5
+		PlayerExperience: 25
+		RepairingNotification: Repairing
+	EngineerRepairable:
+	CaptureManager:
+	Capturable:
+		Types: building
+	Sellable:
+	SelectionDecorations:
+	ProximityCaptor:
+		Types: Building
+	CaptureNotification:
+	Explodes:
+		Weapon: GenericExplode
+		EmptyWeapon: GenericExplode
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
+	WithFlamesOverlay@Flames1:
+		Image: eosmlfl0
+		Offset: 512, -1024, 0
+		MinimumDamageState: Light
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Flames2:
+		Image: eosmlfl1
+		Offset: -512, -384, 0
+		MinimumDamageState: Medium
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Flames3:
+		Image: eosmlfl2
+		Offset: 512, 256, 0
+		MinimumDamageState: Heavy
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Smoke1:
+		Image: eosmoke5
+		Offset: -256, -1560, 0
+		MinimumDamageState: Medium
+		MaximumDamageState: Dead
 
 ^SelfConstructingBuilding:
 	Inherits@1: ^ExistsInWorld
@@ -590,6 +687,7 @@
 		Type: BuildingArmour
 
 ^DrHeadquarters:
+	BodyOrientation:
 	Inherits: ^ConstructedBuildingCommon
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
@@ -723,9 +821,9 @@
 	Exit@1:
 		SpawnOffset: 512,256,0
 		ExitCell: 3,3
-		ProductionTypes: Soldier, Infantry, Soldier
+		ProductionTypes: Soldier, Infantry
 	Production:
-		Produces: Infantry, Soldier, Soldier
+		Produces: Infantry, Soldier
 	ProductionQueue@Infantry:
 		Type: Infantry
 		Group: Infantry

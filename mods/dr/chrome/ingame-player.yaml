@@ -493,17 +493,33 @@ Container@PLAYER_WIDGETS:
 					Width: 29
 					Height: 240
 					Children:
-						ProductionTypeButton@ECONOMY:
+						ProductionTypeButton@BUILDING:
 							Logic: AddFactionSuffixLogic
 							Y: 0
 							Width: 28
 							Height: 28
 							VisualHeight: 0
 							Background: sidebar-button
-							TooltipText: Economy
+							TooltipText: Building
 							TooltipContainer: TOOLTIP_CONTAINER
-							ProductionGroup: Economy
-							Key: ProductionTypeEconomy
+							ProductionGroup: Building
+							Key: ProductionTypeBuilding
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@DEFENSE:
+							Logic: AddFactionSuffixLogic
+							Y: 31
+							Width: 28
+							Height: 28
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: Defense
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Defense
+							Key: ProductionTypeDefense
 							Children:
 								Image@ICON:
 									X: 6
@@ -511,7 +527,7 @@ Container@PLAYER_WIDGETS:
 									ImageCollection: production-icons
 						ProductionTypeButton@INFANTRY:
 							Logic: AddFactionSuffixLogic
-							Y: 31
+							Y: 62
 							Width: 28
 							Height: 28
 							VisualHeight: 0
@@ -527,7 +543,7 @@ Container@PLAYER_WIDGETS:
 									ImageCollection: production-icons
 						ProductionTypeButton@VEHICLE:
 							Logic: AddFactionSuffixLogic
-							Y: 62
+							Y: 93
 							Width: 28
 							Height: 28
 							VisualHeight: 0
@@ -543,7 +559,7 @@ Container@PLAYER_WIDGETS:
 									ImageCollection: production-icons
 						ProductionTypeButton@UPGRADE:
 							Logic: AddFactionSuffixLogic
-							Y: 93
+							Y: 124
 							Width: 28
 							Height: 28
 							VisualHeight: 0
