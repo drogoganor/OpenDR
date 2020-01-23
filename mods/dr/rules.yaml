@@ -284,7 +284,7 @@
 		Palette: player
 		Sequences: water1
 		MaxDensity: 120000
-		ValuePerUnit: 140
+		ValuePerUnit: 100
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true
 	ResourceType@taelon:
@@ -296,7 +296,7 @@
 		Palette: player
 		Sequences: taelon1
 		MaxDensity: 120000
-		ValuePerUnit: 140
+		ValuePerUnit: 100
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true
 	Locomotor@FOOT:
@@ -475,25 +475,25 @@ World:
 		ClassName: HQ + Scouts
 		Factions: fguard, xenite, terrorist
 		BaseActor: HQ.human
-		SupportActors: Scout,Scout
-		InnerSupportRadius: 5
-		OuterSupportRadius: 6
+		SupportActors: ScoutMP.human
+		InnerSupportRadius: 4
+		OuterSupportRadius: 5
 	MPStartUnits@hqscoutsimp:
 		Class: light
 		ClassName: HQ + Scouts
 		Factions: imperium, shadowhand
 		BaseActor: HQ.cyborg
-		SupportActors: ReconDrone
-		InnerSupportRadius: 5
-		OuterSupportRadius: 6
+		SupportActors: ScoutMP.cyborg
+		InnerSupportRadius: 4
+		OuterSupportRadius: 5
 	MPStartUnits@hqscoutstogran:
 		Class: light
 		ClassName: HQ + Scouts
 		Factions: togran
 		BaseActor: HQ.togran
-		SupportActors: Scout,Scout
-		InnerSupportRadius: 5
-		OuterSupportRadius: 6
+		SupportActors: ScoutMP.human
+		InnerSupportRadius: 4
+		OuterSupportRadius: 5
 	SpawnMPUnits:
 		StartingUnitsClass: light
 		DropdownDisplayOrder: 0
@@ -528,8 +528,8 @@ Player:
 	DeveloperMode:
 		CheckboxDisplayOrder: 8
 	PlayerResources:
-		SelectableCash: 10000, 15000, 20000, 30000, 45000, 60000, 90000
-		DefaultCash: 15000
+		SelectableCash: 8000, 10000, 15000, 20000, 30000, 45000, 60000, 90000
+		DefaultCash: 8000
 		InsufficientFundsNotification: InsufficientFunds
 		CashTickUpNotification: CashTickUp
 		CashTickDownNotification: CashTickDown

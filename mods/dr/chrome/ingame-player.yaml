@@ -557,9 +557,25 @@ Container@PLAYER_WIDGETS:
 									X: 6
 									Y: 6
 									ImageCollection: production-icons
-						ProductionTypeButton@UPGRADE:
+						ProductionTypeButton@ECONOMY:
 							Logic: AddFactionSuffixLogic
 							Y: 124
+							Width: 28
+							Height: 28
+							VisualHeight: 0
+							Background: sidebar-button
+							TooltipText: Economy
+							TooltipContainer: TOOLTIP_CONTAINER
+							ProductionGroup: Economy
+							Key: ProductionTypeEconomy
+							Children:
+								Image@ICON:
+									X: 6
+									Y: 6
+									ImageCollection: production-icons
+						ProductionTypeButton@UPGRADE:
+							Logic: AddFactionSuffixLogic
+							Y: 155
 							Width: 28
 							Height: 28
 							VisualHeight: 0

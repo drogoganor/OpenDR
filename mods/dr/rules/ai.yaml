@@ -19,7 +19,7 @@ Player:
 		ConstructionYardTypes: hq.human, hq.cyborg
 		RefineryTypes: waterlaunchpad
 		PowerTypes: power
-		BarracksTypes: trainingfacility.fguard, trainingfacility.cyborg
+		BarracksTypes: trainingfacility.fguard, trainingfacility.cyborg, trainingfacility.xenite
 		VehiclesFactoryTypes: assemblyplant.human, assemblyplant.cyborg
 		ProductionTypes: trainingfacility.fguard, trainingfacility.cyborg, assemblyplant.human, assemblyplant.cyborg
 		#RearmingTypes: rearmingdeck.human, rearmingdeck.human.cyborg
@@ -31,6 +31,8 @@ Player:
 			#hq.cyborg: 1
 			trainingfacility.fguard: 1
 			trainingfacility.cyborg: 1
+			trainingfacility.xenite: 1
+			matrix: 1
 			assemblyplant.human: 1
 			assemblyplant.cyborg: 1
 			upgrade.hq1: 2
@@ -51,6 +53,8 @@ Player:
 			hq.cyborg: 1
 			trainingfacility.fguard: 1
 			trainingfacility.cyborg: 1
+			trainingfacility.xenite: 1
+			matrix: 1
 			assemblyplant.human: 1
 			assemblyplant.cyborg: 1
 			repair.human: 1
@@ -64,7 +68,7 @@ Player:
 		RequiresCondition: enable-normal-ai
 	SquadManagerBotModule@normal:
 		RequiresCondition: enable-normal-ai
-		SquadSize: 20
+		SquadSize: 10
 		ExcludeFromSquadsTypes: freighter, constructionrig
 		ConstructionYardTypes: constructionrig
 	McvManagerBotModule:

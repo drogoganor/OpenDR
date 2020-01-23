@@ -277,7 +277,7 @@
 	-RequiresBuildableArea:
 	BaseBuilding:
 	BaseProvider:
-		Range: 28c0
+		Range: 36c0
 	GivesBuildableArea:
 		AreaTypes: building
 
@@ -391,10 +391,22 @@
 		SpawnOffset: -512,768,0
 		ExitCell: 1,2
 	Production:
-		Produces: Vehicle
+		Produces: Vehicle, Economy
 	ProductionQueue@Vehicle:
 		Type: Vehicle
 		Group: Vehicle
+		#SpeedUp: True
+		#BuildTimeSpeedReduction: 100, 75, 60, 50
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		BuildDurationModifier: 2486 # DR build rate
+		LowPowerModifier: 300
+	ProductionQueue@Economy:
+		Type: Economy
+		Group: Economy
 		#SpeedUp: True
 		#BuildTimeSpeedReduction: 100, 75, 60, 50
 		ReadyAudio: UnitReady
@@ -433,6 +445,8 @@
 		Prerequisite: vehicles.terrorist
 	ProductionBar:
 		ProductionType: Vehicle
+	ProductionBar:
+		ProductionType: Economy
 	RallyPoint:
 		Offset: 0,6
 	GrantConditionOnPrerequisite:

@@ -990,7 +990,7 @@ PhasingFacility:
 	Tooltip:
 		Name: Phasing Facility
 	Buildable:
-		Prerequisites: ~hq.human
+		Prerequisites: ~hq.human, anypower
 		Queue: Building
 		Description: Phasing Facility
 		BuildPaletteOrder: 50

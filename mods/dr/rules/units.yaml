@@ -170,6 +170,20 @@ Scout:
 		ZOffset: 256
 		RequiresCondition: disguise
 
+ScoutMP.human:
+	Inherits: Scout
+	-Buildable:
+	-WithDisguisingInfantryBody:
+	WithInfantryBody:
+
+ScoutMP.cyborg:
+	Inherits: Scout
+	-Buildable:
+	-WithDisguisingInfantryBody:
+	WithInfantryBody:
+	Voiced:
+		VoiceSet: ImperiumVoice
+
 Medic:
 	Inherits: ^Infantry
 	RenderSprites:
@@ -482,9 +496,9 @@ ConstructionRig:
 	Buildable:
 		Queue: Economy
 		Description: The workhorse of any military operation, this unit\nconstructs all buildings and bridges.
-		Prerequisites: ~techlevel.infonly
-		BuildPaletteOrder: 80
-		BuildDuration: 9
+		Prerequisites: ~hq.fguard, vehicles, upgrade.assemblyplant1
+		BuildPaletteOrder: 220
+		BuildDuration: 40 # 9
 	Selectable:
 		Priority: 4
 		Class: C1
@@ -493,7 +507,7 @@ ConstructionRig:
 	Voiced:
 		VoiceSet: ConstructionVoice
 	Valued:
-		Cost: 300
+		Cost: 1000
 	Health:
 		HP: 100
 	RevealsShroud:
@@ -540,7 +554,39 @@ ConstructionRig:
 		Factions: terrorist
 		Prerequisite: rig.terrorist
 	-Armament:
+	Transforms:
+		IntoActor: hq.human
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds:
+		NoTransformNotification: BuildingCannotPlaceAudio
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
 
+ConstructionRig.imperium:
+	Inherits: ConstructionRig
+	Buildable:
+		Prerequisites: ~hq.imperium, vehicles, upgrade.assemblyplant1
+	Transforms:
+		IntoActor: hq.cyborg
+		Offset: -1,-1
+
+ConstructionRig.xenite:
+	Inherits: ConstructionRig
+	Buildable:
+		Prerequisites: ~hq.xenite, vehicles, upgrade.assemblyplant1
+	Transforms:
+		IntoActor: hq.human
+		Offset: -1,-1
+
+ConstructionRig.shadowhand:
+	Inherits: ConstructionRig
+	Buildable:
+		Prerequisites: ~hq.shadowhand, vehicles, upgrade.assemblyplant1
+	Transforms:
+		IntoActor: hq.cyborg
+		Offset: -1,-1
 
 Freighter:
 	Inherits: ^Vehicle
@@ -552,7 +598,7 @@ Freighter:
 		Queue: Economy
 		Description: These vehicles haul the vital resources that feed\nthe ravenous war machine. The multi-purpose\nFreighter is able to carry fresh water or Taelon.
 		Prerequisites: vehicles
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 230
 		BuildDuration: 30
 	Selectable:
 		Priority: 5
@@ -593,7 +639,7 @@ HoverFreighter:
 		Queue: Economy
 		Description: Serves the same function as the Freighter, but its\nhover drive allows movement over a broader range of\nterrain types. It is armed with a laser cannon.
 		Prerequisites: vehicles, barracks, hq, upgrade.hq1, upgrade.assemblyplant1
-		BuildPaletteOrder: 80
+		BuildPaletteOrder: 240
 		BuildDuration: 45
 	Selectable:
 		Priority: 5
