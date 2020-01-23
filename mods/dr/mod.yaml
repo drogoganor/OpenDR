@@ -65,7 +65,7 @@ Rules:
 	dr|rules/decorations-manual.yaml
 	dr|rules/decorations-snow.yaml
 	dr|rules/decorations-jungle.yaml
-	#dr|rules/togran.yaml
+	dr|rules/togran.yaml
 	#dr|rules/terrorist.yaml
 
 Sequences:
@@ -222,6 +222,10 @@ Fonts:
 		Font: common|FreeSansBold.ttf
 		Size: 32
 		Ascender: 24
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size: 24
+		Ascender: 18
 
 Missions:
 	dr|missions.yaml

@@ -711,7 +711,7 @@ CameraTower:
 		Prerequisites: ~hq
 		Queue: Defense
 		Description: Camera Tower
-		BuildPaletteOrder: 50
+		BuildPaletteOrder: 60
 		BuildDuration: 6
 	Tooltip:
 		Name: Camera Tower

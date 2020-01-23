@@ -588,6 +588,14 @@ ConstructionRig.shadowhand:
 		IntoActor: hq.cyborg
 		Offset: -1,-1
 
+ConstructionRig.togran:
+	Inherits: ConstructionRig
+	Buildable:
+		Prerequisites: ~hq.togran, vehicles, upgrade.assemblyplant1
+	Transforms:
+		IntoActor: hq.togran
+		Offset: -1,-1
+
 Freighter:
 	Inherits: ^Vehicle
 	RenderSprites:

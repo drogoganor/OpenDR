@@ -1,54 +1,13 @@
-
-HQ.terrorist.Constructing:
-	Inherits: HQ.human.Constructing
-	RenderSprites:
-		Image: nthqf1l0
-	Tooltip:
-		Name: Headquarters
-	-Buildable:
-	SelfConstructing:
-		Steps: 20
-		Becomes: HQ.terrorist
-	Health:
-		HP: 1200
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay-building
-	WithIdleOverlay@LAYER2:
-		Sequence: top-building
-	#WithIdleOverlay@LAYER3:
-	#	Palette: shadow
-	#	Sequence: shadow-building
-	MapEditorData:
-		Categories: Addon
-
 HQ.terrorist:
-	Inherits: HQ.human
+	Inherits: ^Headquarters
 	RenderSprites:
 		Image: nthqf1l0
 	MapEditorData:
 		Categories: Addon
-
-WaterLaunchPad.terrorist.Constructing:
-	Inherits: WaterLaunchPad.Constructing
-	RenderSprites:
-		Image: ntlrf1l0
-	-Buildable:
-	SelfConstructing:
-		Steps: 20
-		Becomes: WaterLaunchPad.terrorist
-	Health:
-		HP: 1200
-	WithIdleOverlay@LAYER1:
-		Palette: terrain
-		Sequence: underlay-building
-	WithIdleOverlay@LAYER2:
-		Sequence: top-building
-	#WithIdleOverlay@LAYER3:
-	#	Palette: shadow
-	#	Sequence: shadow-building
-	MapEditorData:
-		Categories: Addon
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 WaterLaunchPad.terrorist:
 	Inherits: WaterLaunchPad
@@ -56,23 +15,10 @@ WaterLaunchPad.terrorist:
 		Image: ntlrf1l0
 	MapEditorData:
 		Categories: Addon
-
-Power.terrorist.Constructing:
-	Inherits: Power.Constructing
-	RenderSprites:
-		Image: ntwpf1l0
-	-Buildable:
-	SelfConstructing:
-		Steps: 20
-		Becomes: Power.terrorist
-	Tooltip:
-		Name: Wind Power Generator
-	Valued:
-		Cost: 2000
-	Health:
-		HP: 1450
-	MapEditorData:
-		Categories: Addon
+	ExplosionOnDamageTransition:
+		Weapon: HugeCrater
+		DamageState: Dead
+		TriggerOnlyOnce: True
 
 Power.terrorist:
 	Inherits: Power
@@ -80,6 +26,10 @@ Power.terrorist:
 		Image: ntwpf1l0
 	Tooltip:
 		Name: Wind Power Generator
+	Valued:
+		Cost: 2000
+	Health:
+		HP: 1450
 	MapEditorData:
 		Categories: Addon
 

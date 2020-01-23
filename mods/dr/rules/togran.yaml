@@ -5,64 +5,60 @@ TogranMechanic:
 	Buildable:
 		Prerequisites: ~infantry.togran, vehicles, repair
 
-HQ.togran.Constructing:
-	Inherits: HQ.human.Constructing
-	Buildable:
-		Queue: Building, AIBuilding
-		Prerequisites: ~rig.togran
-	SelfConstructing:
-		Becomes: HQ.human
+HQ.togran:
+	Inherits: HQ.human
+	RenderSprites:
+		Image: tothq1l0
+	Selectable:
+		Bounds: 120,120,0,0
+		DecorationBounds: 120,120,0,0
 
-TrainingFacility.togran.Constructing:
-	Inherits: TrainingFacility.fguard.Constructing
+TrainingFacility.togran:
+	Inherits: TrainingFacility.fguard
 	Buildable:
-		Queue: Building, AIBuilding
-		Prerequisites: ~rig.togran
-	SelfConstructing:
-		Becomes: TrainingFacility.fguard
+		Queue: Building
+		Prerequisites: ~hq.togran, anypower
 
-AssemblyPlant.togran.Constructing:
-	Inherits: AssemblyPlant.human.Constructing
+AssemblyPlant.togran:
+	Inherits: AssemblyPlant.human
 	Buildable:
-		Queue: Building, AIBuilding
-		Prerequisites: ~rig.togran
-	SelfConstructing:
-		Becomes: AssemblyPlant.human
+		Queue: Building
+		Prerequisites: ~hq.togran, anypower, waterlaunch
 
-TogranLaserTurret.Constructing:
-	Inherits: LaserTurret.Constructing
+TogranLaserTurret:
+	Inherits: LaserTurret
 	Buildable:
-		Queue: Building, AIBuilding
-		Prerequisites: ~rig.togran
+		Queue: Defense
+		Prerequisites: ~hq.togran
 
-AntiAirTurret.togran.Constructing:
-	Inherits: AntiAirTurret.human.Constructing
+AntiAirTurret.togran:
+	Inherits: AntiAirTurret.human
 	Buildable:
-		Queue: Building, AIBuilding
-		Prerequisites: ~rig.togran, hq.togran, upgrade.hq1, vehicles, barracks
+		Queue: Defense
+		Prerequisites: ~hq.togran, upgrade.hq1, vehicles, barracks
 
-TogranHeavyRailTurret.Constructing:
-	Inherits: HeavyRailTurret.Constructing
+TogranHeavyRailTurret:
+	Inherits: HeavyRailTurret
 	Buildable:
-		Queue: Building, AIBuilding
-		Prerequisites: ~rig.togran, hq.togran, upgrade.hq1, vehicles, barracks
+		Queue: Defense
+		Prerequisites: ~hq.togran, upgrade.hq1, vehicles, barracks
 
-Hospital.togran.Constructing:
-	Inherits: Hospital.human.Constructing
+Hospital.togran:
+	Inherits: Hospital.human
 	Buildable:
-		Prerequisites: ~rig.togran, hq.togran, barracks
+		Prerequisites: ~hq.togran, barracks
 
-Repair.togran.Constructing:
-	Inherits: Repair.human.Constructing
+Repair.togran:
+	Inherits: Repair.human
 	Buildable:
-		Prerequisites: ~rig.togran, hq.togran, vehicles
+		Prerequisites: ~hq.togran, vehicles
 
-RearmingDeck.togran.Constructing:
-	Inherits: RearmingDeck.human.Constructing
+RearmingDeck.togran:
+	Inherits: RearmingDeck.human
 	Buildable:
-		Prerequisites: ~rig.togran, hq.togran, upgrade.hq2, vehicles, barracks
+		Prerequisites: ~hq.togran, upgrade.hq2, vehicles, barracks
 
-TogranPhasingFacility.Constructing:
-	Inherits: PhasingFacility.Constructing
+TogranPhasingFacility:
+	Inherits: PhasingFacility
 	Buildable:
-		Prerequisites: ~rig.togran, hq.togran
+		Prerequisites: ~hq.togran

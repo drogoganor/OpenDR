@@ -39,7 +39,7 @@ GoreHunter:
 	Tooltip:
 		Name: Gore Hunter
 	Buildable:
-		Description: Heavy trooper of the Tograns.
+		Description: Heavy trooper of the Togran.
 		Prerequisites: ~infantry.togran
 		BuildPaletteOrder: 10
 		BuildDuration: 11
