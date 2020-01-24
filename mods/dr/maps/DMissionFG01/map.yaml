@@ -110,11 +110,11 @@ Actors:
 	OffenseTroop1: guardian
 		Owner: Imperium
 		Location: 21,51
-		Facing: 92
+		Facing: 118
 	OffenseTroop2: guardian
 		Owner: Imperium
 		Location: 22,52
-		Facing: 92
+		Facing: 119
 	DefenderTank1: plasmatank
 		Owner: Imperium
 		Location: 24,43
@@ -123,61 +123,61 @@ Actors:
 	DefenderTank2: plasmatank
 		Owner: Imperium
 		Location: 25,44
-		Facing: 92
-		TurretFacing: 92
+		TurretFacing: 119
+		Facing: 119
 	AlleyTank: plasmatank
 		Owner: Imperium
 		Location: 20,30
-		Facing: 92
-		TurretFacing: 92
+		TurretFacing: 60
+		Facing: 60
 	TS102: spiderbike
 		Owner: Trapped Soldiers 1
 		Location: 6,45
-		Facing: 92
+		Facing: 0
 	TS103: spiderbike
 		Owner: Trapped Soldiers 1
 		Location: 5,46
-		Facing: 92
+		Facing: 38
 	TS104: rat
 		Owner: Trapped Soldiers 1
 		Location: 4,48
-		Facing: 92
+		Facing: 230
 	TS105: sniper
 		Owner: Trapped Soldiers 1
 		Location: 6,48
-		Facing: 92
+		Facing: 170
 	TS201: mercenary
 		Owner: Trapped Soldiers 2
 		Location: 45,40
-		Facing: 92
+		Facing: 38
 	TS202: mercenary
 		Owner: Trapped Soldiers 2
 		Location: 46,41
-		Facing: 92
+		Facing: 51
 	TS203: mercenary
 		Owner: Trapped Soldiers 2
 		Location: 47,42
-		Facing: 92
+		Facing: 41
 	TS204: mercenary
 		Owner: Trapped Soldiers 2
 		Location: 46,43
-		Facing: 92
+		Facing: 255
 	TS205: raider
 		Owner: Trapped Soldiers 2
 		Location: 47,40
-		Facing: 92
+		Facing: 59
 	TS206: raider
 		Owner: Trapped Soldiers 2
 		Location: 46,39
-		Facing: 92
+		Facing: 22
 	TS207: raider
 		Owner: Trapped Soldiers 2
 		Location: 47,38
-		Facing: 92
+		Facing: 14
 	TS208: raider
 		Owner: Trapped Soldiers 2
 		Location: 48,39
-		Facing: 92
+		Facing: 37
 	TS209: medic
 		Owner: Trapped Soldiers 2
 		Location: 49,38
@@ -801,55 +801,55 @@ Actors:
 	Actor385: guardian
 		Owner: Imperium
 		Location: 21,44
-		Facing: 92
+		Facing: 102
 	Actor386: guardian
 		Owner: Imperium
 		Location: 21,45
-		Facing: 92
+		Facing: 108
 	Actor387: guardian
 		Owner: Imperium
 		Location: 20,45
-		Facing: 92
+		Facing: 118
 	Actor407: guardian
 		Owner: Imperium
 		Location: 28,46
-		Facing: 92
+		Facing: 103
 	Actor408: guardian
 		Owner: Imperium
 		Location: 28,47
-		Facing: 92
+		Facing: 131
 	Actor409: guardian
 		Owner: Imperium
 		Location: 27,47
-		Facing: 92
+		Facing: 104
 	Actor410: guardian
 		Owner: Imperium
 		Location: 27,46
-		Facing: 92
+		Facing: 119
 	Actor411: plasmaturret
 		Owner: Imperium
 		Location: 23,45
-		TurretFacing: 92
+		TurretFacing: 104
 	Actor412: bion
 		Owner: Imperium
 		Location: 21,47
-		Facing: 92
+		Facing: 103
 	Actor413: bion
 		Owner: Imperium
 		Location: 22,47
-		Facing: 92
+		Facing: 120
 	Actor414: bion
 		Owner: Imperium
 		Location: 24,48
-		Facing: 92
+		Facing: 136
 	Actor415: bion
 		Owner: Imperium
 		Location: 25,48
-		Facing: 92
+		Facing: 124
 	Actor416: guardian
 		Owner: Imperium
 		Location: 23,48
-		Facing: 92
+		Facing: 106
 	Actor367: aotre000
 		Owner: Neutral
 		Location: 3,28
@@ -910,11 +910,11 @@ Actors:
 	Actor366: guardian
 		Owner: Imperium
 		Location: 35,32
-		Facing: 92
+		Facing: 122
 	Actor420: guardian
 		Owner: Imperium
 		Location: 29,36
-		Facing: 92
+		Facing: 108
 	Actor301: largewall1
 		Owner: Neutral
 		Location: 16,40
@@ -951,7 +951,7 @@ Actors:
 	Actor332: guardian
 		Owner: Imperium
 		Location: 33,62
-		Facing: 92
+		Facing: 44
 	Actor333: guardian
 		Owner: Imperium
 		Location: 30,63
@@ -1492,128 +1492,138 @@ Actors:
 	Actor503: guardian
 		Owner: Imperium
 		Location: 34,20
-		Facing: 92
+		Facing: 140
 	Actor504: guardian
 		Owner: Imperium
 		Location: 36,20
-		Facing: 92
+		Facing: 143
 	Actor505: guardian
 		Owner: Imperium
 		Location: 40,21
-		Facing: 92
+		Facing: 100
 	Actor506: guardian
 		Owner: Imperium
 		Location: 30,20
-		Facing: 92
+		Facing: 163
 	Actor510: guardian
 		Owner: Imperium
 		Location: 28,13
-		Facing: 92
+		Facing: 38
 	Actor511: guardian
 		Owner: Imperium
 		Location: 31,12
-		Facing: 92
+		Facing: 45
 	Actor512: bion
 		Owner: Imperium
 		Location: 37,19
-		Facing: 92
+		Facing: 123
 	Actor513: bion
 		Owner: Imperium
 		Location: 40,20
-		Facing: 92
+		Facing: 124
 	Actor514: bion
 		Owner: Imperium
 		Location: 33,19
-		Facing: 92
+		Facing: 139
 	Actor515: bion
 		Owner: Imperium
 		Location: 29,21
-		Facing: 92
+		Facing: 169
 	Actor516: bion
 		Owner: Imperium
 		Location: 30,13
-		Facing: 92
+		Facing: 169
 	Actor517: bion
 		Owner: Imperium
 		Location: 32,13
-		Facing: 92
+		Facing: 135
 	Actor518: bion
 		Owner: Imperium
 		Location: 42,21
-		Facing: 92
+		Facing: 110
 	Actor620: plasmatank
 		Owner: Imperium
 		Location: 35,20
-		Facing: 92
-		TurretFacing: 92
+		TurretFacing: 134
+		Facing: 134
 	Actor624: plasmatank
 		Owner: Imperium
 		Location: 31,18
-		Facing: 92
-		TurretFacing: 92
+		TurretFacing: 161
+		Facing: 161
 	Actor625: plasmatank
 		Owner: Imperium
 		Location: 39,18
-		Facing: 92
-		TurretFacing: 92
+		TurretFacing: 107
+		Facing: 107
 	Actor626: tachiontank
 		Owner: Imperium
 		Location: 33,17
-		Facing: 92
+		Facing: 151
 	Actor627: tachiontank
 		Owner: Imperium
 		Location: 38,17
-		Facing: 92
+		Facing: 112
 	Actor628: guardian
 		Owner: Imperium
 		Location: 36,16
-		Facing: 92
+		Facing: 142
 	Actor629: guardian
 		Owner: Imperium
 		Location: 35,16
-		Facing: 92
+		Facing: 142
 	Actor630: guardian
 		Owner: Imperium
 		Location: 31,21
-		Facing: 92
+		Facing: 171
 	Actor631: guardian
 		Owner: Imperium
 		Location: 37,21
-		Facing: 92
+		Facing: 108
 	Actor632: guardian
 		Owner: Imperium
 		Location: 29,14
-		Facing: 92
+		Facing: 165
 	Actor633: largewall2
-		Owner: Imperium
 		Location: 22,24
+		Faction: imperium
+		Owner: Neutral
 	Actor634: smallwall1
-		Owner: Imperium
 		Location: 24,24
+		Faction: imperium
+		Owner: Neutral
 	Actor635: smallwall2
-		Owner: Imperium
 		Location: 26,24
+		Faction: imperium
+		Owner: Neutral
 	Actor636: smallwall1
-		Owner: Imperium
 		Location: 28,24
+		Faction: imperium
+		Owner: Neutral
 	Actor637: smallwall2
-		Owner: Imperium
 		Location: 30,24
+		Faction: imperium
+		Owner: Neutral
 	Actor522: smallwall1
-		Owner: Imperium
 		Location: 38,24
+		Faction: imperium
+		Owner: Neutral
 	Actor529: smallwall2
-		Owner: Imperium
 		Location: 40,24
+		Faction: imperium
+		Owner: Neutral
 	Actor638: smallwall1
-		Owner: Imperium
 		Location: 42,24
+		Faction: imperium
+		Owner: Neutral
 	Actor639: smallwall2
-		Owner: Imperium
 		Location: 44,24
+		Faction: imperium
+		Owner: Neutral
 	Actor640: largewall1
-		Owner: Imperium
 		Location: 46,24
+		Faction: imperium
+		Owner: Neutral
 	Actor641: aoroc001
 		Owner: Neutral
 		Location: 49,27
@@ -1650,7 +1660,7 @@ Actors:
 	Actor644: guardian
 		Owner: Imperium
 		Location: 33,21
-		Facing: 92
+		Facing: 139
 	Actor645: aorub002
 		Owner: Neutral
 		Location: 34,41
@@ -1672,7 +1682,7 @@ Actors:
 	ts101: spiderbike
 		Owner: Trapped Soldiers 1
 		Location: 7,46
-		Facing: 92
+		Facing: 197
 	Actor540: bion
 		Owner: Imperium
 		Location: 22,63
@@ -1680,22 +1690,26 @@ Actors:
 	Actor542: guardian
 		Owner: Imperium
 		Location: 23,62
-		Facing: 92
+		Facing: 41
 	Actor543: guardian
 		Owner: Imperium
 		Location: 22,62
-		Facing: 92
+		Facing: 122
 	Actor544: guardian
 		Owner: Imperium
 		Location: 23,64
-		Facing: 92
+		Facing: 255
 	Actor548: guardian
 		Owner: Imperium
 		Location: 22,64
-		Facing: 92
+		Facing: 138
 	Actor547: guardian
 		Owner: Imperium
 		Location: 23,65
-		Facing: 92
+		Facing: 118
+	ts210: medic
+		Owner: Trapped Soldiers 2
+		Location: 49,40
+		Facing: 97
 
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

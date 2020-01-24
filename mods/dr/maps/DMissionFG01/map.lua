@@ -6,7 +6,7 @@ OffenseTroops = { OffenseTroop1, OffenseTroop2 }
 ResponseUnit = { DefenderTank1, DefenderTank2 }
 Civilians = { civ1, civ2, civ3, civ4, civ5, civ6, civ7, civ8, civ9, civ10, civ11 }
 TrappedSoldiers1 = { ts101, TS102, TS103, TS104, TS105 }
-TrappedSoldiers2 = { TS201, TS202, TS203, TS204, TS205, TS206, TS207, TS208, TS209 }
+TrappedSoldiers2 = { TS201, TS202, TS203, TS204, TS205, TS206, TS207, TS208, TS209, ts210 }
 StartUnits = { "raider", "raider", "raider", "martyr" }
 StartUnits2 = { "raider", "raider", "raider", "scout" }
 
@@ -177,7 +177,7 @@ WorldLoaded = function()
 	Trigger.OnPlayerDiscovered(civilians, DiscoverTrappedCivilians)
 	
 	Trigger.OnAllKilled(ImpBase, function()
-		Trigger.AfterDelay(DateTime.Seconds(10), RepeatBuildAttackForce2)
+		Trigger.AfterDelay(DateTime.Seconds(1), RepeatBuildAttackForce2)
 	end)
 	
 	Trigger.OnAllKilled(ImpBaseAll, function()
