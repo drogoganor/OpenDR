@@ -1,18 +1,34 @@
 
 FGBase = { FGHQ, FGPower, FGWater, FGFreighter }
-ImpBase = { ImpHQ, ImpPower, ImpWater, ImpBarracks }
+ImpBase = { imphq, imppower, ImpWater, ImpBarracks }
+ImpBaseAll = { imphq, imppower, ImpWater, ImpBarracks, imppower2, impwater2, impbarracks2, impplant }
 OffenseTroops = { OffenseTroop1, OffenseTroop2 }
 ResponseUnit = { DefenderTank1, DefenderTank2 }
-TrappedSoldiers1 = { TS101, TS102, TS103, TS104, TS105 }
+Civilians = { civ1, civ2, civ3, civ4, civ5, civ6, civ7, civ8, civ9, civ10, civ11 }
+TrappedSoldiers1 = { ts101, TS102, TS103, TS104, TS105 }
 TrappedSoldiers2 = { TS201, TS202, TS203, TS204, TS205, TS206, TS207, TS208, TS209 }
-StartUnits = { "raider", "raider", "raider", "medic" }
-StartUnits2 = { "raider", "raider", "raider", "sniper" }
+StartUnits = { "raider", "raider", "raider", "martyr" }
+StartUnits2 = { "raider", "raider", "raider", "scout" }
 
 EnemyInfantrySquads =
 {
 	{ "bion", "guardian" },
 	{ "guardian", "guardian" },
 	{ "bion", "bion" }
+}
+
+EnemyInfantrySquads2 =
+{
+	{ "bion", "guardian", "guardian" },
+	{ "guardian", "guardian", "guardian" },
+	{ "bion", "bion", "guardian" }
+}
+
+EnemyTankSquads =
+{
+	{ "plasmatank", "plasmatank", "scoutrunner" },
+	{ "plasmatank", "plasmatank", "plasmatank" },
+	{ "plasmatank", "scoutrunner", "scoutrunner" }
 }
 
 MissionAccomplished = function()
@@ -70,10 +86,24 @@ EnemyBarracksProduction = function(Squad)
 	DoUnitProduction(Squad, ImpBarracks, EnemyAttack)
 end
 
+EnemyBarracks2Production = function(Squad)
+	DoUnitProduction(Squad, impbarracks2, EnemyAttack)
+end
+
+EnemyPlantProduction = function(Squad)
+	DoUnitProduction(Squad, impplant, EnemyAttack)
+end
+
 -- Recurrent enemy attack
 RepeatBuildAttackForce = function()
 	EnemyBarracksProduction(Utils.Random(EnemyInfantrySquads))
 	Trigger.AfterDelay(DateTime.Seconds(36), RepeatBuildAttackForce)
+end
+
+RepeatBuildAttackForce2 = function()
+	EnemyBarracks2Production(Utils.Random(EnemyInfantrySquads2))
+	EnemyPlantProduction(Utils.Random(EnemyTankSquads))
+	Trigger.AfterDelay(DateTime.Seconds(60), RepeatBuildAttackForce2)
 end
 
 DiscoverAbandonedBase = function(_, actor, discoverer)
@@ -118,6 +148,20 @@ DiscoverTrappedSoldiers2 = function(_, actor, discoverer)
 	allySoldiers2Discovered = true
 end
 
+DiscoverTrappedCivilians = function(_, actor, discoverer)
+	if civiliansDiscovered or not discoverer == player then
+		return
+	end
+	
+	Utils.Do(Civilians, function(actor)
+		actor.Owner = player
+	end)
+
+	player.MarkCompletedObjective(RescueCiviliansObjective)
+
+	civiliansDiscovered = true
+end
+
 WorldLoaded = function()
 
 	player = Player.GetPlayer("Freedom Guard")
@@ -125,15 +169,21 @@ WorldLoaded = function()
 	allySoldiers1 = Player.GetPlayer("Trapped Soldiers 1")
 	allySoldiers2 = Player.GetPlayer("Trapped Soldiers 2")
 	enemy = Player.GetPlayer("Imperium")
+	civilians = Player.GetPlayer("Captured Civilians")
 	
 	Trigger.OnPlayerDiscovered(abandonBase, DiscoverAbandonedBase)
 	Trigger.OnPlayerDiscovered(allySoldiers1, DiscoverTrappedSoldiers1)
 	Trigger.OnPlayerDiscovered(allySoldiers2, DiscoverTrappedSoldiers2)
+	Trigger.OnPlayerDiscovered(civilians, DiscoverTrappedCivilians)
 	
 	Trigger.OnAllKilled(ImpBase, function()
+		Trigger.AfterDelay(DateTime.Seconds(10), RepeatBuildAttackForce2)
+	end)
+	
+	Trigger.OnAllKilled(ImpBaseAll, function()
 		player.MarkCompletedObjective(DestroyEnemiesObjective)
 	end)
-
+	
 	Trigger.OnObjectiveCompleted(player, function(p, id)
 		Media.DisplayMessage(p.GetObjectiveDescription(id), "Objective completed")
 	end)
@@ -144,6 +194,7 @@ WorldLoaded = function()
 	Trigger.OnPlayerLost(player, MissionFailed)
 	
 	FindBaseObjective = player.AddPrimaryObjective("Find the imperiled Freedom Guard base.")
+	RescueCiviliansObjective = player.AddPrimaryObjective("Discover where the captured civilians are being held.")
 	
 	Camera.Position = StartWaypoint.CenterPosition
 
@@ -163,7 +214,7 @@ Tick = function()
 	end
 
 	if not defenseCalled then
-		if ImpWater.IsDead or ImpHQ.IsDead then
+		if ImpWater.IsDead or imphq.IsDead then
 			DefenseCall(ResponseUnit)
 			defenseCalled = true
 		end

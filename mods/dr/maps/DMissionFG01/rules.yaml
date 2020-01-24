@@ -42,55 +42,7 @@ Mechanic:
 	Buildable:
 		Prerequisites: ~disabled
 
-Martyr:
-	Buildable:
-		Prerequisites: ~disabled
-
 Infiltrator:
-	Buildable:
-		Prerequisites: ~disabled
-
-HoverFreighter:
-	Buildable:
-		Prerequisites: ~disabled
-
-SkirmishTank:
-	Buildable:
-		Prerequisites: ~disabled
-
-TankHunter:
-	Buildable:
-		Prerequisites: ~disabled
-
-PhaseTank:
-	Buildable:
-		Prerequisites: ~disabled
-
-FlakJack:
-	Buildable:
-		Prerequisites: ~disabled
-
-TripleRailHoverTank:
-	Buildable:
-		Prerequisites: ~disabled
-
-HellstormArtillery:
-	Buildable:
-		Prerequisites: ~disabled
-
-SkyBike:
-	Buildable:
-		Prerequisites: ~disabled
-
-Outrider:
-	Buildable:
-		Prerequisites: ~disabled
-
-ShockWave:
-	Buildable:
-		Prerequisites: ~disabled
-
-WaterContaminator:
 	Buildable:
 		Prerequisites: ~disabled
 
@@ -116,6 +68,10 @@ upgrade.phasing:
 		Prerequisites: ~disabled
 
 # FG Buildings
+AssemblyPlant.human:
+	Buildable:
+		Prerequisites: ~disabled
+
 LaserTurret:
 	Buildable:
 		Prerequisites: ~disabled
