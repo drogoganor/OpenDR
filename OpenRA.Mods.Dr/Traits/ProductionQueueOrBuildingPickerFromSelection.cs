@@ -99,6 +99,9 @@ namespace OpenRA.Mods.Dr.Traits
 			if (queue == null)
 				return;
 
+			if (queue is BuilderQueue)
+				return;
+
 			if (tabsWidget.Value != null)
 				tabsWidget.Value.CurrentQueue = queue;
 			else if (paletteWidget.Value != null)
