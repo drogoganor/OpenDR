@@ -529,8 +529,8 @@ Player:
 	DeveloperMode:
 		CheckboxDisplayOrder: 8
 	PlayerResources:
-		SelectableCash: 8000, 10000, 15000, 20000, 30000, 45000, 60000, 90000
-		DefaultCash: 8000
+		SelectableCash: 5000, 10000, 15000, 20000, 30000, 45000, 60000, 90000
+		DefaultCash: 5000
 		InsufficientFundsNotification: InsufficientFunds
 		CashTickUpNotification: CashTickUp
 		CashTickDownNotification: CashTickDown
