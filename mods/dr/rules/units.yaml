@@ -170,20 +170,6 @@ Scout:
 		ZOffset: 256
 		RequiresCondition: disguise
 
-ScoutMP.human:
-	Inherits: Scout
-	-Buildable:
-	-WithDisguisingInfantryBody:
-	WithInfantryBody:
-
-ScoutMP.cyborg:
-	Inherits: Scout
-	-Buildable:
-	-WithDisguisingInfantryBody:
-	WithInfantryBody:
-	Voiced:
-		VoiceSet: ImperiumVoice
-
 Medic:
 	Inherits: ^Infantry
 	RenderSprites:
@@ -614,7 +600,7 @@ Freighter:
 		Bounds: 36,36,0,0
 		DecorationBounds: 32,32,0,0
 	Voiced:
-		VoiceSet: FreedomGuardVoice
+		VoiceSet: FreedomGuardVehicleVoice
 	Valued:
 		Cost: 1000
 	Health:
@@ -655,7 +641,7 @@ HoverFreighter:
 		Bounds: 36,36,0,0
 		DecorationBounds: 32,32,0,0
 	Voiced:
-		VoiceSet: FreedomGuardVoice
+		VoiceSet: FreedomGuardVehicleVoice
 	Valued:
 		Cost: 1500
 	Health:
@@ -691,7 +677,7 @@ SpiderBike:
 	Selectable:
 		Class: V1
 	Voiced:
-		VoiceSet: FreedomGuardVoice
+		VoiceSet: FreedomGuardVehicleVoice
 	Valued:
 		Cost: 500
 	Health:
@@ -712,7 +698,7 @@ RAT:
 	Tooltip:
 		Name: Rapid Armored Transport
 	Voiced:
-		VoiceSet: FreedomGuardVoice
+		VoiceSet: FreedomGuardVehicleVoice
 	Buildable:
 		Description: The Freedom Guard troop transport has the ability\nto camouflage itself to match the surrounding terrain.\nThe R.A.T. is unarmed, but is able to carry up to\nfive infantry units at a time and can move over water,\nalthough at a considerably reduced speed.
 		Prerequisites: ~vehicles.fguard
@@ -747,7 +733,7 @@ SkirmishTank:
 	Tooltip:
 		Name: Skirmish Tank
 	Voiced:
-		VoiceSet: FreedomGuardVoice
+		VoiceSet: FreedomGuardVehicleVoice
 	Buildable:
 		Description: The Skirmish Tank is the foundation upon which any\nsuccessful military outfit is built. Properly\naccessorised, the Skirmish Tank can make a splash at\nan intimate midnight raid, a small summer skirmish,\nor even a full-scale gala massacre.
 		Prerequisites: ~vehicles.human
@@ -793,7 +779,7 @@ TankHunter:
 	Selectable:
 		Class: V4
 	Voiced:
-		VoiceSet: FreedomGuardVoice
+		VoiceSet: FreedomGuardVehicleVoice
 	Valued:
 		Cost: 700
 	Health:
@@ -993,7 +979,7 @@ WaterContaminator:
 	Selectable:
 		Class: V10
 	Voiced:
-		VoiceSet: FreedomGuardVoice
+		VoiceSet: FreedomGuardVehicleVoice
 	Valued:
 		Cost: 10000
 	Health:
@@ -1013,7 +999,7 @@ PhaseRunner:
 	Tooltip:
 		Name: Phase Runner
 	Voiced:
-		VoiceSet: FreedomGuardVoice
+		VoiceSet: FreedomGuardVehicleVoice
 	-Buildable:
 	#	Description: The Phase Runner troop transport has the ability\nto travel while phased.
 	#	Prerequisites: ~vehicles.fguard
@@ -1714,7 +1700,7 @@ RATmk2:
 	Tooltip:
 		Name: Rapid Armored Transport Mk. 2
 	Voiced:
-		VoiceSet: FreedomGuardVoice
+		VoiceSet: FreedomGuardVehicleVoice
 	Buildable:
 		Description: A RAT that has a laser like the Invader Troop Transport.\nNot much to say about it other than it's strictly\nbetter than the original, and obviously replaces\nthe original.
 		Prerequisites: ~vehicles.xenite

@@ -469,32 +469,33 @@ World:
 		ClassName: HQ only
 		Factions: togran
 		BaseActor: HQ.togran
-	MPStartUnits@hqscouts:
+	MPStartUnits@rig:
 		Class: light
-		ClassName: HQ + Scouts
-		Factions: fguard, xenite, terrorist
-		BaseActor: HQ.human
-		SupportActors: ScoutMP.human
-		InnerSupportRadius: 4
-		OuterSupportRadius: 5
-	MPStartUnits@hqscoutsimp:
+		ClassName: Construction Rig
+		Factions: fguard
+		BaseActor: ConstructionRig
+	MPStartUnits@rigimp:
 		Class: light
-		ClassName: HQ + Scouts
-		Factions: imperium, shadowhand
-		BaseActor: HQ.cyborg
-		SupportActors: ScoutMP.cyborg
-		InnerSupportRadius: 4
-		OuterSupportRadius: 5
-	MPStartUnits@hqscoutstogran:
+		ClassName: Construction Rig
+		Factions: imperium
+		BaseActor: ConstructionRig.imperium
+	MPStartUnits@rigxenite:
 		Class: light
-		ClassName: HQ + Scouts
+		ClassName: Construction Rig
+		Factions: xenite
+		BaseActor: ConstructionRig.xenite
+	MPStartUnits@rigshadowhand:
+		Class: light
+		ClassName: Construction Rig
+		Factions: shadowhand
+		BaseActor: ConstructionRig.shadowhand
+	MPStartUnits@rigtogran:
+		Class: light
+		ClassName: Construction Rig
 		Factions: togran
-		BaseActor: HQ.togran
-		SupportActors: ScoutMP.human
-		InnerSupportRadius: 4
-		OuterSupportRadius: 5
+		BaseActor: ConstructionRig.togran
 	SpawnMPUnits:
-		StartingUnitsClass: light
+		StartingUnitsClass: none
 		DropdownDisplayOrder: 0
 	PathFinder:
 	ValidateOrder:
