@@ -485,7 +485,7 @@ SkirmishGun1:
 	Burst: 2
 	BurstDelays: 9
 	Report: gxsktwc0.wav
-	ValidTargets: Air, Ground
+	ValidTargets: Ground
 	Projectile: Bullet
 		Speed: 341
 		Image: eomispr4
@@ -495,10 +495,10 @@ SkirmishGun1:
 		Damage: 14
 	Warhead@3Eff: CreateEffect
 		Explosions: eoblatr0,eoblatr1
-		ValidTargets: Air, Ground, Ship, Trees
+		ValidTargets: Ground, Ship, Trees
 	Warhead@3Eff: CreateEffect
 		Explosions: eosmosm0
-		ValidTargets: Air, Ground, Ship, Trees
+		ValidTargets: Ground, Ship, Trees
 
 SniperRifle:
 	Inherits: ^S1

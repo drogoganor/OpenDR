@@ -46,12 +46,22 @@ GenericVehicleVoice: # Death explosion sounds for  vehicles
 		Zapped: gxexpoc2
 
 FreedomGuardVehicleVoice: # Generic Freedom Guard vehicle (Freighter, Spider Bike, Skirmish Tank)
-	Inherits: FreedomGuardVoice
-	Inherits@2: GenericVehicleVoice
+	DefaultVariant: .wav
+	Voices:
+		Select: gvfg2sl0,gvfg2sl1,gvfg2sl2,gvfg2sl3
+		Action: gvfg2rl0,gvfg2rl1,gvfg2rl2,gvfg2rl4
+		Die: gxexpoc2
+		Burned: gxexpoc2
+		Zapped: gxexpoc2
 
 ImperiumVehicleVoice: # Generic Imperium vehicle (Scout Runner, Plasma Tank)
-	Inherits: ImperiumVoice
-	Inherits@2: GenericVehicleVoice
+	DefaultVariant: .wav
+	Voices:
+		Select: gvig1sl0,gvig1sl1,gvig1sl2,gvig1sl3,gvig1sl5
+		Action: gvig1rl0,gvig1rl1,gvig1rl2,gvig1rl3,gvig1rl6
+		Die: gxexpoc2
+		Burned: gxexpoc2
+		Zapped: gxexpoc2
 
 ConstructionVoice:
 	Inherits: FreedomGuardVehicleVoice

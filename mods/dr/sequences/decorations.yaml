@@ -168,17 +168,20 @@ aorub000:
 	idle:
 	shadow: aorub0sh
 		Offset: 0, 0
+		ZOffset: -8192
 
 aorub001:
 	idle:
 	shadow: aorub1sh
 		Offset: 0, 0
+		ZOffset: -8192
 
 aorub002:
 	idle:
 		Length: 1
 	shadow: aorub2sh
 		Offset: 0, 0
+		ZOffset: -8192
 
 # Scoring
 aomsc000:

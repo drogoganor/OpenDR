@@ -27,3 +27,37 @@ drmusic: Music Packages
 	MirrorList: http://drogoganor.net/dr/dr-music-mirrors.txt
 	Extract:
 		^Content/dr/music.zip: music.zip
+drdevtest: Dev Test Package (Full)
+	MirrorList: http://drogoganor.net/dr/dr-devtest-mirrors.txt
+	Extract:
+		^Content/dr/SPRITES.FTG: SPRITES.FTG
+		^Content/dr/SOUNDS.FTG: SOUNDS.FTG
+		^Content/dr/shell/SOUNDS.FTG: shell/SOUNDS.FTG
+		^Content/dr/SNOW/SNOW.TIL: SNOW/SNOW.TIL
+		^Content/dr/SNOW/SNOW.PAL: SNOW/SNOW.PAL
+		^Content/dr/SNOW/SPRITES.FTG: SNOW/SPRITES.FTG
+		^Content/dr/BARREN/BARREN.TIL: BARREN/BARREN.TIL
+		^Content/dr/BARREN/BARREN.PAL: BARREN/BARREN.PAL
+		^Content/dr/BARREN/SPRITES.FTG: BARREN/SPRITES.FTG
+		^Content/dr/JUNGLE/JUNGLE.TIL: JUNGLE/JUNGLE.TIL
+		^Content/dr/JUNGLE/JUNGLE.PAL: JUNGLE/JUNGLE.PAL
+		^Content/dr/JUNGLE/SPRITES.FTG: JUNGLE/SPRITES.FTG
+		^Content/dr/spriteEx.ftg: spriteEx.ftg
+		^Content/dr/soundsEx.ftg: soundsEx.ftg
+		^Content/dr/ALIEN/ALIEN.TIL: alien/ALIEN.TIL
+		^Content/dr/ALIEN/ALIEN.PAL: alien/ALIEN.PAL
+		^Content/dr/ALIEN/SPRITEEX.FTG: alien/SPRITEEX.FTG
+		^Content/dr/BARREN/spriteEx.ftg: BARREN/spriteEx.ftg
+		^Content/dr/JUNGLE/spriteEx.ftg: JUNGLE/spriteEx.ftg
+		^Content/dr/SNOW/spriteEx.ftg: SNOW/spriteEx.ftg
+		^Content/dr/mouse.crs: MOUSE.CRS
+		^Content/dr/music.zip: music.zip
+		^Content/dr/aust/AUST.FTG: aust/AUST.FTG
+		^Content/dr/volcanic/VOLCANIC.FTG: volcanic/VOLCANIC.FTG
+		^Content/dr/auralien/AURALIEN.FTG: auralien/AURALIEN.FTG
+		^Content/dr/asteroid/ASTEROID.FTG: asteroid/ASTEROID.FTG
+		^Content/dr/addon/aurunits/aursprite.ftg: addon/aurunits/aursprite.ftg
+		^Content/dr/addon/aurunits/aursound.ftg: addon/aurunits/aursound.ftg
+		^Content/dr/addon/terrorist/terrsprite.ftg: addon/terrorist/terrsprite.ftg
+		^Content/dr/addon/terrorist/terrsound.ftg: addon/terrorist/terrsound.ftg
+		^Content/dr/legal.txt: legal.txt
