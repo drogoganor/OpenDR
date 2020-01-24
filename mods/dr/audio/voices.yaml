@@ -47,9 +47,9 @@ GenericVehicleVoice: # Death explosion sounds for  vehicles
 
 FreedomGuardVehicleVoice: # Generic Freedom Guard vehicle (Freighter, Spider Bike, Skirmish Tank)
 	DefaultVariant: .wav
-	Select: gvfg2sl0,gvfg2sl1,gvfg2sl2,gvfg2sl3
-	Action: gvfg2rl0,gvfg2rl1,gvfg2rl2,gvfg2rl4
 	Voices:
+		Select: gvfg2sl0,gvfg2sl1,gvfg2sl2,gvfg2sl3
+		Action: gvfg2rl0,gvfg2rl1,gvfg2rl2,gvfg2rl4
 		Die: gxexpoc2
 		Burned: gxexpoc2
 		Zapped: gxexpoc2

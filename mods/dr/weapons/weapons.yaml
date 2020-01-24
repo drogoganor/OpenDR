@@ -9,7 +9,6 @@
 # Anything to do with size must be multiplied by (1024 / 24), the WPos cell size divided by the tile size.
 # Speed and Spread are calculated using this formula.
 
-
 # A1 is the air defence laser, used on ImpMAD and AntiAircraftSite
 # B1 is the suicide bomber's bomb
 # B2 is the artillery shell
@@ -72,12 +71,12 @@
 		Spread: 256
 		Damage: 10
 		Versus:
-			ToughHuman: 100
-			PowerHuman: 100
-			FlyingArmour: 0
-			TankPlating: 100
-			ForcePlating: 100
-			BuildingArmour: 50
+			ToughHuman: 125 # 100
+			PowerHuman: 125 # 100
+			FlyingArmour: 0 # 0
+			TankPlating: 50 # 100
+			ForcePlating: 45 # 100
+			BuildingArmour: 25 # 50
 		DamageTypes: DefaultDeath
 
 ^B2: # is the artillery shell
@@ -111,12 +110,12 @@
 		Spread: 256
 		Damage: 11
 		Versus:
-			ToughHuman: 100 # 10
-			PowerHuman: 100 # 10
+			ToughHuman: 50 # 100
+			PowerHuman: 50 # 100
 			FlyingArmour: 0
-			TankPlating: 200 # 10
-			ForcePlating: 125 # 10
-			BuildingArmour: 70 # 10
+			TankPlating: 200 # 200
+			ForcePlating: 125 # 125
+			BuildingArmour: 100 # 70
 		DamageTypes: DefaultDeath
 
 ^E2: # is the laser rifle/pistol
@@ -124,12 +123,12 @@
 		Spread: 256
 		Damage: 8
 		Versus:
-			ToughHuman: 100 # 10
-			PowerHuman: 100 # 10
-			FlyingArmour: 50 # 10
-			TankPlating: 50 # 10
-			ForcePlating: 50 # 10
-			BuildingArmour: 50 # 10
+			ToughHuman: 100 # 100
+			PowerHuman: 90 # 100
+			FlyingArmour: 25 # 50
+			TankPlating: 40 # 50
+			ForcePlating: 40 # 50
+			BuildingArmour: 20 # 50
 		DamageTypes: DefaultDeath
 
 ^E3: # is the plasma cannon
@@ -163,12 +162,12 @@
 		Spread: 256
 		Damage: 60
 		Versus:
-			ToughHuman: 100 # 10
-			PowerHuman: 100 # 10
+			ToughHuman: 50 # 100
+			PowerHuman: 60 # 100
 			FlyingArmour: 0
-			TankPlating: 150 # 10
-			ForcePlating: 150 # 10
-			BuildingArmour: 40 # 10
+			TankPlating: 150 # 150
+			ForcePlating: 150 # 150
+			BuildingArmour: 40 # 40
 		DamageTypes: DefaultDeath
 
 ^E6: # is the electro blast

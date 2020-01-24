@@ -95,6 +95,7 @@
 		BuildPaletteOrder: 10
 		Prerequisites: ~barracks, ~techlevel.infonly
 		Description: Generic Soldier
+		BuildDurationModifier: 100
 	Selectable:
 		Class: E1
 	Valued:
@@ -149,6 +150,7 @@
 		Queue: Vehicle
 		BuildPaletteOrder: 80
 		Prerequisites: ~barracks, ~techlevel.infonly
+		BuildDurationModifier: 100
 	Huntable:
 	DrawLineToTarget:
 	Valued:
@@ -259,6 +261,7 @@
 		Queue: Vehicle
 		BuildPaletteOrder: 220
 		Prerequisites: ~barracks, ~techlevel.infonly
+		BuildDurationModifier: 100
 	Huntable:
 	DrawLineToTarget:
 	AppearsOnRadar:

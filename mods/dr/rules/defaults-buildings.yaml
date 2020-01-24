@@ -252,7 +252,7 @@
 	RevealsShroud:
 		Range: 8c0
 	Power:
-		Amount: 100
+		Amount: 0
 	ProvidesRadar:
 	GrantConditionOnPrerequisite@con1:
 		Prerequisites: upgrade.hq1
@@ -300,7 +300,7 @@
 		BuildPaletteOrder: 30
 		BuildDuration: 12 # 45
 	Valued:
-		Cost: 1500
+		Cost: 400
 	RevealsShroud:
 		Range: 8c0
 	Power:
@@ -372,7 +372,7 @@
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 40
-		BuildDuration: 66
+		BuildDuration: 48
 		Description: Produces vehicles.
 	Building:
 		Footprint: ===__ =xx== xxxxx ==xxx ==xx=
@@ -382,7 +382,7 @@
 		Bounds: 120,120,0,0
 		DecorationBounds: 120,120,0,0
 	Valued:
-		Cost: 2200
+		Cost: 1600
 	RevealsShroud:
 		Range: 8c0
 	Power:

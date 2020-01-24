@@ -7,7 +7,7 @@ Power:
 		Queue: Building
 		Description: Provides power for other structures. Refines Taelon into credits.
 		BuildPaletteOrder: 10
-		BuildDuration: 8 # 30
+		BuildDuration: 9 # 30
 		BuildDurationModifier: 100
 	RenderSprites:
 		Image: ncpow1l0
@@ -25,7 +25,7 @@ Power:
 	Power:
 		Amount: 500
 	Valued:
-		Cost: 2000
+		Cost: 300
 	Health:
 		HP: 1450
 	ScalePowerWithHealth:
@@ -67,7 +67,7 @@ WaterLaunchPad:
 		BuildPaletteOrder: 20
 		Prerequisites: ~hq
 		Description: Refines spring water into credits.
-		BuildDuration: 34 # 37
+		BuildDuration: 33 # 37
 	Tooltip:
 		Name: Water Launch Pad
 	Inherits@shape: ^4x3Shape
@@ -85,7 +85,7 @@ WaterLaunchPad:
 			TopLeft: -2048, -1536
 			BottomRight: 2048, 1536
 	Valued:
-		Cost: 2500
+		Cost: 1100
 	CustomSellValue:
 		Value: 600
 	Health:

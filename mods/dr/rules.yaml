@@ -301,6 +301,7 @@
 		AllowUnderActors: true
 	Locomotor@FOOT:
 		Name: foot
+		SharesCell: true
 		TerrainSpeeds:
 			Clear: 100
 			Normal2: 100
