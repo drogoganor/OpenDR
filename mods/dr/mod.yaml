@@ -231,6 +231,8 @@ Missions:
 MapGrid:
 	TileSize: 24, 24
 	Type: Rectangular
+	SubCellOffsets: 0,0,0, -362,181,0, 0,-128,0, 362,181,0
+	DefaultSubCell: 2
 
 SupportsMapsFrom: dr
 
