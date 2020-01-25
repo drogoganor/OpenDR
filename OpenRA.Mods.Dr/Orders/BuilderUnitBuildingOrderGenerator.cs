@@ -118,10 +118,12 @@ namespace OpenRA.Mods.Dr.Orders
 					yield break;
 				}
 
-				yield return new Order(orderType, owner.PlayerActor, Target.FromCell(world, topLeft), false)
+				var target = topLeft + (buildingInfo.Dimensions / 2);
+
+				yield return new Order(orderType, owner.PlayerActor, Target.FromCell(world, target), false)
 				{
 					TargetString = actorInfo.Name,
-					ExtraLocation = topLeft + (buildingInfo.Dimensions / 2),
+					ExtraLocation = topLeft,
 					ExtraData = queue.Actor.ActorID,
 					SuppressVisualFeedback = true
 				};

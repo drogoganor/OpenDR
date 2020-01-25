@@ -32,6 +32,7 @@ namespace OpenRA.Mods.Dr.Activities
 		readonly BuildingInfo buildingInfo;
 		readonly ActorInfo buildingActor;
 		readonly WDist minRange;
+		readonly CPos topLeft;
 
 		public BuildOnSite(World world, Actor self, Order order, string faction, BuildingInfo buildingInfo)
 		{
@@ -39,8 +40,9 @@ namespace OpenRA.Mods.Dr.Activities
 			this.world = world;
 			this.order = order;
 			this.faction = faction;
-			centerTarget = order.ExtraLocation;
+			topLeft = order.ExtraLocation;
 			centerBuildingTarget = order.Target;
+			centerTarget = world.Map.CellContaining(centerBuildingTarget.CenterPosition);
 			minRange = new WDist(1024);
 			buildingActor = world.Map.Rules.Actors.FirstOrDefault(x => x.Key == order.TargetString).Value;
 		}
@@ -52,10 +54,10 @@ namespace OpenRA.Mods.Dr.Activities
 
 			if (centerBuildingTarget.IsInRange(self.CenterPosition, minRange))
 			{
-				if (!world.CanPlaceBuilding(centerTarget, buildingActor, buildingInfo, self))
+				if (!world.CanPlaceBuilding(topLeft, buildingActor, buildingInfo, self))
 				{
 					// Try clear the area
-					foreach (var ord in ClearBlockersOrders(self, world, centerTarget))
+					foreach (var ord in ClearBlockersOrders(self, world, topLeft))
 						world.IssueOrder(ord);
 
 					Game.Sound.PlayNotification(world.Map.Rules, self.Owner, "Speech", "BuildingCannotPlaceAudio", faction);
@@ -66,7 +68,7 @@ namespace OpenRA.Mods.Dr.Activities
 				{
 					w.CreateActor(true, order.TargetString, new TypeDictionary
 						{
-							new LocationInit(world.Map.CellContaining(order.Target.CenterPosition)),
+							new LocationInit(topLeft),
 							new OwnerInit(order.Player),
 							new FactionInit(faction),
 							new PlaceBuildingInit()
@@ -78,13 +80,8 @@ namespace OpenRA.Mods.Dr.Activities
 				self.QueueActivity(new RemoveSelf());
 
 				return true;
-
-				// return new RemoveSelf();
 			}
 
-			// return ActivityUtils.SequenceActivities(
-			//	move.MoveTo(centerTarget, 2),
-			//	this);
 			return true;
 		}
 

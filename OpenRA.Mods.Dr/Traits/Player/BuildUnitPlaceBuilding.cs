@@ -78,7 +78,7 @@ namespace OpenRA.Mods.Dr.Traits
 				if (buildableInfo != null && buildableInfo.ForceFaction != null)
 					faction = buildableInfo.ForceFaction;
 
-				if (!self.World.CanPlaceBuilding(self.World.Map.CellContaining(order.Target.CenterPosition), actorInfo, buildingInfo, targetActor))
+				if (!self.World.CanPlaceBuilding(order.ExtraLocation, actorInfo, buildingInfo, targetActor))
 					return;
 
 				if (!order.Queued)
