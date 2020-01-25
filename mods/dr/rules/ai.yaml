@@ -62,10 +62,10 @@ Player:
 			power.constructing: 2
 			hq.human.constructing: 1
 			hq.cyborg.constructing: 1
-			trainingfacility.fguard.constructing: 1
-			trainingfacility.cyborg.constructing: 1
-			assemblyplant.human.constructing: 1
-			assemblyplant.cyborg.constructing: 1
+			trainingfacility.fguard.constructing: 3
+			trainingfacility.cyborg.constructing: 3
+			assemblyplant.human.constructing: 2
+			assemblyplant.cyborg.constructing: 2
 			repair.human.constructing: 1
 			repair.cyborg.constructing: 1
 			hospital.human.constructing: 1
@@ -77,7 +77,7 @@ Player:
 		RequiresCondition: enable-normal-ai
 	SquadManagerBotModule@normal:
 		RequiresCondition: enable-normal-ai
-		SquadSize: 20
+		SquadSize: 10
 		ExcludeFromSquadsTypes: freighter, constructionrig
 		ConstructionYardTypes: constructionrig
 	McvManagerBotModule:

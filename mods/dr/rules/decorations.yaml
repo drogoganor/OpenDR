@@ -43,44 +43,44 @@ aotre005:
 
 # Plant
 aopln000:
-	Inherits: ^DrPlant
+	Inherits: ^Plant
 	RenderSprites:
 		Palette: terrain
 		Image: aopln000
 
 aopln001:
-	Inherits: ^DrPlant
+	Inherits: ^Plant
 	RenderSprites:
 		Palette: terrain
 		Image: aopln001
 
 aopln002:
-	Inherits: ^DrPlant
+	Inherits: ^Plant
 	RenderSprites:
 		Palette: terrain
 		Image: aopln002
 
 # Rocks
 aoroc000:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	RenderSprites:
 		Palette: terrain
 		Image: aoroc000
 
 aoroc001:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	RenderSprites:
 		Palette: terrain
 		Image: aoroc001
 
 aoroc002:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	RenderSprites:
 		Palette: terrain
 		Image: aoroc002
 
 aoroc003:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	RenderSprites:
 		Palette: terrain
 		Image: aoroc003
@@ -90,7 +90,7 @@ aoroc003:
 		LocalCenterOffset: 0,0,0
 
 aoroc004:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	RenderSprites:
 		Palette: terrain
 		Image: aoroc004
@@ -100,7 +100,7 @@ aoroc004:
 		LocalCenterOffset: 0,0,0
 
 aoroc005:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	RenderSprites:
 		Palette: terrain
 		Image: aoroc005
@@ -111,7 +111,7 @@ aoroc005:
 
 # Cliff
 aoclf000:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	RenderSprites:
 		Palette: terrain
 		Image: aoclf000
@@ -121,7 +121,7 @@ aoclf000:
 		LocalCenterOffset: 0,0,0
 
 aoclf001:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	RenderSprites:
 		Palette: terrain
 		Image: aoclf001
@@ -131,7 +131,7 @@ aoclf001:
 		LocalCenterOffset: 0,0,0
 
 aoclf002:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	RenderSprites:
 		Palette: terrain
 		Image: aoclf002
@@ -141,7 +141,7 @@ aoclf002:
 		LocalCenterOffset: 0,0,0
 
 aoclf003:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	RenderSprites:
 		Palette: terrain
 		Image: aoclf003
@@ -151,7 +151,7 @@ aoclf003:
 		LocalCenterOffset: 0,0,0
 
 aoclf004:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	RenderSprites:
 		Palette: terrain
 		Image: aoclf004
@@ -161,7 +161,7 @@ aoclf004:
 		LocalCenterOffset: 0,0,0
 
 aoclf005:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	RenderSprites:
 		Palette: terrain
 		Image: aoclf005
@@ -172,31 +172,31 @@ aoclf005:
 
 # Rubble
 aorub000:
-	Inherits: ^DrRubble
+	Inherits: ^Rubble
 
 aorub001:
-	Inherits: ^DrRubble
+	Inherits: ^Rubble
 
 aorub002:
-	Inherits: ^DrRubble
+	Inherits: ^Rubble
 
 # Scoring
 aomsc000:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 		LocalCenterOffset: 0,0,0
 
 aomsc001:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 		LocalCenterOffset: 0,0,0
 
 aomsc002:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -204,35 +204,35 @@ aomsc002:
 
 # Crater
 aoctr000:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 		LocalCenterOffset: 0,0,0
 
 aoctr001:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
 		LocalCenterOffset: 0,0,0
 
 aoctr002:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 
 aoctr003:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 
 aoctr004:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
@@ -240,35 +240,35 @@ aoctr004:
 
 # Need to review the rest of these craters
 aoctr005:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
 		LocalCenterOffset: 0,0,0
 
 aoctr006:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
 		LocalCenterOffset: 0,0,0
 
 aoctr007:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
 		LocalCenterOffset: 0,0,0
 
 aoctr008:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
 		LocalCenterOffset: 0,0,0
 
 aoctr009:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: xxxx xxxx xxxx xxxx
 		Dimensions: 4,4
@@ -276,51 +276,51 @@ aoctr009:
 
 # Crashed space ship
 aospc000:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: __ x_
 		Dimensions: 2,2
 
 # Water rock
 aowtr000:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 
 aowtr001:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 
 aowtr002:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 
 # Wreck
 aowrk000:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 
 aowrk001:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 
 aowrk002:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 
 eowcocr0:
-	Inherits: ^DrMisc
+	Inherits: ^Misc
 	Building:
 		Footprint: x
 		Dimensions: 1,1

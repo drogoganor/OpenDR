@@ -1,0 +1,576 @@
+# Buildings
+# There are two versions of each building, named "[Building].Constructing" and "[Building]".
+# The .Constructing buildings have a SelfConstructing trait that turns the building into a new actor once built.
+# The .Constructing buildings inherit an instance of ^SelfConstructingBuilding i.e. ^FactionBuilding.Constructing/^Headquarters.Constructing/
+# ^TrainingFacility.Constructing/^AssemblyPlant.Constructing.
+# The completed building "[Building]" inherits "[Building].Constructing" and also inherits a corresponding DrGenericBuilding/DrHeadquarters/DrTrainingFacility/DrAssemblyPlant.
+
+^CivilianBuilding:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	MapEditorData:
+		Categories: CivBuilding
+	RepairableBuilding:
+		RepairStep: 20
+		PlayerExperience: 25
+		RepairingNotification: Repairing
+	Selectable:
+		Priority: 3
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		TerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
+		BuildSounds: Building
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	WithSpriteBody:
+	HitShape@LAYER1:
+	HitShape@LAYER2:
+	HitShape@LAYER3:
+	HitShape@LAYER4:
+	EngineerRepairable:
+	CaptureManager:
+	Capturable:
+		Types: building
+	Guardable:
+		Range: 3c0
+	FrozenUnderFog:
+	Tooltip:
+		GenericName: Civilian Structure
+	SelectionDecorations:
+	ProximityCaptor:
+		Types: Building
+	CaptureNotification:
+	Explodes:
+		Weapon: GenericExplode
+		EmptyWeapon: GenericExplode
+	Demolishable:
+	#	Condition: being-demolished
+	Armor:
+		Type: BuildingArmour
+	CommandBarBlacklist:
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
+
+^SelfConstructingBuilding:
+	Inherits@1: ^ExistsInWorld
+	Inherits@3: ^SpriteActor
+	Buildable:
+		BuildDurationModifier: 2486 # DR build rate
+	Huntable:
+	UpdatesPlayerStatistics:
+	FootprintPlaceBuildingPreview:
+	SelectionDecorations:
+	SelfConstructing:
+		Steps: 30
+	ShakeOnDeath:
+	Selectable:
+		Priority: 3
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		TerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
+		BuildSounds: Building
+	RevealsShroud:
+		Range: 3c0
+	WithSpriteBody:
+	HitShape@LAYER1:
+	HitShape@LAYER2:
+	HitShape@LAYER3:
+	HitShape@LAYER4:
+	Guardable:
+		Range: 3c0
+	Armor:
+		Type: BuildingArmour
+	FrozenUnderFog:
+	Tooltip:
+		GenericName: Structure
+	Demolishable:
+	#	Condition: being-demolished
+	#MapEditorData:
+	#	Categories: SelfConstructing
+	CommandBarBlacklist:
+	Production:
+		Produces: Building, AIBuilding
+	BuilderQueue@Building:
+		Type: Building
+		Group: Building
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: Upgrading
+
+^ConstructedBuildingCommon:
+	MapEditorData:
+		Categories: Building
+	RepairableBuilding:
+		RepairStep: 5
+		PlayerExperience: 25
+		RepairingNotification: Repairing
+	EngineerRepairable:
+	CaptureManager:
+	Capturable:
+		Types: building
+	Sellable:
+	SelectionDecorations:
+	ProximityCaptor:
+		Types: Building
+	CaptureNotification:
+	Explodes:
+		Weapon: GenericExplode
+		EmptyWeapon: GenericExplode
+	WithBuildingRepairDecoration:
+		Image: allyrepair
+		Sequence: repair
+		ReferencePoint: Center
+		Palette: player
+		IsPlayerPalette: True
+	WithFlamesOverlay@Flames1:
+		Image: eosmlfl0
+		Offset: 512, -1024, 0
+		MinimumDamageState: Light
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Flames2:
+		Image: eosmlfl1
+		Offset: -512, -384, 0
+		MinimumDamageState: Medium
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Flames3:
+		Image: eosmlfl2
+		Offset: 512, 256, 0
+		MinimumDamageState: Heavy
+		MaximumDamageState: Dead
+	WithFlamesOverlay@Smoke1:
+		Image: eosmoke5
+		Offset: -256, -1560, 0
+		MinimumDamageState: Medium
+		MaximumDamageState: Dead
+
+^Headquarters.Constructing:
+	Inherits: ^SelfConstructingBuilding
+	Tooltip:
+		Name: Headquarters
+	Buildable:
+		Queue: Building, AIBuilding
+		BuildPaletteOrder: 0
+		BuildDuration: 22
+		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
+	Building:
+		Footprint: _xx_ xxxx xxxx xxx_
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	HitShape:
+		UseTargetableCellsOffsets: true
+		Type: Rectangle
+			TopLeft: -2048, -2048
+			BottomRight: 2048, 2048
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
+	Buildable:
+		Queue: Building, AIBuilding
+		BuildPaletteOrder: 0
+		BuildDuration: 22
+		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
+	BaseBuilding:
+	Valued:
+		Cost: 750
+	Armor:
+		Type: BuildingArmour
+
+^Headquarters:
+	Inherits: ^ConstructedBuildingCommon
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite:
+		Prerequisite: hq
+	ProvidesPrerequisite@human:
+		Factions: fguard, xenite
+		Prerequisite: hq.human
+	ProvidesPrerequisite@cyborg:
+		Factions: imperium, shadowhand
+		Prerequisite: hq.cyborg
+	ProvidesPrerequisite@fguard:
+		Factions: fguard
+		Prerequisite: hq.fguard
+	ProvidesPrerequisite@imperium:
+		Factions: imperium
+		Prerequisite: hq.imperium
+	ProvidesPrerequisite@xenite:
+		Factions: xenite
+		Prerequisite: hq.xenite
+	ProvidesPrerequisite@shadowhand:
+		Factions: shadowhand
+		Prerequisite: hq.shadowhand
+	ProvidesPrerequisite@togran:
+		Factions: togran
+		Prerequisite: hq.togran
+	ProvidesPrerequisite@terrorist:
+		Factions: terrorist
+		Prerequisite: hq.terrorist
+	Production:
+		Produces: Upgrade,Economy,AIBuilding
+	RallyPoint:
+		Offset: 3,4
+	Exit@1:
+		SpawnOffset: 0,0,0
+		ExitCell: 2,2
+		ProductionTypes: Upgrade,Economy
+	ProductionQueue@Economy:
+		Type: Economy
+		#LowPowerSlowdown: 1
+		Group: Economy
+		ReadyAudio: UnitReady
+		BlockedAudio: NoRoom
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		BuildDurationModifier: 2486 # DR build rate
+		LowPowerModifier: 300
+	ParallelProductionQueue@Upgrade:
+		Type: Upgrade
+		Group: Upgrade
+		QueuedAudio: Upgrading
+		ReadyAudio: ConstructionComplete
+		BlockedAudio: Upgrading
+		BuildDurationModifier: 2486 # DR build rate
+		LowPowerModifier: 300
+	ProductionBar@Economy:
+		ProductionType: Economy
+	ProductionBar@Upgrade:
+		ProductionType: Upgrade
+		Color: FEEC56
+	Valued:
+		Cost: 750
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: 100
+	ProvidesRadar:
+	GrantConditionOnPrerequisite@con1:
+		Prerequisites: upgrade.hq1
+		Condition: dec1
+	GrantConditionOnPrerequisite@con2:
+		Prerequisites: upgrade.hq2
+		Condition: dec2
+	WithDecoration@upgraded:
+		RequiresSelection: true
+		Image: pips
+		Sequence: pip-blue
+		ReferencePoint: Bottom, Left
+		ZOffset: 256
+		RequiresCondition: dec1
+	WithDecoration@upgraded2:
+		RequiresSelection: true
+		Image: pips
+		Sequence: pip-red
+		ReferencePoint: Bottom, Left
+		ZOffset: 256
+		RequiresCondition: dec2
+	BaseBuilding:
+	BaseProvider:
+		Range: 18c0
+	GivesBuildableArea:
+		AreaTypes: building
+	GrantConditionOnBotOwner:
+		Condition: enable-ai-cash
+		Bots: normal
+	CashTrickler:
+		RequiresCondition: enable-ai-cash
+		Amount: 200
+		Interval: 10
+		ShowTicks: False
+
+^TrainingFacility.Constructing:
+	Inherits: ^SelfConstructingBuilding
+	Tooltip:
+		Name: Training Facility
+	Inherits@shape: ^5x4Shape
+	Buildable:
+		Queue: Building, AIBuilding
+		Description: Trains infantry.
+		Prerequisites: hq
+		BuildPaletteOrder: 30
+		BuildDuration: 45
+	Valued:
+		Cost: 1500
+	Armor:
+		Type: Building
+	Building:
+		Footprint: xxxxx xxxxx xxxxx xxxx=
+		Dimensions: 5,4
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 120,96,0,0
+		DecorationBounds: 120,96,0,0
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+
+^TrainingFacility:
+	Inherits: ^ConstructedBuildingCommon
+	Tooltip:
+		Name: Training Facility
+	Valued:
+		Cost: 1500
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	RallyPoint:
+		Offset: 4,4
+	Exit@1:
+		SpawnOffset: 512,256,0
+		ExitCell: 3,3
+		ProductionTypes: Soldier, Infantry, Soldier
+	Production:
+		Produces: Infantry, Soldier, Soldier
+	ProductionQueue@Infantry:
+		Type: Infantry
+		Group: Infantry
+		#LowPowerSlowdown: 1
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		BuildDurationModifier: 2486 # DR build rate
+		LowPowerModifier: 300
+	ProductionBar:
+		ProductionType: Infantry
+	ProvidesPrerequisite@barracks:
+		Prerequisite: barracks
+	ProvidesPrerequisite@human:
+		Factions: fguard, xenite
+		Prerequisite: infantry.human
+	ProvidesPrerequisite@cyborg:
+		Factions: imperium, shadowhand
+		Prerequisite: infantry.cyborg
+	ProvidesPrerequisite@fguard:
+		Factions: fguard
+		Prerequisite: infantry.fguard
+	ProvidesPrerequisite@imperium:
+		Factions: imperium
+		Prerequisite: infantry.imperium
+	ProvidesPrerequisite@xenite:
+		Factions: xenite
+		Prerequisite: infantry.xenite
+	ProvidesPrerequisite@shadowhand:
+		Factions: shadowhand
+		Prerequisite: infantry.shadowhand
+	ProvidesPrerequisite@togran:
+		Factions: togran
+		Prerequisite: infantry.togran
+	ProvidesPrerequisite@terrorist:
+		Factions: terrorist
+		Prerequisite: infantry.terrorist
+	ProvidesPrerequisite@buildingname:
+	GrantConditionOnPrerequisite:
+		Prerequisites: upgrade.barracks1
+		Condition: stardecoration
+	WithDecoration@upgraded:
+		RequiresSelection: true
+		Image: pips
+		Sequence: pip-red
+		ReferencePoint: Bottom, Left
+		ZOffset: 256
+		RequiresCondition: stardecoration
+
+^AssemblyPlant.Constructing:
+	Inherits: ^SelfConstructingBuilding
+	Tooltip:
+		Name: Assembly Plant
+	Inherits@shape: ^5x5Shape
+	Buildable:
+		Queue: Building, AIBuilding
+		BuildPaletteOrder: 40
+		BuildDuration: 66
+		Description: Produces vehicles.
+	Building:
+		Footprint: ===__ =xx== xxxxx ==xxx ==xx=
+		Dimensions: 5,5
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 120,120,0,0
+		DecorationBounds: 120,120,0,0
+	Valued:
+		Cost: 2200
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow-building
+
+^AssemblyPlant:
+	Inherits: ^ConstructedBuildingCommon
+	Tooltip:
+		Name: Assembly Plant
+	Valued:
+		Cost: 2200
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	Exit@1:
+		SpawnOffset: -512,768,0
+		ExitCell: 1,2
+	Production:
+		Produces: Vehicle, DrVehicle, Vehicle
+	ProductionQueue@Vehicle:
+		Type: Vehicle
+		Group: Vehicle
+		#SpeedUp: True
+		#BuildTimeSpeedReduction: 100, 75, 60, 50
+		ReadyAudio: UnitReady
+		BlockedAudio: NoBuild
+		QueuedAudio: Building
+		OnHoldAudio: OnHold
+		CancelledAudio: Cancelled
+		BuildDurationModifier: 2486 # DR build rate
+		LowPowerModifier: 300
+	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@vehicles:
+		Prerequisite: vehicles
+	ProvidesPrerequisite@human:
+		Factions: fguard, xenite
+		Prerequisite: vehicles.human
+	ProvidesPrerequisite@cyborg:
+		Factions: imperium, shadowhand
+		Prerequisite: vehicles.cyborg
+	ProvidesPrerequisite@fguard:
+		Factions: fguard
+		Prerequisite: vehicles.fguard
+	ProvidesPrerequisite@imperium:
+		Factions: imperium
+		Prerequisite: vehicles.imperium
+	ProvidesPrerequisite@xenite:
+		Factions: xenite
+		Prerequisite: vehicles.xenite
+	ProvidesPrerequisite@shadowhand:
+		Factions: shadowhand
+		Prerequisite: vehicles.shadowhand
+	ProvidesPrerequisite@togran:
+		Factions: togran
+		Prerequisite: vehicles.togran
+	ProvidesPrerequisite@terrorist:
+		Factions: terrorist
+		Prerequisite: vehicles.terrorist
+	ProductionBar:
+		ProductionType: Vehicle
+	RallyPoint:
+		Offset: 0,6
+	GrantConditionOnPrerequisite:
+		Prerequisites: upgrade.assemblyplant1
+		Condition: stardecoration
+	WithDecoration@upgraded:
+		RequiresSelection: true
+		Image: pips
+		Sequence: pip-red
+		ReferencePoint: Bottom, Left
+		ZOffset: 256
+		RequiresCondition: stardecoration
+
+^Defense.Constructing:
+	Inherits: ^SelfConstructingBuilding
+	MustBeDestroyed:
+		RequiredForShortGame: false
+	Inherits@shape: ^2x2Shape
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 48,48,0,0
+		DecorationBounds: 48,48,0,0
+	RevealsShroud:
+		Range: 9c0
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow-building
+
+^Defense:
+	Inherits: ^ConstructedBuildingCommon
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 9c0
+	Power:
+		Amount: -50
+	RenderRangeCircle:
+	RenderDetectionCircle:
+	WithSpriteTurret:
+	AttackTurreted:
+	WithMuzzleOverlay:
+	DetectCloaked:
+		Range: 2c0
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+^FactionBuilding.Constructing: # Used by field hospital, repair pad, etc.
+	Inherits: ^SelfConstructingBuilding
+	Buildable:
+		Queue: Building, AIBuilding
+		Description: Generic
+		Prerequisites: hq
+		BuildPaletteOrder: 30
+		BuildDuration: 45
+	Valued:
+		Cost: 1500
+	RevealsShroud:
+		Range: 8c0
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow-building
+
+^FactionBuilding:
+	Inherits: ^ConstructedBuildingCommon
+	Valued:
+		Cost: 500
+	Health:
+		HP: 400
+	MapEditorData:
+		Categories: Building
+	RevealsShroud:
+		Range: 9c0
+	Power:
+		Amount: -50
+	WithIdleOverlay@LAYER1:
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow

@@ -1,6 +1,6 @@
 
 Raider:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: ufradst0
 	Tooltip:
@@ -29,7 +29,7 @@ Raider:
 		Weapon: LaserRifle
 
 Mercenary:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: ufmrcst0
 	Tooltip:
@@ -59,7 +59,7 @@ Mercenary:
 		Sequence: shadow
 
 Sniper:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: ufsnpst0
 	Tooltip:
@@ -116,7 +116,7 @@ Sniper:
 		RequiresCondition: disguise
 
 Scout:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: ufsctst0
 	Tooltip:
@@ -171,7 +171,7 @@ Scout:
 		RequiresCondition: disguise
 
 Medic:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: ufmedst0
 	Tooltip:
@@ -210,7 +210,7 @@ Medic:
 		Sequence: shadow
 
 Saboteur:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: ufmecst0
 	Tooltip:
@@ -243,7 +243,7 @@ Saboteur:
 		Sequence: shadow
 
 Mechanic:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: ufmecst0
 	Tooltip:
@@ -280,7 +280,7 @@ Mechanic:
 		Sequence: shadow
 
 Martyr:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: ufmtrst0
 	Tooltip:
@@ -322,7 +322,7 @@ Martyr:
 		Sequence: shadow
 
 Guardian:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: uigrdst0
 	Tooltip:
@@ -352,7 +352,7 @@ Guardian:
 		Sequence: shadow
 
 Bion:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: uibonst0
 	#Inherits@AUTOTARGET: ^AutoTargetAll
@@ -384,7 +384,7 @@ Bion:
 		Sequence: shadow
 
 Exterminator:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: uiextst0
 	Tooltip:
@@ -417,7 +417,7 @@ Exterminator:
 	Hovers:
 
 Infiltrator:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: ucinfst0
 	Buildable:
@@ -1281,7 +1281,7 @@ Scarab:
 # Aircraft
 
 SkyBike:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: ufskbst0
 	Tooltip:
@@ -1317,7 +1317,7 @@ SkyBike:
 		AttackType: Hover
 
 Outrider:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: ufoutst0
 	Tooltip:
@@ -1353,7 +1353,7 @@ Outrider:
 		AttackType: Hover
 
 ReconDrone:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: uirdrst0
 	Tooltip:
@@ -1380,7 +1380,7 @@ ReconDrone:
 		AttackType: Hover
 
 Cyclone:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: uicycst0
 	Tooltip:
@@ -1416,7 +1416,7 @@ Cyclone:
 		AttackType: Hover
 
 SkyFortress:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: uiskyst0
 	Tooltip:
@@ -1459,7 +1459,7 @@ SkyFortress:
 # Infantry
 
 Gant:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: ufganst0
 	Tooltip:
@@ -1502,7 +1502,7 @@ Gant:
 		Sequence: muzzle
 
 Ranger:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: uftrast0
 	Tooltip:
@@ -1528,7 +1528,7 @@ Ranger:
 		Sequence: shadow
 
 PowerSpiker:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: unpwcst0
 	Tooltip:
@@ -1554,7 +1554,7 @@ PowerSpiker:
 		Sequence: shadow
 
 Grendel:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: ufgrest0
 	Tooltip:
@@ -1586,7 +1586,7 @@ Grendel:
 		Weapon: ElectroBlast
 
 GrendelRider:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: ufridst0
 	Tooltip:
@@ -1620,7 +1620,7 @@ GrendelRider:
 # Shadowhand
 
 Reaper:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: uireast0
 	Tooltip:
@@ -1806,7 +1806,7 @@ Fury:
 	WithSpriteTurret:
 
 EMPDevice:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: uiempst0
 	Tooltip:
@@ -1897,7 +1897,7 @@ MarshTerraformer:
 # Aircraft
 
 Avenger:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: ufomkst0
 	Tooltip:
@@ -1936,7 +1936,7 @@ Avenger:
 		AttackType: Hover
 
 HadesBomber:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: uiarbst0
 	Tooltip:

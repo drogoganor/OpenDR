@@ -55,7 +55,7 @@ aotre005.jungle:
 
 # Plant
 aopln000.jungle:
-	Inherits: ^DrPlant
+	Inherits: ^Plant
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -63,7 +63,7 @@ aopln000.jungle:
 		Image: aopln000.jungle
 
 aopln001.jungle:
-	Inherits: ^DrPlant
+	Inherits: ^Plant
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -71,7 +71,7 @@ aopln001.jungle:
 		Image: aopln001.jungle
 
 aopln002.jungle:
-	Inherits: ^DrPlant
+	Inherits: ^Plant
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -80,7 +80,7 @@ aopln002.jungle:
 
 # Rocks
 aoroc000.jungle:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -88,7 +88,7 @@ aoroc000.jungle:
 		Image: aoroc000.jungle
 
 aoroc001.jungle:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -96,7 +96,7 @@ aoroc001.jungle:
 		Image: aoroc001.jungle
 
 aoroc002.jungle:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -104,7 +104,7 @@ aoroc002.jungle:
 		Image: aoroc002.jungle
 
 aoroc003.jungle:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -116,7 +116,7 @@ aoroc003.jungle:
 		LocalCenterOffset: 0,0,0
 
 aoroc004.jungle:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -128,7 +128,7 @@ aoroc004.jungle:
 		LocalCenterOffset: 0,0,0
 
 aoroc005.jungle:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -141,7 +141,7 @@ aoroc005.jungle:
 
 # Cliff
 aoclf000.jungle:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -153,7 +153,7 @@ aoclf000.jungle:
 		LocalCenterOffset: 0,0,0
 
 aoclf001.jungle:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -165,7 +165,7 @@ aoclf001.jungle:
 		LocalCenterOffset: 0,0,0
 
 aoclf002.jungle:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -177,7 +177,7 @@ aoclf002.jungle:
 		LocalCenterOffset: 0,0,0
 
 aoclf003.jungle:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -189,7 +189,7 @@ aoclf003.jungle:
 		LocalCenterOffset: 0,0,0
 
 aoclf004.jungle:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:
@@ -201,7 +201,7 @@ aoclf004.jungle:
 		LocalCenterOffset: 0,0,0
 
 aoclf005.jungle:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Jungle
 	RenderSprites:

@@ -1,10 +1,6 @@
-
-
-## Actual buildings start here
-
 Power:
 	Inherits: Power.Constructing
-	Inherits@4: ^DrGenericBuilding
+	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:
@@ -42,7 +38,7 @@ Power:
 
 WaterLaunchPad:
 	Inherits: WaterLaunchPad.Constructing
-	Inherits@4: ^DrGenericBuilding
+	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:
@@ -82,7 +78,7 @@ WaterLaunchPad:
 
 HQ.human:
 	Inherits: HQ.human.Constructing
-	Inherits@4: ^DrHeadquarters
+	Inherits@4: ^Headquarters
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
@@ -138,7 +134,7 @@ HQ.human:
 
 HQ.cyborg:
 	Inherits: HQ.cyborg.Constructing
-	Inherits@4: ^DrHeadquarters
+	Inherits@4: ^Headquarters
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
@@ -200,7 +196,7 @@ HQ.cyborg:
 
 HQ.togran:
 	Inherits: HQ.togran.Constructing
-	Inherits@4: ^DrHeadquarters
+	Inherits@4: ^Headquarters
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
@@ -221,7 +217,7 @@ HQ.togran:
 
 TrainingFacility.fguard:
 	Inherits: TrainingFacility.fguard.Constructing
-	Inherits@4: ^DrTrainingFacility
+	Inherits@4: ^TrainingFacility
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
@@ -266,7 +262,7 @@ TrainingFacility.fguard:
 
 TrainingFacility.cyborg:
 	Inherits: TrainingFacility.cyborg.Constructing
-	Inherits@4: ^DrTrainingFacility
+	Inherits@4: ^TrainingFacility
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
@@ -317,7 +313,7 @@ TrainingFacility.cyborg:
 
 AssemblyPlant.human:
 	Inherits: AssemblyPlant.human.Constructing
-	Inherits@4: ^DrAssemblyPlant
+	Inherits@4: ^AssemblyPlant
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
@@ -362,7 +358,7 @@ AssemblyPlant.human:
 
 AssemblyPlant.cyborg:
 	Inherits: AssemblyPlant.cyborg.Constructing
-	Inherits@4: ^DrAssemblyPlant
+	Inherits@4: ^AssemblyPlant
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
@@ -607,7 +603,7 @@ NeutronAccelerator:
 # Camera tower
 CameraTower:
 	Inherits: CameraTower.Constructing
-	Inherits@4: ^DrGenericBuilding
+	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:
@@ -647,7 +643,7 @@ CameraTower:
 # FG field hospital
 Hospital.human:
 	Inherits: Hospital.human.Constructing
-	Inherits@4: ^DrGenericBuilding
+	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:
@@ -680,7 +676,7 @@ Hospital.human:
 # Imperium field hospital
 Hospital.cyborg:
 	Inherits: Hospital.cyborg.Constructing
-	Inherits@4: ^DrGenericBuilding
+	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:
@@ -717,7 +713,7 @@ Hospital.cyborg:
 # FG repair pad
 Repair.human:
 	Inherits: Repair.human.Constructing
-	Inherits@4: ^DrGenericBuilding
+	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:
@@ -756,7 +752,7 @@ Repair.human:
 # Imperium repair pad
 Repair.cyborg:
 	Inherits: Repair.cyborg.Constructing
-	Inherits@4: ^DrGenericBuilding
+	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:
@@ -793,7 +789,7 @@ Repair.cyborg:
 # Phasing facility
 PhasingFacility:
 	Inherits: PhasingFacility.Constructing
-	Inherits@4: ^DrGenericBuilding
+	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:
@@ -853,7 +849,7 @@ PhasingFacility:
 # FG rearming deck
 RearmingDeck.human:
 	Inherits: RearmingDeck.human.Constructing
-	Inherits@4: ^DrGenericBuilding
+	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:
@@ -885,7 +881,7 @@ RearmingDeck.human:
 # Imperium rearming deck
 RearmingDeck.cyborg:
 	Inherits: RearmingDeck.cyborg.Constructing
-	Inherits@4: ^DrGenericBuilding
+	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:
@@ -917,7 +913,7 @@ RearmingDeck.cyborg:
 # Imperium temporal gate
 TemporalGate:
 	Inherits: TemporalGate.Constructing
-	Inherits@4: ^DrGenericBuilding
+	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:
@@ -963,7 +959,7 @@ TemporalGate:
 # Imperium temporal rift creator
 TemporalRiftCreator:
 	Inherits: TemporalRiftCreator.Constructing
-	Inherits@4: ^DrGenericBuilding
+	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:
@@ -1018,7 +1014,7 @@ TemporalRiftCreator:
 
 TrainingFacility.xenite:
 	Inherits: TrainingFacility.xenite.Constructing
-	Inherits@4: ^DrTrainingFacility
+	Inherits@4: ^TrainingFacility
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
@@ -1046,7 +1042,7 @@ TrainingFacility.xenite:
 
 Matrix:
 	Inherits: Matrix.Constructing
-	Inherits@4: ^DrGenericBuilding
+	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:

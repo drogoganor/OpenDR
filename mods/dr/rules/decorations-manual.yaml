@@ -49,21 +49,21 @@ aotre005.base:
 
 # Plant
 aopln000.base:
-	Inherits: ^DrPlant
+	Inherits: ^Plant
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
 		Image: aopln000.base
 
 aopln001.base:
-	Inherits: ^DrPlant
+	Inherits: ^Plant
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
 		Image: aopln001.base
 
 aopln002.base:
-	Inherits: ^DrPlant
+	Inherits: ^Plant
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
@@ -71,28 +71,28 @@ aopln002.base:
 
 # Rocks
 aoroc000.base:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
 		Image: aoroc000.base
 
 aoroc001.base:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
 		Image: aoroc001.base
 
 aoroc002.base:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
 		Image: aoroc002.base
 
 aoroc003.base:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
@@ -103,7 +103,7 @@ aoroc003.base:
 		LocalCenterOffset: 0,0,0
 
 aoroc004.base:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
@@ -114,7 +114,7 @@ aoroc004.base:
 		LocalCenterOffset: 0,0,0
 
 aoroc005.base:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
@@ -126,7 +126,7 @@ aoroc005.base:
 
 # Cliff
 aoclf000.base:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
@@ -137,7 +137,7 @@ aoclf000.base:
 		LocalCenterOffset: 0,0,0
 
 aoclf001.base:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
@@ -148,7 +148,7 @@ aoclf001.base:
 		LocalCenterOffset: 0,0,0
 
 aoclf002.base:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
@@ -159,7 +159,7 @@ aoclf002.base:
 		LocalCenterOffset: 0,0,0
 
 aoclf003.base:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
@@ -170,7 +170,7 @@ aoclf003.base:
 		LocalCenterOffset: 0,0,0
 
 aoclf004.base:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:
@@ -181,7 +181,7 @@ aoclf004.base:
 		LocalCenterOffset: 0,0,0
 
 aoclf005.base:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Base
 	RenderSprites:

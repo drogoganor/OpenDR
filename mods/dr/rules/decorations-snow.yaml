@@ -55,7 +55,7 @@ aotre005.snow:
 
 # Plant
 aopln000.snow:
-	Inherits: ^DrPlant
+	Inherits: ^Plant
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -63,7 +63,7 @@ aopln000.snow:
 		Image: aopln000.snow
 
 aopln001.snow:
-	Inherits: ^DrPlant
+	Inherits: ^Plant
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -71,7 +71,7 @@ aopln001.snow:
 		Image: aopln001.snow
 
 aopln002.snow:
-	Inherits: ^DrPlant
+	Inherits: ^Plant
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -80,7 +80,7 @@ aopln002.snow:
 
 # Rocks
 aoroc000.snow:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -88,7 +88,7 @@ aoroc000.snow:
 		Image: aoroc000.snow
 
 aoroc001.snow:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -96,7 +96,7 @@ aoroc001.snow:
 		Image: aoroc001.snow
 
 aoroc002.snow:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -104,7 +104,7 @@ aoroc002.snow:
 		Image: aoroc002.snow
 
 aoroc003.snow:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -116,7 +116,7 @@ aoroc003.snow:
 		LocalCenterOffset: 0,0,0
 
 aoroc004.snow:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -128,7 +128,7 @@ aoroc004.snow:
 		LocalCenterOffset: 0,0,0
 
 aoroc005.snow:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -141,7 +141,7 @@ aoroc005.snow:
 
 # Cliff
 aoclf000.snow:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -153,7 +153,7 @@ aoclf000.snow:
 		LocalCenterOffset: 0,0,0
 
 aoclf001.snow:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -165,7 +165,7 @@ aoclf001.snow:
 		LocalCenterOffset: 0,0,0
 
 aoclf002.snow:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -177,7 +177,7 @@ aoclf002.snow:
 		LocalCenterOffset: 0,0,0
 
 aoclf003.snow:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -189,7 +189,7 @@ aoclf003.snow:
 		LocalCenterOffset: 0,0,0
 
 aoclf004.snow:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:
@@ -201,7 +201,7 @@ aoclf004.snow:
 		LocalCenterOffset: 0,0,0
 
 aoclf005.snow:
-	Inherits: ^DrRock
+	Inherits: ^Rock
 	MapEditorData:
 		Categories: Decorations Snow
 	RenderSprites:

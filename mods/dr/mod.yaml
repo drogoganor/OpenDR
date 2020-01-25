@@ -49,6 +49,7 @@ Rules:
 	dr|rules.yaml
 	dr|rules/shapes.yaml
 	dr|rules/defaults.yaml
+	dr|rules/defaults-buildings.yaml
 	dr|rules/misc.yaml
 	dr|rules/structures-building.yaml
 	dr|rules/structures.yaml

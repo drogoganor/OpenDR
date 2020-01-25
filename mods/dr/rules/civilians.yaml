@@ -82,7 +82,7 @@ Karoch: # Campaign
 		Sequence: shadow
 
 DessicatorTransport:
-	Inherits: ^DrCivVehicle
+	Inherits: ^CivilianVehicle
 	RenderSprites:
 		Image: uohtrst0
 	Tooltip:
@@ -108,7 +108,7 @@ DessicatorTransport:
 
 # Civ Troop Transport
 CivWheelTransporter:
-	Inherits: ^DrCivVehicle
+	Inherits: ^CivilianVehicle
 	RenderSprites:
 		Image: uowtrst0
 	Tooltip:

@@ -100,7 +100,7 @@ WaterLaunchPad.Constructing:
 		TriggerOnlyOnce: True
 
 HQ.human.Constructing:
-	Inherits: ^DrHeadquarters.Constructing
+	Inherits: ^Headquarters.Constructing
 	RenderSprites:
 		Image: nfhqt1l0
 	Tooltip:
@@ -127,7 +127,7 @@ HQ.human.Constructing:
 		TriggerOnlyOnce: True
 
 HQ.cyborg.Constructing:
-	Inherits: ^DrHeadquarters.Constructing
+	Inherits: ^Headquarters.Constructing
 	RenderSprites:
 		Image: nihqt1l0
 	Tooltip:
@@ -156,7 +156,7 @@ HQ.cyborg.Constructing:
 		TriggerOnlyOnce: True
 
 HQ.togran.Constructing:
-	Inherits: ^DrHeadquarters.Constructing
+	Inherits: ^Headquarters.Constructing
 	RenderSprites:
 		Image: tothq1l0
 	Tooltip:
@@ -181,7 +181,7 @@ HQ.togran.Constructing:
 		TriggerOnlyOnce: True
 
 TrainingFacility.fguard.Constructing:
-	Inherits: ^DrTrainingFacility.Constructing
+	Inherits: ^TrainingFacility.Constructing
 	RenderSprites:
 		Image: nfutf1l0
 	Tooltip:
@@ -210,7 +210,7 @@ TrainingFacility.fguard.Constructing:
 		TriggerOnlyOnce: True
 
 TrainingFacility.cyborg.Constructing:
-	Inherits: ^DrTrainingFacility.Constructing
+	Inherits: ^TrainingFacility.Constructing
 	Inherits@shape: ^5x4Shape
 	RenderSprites:
 		Image: niutf1l0
@@ -242,7 +242,7 @@ TrainingFacility.cyborg.Constructing:
 		TriggerOnlyOnce: True
 
 AssemblyPlant.human.Constructing:
-	Inherits: ^DrAssemblyPlant.Constructing
+	Inherits: ^AssemblyPlant.Constructing
 	RenderSprites:
 		Image: nfvcy1l0
 	Tooltip:
@@ -265,7 +265,7 @@ AssemblyPlant.human.Constructing:
 		TriggerOnlyOnce: True
 
 AssemblyPlant.cyborg.Constructing:
-	Inherits: ^DrAssemblyPlant.Constructing
+	Inherits: ^AssemblyPlant.Constructing
 	RenderSprites:
 		Image: nivcy1l0
 	Tooltip:
@@ -429,8 +429,8 @@ HeavyRailTurret.Constructing:
 		Steps: 20
 		Becomes: HeavyRailTurret
 	Selectable:
-		Bounds: 96,96,0,0
-		DecorationBounds: 96,96,0,0
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
 	Valued:
 		Cost: 1700
 	Health:
@@ -464,8 +464,8 @@ NeutronAccelerator.Constructing:
 		Steps: 20
 		Becomes: NeutronAccelerator
 	Selectable:
-		Bounds: 96,96,0,0
-		DecorationBounds: 96,96,0,0
+		Bounds: 72,72,0,0
+		DecorationBounds: 72,72,0,0
 	Valued:
 		Cost: 1700
 	Health:
@@ -480,7 +480,7 @@ NeutronAccelerator.Constructing:
 
 # Camera tower
 CameraTower.Constructing:
-	Inherits: ^DrGenericBuilding.Constructing
+	Inherits: ^FactionBuilding.Constructing
 	RenderSprites:
 		Image: nccam1l0
 	Inherits@shape: ^1x1Shape
@@ -515,7 +515,7 @@ CameraTower.Constructing:
 
 # FG field hospital
 Hospital.human.Constructing:
-	Inherits: ^DrGenericBuilding.Constructing
+	Inherits: ^FactionBuilding.Constructing
 	RenderSprites:
 		Image: nfhsp1l0
 	Inherits@shape: ^4x3Shape
@@ -558,7 +558,7 @@ Hospital.human.Constructing:
 
 # Imperium field hospital
 Hospital.cyborg.Constructing:
-	Inherits: ^DrGenericBuilding.Constructing
+	Inherits: ^FactionBuilding.Constructing
 	RenderSprites:
 		Image: nihsp1l0
 	Inherits@shape: ^4x3Shape
@@ -601,7 +601,7 @@ Hospital.cyborg.Constructing:
 
 # FG repair pad
 Repair.human.Constructing:
-	Inherits: ^DrGenericBuilding.Constructing
+	Inherits: ^FactionBuilding.Constructing
 	Inherits@shape: ^4x3Shape
 	RenderSprites:
 		Image: nfrep1l0
@@ -643,7 +643,7 @@ Repair.human.Constructing:
 
 # Imperium repair pad
 Repair.cyborg.Constructing:
-	Inherits: ^DrGenericBuilding.Constructing
+	Inherits: ^FactionBuilding.Constructing
 	RenderSprites:
 		Image: tirep1l0
 		#Palette: terrain # Manually set to barren here along with Laser Turret.
@@ -689,7 +689,7 @@ Repair.cyborg.Constructing:
 
 # Phasing facility
 PhasingFacility.Constructing:
-	Inherits: ^DrGenericBuilding.Constructing
+	Inherits: ^FactionBuilding.Constructing
 	Inherits@shape: ^4x3Shape
 	RenderSprites:
 		Image: nfphf1l0
@@ -730,7 +730,7 @@ PhasingFacility.Constructing:
 
 # FG rearming deck
 RearmingDeck.human.Constructing:
-	Inherits: ^DrGenericBuilding.Constructing
+	Inherits: ^FactionBuilding.Constructing
 	Inherits@shape: ^3x3Shape
 	RenderSprites:
 		Image: nfrrm1l0
@@ -771,7 +771,7 @@ RearmingDeck.human.Constructing:
 
 # Imperium rearming deck
 RearmingDeck.cyborg.Constructing:
-	Inherits: ^DrGenericBuilding.Constructing
+	Inherits: ^FactionBuilding.Constructing
 	Inherits@shape: ^3x3Shape
 	Building:
 		Footprint: === xxx xxx
@@ -814,7 +814,7 @@ RearmingDeck.cyborg.Constructing:
 
 # Imperium temporal gate
 TemporalGate.Constructing:
-	Inherits: ^DrGenericBuilding.Constructing
+	Inherits: ^FactionBuilding.Constructing
 	Inherits@shape: ^3x2Shape
 	Building:
 		Footprint: xxx xxx
@@ -855,7 +855,7 @@ TemporalGate.Constructing:
 
 # Imperium temporal rift creator
 TemporalRiftCreator.Constructing:
-	Inherits: ^DrGenericBuilding.Constructing
+	Inherits: ^FactionBuilding.Constructing
 	Inherits@shape: ^4x4Shape
 	Building:
 		Footprint: _==_ =xx= xxxx =xxx
@@ -895,7 +895,7 @@ TemporalRiftCreator.Constructing:
 		TriggerOnlyOnce: True
 
 TrainingFacility.xenite.Constructing:
-	Inherits: ^DrTrainingFacility.Constructing
+	Inherits: ^TrainingFacility.Constructing
 	RenderSprites:
 		Image: nfnes1l0
 	Tooltip:
@@ -924,7 +924,7 @@ TrainingFacility.xenite.Constructing:
 
 # Shadowhand matrix
 Matrix.Constructing:
-	Inherits: ^DrGenericBuilding.Constructing
+	Inherits: ^FactionBuilding.Constructing
 	Inherits@shape: ^4x4Shape
 	Building:
 		Footprint: _xx_ xxxx xxxx xxxx

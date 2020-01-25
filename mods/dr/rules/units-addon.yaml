@@ -2,7 +2,7 @@
 # Togran units
 
 ShockTrooper:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: unskst0
 	Tooltip:
@@ -33,7 +33,7 @@ ShockTrooper:
 		Sequence: shadow
 
 GoreHunter:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: unhvst0
 	Tooltip:
@@ -299,7 +299,7 @@ SonicThumper:
 		Weapon: SonicThumperWeapon
 
 ScoutAlt:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: unwlkac1
 	Tooltip:
@@ -330,7 +330,7 @@ ScoutAlt:
 # Terrorist units
 
 LardriddenTerroristSoldierVeteran:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: utfatst0
 	Tooltip:
@@ -381,7 +381,7 @@ TerroristWaterFreighter:
 		VoiceSet: TerroristWaterFreighterVoice
 
 RastaTerroristSoldierVeteran:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: utravst0
 	Tooltip:
@@ -408,7 +408,7 @@ RastaTerroristSoldierVeteran:
 		Sequence: shadow
 
 RastaTerroristSoldier:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: utrasst0
 	Tooltip:
@@ -435,7 +435,7 @@ RastaTerroristSoldier:
 		Sequence: shadow
 
 StealthChopper:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: utspnst0
 	Tooltip:
@@ -494,7 +494,7 @@ TerroristTransport:
 	-Armament:
 
 TerroristAirRifterAlternate:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: utardst0
 	Tooltip:
@@ -572,7 +572,7 @@ TerroristArtillery:
 		Weapon: TerroristArtilleryWeapon
 
 TerroristAirborneTroopCarrier:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: utattst0
 	Tooltip:
@@ -599,7 +599,7 @@ TerroristAirborneTroopCarrier:
 # Third blue faction
 
 AlternateLardriddenTerroristSoldier:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: utfadst0
 	Tooltip:
@@ -730,7 +730,7 @@ ConstructionCrawler:
 		Type: TankPlating
 
 Santa:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: unsanst0
 	Tooltip:
@@ -758,7 +758,7 @@ Santa:
 		ZOffset: -129
 
 GoreBeast:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: unmonst0
 	Tooltip:
@@ -822,7 +822,7 @@ GunWalker:
 	WithSpriteTurret:
 
 SuicideBot:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: unminst0
 	Tooltip:
@@ -924,7 +924,7 @@ SonicThumperAlternate: # Terrible, bounces when it walks
 # Terrorist
 
 SkateyScout:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: utagsst0
 	Tooltip:
@@ -950,7 +950,7 @@ SkateyScout:
 		ZOffset: -129
 
 TerroristAirRifter:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: utarfst0
 	Tooltip:
@@ -1065,7 +1065,7 @@ TerroristWaterShock:
 		Weapon: LaserRifle
 
 TerroristBreakerBoys:
-	Inherits: ^Soldier
+	Inherits: ^Infantry
 	RenderSprites:
 		Image: utboyst0
 	Tooltip:
@@ -1087,7 +1087,7 @@ TerroristBreakerBoys:
 		Type: ToughHuman
 
 TerroristHospitalUnit:
-	Inherits: ^DrPlane
+	Inherits: ^Aircraft
 	RenderSprites:
 		Image: btpthst0
 	Tooltip:
