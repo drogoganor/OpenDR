@@ -112,7 +112,7 @@ namespace OpenRA.Mods.Dr.Traits
 			var randomFactor = world.LocalRandom.Next(0, baseBuilder.Info.StructureProductionRandomBonusDelay);
 
 			// Needs to be at least 4 * OrderLatency because otherwise the AI frequently duplicates build orders (i.e. makes the same build decision twice)
-			waitTicks = active ? 8 * world.LobbyInfo.GlobalSettings.OrderLatency + baseBuilder.Info.StructureProductionActiveDelay + randomFactor
+			waitTicks = active ? 4 * world.LobbyInfo.GlobalSettings.OrderLatency + baseBuilder.Info.StructureProductionActiveDelay + randomFactor
 				: baseBuilder.Info.StructureProductionInactiveDelay + randomFactor;
 		}
 
@@ -178,22 +178,22 @@ namespace OpenRA.Mods.Dr.Traits
 		ActorInfo GetProducibleBuilding(HashSet<string> actors, IEnumerable<ActorInfo> buildables, Func<ActorInfo, int> orderBy = null)
 		{
 			var available = buildables.Where(actor =>
-            {
-                // Are we able to build this?
-                if (!actors.Contains(actor.Name))
-                    return false;
+			{
+				// Are we able to build this?
+				if (!actors.Contains(actor.Name))
+					return false;
 
-                if (!baseBuilder.Info.BuildingLimits.ContainsKey(actor.Name) && !baseBuilder.Info.BuildingAliases.ContainsKey(actor.Name))
-                    return true;
+				if (!baseBuilder.Info.BuildingLimits.ContainsKey(actor.Name) && !baseBuilder.Info.BuildingAliases.ContainsKey(actor.Name))
+					return true;
 
-                // TODO: This is a DR hack, and the above: && !baseBuilder.Info.BuildingAliases.ContainsKey(actor.Name)
-                if (baseBuilder.Info.BuildingAliases.ContainsKey(actor.Name))
-                {
-                    var aliases = baseBuilder.Info.BuildingAliases[actor.Name];
-                    return playerBuildings.Count(a => aliases.Contains(a.Info.Name)) < baseBuilder.Info.BuildingLimits[actor.Name];
-                }
+				// TODO: This is a DR hack, and the above: && !baseBuilder.Info.BuildingAliases.ContainsKey(actor.Name)
+				if (baseBuilder.Info.BuildingAliases.ContainsKey(actor.Name))
+				{
+					var aliases = baseBuilder.Info.BuildingAliases[actor.Name];
+					return playerBuildings.Count(a => aliases.Contains(a.Info.Name)) < baseBuilder.Info.BuildingLimits[actor.Name];
+				}
 
-                return playerBuildings.Count(a => a.Info.Name == actor.Name) < baseBuilder.Info.BuildingLimits[actor.Name];
+				return playerBuildings.Count(a => a.Info.Name == actor.Name) < baseBuilder.Info.BuildingLimits[actor.Name];
 			});
 
 			if (orderBy != null)
@@ -301,6 +301,12 @@ namespace OpenRA.Mods.Dr.Traits
 			{
 				var name = frac.Key;
 
+				// Does this building have initial delay, if so have we passed it?
+				if (baseBuilder.Info.BuildingDelays != null &&
+					baseBuilder.Info.BuildingDelays.ContainsKey(name) &&
+					baseBuilder.Info.BuildingDelays[name] > world.WorldTick)
+					continue;
+
 				// Can we build this structure?
 				if (!buildableThings.Any(b => b.Name == name))
 					continue;
@@ -310,13 +316,13 @@ namespace OpenRA.Mods.Dr.Traits
 				if (count * 100 > frac.Value * playerBuildings.Length)
 					continue;
 
-                // TODO: This is a DR hack
+				// TODO: This is a DR hack
 				if (baseBuilder.Info.BuildingAliases.ContainsKey(name))
-                {
-                    var aliases = baseBuilder.Info.BuildingAliases[name];
-                    if (playerBuildings.Count(a => aliases.Contains(a.Info.Name)) >= baseBuilder.Info.BuildingLimits[name])
-                        continue;
-                }
+				{
+					var aliases = baseBuilder.Info.BuildingAliases[name];
+					if (playerBuildings.Count(a => aliases.Contains(a.Info.Name)) >= baseBuilder.Info.BuildingLimits[name])
+						continue;
+				}
 
 				if (baseBuilder.Info.BuildingLimits.ContainsKey(name) && baseBuilder.Info.BuildingLimits[name] <= count)
 					continue;

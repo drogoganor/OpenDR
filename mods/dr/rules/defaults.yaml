@@ -682,6 +682,14 @@
 		Range: 18c0
 	GivesBuildableArea:
 		AreaTypes: building
+	GrantConditionOnBotOwner:
+		Condition: enable-ai-cash
+		Bots: normal
+	CashTrickler:
+		RequiresCondition: enable-ai-cash
+		Amount: 100
+		Interval: 50
+		ShowTicks: False
 
 ^DrTrainingFacility.Constructing:
 	Inherits: ^SelfConstructingBuilding

@@ -417,6 +417,7 @@ World:
 		ProductionParent: SIDEBAR_BACKGROUND
 		ProductionTabsWidget: PRODUCTION_TABS
 		BuildSelectPalette: BUILD_SELECT_PALETTE
+		BuildingCancel: SIDEBAR_BUILDING_CANCEL
 	DomainIndex:
 	ResourceLayer:
 	ResourceClaimLayer:

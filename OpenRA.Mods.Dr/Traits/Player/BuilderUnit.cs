@@ -49,13 +49,14 @@ namespace OpenRA.Mods.Dr.Traits
 		readonly Actor self;
 
 		// A list of things we could possibly build
-		readonly Dictionary<ActorInfo, ProductionState> producible = new Dictionary<ActorInfo, ProductionState>();
+		protected readonly Dictionary<ActorInfo, ProductionState> Producible = new Dictionary<ActorInfo, ProductionState>();
 		readonly IEnumerable<ActorInfo> allProducibles;
 		readonly IEnumerable<ActorInfo> buildableProducibles;
 
-		BuilderUnit[] productionTraits;
+		protected BuilderUnit[] productionTraits;
 
 		protected DeveloperMode developerMode;
+		protected TechTree techTree;
 
 		public Actor Actor { get { return self; } }
 
@@ -70,15 +71,13 @@ namespace OpenRA.Mods.Dr.Traits
 		{
 			self = init.Self;
 			Info = info;
-			developerMode = playerActor.Trait<DeveloperMode>();
 
 			Faction = init.Contains<FactionInit>() ? init.Get<FactionInit, string>() : self.Owner.Faction.InternalName;
 			IsValidFaction = !info.Factions.Any() || info.Factions.Contains(Faction);
 			Enabled = IsValidFaction;
 
-			CacheProducibles(playerActor);
-			allProducibles = producible.Where(a => a.Value.Buildable || a.Value.Visible).Select(a => a.Key);
-			buildableProducibles = producible.Where(a => a.Value.Buildable).Select(a => a.Key);
+			allProducibles = Producible.Where(a => a.Value.Buildable || a.Value.Visible).Select(a => a.Key);
+			buildableProducibles = Producible.Where(a => a.Value.Buildable).Select(a => a.Key);
 		}
 
 		void INotifyCreated.Created(Actor self)
@@ -87,7 +86,13 @@ namespace OpenRA.Mods.Dr.Traits
 			// Created is called before Player.PlayerActor is assigned,
 			// so we must query other player traits from self, knowing that
 			// it refers to the same actor as self.Owner.PlayerActor
+			var playerActor = self.Info.Name == "player" ? self : self.Owner.PlayerActor;
+
+			developerMode = playerActor.Trait<DeveloperMode>();
+			techTree = playerActor.Trait<TechTree>();
+
 			productionTraits = self.TraitsImplementing<BuilderUnit>().ToArray();
+			CacheProducibles(playerActor);
 		}
 
 		void INotifyKilled.Killed(Actor killed, AttackInfo e) { if (killed == self) { Enabled = false; } }
@@ -100,18 +105,16 @@ namespace OpenRA.Mods.Dr.Traits
 
 		void CacheProducibles(Actor playerActor)
 		{
-			producible.Clear();
+			Producible.Clear();
 			if (!Enabled)
 				return;
-
-			var ttc = playerActor.Trait<TechTree>();
 
 			foreach (var a in AllBuildables(Info.Type))
 			{
 				var bi = a.TraitInfo<BuildableInfo>();
 
-				producible.Add(a, new ProductionState());
-				ttc.Add(a.Name, bi.Prerequisites, bi.BuildLimit, this);
+				Producible.Add(a, new ProductionState());
+				techTree.Add(a.Name, bi.Prerequisites, bi.BuildLimit, this);
 			}
 		}
 
@@ -126,28 +129,28 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public void PrerequisitesAvailable(string key)
 		{
-			producible[self.World.Map.Rules.Actors[key]].Buildable = true;
+			Producible[self.World.Map.Rules.Actors[key]].Buildable = true;
 		}
 
 		public void PrerequisitesUnavailable(string key)
 		{
-			producible[self.World.Map.Rules.Actors[key]].Buildable = false;
+			Producible[self.World.Map.Rules.Actors[key]].Buildable = false;
 		}
 
 		public void PrerequisitesItemHidden(string key)
 		{
-			producible[self.World.Map.Rules.Actors[key]].Visible = false;
+			Producible[self.World.Map.Rules.Actors[key]].Visible = false;
 		}
 
 		public void PrerequisitesItemVisible(string key)
 		{
-			producible[self.World.Map.Rules.Actors[key]].Visible = true;
+			Producible[self.World.Map.Rules.Actors[key]].Visible = true;
 		}
 
 		public virtual IEnumerable<ActorInfo> AllItems()
 		{
 			if (developerMode.AllTech)
-				return producible.Keys;
+				return Producible.Keys;
 
 			return allProducibles;
 		}
@@ -157,7 +160,7 @@ namespace OpenRA.Mods.Dr.Traits
 			if (!Enabled)
 				return Enumerable.Empty<ActorInfo>();
 			if (developerMode.AllTech)
-				return producible.Keys;
+				return Producible.Keys;
 
 			return buildableProducibles;
 		}
@@ -165,7 +168,7 @@ namespace OpenRA.Mods.Dr.Traits
 		public bool CanBuild(ActorInfo actor)
 		{
 			ProductionState ps;
-			if (!producible.TryGetValue(actor, out ps))
+			if (!Producible.TryGetValue(actor, out ps))
 				return false;
 
 			return ps.Buildable || developerMode.AllTech;

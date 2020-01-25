@@ -2,9 +2,6 @@ Player:
 	ModularBot@NormalAI:
 		Name: Normal AI
 		Type: normal
-	AICash:
-		Amount: 100
-		TickEach: 10
 	GrantConditionOnBotOwner@normal:
 		Condition: enable-normal-ai
 		Bots: normal

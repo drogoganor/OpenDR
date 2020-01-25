@@ -25,6 +25,7 @@ namespace OpenRA.Mods.Dr.Traits
 		public string ProductionTabsWidget = null;
 		public string ProductionPaletteWidget = null;
 		public string BuildSelectPalette = null;
+		public string BuildingCancel = null;
 
 		public object Create(ActorInitializer init) { return new ProductionQueueOrBuildingPickerFromSelection(init.World, this); }
 	}
@@ -38,6 +39,7 @@ namespace OpenRA.Mods.Dr.Traits
 		readonly Lazy<ProductionPaletteWidget> paletteWidget;
 		readonly Lazy<BuildSelectPaletteWidget> buildSelectWidget;
 		readonly Lazy<Widget> productionParentWidget;
+		readonly Lazy<Widget> buildingCancelWidget;
 
 		public ProductionQueueOrBuildingPickerFromSelection(World world, ProductionQueueOrBuildingPickerFromSelectionInfo info)
 		{
@@ -47,10 +49,13 @@ namespace OpenRA.Mods.Dr.Traits
 			paletteWidget = Exts.Lazy(() => Ui.Root.GetOrNull(info.ProductionPaletteWidget) as ProductionPaletteWidget);
 			buildSelectWidget = Exts.Lazy(() => Ui.Root.GetOrNull(info.BuildSelectPalette) as BuildSelectPaletteWidget);
 			productionParentWidget = Exts.Lazy(() => Ui.Root.GetOrNull(info.ProductionParent));
+			buildingCancelWidget = Exts.Lazy(() => Ui.Root.GetOrNull(info.BuildingCancel));
 		}
 
 		void INotifySelection.SelectionChanged()
 		{
+			buildingCancelWidget.Value.Visible = false;
+
 			// Disable for spectators
 			if (world.LocalPlayer == null)
 				return;
@@ -100,7 +105,11 @@ namespace OpenRA.Mods.Dr.Traits
 				return;
 
 			if (queue is BuilderQueue)
+			{
+				productionParentWidget.Value.Visible = false;
+				buildingCancelWidget.Value.Visible = true;
 				return;
+			}
 
 			if (tabsWidget.Value != null)
 				tabsWidget.Value.CurrentQueue = queue;

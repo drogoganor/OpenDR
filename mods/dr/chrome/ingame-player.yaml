@@ -634,3 +634,16 @@ Container@PLAYER_WIDGETS:
 							ImageCollection: sidebar-bits
 							ImageName: production-iconoverlay
 							Visible: false
+		Container@SIDEBAR_BUILDING_CANCEL:
+			X: WINDOW_RIGHT - 250
+			Y: 303
+			Width: 238
+			Height: 256
+			Visible: false
+			Children:
+				Button@CANCEL_BUILD:
+					Width: 228
+					Height: 26
+					X: 5
+					Y: 0
+					Text: Cancel

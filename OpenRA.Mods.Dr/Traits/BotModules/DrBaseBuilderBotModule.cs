@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2018 The OpenRA Developers (see AUTHORS)
+ * Copyright 2007-2019 The OpenRA Developers (see AUTHORS)
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -9,13 +9,11 @@
  */
 #endregion
 
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Support;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits
@@ -112,7 +110,7 @@ namespace OpenRA.Mods.Dr.Traits
 			"Should match maximum adjacency of naval structures.")]
 		public readonly int CheckForWaterRadius = 8;
 
-		[Desc("What buildings to the AI should build.", "What integer percentage of the total base must be this type of building.")]
+		[Desc("Other aliases for buildings to choose.")]
 		public readonly Dictionary<string, string[]> BuildingAliases = null;
 
 		[Desc("Terrain types which are considered water for base building purposes.")]
@@ -124,11 +122,15 @@ namespace OpenRA.Mods.Dr.Traits
 		[Desc("What buildings should the AI have a maximum limit to build.")]
 		public readonly Dictionary<string, int> BuildingLimits = null;
 
+		[Desc("When should the AI start building specific buildings.")]
+		public readonly Dictionary<string, int> BuildingDelays = null;
+
 		public override object Create(ActorInitializer init) { return new DrBaseBuilderBotModule(init.Self, this); }
 	}
 
-	public class DrBaseBuilderBotModule : ConditionalTrait<DrBaseBuilderBotModuleInfo>, IBotTick, IBotPositionsUpdated, IBotRespondToAttack, IBotRequestPauseUnitProduction
-    {
+	public class DrBaseBuilderBotModule : ConditionalTrait<DrBaseBuilderBotModuleInfo>, IGameSaveTraitData,
+		IBotTick, IBotPositionsUpdated, IBotRespondToAttack, IBotRequestPauseUnitProduction
+	{
 		public CPos GetRandomBaseCenter()
 		{
 			var randomConstructionYard = world.Actors.Where(a => a.Owner == player &&
@@ -269,6 +271,32 @@ namespace OpenRA.Mods.Dr.Traits
 				// TODO: Possibly unhardcode this, at least the targeted minimum of 2 (the fallback can probably stay at 1).
 				return AIUtils.CountBuildingByCommonName(Info.BarracksTypes, player) > 0 ? 2 : 1;
 			}
+		}
+
+		List<MiniYamlNode> IGameSaveTraitData.IssueTraitData(Actor self)
+		{
+			if (IsTraitDisabled)
+				return null;
+
+			return new List<MiniYamlNode>()
+			{
+				new MiniYamlNode("InitialBaseCenter", FieldSaver.FormatValue(initialBaseCenter)),
+				new MiniYamlNode("DefenseCenter", FieldSaver.FormatValue(defenseCenter))
+			};
+		}
+
+		void IGameSaveTraitData.ResolveTraitData(Actor self, List<MiniYamlNode> data)
+		{
+			if (self.World.IsReplay)
+				return;
+
+			var initialBaseCenterNode = data.FirstOrDefault(n => n.Key == "InitialBaseCenter");
+			if (initialBaseCenterNode != null)
+				initialBaseCenter = FieldLoader.GetValue<CPos>("InitialBaseCenter", initialBaseCenterNode.Value.Value);
+
+			var defenseCenterNode = data.FirstOrDefault(n => n.Key == "DefenseCenter");
+			if (defenseCenterNode != null)
+				defenseCenter = FieldLoader.GetValue<CPos>("DefenseCenter", defenseCenterNode.Value.Value);
 		}
 	}
 }
