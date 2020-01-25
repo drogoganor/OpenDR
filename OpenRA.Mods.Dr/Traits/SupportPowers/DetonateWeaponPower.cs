@@ -216,14 +216,14 @@ namespace OpenRA.Mods.Dr.Traits
 		}
 
 		public void Deactivate()
-        {
-            // throw new NotImplementedException();
-        }
+		{
+			// throw new NotImplementedException();
+		}
 
 		public bool HandleKeyPress(KeyInput e)
-        {
-            // throw new NotImplementedException();
-            return true;
-        }
-    }
+		{
+			// throw new NotImplementedException();
+			return true;
+		}
+	}
 }

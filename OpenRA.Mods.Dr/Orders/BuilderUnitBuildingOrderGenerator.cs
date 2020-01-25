@@ -50,7 +50,7 @@ namespace OpenRA.Mods.Dr.Orders
 			viewport = worldRenderer.Viewport;
 			placeBuildingInfo = queue.Actor.Owner.PlayerActor.Info.TraitInfo<PlaceBuildingInfo>();
 
-            // Clear selection if using Left-Click Orders
+			// Clear selection if using Left-Click Orders
 			if (Game.Settings.Game.UseClassicMouseStyle)
 				world.Selection.Clear();
 
@@ -200,7 +200,7 @@ namespace OpenRA.Mods.Dr.Orders
 
 		public string GetCursor(World world, CPos cell, int2 worldPixel, MouseInput mi) { return "default"; }
 
-        // Copied from PlaceBuildingOrderGenerator, triplicated in BuildOnSite and BuilderUnitBuildingOrderGenerator
+		// Copied from PlaceBuildingOrderGenerator, triplicated in BuildOnSite and BuilderUnitBuildingOrderGenerator
 		IEnumerable<Order> ClearBlockersOrders(World world, CPos topLeft)
 		{
 			var allTiles = buildingInfo.Tiles(topLeft).ToArray();
@@ -225,14 +225,14 @@ namespace OpenRA.Mods.Dr.Orders
 		}
 
 		public void Deactivate()
-        {
-            // throw new NotImplementedException();
-        }
+		{
+			// throw new NotImplementedException();
+		}
 
 		public bool HandleKeyPress(KeyInput e)
-        {
-            // throw new NotImplementedException();
-            return true;
-        }
-    }
+		{
+			// throw new NotImplementedException();
+			return true;
+		}
+	}
 }

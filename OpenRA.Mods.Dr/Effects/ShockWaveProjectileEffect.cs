@@ -111,17 +111,17 @@ namespace OpenRA.Mods.Dr.Effects
 		}
 
 		bool Side(WPos p1, WPos p2, WPos p)
-        {
-            WVec diff = p2 - p1;
-            WVec perp = new WVec(-diff.Y, diff.X, 0);
-            float d = Dot2d(p - p1, perp);
-            return d < 0;
-        }
+		{
+			WVec diff = p2 - p1;
+			WVec perp = new WVec(-diff.Y, diff.X, 0);
+			float d = Dot2d(p - p1, perp);
+			return d < 0;
+		}
 
 		int Dot2d(WVec a, WVec b)
-        {
-            return a.X * b.X + a.Y * b.Y;
-        }
+		{
+			return a.X * b.X + a.Y * b.Y;
+		}
 
 		public void Tick(World world)
 		{
@@ -132,17 +132,17 @@ namespace OpenRA.Mods.Dr.Effects
 			var lastPos = projectilepos;
 
 			if (!converged)
-            {
-                var p1 = args.ConvergePoint;
-                var p2 = p1 + args.Normal;
-                if (Side(p1, p2, projectilepos))
-                {
-                    source = projectilepos;
-                    targetpos = projectilepos + args.OriginalTargetVec;
-                    converged = true;
-                    ticks = 0; // Have to reset to prevent improper lerp
-                }
-            }
+			{
+				var p1 = args.ConvergePoint;
+				var p2 = p1 + args.Normal;
+				if (Side(p1, p2, projectilepos))
+				{
+					source = projectilepos;
+					targetpos = projectilepos + args.OriginalTargetVec;
+					converged = true;
+					ticks = 0; // Have to reset to prevent improper lerp
+				}
+			}
 
 			projectilepos = WPos.Lerp(source, targetpos, ticks, estimatedlifespan);
 

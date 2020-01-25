@@ -16,62 +16,62 @@ namespace OpenRA.Mods.Common.Traits
 {
 	[Desc(".")]
 	public class VortexInfo : ConditionalTraitInfo
-    {
-        [Desc("Projectile to spawn.")]
-        public readonly string WeaponName = string.Empty;
+	{
+		[Desc("Projectile to spawn.")]
+		public readonly string WeaponName = string.Empty;
 
-        [Desc("Delay between projectile spawns.")]
-        public readonly int BurstDelay = 18;
+		[Desc("Delay between projectile spawns.")]
+		public readonly int BurstDelay = 18;
 
-        [Desc("Number of bursts total.")]
-        public readonly int BurstTotal = 10;
+		[Desc("Number of bursts total.")]
+		public readonly int BurstTotal = 10;
 
-        [Desc("Rotation rate.")]
-        public readonly int RotationRate = 15;
+		[Desc("Rotation rate.")]
+		public readonly int RotationRate = 15;
 
-        public override object Create(ActorInitializer init) { return new Vortex(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new Vortex(init.Self, this); }
 	}
 
 	public class Vortex : ConditionalTrait<VortexInfo>, ITick
 	{
-        readonly VortexInfo info;
-        int rotation = 0;
-        WVec targetVec = new WVec(8192, 0, 0);
-        int ticks = 0;
+		readonly VortexInfo info;
+		int rotation = 0;
+		WVec targetVec = new WVec(8192, 0, 0);
+		int ticks = 0;
 
-        public Vortex(Actor self, VortexInfo info)
-            : base(info)
+		public Vortex(Actor self, VortexInfo info)
+			: base(info)
 		{
-            this.info = info;
+			this.info = info;
 		}
 
-        void ITick.Tick(Actor self)
-        {
-            ticks++;
+		void ITick.Tick(Actor self)
+		{
+			ticks++;
 
-            if (ticks > info.BurstDelay * info.BurstTotal)
-            {
-                if (self.CurrentActivity != null)
-                    self.CancelActivity();
+			if (ticks > info.BurstDelay * info.BurstTotal)
+			{
+				if (self.CurrentActivity != null)
+					self.CancelActivity();
 
-                self.QueueActivity(new Activities.RemoveSelf());
-                return;
-            }
+				self.QueueActivity(new Activities.RemoveSelf());
+				return;
+			}
 
-            if (ticks % info.BurstDelay != 0)
-                return;
+			if (ticks % info.BurstDelay != 0)
+				return;
 
-            var rotatedVec = targetVec.Rotate(WRot.FromFacing(rotation));
+			var rotatedVec = targetVec.Rotate(WRot.FromFacing(rotation));
 
-            var newTarget = self.CenterPosition + rotatedVec;
-            var tar = Target.FromPos(newTarget);
+			var newTarget = self.CenterPosition + rotatedVec;
+			var tar = Target.FromPos(newTarget);
 
-            if (self.CurrentActivity != null)
-                self.CancelActivity();
+			if (self.CurrentActivity != null)
+				self.CancelActivity();
 
-            self.QueueActivity(new Activities.Attack(self, tar, true, true));
+			self.QueueActivity(new Activities.Attack(self, tar, true, true));
 
-            rotation -= info.RotationRate;
-        }
-    }
+			rotation -= info.RotationRate;
+		}
+	}
 }

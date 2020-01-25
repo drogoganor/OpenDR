@@ -229,59 +229,59 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				}
 
 				if (numhotspots > 0)
-                {
-                    int off_hotspots, h;
-                    s.Seek(header.OffPicoffs + 8 * header.Npics, SeekOrigin.Begin);
-                    off_hotspots = header.OffBits;
-                    for (h = 0; h < numhotspots; ++h)
-                    {
-                        int frameindex = 0;
-                        for (int r = 0; r < header.Nrots; ++r)
-                        {
-                            for (int a = firstanim; a <= lastanim; ++a)
-                            {
-                                int picindex = a * header.Nrots + r;
-                                var read_int = new Func<int, int>((off) =>
-                                {
-                                    s.Position = off;
-                                    return s.ReadInt32();
-                                });
+				{
+					int off_hotspots, h;
+					s.Seek(header.OffPicoffs + 8 * header.Npics, SeekOrigin.Begin);
+					off_hotspots = header.OffBits;
+					for (h = 0; h < numhotspots; ++h)
+					{
+						int frameindex = 0;
+						for (int r = 0; r < header.Nrots; ++r)
+						{
+							for (int a = firstanim; a <= lastanim; ++a)
+							{
+								int picindex = a * header.Nrots + r;
+								var read_int = new Func<int, int>((off) =>
+								{
+									s.Position = off;
+									return s.ReadInt32();
+								});
 
-                                int headersize = 32;
-                                int picnr = read_int(headersize + picindex * 4);
-                                int hotoff = read_int(header.OffPicoffs + 8 * picnr + 4);
-                                s.Position = off_hotspots + 4 + 3 * (hotoff + h);
-                                byte hx = s.ReadUInt8();
-                                byte hy = s.ReadUInt8();
+								int headersize = 32;
+								int picnr = read_int(headersize + picindex * 4);
+								int hotoff = read_int(header.OffPicoffs + 8 * picnr + 4);
+								s.Position = off_hotspots + 4 + 3 * (hotoff + h);
+								byte hx = s.ReadUInt8();
+								byte hy = s.ReadUInt8();
 
-                                metadata.Add(new DrFrameMetadata()
-                                {
-                                    Hotspot = new int2(hx, hy),
-                                    FrameIndex = frameindex
-                                });
+								metadata.Add(new DrFrameMetadata()
+								{
+									Hotspot = new int2(hx, hy),
+									FrameIndex = frameindex
+								});
 
-                                frameindex++;
-                            }
-                        }
-                    }
-                }
-            }
+								frameindex++;
+							}
+						}
+					}
+				}
+			}
 
 			s.Position = start;
 			return frames.ToArray();
 		}
 
 		public bool TryParseSprite(Stream s, out ISpriteFrame[] frames, out TypeDictionary metadata)
-        {
-            metadata = null;
-            if (!IsDrSpr(s))
+		{
+			metadata = null;
+			if (!IsDrSpr(s))
 			{
 				frames = null;
 				return false;
 			}
 
-            frames = ParseFrames(s, out metadata);
-            return true;
+			frames = ParseFrames(s, out metadata);
+			return true;
 		}
 	}
 }

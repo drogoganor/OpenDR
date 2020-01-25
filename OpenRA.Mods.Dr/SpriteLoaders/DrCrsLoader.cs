@@ -148,32 +148,32 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			bool isDemo = frames.Count < 296;
 			if (!isDemo)
-            {
-                var cursor1 = frames[304];
-                var cursor2 = frames[321];
-                var cursor3 = frames[322];
-                frames.RemoveAt(304);
-                frames.RemoveRange(320, 2);
-                frames.InsertRange(288, new[] { cursor1, cursor2, cursor3 });
+			{
+				var cursor1 = frames[304];
+				var cursor2 = frames[321];
+				var cursor3 = frames[322];
+				frames.RemoveAt(304);
+				frames.RemoveRange(320, 2);
+				frames.InsertRange(288, new[] { cursor1, cursor2, cursor3 });
 
-                frames.Reverse(291, 8);
-            }
+				frames.Reverse(291, 8);
+			}
 
 			s.Position = start;
 			return frames.ToArray();
 		}
 
 		public bool TryParseSprite(Stream s, out ISpriteFrame[] frames, out TypeDictionary metadata)
-        {
-            metadata = null;
-            if (!IsDrCrs(s))
+		{
+			metadata = null;
+			if (!IsDrCrs(s))
 			{
 				frames = null;
 				return false;
 			}
 
-            frames = ParseFrames(s);
-            return true;
+			frames = ParseFrames(s);
+			return true;
 		}
 	}
 }

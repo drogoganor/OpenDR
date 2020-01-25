@@ -22,7 +22,7 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 
 		[ObjectCreator.UseCtor]
 		public ProductionTabsWithRowsAndFooterLogic(Widget widget, World world)
-            : base(widget, world)
+			: base(widget, world)
 		{
 			tabs = widget.Get<ProductionTabsWithRowsAndFooterWidget>("PRODUCTION_TABS");
 			var rowWidget = tabs.Parent.GetOrNull(tabs.RowWidget);

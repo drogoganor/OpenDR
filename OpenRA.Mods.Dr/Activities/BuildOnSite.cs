@@ -47,11 +47,11 @@ namespace OpenRA.Mods.Dr.Activities
 
 		public override bool Tick(Actor self)
 		{
-            if (IsCanceling || self.IsDead)
-                return true;
+			if (IsCanceling || self.IsDead)
+				return true;
 
-            if (centerBuildingTarget.IsInRange(self.CenterPosition, minRange))
-            {
+			if (centerBuildingTarget.IsInRange(self.CenterPosition, minRange))
+			{
 				if (!world.CanPlaceBuilding(centerTarget, buildingActor, buildingInfo, self))
 				{
 					// Try clear the area
@@ -60,11 +60,11 @@ namespace OpenRA.Mods.Dr.Activities
 
 					Game.Sound.PlayNotification(world.Map.Rules, self.Owner, "Speech", "BuildingCannotPlaceAudio", faction);
 					return true;
-                }
+				}
 
 				self.World.AddFrameEndTask(w =>
 				{
-                    w.CreateActor(true, order.TargetString, new TypeDictionary
+					w.CreateActor(true, order.TargetString, new TypeDictionary
 						{
 							new LocationInit(world.Map.CellContaining(order.Target.CenterPosition)),
 							new OwnerInit(order.Player),
@@ -72,20 +72,20 @@ namespace OpenRA.Mods.Dr.Activities
 							new PlaceBuildingInit()
 						});
 
-                    Game.Sound.PlayNotification(self.World.Map.Rules, order.Player, "Speech", "Building", faction);
-                });
+					Game.Sound.PlayNotification(self.World.Map.Rules, order.Player, "Speech", "Building", faction);
+				});
 
 				self.QueueActivity(new RemoveSelf());
 
 				return true;
 
 				// return new RemoveSelf();
-            }
+			}
 
-            // return ActivityUtils.SequenceActivities(
-            //    move.MoveTo(centerTarget, 2),
-            //    this);
-            return true;
+			// return ActivityUtils.SequenceActivities(
+			//	move.MoveTo(centerTarget, 2),
+			//	this);
+			return true;
 		}
 
 		// Copied from PlaceBuildingOrderGenerator, triplicated in BuildOnSite and BuilderUnitBuildingOrderGenerator

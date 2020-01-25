@@ -112,16 +112,16 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 		}
 
 		public bool TryParseSprite(Stream s, out ISpriteFrame[] frames, out TypeDictionary metadata)
-        {
-            metadata = null;
-            if (!IsDrTil(s))
+		{
+			metadata = null;
+			if (!IsDrTil(s))
 			{
 				frames = null;
 				return false;
 			}
 
-            frames = ParseFrames(s);
-            return true;
+			frames = ParseFrames(s);
+			return true;
 		}
 	}
 }

@@ -30,8 +30,8 @@ namespace OpenRA.Mods.Dr.Traits
 		public object Create(ActorInitializer init) { return new ProductionQueueOrBuildingPickerFromSelection(init.World, this); }
 	}
 
-    // Copied from ProductionQueueFromSelection
-    // Now performs extraordinary hacking to show two different types of build palettes - regular production queues and building picker
+	// Copied from ProductionQueueFromSelection
+	// Now performs extraordinary hacking to show two different types of build palettes - regular production queues and building picker
 	class ProductionQueueOrBuildingPickerFromSelection : INotifySelection
 	{
 		readonly World world;

@@ -52,12 +52,12 @@ namespace OpenRA.Mods.Common.Traits.Render
 			anim = new Animation(self.World, info.Image);
 			rs.Add(new AnimationWithOffset(anim, () => info.Offset, () => !isBurning));
 			anim.PlayRepeating(info.Sequence);
-        }
+		}
 
 		void ITick.Tick(Actor self)
-        {
-            var dmgState = self.GetDamageState();
-            isBurning = dmgState > info.MinimumDamageState && dmgState <= info.MaximumDamageState;
-        }
+		{
+			var dmgState = self.GetDamageState();
+			isBurning = dmgState > info.MinimumDamageState && dmgState <= info.MaximumDamageState;
+		}
 	}
 }

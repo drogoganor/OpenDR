@@ -18,15 +18,15 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Projectiles
 {
-    public class ShockwaveProjectileArgs : ProjectileArgs
-    {
-        public WPos ConvergePoint;
-        public WVec OriginalTargetVec;
-        public WVec Normal;
-    }
+	public class ShockwaveProjectileArgs : ProjectileArgs
+	{
+		public WPos ConvergePoint;
+		public WVec OriginalTargetVec;
+		public WVec Normal;
+	}
 
-    [Desc("Detonates all warheads attached to Weapon each ExplosionInterval ticks.")]
-    public class ShockWaveProjectileInfo : IProjectileInfo, IRulesetLoaded<WeaponInfo>
+	[Desc("Detonates all warheads attached to Weapon each ExplosionInterval ticks.")]
+	public class ShockWaveProjectileInfo : IProjectileInfo, IRulesetLoaded<WeaponInfo>
 	{
 		[Desc("Projectile speed in WDist / tick, two values indicate variable velocity.")]
 		public readonly WDist[] Speed = { new WDist(17) };
@@ -128,7 +128,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 		}
 	}
 
-    public class ShockWaveProjectile : IProjectile, ISync
+	public class ShockWaveProjectile : IProjectile, ISync
 	{
 		readonly ShockWaveProjectileInfo info;
 		readonly ProjectileArgs args;
@@ -182,42 +182,42 @@ namespace OpenRA.Mods.Dr.Projectiles
 			var normal = new WVec(-dy, dx, 0);
 
 			for (int i = 0; i < info.NumProjectiles; i++)
-            {
-                target = Target.FromPos(targetpos);
+			{
+				target = Target.FromPos(targetpos);
 
-                // If it's true then lifespan is counted from source position to target instead of max range.
-                lifespan = info.KillProjectilesWhenReachedTargetLocation
-                    ? Math.Max((args.PassiveTarget - args.Source).Length / speed.Length, 1)
-                    : estimatedLifespan;
+				// If it's true then lifespan is counted from source position to target instead of max range.
+				lifespan = info.KillProjectilesWhenReachedTargetLocation
+					? Math.Max((args.PassiveTarget - args.Source).Length / speed.Length, 1)
+					: estimatedLifespan;
 
-                facing = (targetpos - sourcepos).Yaw.Facing;
+				facing = (targetpos - sourcepos).Yaw.Facing;
 
-                int shiftIndex = (i - (info.NumProjectiles / 2)) * info.Splay;
-                var newRotation = WRot.FromFacing(shiftIndex);
-                var rotatedTarget = (targetpos - sourcepos).Rotate(newRotation);
+				int shiftIndex = (i - (info.NumProjectiles / 2)) * info.Splay;
+				var newRotation = WRot.FromFacing(shiftIndex);
+				var rotatedTarget = (targetpos - sourcepos).Rotate(newRotation);
 
-                target = Target.FromPos(sourcepos + rotatedTarget);
+				target = Target.FromPos(sourcepos + rotatedTarget);
 
-                var projectileArgs = new ShockwaveProjectileArgs
-                {
-                    Weapon = args.Weapon,
-                    DamageModifiers = args.DamageModifiers,
-                    Facing = facing,
-                    Source = sourcepos,
-                    CurrentSource = () => sourcepos,
-                    SourceActor = firedBy,
-                    GuidedTarget = target,
-                    PassiveTarget = sourcepos + rotatedTarget,
-                    ConvergePoint = convergePoint,
-                    OriginalTargetVec = targetpos - sourcepos,
-                    Normal = normal
-                };
+				var projectileArgs = new ShockwaveProjectileArgs
+				{
+					Weapon = args.Weapon,
+					DamageModifiers = args.DamageModifiers,
+					Facing = facing,
+					Source = sourcepos,
+					CurrentSource = () => sourcepos,
+					SourceActor = firedBy,
+					GuidedTarget = target,
+					PassiveTarget = sourcepos + rotatedTarget,
+					ConvergePoint = convergePoint,
+					OriginalTargetVec = targetpos - sourcepos,
+					Normal = normal
+				};
 
-                projectiles[i] = new ShockWaveProjectileEffect(info, projectileArgs, lifespan, estimatedLifespan);
-            }
+				projectiles[i] = new ShockWaveProjectileEffect(info, projectileArgs, lifespan, estimatedLifespan);
+			}
 
 			foreach (var p in projectiles)
-			    world.AddFrameEndTask(w => w.Add(p));
+				world.AddFrameEndTask(w => w.Add(p));
 		}
 
 		// gets where main projectile should fly to

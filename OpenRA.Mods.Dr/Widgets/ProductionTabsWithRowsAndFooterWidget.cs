@@ -20,7 +20,7 @@ namespace OpenRA.Mods.Dr.Widgets
 
 		[ObjectCreator.UseCtor]
 		public ProductionTabsWithRowsAndFooterWidget(World world)
-            : base(world)
+			: base(world)
 		{
 		}
 	}

@@ -14,26 +14,26 @@ using OpenRA.Mods.Common.Traits;
 namespace OpenRA.Mods.Dr.Traits
 {
 	public class BuilderQueueInfo : ProductionQueueInfo
-    {
+	{
 		public override object Create(ActorInitializer init) { return new BuilderQueue(init, this); }
 	}
 
 	public class BuilderQueue : ProductionQueue
-    {
-        public BuilderQueue(ActorInitializer init, BuilderQueueInfo info)
+	{
+		public BuilderQueue(ActorInitializer init, BuilderQueueInfo info)
 			: base(init, init.Self.Owner.PlayerActor, info) { }
 
-        protected override void TickInner(Actor self, bool allProductionPaused)
-        {
-            foreach (var i in Queue)
-            {
-                i.Tick(playerResources);
-            }
-        }
+		protected override void TickInner(Actor self, bool allProductionPaused)
+		{
+			foreach (var i in Queue)
+			{
+				i.Tick(playerResources);
+			}
+		}
 
-        public void BeginProduction(ProductionItem item)
-        {
-            BeginProduction(item, false);
-        }
+		public void BeginProduction(ProductionItem item)
+		{
+			BeginProduction(item, false);
+		}
 	}
 }

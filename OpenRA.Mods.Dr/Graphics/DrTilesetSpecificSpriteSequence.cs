@@ -42,22 +42,22 @@ namespace OpenRA.Mods.Dr.Graphics
 			var validTilesetIds = new string[] { "BARREN", "JUNGLE", "SNOW" }; // Alien?
 
 			if (!spriteName.EndsWith(".shp"))
-            {
-                if (spriteName.StartsWith("tileset|"))
-                {
-                    if (validTilesetIds.Contains(tileSet.Id))
-                        spriteName = spriteName.Replace("tileset", tileSet.Id.ToLower());
-                    else
-                        spriteName = spriteName.Replace("tileset", "barren");
-                }
-                else if (spriteName.StartsWith("tilesetEx|"))
-                {
-                    if (validTilesetIds.Contains(tileSet.Id))
-                        spriteName = spriteName.Replace("tilesetEx", tileSet.Id.ToLower() + "Ex");
-                    else
-                        spriteName = spriteName.Replace("tilesetEx", "barrenEx");
-                }
-            }
+			{
+				if (spriteName.StartsWith("tileset|"))
+				{
+					if (validTilesetIds.Contains(tileSet.Id))
+						spriteName = spriteName.Replace("tileset", tileSet.Id.ToLower());
+					else
+						spriteName = spriteName.Replace("tileset", "barren");
+				}
+				else if (spriteName.StartsWith("tilesetEx|"))
+				{
+					if (validTilesetIds.Contains(tileSet.Id))
+						spriteName = spriteName.Replace("tilesetEx", tileSet.Id.ToLower() + "Ex");
+					else
+						spriteName = spriteName.Replace("tilesetEx", "barrenEx");
+				}
+			}
 
 			if (LoadField(d, "AddExtension", true))
 			{

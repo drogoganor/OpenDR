@@ -18,14 +18,14 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Projectiles
 {
-    public class VortexProjectileArgs : ProjectileArgs
-    {
-        public WVec Normal;
-        public WVec VecNormalized;
-    }
+	public class VortexProjectileArgs : ProjectileArgs
+	{
+		public WVec Normal;
+		public WVec VecNormalized;
+	}
 
-    [Desc("Detonates all warheads attached to Weapon each ExplosionInterval ticks.")]
-    public class VortexProjectileInfo : IProjectileInfo, IRulesetLoaded<WeaponInfo>
+	[Desc("Detonates all warheads attached to Weapon each ExplosionInterval ticks.")]
+	public class VortexProjectileInfo : IProjectileInfo, IRulesetLoaded<WeaponInfo>
 	{
 		[Desc("Projectile speed in WDist / tick, two values indicate variable velocity.")]
 		public readonly WDist[] Speed = { new WDist(17) };
@@ -121,7 +121,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 		}
 	}
 
-    public class VortexProjectile : IProjectile, ISync
+	public class VortexProjectile : IProjectile, ISync
 	{
 		readonly VortexProjectileInfo info;
 		readonly ProjectileArgs args;
@@ -172,41 +172,41 @@ namespace OpenRA.Mods.Dr.Projectiles
 			int facingsInterval = 256 / info.NumProjectiles;
 
 			for (int i = 0; i < info.NumProjectiles; i++)
-            {
-                target = Target.FromPos(targetpos);
+			{
+				target = Target.FromPos(targetpos);
 
-                // If it's true then lifespan is counted from source position to target instead of max range.
-                lifespan = info.KillProjectilesWhenReachedTargetLocation
-                    ? Math.Max((args.PassiveTarget - args.Source).Length / speed.Length, 1)
-                    : estimatedLifespan;
+				// If it's true then lifespan is counted from source position to target instead of max range.
+				lifespan = info.KillProjectilesWhenReachedTargetLocation
+					? Math.Max((args.PassiveTarget - args.Source).Length / speed.Length, 1)
+					: estimatedLifespan;
 
-                facing = mainFacing + (facingsInterval * i);
-                var newRotation = WRot.FromFacing(facing);
-                var rotatedTarget = (targetpos - sourcepos).Rotate(newRotation);
+				facing = mainFacing + (facingsInterval * i);
+				var newRotation = WRot.FromFacing(facing);
+				var rotatedTarget = (targetpos - sourcepos).Rotate(newRotation);
 
-                var dx = rotatedTarget.X - sourcepos.X;
-                var dy = rotatedTarget.Y - sourcepos.Y;
-                var normal = new WVec(-dy, dx, 0);
+				var dx = rotatedTarget.X - sourcepos.X;
+				var dy = rotatedTarget.Y - sourcepos.Y;
+				var normal = new WVec(-dy, dx, 0);
 
-                target = Target.FromPos(sourcepos + rotatedTarget);
-                var normalizedVec = WVec.Lerp(WVec.Zero, rotatedTarget, 512, rotatedTarget.Length);
+				target = Target.FromPos(sourcepos + rotatedTarget);
+				var normalizedVec = WVec.Lerp(WVec.Zero, rotatedTarget, 512, rotatedTarget.Length);
 
-                var projectileArgs = new VortexProjectileArgs
-                {
-                    Weapon = args.Weapon,
-                    DamageModifiers = args.DamageModifiers,
-                    Facing = facing,
-                    Source = sourcepos,
-                    CurrentSource = () => sourcepos,
-                    SourceActor = firedBy,
-                    GuidedTarget = target,
-                    PassiveTarget = sourcepos + rotatedTarget,
-                    VecNormalized = normalizedVec,
-                    Normal = normal
-                };
+				var projectileArgs = new VortexProjectileArgs
+				{
+					Weapon = args.Weapon,
+					DamageModifiers = args.DamageModifiers,
+					Facing = facing,
+					Source = sourcepos,
+					CurrentSource = () => sourcepos,
+					SourceActor = firedBy,
+					GuidedTarget = target,
+					PassiveTarget = sourcepos + rotatedTarget,
+					VecNormalized = normalizedVec,
+					Normal = normal
+				};
 
-                projectiles[i] = new VortexProjectileEffect(info, projectileArgs, lifespan, estimatedLifespan);
-            }
+				projectiles[i] = new VortexProjectileEffect(info, projectileArgs, lifespan, estimatedLifespan);
+			}
 
 			foreach (var p in projectiles)
 			world.AddFrameEndTask(w => w.Add(p));

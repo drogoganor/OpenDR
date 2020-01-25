@@ -100,7 +100,7 @@ namespace OpenRA.Mods.Dr.Warheads
 
 					placed = true;
 					break;
-                }
+				}
 
 				if (!placed && unit != null)
 					unit.Dispose();

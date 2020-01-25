@@ -25,14 +25,14 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.Dr.Widgets
 {
-    public class BuildSelectIcon : ProductionIcon
+	public class BuildSelectIcon : ProductionIcon
 	{
 		public ProductionItem Item;
 		public BuilderUnit BuilderUnit;
 	}
 
-    // Copied from ProductionPaletteWidget.
-    public class BuildSelectPaletteWidget : Widget
+	// Copied from ProductionPaletteWidget.
+	public class BuildSelectPaletteWidget : Widget
 	{
 		public readonly int Columns = 3;
 		public readonly int2 IconSize = new int2(64, 48);
@@ -283,7 +283,7 @@ namespace OpenRA.Mods.Dr.Widgets
 				icon.Play(bi.Icon);
 
 				var dummyQueue = currentQueue.Actor.Owner.PlayerActor.TraitsImplementing<ProductionQueue>()
-                    .First(q => q.Info.Type == "Dummy");
+					.First(q => q.Info.Type == "Dummy");
 
 				var pi = new BuildSelectIcon()
 				{

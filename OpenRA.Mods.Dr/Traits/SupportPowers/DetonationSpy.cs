@@ -16,34 +16,34 @@ namespace OpenRA.Mods.Common.Traits
 {
 	[Desc("Placed by a SpawnActorWarhead to spy on the destruction after a detonation.")]
 	public class DetonationSpyInfo : ConditionalTraitInfo
-    {
-        [Desc("Stays for this many ticks.")]
-        public readonly int StaysFor = 10;
+	{
+		[Desc("Stays for this many ticks.")]
+		public readonly int StaysFor = 10;
 
-        public override object Create(ActorInitializer init) { return new DetonationSpy(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new DetonationSpy(init.Self, this); }
 	}
 
 	public class DetonationSpy : ConditionalTrait<DetonationSpyInfo>, ITick
 	{
-        readonly DetonationSpyInfo info;
+		readonly DetonationSpyInfo info;
 
-        int ticks = 0;
+		int ticks = 0;
 
-        public DetonationSpy(Actor self, DetonationSpyInfo info)
-            : base(info)
+		public DetonationSpy(Actor self, DetonationSpyInfo info)
+			: base(info)
 		{
-            this.info = info;
+			this.info = info;
 		}
 
-        void ITick.Tick(Actor self)
-        {
-            ticks++;
+		void ITick.Tick(Actor self)
+		{
+			ticks++;
 
-            if (ticks > info.StaysFor)
-            {
-                self.QueueActivity(new Activities.RemoveSelf());
-                return;
-            }
-        }
-    }
+			if (ticks > info.StaysFor)
+			{
+				self.QueueActivity(new Activities.RemoveSelf());
+				return;
+			}
+		}
+	}
 }

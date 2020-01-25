@@ -23,7 +23,7 @@ namespace OpenRA.Mods.Dr.Traits
 {
 	[Desc("Load a Dark Reign .PAL palette file. Index 0 is hardcoded to be fully transparent/invisible.")]
 	class PaletteFromDrFileInfo : ITraitInfo, IProvidesCursorPaletteInfo
-    {
+	{
 		[FieldLoader.Require]
 		[PaletteDefinition]
 		[Desc("internal palette name")]
@@ -58,16 +58,16 @@ namespace OpenRA.Mods.Dr.Traits
 		string IProvidesCursorPaletteInfo.Palette { get { return CursorPalette ? Name : null; } }
 
 		ImmutablePalette IProvidesCursorPaletteInfo.ReadPalette(IReadOnlyFileSystem fileSystem)
-        {
-            using (var s = fileSystem.Open(Filename))
-            {
-                return PaletteFromDrFile.PaletteFromStream(s, this);
-            }
-        }
-    }
+		{
+			using (var s = fileSystem.Open(Filename))
+			{
+				return PaletteFromDrFile.PaletteFromStream(s, this);
+			}
+		}
+	}
 
 	class PaletteFromDrFile : ILoadsPalettes, IProvidesAssetBrowserPalettes
-    {
+	{
 		readonly World world;
 		readonly PaletteFromDrFileInfo info;
 		public PaletteFromDrFile(World world, PaletteFromDrFileInfo info)
@@ -77,54 +77,54 @@ namespace OpenRA.Mods.Dr.Traits
 		}
 
 		public static ImmutablePalette PaletteFromStream(Stream s, PaletteFromDrFileInfo info)
-        {
-            var colors = new uint[Palette.Size];
-            var headerName = s.ReadASCII(4);
-            var headerVersion = s.ReadInt32();
+		{
+			var colors = new uint[Palette.Size];
+			var headerName = s.ReadASCII(4);
+			var headerVersion = s.ReadInt32();
 
-            if (headerName != "PALS")
-            {
-                throw new InvalidDataException("Palette header was not PALS");
-            }
+			if (headerName != "PALS")
+			{
+				throw new InvalidDataException("Palette header was not PALS");
+			}
 
-            if (headerVersion != 0x0102)
-            {
-                throw new InvalidDataException("Palette version `{0}` was incorrect (expected `0x0102`)".F(headerVersion));
-            }
+			if (headerVersion != 0x0102)
+			{
+				throw new InvalidDataException("Palette version `{0}` was incorrect (expected `0x0102`)".F(headerVersion));
+			}
 
-            // Data is made up of 3x256 bytes, each ranging 0-63. Data is grouped by channel.
-            var list = new List<byte>();
-            for (int i = 0; i < Palette.Size * 6; i++)
-            {
-                list.Add(s.ReadUInt8());
-            }
+			// Data is made up of 3x256 bytes, each ranging 0-63. Data is grouped by channel.
+			var list = new List<byte>();
+			for (int i = 0; i < Palette.Size * 6; i++)
+			{
+				list.Add(s.ReadUInt8());
+			}
 
-            var rList = list.Take(256).ToList();
-            var gList = list.Skip(256).Take(256).ToList();
-            var bList = list.Skip(512).Take(256).ToList();
+			var rList = list.Take(256).ToList();
+			var gList = list.Skip(256).Take(256).ToList();
+			var bList = list.Skip(512).Take(256).ToList();
 
-            for (int i = 0; i < Palette.Size; i++)
-            {
-                // Index 0 should always be completely transparent/background color
-                if (i == 0)
-                    colors[i] = 0;
-                else if (i < 160 || i == 255)
-                    colors[i] = (uint)Color.FromArgb(
-                        Math.Min((rList[i] * info.StandardPaletteMultiplier) + info.Gamma, 255),
-                        Math.Min((gList[i] * info.StandardPaletteMultiplier) + info.Gamma, 255),
-                        Math.Min((bList[i] * info.StandardPaletteMultiplier) + info.Gamma, 255)).ToArgb();
-                else
-                    colors[i] = (uint)Color.FromArgb(
-                        Math.Min((rList[i] * info.TerrainPaletteMultiplier) + info.Gamma, 255),
-                        Math.Min((gList[i] * info.TerrainPaletteMultiplier) + info.Gamma, 255),
-                        Math.Min((bList[i] * info.TerrainPaletteMultiplier) + info.Gamma, 255)).ToArgb();
-            }
+			for (int i = 0; i < Palette.Size; i++)
+			{
+				// Index 0 should always be completely transparent/background color
+				if (i == 0)
+					colors[i] = 0;
+				else if (i < 160 || i == 255)
+					colors[i] = (uint)Color.FromArgb(
+						Math.Min((rList[i] * info.StandardPaletteMultiplier) + info.Gamma, 255),
+						Math.Min((gList[i] * info.StandardPaletteMultiplier) + info.Gamma, 255),
+						Math.Min((bList[i] * info.StandardPaletteMultiplier) + info.Gamma, 255)).ToArgb();
+				else
+					colors[i] = (uint)Color.FromArgb(
+						Math.Min((rList[i] * info.TerrainPaletteMultiplier) + info.Gamma, 255),
+						Math.Min((gList[i] * info.TerrainPaletteMultiplier) + info.Gamma, 255),
+						Math.Min((bList[i] * info.TerrainPaletteMultiplier) + info.Gamma, 255)).ToArgb();
+			}
 
-            // Shadow hack
-            colors[info.ShadowIndex] = (uint)Color.FromArgb(112, 0, 0, 0).ToArgb();
+			// Shadow hack
+			colors[info.ShadowIndex] = (uint)Color.FromArgb(112, 0, 0, 0).ToArgb();
 
-            return new ImmutablePalette(colors);
-        }
+			return new ImmutablePalette(colors);
+		}
 
 		public void LoadPalettes(WorldRenderer wr)
 		{

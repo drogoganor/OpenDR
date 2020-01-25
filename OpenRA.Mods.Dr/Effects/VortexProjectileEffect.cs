@@ -109,17 +109,17 @@ namespace OpenRA.Mods.Dr.Effects
 		}
 
 		bool Side(WPos p1, WPos p2, WPos p)
-        {
-            WVec diff = p2 - p1;
-            WVec perp = new WVec(-diff.Y, diff.X, 0);
-            float d = Dot2d(p - p1, perp);
-            return d < 0;
-        }
+		{
+			WVec diff = p2 - p1;
+			WVec perp = new WVec(-diff.Y, diff.X, 0);
+			float d = Dot2d(p - p1, perp);
+			return d < 0;
+		}
 
 		int Dot2d(WVec a, WVec b)
-        {
-            return a.X * b.X + a.Y * b.Y;
-        }
+		{
+			return a.X * b.X + a.Y * b.Y;
+		}
 
 		public void Tick(World world)
 		{
@@ -137,25 +137,25 @@ namespace OpenRA.Mods.Dr.Effects
 			var originalVec = projectilepos - source;
 
 			if (dx != 0 || dy != 0)
-            {
-                int circSpeed = 1 + (ticks * 3);
-                int maxSpeed = 200;
-                if (circSpeed > maxSpeed)
-                    circSpeed = maxSpeed;
+			{
+				int circSpeed = 1 + (ticks * 3);
+				int maxSpeed = 200;
+				if (circSpeed > maxSpeed)
+					circSpeed = maxSpeed;
 
-                normal = WVec.Lerp(WVec.Zero, normal, circSpeed, normal.Length);
-                targetpos -= normal;
-                targetpos += WVec.Lerp(WVec.Zero, originalVec, 30, originalVec.Length);
-            }
-            else
-            {
-                targetpos += args.VecNormalized;
-            }
+				normal = WVec.Lerp(WVec.Zero, normal, circSpeed, normal.Length);
+				targetpos -= normal;
+				targetpos += WVec.Lerp(WVec.Zero, originalVec, 30, originalVec.Length);
+			}
+			else
+			{
+				targetpos += args.VecNormalized;
+			}
 
 			projectilepos = targetpos;
 
 			if (ticks > 90)
-                DetonateSelf = true;
+				DetonateSelf = true;
 
 			// Check for walls or other blocking obstacles.
 			WPos blockedPos;
