@@ -15,7 +15,7 @@ TerroristMedic:
 HQ.terrorist.Constructing:
 	Inherits: HQ.human.Constructing
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.terrorist
 	SelfConstructing:
 		Becomes: HQ.human
@@ -23,7 +23,7 @@ HQ.terrorist.Constructing:
 TrainingFacility.terrorist.Constructing:
 	Inherits: TrainingFacility.fguard.Constructing
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.terrorist
 	SelfConstructing:
 		Becomes: TrainingFacility.fguard
@@ -31,7 +31,7 @@ TrainingFacility.terrorist.Constructing:
 AssemblyPlant.terrorist.Constructing:
 	Inherits: AssemblyPlant.human.Constructing
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.terrorist
 	SelfConstructing:
 		Becomes: AssemblyPlant.human

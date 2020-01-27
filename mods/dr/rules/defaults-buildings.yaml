@@ -101,7 +101,7 @@
 	#	Categories: SelfConstructing
 	CommandBarBlacklist:
 	Production:
-		Produces: Building, AIBuilding
+		Produces: Building
 	BuilderQueue@Building:
 		Type: Building
 		Group: Building
@@ -160,7 +160,7 @@
 	Tooltip:
 		Name: Headquarters
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		BuildPaletteOrder: 0
 		BuildDuration: 22
 		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
@@ -179,7 +179,7 @@
 		Bounds: 96,96,0,0
 		DecorationBounds: 96,96,0,0
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		BuildPaletteOrder: 0
 		BuildDuration: 22
 		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
@@ -297,7 +297,7 @@
 		Name: Training Facility
 	Inherits@shape: ^5x4Shape
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Description: Trains infantry.
 		Prerequisites: hq
 		BuildPaletteOrder: 30
@@ -391,7 +391,7 @@
 		Name: Assembly Plant
 	Inherits@shape: ^5x5Shape
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		BuildPaletteOrder: 40
 		BuildDuration: 66
 		Description: Produces vehicles.
@@ -537,7 +537,7 @@
 ^FactionBuilding.Constructing: # Used by field hospital, repair pad, etc.
 	Inherits: ^SelfConstructingBuilding
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Description: Generic
 		Prerequisites: hq
 		BuildPaletteOrder: 30

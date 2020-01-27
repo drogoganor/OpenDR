@@ -19,10 +19,13 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Dr.Traits
 {
 	[Desc("Manages AI base construction.")]
-	public class DrBaseBuilderBotModuleInfo : ConditionalTraitInfo
+	public class RigBaseBuilderBotModuleInfo : ConditionalTraitInfo
 	{
+		[Desc("Suffix appended to building types that are constructing.")]
+		public readonly string ConstructingSuffix = ".constructing";
+
 		[Desc("Tells the AI what building types are considered construction yards.")]
-		public readonly HashSet<string> ConstructionYardTypes = new HashSet<string>();
+		public readonly HashSet<string> HQTypes = new HashSet<string>();
 
 		[Desc("Tells the AI what building types are considered vehicle production facilities.")]
 		public readonly HashSet<string> VehiclesFactoryTypes = new HashSet<string>();
@@ -125,16 +128,16 @@ namespace OpenRA.Mods.Dr.Traits
 		[Desc("When should the AI start building specific buildings.")]
 		public readonly Dictionary<string, int> BuildingDelays = null;
 
-		public override object Create(ActorInitializer init) { return new DrBaseBuilderBotModule(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new RigBaseBuilderBotModule(init.Self, this); }
 	}
 
-	public class DrBaseBuilderBotModule : ConditionalTrait<DrBaseBuilderBotModuleInfo>, IGameSaveTraitData,
+	public class RigBaseBuilderBotModule : ConditionalTrait<RigBaseBuilderBotModuleInfo>, IGameSaveTraitData,
 		IBotTick, IBotPositionsUpdated, IBotRespondToAttack, IBotRequestPauseUnitProduction
 	{
 		public CPos GetRandomBaseCenter()
 		{
 			var randomConstructionYard = world.Actors.Where(a => a.Owner == player &&
-				Info.ConstructionYardTypes.Contains(a.Info.Name))
+				Info.HQTypes.Contains(a.Info.Name))
 				.RandomOrDefault(world.LocalRandom);
 
 			return randomConstructionYard != null ? randomConstructionYard.Location : initialBaseCenter;
@@ -150,10 +153,9 @@ namespace OpenRA.Mods.Dr.Traits
 		BitArray resourceTypeIndices;
 		CPos initialBaseCenter;
 		CPos defenseCenter;
+		RigBaseBuilderManager builder;
 
-		List<DrBaseBuilderQueueManager> builders = new List<DrBaseBuilderQueueManager>();
-
-		public DrBaseBuilderBotModule(Actor self, DrBaseBuilderBotModuleInfo info)
+		public RigBaseBuilderBotModule(Actor self, RigBaseBuilderBotModuleInfo info)
 			: base(info)
 		{
 			world = self.World;
@@ -171,10 +173,7 @@ namespace OpenRA.Mods.Dr.Traits
 			foreach (var t in world.Map.Rules.Actors["world"].TraitInfos<ResourceTypeInfo>())
 				resourceTypeIndices.Set(tileset.GetTerrainIndex(t.TerrainType), true);
 
-			foreach (var building in Info.BuildingQueues)
-				builders.Add(new DrBaseBuilderQueueManager(this, building, player, playerPower, playerResources, resourceTypeIndices));
-			foreach (var defense in Info.DefenseQueues)
-				builders.Add(new DrBaseBuilderQueueManager(this, defense, player, playerPower, playerResources, resourceTypeIndices));
+			builder = new RigBaseBuilderManager(this, player, playerPower, resourceTypeIndices);
 		}
 
 		void IBotPositionsUpdated.UpdatedBaseCenter(CPos newLocation)
@@ -196,8 +195,7 @@ namespace OpenRA.Mods.Dr.Traits
 		{
 			SetRallyPointsForNewProductionBuildings(bot);
 
-			foreach (var b in builders)
-				b.Tick(bot);
+			builder.Tick(bot);
 		}
 
 		void IBotRespondToAttack.RespondToAttack(IBot bot, Actor self, AttackInfo e)
@@ -232,7 +230,6 @@ namespace OpenRA.Mods.Dr.Traits
 			}
 		}
 
-		// Won't work for shipyards...
 		CPos ChooseRallyLocationNear(Actor producer)
 		{
 			var possibleRallyPoints = world.Map.FindTilesInCircle(producer.Location, Info.RallyPointScanRadius)
@@ -259,7 +256,7 @@ namespace OpenRA.Mods.Dr.Traits
 				// Require at least one refinery, unless we can't build it.
 				return AIUtils.CountBuildingByCommonName(Info.RefineryTypes, player) >= MinimumRefineryCount ||
 					AIUtils.CountBuildingByCommonName(Info.PowerTypes, player) == 0 ||
-					AIUtils.CountBuildingByCommonName(Info.ConstructionYardTypes, player) == 0;
+					AIUtils.CountBuildingByCommonName(Info.HQTypes, player) == 0;
 			}
 		}
 

@@ -485,24 +485,24 @@ World:
 		Class: light
 		ClassName: Three Rigs
 		Factions: fguard, xenite, terrorist
-		BaseActor: HQ.human
-		SupportActors: ConstructionRig,ConstructionRig,ConstructionRig
+		BaseActor: ConstructionRig
+		SupportActors: ConstructionRig,ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
 	MPStartUnits@threerigsimp:
 		Class: light
 		ClassName: Three Rigs
 		Factions: imperium, shadowhand
-		BaseActor: HQ.cyborg
-		SupportActors: ConstructionRig,ConstructionRig,ConstructionRig
+		BaseActor: ConstructionRig
+		SupportActors: ConstructionRig,ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
 	MPStartUnits@threerigstogran:
 		Class: light
 		ClassName: Three Rigs
 		Factions: togran
-		BaseActor: HQ.togran
-		SupportActors: ConstructionRig,ConstructionRig,ConstructionRig
+		BaseActor: ConstructionRig
+		SupportActors: ConstructionRig,ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
 	SpawnMPUnits:
@@ -544,15 +544,11 @@ Player:
 		InsufficientFundsNotification: InsufficientFunds
 		CashTickUpNotification: CashTickUp
 		CashTickDownNotification: CashTickDown
-	ClassicProductionQueue@AIBuilding:
-		Type: AIBuilding
-		Group: AIBuilding
-		BuildDurationModifier: 1
 	ClassicProductionQueue@DummyQueue:
 		Type: Dummy
 		Group: Dummy
-		BuildDurationModifier: 2486 # DR build rate
-		LowPowerModifier: 10
+		BuildDurationModifier: 100 # DR build rate 2486
+		LowPowerModifier: 100
 	Shroud:
 		FogCheckboxDisplayOrder: 3
 		ExploredMapCheckboxEnabled: True

@@ -8,7 +8,7 @@ TogranMechanic:
 HQ.togran.Constructing:
 	Inherits: HQ.human.Constructing
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.togran
 	SelfConstructing:
 		Becomes: HQ.human
@@ -16,7 +16,7 @@ HQ.togran.Constructing:
 TrainingFacility.togran.Constructing:
 	Inherits: TrainingFacility.fguard.Constructing
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.togran
 	SelfConstructing:
 		Becomes: TrainingFacility.fguard
@@ -24,7 +24,7 @@ TrainingFacility.togran.Constructing:
 AssemblyPlant.togran.Constructing:
 	Inherits: AssemblyPlant.human.Constructing
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.togran
 	SelfConstructing:
 		Becomes: AssemblyPlant.human
@@ -32,19 +32,19 @@ AssemblyPlant.togran.Constructing:
 TogranLaserTurret.Constructing:
 	Inherits: LaserTurret.Constructing
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.togran
 
 AntiAirTurret.togran.Constructing:
 	Inherits: AntiAirTurret.human.Constructing
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.togran, hq.togran, upgrade.hq1, vehicles, barracks
 
 TogranHeavyRailTurret.Constructing:
 	Inherits: HeavyRailTurret.Constructing
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.togran, hq.togran, upgrade.hq1, vehicles, barracks
 
 Hospital.togran.Constructing:

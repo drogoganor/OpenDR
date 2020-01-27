@@ -10,10 +10,13 @@ Player:
 		Decisions:
 	HarvesterBotModule:
 		RequiresCondition: enable-normal-ai
-	DrBaseBuilderBotModule@normal:
+	RigBaseBuilderBotModule@normal:
 		RequiresCondition: enable-normal-ai
-		MinimumExcessPower: 60
-		ConstructionYardTypes: hq.human, hq.cyborg
+		MinimumExcessPower: 100
+		MinBaseRadius: 4
+		MaxBaseRadius: 12
+		ConstructingSuffix: .constructing
+		HQTypes: hq.human.constructing, hq.cyborg.constructing, hq.togran.constructing
 		RefineryTypes: waterlaunchpad.constructing
 		PowerTypes: power.constructing
 		BuildingAliases:
@@ -36,7 +39,7 @@ Player:
 		VehiclesFactoryTypes: assemblyplant.human.constructing, assemblyplant.cyborg.constructing
 		ProductionTypes: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing, assemblyplant.human.constructing, assemblyplant.cyborg.constructing
 		#RearmingTypes: rearmingdeck.human.constructing, rearmingdeck.human.cyborg.constructing
-		BuildingQueues: AIBuilding
+		BuildingQueues: 
 		BuildingFractions:
 			waterlaunchpad.constructing: 50
 			power.constructing: 10
@@ -58,7 +61,7 @@ Player:
 			rearmingdeck.human.constructing: 1
 			rearmingdeck.cyborg.constructing: 1
 		BuildingLimits:
-			waterlaunchpad.constructing: 2
+			waterlaunchpad.constructing: 3
 			power.constructing: 2
 			hq.human.constructing: 1
 			hq.cyborg.constructing: 1
@@ -79,14 +82,16 @@ Player:
 		RequiresCondition: enable-normal-ai
 		SquadSize: 10
 		ExcludeFromSquadsTypes: freighter, constructionrig
-		ConstructionYardTypes: constructionrig
+		#ConstructionYardTypes: constructionrig
 	McvManagerBotModule:
 		RequiresCondition: enable-normal-ai
 		McvTypes: hq.human, hq.cyborg
 		ConstructionYardTypes: hq.human.constructing, hq.cyborg.constructing, hq.human, hq.cyborg
 	UnitBuilderBotModule@normal:
 		RequiresCondition: enable-normal-ai
+		UnitQueues: Vehicle, Infantry, Plane, Ship, Aircraft, Economy
 		UnitsToBuild:
+			constructionrig: 100
 			raider: 25
 			guardian: 25
 			mercenary: 15
@@ -125,3 +130,4 @@ Player:
 			skyfortress: 2
 		UnitLimits:
 			freighter: 4
+			constructionrig: 2

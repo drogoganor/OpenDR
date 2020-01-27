@@ -5,7 +5,7 @@ Power.Constructing:
 		Image: ncpow1l0
 	Buildable:
 		Prerequisites: ~rig
-		Queue: Building, AIBuilding
+		Queue: Building
 		Description: Provides power for other structures. Refines Taelon into credits.
 		BuildPaletteOrder: 20
 		BuildDuration: 30
@@ -51,7 +51,7 @@ WaterLaunchPad.Constructing:
 	RenderSprites:
 		Image: nclnc1l0
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		BuildPaletteOrder: 10
 		Prerequisites: ~rig
 		Description: Refines spring water into credits.
@@ -106,7 +106,7 @@ HQ.human.Constructing:
 	Tooltip:
 		Name: Headquarters
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.human
 	SelfConstructing:
 		Steps: 20
@@ -135,7 +135,7 @@ HQ.cyborg.Constructing:
 	Building:
 		Footprint: x==x xxxx xxxx =xxx
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.cyborg
 	SelfConstructing:
 		Steps: 20
@@ -162,7 +162,7 @@ HQ.togran.Constructing:
 	Tooltip:
 		Name: Headquarters
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.togran
 	SelfConstructing:
 		Steps: 20
@@ -187,7 +187,7 @@ TrainingFacility.fguard.Constructing:
 	Tooltip:
 		Name: Training Facility
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.fguard, hq.fguard
 	SelfConstructing:
 		Steps: 20
@@ -217,7 +217,7 @@ TrainingFacility.cyborg.Constructing:
 	Tooltip:
 		Name: Training Facility
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.cyborg, hq.cyborg
 	SelfConstructing:
 		Steps: 20
@@ -248,7 +248,7 @@ AssemblyPlant.human.Constructing:
 	Tooltip:
 		Name: Assembly Plant
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.human, hq.human
 	SelfConstructing:
 		Steps: 20
@@ -271,7 +271,7 @@ AssemblyPlant.cyborg.Constructing:
 	Tooltip:
 		Name: Assembly Plant
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.cyborg, hq.cyborg
 	SelfConstructing:
 		Steps: 20
@@ -306,7 +306,7 @@ LaserTurret.Constructing:
 		Name: Laser Turret
 	Buildable:
 		Prerequisites: ~rig.human
-		Queue: Building, AIBuilding
+		Queue: Building
 		Description: Laser Defense Turret
 		BuildPaletteOrder: 50
 		BuildDuration: 22
@@ -331,7 +331,7 @@ PlasmaTurret.Constructing:
 		Name: Plasma Turret
 	Buildable:
 		Prerequisites: ~rig.cyborg
-		Queue: Building, AIBuilding
+		Queue: Building
 		Description: Plasma Defense Turret
 		BuildPaletteOrder: 50
 		BuildDuration: 22
@@ -359,7 +359,7 @@ AntiAirTurret.human.Constructing:
 		Name: Anti-Air Turret
 	Buildable:
 		Prerequisites: ~rig.human, hq.human, upgrade.hq1, vehicles, barracks
-		Queue: Building, AIBuilding
+		Queue: Building
 		Description: Anti-Air Turret
 		BuildPaletteOrder: 50
 		BuildDuration: 30
@@ -388,7 +388,7 @@ AntiAirTurret.cyborg.Constructing:
 		Name: Anti-Air Turret
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
-		Queue: Building, AIBuilding
+		Queue: Building
 		Description: Anti-Air Turret
 		BuildPaletteOrder: 50
 		BuildDuration: 30
@@ -421,7 +421,7 @@ HeavyRailTurret.Constructing:
 		Dimensions: 3,3
 	Buildable:
 		Prerequisites: ~rig.human, hq.human, upgrade.hq1, vehicles, barracks
-		Queue: Building, AIBuilding
+		Queue: Building
 		Description: Heavy Rail Turret
 		BuildPaletteOrder: 50
 		BuildDuration: 51
@@ -456,7 +456,7 @@ NeutronAccelerator.Constructing:
 		#LocalCenterOffset: 384,-256,0
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
-		Queue: Building, AIBuilding
+		Queue: Building
 		Description: Neutron Accelerator
 		BuildPaletteOrder: 50
 		BuildDuration: 51
@@ -495,7 +495,7 @@ CameraTower.Constructing:
 		Name: Camera Tower
 	Buildable:
 		Prerequisites: ~rig, hq, upgrade.hq1, vehicles, barracks
-		Queue: Building, AIBuilding
+		Queue: Building
 		Description: Camera Tower
 		BuildPaletteOrder: 50
 		BuildDuration: 6
@@ -901,7 +901,7 @@ TrainingFacility.xenite.Constructing:
 	Tooltip:
 		Name: Training Facility
 	Buildable:
-		Queue: Building, AIBuilding
+		Queue: Building
 		Prerequisites: ~rig.xenite, hq.xenite
 		BuildDuration: 57
 	SelfConstructing:
