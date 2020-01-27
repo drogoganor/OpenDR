@@ -21,6 +21,8 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits
 {
+	public enum BuildingTypeDr { HQ, Building, Defense, Refinery }
+
 	class RigBuildOrder
 	{
 		public Actor Rig { get; set; }
@@ -94,13 +96,13 @@ namespace OpenRA.Mods.Dr.Traits
 				var building = ChooseBuildingToBuild(builder);
 				if (building != null)
 				{
-					var type = BuildingType.Building;
+					var type = BuildingTypeDr.Building;
 					if (world.Map.Rules.Actors[building.Name].HasTraitInfo<BaseBuildingInfo>())
-						type = BuildingType.HQ;
+						type = BuildingTypeDr.HQ;
 					else if (world.Map.Rules.Actors[building.Name].HasTraitInfo<AttackBaseInfo>())
-						type = BuildingType.Defense;
+						type = BuildingTypeDr.Defense;
 					else if (baseBuilder.Info.RefineryTypes.Contains(world.Map.Rules.Actors[building.Name].Name))
-						type = BuildingType.Refinery;
+						type = BuildingTypeDr.Refinery;
 
 					var location = ChooseBuildLocation(building.Name, true, type);
 					if (location != null && location.HasValue)
@@ -402,7 +404,7 @@ namespace OpenRA.Mods.Dr.Traits
 			return null;
 		}
 
-		CPos? ChooseBuildLocation(string actorType, bool distanceToBaseIsImportant, BuildingType type)
+		CPos? ChooseBuildLocation(string actorType, bool distanceToBaseIsImportant, BuildingTypeDr type)
 		{
 			var actorInfo = world.Map.Rules.Actors[actorType];
 			var bi = actorInfo.TraitInfoOrDefault<BuildingInfo>();
@@ -438,11 +440,11 @@ namespace OpenRA.Mods.Dr.Traits
 
 			switch (type)
 			{
-				case BuildingType.HQ:
+				case BuildingTypeDr.HQ:
 
 					return baseCenter;
 
-				case BuildingType.Defense:
+				case BuildingTypeDr.Defense:
 
 					// Build near the closest enemy structure
 					var closestEnemy = world.ActorsHavingTrait<Building>().Where(a => !a.Disposed && player.Stances[a.Owner] == Stance.Enemy)
@@ -451,7 +453,7 @@ namespace OpenRA.Mods.Dr.Traits
 					var targetCell = closestEnemy != null ? closestEnemy.Location : baseCenter;
 					return findPos(baseBuilder.DefenseCenter, targetCell, baseBuilder.Info.MinimumDefenseRadius, baseBuilder.Info.MaximumDefenseRadius);
 
-				case BuildingType.Refinery:
+				case BuildingTypeDr.Refinery:
 
 					// Try and place the refinery near a resource field
 					var nearbyResources = world.Map.FindTilesInAnnulus(baseCenter, baseBuilder.Info.MinBaseRadius, baseBuilder.Info.MaxBaseRadius)
@@ -468,7 +470,7 @@ namespace OpenRA.Mods.Dr.Traits
 					// Try and find a free spot somewhere else in the base
 					return findPos(baseCenter, baseCenter, baseBuilder.Info.MinBaseRadius, baseBuilder.Info.MaxBaseRadius);
 
-				case BuildingType.Building:
+				case BuildingTypeDr.Building:
 					return findPos(baseCenter, baseCenter, baseBuilder.Info.MinBaseRadius,
 						distanceToBaseIsImportant ? baseBuilder.Info.MaxBaseRadius : world.Map.Grid.MaximumTileSearchRange);
 			}
