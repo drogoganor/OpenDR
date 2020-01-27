@@ -22,6 +22,7 @@ Player:
 		BuildingAliases:
 			waterlaunchpad.constructing: waterlaunchpad.constructing, waterlaunchpad
 			power.constructing: power.constructing, power
+			trainingfacility.xenite.constructing: trainingfacility.xenite.constructing, trainingfacility.xenite
 			trainingfacility.fguard.constructing: trainingfacility.fguard.constructing, trainingfacility.fguard
 			trainingfacility.cyborg.constructing: trainingfacility.cyborg.constructing, trainingfacility.cyborg
 			assemblyplant.human.constructing: assemblyplant.human.constructing, assemblyplant.human
@@ -35,7 +36,7 @@ Player:
 			rearmingdeck.human.constructing: rearmingdeck.human.constructing, rearmingdeck.human
 			rearmingdeck.cyborg.constructing: rearmingdeck.cyborg.constructing, rearmingdeck.cyborg
 			phasingfacility.constructing: phasingfacility.constructing, phasingfacility
-		BarracksTypes: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing
+		BarracksTypes: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing, trainingfacility.xenite.constructing
 		VehiclesFactoryTypes: assemblyplant.human.constructing, assemblyplant.cyborg.constructing
 		ProductionTypes: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing, assemblyplant.human.constructing, assemblyplant.cyborg.constructing
 		#RearmingTypes: rearmingdeck.human.constructing, rearmingdeck.human.cyborg.constructing
@@ -46,6 +47,7 @@ Player:
 			#hq.human.constructing: 1
 			#hq.cyborg.constructing: 1
 			trainingfacility.fguard.constructing: 1
+			trainingfacility.xenite.constructing: 1
 			trainingfacility.cyborg.constructing: 1
 			assemblyplant.human.constructing: 1
 			assemblyplant.cyborg.constructing: 1
@@ -61,12 +63,13 @@ Player:
 			rearmingdeck.human.constructing: 1
 			rearmingdeck.cyborg.constructing: 1
 		BuildingLimits:
-			waterlaunchpad.constructing: 3
+			waterlaunchpad.constructing: 2
 			power.constructing: 2
 			hq.human.constructing: 1
 			hq.cyborg.constructing: 1
-			trainingfacility.fguard.constructing: 3
-			trainingfacility.cyborg.constructing: 3
+			trainingfacility.fguard.constructing: 2
+			trainingfacility.xenite.constructing: 2
+			trainingfacility.cyborg.constructing: 2
 			assemblyplant.human.constructing: 2
 			assemblyplant.cyborg.constructing: 2
 			repair.human.constructing: 1

@@ -16,7 +16,6 @@ using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Common.Traits.Radar;
 using OpenRA.Mods.Dr.Activities;
 using OpenRA.Traits;
 
@@ -369,8 +368,15 @@ namespace OpenRA.Mods.Dr.Traits
 				if (baseBuilder.Info.BuildingLimits.ContainsKey(name) && baseBuilder.Info.BuildingLimits[name] <= count)
 					continue;
 
-				// Will this put us into low power?
 				var actor = world.Map.Rules.Actors[name];
+
+				// Do we already have one under construction or ordered?
+				if (NumBuildingsBuildingOrOrdered(actor) > 0)
+				{
+					continue;
+				}
+
+				// Will this put us into low power?
 				if (playerPower != null && (playerPower.ExcessPower < minimumExcessPower || !HasSufficientPowerForActor(actor)))
 				{
 					// Try building a power plant instead
