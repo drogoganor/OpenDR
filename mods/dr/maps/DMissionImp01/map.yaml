@@ -1,12 +1,21 @@
 MapFormat: 11
+
 RequiresMod: dr
+
 Title: D-Missions: Imperium 01
+
 Author: DMW
+
 Tileset: BARREN
+
 MapSize: 62,54
+
 Bounds: 1,1,60,52
+
 Visibility: MissionSelector
+
 Categories: D-Missions
+
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -52,6 +61,7 @@ Players:
 		Faction: imperium
 		Color: BC6DBF
 		Enemies: Imperium
+
 Actors:
 	ABWater: waterlaunchpad
 		Owner: Abandoned Base
@@ -1204,4 +1214,11 @@ Actors:
 		Owner: Freedom Guard
 		Location: 28,43
 		Facing: 92
+	Actor466: water
+		Owner: Neutral
+		Location: 48,49
+	Actor467: water
+		Owner: Neutral
+		Location: 20,3
+
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

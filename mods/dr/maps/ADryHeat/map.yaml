@@ -141,105 +141,123 @@ Actors:
 	Actor33: aotre005
 		Owner: Neutral
 		Location: 22,26
-	Actor34: mpspawn
+	Actor68: water
+		Owner: Neutral
+		Location: 15,9
+	Actor69: water
+		Owner: Neutral
+		Location: 8,19
+	Actor70: taelon
+		Owner: Neutral
+		Location: 22,22
+	Actor74: mpspawn
 		Location: 53,14
 		Owner: Neutral
-	Actor35: aotre000
+	Actor75: aotre000
 		Location: 48,26
 		Owner: Neutral
-	Actor36: aotre000
+	Actor76: aotre000
 		Location: 52,28
 		Owner: Neutral
-	Actor37: aotre001
+	Actor77: aotre001
 		Location: 49,27
 		Owner: Neutral
-	Actor38: aotre002
+	Actor78: aotre002
 		Location: 50,28
 		Owner: Neutral
-	Actor39: aotre003
+	Actor79: aotre003
 		Location: 55,29
 		Owner: Neutral
-	Actor40: aotre004
+	Actor80: aotre004
 		Location: 50,26
 		Owner: Neutral
-	Actor41: aotre004
+	Actor81: aotre004
 		Location: 57,27
 		Owner: Neutral
-	Actor42: aotre005
+	Actor82: aotre005
 		Location: 59,28
 		Owner: Neutral
-	Actor43: aoroc001
+	Actor83: aoroc001
 		Location: 53,29
 		Owner: Neutral
-	Actor44: aoroc004
+	Actor84: aoroc004
 		Location: 60,26
 		Owner: Neutral
-	Actor45: aoroc002
+	Actor85: aoroc002
 		Location: 62,28
 		Owner: Neutral
-	Actor46: aoroc000
+	Actor86: aoroc000
 		Location: 58,26
 		Owner: Neutral
-	Actor47: aorub000
+	Actor87: aorub000
 		Location: 63,26
 		Owner: Neutral
-	Actor48: aorub001
+	Actor88: aorub001
 		Location: 62,25
 		Owner: Neutral
-	Actor49: aorub001
+	Actor89: aorub001
 		Location: 55,27
 		Owner: Neutral
-	Actor50: aorub002
+	Actor90: aorub002
 		Location: 58,29
 		Owner: Neutral
-	Actor51: aorub001
+	Actor91: aorub001
 		Location: 46,27
 		Owner: Neutral
-	Actor52: aorub000
+	Actor92: aorub000
 		Location: 57,5
 		Owner: Neutral
-	Actor53: aorub002
+	Actor93: aorub002
 		Location: 53,6
 		Owner: Neutral
-	Actor54: aorub001
+	Actor94: aorub001
 		Location: 55,5
 		Owner: Neutral
-	Actor55: aorub000
+	Actor95: aorub000
 		Location: 65,15
 		Owner: Neutral
-	Actor56: aotre004
+	Actor96: aotre004
 		Location: 64,13
 		Owner: Neutral
-	Actor57: aotre004
+	Actor97: aotre004
 		Location: 62,7
 		Owner: Neutral
-	Actor58: aotre004
+	Actor98: aotre004
 		Location: 40,10
 		Owner: Neutral
-	Actor59: aorub000
+	Actor99: aorub000
 		Location: 42,9
 		Owner: Neutral
-	Actor60: aorub001
+	Actor100: aorub001
 		Location: 39,10
 		Owner: Neutral
-	Actor61: aorub002
+	Actor101: aorub002
 		Location: 44,9
 		Owner: Neutral
-	Actor62: aorub000
+	Actor102: aorub000
 		Location: 61,6
 		Owner: Neutral
-	Actor63: aorub002
+	Actor103: aorub002
 		Location: 63,8
 		Owner: Neutral
-	Actor64: aorub001
+	Actor104: aorub001
 		Location: 64,12
 		Owner: Neutral
-	Actor65: aoroc002
+	Actor105: aoroc002
 		Location: 51,5
 		Owner: Neutral
-	Actor66: aoroc001
+	Actor106: aoroc001
 		Location: 41,10
 		Owner: Neutral
-	Actor67: aotre005
+	Actor107: aotre005
 		Location: 47,26
+		Owner: Neutral
+	Actor108: water
+		Location: 54,9
+		Owner: Neutral
+	Actor109: water
+		Location: 61,19
+		Owner: Neutral
+	Actor110: taelon
+		Location: 47,22
 		Owner: Neutral

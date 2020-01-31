@@ -277,7 +277,7 @@
 		Description: Randomly select any faction.
 	ResourceType@water:
 		Type: SpringWater
-		Name: Water Spring
+		Name: Water Spring DO NOT USE
 		PipColor: Blue
 		ResourceType: 1
 		TerrainType: SpringWater
@@ -289,7 +289,7 @@
 		AllowUnderActors: true
 	ResourceType@taelon:
 		Type: Taelon
-		Name: Taelon
+		Name: Taelon DO NOT USE
 		PipColor: Green
 		ResourceType: 2
 		TerrainType: Taelon

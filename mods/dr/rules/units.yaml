@@ -571,12 +571,12 @@ Freighter:
 		Speed: 120
 	Armor:
 		Type: TankPlating
-	WithDockingAnimation:
+	WithDrDockingAnimation:
 	WithFacingSpriteBody:
-	Harvester:
+	Freighter:
 		Capacity: 8
 		PipCount: 5
-		Resources: SpringWater,Taelon
+		Resources: water,taelon
 		BaleLoadDelay: 20
 		BaleUnloadDelay: 20
 		SearchFromProcRadius: 30
@@ -612,12 +612,12 @@ HoverFreighter:
 		Speed: 192
 	Armor:
 		Type: TankPlating
-	WithDockingAnimation:
+	WithDrDockingAnimation:
 	WithFacingSpriteBody:
-	Harvester:
+	Freighter:
 		Capacity: 8
 		PipCount: 5
-		Resources: SpringWater,Taelon
+		Resources: water,taelon
 		BaleLoadDelay: 20
 		BaleUnloadDelay: 18
 		SearchFromProcRadius: 30

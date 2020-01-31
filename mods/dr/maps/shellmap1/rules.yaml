@@ -6,8 +6,6 @@ World:
 	-MPStartLocations:
 	MusicPlaylist:
 		DisableWorldSounds: true
-	ResourceType@water:
-		ValuePerUnit: 0
 	LuaScript:
 		Scripts: script.lua
 	#GlobalLightingPaletteEffect:

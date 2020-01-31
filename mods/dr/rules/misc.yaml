@@ -96,3 +96,61 @@ temporalriftspewer:
 # 	sc4: burnt04
 # 	sc5: burnt05
 # 	sc6: burnt06
+
+Water:
+	Inherits@1: ^ExistsInWorld
+	Inherits@shape: ^1x1Shape
+	Interactable:
+	RenderSprites:
+	WithSpriteBody:
+	BodyOrientation:
+	QuantizeFacingsFromSequence:
+	Immobile:
+		OccupiesSpace: false
+	AlwaysVisible:
+	DrResourceType:
+		Type: water
+		Name: Water
+		PipColor: Blue
+		ResourceType: 1
+		TerrainType: SpringWater
+		#Palette: player
+		MaxDensity: 120000
+		ValuePerUnit: 120
+		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
+		AllowUnderActors: true
+	MapEditorData:
+		Categories: Resources
+	Tooltip:
+		Name: Water
+	RenderSprites:
+		Image: ncwel1l0
+
+Taelon:
+	Inherits@1: ^ExistsInWorld
+	Inherits@shape: ^1x1Shape
+	Interactable:
+	RenderSprites:
+	WithSpriteBody:
+	BodyOrientation:
+	QuantizeFacingsFromSequence:
+	Immobile:
+		OccupiesSpace: false
+	AlwaysVisible:
+	DrResourceType:
+		Type: taelon
+		Name: Taelon
+		PipColor: Green
+		ResourceType: 2
+		TerrainType: Taelon
+		#Palette: player
+		MaxDensity: 120000
+		ValuePerUnit: 120
+		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
+		AllowUnderActors: true
+	MapEditorData:
+		Categories: Resources
+	Tooltip:
+		Name: Taelon
+	RenderSprites:
+		Image: ncmin1l0

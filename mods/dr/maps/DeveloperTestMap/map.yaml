@@ -1,12 +1,21 @@
 MapFormat: 11
+
 RequiresMod: dr
+
 Title: Developer Test Map
+
 Author: DMW
+
 Tileset: BARREN
+
 MapSize: 130,130
+
 Bounds: 1,1,128,128
+
 Visibility: MissionSelector
+
 Categories: Dev
+
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -52,6 +61,7 @@ Players:
 		Faction: imperium
 		Color: BC6DBF
 		Enemies: Freedom Guard
+
 Actors:
 	Actor20: waterlaunchpad
 		Owner: Imperium
@@ -687,4 +697,14 @@ Actors:
 		Owner: Imperium
 		Location: 35,49
 		Facing: 92
+	Actor226: water
+		Owner: Neutral
+		Location: 62,73
+	Actor227: water
+		Owner: Neutral
+		Location: 67,73
+	Actor228: water
+		Owner: Neutral
+		Location: 75,80
+
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

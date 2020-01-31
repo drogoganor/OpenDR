@@ -1711,5 +1711,23 @@ Actors:
 		Owner: Trapped Soldiers 2
 		Location: 49,40
 		Facing: 97
+	Actor549: water
+		Owner: Neutral
+		Location: 52,41
+	Actor552: water
+		Owner: Neutral
+		Location: 6,40
+	Actor553: water
+		Owner: Neutral
+		Location: 8,70
+	Actor555: water
+		Owner: Neutral
+		Location: 40,31
+	Actor557: taelon
+		Owner: Neutral
+		Location: 51,20
+	Actor657: water
+		Owner: Neutral
+		Location: 41,13
 
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

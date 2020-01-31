@@ -1,12 +1,21 @@
 MapFormat: 11
+
 RequiresMod: dr
+
 Title: Shellmap
+
 Author: Dark Reign
+
 Tileset: BARREN
+
 MapSize: 94,58
+
 Bounds: 1,1,92,56
+
 Visibility: Shellmap
+
 Categories: Shellmap
+
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -33,6 +42,7 @@ Players:
 		Faction: imperium
 		Color: BC6DBF
 		Enemies: Freedom Guard
+
 Actors:
 	Actor50: mpspawn
 		Owner: Neutral
@@ -456,4 +466,14 @@ Actors:
 		Owner: Imperium
 		Location: 51,32
 		Facing: 55
+	Actor152: water
+		Owner: Neutral
+		Location: 73,6
+	Actor153: water
+		Owner: Neutral
+		Location: 86,8
+	Actor154: taelon
+		Owner: Neutral
+		Location: 82,15
+
 Rules: rules.yaml

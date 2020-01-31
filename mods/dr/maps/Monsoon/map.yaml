@@ -1,12 +1,21 @@
 MapFormat: 11
+
 RequiresMod: dr
+
 Title: Monsoon
+
 Author: DMW
+
 Tileset: JUNGLE
+
 MapSize: 98,80
+
 Bounds: 1,1,96,78
+
 Visibility: Lobby
+
 Categories: Competitive
+
 Players:
 	PlayerReference@Neutral:
 		Name: Neutral
@@ -38,6 +47,7 @@ Players:
 		Playable: True
 		Faction: Random
 		Enemies: Creeps
+
 Actors:
 	Actor18: mpspawn
 		Owner: Neutral
@@ -441,1210 +451,1247 @@ Actors:
 	Actor542: aoroc000.jungle
 		Owner: Neutral
 		Location: 36,7
-	Actor543: mpspawn
+	Actor945: water
+		Owner: Neutral
+		Location: 10,12
+	Actor946: water
+		Owner: Neutral
+		Location: 13,26
+	Actor947: taelon
+		Owner: Neutral
+		Location: 36,19
+	Actor948: mpspawn
 		Location: 75,14
 		Owner: Neutral
-	Actor544: mpspawn
+	Actor949: mpspawn
 		Location: 19,62
 		Owner: Neutral
-	Actor545: mpspawn
+	Actor950: mpspawn
 		Location: 75,62
 		Owner: Neutral
-	Actor546: aotre000.jungle
+	Actor951: aotre000.jungle
 		Location: 83,6
 		Owner: Neutral
-	Actor547: aotre000.jungle
+	Actor952: aotre000.jungle
 		Location: 14,74
 		Owner: Neutral
-	Actor548: aotre000.jungle
+	Actor953: aotre000.jungle
 		Location: 83,74
 		Owner: Neutral
-	Actor549: aotre001.jungle
+	Actor954: aotre001.jungle
 		Location: 81,7
 		Owner: Neutral
-	Actor550: aotre001.jungle
+	Actor955: aotre001.jungle
 		Location: 16,73
 		Owner: Neutral
-	Actor551: aotre001.jungle
+	Actor956: aotre001.jungle
 		Location: 81,73
 		Owner: Neutral
-	Actor552: aotre003.jungle
+	Actor957: aotre003.jungle
 		Location: 68,5
 		Owner: Neutral
-	Actor553: aotre003.jungle
+	Actor958: aotre003.jungle
 		Location: 29,75
 		Owner: Neutral
-	Actor554: aotre003.jungle
+	Actor959: aotre003.jungle
 		Location: 68,75
 		Owner: Neutral
-	Actor555: aotre003.jungle
+	Actor960: aotre003.jungle
 		Location: 89,8
 		Owner: Neutral
-	Actor556: aotre003.jungle
+	Actor961: aotre003.jungle
 		Location: 8,72
 		Owner: Neutral
-	Actor557: aotre003.jungle
+	Actor962: aotre003.jungle
 		Location: 89,72
 		Owner: Neutral
-	Actor558: aotre000.jungle
+	Actor963: aotre000.jungle
 		Location: 60,5
 		Owner: Neutral
-	Actor559: aotre000.jungle
+	Actor964: aotre000.jungle
 		Location: 37,75
 		Owner: Neutral
-	Actor560: aotre000.jungle
+	Actor965: aotre000.jungle
 		Location: 60,75
 		Owner: Neutral
-	Actor561: aotre000.jungle
+	Actor966: aotre000.jungle
 		Location: 66,3
 		Owner: Neutral
-	Actor562: aotre000.jungle
+	Actor967: aotre000.jungle
 		Location: 31,77
 		Owner: Neutral
-	Actor563: aotre000.jungle
+	Actor968: aotre000.jungle
 		Location: 66,77
 		Owner: Neutral
-	Actor564: aotre000.jungle
+	Actor969: aotre000.jungle
 		Location: 58,9
 		Owner: Neutral
-	Actor565: aotre000.jungle
+	Actor970: aotre000.jungle
 		Location: 39,71
 		Owner: Neutral
-	Actor566: aotre000.jungle
+	Actor971: aotre000.jungle
 		Location: 58,71
 		Owner: Neutral
-	Actor567: aotre000.jungle
+	Actor972: aotre000.jungle
 		Location: 92,15
 		Owner: Neutral
-	Actor568: aotre000.jungle
+	Actor973: aotre000.jungle
 		Location: 5,65
 		Owner: Neutral
-	Actor569: aotre000.jungle
+	Actor974: aotre000.jungle
 		Location: 92,65
 		Owner: Neutral
-	Actor570: aotre000.jungle
+	Actor975: aotre000.jungle
 		Location: 64,7
 		Owner: Neutral
-	Actor571: aotre000.jungle
+	Actor976: aotre000.jungle
 		Location: 33,73
 		Owner: Neutral
-	Actor572: aotre000.jungle
+	Actor977: aotre000.jungle
 		Location: 64,73
 		Owner: Neutral
-	Actor573: aotre001.jungle
+	Actor978: aotre001.jungle
 		Location: 61,9
 		Owner: Neutral
-	Actor574: aotre001.jungle
+	Actor979: aotre001.jungle
 		Location: 36,71
 		Owner: Neutral
-	Actor575: aotre001.jungle
+	Actor980: aotre001.jungle
 		Location: 61,71
 		Owner: Neutral
-	Actor576: aopln001.jungle
+	Actor981: aopln001.jungle
 		Location: 59,10
 		Owner: Neutral
-	Actor577: aopln001.jungle
+	Actor982: aopln001.jungle
 		Location: 38,69
 		Owner: Neutral
-	Actor578: aopln001.jungle
+	Actor983: aopln001.jungle
 		Location: 59,69
 		Owner: Neutral
-	Actor579: aopln001.jungle
+	Actor984: aopln001.jungle
 		Location: 58,5
 		Owner: Neutral
-	Actor580: aopln001.jungle
+	Actor985: aopln001.jungle
 		Location: 39,74
 		Owner: Neutral
-	Actor581: aopln001.jungle
+	Actor986: aopln001.jungle
 		Location: 58,74
 		Owner: Neutral
-	Actor582: aopln001.jungle
+	Actor987: aopln001.jungle
 		Location: 65,1
 		Owner: Neutral
-	Actor583: aopln001.jungle
+	Actor988: aopln001.jungle
 		Location: 32,78
 		Owner: Neutral
-	Actor584: aopln001.jungle
+	Actor989: aopln001.jungle
 		Location: 65,78
 		Owner: Neutral
-	Actor585: aopln001.jungle
+	Actor990: aopln001.jungle
 		Location: 85,4
 		Owner: Neutral
-	Actor586: aopln001.jungle
+	Actor991: aopln001.jungle
 		Location: 12,75
 		Owner: Neutral
-	Actor587: aopln001.jungle
+	Actor992: aopln001.jungle
 		Location: 85,75
 		Owner: Neutral
-	Actor588: aopln002.jungle
+	Actor993: aopln002.jungle
 		Location: 62,6
 		Owner: Neutral
-	Actor589: aopln002.jungle
+	Actor994: aopln002.jungle
 		Location: 35,73
 		Owner: Neutral
-	Actor590: aopln002.jungle
+	Actor995: aopln002.jungle
 		Location: 62,73
 		Owner: Neutral
-	Actor591: aopln002.jungle
+	Actor996: aopln002.jungle
 		Location: 64,3
 		Owner: Neutral
-	Actor592: aopln002.jungle
+	Actor997: aopln002.jungle
 		Location: 33,76
 		Owner: Neutral
-	Actor593: aopln002.jungle
+	Actor998: aopln002.jungle
 		Location: 64,76
 		Owner: Neutral
-	Actor594: aopln002.jungle
+	Actor999: aopln002.jungle
 		Location: 87,6
 		Owner: Neutral
-	Actor595: aopln002.jungle
+	Actor1000: aopln002.jungle
 		Location: 10,73
 		Owner: Neutral
-	Actor596: aopln002.jungle
+	Actor1001: aopln002.jungle
 		Location: 87,73
 		Owner: Neutral
-	Actor597: aopln002.jungle
+	Actor1002: aopln002.jungle
 		Location: 91,13
 		Owner: Neutral
-	Actor598: aopln002.jungle
+	Actor1003: aopln002.jungle
 		Location: 6,66
 		Owner: Neutral
-	Actor599: aopln002.jungle
+	Actor1004: aopln002.jungle
 		Location: 91,66
 		Owner: Neutral
-	Actor600: aopln000.jungle
+	Actor1005: aopln000.jungle
 		Location: 91,12
 		Owner: Neutral
-	Actor601: aopln000.jungle
+	Actor1006: aopln000.jungle
 		Location: 6,67
 		Owner: Neutral
-	Actor602: aopln000.jungle
+	Actor1007: aopln000.jungle
 		Location: 91,67
 		Owner: Neutral
-	Actor603: aopln000.jungle
+	Actor1008: aopln000.jungle
 		Location: 80,5
 		Owner: Neutral
-	Actor604: aopln000.jungle
+	Actor1009: aopln000.jungle
 		Location: 17,74
 		Owner: Neutral
-	Actor605: aopln000.jungle
+	Actor1010: aopln000.jungle
 		Location: 80,74
 		Owner: Neutral
-	Actor606: aopln000.jungle
+	Actor1011: aopln000.jungle
 		Location: 59,8
 		Owner: Neutral
-	Actor607: aopln000.jungle
+	Actor1012: aopln000.jungle
 		Location: 38,71
 		Owner: Neutral
-	Actor608: aopln000.jungle
+	Actor1013: aopln000.jungle
 		Location: 59,71
 		Owner: Neutral
-	Actor609: aopln000.jungle
+	Actor1014: aopln000.jungle
 		Location: 61,4
 		Owner: Neutral
-	Actor610: aopln000.jungle
+	Actor1015: aopln000.jungle
 		Location: 36,75
 		Owner: Neutral
-	Actor611: aopln000.jungle
+	Actor1016: aopln000.jungle
 		Location: 61,75
 		Owner: Neutral
-	Actor612: aotre000.jungle
+	Actor1017: aotre000.jungle
 		Location: 58,6
 		Owner: Neutral
-	Actor613: aotre000.jungle
+	Actor1018: aotre000.jungle
 		Location: 39,74
 		Owner: Neutral
-	Actor614: aotre000.jungle
+	Actor1019: aotre000.jungle
 		Location: 58,74
 		Owner: Neutral
-	Actor615: aopln002.jungle
+	Actor1020: aopln002.jungle
 		Location: 92,19
 		Owner: Neutral
-	Actor616: aopln002.jungle
+	Actor1021: aopln002.jungle
 		Location: 5,60
 		Owner: Neutral
-	Actor617: aopln002.jungle
+	Actor1022: aopln002.jungle
 		Location: 92,60
 		Owner: Neutral
-	Actor618: aotre003.jungle
+	Actor1023: aotre003.jungle
 		Location: 93,21
 		Owner: Neutral
-	Actor619: aotre003.jungle
+	Actor1024: aotre003.jungle
 		Location: 4,59
 		Owner: Neutral
-	Actor620: aotre003.jungle
+	Actor1025: aotre003.jungle
 		Location: 93,59
 		Owner: Neutral
-	Actor621: aoroc000.jungle
+	Actor1026: aoroc000.jungle
 		Location: 91,21
 		Owner: Neutral
-	Actor622: aoroc000.jungle
+	Actor1027: aoroc000.jungle
 		Location: 6,58
 		Owner: Neutral
-	Actor623: aoroc000.jungle
+	Actor1028: aoroc000.jungle
 		Location: 91,58
 		Owner: Neutral
-	Actor624: aopln002.jungle
+	Actor1029: aopln002.jungle
 		Location: 91,22
 		Owner: Neutral
-	Actor625: aopln002.jungle
+	Actor1030: aopln002.jungle
 		Location: 6,57
 		Owner: Neutral
-	Actor626: aopln002.jungle
+	Actor1031: aopln002.jungle
 		Location: 91,57
 		Owner: Neutral
-	Actor627: aotre001.jungle
+	Actor1032: aotre001.jungle
 		Location: 92,23
 		Owner: Neutral
-	Actor628: aotre001.jungle
+	Actor1033: aotre001.jungle
 		Location: 5,57
 		Owner: Neutral
-	Actor629: aotre001.jungle
+	Actor1034: aotre001.jungle
 		Location: 92,57
 		Owner: Neutral
-	Actor630: aotre000.jungle
+	Actor1035: aotre000.jungle
 		Location: 91,24
 		Owner: Neutral
-	Actor631: aotre000.jungle
+	Actor1036: aotre000.jungle
 		Location: 6,56
 		Owner: Neutral
-	Actor632: aotre000.jungle
+	Actor1037: aotre000.jungle
 		Location: 91,56
 		Owner: Neutral
-	Actor633: aoclf005.jungle
+	Actor1038: aoclf005.jungle
 		Location: 94,20
 		Owner: Neutral
-	Actor634: aoclf005.jungle
+	Actor1039: aoclf005.jungle
 		Location: 0,56
 		Owner: Neutral
-	Actor635: aoclf005.jungle
+	Actor1040: aoclf005.jungle
 		Location: 94,56
 		Owner: Neutral
-	Actor636: aoroc002.jungle
+	Actor1041: aoroc002.jungle
 		Location: 95,20
 		Owner: Neutral
-	Actor637: aoroc002.jungle
+	Actor1042: aoroc002.jungle
 		Location: 2,59
 		Owner: Neutral
-	Actor638: aoroc002.jungle
+	Actor1043: aoroc002.jungle
 		Location: 95,59
 		Owner: Neutral
-	Actor639: aotre000.jungle
+	Actor1044: aotre000.jungle
 		Location: 94,18
 		Owner: Neutral
-	Actor640: aotre000.jungle
+	Actor1045: aotre000.jungle
 		Location: 3,62
 		Owner: Neutral
-	Actor641: aotre000.jungle
+	Actor1046: aotre000.jungle
 		Location: 94,62
 		Owner: Neutral
-	Actor642: aotre000.jungle
+	Actor1047: aotre000.jungle
 		Location: 92,29
 		Owner: Neutral
-	Actor643: aotre000.jungle
+	Actor1048: aotre000.jungle
 		Location: 5,51
 		Owner: Neutral
-	Actor644: aotre000.jungle
+	Actor1049: aotre000.jungle
 		Location: 92,51
 		Owner: Neutral
-	Actor645: aotre000.jungle
+	Actor1050: aotre000.jungle
 		Location: 82,32
 		Owner: Neutral
-	Actor646: aotre000.jungle
+	Actor1051: aotre000.jungle
 		Location: 15,48
 		Owner: Neutral
-	Actor647: aotre000.jungle
+	Actor1052: aotre000.jungle
 		Location: 82,48
 		Owner: Neutral
-	Actor648: aotre000.jungle
+	Actor1053: aotre000.jungle
 		Location: 78,30
 		Owner: Neutral
-	Actor649: aotre000.jungle
+	Actor1054: aotre000.jungle
 		Location: 19,50
 		Owner: Neutral
-	Actor650: aotre000.jungle
+	Actor1055: aotre000.jungle
 		Location: 78,50
 		Owner: Neutral
-	Actor651: aotre001.jungle
+	Actor1056: aotre001.jungle
 		Location: 93,25
 		Owner: Neutral
-	Actor652: aotre001.jungle
+	Actor1057: aotre001.jungle
 		Location: 4,55
 		Owner: Neutral
-	Actor653: aotre001.jungle
+	Actor1058: aotre001.jungle
 		Location: 93,55
 		Owner: Neutral
-	Actor654: aotre001.jungle
+	Actor1059: aotre001.jungle
 		Location: 93,30
 		Owner: Neutral
-	Actor655: aotre001.jungle
+	Actor1060: aotre001.jungle
 		Location: 4,50
 		Owner: Neutral
-	Actor656: aotre001.jungle
+	Actor1061: aotre001.jungle
 		Location: 93,50
 		Owner: Neutral
-	Actor657: aotre001.jungle
+	Actor1062: aotre001.jungle
 		Location: 87,34
 		Owner: Neutral
-	Actor658: aotre001.jungle
+	Actor1063: aotre001.jungle
 		Location: 10,46
 		Owner: Neutral
-	Actor659: aotre001.jungle
+	Actor1064: aotre001.jungle
 		Location: 87,46
 		Owner: Neutral
-	Actor660: aotre001.jungle
+	Actor1065: aotre001.jungle
 		Location: 81,31
 		Owner: Neutral
-	Actor661: aotre001.jungle
+	Actor1066: aotre001.jungle
 		Location: 16,49
 		Owner: Neutral
-	Actor662: aotre001.jungle
+	Actor1067: aotre001.jungle
 		Location: 81,49
 		Owner: Neutral
-	Actor663: aotre002.jungle
+	Actor1068: aotre002.jungle
 		Location: 77,29
 		Owner: Neutral
-	Actor664: aotre002.jungle
+	Actor1069: aotre002.jungle
 		Location: 20,51
 		Owner: Neutral
-	Actor665: aotre002.jungle
+	Actor1070: aotre002.jungle
 		Location: 77,51
 		Owner: Neutral
-	Actor666: aotre002.jungle
+	Actor1071: aotre002.jungle
 		Location: 85,32
 		Owner: Neutral
-	Actor667: aotre002.jungle
+	Actor1072: aotre002.jungle
 		Location: 12,48
 		Owner: Neutral
-	Actor668: aotre002.jungle
+	Actor1073: aotre002.jungle
 		Location: 85,48
 		Owner: Neutral
-	Actor669: aotre002.jungle
+	Actor1074: aotre002.jungle
 		Location: 91,30
 		Owner: Neutral
-	Actor670: aotre002.jungle
+	Actor1075: aotre002.jungle
 		Location: 6,50
 		Owner: Neutral
-	Actor671: aotre002.jungle
+	Actor1076: aotre002.jungle
 		Location: 91,50
 		Owner: Neutral
-	Actor672: aotre002.jungle
+	Actor1077: aotre002.jungle
 		Location: 91,25
 		Owner: Neutral
-	Actor673: aotre002.jungle
+	Actor1078: aotre002.jungle
 		Location: 6,55
 		Owner: Neutral
-	Actor674: aotre002.jungle
+	Actor1079: aotre002.jungle
 		Location: 91,55
 		Owner: Neutral
-	Actor675: aotre002.jungle
+	Actor1080: aotre002.jungle
 		Location: 93,17
 		Owner: Neutral
-	Actor676: aotre002.jungle
+	Actor1081: aotre002.jungle
 		Location: 4,63
 		Owner: Neutral
-	Actor677: aotre002.jungle
+	Actor1082: aotre002.jungle
 		Location: 93,63
 		Owner: Neutral
-	Actor678: aotre003.jungle
+	Actor1083: aotre003.jungle
 		Location: 92,27
 		Owner: Neutral
-	Actor679: aotre003.jungle
+	Actor1084: aotre003.jungle
 		Location: 5,53
 		Owner: Neutral
-	Actor680: aotre003.jungle
+	Actor1085: aotre003.jungle
 		Location: 92,53
 		Owner: Neutral
-	Actor681: aotre003.jungle
+	Actor1086: aotre003.jungle
 		Location: 90,33
 		Owner: Neutral
-	Actor682: aotre003.jungle
+	Actor1087: aotre003.jungle
 		Location: 7,47
 		Owner: Neutral
-	Actor683: aotre003.jungle
+	Actor1088: aotre003.jungle
 		Location: 90,47
 		Owner: Neutral
-	Actor684: aotre003.jungle
+	Actor1089: aotre003.jungle
 		Location: 84,33
 		Owner: Neutral
-	Actor685: aotre003.jungle
+	Actor1090: aotre003.jungle
 		Location: 13,47
 		Owner: Neutral
-	Actor686: aotre003.jungle
+	Actor1091: aotre003.jungle
 		Location: 84,47
 		Owner: Neutral
-	Actor687: aotre003.jungle
+	Actor1092: aotre003.jungle
 		Location: 75,31
 		Owner: Neutral
-	Actor688: aotre003.jungle
+	Actor1093: aotre003.jungle
 		Location: 22,49
 		Owner: Neutral
-	Actor689: aotre003.jungle
+	Actor1094: aotre003.jungle
 		Location: 75,49
 		Owner: Neutral
-	Actor690: aotre004.jungle
+	Actor1095: aotre004.jungle
 		Location: 91,32
 		Owner: Neutral
-	Actor691: aotre004.jungle
+	Actor1096: aotre004.jungle
 		Location: 6,47
 		Owner: Neutral
-	Actor692: aotre004.jungle
+	Actor1097: aotre004.jungle
 		Location: 91,47
 		Owner: Neutral
-	Actor693: aotre004.jungle
+	Actor1098: aotre004.jungle
 		Location: 76,29
 		Owner: Neutral
-	Actor694: aotre004.jungle
+	Actor1099: aotre004.jungle
 		Location: 21,50
 		Owner: Neutral
-	Actor695: aotre004.jungle
+	Actor1100: aotre004.jungle
 		Location: 76,50
 		Owner: Neutral
-	Actor696: aotre004.jungle
+	Actor1101: aotre004.jungle
 		Location: 94,24
 		Owner: Neutral
-	Actor697: aotre004.jungle
+	Actor1102: aotre004.jungle
 		Location: 3,55
 		Owner: Neutral
-	Actor698: aotre004.jungle
+	Actor1103: aotre004.jungle
 		Location: 94,55
 		Owner: Neutral
-	Actor699: aotre004.jungle
+	Actor1104: aotre004.jungle
 		Location: 94,19
 		Owner: Neutral
-	Actor700: aotre004.jungle
+	Actor1105: aotre004.jungle
 		Location: 3,60
 		Owner: Neutral
-	Actor701: aotre004.jungle
+	Actor1106: aotre004.jungle
 		Location: 94,60
 		Owner: Neutral
-	Actor702: aotre005.jungle
+	Actor1107: aotre005.jungle
 		Location: 92,13
 		Owner: Neutral
-	Actor703: aotre005.jungle
+	Actor1108: aotre005.jungle
 		Location: 5,67
 		Owner: Neutral
-	Actor704: aotre005.jungle
+	Actor1109: aotre005.jungle
 		Location: 92,67
 		Owner: Neutral
-	Actor705: aotre005.jungle
+	Actor1110: aotre005.jungle
 		Location: 93,16
 		Owner: Neutral
-	Actor706: aotre005.jungle
+	Actor1111: aotre005.jungle
 		Location: 4,64
 		Owner: Neutral
-	Actor707: aotre005.jungle
+	Actor1112: aotre005.jungle
 		Location: 93,64
 		Owner: Neutral
-	Actor708: aotre005.jungle
+	Actor1113: aotre005.jungle
 		Location: 93,23
 		Owner: Neutral
-	Actor709: aotre005.jungle
+	Actor1114: aotre005.jungle
 		Location: 4,57
 		Owner: Neutral
-	Actor710: aotre005.jungle
+	Actor1115: aotre005.jungle
 		Location: 93,57
 		Owner: Neutral
-	Actor711: aotre005.jungle
+	Actor1116: aotre005.jungle
 		Location: 91,31
 		Owner: Neutral
-	Actor712: aotre005.jungle
+	Actor1117: aotre005.jungle
 		Location: 6,49
 		Owner: Neutral
-	Actor713: aotre005.jungle
+	Actor1118: aotre005.jungle
 		Location: 91,49
 		Owner: Neutral
-	Actor714: aotre005.jungle
+	Actor1119: aotre005.jungle
 		Location: 85,34
 		Owner: Neutral
-	Actor715: aotre005.jungle
+	Actor1120: aotre005.jungle
 		Location: 12,46
 		Owner: Neutral
-	Actor716: aotre005.jungle
+	Actor1121: aotre005.jungle
 		Location: 85,46
 		Owner: Neutral
-	Actor717: aotre005.jungle
+	Actor1122: aotre005.jungle
 		Location: 79,29
 		Owner: Neutral
-	Actor718: aotre005.jungle
+	Actor1123: aotre005.jungle
 		Location: 18,51
 		Owner: Neutral
-	Actor719: aotre005.jungle
+	Actor1124: aotre005.jungle
 		Location: 79,51
 		Owner: Neutral
-	Actor720: aoroc000.jungle
+	Actor1125: aoroc000.jungle
 		Location: 80,30
 		Owner: Neutral
-	Actor721: aoroc000.jungle
+	Actor1126: aoroc000.jungle
 		Location: 17,49
 		Owner: Neutral
-	Actor722: aoroc000.jungle
+	Actor1127: aoroc000.jungle
 		Location: 80,49
 		Owner: Neutral
-	Actor723: aoroc001.jungle
+	Actor1128: aoroc001.jungle
 		Location: 86,33
 		Owner: Neutral
-	Actor724: aoroc001.jungle
+	Actor1129: aoroc001.jungle
 		Location: 11,46
 		Owner: Neutral
-	Actor725: aoroc001.jungle
+	Actor1130: aoroc001.jungle
 		Location: 86,46
 		Owner: Neutral
-	Actor726: aoroc002.jungle
+	Actor1131: aoroc002.jungle
 		Location: 92,31
 		Owner: Neutral
-	Actor727: aoroc002.jungle
+	Actor1132: aoroc002.jungle
 		Location: 5,48
 		Owner: Neutral
-	Actor728: aoroc002.jungle
+	Actor1133: aoroc002.jungle
 		Location: 92,48
 		Owner: Neutral
-	Actor729: aoroc004.jungle
+	Actor1134: aoroc004.jungle
 		Location: 88,31
 		Owner: Neutral
-	Actor730: aoroc004.jungle
+	Actor1135: aoroc004.jungle
 		Location: 8,47
 		Owner: Neutral
-	Actor731: aoroc004.jungle
+	Actor1136: aoroc004.jungle
 		Location: 88,47
 		Owner: Neutral
-	Actor732: aoroc005.jungle
+	Actor1137: aoroc005.jungle
 		Location: 90,28
 		Owner: Neutral
-	Actor733: aoroc005.jungle
+	Actor1138: aoroc005.jungle
 		Location: 6,50
 		Owner: Neutral
-	Actor734: aoroc005.jungle
+	Actor1139: aoroc005.jungle
 		Location: 90,50
 		Owner: Neutral
-	Actor735: aopln000.jungle
+	Actor1140: aopln000.jungle
 		Location: 90,30
 		Owner: Neutral
-	Actor736: aopln000.jungle
+	Actor1141: aopln000.jungle
 		Location: 7,49
 		Owner: Neutral
-	Actor737: aopln000.jungle
+	Actor1142: aopln000.jungle
 		Location: 90,49
 		Owner: Neutral
-	Actor738: aopln000.jungle
+	Actor1143: aopln000.jungle
 		Location: 92,32
 		Owner: Neutral
-	Actor739: aopln000.jungle
+	Actor1144: aopln000.jungle
 		Location: 5,47
 		Owner: Neutral
-	Actor740: aopln000.jungle
+	Actor1145: aopln000.jungle
 		Location: 92,47
 		Owner: Neutral
-	Actor741: aopln000.jungle
+	Actor1146: aopln000.jungle
 		Location: 93,24
 		Owner: Neutral
-	Actor742: aopln000.jungle
+	Actor1147: aopln000.jungle
 		Location: 4,55
 		Owner: Neutral
-	Actor743: aopln000.jungle
+	Actor1148: aopln000.jungle
 		Location: 93,55
 		Owner: Neutral
-	Actor744: aotre001.jungle
+	Actor1149: aotre001.jungle
 		Location: 92,18
 		Owner: Neutral
-	Actor745: aotre001.jungle
+	Actor1150: aotre001.jungle
 		Location: 5,62
 		Owner: Neutral
-	Actor746: aotre001.jungle
+	Actor1151: aotre001.jungle
 		Location: 92,62
 		Owner: Neutral
-	Actor747: aopln002.jungle
+	Actor1152: aopln002.jungle
 		Location: 92,25
 		Owner: Neutral
-	Actor748: aopln002.jungle
+	Actor1153: aopln002.jungle
 		Location: 5,54
 		Owner: Neutral
-	Actor749: aopln002.jungle
+	Actor1154: aopln002.jungle
 		Location: 92,54
 		Owner: Neutral
-	Actor750: aopln002.jungle
+	Actor1155: aopln002.jungle
 		Location: 90,31
 		Owner: Neutral
-	Actor751: aopln002.jungle
+	Actor1156: aopln002.jungle
 		Location: 7,48
 		Owner: Neutral
-	Actor752: aopln002.jungle
+	Actor1157: aopln002.jungle
 		Location: 90,48
 		Owner: Neutral
-	Actor753: aopln002.jungle
+	Actor1158: aopln002.jungle
 		Location: 86,34
 		Owner: Neutral
-	Actor754: aopln002.jungle
+	Actor1159: aopln002.jungle
 		Location: 11,45
 		Owner: Neutral
-	Actor755: aopln002.jungle
+	Actor1160: aopln002.jungle
 		Location: 86,45
 		Owner: Neutral
-	Actor756: aopln002.jungle
+	Actor1161: aopln002.jungle
 		Location: 79,30
 		Owner: Neutral
-	Actor757: aopln002.jungle
+	Actor1162: aopln002.jungle
 		Location: 18,49
 		Owner: Neutral
-	Actor758: aopln002.jungle
+	Actor1163: aopln002.jungle
 		Location: 79,49
 		Owner: Neutral
-	Actor759: aopln001.jungle
+	Actor1164: aopln001.jungle
 		Location: 88,33
 		Owner: Neutral
-	Actor760: aopln001.jungle
+	Actor1165: aopln001.jungle
 		Location: 9,46
 		Owner: Neutral
-	Actor761: aopln001.jungle
+	Actor1166: aopln001.jungle
 		Location: 88,46
 		Owner: Neutral
-	Actor762: aopln001.jungle
+	Actor1167: aopln001.jungle
 		Location: 92,33
 		Owner: Neutral
-	Actor763: aopln001.jungle
+	Actor1168: aopln001.jungle
 		Location: 5,46
 		Owner: Neutral
-	Actor764: aopln001.jungle
+	Actor1169: aopln001.jungle
 		Location: 92,46
 		Owner: Neutral
-	Actor765: aopln001.jungle
+	Actor1170: aopln001.jungle
 		Location: 77,30
 		Owner: Neutral
-	Actor766: aopln001.jungle
+	Actor1171: aopln001.jungle
 		Location: 20,49
 		Owner: Neutral
-	Actor767: aopln001.jungle
+	Actor1172: aopln001.jungle
 		Location: 77,49
 		Owner: Neutral
-	Actor768: aopln001.jungle
+	Actor1173: aopln001.jungle
 		Location: 82,33
 		Owner: Neutral
-	Actor769: aopln001.jungle
+	Actor1174: aopln001.jungle
 		Location: 15,46
 		Owner: Neutral
-	Actor770: aopln001.jungle
+	Actor1175: aopln001.jungle
 		Location: 82,46
 		Owner: Neutral
-	Actor771: aopln001.jungle
+	Actor1176: aopln001.jungle
 		Location: 93,26
 		Owner: Neutral
-	Actor772: aopln001.jungle
+	Actor1177: aopln001.jungle
 		Location: 4,53
 		Owner: Neutral
-	Actor773: aopln001.jungle
+	Actor1178: aopln001.jungle
 		Location: 93,53
 		Owner: Neutral
-	Actor774: aopln001.jungle
+	Actor1179: aopln001.jungle
 		Location: 94,21
 		Owner: Neutral
-	Actor775: aopln001.jungle
+	Actor1180: aopln001.jungle
 		Location: 3,58
 		Owner: Neutral
-	Actor776: aopln001.jungle
+	Actor1181: aopln001.jungle
 		Location: 94,58
 		Owner: Neutral
-	Actor777: aotre004.jungle
+	Actor1182: aotre004.jungle
 		Location: 78,26
 		Owner: Neutral
-	Actor778: aotre004.jungle
+	Actor1183: aotre004.jungle
 		Location: 19,53
 		Owner: Neutral
-	Actor779: aotre004.jungle
+	Actor1184: aotre004.jungle
 		Location: 78,53
 		Owner: Neutral
-	Actor780: aotre003.jungle
+	Actor1185: aotre003.jungle
 		Location: 89,24
 		Owner: Neutral
-	Actor781: aotre003.jungle
+	Actor1186: aotre003.jungle
 		Location: 8,56
 		Owner: Neutral
-	Actor782: aotre003.jungle
+	Actor1187: aotre003.jungle
 		Location: 89,56
 		Owner: Neutral
-	Actor783: aoroc000.jungle
+	Actor1188: aoroc000.jungle
 		Location: 89,25
 		Owner: Neutral
-	Actor784: aoroc000.jungle
+	Actor1189: aoroc000.jungle
 		Location: 8,54
 		Owner: Neutral
-	Actor785: aoroc000.jungle
+	Actor1190: aoroc000.jungle
 		Location: 89,54
 		Owner: Neutral
-	Actor786: aotre001.jungle
+	Actor1191: aotre001.jungle
 		Location: 71,31
 		Owner: Neutral
-	Actor787: aotre001.jungle
+	Actor1192: aotre001.jungle
 		Location: 26,49
 		Owner: Neutral
-	Actor788: aotre001.jungle
+	Actor1193: aotre001.jungle
 		Location: 71,49
 		Owner: Neutral
-	Actor789: aotre002.jungle
+	Actor1194: aotre002.jungle
 		Location: 72,32
 		Owner: Neutral
-	Actor790: aotre002.jungle
+	Actor1195: aotre002.jungle
 		Location: 25,48
 		Owner: Neutral
-	Actor791: aotre002.jungle
+	Actor1196: aotre002.jungle
 		Location: 72,48
 		Owner: Neutral
-	Actor792: aopln000.jungle
+	Actor1197: aopln000.jungle
 		Location: 73,31
 		Owner: Neutral
-	Actor793: aopln000.jungle
+	Actor1198: aopln000.jungle
 		Location: 24,48
 		Owner: Neutral
-	Actor794: aopln000.jungle
+	Actor1199: aopln000.jungle
 		Location: 73,48
 		Owner: Neutral
-	Actor795: aopln001.jungle
+	Actor1200: aopln001.jungle
 		Location: 74,32
 		Owner: Neutral
-	Actor796: aopln001.jungle
+	Actor1201: aopln001.jungle
 		Location: 23,47
 		Owner: Neutral
-	Actor797: aopln001.jungle
+	Actor1202: aopln001.jungle
 		Location: 74,47
 		Owner: Neutral
-	Actor798: aoroc000.jungle
+	Actor1203: aoroc000.jungle
 		Location: 71,33
 		Owner: Neutral
-	Actor799: aoroc000.jungle
+	Actor1204: aoroc000.jungle
 		Location: 26,46
 		Owner: Neutral
-	Actor800: aoroc000.jungle
+	Actor1205: aoroc000.jungle
 		Location: 71,46
 		Owner: Neutral
-	Actor801: aotre000.jungle
+	Actor1206: aotre000.jungle
 		Location: 58,12
 		Owner: Neutral
-	Actor802: aotre000.jungle
+	Actor1207: aotre000.jungle
 		Location: 39,68
 		Owner: Neutral
-	Actor803: aotre000.jungle
+	Actor1208: aotre000.jungle
 		Location: 58,68
 		Owner: Neutral
-	Actor804: aotre000.jungle
+	Actor1209: aotre000.jungle
 		Location: 60,7
 		Owner: Neutral
-	Actor805: aotre000.jungle
+	Actor1210: aotre000.jungle
 		Location: 37,73
 		Owner: Neutral
-	Actor806: aotre000.jungle
+	Actor1211: aotre000.jungle
 		Location: 60,73
 		Owner: Neutral
-	Actor807: aotre000.jungle
+	Actor1212: aotre000.jungle
 		Location: 63,5
 		Owner: Neutral
-	Actor808: aotre000.jungle
+	Actor1213: aotre000.jungle
 		Location: 34,75
 		Owner: Neutral
-	Actor809: aotre000.jungle
+	Actor1214: aotre000.jungle
 		Location: 63,75
 		Owner: Neutral
-	Actor810: aotre001.jungle
+	Actor1215: aotre001.jungle
 		Location: 62,4
 		Owner: Neutral
-	Actor811: aotre001.jungle
+	Actor1216: aotre001.jungle
 		Location: 35,76
 		Owner: Neutral
-	Actor812: aotre001.jungle
+	Actor1217: aotre001.jungle
 		Location: 62,76
 		Owner: Neutral
-	Actor813: aotre001.jungle
+	Actor1218: aotre001.jungle
 		Location: 59,7
 		Owner: Neutral
-	Actor814: aotre001.jungle
+	Actor1219: aotre001.jungle
 		Location: 38,73
 		Owner: Neutral
-	Actor815: aotre001.jungle
+	Actor1220: aotre001.jungle
 		Location: 59,73
 		Owner: Neutral
-	Actor816: aotre001.jungle
+	Actor1221: aotre001.jungle
 		Location: 56,10
 		Owner: Neutral
-	Actor817: aotre001.jungle
+	Actor1222: aotre001.jungle
 		Location: 41,70
 		Owner: Neutral
-	Actor818: aotre001.jungle
+	Actor1223: aotre001.jungle
 		Location: 56,70
 		Owner: Neutral
-	Actor819: aotre001.jungle
+	Actor1224: aotre001.jungle
 		Location: 65,5
 		Owner: Neutral
-	Actor820: aotre001.jungle
+	Actor1225: aotre001.jungle
 		Location: 32,75
 		Owner: Neutral
-	Actor821: aotre001.jungle
+	Actor1226: aotre001.jungle
 		Location: 65,75
 		Owner: Neutral
-	Actor822: aotre001.jungle
+	Actor1227: aotre001.jungle
 		Location: 69,3
 		Owner: Neutral
-	Actor823: aotre001.jungle
+	Actor1228: aotre001.jungle
 		Location: 28,77
 		Owner: Neutral
-	Actor824: aotre001.jungle
+	Actor1229: aotre001.jungle
 		Location: 69,77
 		Owner: Neutral
-	Actor825: aotre002.jungle
+	Actor1230: aotre002.jungle
 		Location: 67,4
 		Owner: Neutral
-	Actor826: aotre002.jungle
+	Actor1231: aotre002.jungle
 		Location: 30,76
 		Owner: Neutral
-	Actor827: aotre002.jungle
+	Actor1232: aotre002.jungle
 		Location: 67,76
 		Owner: Neutral
-	Actor828: aotre002.jungle
+	Actor1233: aotre002.jungle
 		Location: 63,4
 		Owner: Neutral
-	Actor829: aotre002.jungle
+	Actor1234: aotre002.jungle
 		Location: 34,76
 		Owner: Neutral
-	Actor830: aotre002.jungle
+	Actor1235: aotre002.jungle
 		Location: 63,76
 		Owner: Neutral
-	Actor831: aotre002.jungle
+	Actor1236: aotre002.jungle
 		Location: 59,4
 		Owner: Neutral
-	Actor832: aotre002.jungle
+	Actor1237: aotre002.jungle
 		Location: 38,76
 		Owner: Neutral
-	Actor833: aotre002.jungle
+	Actor1238: aotre002.jungle
 		Location: 59,76
 		Owner: Neutral
-	Actor834: aotre002.jungle
+	Actor1239: aotre002.jungle
 		Location: 59,6
 		Owner: Neutral
-	Actor835: aotre002.jungle
+	Actor1240: aotre002.jungle
 		Location: 38,74
 		Owner: Neutral
-	Actor836: aotre002.jungle
+	Actor1241: aotre002.jungle
 		Location: 59,74
 		Owner: Neutral
-	Actor837: aotre002.jungle
+	Actor1242: aotre002.jungle
 		Location: 59,11
 		Owner: Neutral
-	Actor838: aotre002.jungle
+	Actor1243: aotre002.jungle
 		Location: 38,69
 		Owner: Neutral
-	Actor839: aotre002.jungle
+	Actor1244: aotre002.jungle
 		Location: 59,69
 		Owner: Neutral
-	Actor840: aotre002.jungle
+	Actor1245: aotre002.jungle
 		Location: 57,11
 		Owner: Neutral
-	Actor841: aotre002.jungle
+	Actor1246: aotre002.jungle
 		Location: 40,69
 		Owner: Neutral
-	Actor842: aotre002.jungle
+	Actor1247: aotre002.jungle
 		Location: 57,69
 		Owner: Neutral
-	Actor843: aotre003.jungle
+	Actor1248: aotre003.jungle
 		Location: 58,8
 		Owner: Neutral
-	Actor844: aotre003.jungle
+	Actor1249: aotre003.jungle
 		Location: 39,72
 		Owner: Neutral
-	Actor845: aotre003.jungle
+	Actor1250: aotre003.jungle
 		Location: 58,72
 		Owner: Neutral
-	Actor846: aotre003.jungle
+	Actor1251: aotre003.jungle
 		Location: 63,3
 		Owner: Neutral
-	Actor847: aotre003.jungle
+	Actor1252: aotre003.jungle
 		Location: 34,77
 		Owner: Neutral
-	Actor848: aotre003.jungle
+	Actor1253: aotre003.jungle
 		Location: 63,77
 		Owner: Neutral
-	Actor849: aotre003.jungle
+	Actor1254: aotre003.jungle
 		Location: 58,14
 		Owner: Neutral
-	Actor850: aotre003.jungle
+	Actor1255: aotre003.jungle
 		Location: 39,66
 		Owner: Neutral
-	Actor851: aotre003.jungle
+	Actor1256: aotre003.jungle
 		Location: 58,66
 		Owner: Neutral
-	Actor852: aotre004.jungle
+	Actor1257: aotre004.jungle
 		Location: 59,13
 		Owner: Neutral
-	Actor853: aotre004.jungle
+	Actor1258: aotre004.jungle
 		Location: 38,66
 		Owner: Neutral
-	Actor854: aotre004.jungle
+	Actor1259: aotre004.jungle
 		Location: 59,66
 		Owner: Neutral
-	Actor855: aotre005.jungle
+	Actor1260: aotre005.jungle
 		Location: 65,4
 		Owner: Neutral
-	Actor856: aotre005.jungle
+	Actor1261: aotre005.jungle
 		Location: 32,76
 		Owner: Neutral
-	Actor857: aotre005.jungle
+	Actor1262: aotre005.jungle
 		Location: 65,76
 		Owner: Neutral
-	Actor858: aotre005.jungle
+	Actor1263: aotre005.jungle
 		Location: 61,6
 		Owner: Neutral
-	Actor859: aotre005.jungle
+	Actor1264: aotre005.jungle
 		Location: 36,74
 		Owner: Neutral
-	Actor860: aotre005.jungle
+	Actor1265: aotre005.jungle
 		Location: 61,74
 		Owner: Neutral
-	Actor861: aotre005.jungle
+	Actor1266: aotre005.jungle
 		Location: 56,6
 		Owner: Neutral
-	Actor862: aotre005.jungle
+	Actor1267: aotre005.jungle
 		Location: 41,74
 		Owner: Neutral
-	Actor863: aotre005.jungle
+	Actor1268: aotre005.jungle
 		Location: 56,74
 		Owner: Neutral
-	Actor864: aotre005.jungle
+	Actor1269: aotre005.jungle
 		Location: 57,13
 		Owner: Neutral
-	Actor865: aotre005.jungle
+	Actor1270: aotre005.jungle
 		Location: 40,67
 		Owner: Neutral
-	Actor866: aotre005.jungle
+	Actor1271: aotre005.jungle
 		Location: 57,67
 		Owner: Neutral
-	Actor867: aotre005.jungle
+	Actor1272: aotre005.jungle
 		Location: 57,15
 		Owner: Neutral
-	Actor868: aotre005.jungle
+	Actor1273: aotre005.jungle
 		Location: 40,65
 		Owner: Neutral
-	Actor869: aotre005.jungle
+	Actor1274: aotre005.jungle
 		Location: 57,65
 		Owner: Neutral
-	Actor870: aopln001.jungle
+	Actor1275: aopln001.jungle
 		Location: 57,5
 		Owner: Neutral
-	Actor871: aopln001.jungle
+	Actor1276: aopln001.jungle
 		Location: 40,74
 		Owner: Neutral
-	Actor872: aopln001.jungle
+	Actor1277: aopln001.jungle
 		Location: 57,74
 		Owner: Neutral
-	Actor873: aopln001.jungle
+	Actor1278: aopln001.jungle
 		Location: 62,2
 		Owner: Neutral
-	Actor874: aopln001.jungle
+	Actor1279: aopln001.jungle
 		Location: 35,77
 		Owner: Neutral
-	Actor875: aopln001.jungle
+	Actor1280: aopln001.jungle
 		Location: 62,77
 		Owner: Neutral
-	Actor876: aopln002.jungle
+	Actor1281: aopln002.jungle
 		Location: 61,2
 		Owner: Neutral
-	Actor877: aopln002.jungle
+	Actor1282: aopln002.jungle
 		Location: 36,77
 		Owner: Neutral
-	Actor878: aopln002.jungle
+	Actor1283: aopln002.jungle
 		Location: 61,77
 		Owner: Neutral
-	Actor879: aopln002.jungle
+	Actor1284: aopln002.jungle
 		Location: 55,9
 		Owner: Neutral
-	Actor880: aopln002.jungle
+	Actor1285: aopln002.jungle
 		Location: 42,70
 		Owner: Neutral
-	Actor881: aopln002.jungle
+	Actor1286: aopln002.jungle
 		Location: 55,70
 		Owner: Neutral
-	Actor882: aopln002.jungle
+	Actor1287: aopln002.jungle
 		Location: 56,12
 		Owner: Neutral
-	Actor883: aopln002.jungle
+	Actor1288: aopln002.jungle
 		Location: 41,67
 		Owner: Neutral
-	Actor884: aopln002.jungle
+	Actor1289: aopln002.jungle
 		Location: 56,67
 		Owner: Neutral
-	Actor885: aoroc000.jungle
+	Actor1290: aoroc000.jungle
 		Location: 65,2
 		Owner: Neutral
-	Actor886: aoroc000.jungle
+	Actor1291: aoroc000.jungle
 		Location: 32,77
 		Owner: Neutral
-	Actor887: aoroc000.jungle
+	Actor1292: aoroc000.jungle
 		Location: 65,77
 		Owner: Neutral
-	Actor888: aoroc001.jungle
+	Actor1293: aoroc001.jungle
 		Location: 67,3
 		Owner: Neutral
-	Actor889: aoroc001.jungle
+	Actor1294: aoroc001.jungle
 		Location: 30,76
 		Owner: Neutral
-	Actor890: aoroc001.jungle
+	Actor1295: aoroc001.jungle
 		Location: 67,76
 		Owner: Neutral
-	Actor891: aoroc002.jungle
+	Actor1296: aoroc002.jungle
 		Location: 57,6
 		Owner: Neutral
-	Actor892: aoroc002.jungle
+	Actor1297: aoroc002.jungle
 		Location: 40,73
 		Owner: Neutral
-	Actor893: aoroc002.jungle
+	Actor1298: aoroc002.jungle
 		Location: 57,73
 		Owner: Neutral
-	Actor894: aoroc002.jungle
+	Actor1299: aoroc002.jungle
 		Location: 58,10
 		Owner: Neutral
-	Actor895: aoroc002.jungle
+	Actor1300: aoroc002.jungle
 		Location: 39,69
 		Owner: Neutral
-	Actor896: aoroc002.jungle
+	Actor1301: aoroc002.jungle
 		Location: 58,69
 		Owner: Neutral
-	Actor897: aoroc003.jungle
+	Actor1302: aoroc003.jungle
 		Location: 60,1
 		Owner: Neutral
-	Actor898: aoroc003.jungle
+	Actor1303: aoroc003.jungle
 		Location: 36,76
 		Owner: Neutral
-	Actor899: aoroc003.jungle
+	Actor1304: aoroc003.jungle
 		Location: 60,76
 		Owner: Neutral
-	Actor900: aoroc005.jungle
+	Actor1305: aoroc005.jungle
 		Location: 56,7
 		Owner: Neutral
-	Actor901: aoroc005.jungle
+	Actor1306: aoroc005.jungle
 		Location: 40,71
 		Owner: Neutral
-	Actor902: aoroc005.jungle
+	Actor1307: aoroc005.jungle
 		Location: 56,71
 		Owner: Neutral
-	Actor903: aotre004.jungle
+	Actor1308: aotre004.jungle
 		Location: 57,9
 		Owner: Neutral
-	Actor904: aotre004.jungle
+	Actor1309: aotre004.jungle
 		Location: 40,70
 		Owner: Neutral
-	Actor905: aotre004.jungle
+	Actor1310: aotre004.jungle
 		Location: 57,70
 		Owner: Neutral
-	Actor906: aoroc001.jungle
+	Actor1311: aoroc001.jungle
 		Location: 55,9
 		Owner: Neutral
-	Actor907: aoroc001.jungle
+	Actor1312: aoroc001.jungle
 		Location: 42,70
 		Owner: Neutral
-	Actor908: aoroc001.jungle
+	Actor1313: aoroc001.jungle
 		Location: 55,70
 		Owner: Neutral
-	Actor909: aoroc001.jungle
+	Actor1314: aoroc001.jungle
 		Location: 71,4
 		Owner: Neutral
-	Actor910: aoroc001.jungle
+	Actor1315: aoroc001.jungle
 		Location: 26,75
 		Owner: Neutral
-	Actor911: aoroc001.jungle
+	Actor1316: aoroc001.jungle
 		Location: 71,75
 		Owner: Neutral
-	Actor912: aopln002.jungle
+	Actor1317: aopln002.jungle
 		Location: 70,4
 		Owner: Neutral
-	Actor913: aopln002.jungle
+	Actor1318: aopln002.jungle
 		Location: 27,75
 		Owner: Neutral
-	Actor914: aopln002.jungle
+	Actor1319: aopln002.jungle
 		Location: 70,75
 		Owner: Neutral
-	Actor915: aopln001.jungle
+	Actor1320: aopln001.jungle
 		Location: 66,6
 		Owner: Neutral
-	Actor916: aopln001.jungle
+	Actor1321: aopln001.jungle
 		Location: 31,73
 		Owner: Neutral
-	Actor917: aopln001.jungle
+	Actor1322: aopln001.jungle
 		Location: 66,73
 		Owner: Neutral
-	Actor918: aopln000.jungle
+	Actor1323: aopln000.jungle
 		Location: 66,4
 		Owner: Neutral
-	Actor919: aopln000.jungle
+	Actor1324: aopln000.jungle
 		Location: 31,75
 		Owner: Neutral
-	Actor920: aopln000.jungle
+	Actor1325: aopln000.jungle
 		Location: 66,75
 		Owner: Neutral
-	Actor921: aopln000.jungle
+	Actor1326: aopln000.jungle
 		Location: 58,9
 		Owner: Neutral
-	Actor922: aopln000.jungle
+	Actor1327: aopln000.jungle
 		Location: 39,70
 		Owner: Neutral
-	Actor923: aopln000.jungle
+	Actor1328: aopln000.jungle
 		Location: 58,70
 		Owner: Neutral
-	Actor924: aopln000.jungle
+	Actor1329: aopln000.jungle
 		Location: 57,14
 		Owner: Neutral
-	Actor925: aopln000.jungle
+	Actor1330: aopln000.jungle
 		Location: 40,65
 		Owner: Neutral
-	Actor926: aopln000.jungle
+	Actor1331: aopln000.jungle
 		Location: 57,65
 		Owner: Neutral
-	Actor927: aotre005.jungle
+	Actor1332: aotre005.jungle
 		Location: 76,5
 		Owner: Neutral
-	Actor928: aotre005.jungle
+	Actor1333: aotre005.jungle
 		Location: 21,75
 		Owner: Neutral
-	Actor929: aotre005.jungle
+	Actor1334: aotre005.jungle
 		Location: 76,75
 		Owner: Neutral
-	Actor930: aotre004.jungle
+	Actor1335: aotre004.jungle
 		Location: 58,16
 		Owner: Neutral
-	Actor931: aotre004.jungle
+	Actor1336: aotre004.jungle
 		Location: 39,63
 		Owner: Neutral
-	Actor932: aotre004.jungle
+	Actor1337: aotre004.jungle
 		Location: 58,63
 		Owner: Neutral
-	Actor933: aopln001.jungle
+	Actor1338: aopln001.jungle
 		Location: 57,16
 		Owner: Neutral
-	Actor934: aopln001.jungle
+	Actor1339: aopln001.jungle
 		Location: 40,63
 		Owner: Neutral
-	Actor935: aopln001.jungle
+	Actor1340: aopln001.jungle
 		Location: 57,63
 		Owner: Neutral
-	Actor936: aotre003.jungle
+	Actor1341: aotre003.jungle
 		Location: 56,17
 		Owner: Neutral
-	Actor937: aotre003.jungle
+	Actor1342: aotre003.jungle
 		Location: 41,63
 		Owner: Neutral
-	Actor938: aotre003.jungle
+	Actor1343: aotre003.jungle
 		Location: 56,63
 		Owner: Neutral
-	Actor939: aoroc001.jungle
+	Actor1344: aoroc001.jungle
 		Location: 55,18
 		Owner: Neutral
-	Actor940: aoroc001.jungle
+	Actor1345: aoroc001.jungle
 		Location: 42,61
 		Owner: Neutral
-	Actor941: aoroc001.jungle
+	Actor1346: aoroc001.jungle
 		Location: 55,61
 		Owner: Neutral
-	Actor942: aoroc000.jungle
+	Actor1347: aoroc000.jungle
 		Location: 61,7
 		Owner: Neutral
-	Actor943: aoroc000.jungle
+	Actor1348: aoroc000.jungle
 		Location: 36,72
 		Owner: Neutral
-	Actor944: aoroc000.jungle
+	Actor1349: aoroc000.jungle
 		Location: 61,72
 		Owner: Neutral
+	Actor1350: water
+		Location: 87,12
+		Owner: Neutral
+	Actor1351: water
+		Location: 10,67
+		Owner: Neutral
+	Actor1352: water
+		Location: 87,67
+		Owner: Neutral
+	Actor1353: water
+		Location: 84,26
+		Owner: Neutral
+	Actor1354: water
+		Location: 13,53
+		Owner: Neutral
+	Actor1355: water
+		Location: 84,53
+		Owner: Neutral
+	Actor1356: taelon
+		Location: 61,19
+		Owner: Neutral
+	Actor1357: taelon
+		Location: 36,60
+		Owner: Neutral
+	Actor1358: taelon
+		Location: 61,60
+		Owner: Neutral
+
 Rules: rules.yaml
