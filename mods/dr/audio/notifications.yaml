@@ -17,6 +17,8 @@ Speech:
 		CreditsStolen: gvstscln
 		EnemyUnitsApproaching: 
 		EnemyDetected: gvwrncl1 # infiltrator detected
+		GameSaved: gvintcl0
+		GameLoaded: gvintcl1
 		HarvesterAttack:
 		InsufficientFunds: gvwrncl6
 		InsufficientPower: gvwrncl5 # Power critical

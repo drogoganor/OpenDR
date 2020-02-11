@@ -4,6 +4,7 @@
 	ScreenMap:
 	ActorMap:
 	Selection:
+	TimeLimitManager:
 	LoadWidgetAtGameStart:
 	DrTerrainRenderer:
 		Shorelines:
@@ -536,6 +537,7 @@ EditorPlayer:
 Player:
 	Inherits: ^BasePlayer
 	TechTree:
+	GameSaveViewportManager:
 	DeveloperMode:
 		CheckboxDisplayOrder: 8
 	PlayerResources:

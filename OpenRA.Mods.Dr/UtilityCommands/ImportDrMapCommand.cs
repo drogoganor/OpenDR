@@ -51,8 +51,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		private static string[] knownUnknownBuildings = new string[]
 		{
-			"impmn", // Taelon resource
-			"impww", // Water resource
 			"fh1_decoy",
 			"ih1_decoy",
 			"fu1_decoy",
@@ -110,6 +108,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "wreck2", "aowrk001" },
 			{ "wreck3", "aowrk002" },
 			{ "watercrater", "eowcocr0" },
+			{ "water", "impww" },
+			{ "taelon", "impmm" },
 		};
 
 		static Dictionary<string, string> unitNames = new Dictionary<string, string>
@@ -511,34 +511,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 								Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 							}
 						}
-					}
-
-					// Do resources
-					foreach (var scnSection in scnFile.Entries)
-					{
-						if (scnSection.Name != "AddBuildingAt")
-							continue;
-
-						string type = scnSection.Values[1];
-						int x = Convert.ToInt32(scnSection.Values[2]);
-						int y = Convert.ToInt32(scnSection.Values[3]);
-
-						byte typeId = 0;
-						switch (type)
-						{
-							case "impww":
-								typeId = 1;
-								break;
-							case "impmn":
-								typeId = 2;
-								break;
-						}
-
-						if (typeId == 0)
-							continue;
-
-						var cell = new CPos(x + 1, y + 1);
-						Map.Resources[cell] = new ResourceTile(typeId, 0);
 					}
 				}
 

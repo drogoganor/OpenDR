@@ -63,6 +63,7 @@
 ^SelfConstructingBuilding:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
+	ActorPreviewPlaceBuildingPreview:
 	Buildable:
 		BuildDurationModifier: 2486 # DR build rate
 	Huntable:

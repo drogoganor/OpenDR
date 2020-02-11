@@ -43,7 +43,7 @@ namespace OpenRA.Mods.Dr.Traits
 		int minimumExcessPower;
 		BitArray resourceTypeIndices;
 
-		Dictionary<uint, RigBuildOrder> rigBuildOrders = new Dictionary<uint, RigBuildOrder>();
+		readonly Dictionary<uint, RigBuildOrder> rigBuildOrders = new Dictionary<uint, RigBuildOrder>();
 
 		WPos originalRigPosition;
 
@@ -167,15 +167,16 @@ namespace OpenRA.Mods.Dr.Traits
 				if (!order.Queued)
 					targetActor.CancelActivity();
 
-				var cell = world.Map.Clamp(world.Map.CellContaining(order.Target.CenterPosition));
+				var cell = world.Map.CellContaining(order.Target.CenterPosition);
 
 				// Make the actor move to the location
 				var moveActivity = new Move(targetActor, cell, WDist.FromCells(1), null, true, Primitives.Color.Green);
 				var buildActivity = new BuildOnSite(w, targetActor, order, faction, buildingInfo);
 
 				targetActor.QueueActivity(moveActivity);
-				targetActor.ShowTargetLines();
-				targetActor.QueueActivity(buildActivity);
+
+				// targetActor.ShowTargetLines();
+				// targetActor.QueueActivity(buildActivity);
 			});
 		}
 
@@ -254,12 +255,14 @@ namespace OpenRA.Mods.Dr.Traits
 			var barracks = GetProducibleBuilding(baseBuilder.Info.BarracksTypes, buildableThings);
 			var vehicles = GetProducibleBuilding(baseBuilder.Info.VehiclesFactoryTypes, buildableThings);
 
+			/*
 			// First priority is to get an HQ
 			if (hq != null && NumBuildingsBuiltBuildingOrOrdered(hq) == 0)
 			{
 				AIUtils.BotDebug("AI: {0} decided to build {1}: Priority override (no HQ)", queue.Actor.Owner, hq.Name);
 				return hq;
 			}
+			*/
 
 			// Second is to get out of a low power situation
 			if (power != null)
@@ -277,6 +280,7 @@ namespace OpenRA.Mods.Dr.Traits
 				}
 			}
 
+			/*
 			// Next is to build up a strong economy
 			if (water != null)
 			{
@@ -319,25 +323,6 @@ namespace OpenRA.Mods.Dr.Traits
 					}
 				}
 			}
-
-			/*
-			// Make sure that we can spend as fast as we are earning
-			if (baseBuilder.Info.NewProductionCashThreshold > 0 && playerResources.Resources > baseBuilder.Info.NewProductionCashThreshold)
-			{
-				var production = GetProducibleBuilding(baseBuilder.Info.ProductionTypes, buildableThings);
-				if (production != null && HasSufficientPowerForActor(production))
-				{
-					AIUtils.BotDebug("AI: {0} decided to build {1}: Priority override (production)", queue.Actor.Owner, production.Name);
-					return production;
-				}
-
-				if (power != null && production != null && !HasSufficientPowerForActor(production))
-				{
-					AIUtils.BotDebug("{0} decided to build {1}: Priority override (would be low power)", queue.Actor.Owner, power.Name);
-					return power;
-				}
-			}
-			*/
 
 			// Build everything else
 			foreach (var frac in baseBuilder.Info.BuildingFractions.Shuffle(world.LocalRandom))
@@ -398,6 +383,7 @@ namespace OpenRA.Mods.Dr.Traits
 					queue.Actor.Owner, name, frac.Value, frac.Value * playerBuildings.Length, playerBuildings.Length, count);
 				return actor;
 			}
+			*/
 
 			// Too spammy to keep enabled all the time, but very useful when debugging specific issues.
 			// AIUtils.BotDebug("{0} couldn't decide what to build for queue {1}.", queue.Actor.Owner, queue.Info.Group);
