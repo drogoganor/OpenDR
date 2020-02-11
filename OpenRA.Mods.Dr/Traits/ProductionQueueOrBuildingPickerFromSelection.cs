@@ -54,11 +54,11 @@ namespace OpenRA.Mods.Dr.Traits
 
 		void INotifySelection.SelectionChanged()
 		{
-			buildingCancelWidget.Value.Visible = false;
-
 			// Disable for spectators
 			if (world.LocalPlayer == null)
 				return;
+
+			buildingCancelWidget.Value.Visible = false;
 
 			// Check for builder unit
 			var builderQueue = world.Selection.Actors

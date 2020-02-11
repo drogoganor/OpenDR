@@ -68,7 +68,7 @@
 		BuildDurationModifier: 2486 # DR build rate
 	Huntable:
 	UpdatesPlayerStatistics:
-	FootprintPlaceBuildingPreview:
+	#FootprintPlaceBuildingPreview:
 	SelectionDecorations:
 	SelfConstructing:
 		Steps: 30
