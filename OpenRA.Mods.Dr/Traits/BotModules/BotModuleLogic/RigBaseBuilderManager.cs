@@ -14,9 +14,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Dr.Activities;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits
@@ -107,7 +105,21 @@ namespace OpenRA.Mods.Dr.Traits
 					var location = ChooseBuildLocation(building.Name, true, type);
 					if (location != null && location.HasValue)
 					{
-						OrderRigToBuild(location.Value, rig, building);
+						var order = new Order("BuildUnitPlaceBuilding", player.PlayerActor, Target.FromCell(world, location.Value), false)
+						{
+							TargetString = building.Name,
+							ExtraLocation = location.Value,
+							ExtraData = rig.ActorID,
+							SuppressVisualFeedback = true
+						};
+
+						rigBuildOrders.Add(rig.ActorID, new RigBuildOrder()
+						{
+							Rig = rig,
+							Building = building
+						});
+
+						bot.QueueOrder(order);
 					}
 				}
 			}
@@ -120,64 +132,6 @@ namespace OpenRA.Mods.Dr.Traits
 			waitTicks = 4 * world.LobbyInfo.GlobalSettings.OrderLatency + baseBuilder.Info.StructureProductionActiveDelay + randomFactor;
 
 			// : baseBuilder.Info.StructureProductionInactiveDelay + randomFactor;
-		}
-
-		void OrderRigToBuild(CPos target, Actor rig, ActorInfo building)
-		{
-			var orderType = "BuildUnitPlaceBuilding";
-			var order = new Order(orderType, player.PlayerActor, Target.FromCell(world, target), false)
-			{
-				TargetString = building.Name,
-				ExtraLocation = target,
-				ExtraData = rig.ActorID,
-				SuppressVisualFeedback = true
-			};
-
-			rigBuildOrders.Add(rig.ActorID, new RigBuildOrder()
-			{
-				Rig = rig,
-				Building = building
-			});
-
-			world.AddFrameEndTask(w =>
-			{
-				var targetActor = w.GetActorById(order.ExtraData);
-
-				if (targetActor == null || targetActor.IsDead)
-					return;
-
-				var actorInfo = world.Map.Rules.Actors[order.TargetString];
-				var queue = targetActor.TraitsImplementing<BuilderUnit>()
-					.FirstOrDefault(q => q.CanBuild(actorInfo));
-
-				if (queue == null)
-					return;
-
-				var producer = queue.MostLikelyProducer();
-				var faction = producer.Trait != null ? producer.Trait.Faction : player.Faction.InternalName;
-				var buildingInfo = actorInfo.TraitInfo<BuildingInfo>();
-
-				var buildableInfo = actorInfo.TraitInfoOrDefault<BuildableInfo>();
-				if (buildableInfo != null && buildableInfo.ForceFaction != null)
-					faction = buildableInfo.ForceFaction;
-
-				if (!world.CanPlaceBuilding(order.ExtraLocation, actorInfo, buildingInfo, targetActor))
-					return;
-
-				if (!order.Queued)
-					targetActor.CancelActivity();
-
-				var cell = world.Map.CellContaining(order.Target.CenterPosition);
-
-				// Make the actor move to the location
-				var moveActivity = new Move(targetActor, cell, WDist.FromCells(1), null, true, Primitives.Color.Green);
-				var buildActivity = new BuildOnSite(w, targetActor, order, faction, buildingInfo);
-
-				targetActor.QueueActivity(moveActivity);
-
-				// targetActor.ShowTargetLines();
-				// targetActor.QueueActivity(buildActivity);
-			});
 		}
 
 		public List<Actor> GetIdleRigs()
@@ -255,14 +209,12 @@ namespace OpenRA.Mods.Dr.Traits
 			var barracks = GetProducibleBuilding(baseBuilder.Info.BarracksTypes, buildableThings);
 			var vehicles = GetProducibleBuilding(baseBuilder.Info.VehiclesFactoryTypes, buildableThings);
 
-			/*
 			// First priority is to get an HQ
 			if (hq != null && NumBuildingsBuiltBuildingOrOrdered(hq) == 0)
 			{
 				AIUtils.BotDebug("AI: {0} decided to build {1}: Priority override (no HQ)", queue.Actor.Owner, hq.Name);
 				return hq;
 			}
-			*/
 
 			// Second is to get out of a low power situation
 			if (power != null)
@@ -280,7 +232,6 @@ namespace OpenRA.Mods.Dr.Traits
 				}
 			}
 
-			/*
 			// Next is to build up a strong economy
 			if (water != null)
 			{
@@ -383,7 +334,6 @@ namespace OpenRA.Mods.Dr.Traits
 					queue.Actor.Owner, name, frac.Value, frac.Value * playerBuildings.Length, playerBuildings.Length, count);
 				return actor;
 			}
-			*/
 
 			// Too spammy to keep enabled all the time, but very useful when debugging specific issues.
 			// AIUtils.BotDebug("{0} couldn't decide what to build for queue {1}.", queue.Actor.Owner, queue.Info.Group);
