@@ -541,7 +541,6 @@ ConstructionRig:
 		Prerequisite: rig.terrorist
 	-Armament:
 
-
 Freighter:
 	Inherits: ^Vehicle
 	RenderSprites:
@@ -1633,6 +1632,8 @@ Reaper:
 	Selectable:
 		Bounds: 36,36,0,-3
 		DecorationBounds: 32,32,0,-6
+	Mobile:
+		Locomotor: mechfoot
 	Voiced:
 		VoiceSet: ReaperVoice
 	Valued:

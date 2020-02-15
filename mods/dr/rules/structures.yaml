@@ -976,6 +976,8 @@ TemporalRiftCreator:
 		Range: 8c0
 	Power:
 		Amount: -200
+	MustBeDestroyed:
+		RequiredForShortGame: true
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay

@@ -70,6 +70,8 @@
 	UpdatesPlayerStatistics:
 	#FootprintPlaceBuildingPreview:
 	SelectionDecorations:
+	MustBeDestroyed:
+		RequiredForShortGame: false
 	SelfConstructing:
 		Steps: 30
 	ShakeOnDeath:
@@ -119,6 +121,8 @@
 		RepairingNotification: Repairing
 	EngineerRepairable:
 	CaptureManager:
+	MustBeDestroyed:
+		RequiredForShortGame: false
 	Capturable:
 		Types: building
 	Sellable:
@@ -192,6 +196,8 @@
 
 ^Headquarters:
 	Inherits: ^ConstructedBuildingCommon
+	MustBeDestroyed:
+		RequiredForShortGame: true
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite:
 		Prerequisite: hq
@@ -297,6 +303,8 @@
 	Tooltip:
 		Name: Training Facility
 	Inherits@shape: ^5x4Shape
+	MustBeDestroyed:
+		RequiredForShortGame: true
 	Buildable:
 		Queue: Building
 		Description: Trains infantry.
@@ -327,6 +335,8 @@
 		Range: 8c0
 	Power:
 		Amount: -100
+	MustBeDestroyed:
+		RequiredForShortGame: true
 	RallyPoint:
 		Offset: 4,4
 	Exit@1:
@@ -391,6 +401,8 @@
 	Tooltip:
 		Name: Assembly Plant
 	Inherits@shape: ^5x5Shape
+	MustBeDestroyed:
+		RequiredForShortGame: true
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 40
@@ -428,6 +440,8 @@
 		Range: 8c0
 	Power:
 		Amount: -100
+	MustBeDestroyed:
+		RequiredForShortGame: true
 	Exit@1:
 		SpawnOffset: -512,768,0
 		ExitCell: 1,2

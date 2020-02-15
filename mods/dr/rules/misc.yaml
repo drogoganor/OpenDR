@@ -114,8 +114,6 @@ Water:
 		PipColor: Blue
 		ResourceType: 1
 		TerrainType: SpringWater
-		#Palette: player
-		MaxDensity: 120000
 		ValuePerUnit: 120
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true
@@ -143,8 +141,6 @@ Taelon:
 		PipColor: Green
 		ResourceType: 2
 		TerrainType: Taelon
-		#Palette: player
-		MaxDensity: 120000
 		ValuePerUnit: 120
 		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
 		AllowUnderActors: true

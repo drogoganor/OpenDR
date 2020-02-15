@@ -13,7 +13,7 @@ Power.Constructing:
 		Steps: 20
 		Becomes: Power
 	MustBeDestroyed:
-		RequiredForShortGame: true
+		RequiredForShortGame: false
 	Tooltip:
 		Name: Taelon Power Generator
 	Inherits@shape: ^3x4Shape
@@ -60,7 +60,7 @@ WaterLaunchPad.Constructing:
 		Steps: 20
 		Becomes: WaterLaunchPad
 	MustBeDestroyed:
-		RequiredForShortGame: true
+		RequiredForShortGame: false
 	Tooltip:
 		Name: Water Launch Pad
 	Inherits@shape: ^4x3Shape
