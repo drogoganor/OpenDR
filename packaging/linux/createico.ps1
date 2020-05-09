@@ -1,6 +1,6 @@
 $imgMagick = "& magick.exe"
 $env:Path = $env:Path + ';C:\Program Files\ImageMagick-7.0.9-Q16'
-$image = "mod_scalable_purple.svg"
+$image = "mod_scalable_yellow.svg"
 
 Invoke-Expression "$imgMagick convert -transparent white -background None -density 384 $image -define icon:auto-resize mod.ico"
 Invoke-Expression "$imgMagick convert -transparent white -background None -density 384 $image -resize 16x16 mod_16x16.png"
