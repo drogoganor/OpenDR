@@ -202,7 +202,7 @@ namespace OpenRA.Mods.Dr.Orders
 
 		public IEnumerable<IRenderable> RenderAnnotations(WorldRenderer wr, World world)
 		{
-			return null;
+			return Enumerable.Empty<IRenderable>();
 		}
 
 		public string GetCursor(World world, CPos cell, int2 worldPixel, MouseInput mi) { return "default"; }

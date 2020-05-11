@@ -216,7 +216,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public IEnumerable<IRenderable> RenderAnnotations(WorldRenderer wr, World world)
 		{
-			return null;
+			return Enumerable.Empty<IRenderable>();
 		}
 
 		public string GetCursor(World world, CPos cell, int2 worldPixel, MouseInput mi)

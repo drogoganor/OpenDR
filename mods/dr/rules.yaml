@@ -533,6 +533,8 @@ World:
 	RadarPings:
 	LoadWidgetAtGameStart:
 		ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
+	ResourceRenderer:
+		RenderTypes:
 
 EditorWorld:
 	Inherits: ^BaseWorld

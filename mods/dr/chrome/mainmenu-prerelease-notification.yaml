@@ -18,7 +18,7 @@ Background@MAINMENU_PRERELEASE_NOTIFICATION:
 			Width: PARENT_RIGHT - 30
 			Height: 16
 			Align: Left
-			Text: This mod is a work in progress. Key features are missing and gameplay tuning is still an 
+			Text: This mod is a work in progress. Key features are missing and gameplay tuning is still an
 		Label@PROMPT_TEXT_B:
 			X: 15
 			Y: 68
@@ -60,7 +60,7 @@ Background@MAINMENU_PRERELEASE_NOTIFICATION:
 			Width: PARENT_RIGHT - 30
 			Height: 16
 			Align: Left
-			Text:  Thanks for trying out the mod!
+			Text: Thanks for trying out the mod!
 		Button@CONTINUE_BUTTON:
 			X: PARENT_RIGHT - WIDTH - 20
 			Y: PARENT_BOTTOM - 45

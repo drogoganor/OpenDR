@@ -1,67 +1,79 @@
 
 # From TS
 
-scrollbar: buttons.png
-	down_arrow: 16,140,16,16
-	down_pressed: 16,140,16,16
-	up_arrow: 32,140,16,16
-	up_pressed: 32,140,16,16
-	left_arrow: 48,140,16,16
-	left_pressed: 48,140,16,16
-	right_arrow: 64,140,16,16
-	right_pressed: 64,140,16,16
+scrollbar:
+	Image: buttons.png
+	Regions:
+		down_arrow: 16, 140, 16, 16
+		down_pressed: 16, 140, 16, 16
+		up_arrow: 32, 140, 16, 16
+		up_pressed: 32, 140, 16, 16
+		left_arrow: 48, 140, 16, 16
+		left_pressed: 48, 140, 16, 16
+		right_arrow: 64, 140, 16, 16
+		right_pressed: 64, 140, 16, 16
 
-checkbox-bits: buttons.png
-	checked: 0,157,16,16
-	checked-disabled: 0,173,16,16
-	crossed: 16,157,16,16
-	crossed-disabled: 16,173,16,16
+checkbox-bits:
+	Image: buttons.png
+	Regions:
+		checked: 0, 157, 16, 16
+		checked-disabled: 0, 173, 16, 16
+		crossed: 16, 157, 16, 16
+		crossed-disabled: 16, 173, 16, 16
 
-lobby-bits: buttons.png
-	spawn-unclaimed: 159,5,23,22
-	spawn-claimed: 127,5,23,22
-	admin: 187,5,7,5
-	colorpicker: 127,5,23,22
-	huepicker: 194,0,7,15
-	protected: 202,0,10,13
-	protected-disabled: 213,0,10,13
-	admin-registered: 224,0,16,16
-	admin-anonymous: 240,0,16,16
-	player-registered: 224,16,16,16
-	player-anonymous: 240,16,16,16
+lobby-bits:
+	Image: buttons.png
+	Regions:
+		spawn-unclaimed: 159, 5, 23, 22
+		spawn-claimed: 127, 5, 23, 22
+		admin: 187, 5, 7, 5
+		colorpicker: 127, 5, 23, 22
+		huepicker: 194, 0, 7, 15
+		protected: 202, 0, 10, 13
+		protected-disabled: 213, 0, 10, 13
+		admin-registered: 224, 0, 16, 16
+		admin-anonymous: 240, 0, 16, 16
+		player-registered: 224, 16, 16, 16
+		player-anonymous: 240, 16, 16, 16
 
-flags: buttons.png
-	fguard: 30,112,30,15
-	imperium: 0,112,30,15
-	Random: 60,112,30,15
-	RandomExpansion: 60,112,30,15
-	RandomAll: 60,112,30,15
-	togran: 90,112,30,15
-	xenite: 120,112,30,15
-	shadowhand: 150,112,30,15
-	terrorist: 180,112,30,15
-	spectator: 60,112,30,15
+flags:
+	Image: buttons.png
+	Regions:
+		fguard: 30, 112, 30, 15
+		imperium: 0, 112, 30, 15
+		Random: 60, 112, 30, 15
+		RandomExpansion: 60, 112, 30, 15
+		RandomAll: 60, 112, 30, 15
+		togran: 90, 112, 30, 15
+		xenite: 120, 112, 30, 15
+		shadowhand: 150, 112, 30, 15
+		terrorist: 180, 112, 30, 15
+		spectator: 60, 112, 30, 15
 
-music: buttons.png
-	pause: 0,193,25,25
-	stop: 25,193,25,25
-	play: 55,193,25,25
-	next: 82,193,25,25
-	prev: 110,193,25,25
-	fastforward: 131,193,25,25
-	slowmo: 159,193,25,25
+music:
+	Image: buttons.png
+	Regions:
+		pause: 0, 193, 25, 25
+		stop: 25, 193, 25, 25
+		play: 55, 193, 25, 25
+		next: 82, 193, 25, 25
+		prev: 110, 193, 25, 25
+		fastforward: 131, 193, 25, 25
+		slowmo: 159, 193, 25, 25
 
-reload-icon: dialog.png
-	enabled: 160,480,16,16
-	disabled-0: 176,480,16,16
-	disabled-1: 192,480,16,16
-	disabled-2: 208,480,16,16
-	disabled-3: 224,480,16,16
-	disabled-4: 240,480,16,16
-	disabled-5: 256,480,16,16
-	disabled-6: 272,480,16,16
-	disabled-7: 288,480,16,16
-	disabled-8: 304,480,16,16
-	disabled-9: 320,480,16,16
-	disabled-10: 336,480,16,16
-	disabled-11: 352,480,16,16
+reload-icon:
+	Image: dialog.png
+	Regions:
+		enabled: 160, 480, 16, 16
+		disabled-0: 176, 480, 16, 16
+		disabled-1: 192, 480, 16, 16
+		disabled-2: 208, 480, 16, 16
+		disabled-3: 224, 480, 16, 16
+		disabled-4: 240, 480, 16, 16
+		disabled-5: 256, 480, 16, 16
+		disabled-6: 272, 480, 16, 16
+		disabled-7: 288, 480, 16, 16
+		disabled-8: 304, 480, 16, 16
+		disabled-9: 320, 480, 16, 16
+		disabled-10: 336, 480, 16, 16
+		disabled-11: 352, 480, 16, 16

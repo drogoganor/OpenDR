@@ -210,6 +210,8 @@ Medic:
 		ValidTargets: Infantry
 	WithIdleOverlay@SHADOW: # No animated shadow
 		Sequence: shadow
+	WithInfantryBody:
+		IdleSequences: idle
 
 Saboteur:
 	Inherits: ^Infantry
@@ -322,6 +324,8 @@ Martyr:
 		DamageSource: Killer
 	WithIdleOverlay@SHADOW: # No animated shadow
 		Sequence: shadow
+	WithInfantryBody:
+		IdleSequences: idle
 
 Guardian:
 	Inherits: ^Infantry
@@ -419,6 +423,8 @@ Exterminator:
 	Armament@PRIMARY:
 		Weapon: PolyAcid
 	Hovers:
+	WithInfantryBody:
+		IdleSequences: idle
 
 Infiltrator:
 	Inherits: ^Infantry
@@ -1503,6 +1509,8 @@ Gant:
 		ZOffset: -129
 	WithTurretAttackAnimation:
 		Sequence: muzzle
+	WithInfantryBody:
+		IdleSequences: idle
 
 Ranger:
 	Inherits: ^Infantry
@@ -1655,6 +1663,8 @@ Reaper:
 	WithShadow: # Reaper re-uses the flak shadow, ufflksh0, but its sequences don't match up exactly to the reaper sprite so we can't use it via Combine syntax
 		Offset: 122, 56, 0
 		ZOffset: -129
+	WithInfantryBody:
+		IdleSequences: idle
 
 # Vehicles
 

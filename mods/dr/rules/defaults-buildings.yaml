@@ -228,7 +228,7 @@
 	Production:
 		Produces: Upgrade,Economy,AIBuilding
 	RallyPoint:
-		Offset: 3,4
+		Path: 3,4
 	Exit@1:
 		SpawnOffset: 0,0,0
 		ExitCell: 2,2
@@ -338,7 +338,7 @@
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	RallyPoint:
-		Offset: 4,4
+		Path: 4,4
 	Exit@1:
 		SpawnOffset: 512,256,0
 		ExitCell: 3,3
@@ -489,7 +489,7 @@
 	ProductionBar:
 		ProductionType: Vehicle
 	RallyPoint:
-		Offset: 0,6
+		Path: 0,6
 	GrantConditionOnPrerequisite:
 		Prerequisites: upgrade.assemblyplant1
 		Condition: stardecoration
