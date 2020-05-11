@@ -261,7 +261,11 @@ namespace OpenRA.Mods.Dr.Projectiles
 			// Trigger all so-far-untriggered explosions.
 			foreach (var projectile in projectiles)
 				if (!projectile.DetonateSelf)
-					info.WeaponInfo.Impact(Target.FromPos(projectile.Position), SourceActor, args.DamageModifiers);
+					info.WeaponInfo.Impact(Target.FromPos(projectile.Position), new WarheadArgs
+					{
+						SourceActor = SourceActor,
+						DamageModifiers = args.DamageModifiers
+					});
 		}
 
 		public IEnumerable<IRenderable> Render(WorldRenderer wr)

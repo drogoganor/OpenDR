@@ -11,6 +11,7 @@
 using System;
 using System.Collections.Generic;
 using OpenRA.Effects;
+using OpenRA.GameRules;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Effects;
 using OpenRA.Mods.Common.Graphics;
@@ -169,7 +170,7 @@ namespace OpenRA.Mods.Dr.Effects
 			{
 				var delayedPos = WPos.Lerp(lastPos, targetpos, ticks - info.TrailDelay, estimatedlifespan);
 				world.AddFrameEndTask(w => w.Add(new SpriteEffect(delayedPos, w, info.TrailImage, info.TrailSequences.Random(world.SharedRandom),
-					trailPalette, false, false, GetEffectiveFacing())));
+					trailPalette, false, GetEffectiveFacing())));
 
 				smokeTicks = info.TrailInterval;
 			}
@@ -191,7 +192,11 @@ namespace OpenRA.Mods.Dr.Effects
 
 		public void Explode(World world)
 		{
-			args.Weapon.Impact(Target.FromPos(projectilepos), args.SourceActor, args.DamageModifiers);
+			args.Weapon.Impact(Target.FromPos(projectilepos), new WarheadArgs
+			{
+				SourceActor = args.SourceActor,
+				DamageModifiers = args.DamageModifiers
+			});
 
 			if (info.ContrailLength > 0)
 				world.AddFrameEndTask(w => w.Add(new ContrailFader(projectilepos, contrail)));

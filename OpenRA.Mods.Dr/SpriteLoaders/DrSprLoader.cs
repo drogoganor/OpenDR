@@ -52,6 +52,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 		class DrSprFrame : ISpriteFrame
 		{
+			public SpriteFrameType Type { get; private set; }
 			public Size Size { get; private set; }
 			public Size FrameSize { get; private set; }
 			public float2 Offset { get; private set; }
@@ -59,27 +60,22 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			public bool DisableExportPadding { get { return false; } }
 			public int2 Hotspot { get; set; }
 
-			public int Growto4(int x)
-			{
-				return x + 3 & ~3;
-			}
-
 			public DrSprFrame(Stream s, SprHeader sph, SprFrameInfo info)
 			{
-				int picindex = info.A * sph.Nrots + info.R;
-				var read_int = new Func<int, int>((off) =>
+				Type = SpriteFrameType.Indexed;
+				var picindex = info.A * sph.Nrots + info.R;
+				var readInt = new Func<int, int>((off) =>
 				{
 					s.Position = off;
-					int vr = s.ReadInt32();
-					return vr;
+					return s.ReadInt32();
 				});
 
-				var picnr = read_int(HeaderSize + picindex * 4);
+				var picnr = readInt(HeaderSize + picindex * 4);
 				if (picnr >= sph.Npics)
 					throw new Exception("Pic number was greater or equal to number of pics.");
 
-				var picoff = read_int(sph.OffPicoffs + 8 * picnr);
-				var nextpicoff = read_int(sph.OffPicoffs + 8 * (picnr + 1));
+				var picoff = readInt(sph.OffPicoffs + 8 * picnr);
+				var nextpicoff = readInt(sph.OffPicoffs + 8 * (picnr + 1));
 				var start = s.Position;
 				s.Position = sph.OffBits + picoff;
 				var tempData = s.ReadBytes(nextpicoff - picoff);
@@ -91,8 +87,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					return vr;
 				});
 
-				int curr = 0;
-				for (int l = 0; l < sph.Szy; ++l)
+				var curr = 0;
+				for (var l = 0; l < sph.Szy; ++l)
 				{
 					int step = 0, currx = 0, cnt, i;
 					while (currx < sph.Szx)
@@ -128,14 +124,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 						throw new Exception("Current x was not equal to the line size.");
 				}
 
-				var dataWidth = sph.Szx;
-				var dataHeight = sph.Szy;
-				if (dataWidth % 2 == 1)
-					dataWidth += 1;
-
-				if (dataHeight % 2 == 1)
-					dataHeight += 1;
-
 				Offset = new float2(0, 0);
 				FrameSize = new Size(sph.Szx, sph.Szy);
 				Size = FrameSize;
@@ -144,7 +132,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			}
 		}
 
-		bool IsDrSpr(Stream s)
+		private bool IsDrSpr(Stream s)
 		{
 			var start = s.Position;
 			var h = new SprHeader()
@@ -194,25 +182,25 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			for (int sect = 0; sect < header.Nsects; ++sect)
 			{
 				s.Position = header.OffSections + 16 * sect;
-				int firstanim = s.ReadInt32();
-				int lastanim = s.ReadInt32();
+				var firstanim = s.ReadInt32();
+				var lastanim = s.ReadInt32();
 				s.ReadInt32(); // Framerate
-				int numhotspots = s.ReadInt32();
+				var numhotspots = s.ReadInt32();
 
-				int bmp_szx = header.Szx * header.Nrots;
-				int bmp_szy = header.Szy * (lastanim - firstanim + 1);
+				var bmp_szx = header.Szx * header.Nrots;
+				var bmp_szy = header.Szy * (lastanim - firstanim + 1);
 
-				int rotOffset = 0;
+				var rotOffset = 0;
 				if (header.Nrots >= 4)
 					rotOffset = header.Nrots / 4;
 
-				for (int r = 0; r < header.Nrots; ++r)
+				for (var r = 0; r < header.Nrots; ++r)
 				{
-					int newR = r + rotOffset;
+					var newR = r + rotOffset;
 					if (newR >= header.Nrots)
 						newR -= header.Nrots;
 
-					for (int a = firstanim; a <= lastanim; ++a)
+					for (var a = firstanim; a <= lastanim; ++a)
 					{
 						var sfi = new SprFrameInfo()
 						{

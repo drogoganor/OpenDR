@@ -150,7 +150,7 @@ namespace OpenRA.Mods.Dr.Orders
 			var rules = world.Map.Rules;
 
 			foreach (var dec in actorInfo.TraitInfos<IPlaceBuildingDecorationInfo>())
-				foreach (var r in dec.Render(wr, world, actorInfo, centerPosition))
+				foreach (var r in dec.RenderAnnotations(wr, world, actorInfo, centerPosition))
 					yield return r;
 
 			var cells = new Dictionary<CPos, CellType>();
@@ -185,7 +185,7 @@ namespace OpenRA.Mods.Dr.Orders
 			var res = world.WorldActor.TraitOrDefault<ResourceLayer>();
 			var isCloseEnough = buildingInfo.IsCloseEnoughToBase(world, world.LocalPlayer, actorInfo, topLeft);
 			foreach (var t in buildingInfo.Tiles(topLeft))
-				cells.Add(t, MakeCellType(isCloseEnough && world.IsCellBuildable(t, actorInfo, buildingInfo) && (res == null || res.GetResource(t) == null)));
+				cells.Add(t, MakeCellType(isCloseEnough && world.IsCellBuildable(t, actorInfo, buildingInfo) && (res == null || res.GetResource(t).Density == 0)));
 
 			var cellPalette = wr.Palette(footprintPlaceBuildingPreviewInfo.Palette);
 			var linePalette = wr.Palette(footprintPlaceBuildingPreviewInfo.LineBuildSegmentPalette);
@@ -198,6 +198,11 @@ namespace OpenRA.Mods.Dr.Orders
 				yield return new SpriteRenderable(tile, pos, new WVec(0, 0, topLeftPos.Z - pos.Z),
 					-511, pal, 1f, true);
 			}
+		}
+
+		public IEnumerable<IRenderable> RenderAnnotations(WorldRenderer wr, World world)
+		{
+			return null;
 		}
 
 		public string GetCursor(World world, CPos cell, int2 worldPixel, MouseInput mi) { return "default"; }

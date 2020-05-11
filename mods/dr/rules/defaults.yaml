@@ -41,7 +41,7 @@
 		Sequence: stand
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-		IdleSequences: idle1,idle2
+		IdleSequences: idle,idle2
 		StandSequences: stand,stand2
 	WithDeathAnimation:
 		DeathSequence: die

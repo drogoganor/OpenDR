@@ -537,8 +537,10 @@ World:
 EditorWorld:
 	Inherits: ^BaseWorld
 	EditorActorLayer:
+	EditorCursorLayer:
 	EditorResourceLayer:
 	EditorSelectionLayer:
+	EditorActionManager:
 	LoadWidgetAtGameStart:
 	MapOptions:
 
@@ -577,6 +579,7 @@ Player:
 	BuildUnitPlaceBuilding:
 	SupportPowerManager:
 	ScriptTriggers:
+	PlayerRadarTerrain:
 	MissionObjectives:
 		WinNotification: Win
 		LoseNotification: Lose

@@ -100,7 +100,11 @@ namespace OpenRA.Mods.Dr.Traits
 
 			var targetPosition = order.Target.CenterPosition + new WVec(WDist.Zero, WDist.Zero, Info.AirburstAltitude);
 
-			Action detonateWeapon = () => self.World.AddFrameEndTask(w => Info.WeaponInfo.Impact(Target.FromPos(targetPosition), self, Enumerable.Empty<int>()));
+			Action detonateWeapon = () => self.World.AddFrameEndTask(w => Info.WeaponInfo.Impact(Target.FromPos(targetPosition), new WarheadArgs
+			{
+				SourceActor = self,
+				DamageModifiers = Enumerable.Empty<int>().ToArray()
+			}));
 
 			self.World.AddFrameEndTask(w => w.Add(new DelayedAction(Info.ActivationDelay, detonateWeapon)));
 
@@ -201,13 +205,18 @@ namespace OpenRA.Mods.Dr.Traits
 			}
 			else
 			{
-				yield return new RangeCircleRenderable(
+				yield return new RangeCircleAnnotationRenderable(
 					world.Map.CenterOfCell(xy),
 					power.Info.TargetCircleRange,
 					0,
 					power.Info.TargetCircleUsePlayerColor ? power.Self.Owner.Color : power.Info.TargetCircleColor,
 					Color.FromArgb(96, Color.Black));
 			}
+		}
+
+		public IEnumerable<IRenderable> RenderAnnotations(WorldRenderer wr, World world)
+		{
+			return null;
 		}
 
 		public string GetCursor(World world, CPos cell, int2 worldPixel, MouseInput mi)

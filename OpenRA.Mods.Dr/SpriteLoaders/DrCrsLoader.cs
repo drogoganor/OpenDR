@@ -19,24 +19,23 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 {
 	public class DrCrsLoader : ISpriteLoader
 	{
-		const int HeaderSize = 32;
-
 		CrsHeader header;
 
-		class CrsHeader
+		private class CrsHeader
 		{
 			public string Magic1;
 			public int Version;
 			public int Nanims;
 		}
 
-		class CrsFrameInfo
+		private class CrsFrameInfo
 		{
 			public int FrameIndex;
 		}
 
-		class DrCrsFrame : ISpriteFrame
+		private class DrCrsFrame : ISpriteFrame
 		{
+			public SpriteFrameType Type { get; private set; }
 			public Size Size { get; private set; }
 			public Size FrameSize { get; private set; }
 			public float2 Offset { get; private set; }
@@ -45,32 +44,29 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			public DrCrsFrame(Stream s, CrsHeader sph, CrsFrameInfo info)
 			{
-				const int Width = 32;
-				const int NumPixels = Width * Width;
-				Data = new byte[NumPixels];
+				Type = SpriteFrameType.Indexed;
+				const int width = 32;
+				const int numPixels = width * width;
+				Data = new byte[numPixels];
 
-				var pixindex = new Func<int, int, int>((x, y) =>
-				{
-					int vr = (y * Width) + x;
-					return vr;
-				});
+				var pixindex = new Func<int, int, int>((x, y) => y * width + x);
 
-				for (int y = 0; y < Width; ++y)
+				for (var y = 0; y < width; ++y)
 				{
-					for (int x = 0; x < Width; ++x)
+					for (var x = 0; x < width; ++x)
 					{
-						int newIndex = pixindex(x, y);
+						var newIndex = pixindex(x, y);
 						Data[newIndex] = s.ReadUInt8();
 					}
 				}
 
 				Offset = new float2(0, 0);
-				FrameSize = new Size(Width, Width);
+				FrameSize = new Size(width, width);
 				Size = FrameSize;
 			}
 		}
 
-		bool IsDrCrs(Stream s)
+		private bool IsDrCrs(Stream s)
 		{
 			var start = s.Position;
 			var h = new CrsHeader()
@@ -97,12 +93,12 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			return true;
 		}
 
-		DrCrsFrame[] ParseFrames(Stream s)
+		private DrCrsFrame[] ParseFrames(Stream s)
 		{
 			var start = s.Position;
 
 			var frames = new List<DrCrsFrame>();
-			for (int i = 0; i < header.Nanims; ++i)
+			for (var i = 0; i < header.Nanims; ++i)
 			{
 				var sfi = new CrsFrameInfo()
 				{
@@ -146,7 +142,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			frames.Reverse(263, 8);
 			frames.Reverse(279, 9);
 
-			bool isDemo = frames.Count < 296;
+			var isDemo = frames.Count < 296;
 			if (!isDemo)
 			{
 				var cursor1 = frames[304];

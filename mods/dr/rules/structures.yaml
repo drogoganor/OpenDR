@@ -951,7 +951,7 @@ TemporalGate:
 		#BeginChargeSpeechNotification: ChronosphereCharging
 		EndChargeSpeechNotification: TemporalGateReady
 		Duration: 500
-		KillCargo: no
+		KillCargo: false
 		DisplayRadarPing: True
 		SelectionCursor: move
 		TargetCursor: attack

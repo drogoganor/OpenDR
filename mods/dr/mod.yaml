@@ -1,6 +1,6 @@
 Metadata:
 	Title: Dark Reign
-	Version: devtest-20200125
+	Version: devtest-20200503
 
 PackageFormats: FtgFile
 
@@ -111,6 +111,7 @@ ChromeLayout:
 	dr|chrome/ingame-player.yaml
 	dr|chrome/color-picker.yaml
 	dr|chrome/mainmenu-prerelease-notification.yaml
+	common|chrome/mainmenu-prompts.yaml
 	common|chrome/ingame-menu.yaml
 	common|chrome/dropdowns.yaml
 	common|chrome/settings.yaml
@@ -180,6 +181,8 @@ Hotkeys:
 
 LoadScreen: LogoStripeLoadScreen
 	Image: dr|uibits/loadscreen.png
+	Image2x: dr|uibits/loadscreen.png
+	Image3x: dr|uibits/loadscreen.png
 	Text: Charging tachyon weapon..., Beaming lasers...
 
 ServerTraits:

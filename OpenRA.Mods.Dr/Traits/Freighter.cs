@@ -187,7 +187,7 @@ namespace OpenRA.Mods.Dr.Traits
 			// Start a search from each refinery's delivery location:
 			List<CPos> path;
 
-			using (var search = PathSearch.FromPoints(self.World, mobile.Locomotor, self, refs.Values.Select(r => r.Location), self.Location, false)
+			using (var search = PathSearch.FromPoints(self.World, mobile.Locomotor, self, refs.Values.Select(r => r.Location), self.Location, BlockedByActor.None)
 				.WithCustomCost(loc =>
 				{
 					if (!refs.ContainsKey(loc))
@@ -197,7 +197,9 @@ namespace OpenRA.Mods.Dr.Traits
 
 					// Too many harvesters clogs up the refinery's delivery location:
 					if (occupancy >= Info.MaxUnloadQueue)
-						return Constants.InvalidNode;
+						return int.MaxValue;
+
+					// return PathGraph.CostForInvalidCell;
 
 					// Prefer refineries with less occupancy (multiplier is to offset distance cost):
 					return occupancy * Info.UnloadQueueCostModifier;
@@ -391,7 +393,7 @@ namespace OpenRA.Mods.Dr.Traits
 					return false;
 
 				// TODO: Update to target water or taelon actors
-				var res = self.World.WorldActor.Trait<ResourceLayer>().GetRenderedResource(location);
+				var res = self.World.WorldActor.Trait<ResourceLayer>().GetResource(location).Type;
 
 				var info = self.Info.TraitInfo<FreighterInfo>();
 

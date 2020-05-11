@@ -27,6 +27,8 @@ Raider:
 	Armament@PRIMARY:
 		LocalOffset: 512,0,112
 		Weapon: LaserRifle
+	WithInfantryBody:
+		IdleSequences: idle
 
 Mercenary:
 	Inherits: ^Infantry
@@ -350,6 +352,8 @@ Guardian:
 		Weapon: LaserRifle
 	WithIdleOverlay@SHADOW: # No animated shadow
 		Sequence: shadow
+	WithInfantryBody:
+		IdleSequences: idle
 
 Bion:
 	Inherits: ^Infantry

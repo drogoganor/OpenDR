@@ -18,14 +18,15 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 {
 	public class DrTilLoader : ISpriteLoader
 	{
-		class TilHeader
+		private class TilHeader
 		{
 			public string Magic1;
 			public int Version;
 		}
 
-		class DrTilFrame : ISpriteFrame
+		private class DrTilFrame : ISpriteFrame
 		{
+			public SpriteFrameType Type { get; private set; }
 			public Size Size { get; private set; }
 			public Size FrameSize { get; private set; }
 			public float2 Offset { get; private set; }
@@ -34,16 +35,15 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			public DrTilFrame(Stream s)
 			{
-				int tileSize = 24;
+				Type = SpriteFrameType.Indexed;
+				const int tileSize = 24;
 
 				Data = new byte[tileSize * tileSize];
 
-				var byt = s.ReadUInt8();
-
-				for (int i = 0; i < tileSize * tileSize; i++)
+				s.ReadUInt8();
+				for (var i = 0; i < tileSize * tileSize; i++)
 				{
-					byt = s.ReadUInt8();
-					Data[i] = byt;
+					Data[i] = s.ReadUInt8();
 				}
 
 				Offset = new float2(0, 0);
@@ -52,7 +52,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			}
 		}
 
-		bool IsDrTil(Stream s)
+		private static bool IsDrTil(Stream s)
 		{
 			var start = s.Position;
 			var h = new TilHeader()
@@ -67,38 +67,34 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				return false;
 			}
 
-			if (h.Version != 0x0240)
-			{
-				s.Position = start;
-				return false;
-			}
-
-			return true;
+			if (h.Version == 0x0240) return true;
+			s.Position = start;
+			return false;
 		}
 
-		DrTilFrame[] ParseFrames(Stream s)
+		private static DrTilFrame[] ParseFrames(Stream s)
 		{
 			var start = s.Position;
 
 			var frames = new List<DrTilFrame>();
 
-			for (int variations = 0; variations < 8; variations++)
+			for (var variations = 0; variations < 8; variations++)
 			{
-				for (int types = 0; types < 16; types++)
+				for (var types = 0; types < 16; types++)
 				{
 					var frame = new DrTilFrame(s);
 					frames.Add(frame);
 				}
 			}
 
-			int chunkSize = 577;
+			const int chunkSize = 577;
 
 			s.Position += chunkSize * 65;
 			s.Position -= 64;
 
-			for (int artIndex = 0; artIndex < 4; artIndex++)
+			for (var artIndex = 0; artIndex < 4; artIndex++)
 			{
-				for (int shoreType = 0; shoreType < 14; shoreType++)
+				for (var shoreType = 0; shoreType < 14; shoreType++)
 				{
 					var frame = new DrTilFrame(s);
 					frames.Add(frame);
