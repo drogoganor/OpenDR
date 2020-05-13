@@ -181,8 +181,8 @@ Hotkeys:
 
 LoadScreen: LogoStripeLoadScreen
 	Image: dr|uibits/loadscreen.png
-	Image2x: dr|uibits/loadscreen.png
-	Image3x: dr|uibits/loadscreen.png
+	Image2x: dr|uibits/loadscreen2x.png
+	Image3x: dr|uibits/loadscreen3x.png
 	Text: Charging tachyon weapon..., Beaming lasers...
 
 ServerTraits:

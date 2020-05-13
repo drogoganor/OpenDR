@@ -33,7 +33,7 @@ dialog2:
 # Same as a pressed button
 dialog3:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 
 # Same as the half transparent frame used in the Asset Browser
 dialog4:
@@ -52,7 +52,7 @@ dialog4:
 # A copy of dialog3 (pressed button)
 progressbar-bg:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of dialog2 (normal button)
 progressbar-thumb:
@@ -67,12 +67,12 @@ button:
 # 5% lighter than a normal button (mouseover)
 button-hover:
 	Image: dialog.png
-	PanelRegion: 512, 128, 1, 1, 126, 126, 1, 1
+	PanelRegion: 148, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of dialog3 (pressed button)
 button-pressed:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 
 # 10% darker than a normal button
 button-disabled:
@@ -82,22 +82,22 @@ button-disabled:
 # 10% darker than a normal button - Used in Settings when you select Display Audio Input or Advanced
 button-highlighted:
 	Image: dialog.png
-	PanelRegion: 768, 128, 1, 1, 126, 126, 1, 1
+	PanelRegion: 768, 256, 1, 1, 126, 126, 1, 1
 
 # A copy of button-highlighted - Used in Settings when you select Display Audio Input or Advanced
 button-highlighted-hover:
 	Image: dialog.png
-	PanelRegion: 768, 128, 1, 1, 126, 126, 1, 1
+	PanelRegion: 768, 256, 1, 1, 126, 126, 1, 1
 
 #  Used in Settings when you select Display Audio Input or Advanced
 button-highlighted-pressed:
 	Image: dialog.png
-	PanelRegion: 896, 128, 1, 1, 126, 126, 1, 1
+	PanelRegion: 740, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of button-highlighted - Used in Settings when you select Display Audio Input or Advanced
 button-highlighted-disabled:
 	Image: dialog.png
-	PanelRegion: 768, 128, 1, 1, 126, 126, 1, 1
+	PanelRegion: 768, 256, 1, 1, 126, 126, 1, 1
 
 # vivid color - Used for the Battlefields News button
 newsbutton:
@@ -118,36 +118,36 @@ newsbutton-highlighted-hover:
 
 newsbutton-highlighted-pressed:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 
 newsbutton-pressed:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of dialog3 (pressed button)
 textfield:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of checkbox-hover
 textfield-hover:
 	Image: dialog.png
-	PanelRegion: 640, 128, 1, 1, 126, 126, 1, 1
+	PanelRegion: 296, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of dialog3 (pressed button)
 textfield-disabled:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of dialog3 (pressed button)
 textfield-focused:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of dialog3 (pressed button)
 scrollpanel-bg:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of dialog2 (normal button)
 scrollpanel-button:
@@ -157,12 +157,12 @@ scrollpanel-button:
 # A copy of button-hover
 scrollpanel-button-hover:
 	Image: dialog.png
-	PanelRegion: 512, 128, 1, 1, 126, 126, 1, 1
+	PanelRegion: 148, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of dialog3 (pressed button)
 scrollpanel-button-pressed:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of dialog2 (normal button)
 scrollpanel-button-disabled:
@@ -177,7 +177,7 @@ slider:
 # A copy of dialog3 (pressed button)
 slider-track:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 	Regions:
 		
 
@@ -188,12 +188,12 @@ slider-thumb:
 # A copy of button-hover
 slider-thumb-hover:
 	Image: dialog.png
-	PanelRegion: 512, 128, 1, 1, 126, 126, 1, 1
+	PanelRegion: 148, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of dialog3 (pressed button)
 slider-thumb-pressed:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of dialog2 (normal button)
 slider-thumb-disabled:
@@ -203,31 +203,31 @@ slider-thumb-disabled:
 # A copy of dialog3 (pressed button)
 checkbox:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 
 checkbox-hover:
 	Image: dialog.png
-	PanelRegion: 640, 128, 1, 1, 126, 126, 1, 1
+	PanelRegion: 296, 512, 1, 1, 126, 126, 1, 1
 
 # Same as a button-disabled-pressed
 checkbox-disabled:
 	Image: dialog.png
-	PanelRegion: 640, 256, 1, 1, 126, 126, 1, 1
+	PanelRegion: 444, 512, 1, 1, 126, 126, 1, 1
 
 # Same as a button-highlighted-pressed
 checkbox-highlighted:
 	Image: dialog.png
-	PanelRegion: 896, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 592, 512, 1, 1, 126, 126, 1, 1
 
 # Same as a button-highlighted-pressed
 checkbox-pressed:
 	Image: dialog.png
-	PanelRegion: 896, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 592, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of dialog3 (pressed button)
 scrollitem-selected:
 	Image: dialog.png
-	PanelRegion: 640, 0, 1, 1, 126, 126, 1, 1
+	PanelRegion: 0, 512, 1, 1, 126, 126, 1, 1
 
 # A copy of dialog2 (normal button)
 scrollitem-hover:
@@ -258,3 +258,49 @@ dropdown:
 	Regions:
 		separator: 512, 1, 1, 19
 		observer-separator: 512, 1, 1, 19
+
+
+observer-scrollpanel-button:
+	Image: dialog.png
+	PanelRegion: 768, 256, 1, 1, 126, 126, 1, 1
+
+observer-scrollpanel-button-hover:
+	Image: dialog.png
+	PanelRegion: 768, 256, 1, 1, 126, 126, 1, 1
+
+observer-scrollpanel-button-pressed:
+	Image: dialog.png
+	PanelRegion: 740, 512, 1, 1, 126, 126, 1, 1
+
+observer-scrollpanel-button-disabled:
+	Image: dialog.png
+	PanelRegion: 888, 512, 1, 1, 126, 126, 1, 1
+
+observer-scrollheader-selected:
+	Image: dialog.png
+	PanelRegion: 888, 512, 1, 1, 126, 126, 1, 1
+
+observer-scrollitem-selected:
+	Image: dialog.png
+	PanelRegion: 740, 512, 1, 1, 126, 126, 1, 1
+
+observer-scrollitem-hover:
+	Image: dialog.png
+	PanelRegion: 768, 256, 1, 1, 126, 126, 1, 1
+
+reload-icon:
+	Image: dialog.png
+	Regions:
+		enabled: 160, 480, 16, 16
+		disabled-0: 176, 480, 16, 16
+		disabled-1: 192, 480, 16, 16
+		disabled-2: 208, 480, 16, 16
+		disabled-3: 224, 480, 16, 16
+		disabled-4: 240, 480, 16, 16
+		disabled-5: 256, 480, 16, 16
+		disabled-6: 272, 480, 16, 16
+		disabled-7: 288, 480, 16, 16
+		disabled-8: 304, 480, 16, 16
+		disabled-9: 320, 480, 16, 16
+		disabled-10: 336, 480, 16, 16
+		disabled-11: 352, 480, 16, 16

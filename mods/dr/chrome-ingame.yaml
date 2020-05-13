@@ -561,30 +561,3 @@ sidebar-button-observer-highlighted-disabled:
 	Image: chrome-ingame.png
 	PanelRegion: 168, 0, 5, 5, 18, 18, 5, 5
 
-observer-scrollpanel-button:
-	Image: dialog.png
-	PanelRegion: 768, 256, 1, 1, 126, 126, 1, 1
-
-observer-scrollpanel-button-hover:
-	Image: dialog.png
-	PanelRegion: 768, 256, 1, 1, 126, 126, 1, 1
-
-observer-scrollpanel-button-pressed:
-	Image: dialog.png
-	PanelRegion: 896, 256, 1, 1, 126, 126, 1, 1
-
-observer-scrollpanel-button-disabled:
-	Image: dialog.png
-	PanelRegion: 768, 384, 1, 1, 126, 126, 1, 1
-
-observer-scrollheader-selected:
-	Image: dialog.png
-	PanelRegion: 768, 384, 1, 1, 126, 126, 1, 1
-
-observer-scrollitem-selected:
-	Image: dialog.png
-	PanelRegion: 896, 256, 1, 1, 126, 126, 1, 1
-
-observer-scrollitem-hover:
-	Image: dialog.png
-	PanelRegion: 768, 256, 1, 1, 126, 126, 1, 1
