@@ -41,7 +41,7 @@
 		Sequence: stand
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
-		IdleSequences: idle,idle2
+		IdleSequences: idle
 		StandSequences: stand,stand2
 	WithDeathAnimation:
 		DeathSequence: die
@@ -140,6 +140,10 @@
 	Inherits@3: ^SpriteActor
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	WithInfantryBody:
+		IdleSequences: stand
+		StandSequences: stand
+		DefaultAttackSequence: shoot
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 80
@@ -194,8 +198,6 @@
 	AttackFrontal:
 	QuantizeFacingsFromSequence:
 		Sequence: stand
-	WithInfantryBody:
-		DefaultAttackSequence: shoot
 	HitShape:
 	MapEditorData:
 		Categories: Vehicle

@@ -375,12 +375,14 @@ ucfrgst0:
 	idle:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	stand:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	harvest:
 		Start: 48
@@ -484,12 +486,14 @@ ufratst0:
 	idle:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	stand:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	icon: ufratmn0
 
@@ -508,12 +512,14 @@ ufsktst0:
 	stand:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	idle:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	muzzle: ufsktac0
 		Start: 16
@@ -540,12 +546,14 @@ ufthnst0:
 	stand:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	idle:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	icon: ufthnmn0
 
@@ -564,11 +572,14 @@ ufphtst0:
 	stand:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	idle:
 		Start: 0
 		Facings: 16
+		Length: 1
+		Stride: 3
 	icon: ufphtmn0
 
 # Flak Jack
@@ -577,7 +588,7 @@ ufflkst0:
 		Start: 0
 		Facings: 8
 		Length: 8
-		Tick: 100
+		Tick: 50
 	shoot:
 		Start: 64
 		Facings: 8
@@ -586,13 +597,14 @@ ufflkst0:
 	stand:
 		Start: 0
 		Facings: 8
-		Length: 8
+		Length: 1
+		Stride: 8
 		Tick: 100
 	idle:
 		Start: 0
 		Facings: 8
-		Length: 8
-		Tick: 100
+		Length: 1
+		Stride: 8
 	icon: ufflkmn0
 
 # Triple Rail Hover Tank
@@ -634,12 +646,14 @@ uffarst0:
 	stand:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	idle:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	icon: uffarmn0
 
@@ -690,12 +704,14 @@ ufswvst0:
 	stand:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	idle:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	turret: ufswvac0
 		Start: 0
@@ -717,12 +733,14 @@ ucwcost0:
 	stand:
 		Start: 0
 		Facings: 16
-		Length: 4
+		Length: 1
+		Stride: 4
 		Tick: 100
 	idle:
 		Start: 0
 		Facings: 16
-		Length: 4
+		Length: 1
+		Stride: 4
 		Tick: 100
 	icon: ucwcomn0
 
@@ -741,12 +759,14 @@ ufphrst0:
 	stand:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	idle:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	icon: ufphrmn0
 
@@ -889,16 +909,18 @@ uishrst0:
 		Start: 0
 		Facings: 16
 		Length: 4
-		Tick: 100
+		Tick: 50
 	stand:
 		Start: 0
 		Facings: 16
-		Length: 4
+		Length: 1
+		Stride: 4
 		Tick: 100
 	idle:
 		Start: 0
 		Facings: 16
-		Length: 4
+		Length: 1
+		Stride: 4
 		Tick: 100
 	icon: uishrmn0
 
@@ -917,12 +939,14 @@ uihosst0:
 	stand:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	idle:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	icon: uihosmn0
 
@@ -1012,8 +1036,10 @@ uftrast0:
 		Length: 10
 		Tick: 100
 	idle:
-		Start: 48
+		Start: 56
 		Facings: 8
+		Length: 10
+		Tick: 100
 	stand:
 		Start: 48
 		Facings: 8
@@ -1044,7 +1070,8 @@ ufganst0:
 	stand:
 		Start: 160
 		Facings: 8
-		Length: 10
+		Length: 1
+		Stride: 10
 		Tick: 60
 	muzzle: ufganac0
 		Start: 8
@@ -1077,7 +1104,8 @@ unpwcst0:
 	stand:
 		Start: 0
 		Facings: 8
-		Length: 8
+		Length: 1
+		Stride: 8
 		Tick: 60
 	shadow: ucmensh0
 		Length: 1
@@ -1106,7 +1134,8 @@ ufgrest0:
 	stand:
 		Start: 0
 		Facings: 8
-		Length: 10
+		Length: 1
+		Stride: 10
 		Tick: 60
 	muzzle: ufgreac0
 		Start: 8
@@ -1140,7 +1169,8 @@ ufridst0:
 	stand:
 		Start: 0
 		Facings: 8
-		Length: 10
+		Length: 1
+		Stride: 10
 		Tick: 60
 	muzzle: ufgreac0
 		Start: 8
@@ -1191,12 +1221,14 @@ ufrt2st0:
 	idle:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	stand:
 		Start: 0
 		Facings: 16
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	muzzle: ufrt2ac0
 		Start: 16
@@ -1265,16 +1297,18 @@ uishrst1:
 		Start: 0
 		Facings: 16
 		Length: 4
-		Tick: 100
+		Tick: 50
 	stand:
 		Start: 0
 		Facings: 16
-		Length: 4
+		Length: 1
+		Stride: 4
 		Tick: 100
 	idle:
 		Start: 0
 		Facings: 16
-		Length: 4
+		Length: 1
+		Stride: 4
 		Tick: 100
 	icon: uishrmn1
 
@@ -1335,12 +1369,14 @@ uiempst0:
 	idle:
 		Start: 0
 		Facings: 8
-		Length: 8
+		Length: 1
+		Stride: 8
 		Tick: 100
 	stand:
 		Start: 0
 		Facings: 8
-		Length: 8
+		Length: 1
+		Stride: 8
 		Tick: 100
 	run:
 		Start: 0
@@ -1359,12 +1395,14 @@ uiterst0:
 	idle:
 		Start: 0
 		Facings: 8
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	stand:
 		Start: 0
 		Facings: 8
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	run:
 		Start: 0
@@ -1383,12 +1421,14 @@ uiterst1:
 	idle:
 		Start: 0
 		Facings: 8
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	stand:
 		Start: 0
 		Facings: 8
-		Length: 3
+		Length: 1
+		Stride: 3
 		Tick: 100
 	run:
 		Start: 0

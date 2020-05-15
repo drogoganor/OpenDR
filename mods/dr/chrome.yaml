@@ -60,6 +60,9 @@ cash-icons:
 order-icons:
 	Inherits: ^Glyphs
 	Regions:
+		debug: 85, 68, 16, 16
+		debug-disabled: 85, 85, 16, 16
+		debug-active: 85, 102, 16, 16
 		repair: 136, 68, 16, 16
 		repair-disabled: 136, 85, 16, 16
 		repair-active: 136, 102, 16, 16

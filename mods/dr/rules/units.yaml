@@ -27,8 +27,6 @@ Raider:
 	Armament@PRIMARY:
 		LocalOffset: 512,0,112
 		Weapon: LaserRifle
-	WithInfantryBody:
-		IdleSequences: idle
 
 Mercenary:
 	Inherits: ^Infantry
@@ -59,6 +57,8 @@ Mercenary:
 		Weapon: RailGun
 	WithIdleOverlay@SHADOW: # No animated shadow
 		Sequence: shadow
+	WithInfantryBody:
+		IdleSequences: idle, idle2
 
 Sniper:
 	Inherits: ^Infantry
@@ -107,7 +107,7 @@ Sniper:
 	WithDisguisingInfantryBody:
 		MoveSequence: run
 		DefaultAttackSequence: attack
-		IdleSequences: idle
+		IdleSequences: idle2
 		StandSequences: stand
 	WithDecoration@disguise:
 		Image: pips
@@ -162,7 +162,7 @@ Scout:
 	WithDisguisingInfantryBody:
 		MoveSequence: run
 		DefaultAttackSequence: attack
-		IdleSequences: idle
+		IdleSequences: idle2
 		StandSequences: stand
 	WithDecoration@disguise:
 		Image: pips
@@ -210,8 +210,6 @@ Medic:
 		ValidTargets: Infantry
 	WithIdleOverlay@SHADOW: # No animated shadow
 		Sequence: shadow
-	WithInfantryBody:
-		IdleSequences: idle
 
 Saboteur:
 	Inherits: ^Infantry
@@ -324,8 +322,6 @@ Martyr:
 		DamageSource: Killer
 	WithIdleOverlay@SHADOW: # No animated shadow
 		Sequence: shadow
-	WithInfantryBody:
-		IdleSequences: idle
 
 Guardian:
 	Inherits: ^Infantry
@@ -356,8 +352,6 @@ Guardian:
 		Weapon: LaserRifle
 	WithIdleOverlay@SHADOW: # No animated shadow
 		Sequence: shadow
-	WithInfantryBody:
-		IdleSequences: idle
 
 Bion:
 	Inherits: ^Infantry
@@ -390,6 +384,8 @@ Bion:
 		Weapon: PlasmaRifle
 	WithIdleOverlay@SHADOW: # No animated shadow
 		Sequence: shadow
+	WithInfantryBody:
+		IdleSequences: idle, idle2
 
 Exterminator:
 	Inherits: ^Infantry
@@ -423,8 +419,6 @@ Exterminator:
 	Armament@PRIMARY:
 		Weapon: PolyAcid
 	Hovers:
-	WithInfantryBody:
-		IdleSequences: idle
 
 Infiltrator:
 	Inherits: ^Infantry
@@ -1139,6 +1133,8 @@ Amper:
 		Type: TankPlating
 	Armament:
 		Weapon: AmperAmp
+	WithInfantryBody:
+		IdleSequences: idle, idle2
 
 MAD:
 	Inherits: ^HoverVehicle
@@ -1509,8 +1505,6 @@ Gant:
 		ZOffset: -129
 	WithTurretAttackAnimation:
 		Sequence: muzzle
-	WithInfantryBody:
-		IdleSequences: idle
 
 Ranger:
 	Inherits: ^Infantry
@@ -1595,8 +1589,6 @@ Grendel:
 		ZOffset: -129
 	Armament:
 		Weapon: ElectroBlast
-	WithInfantryBody:
-		IdleSequences: idle
 
 GrendelRider:
 	Inherits: ^Infantry
@@ -1629,8 +1621,6 @@ GrendelRider:
 		ZOffset: -129
 	Armament:
 		Weapon: ElectroBlast
-	WithInfantryBody:
-		IdleSequences: idle
 
 # Shadowhand
 
@@ -1667,8 +1657,6 @@ Reaper:
 	WithShadow: # Reaper re-uses the flak shadow, ufflksh0, but its sequences don't match up exactly to the reaper sprite so we can't use it via Combine syntax
 		Offset: 122, 56, 0
 		ZOffset: -129
-	WithInfantryBody:
-		IdleSequences: idle
 
 # Vehicles
 

@@ -1,10 +1,7 @@
 
 # Same as TripleRailTankVoice but with human death sounds
 GoreHunterVoice:
-	Inherits: GenericHumanVoice
-	Voices:
-		Select: gvtrtsl1, gvtrtsl2, gvtrtsl3, gvtrtal0
-		Action: gvtrtrl0, gvtrtrl1, gvtrtrl2, gvtrtrl3
+	Inherits: JebRadecVoice
 
 ShockTrooperVoice:
 	Inherits: GenericHumanVoice
