@@ -49,38 +49,34 @@ namespace OpenRA.Mods.Dr.Activities
 
 		public override bool Tick(Actor self)
 		{
-			if (IsCanceling || self.IsDead)
-				return true;
+			if (IsCanceling || self.IsDead) return true;
 
-			if (centerBuildingTarget.IsInRange(self.CenterPosition, minRange))
+			if (!centerBuildingTarget.IsInRange(self.CenterPosition, minRange)) return true;
+
+			if (!world.CanPlaceBuilding(topLeft, buildingActor, buildingInfo, self))
 			{
-				if (!world.CanPlaceBuilding(topLeft, buildingActor, buildingInfo, self))
-				{
-					// Try clear the area
-					foreach (var ord in ClearBlockersOrders(self, world, topLeft))
-						world.IssueOrder(ord);
+				// Try clear the area
+				foreach (var ord in ClearBlockersOrders(self, world, topLeft))
+					world.IssueOrder(ord);
 
-					Game.Sound.PlayNotification(world.Map.Rules, self.Owner, "Speech", "BuildingCannotPlaceAudio", faction);
-					return true;
-				}
-
-				self.World.AddFrameEndTask(w =>
-				{
-					w.CreateActor(true, order.TargetString, new TypeDictionary
-						{
-							new LocationInit(topLeft),
-							new OwnerInit(order.Player),
-							new FactionInit(faction),
-							new PlaceBuildingInit()
-						});
-
-					Game.Sound.PlayNotification(self.World.Map.Rules, order.Player, "Speech", "Building", faction);
-				});
-
-				self.QueueActivity(new RemoveSelf());
-
+				Game.Sound.PlayNotification(world.Map.Rules, self.Owner, "Speech", "BuildingCannotPlaceAudio", faction);
 				return true;
 			}
+
+			self.World.AddFrameEndTask(w =>
+			{
+				w.CreateActor(true, order.TargetString, new TypeDictionary
+				{
+					new LocationInit(topLeft),
+					new OwnerInit(order.Player),
+					new FactionInit(faction),
+					new PlaceBuildingInit()
+				});
+
+				Game.Sound.PlayNotification(self.World.Map.Rules, order.Player, "Speech", "Building", faction);
+			});
+
+			self.QueueActivity(new RemoveSelf());
 
 			return true;
 		}

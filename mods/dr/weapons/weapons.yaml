@@ -608,13 +608,17 @@ CycloneCannon:
 
 SuicideNuke:
 	Inherits: ^B1
-	Range: 2c0
+	Range: 1c512
 	ReloadDelay: 14
 	Projectile: Bullet
 		Speed: 4096
 		Shadow: False
-	Warhead@1Dam_impact: SpreadDamage
+	Warhead@2Dam_impact: SpreadDamage
 		Spread: 2c512
+		Damage: 5
+		AffectsParent: true
+	Warhead@1Dam_impact: SpreadDamage
+		Spread: 1c256
 		Damage: 180
 		AffectsParent: true
 	Warhead@3Eff_impact: CreateEffect
