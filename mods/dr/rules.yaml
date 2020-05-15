@@ -237,18 +237,22 @@
 		Name: F. Guard
 		InternalName: fguard
 		Side: Original
+		Description: Freedom Guard
 	Faction@1:
 		Name: Imperium
 		InternalName: imperium
 		Side: Original
+		Description: Imperium
 	Faction@2:
 		Name: Xenite
 		InternalName: xenite
 		Side: Original
+		Description: Xenite
 	Faction@3:
 		Name: Shadowhand
 		InternalName: shadowhand
 		Side: Original
+		Description: Shadowhand
 	Faction@4:
 		Name: Any
 		InternalName: Random
@@ -259,11 +263,13 @@
 		Name: Togran
 		InternalName: togran
 		Side: Addon
+		Description: Togran
 	Faction@6:
 		Name: Terrorist
 		InternalName: terrorist
 		Side: Addon
 		Selectable: false
+		Description: Terrorist
 	Faction@7:
 		Name: Any (All)
 		InternalName: RandomAll
@@ -466,6 +472,8 @@ World:
 	MapBuildRadius:
 		AllyBuildRadiusCheckboxDisplayOrder: 4
 		BuildRadiusCheckboxDisplayOrder: 5
+		BuildRadiusCheckboxVisible: False
+		AllyBuildRadiusCheckboxVisible: False
 	MapOptions:
 		GameSpeed: fast
 		ShortGameCheckboxDisplayOrder: 2
@@ -572,7 +580,7 @@ Player:
 		LowPowerModifier: 100
 	Shroud:
 		FogCheckboxDisplayOrder: 3
-		ExploredMapCheckboxEnabled: True
+		ExploredMapCheckboxEnabled: False
 		FogCheckboxEnabled: True
 	PlaceBuilding:
 		NewOptionsNotificationDelay: 0

@@ -295,7 +295,7 @@
 	CashTrickler:
 		RequiresCondition: enable-ai-cash
 		Amount: 200
-		Interval: 10
+		Interval: 100
 		ShowTicks: False
 
 ^TrainingFacility.Constructing:

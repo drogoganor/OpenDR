@@ -199,8 +199,6 @@ namespace OpenRA.Mods.Dr.Traits
 					if (occupancy >= Info.MaxUnloadQueue)
 						return int.MaxValue;
 
-					// return PathGraph.CostForInvalidCell;
-
 					// Prefer refineries with less occupancy (multiplier is to offset distance cost):
 					return occupancy * Info.UnloadQueueCostModifier;
 				}))

@@ -27,7 +27,6 @@ namespace OpenRA.Mods.Dr.Activities
 		readonly IFacing facing;
 		readonly ResourceClaimLayer claimLayer;
 
-		// readonly ResourceLayer resLayer;
 		readonly BodyOrientation body;
 		readonly IMove move;
 		readonly CPos targetCell;
@@ -42,7 +41,6 @@ namespace OpenRA.Mods.Dr.Activities
 			move = self.Trait<IMove>();
 			claimLayer = self.World.WorldActor.Trait<ResourceClaimLayer>();
 
-			// resLayer = self.World.WorldActor.Trait<ResourceLayer>();
 			this.targetCell = targetCell;
 			notifyHarvesterActions = self.TraitsImplementing<INotifyFreighterAction>().ToArray();
 		}

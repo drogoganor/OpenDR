@@ -43,18 +43,22 @@ shroud:
 
 ncwel1l0:
 	idle: base|ncwel1l0
+		ZOffset: -8196
 		Length: 1
 		Start: 1
 
 ncmin1l0:
 	idle: base|ncmin1l0
+		ZOffset: -8196
 		Length: 1
 		Start: 1
 
 resources:
 	water1: ncwel1l0
+		ZOffset: -8196
 		Length: *
 	taelon1: ncmin1l0
+		ZOffset: -8196
 		Length: *
 
 mpspawn:

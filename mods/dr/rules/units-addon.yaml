@@ -23,7 +23,7 @@ ShockTrooper:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -54,7 +54,7 @@ GoreHunter:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 64
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -85,7 +85,7 @@ TickTank:
 	RevealsShroud:
 		Range: 7c0
 	Mobile:
-		Speed: 128
+		Speed: 126
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -127,7 +127,7 @@ WalkerScout:
 	Armor:
 		Type: TankPlating
 	Mobile:
-		Speed: 160
+		Speed: 126
 		PauseOnCondition: notmobile
 	Cargo:
 		Types: Infantry
@@ -171,7 +171,7 @@ HoverAssaultTank:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 192
+		Speed: 148
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -211,7 +211,7 @@ FlamingDeath:
 	RevealsShroud:
 		Range: 7c0
 	Mobile:
-		Speed: 112
+		Speed: 96
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -251,7 +251,7 @@ VortexTank:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 162
+		Speed: 126
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -291,7 +291,7 @@ SonicThumper:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -322,7 +322,7 @@ ScoutAlt:
 	Armor:
 		Type: FlyingArmour
 	Aircraft:
-		Speed: 288
+		Speed: 174
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -351,7 +351,7 @@ LardriddenTerroristSoldierVeteran:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 72
+		Speed: 66
 	Armor:
 		Type: PowerHuman
 	Armament@PRIMARY:
@@ -398,7 +398,7 @@ RastaTerroristSoldierVeteran:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -425,7 +425,7 @@ RastaTerroristSoldier:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -457,7 +457,7 @@ StealthChopper:
 	Armor:
 		Type: FlyingArmour
 	Aircraft:
-		Speed: 288
+		Speed: 174
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -482,7 +482,7 @@ TerroristTransport:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 128
+		Speed: 96
 		PauseOnCondition: notmobile
 	Cargo:
 		Types: Infantry
@@ -513,7 +513,7 @@ TerroristAirRifterAlternate:
 	Armor:
 		Type: FlyingArmour
 	Aircraft:
-		Speed: 192
+		Speed: 126
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -538,7 +538,7 @@ TerroristMissileTank:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 144
+		Speed: 102
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -565,7 +565,7 @@ TerroristArtillery:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -591,7 +591,7 @@ TerroristAirborneTroopCarrier:
 	Armor:
 		Type: FlyingArmour
 	Aircraft:
-		Speed: 240
+		Speed: 150
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -616,7 +616,7 @@ AlternateLardriddenTerroristSoldier:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 128
+		Speed: 96
 	Armor:
 		Type: ToughHuman
 	-Crushable:
@@ -647,7 +647,7 @@ ArmoredGuardWalker:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 112
+		Speed: 96
 	Armor:
 		Type: TankPlating
 	#Armament@PRIMARY:
@@ -686,7 +686,7 @@ ATATWalker:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -725,7 +725,7 @@ ConstructionCrawler:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: TankPlating
 
@@ -747,7 +747,7 @@ Santa:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 76
+		Speed: 64
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -775,7 +775,7 @@ GoreBeast:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 112
+		Speed: 96
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -803,7 +803,7 @@ GunWalker:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 156
+		Speed: 108
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -839,7 +839,7 @@ SuicideBot:
 	RevealsShroud:
 		Range: 5c0
 	Aircraft:
-		Speed: 96
+		Speed: 78
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -878,7 +878,7 @@ TickTankAlt: # Not very good
 	RevealsShroud:
 		Range: 7c0
 	Mobile:
-		Speed: 156
+		Speed: 106
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -914,7 +914,7 @@ SonicThumperAlternate: # Terrible, bounces when it walks
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -941,7 +941,7 @@ SkateyScout:
 	RevealsShroud:
 		Range: 12c0
 	Mobile:
-		Speed: 144
+		Speed: 102
 	Armor:
 		Type: ToughHuman
 	Hovers:
@@ -969,7 +969,7 @@ TerroristAirRifter:
 	Armor:
 		Type: FlyingArmour
 	Aircraft:
-		Speed: 160
+		Speed: 128
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -994,7 +994,7 @@ TerroristWaterborneTroopCarrier:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 112
+		Speed: 96
 	Armor:
 		Type: TankPlating
 
@@ -1015,7 +1015,7 @@ TerroristWAA:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: TankPlating
 
@@ -1036,7 +1036,7 @@ TerroristWaterTank:
 	RevealsShroud:
 		Range: 7c0
 	Mobile:
-		Speed: 112
+		Speed: 96
 	Armor:
 		Type: TankPlating
 
@@ -1057,7 +1057,7 @@ TerroristWaterShock:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -1082,7 +1082,7 @@ TerroristBreakerBoys:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: ToughHuman
 
@@ -1106,7 +1106,7 @@ TerroristHospitalUnit:
 	Armor:
 		Type: FlyingArmour
 	Aircraft:
-		Speed: 188
+		Speed: 96
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover

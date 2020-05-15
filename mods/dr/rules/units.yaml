@@ -21,7 +21,7 @@ Raider:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -52,7 +52,7 @@ Mercenary:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -82,7 +82,7 @@ Sniper:
 	RevealsShroud:
 		Range: 12c0
 	Mobile:
-		Speed: 144
+		Speed: 102
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -139,7 +139,7 @@ Scout:
 	RevealsShroud:
 		Range: 12c0
 	Mobile:
-		Speed: 144
+		Speed: 102
 	Armor:
 		Type: ToughHuman
 	WithIdleOverlay@SHADOW: # No animated shadow
@@ -196,7 +196,7 @@ Medic:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -236,7 +236,7 @@ Saboteur:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 144
+		Speed: 102
 	Armor:
 		Type: ToughHuman
 	EngineerRepair:
@@ -268,7 +268,7 @@ Mechanic:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 144
+		Speed: 102
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -305,7 +305,7 @@ Martyr:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 192
+		Speed: 126
 	Armor:
 		Type: ToughHuman
 	Armament@PRIMARY:
@@ -349,7 +349,7 @@ Guardian:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: PowerHuman
 	Armament@PRIMARY:
@@ -383,7 +383,7 @@ Bion:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 72
+		Speed: 66
 	Armor:
 		Type: PowerHuman
 	Armament@PRIMARY:
@@ -417,7 +417,7 @@ Exterminator:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 192
+		Speed: 126
 	Armor:
 		Type: PowerHuman
 	Armament@PRIMARY:
@@ -446,7 +446,7 @@ Infiltrator:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 144
+		Speed: 102
 	Armor:
 		Type: ToughHuman
 	Disguise:
@@ -509,7 +509,7 @@ ConstructionRig:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 72
+		Speed: 66
 	Armor:
 		Type: TankPlating
 	Passenger:
@@ -577,7 +577,7 @@ Freighter:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 120
+		Speed: 90
 	Armor:
 		Type: TankPlating
 	WithDrDockingAnimation:
@@ -618,7 +618,7 @@ HoverFreighter:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 192
+		Speed: 126
 	Armor:
 		Type: TankPlating
 	WithDrDockingAnimation:
@@ -654,7 +654,7 @@ SpiderBike:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 288
+		Speed: 174
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -684,7 +684,7 @@ RAT:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 216
+		Speed: 138
 		PauseOnCondition: notmobile
 	Cargo:
 		Types: Infantry
@@ -730,7 +730,7 @@ SkirmishTank:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 192
+		Speed: 126
 	Armor:
 		Type: TankPlating
 
@@ -756,7 +756,7 @@ TankHunter:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 240
+		Speed: 150
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -784,7 +784,7 @@ PhaseTank:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 144
+		Speed: 102
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -813,7 +813,7 @@ FlakJack:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 144
+		Speed: 102
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -843,7 +843,7 @@ TripleRailHoverTank:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 144
+		Speed: 102
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -884,7 +884,7 @@ HellstormArtillery:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 96
+		Speed: 64
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -912,7 +912,7 @@ ShockWave:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 96
+		Speed: 48
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -983,7 +983,7 @@ PhaseRunner:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 156
+		Speed: 78
 		PauseOnCondition: notmobile
 	Cargo:
 		Types: Infantry
@@ -1018,7 +1018,7 @@ ScoutRunner:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 240
+		Speed: 150
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -1048,7 +1048,7 @@ ITT:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 240
+		Speed: 150
 		PauseOnCondition: notmobile
 	Cargo:
 		Types: Infantry
@@ -1093,7 +1093,7 @@ PlasmaTank:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 192
+		Speed: 126
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -1134,7 +1134,7 @@ Amper:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -1165,7 +1165,7 @@ MAD:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 192
+		Speed: 126
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -1193,7 +1193,7 @@ Shredder:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 240
+		Speed: 150
 		Locomotor: shredder
 	Armor:
 		Type: ForcePlating
@@ -1223,7 +1223,7 @@ HostageTaker:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 240
+		Speed: 150
 	Armor:
 		Type: TankPlating
 
@@ -1251,7 +1251,7 @@ TachionTank:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 144
+		Speed: 102
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -1281,7 +1281,7 @@ Scarab:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 72
+		Speed: 64
 	Armor:
 		Type: TankPlating
 	Armament:
@@ -1320,7 +1320,7 @@ SkyBike:
 		AmmoCondition: ammo
 		ReloadDelay: 10 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
-		Speed: 336
+		Speed: 198
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -1356,7 +1356,7 @@ Outrider:
 		AmmoCondition: ammo
 		ReloadDelay: 20 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
-		Speed: 288
+		Speed: 174
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -1383,7 +1383,7 @@ ReconDrone:
 	Armor:
 		Type: FlyingArmour
 	Aircraft:
-		Speed: 192
+		Speed: 126
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -1419,7 +1419,7 @@ Cyclone:
 		AmmoCondition: ammo
 		ReloadDelay: 40 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
-		Speed: 288
+		Speed: 174
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -1458,7 +1458,7 @@ SkyFortress:
 		AmmoCondition: ammo
 		ReloadDelay: 200 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
-		Speed: 120
+		Speed: 90
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -1490,7 +1490,7 @@ Gant:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 168
+		Speed: 114
 	Armor:
 		Type: ToughHuman
 	Turreted:
@@ -1532,7 +1532,7 @@ Ranger:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 144
+		Speed: 102
 	Armor:
 		Type: ToughHuman
 	WithIdleOverlay@SHADOW: # No animated shadow
@@ -1558,7 +1558,7 @@ PowerSpiker:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: ToughHuman
 	WithIdleOverlay@SHADOW: # No animated shadow
@@ -1587,7 +1587,7 @@ Grendel:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 120
+		Speed: 90
 	Armor:
 		Type: PowerHuman
 	WithShadow:
@@ -1595,6 +1595,8 @@ Grendel:
 		ZOffset: -129
 	Armament:
 		Weapon: ElectroBlast
+	WithInfantryBody:
+		IdleSequences: idle
 
 GrendelRider:
 	Inherits: ^Infantry
@@ -1619,7 +1621,7 @@ GrendelRider:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 120
+		Speed: 90
 	Armor:
 		Type: PowerHuman
 	WithShadow:
@@ -1627,6 +1629,8 @@ GrendelRider:
 		ZOffset: -129
 	Armament:
 		Weapon: ElectroBlast
+	WithInfantryBody:
+		IdleSequences: idle
 
 # Shadowhand
 
@@ -1655,7 +1659,7 @@ Reaper:
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: PowerHuman
 	Armament:
@@ -1692,7 +1696,7 @@ RATmk2:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 216
+		Speed: 138
 		PauseOnCondition: notmobile
 	Armor:
 		Type: TankPlating
@@ -1740,7 +1744,7 @@ GeminiTank:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 120
+		Speed: 90
 	Armor:
 		Type: ForcePlating
 	Turreted:
@@ -1775,7 +1779,7 @@ Shadowblade:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 240
+		Speed: 150
 	Armor:
 		Type: ForcePlating
 
@@ -1803,7 +1807,7 @@ Fury:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 120
+		Speed: 90
 	Armor:
 		Type: TankPlating
 	Turreted:
@@ -1844,7 +1848,7 @@ EMPDevice:
 	Armament:
 		Weapon: TachyonCannon
 	Aircraft:
-		Speed: 144
+		Speed: 102
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -1873,7 +1877,7 @@ RoadTerraformer:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: Tank
 	Armament:
@@ -1903,7 +1907,7 @@ MarshTerraformer:
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
-		Speed: 96
+		Speed: 78
 	Armor:
 		Type: Tank
 	Armament:
@@ -1945,7 +1949,7 @@ Avenger:
 		AmmoCondition: ammo
 		ReloadDelay: 40 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
-		Speed: 216
+		Speed: 138
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover
@@ -1984,7 +1988,7 @@ HadesBomber:
 		AmmoCondition: ammo
 		ReloadDelay: 40 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
-		Speed: 240
+		Speed: 150
 	AttackAircraft:
 		FacingTolerance: 20
 		AttackType: Hover

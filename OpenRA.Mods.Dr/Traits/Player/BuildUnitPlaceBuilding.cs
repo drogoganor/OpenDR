@@ -20,19 +20,12 @@ namespace OpenRA.Mods.Dr.Traits
 	[Desc("Allows the player to execute build orders.", " Attach this to the player actor.")]
 	public class BuildUnitPlaceBuildingInfo : ITraitInfo
 	{
-		[Desc("Palette to use for rendering the placement sprite.")]
-		[PaletteReference]
-		public readonly string Palette = TileSet.TerrainPaletteInternalName;
-
-		[Desc("Palette to use for rendering the placement sprite for line build segments.")]
-		[PaletteReference]
-		public readonly string LineBuildSegmentPalette = TileSet.TerrainPaletteInternalName;
-
 		[Desc("Play NewOptionsNotification this many ticks after building placement.")]
 		public readonly int NewOptionsNotificationDelay = 10;
 
+		[NotificationReference("Speech")]
 		[Desc("Notification to play after building placement if new construction options are available.")]
-		public readonly string NewOptionsNotification = "NewOptions";
+		public readonly string NewOptionsNotification = null;
 
 		public object Create(ActorInitializer init) { return new BuildUnitPlaceBuilding(this); }
 	}
