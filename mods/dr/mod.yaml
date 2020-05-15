@@ -98,8 +98,6 @@ Cursors:
 
 Chrome:
 	dr|chrome.yaml
-	dr|chrome-common.yaml
-	dr|chrome-ingame.yaml
 
 Assemblies:
 	dr|OpenRA.Mods.Dr.dll
