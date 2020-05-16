@@ -108,8 +108,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "wreck2", "aowrk001" },
 			{ "wreck3", "aowrk002" },
 			{ "watercrater", "eowcocr0" },
-			{ "water", "impww" },
-			{ "taelon", "impmm" },
 		};
 
 		static Dictionary<string, string> unitNames = new Dictionary<string, string>
@@ -255,7 +253,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "tfgca", "CameraTower" },
 			{ "tfs", "AntiAirTurret.human" },
 			{ "tih1", "HQ.cyborg" },
-			{ "timpre", "Repair.cyborg" }
+			{ "timpre", "Repair.cyborg" },
+			{ "impww", "Water" },
+			{ "impmn", "Taelon" }
 		};
 
 		protected bool ValidateArguments(string[] args)
@@ -500,16 +500,57 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							else if (!knownUnknownBuildings.Contains(type))
 								throw new Exception("Unknown building name: " + type);
 
+							var isResource = type == "impww" || type == "impmn";
+							var ownerName = isResource
+								? "Neutral"
+								: MapPlayers.Players.Values.First(p => p.Team == playerIndex).Name;
+
+							if (isResource == true)
+							{
+								throw new ArgumentException("FART");
+							}
+
 							if (x >= 0 && y >= 0 && !string.IsNullOrEmpty(matchingActor))
 							{
 								var ar = new ActorReference(matchingActor)
-							{
-								new LocationInit(new CPos(x + 1, y + 1)),
-								new OwnerInit(MapPlayers.Players.Values.First(p => p.Team == playerIndex).Name)
-							};
+								{
+									new LocationInit(new CPos(x + 1, y + 1)),
+									new OwnerInit(ownerName)
+								};
 
 								Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 							}
+						}
+					}
+
+					// Do resources
+					foreach (var scnSection in scnFile.Entries)
+					{
+						if (scnSection.Name != "AddBuildingAt")
+							continue;
+
+						string type = scnSection.Values[1];
+						int x = Convert.ToInt32(scnSection.Values[2]);
+						int y = Convert.ToInt32(scnSection.Values[3]);
+
+						var isResource = type == "impww" || type == "impmn";
+						if (!isResource)
+							continue;
+
+						var matchingActor = string.Empty;
+
+						if (buildingNames.ContainsKey(type))
+							matchingActor = buildingNames[type];
+
+						if (x >= 0 && y >= 0 && !string.IsNullOrEmpty(matchingActor))
+						{
+							var ar = new ActorReference(matchingActor)
+							{
+								new LocationInit(new CPos(x + 1, y + 1)),
+								new OwnerInit("Neutral")
+							};
+
+							Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 						}
 					}
 				}

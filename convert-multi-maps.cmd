@@ -29,6 +29,17 @@ call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/8hitnrun/8hitnrun.MAP"
 call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/8nerf/8nerf.MAP"
 call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/8tarafor/8tarafor.MAP"
 call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/8terran/8terran.MAP"
+call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/8chemy2/8chemy2.MAP"
+call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/6chemyv2/6chemyv2.MAP"
+call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/4chemynt/4chemynt.MAP"
+call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/2chemy/2chemy.MAP"
+call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/6sixway/6sixway.MAP"
+call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/4sixway/4sixway.MAP"
+call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/2sixway/2sixway.MAP"
+call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/8teamwar/8teamwar.MAP"
+call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/6teamwar/6teamwar.MAP"
+call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/4teamwar/4teamwar.MAP"
+call OpenRA.Utility.exe %MOD_ID% --import-dr-map "MULTI/2teamwar/2teamwar.MAP"
 pause
 exit /b
 
