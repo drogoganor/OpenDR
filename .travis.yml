@@ -20,10 +20,6 @@ addons:
     - imagemagick
 
 script:
- - wget http://mirrors.kernel.org/ubuntu/pool/universe/n/nsis/nsis-common_3.03-2_all.deb
- - wget http://mirrors.kernel.org/ubuntu/pool/universe/n/nsis/nsis_3.03-2_amd64.deb
- - sudo dpkg -i nsis-common_3.03-2_all.deb
- - sudo dpkg -i nsis_3.03-2_amd64.deb
  - make
  - |
    . mod.config;
