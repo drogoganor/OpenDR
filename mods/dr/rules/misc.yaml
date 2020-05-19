@@ -102,6 +102,7 @@ temporalriftspewer:
 	Inherits@shape: ^1x1Shape
 	Interactable:
 	RenderSprites:
+		Palette: terrain
 	WithSpriteBody:
 	BodyOrientation:
 	QuantizeFacingsFromSequence:

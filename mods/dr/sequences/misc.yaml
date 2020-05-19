@@ -42,13 +42,13 @@ shroud:
 		Length: *
 
 ncwel1l0:
-	idle: base|ncwel1l0
+	idle: tileset|ncwel1l0
 		ZOffset: -8196
 		Length: 1
 		Start: 1
 
 ncmin1l0:
-	idle: base|ncmin1l0
+	idle: tileset|ncmin1l0
 		ZOffset: -8196
 		Length: 1
 		Start: 1
