@@ -145,6 +145,7 @@ lobby-bits:
 	Regions:
 		spawn-unclaimed: 91, 119, 22, 22
 		spawn-claimed: 68, 119, 22, 22
+        spawn-disabled: 114, 144, 22, 22
 		admin: 170, 0, 6, 5
 		colorpicker: 68, 119, 22, 22
 		huepicker: 136, 0, 7, 15

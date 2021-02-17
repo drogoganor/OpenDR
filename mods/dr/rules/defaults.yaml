@@ -12,6 +12,11 @@
 	QuantizeFacingsFromSequence:
 	RenderSprites:
 
+^PlayerHandicaps:
+	HandicapFirepowerMultiplier:
+	HandicapDamageMultiplier:
+	HandicapProductionTimeMultiplier:
+
 # Infantry
 
 ^Humanoid:
@@ -89,6 +94,7 @@
 	Inherits: ^Humanoid
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@handicaps: ^PlayerHandicaps
 	Buildable:
 		Queue: Infantry
 		BuildAtProductionType: Soldier
@@ -140,6 +146,7 @@
 	Inherits@3: ^SpriteActor
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@handicaps: ^PlayerHandicaps
 	WithInfantryBody:
 		IdleSequences: stand
 		StandSequences: stand
@@ -253,6 +260,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@4: ^SpriteActor
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@handicaps: ^PlayerHandicaps
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 220
@@ -324,6 +332,7 @@
 	Inherits@4: ^SpriteActor
 	Inherits@GAINSEXPERIENCE: ^GainsExperience
 	Inherits@AUTOTARGET: ^AutoTargetGroundAssaultMove
+	Inherits@handicaps: ^PlayerHandicaps
 	#Buildable:
 	#	Queue: Vehicle
 	#	BuildPaletteOrder: 80

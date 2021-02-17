@@ -1,14 +1,16 @@
 Metadata:
 	Title: Dark Reign
-	Version: devtest-20200503
+	Version: {DEV_VERSION}
+	Website: https://github.com/drogoganor/DarkReign
+	WebIcon32: https://www.drogoganor.net/dr/dr_32x32.png
 
 PackageFormats: FtgFile
 
 Packages:
-	~^Content/dr/
-	.
+	~^SupportDir|Content/dr/
+	^EngineDir
 	$dr: dr
-	./mods/common: common
+	^EngineDir/mods/common: common
 	~BARREN/BARREN.TIL
 	~BARREN/BARREN.PAL
 	~BARREN/SPRITES.FTG: barren
@@ -100,9 +102,9 @@ Chrome:
 	dr|chrome.yaml
 
 Assemblies:
-	dr|OpenRA.Mods.Dr.dll
-	common|OpenRA.Mods.Common.dll
-	common|OpenRA.Mods.Cnc.dll
+	^BinDir|OpenRA.Mods.Dr.dll
+	^BinDir|OpenRA.Mods.Common.dll
+	^BinDir|OpenRA.Mods.Cnc.dll
 
 ChromeLayout:
 	dr|chrome/mainmenu.yaml
