@@ -34,7 +34,7 @@ Players:
 		LockFaction: True
 		Faction: imperium
 		LockColor: True
-		Color: FE1100
+		Color: 41FC73
 		LockSpawn: True
 		LockTeam: True
 		Enemies: Freedom Guard
