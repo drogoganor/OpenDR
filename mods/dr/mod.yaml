@@ -8,9 +8,9 @@ PackageFormats: FtgFile
 
 Packages:
 	~^SupportDir|Content/dr/
-	^EngineDir
+	^EngineDir|
 	$dr: dr
-	^EngineDir/mods/common: common
+	^EngineDir|/mods/common: common
 	~BARREN/BARREN.TIL
 	~BARREN/BARREN.PAL
 	~BARREN/SPRITES.FTG: barren
