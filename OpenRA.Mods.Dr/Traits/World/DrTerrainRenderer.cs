@@ -64,7 +64,7 @@ namespace OpenRA.Mods.Common.Traits
 		}
 	}
 
-	public class DrTerrainRendererInfo : ITraitInfo
+	public class DrTerrainRendererInfo : ITraitInfoInterface
 	{
 		[FieldLoader.LoadUsing("LoadShorelines")]
 		public Dictionary<string, DrTerrainShorelineInfo> Shorelines;
@@ -160,7 +160,7 @@ namespace OpenRA.Mods.Common.Traits
 					tile = GetShoreTile(newCell);
 					var sprite = theater.TileSprite(tile);
 					foreach (var kv in spriteLayers)
-						kv.Value.Update(newCell, palette == kv.Key ? sprite : null);
+						kv.Value.Update(newCell, palette == kv.Key ? sprite : null, false);
 				}
 			}
 		}

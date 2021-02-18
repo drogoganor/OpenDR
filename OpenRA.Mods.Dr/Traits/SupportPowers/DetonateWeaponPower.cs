@@ -42,7 +42,7 @@ namespace OpenRA.Mods.Dr.Traits
 		public readonly bool RevealGeneratedShroud = true;
 
 		[Desc("Reveal cells to players with these stances only.")]
-		public readonly Stance CameraStances = Stance.Ally;
+		public readonly PlayerRelationship CameraStances = PlayerRelationship.Ally;
 
 		[Desc("Amount of time before detonation to spawn the camera")]
 		public readonly int CameraSpawnAdvance = 5;
@@ -207,7 +207,9 @@ namespace OpenRA.Mods.Dr.Traits
 					power.Info.TargetCircleRange,
 					0,
 					power.Info.TargetCircleUsePlayerColor ? power.Self.Owner.Color : power.Info.TargetCircleColor,
-					Color.FromArgb(96, Color.Black));
+					2,
+					Color.FromArgb(96, Color.Black),
+					2);
 			}
 		}
 

@@ -16,7 +16,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Common.Traits.Render
 {
-	public class WithDrHarvestAnimationInfo : ITraitInfo, Requires<WithSpriteBodyInfo>, Requires<FreighterInfo>
+	public class WithDrHarvestAnimationInfo : ITraitInfoInterface, Requires<WithSpriteBodyInfo>, Requires<FreighterInfo>
 	{
 		[SequenceReference]
 		[Desc("Displayed while harvesting.")]

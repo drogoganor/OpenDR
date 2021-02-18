@@ -18,7 +18,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Dr.Traits
 {
 	[Desc("Allows the player to execute build orders.", " Attach this to the player actor.")]
-	public class BuildUnitPlaceBuildingInfo : ITraitInfo
+	public class BuildUnitPlaceBuildingInfo : ITraitInfoInterface
 	{
 		[Desc("Play NewOptionsNotification this many ticks after building placement.")]
 		public readonly int NewOptionsNotificationDelay = 10;

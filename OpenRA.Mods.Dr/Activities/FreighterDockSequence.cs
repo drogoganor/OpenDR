@@ -26,7 +26,7 @@ namespace OpenRA.Mods.Dr.Activities
 
 		protected readonly Actor Refinery;
 		protected readonly Freighter Harv;
-		protected readonly int DockAngle;
+		protected readonly WAngle DockAngle;
 		protected readonly bool IsDragRequired;
 		protected readonly WVec DragOffset;
 		protected readonly int DragLength;
@@ -35,7 +35,7 @@ namespace OpenRA.Mods.Dr.Activities
 
 		protected DockingState dockingState;
 
-		public FreighterDockSequence(Actor self, Actor refinery, int dockAngle, bool isDragRequired, WVec dragOffset, int dragLength)
+		public FreighterDockSequence(Actor self, Actor refinery, WAngle dockAngle, bool isDragRequired, WVec dragOffset, int dragLength)
 		{
 			dockingState = DockingState.Turn;
 			Refinery = refinery;

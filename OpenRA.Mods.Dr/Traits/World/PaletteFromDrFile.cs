@@ -22,7 +22,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Dr.Traits
 {
 	[Desc("Load a Dark Reign .PAL palette file. Index 0 is hardcoded to be fully transparent/invisible.")]
-	class PaletteFromDrFileInfo : ITraitInfo, IProvidesCursorPaletteInfo
+	class PaletteFromDrFileInfo : ITraitInfoInterface, IProvidesCursorPaletteInfo
 	{
 		[FieldLoader.Require]
 		[PaletteDefinition]

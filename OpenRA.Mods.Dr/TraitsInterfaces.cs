@@ -15,7 +15,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits
 {
-	public interface IAcceptDrResourcesInfo : ITraitInfo { }
+	public interface IAcceptDrResourcesInfo : ITraitInfoInterface { }
 	public interface IAcceptDrResources
 	{
 		void OnDock(Actor harv, DrDeliverResources dockOrder);

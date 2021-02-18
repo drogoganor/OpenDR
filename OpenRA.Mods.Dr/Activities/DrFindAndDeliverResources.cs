@@ -26,7 +26,6 @@ namespace OpenRA.Mods.Dr.Activities
 		readonly Freighter harv;
 		readonly FreighterInfo harvInfo;
 		readonly Mobile mobile;
-		readonly LocomotorInfo locomotorInfo;
 		readonly ResourceClaimLayer claimLayer;
 		readonly IPathFinder pathFinder;
 		readonly DomainIndex domainIndex;
@@ -45,7 +44,6 @@ namespace OpenRA.Mods.Dr.Activities
 			harv = self.Trait<Freighter>();
 			harvInfo = self.Info.TraitInfo<FreighterInfo>();
 			mobile = self.Trait<Mobile>();
-			locomotorInfo = mobile.Info.LocomotorInfo;
 			claimLayer = self.World.WorldActor.Trait<ResourceClaimLayer>();
 			pathFinder = self.World.WorldActor.Trait<IPathFinder>();
 			domainIndex = self.World.WorldActor.Trait<DomainIndex>();
@@ -197,7 +195,7 @@ namespace OpenRA.Mods.Dr.Activities
 			// Find any harvestable resources:
 			List<CPos> path;
 			using (var search = PathSearch.Search(self.World, mobile.Locomotor, self, BlockedByActor.Stationary, loc =>
-					domainIndex.IsPassable(self.Location, loc, locomotorInfo) && harv.CanHarvestCell(self, loc) && claimLayer.CanClaimCell(self, loc))
+					domainIndex.IsPassable(self.Location, loc, mobile.Locomotor) && harv.CanHarvestCell(self, loc) && claimLayer.CanClaimCell(self, loc))
 				.WithCustomCost(loc =>
 				{
 					if ((loc - searchFromLoc.Value).LengthSquared > searchRadiusSquared)

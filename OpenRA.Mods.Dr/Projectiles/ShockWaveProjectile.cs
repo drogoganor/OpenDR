@@ -106,7 +106,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 		public readonly WDist Width = new WDist(1);
 
 		[Desc("If projectile touches an actor with one of these stances during or after the first bounce, trigger explosion.")]
-		public readonly Stance ValidBounceBlockerStances = Stance.Enemy | Stance.Neutral | Stance.Ally;
+		public readonly PlayerRelationship ValidBounceBlockerStances = PlayerRelationship.Enemy | PlayerRelationship.Neutral | PlayerRelationship.Ally;
 
 		[Desc("Number of projectiles to fire.")]
 		public readonly int NumProjectiles = 12;
@@ -174,7 +174,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 			Target target;
 
 			// subprojectiles facing
-			int facing = 0;
+			WAngle facing;
 
 			var convergePoint = WPos.Lerp(sourcepos, targetpos, info.SpreadUntilDistance.Length, (targetpos - sourcepos).Length);
 			var dx = targetpos.X - sourcepos.X;
@@ -190,7 +190,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 					? Math.Max((args.PassiveTarget - args.Source).Length / speed.Length, 1)
 					: estimatedLifespan;
 
-				facing = (targetpos - sourcepos).Yaw.Facing;
+				facing = (targetpos - sourcepos).Yaw;
 
 				int shiftIndex = (i - (info.NumProjectiles / 2)) * info.Splay;
 				var newRotation = WRot.FromFacing(shiftIndex);

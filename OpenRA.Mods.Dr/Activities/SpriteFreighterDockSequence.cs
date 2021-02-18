@@ -21,7 +21,7 @@ namespace OpenRA.Mods.Dr.Activities
 		readonly WithSpriteBody wsb;
 		readonly WithDrDockingAnimationInfo wda;
 
-		public SpriteFreighterDockSequence(Actor self, Actor refinery, int dockAngle, bool isDragRequired, WVec dragOffset, int dragLength)
+		public SpriteFreighterDockSequence(Actor self, Actor refinery, WAngle dockAngle, bool isDragRequired, WVec dragOffset, int dragLength)
 			: base(self, refinery, dockAngle, isDragRequired, dragOffset, dragLength)
 		{
 			wsb = self.Trait<WithSpriteBody>();

@@ -401,8 +401,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			foreach (var a in Map.ActorDefinitions)
 			{
 				var existing = new ActorReference(a.Value.Value, a.Value.ToDictionary());
-				var pos = existing.InitDict.Get<LocationInit>().Value(null);
-				var owner = existing.InitDict.Get<OwnerInit>();
+				var pos = existing.GetOrDefault<LocationInit>().Value;
+				var owner = existing.Get<OwnerInit>();
 
 				if (pos.X < 0 || pos.X >= size.X ||
 					pos.Y < 0 || pos.Y >= size.Y)

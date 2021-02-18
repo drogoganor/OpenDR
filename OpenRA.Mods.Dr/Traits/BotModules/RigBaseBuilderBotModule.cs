@@ -96,6 +96,9 @@ namespace OpenRA.Mods.Dr.Traits
 		[Desc("Delay (in ticks) until rechecking for new BaseProviders.")]
 		public readonly int CheckForNewBasesDelay = 1500;
 
+		[Desc("Chance that the AI will place the defenses in the direction of the closest enemy building.")]
+		public readonly int PlaceDefenseTowardsEnemyChance = 100;
+
 		[Desc("Minimum range at which to build defensive structures near a combat hotspot.")]
 		public readonly int MinimumDefenseRadius = 5;
 
@@ -203,7 +206,7 @@ namespace OpenRA.Mods.Dr.Traits
 			if (e.Attacker == null || e.Attacker.Disposed)
 				return;
 
-			if (e.Attacker.Owner.Stances[self.Owner] != Stance.Enemy)
+			if (!e.Attacker.Owner.IsAlliedWith(self.Owner))
 				return;
 
 			if (!e.Attacker.Info.HasTraitInfo<ITargetableInfo>())

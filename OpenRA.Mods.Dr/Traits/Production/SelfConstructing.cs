@@ -10,7 +10,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits.Production
 {
-	public class SelfConstructingInfo : WithMakeAnimationInfo, ITraitInfo, Requires<ConditionManagerInfo>
+	public class SelfConstructingInfo : WithMakeAnimationInfo
 	{
 		[Desc("Number of make sequences.")]
 		public readonly int Steps = 3;
@@ -27,8 +27,7 @@ namespace OpenRA.Mods.Dr.Traits.Production
 
 		private readonly WithSpriteBody wsb;
 
-		private readonly ConditionManager conditionManager;
-		private int token = ConditionManager.InvalidConditionToken;
+		private int token = Actor.InvalidConditionToken;
 
 		private ProductionItem productionItem;
 
@@ -41,10 +40,9 @@ namespace OpenRA.Mods.Dr.Traits.Production
 		{
 			Info = info;
 			wsb = init.Self.Trait<WithSpriteBody>();
-			conditionManager = init.Self.Trait<ConditionManager>();
 
-			if (!string.IsNullOrEmpty(Info.Condition) && token == ConditionManager.InvalidConditionToken)
-				token = conditionManager.GrantCondition(init.Self, Info.Condition);
+			if (!string.IsNullOrEmpty(Info.Condition) && token == Actor.InvalidConditionToken)
+				token = init.Self.GrantCondition(Info.Condition);
 		}
 
 		void INotifyCreated.Created(Actor self)
@@ -76,8 +74,8 @@ namespace OpenRA.Mods.Dr.Traits.Production
 		{
 			var world = self.World;
 			var rules = world.Map.Rules;
-			if (token != ConditionManager.InvalidConditionToken)
-				token = conditionManager.RevokeCondition(self, token);
+			if (token != Actor.InvalidConditionToken)
+				token = self.RevokeCondition(token);
 
 			var actorName = Info.Becomes.ToLowerInvariant();
 			var builtBuildingDef = rules.Actors[actorName];

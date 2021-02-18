@@ -177,7 +177,7 @@ namespace OpenRA.Mods.Dr.Orders
 
 			var previewRenderables = preview
 				.SelectMany(p => p.Render(wr, centerPosition))
-				.OrderBy(WorldRenderer.RenderableScreenZPositionComparisonKey);
+				.OrderBy(WorldRenderer.RenderableZPositionComparisonKey);
 
 			foreach (var r in previewRenderables)
 				yield return r;
@@ -185,7 +185,7 @@ namespace OpenRA.Mods.Dr.Orders
 			var res = world.WorldActor.TraitOrDefault<ResourceLayer>();
 			var isCloseEnough = buildingInfo.IsCloseEnoughToBase(world, world.LocalPlayer, actorInfo, topLeft);
 			foreach (var t in buildingInfo.Tiles(topLeft))
-				cells.Add(t, MakeCellType(isCloseEnough && world.IsCellBuildable(t, actorInfo, buildingInfo) && (res == null || res.GetResource(t).Density == 0)));
+				cells.Add(t, MakeCellType(isCloseEnough && world.IsCellBuildable(t, actorInfo, buildingInfo) && (res == null || res.GetResourceDensity(t) == 0)));
 
 			var cellPalette = wr.Palette(footprintPlaceBuildingPreviewInfo.Palette);
 			var linePalette = wr.Palette(footprintPlaceBuildingPreviewInfo.LineBuildSegmentPalette);
@@ -240,6 +240,11 @@ namespace OpenRA.Mods.Dr.Orders
 		{
 			// throw new NotImplementedException();
 			return true;
+		}
+
+		public void SelectionChanged(World world, IEnumerable<Actor> selected)
+		{
+			
 		}
 	}
 }

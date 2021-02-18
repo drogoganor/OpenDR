@@ -110,7 +110,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 		public readonly WDist Width = new WDist(1);
 
 		[Desc("If projectile touches an actor with one of these stances during or after the first bounce, trigger explosion.")]
-		public readonly Stance ValidBounceBlockerStances = Stance.Enemy | Stance.Neutral | Stance.Ally;
+		public readonly PlayerRelationship ValidBounceBlockerStances = PlayerRelationship.Enemy | PlayerRelationship.Neutral | PlayerRelationship.Ally;
 
 		public IProjectile Create(ProjectileArgs args) { return new WarheadTrailProjectile(this, args); }
 
@@ -174,7 +174,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 			Target target;
 
 			// subprojectiles facing
-			int facing = 0;
+			WAngle facing = WAngle.Zero;
 
 			for (int i = 0; i < info.Offsets.Count(); i++)
 			{
@@ -212,7 +212,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 					? Math.Max((args.PassiveTarget - args.Source).Length / speed.Length, 1)
 					: estimatedLifespan;
 
-				facing = (offsetTargetPos - offsetSourcePos).Yaw.Facing;
+				facing = (offsetTargetPos - offsetSourcePos).Yaw;
 				var projectileArgs = new ProjectileArgs
 				{
 					Weapon = args.Weapon,

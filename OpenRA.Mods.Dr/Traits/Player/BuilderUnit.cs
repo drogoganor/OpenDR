@@ -18,7 +18,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Dr.Traits
 {
 	[Desc("Attach this to an actor (a builder unit) to let it select buildings to construct.")]
-	public class BuilderUnitInfo : ITraitInfo
+	public class BuilderUnitInfo : ITraitInfoInterface
 	{
 		[FieldLoader.Require]
 		[Desc("What kind of production will be added (e.g. Building, Infantry, Vehicle, ...)")]
@@ -72,7 +72,7 @@ namespace OpenRA.Mods.Dr.Traits
 			self = init.Self;
 			Info = info;
 
-			Faction = init.Contains<FactionInit>() ? init.Get<FactionInit, string>() : self.Owner.Faction.InternalName;
+			Faction = init.GetValue<FactionInit, string>(self.Owner.Faction.InternalName);
 			IsValidFaction = !info.Factions.Any() || info.Factions.Contains(Faction);
 			Enabled = IsValidFaction;
 
@@ -82,17 +82,11 @@ namespace OpenRA.Mods.Dr.Traits
 
 		void INotifyCreated.Created(Actor self)
 		{
-			// Special case handling is required for the Player actor.
-			// Created is called before Player.PlayerActor is assigned,
-			// so we must query other player traits from self, knowing that
-			// it refers to the same actor as self.Owner.PlayerActor
-			var playerActor = self.Info.Name == "player" ? self : self.Owner.PlayerActor;
-
-			developerMode = playerActor.Trait<DeveloperMode>();
-			techTree = playerActor.Trait<TechTree>();
+			developerMode = self.Owner.PlayerActor.Trait<DeveloperMode>();
+			techTree = self.Owner.PlayerActor.Trait<TechTree>();
 
 			productionTraits = self.TraitsImplementing<BuilderUnit>().ToArray();
-			CacheProducibles(playerActor);
+			CacheProducibles(self.Owner.PlayerActor);
 		}
 
 		void INotifyKilled.Killed(Actor killed, AttackInfo e) { if (killed == self) { Enabled = false; } }

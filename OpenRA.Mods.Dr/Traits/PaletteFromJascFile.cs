@@ -20,7 +20,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Common.Traits
 {
 	[Desc("Load JASC palette. Used for tileset JASC palettes.")]
-	class PaletteFromJascFileInfo : ITraitInfo, IProvidesCursorPaletteInfo
+	class PaletteFromJascFileInfo : ITraitInfoInterface, IProvidesCursorPaletteInfo
 	{
 		[FieldLoader.Require]
 		[PaletteDefinition]

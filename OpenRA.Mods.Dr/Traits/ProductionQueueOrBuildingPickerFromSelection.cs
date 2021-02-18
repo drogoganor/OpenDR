@@ -19,7 +19,7 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.Dr.Traits
 {
-	class ProductionQueueOrBuildingPickerFromSelectionInfo : ITraitInfo
+	class ProductionQueueOrBuildingPickerFromSelectionInfo : ITraitInfoInterface
 	{
 		public string ProductionParent = null;
 		public string ProductionTabsWidget = null;

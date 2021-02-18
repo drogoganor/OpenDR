@@ -24,7 +24,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits
 {
-	public class FreighterInfo : ITraitInfo, Requires<MobileInfo>
+	public class FreighterInfo : TraitInfo, Requires<MobileInfo>
 	{
 		public readonly HashSet<string> DeliveryBuildings = new HashSet<string>();
 
@@ -44,9 +44,6 @@ namespace OpenRA.Mods.Dr.Traits
 
 		[Desc("How many bales can it dump at once.")]
 		public readonly int BaleUnloadAmount = 1;
-
-		[Desc("How many squares to show the fill level.")]
-		public readonly int PipCount = 7;
 
 		public readonly int HarvestFacings = 0;
 
@@ -90,20 +87,31 @@ namespace OpenRA.Mods.Dr.Traits
 		[VoiceReference]
 		public readonly string DeliverVoice = "Action";
 
-		public object Create(ActorInitializer init) { return new Freighter(init.Self, this); }
+		[Desc("Color to use for the target line of harvest orders.")]
+		public readonly Color HarvestLineColor = Color.Crimson;
+
+		[Desc("Color to use for the target line of harvest orders.")]
+		public readonly Color DeliverLineColor = Color.Green;
+
+		[Desc("Cursor to display when able to unload at target actor.")]
+		public readonly string EnterCursor = "enter";
+
+		[Desc("Cursor to display when unable to unload at target actor.")]
+		public readonly string EnterBlockedCursor = "enter-blocked";
+
+		public override object Create(ActorInitializer init) { return new Freighter(init.Self, this); }
 	}
 
-	public class Freighter : IIssueOrder, IResolveOrder, IPips, IOrderVoice,
+	public class Freighter : IIssueOrder, IResolveOrder, IOrderVoice,
 		ISpeedModifier, ISync, INotifyCreated
 	{
 		public readonly FreighterInfo Info;
+		public readonly IReadOnlyDictionary<DrResourceTypeInfo, int> Contents;
 		readonly Mobile mobile;
 		readonly ResourceLayer resLayer;
 		readonly ResourceClaimLayer claimLayer;
 		readonly Dictionary<DrResourceTypeInfo, int> contents = new Dictionary<DrResourceTypeInfo, int>();
-		INotifyFreighterAction[] notifyHarvesterAction;
-		ConditionManager conditionManager;
-		int conditionToken = ConditionManager.InvalidConditionToken;
+		int conditionToken = Actor.InvalidConditionToken;
 		HarvesterResourceMultiplier[] resourceMultipliers;
 
 		[Sync]
@@ -130,6 +138,7 @@ namespace OpenRA.Mods.Dr.Traits
 		public Freighter(Actor self, FreighterInfo info)
 		{
 			Info = info;
+			Contents = new ReadOnlyDictionary<DrResourceTypeInfo, int>(contents);
 			mobile = self.Trait<Mobile>();
 			resLayer = self.World.WorldActor.Trait<ResourceLayer>();
 			claimLayer = self.World.WorldActor.Trait<ResourceClaimLayer>();
@@ -137,9 +146,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		void INotifyCreated.Created(Actor self)
 		{
-			notifyHarvesterAction = self.TraitsImplementing<INotifyFreighterAction>().ToArray();
 			resourceMultipliers = self.TraitsImplementing<HarvesterResourceMultiplier>().ToArray();
-			conditionManager = self.TraitOrDefault<ConditionManager>();
 			UpdateCondition(self);
 
 			self.QueueActivity(new CallFunc(() => ChooseNewProc(self, null)));
@@ -175,29 +182,29 @@ namespace OpenRA.Mods.Dr.Traits
 		public Actor ClosestProc(Actor self, Actor ignore)
 		{
 			// Find all refineries and their occupancy count:
-			var refs = self.World.ActorsWithTrait<IAcceptDrResources>()
+			var refineries = self.World.ActorsWithTrait<IAcceptDrResources>()
 				.Where(r => r.Actor != ignore && r.Actor.Owner == self.Owner && IsAcceptableProcType(r.Actor))
 				.Select(r => new
 				{
 					Location = r.Actor.Location + r.Trait.DeliveryOffset,
 					Actor = r.Actor,
 					Occupancy = self.World.ActorsHavingTrait<Freighter>(h => h.LinkedProc == r.Actor).Count()
-				}).ToDictionary(r => r.Location);
+				}).ToLookup(r => r.Location);
 
 			// Start a search from each refinery's delivery location:
 			List<CPos> path;
 
-			using (var search = PathSearch.FromPoints(self.World, mobile.Locomotor, self, refs.Values.Select(r => r.Location), self.Location, BlockedByActor.None)
-				.WithCustomCost(loc =>
+			using (var search = PathSearch.FromPoints(self.World, mobile.Locomotor, self, refineries.Select(r => r.Key), self.Location, BlockedByActor.None)
+				.WithCustomCost(location =>
 				{
-					if (!refs.ContainsKey(loc))
+					if (!refineries.Contains(location))
 						return 0;
 
-					var occupancy = refs[loc].Occupancy;
+					var occupancy = refineries[location].First().Occupancy;
 
 					// Too many harvesters clogs up the refinery's delivery location:
 					if (occupancy >= Info.MaxUnloadQueue)
-						return int.MaxValue;
+						return int.MaxValue; // PathGraph.CostForInvalidCell is internal.
 
 					// Prefer refineries with less occupancy (multiplier is to offset distance cost):
 					return occupancy * Info.UnloadQueueCostModifier;
@@ -205,7 +212,7 @@ namespace OpenRA.Mods.Dr.Traits
 				path = self.World.WorldActor.Trait<IPathFinder>().FindPath(search);
 
 			if (path.Count != 0)
-				return refs[path.Last()].Actor;
+				return refineries[path.Last()].First().Actor;
 
 			return null;
 		}
@@ -216,15 +223,15 @@ namespace OpenRA.Mods.Dr.Traits
 
 		void UpdateCondition(Actor self)
 		{
-			if (string.IsNullOrEmpty(Info.EmptyCondition) || conditionManager == null)
+			if (string.IsNullOrEmpty(Info.EmptyCondition))
 				return;
 
 			var enabled = IsEmpty;
 
-			if (enabled && conditionToken == ConditionManager.InvalidConditionToken)
-				conditionToken = conditionManager.GrantCondition(self, Info.EmptyCondition);
-			else if (!enabled && conditionToken != ConditionManager.InvalidConditionToken)
-				conditionToken = conditionManager.RevokeCondition(self, conditionToken);
+			if (enabled && conditionToken == Actor.InvalidConditionToken)
+				conditionToken = self.GrantCondition(Info.EmptyCondition);
+			else if (!enabled && conditionToken != Actor.InvalidConditionToken)
+				conditionToken = self.RevokeCondition(conditionToken);
 		}
 
 		public void AcceptResource(Actor self, DrResourceType type)
@@ -267,8 +274,17 @@ namespace OpenRA.Mods.Dr.Traits
 		}
 
 		public bool CanHarvestCell(Actor self, CPos cell)
-		{
+		{			
+			// Resources only exist in the ground layer
+			// if (cell.Layer != 0)
+			// 	return false;
+			//
+			// var resType = resLayer.GetResourceType(cell);
+			// if (resType == null)
+			// 	return false;
+
 			// Can the harvester collect this kind of resource?
+			//return Info.Resources.Contains(resType.Info.Type);
 			return self.World.Actors.Any(actor => Info.Resources.Contains(actor.Info.Name) && self.World.Map.CellContaining(actor.CenterPosition) == cell);
 		}
 
@@ -276,14 +292,18 @@ namespace OpenRA.Mods.Dr.Traits
 		{
 			get
 			{
-				yield return new EnterAlliedActorTargeter<IAcceptDrResourcesInfo>("Deliver", 5,
+				yield return new EnterAlliedActorTargeter<IAcceptDrResourcesInfo>(
+					"Deliver",
+					5,
+					Info.EnterCursor,
+					Info.EnterBlockedCursor,
 					(proc, _) => IsAcceptableProcType(proc),
 					proc => proc.Trait<IAcceptDrResources>().AllowDocking);
 				yield return new HarvestOrderTargeter();
 			}
 		}
 
-		Order IIssueOrder.IssueOrder(Actor self, IOrderTargeter order, Target target, bool queued)
+		Order IIssueOrder.IssueOrder(Actor self, IOrderTargeter order, in Target target, bool queued)
 		{
 			if (order.OrderID == "Deliver" || order.OrderID == "Harvest")
 				return new Order(order.OrderID, self, target, queued);
@@ -343,27 +363,6 @@ namespace OpenRA.Mods.Dr.Traits
 			}
 		}
 
-		PipType GetPipAt(int i)
-		{
-			var n = i * Info.Capacity / Info.PipCount;
-
-			foreach (var rt in contents)
-				if (n < rt.Value)
-					return rt.Key.PipColor;
-				else
-					n -= rt.Value;
-
-			return PipType.Transparent;
-		}
-
-		IEnumerable<PipType> IPips.GetPips(Actor self)
-		{
-			var numPips = Info.PipCount;
-
-			for (var i = 0; i < numPips; i++)
-				yield return GetPipAt(i);
-		}
-
 		int ISpeedModifier.GetSpeedModifier()
 		{
 			return 100 - (100 - Info.FullyLoadedSpeed) * contents.Values.Sum() / Info.Capacity;
@@ -374,9 +373,9 @@ namespace OpenRA.Mods.Dr.Traits
 			public string OrderID { get { return "Harvest"; } }
 			public int OrderPriority { get { return 10; } }
 			public bool IsQueued { get; protected set; }
-			public bool TargetOverridesSelection(Actor self, Target target, List<Actor> actorsAt, CPos xy, TargetModifiers modifiers) { return true; }
+			public bool TargetOverridesSelection(Actor self, in Target target, List<Actor> actorsAt, CPos xy, TargetModifiers modifiers) { return true; }
 
-			public bool CanTarget(Actor self, Target target, List<Actor> othersAtTarget, ref TargetModifiers modifiers, ref string cursor)
+			public bool CanTarget(Actor self, in Target target, List<Actor> othersAtTarget, ref TargetModifiers modifiers, ref string cursor)
 			{
 				if (target.Type != TargetType.Terrain)
 					return false;
@@ -390,12 +389,13 @@ namespace OpenRA.Mods.Dr.Traits
 				if (!self.Owner.Shroud.IsExplored(location))
 					return false;
 
-				// TODO: Update to target water or taelon actors
-				var res = self.World.WorldActor.Trait<ResourceLayer>().GetResource(location).Type;
-
 				var info = self.Info.TraitInfo<FreighterInfo>();
 
-				if (res == null || !info.Resources.Contains(res.Info.Type))
+				var res = self.World.WorldActor.TraitsImplementing<ResourceRenderer>()
+					.Select(r => r.GetRenderedResourceType(location))
+					.FirstOrDefault(r => r != null && info.Resources.Contains(r.Info.Type));
+
+				if (res == null)
 					return false;
 
 				cursor = "harvest";

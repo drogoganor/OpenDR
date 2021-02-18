@@ -22,7 +22,8 @@ namespace OpenRA.Mods.Dr.Graphics
 		{
 		}
 
-		public override ISpriteSequence CreateSequence(ModData modData, TileSet tileSet, SpriteCache cache, string sequence, string animation, MiniYaml info)
+		public override ISpriteSequence CreateSequence(ModData modData, string tileSet, SpriteCache cache, string sequence, string animation,
+			MiniYaml info)
 		{
 			return new DrTilesetSpecificSpriteSequence(modData, tileSet, cache, this, sequence, animation, info);
 		}
@@ -30,10 +31,15 @@ namespace OpenRA.Mods.Dr.Graphics
 
 	public class DrTilesetSpecificSpriteSequence : DrSpriteSequence
 	{
-		public DrTilesetSpecificSpriteSequence(ModData modData, TileSet tileSet, SpriteCache cache, ISpriteSequenceLoader loader, string sequence, string animation, MiniYaml info)
+		public DrTilesetSpecificSpriteSequence(ModData modData, string tileSet, SpriteCache cache, ISpriteSequenceLoader loader, string sequence, string animation, MiniYaml info)
 			: base(modData, tileSet, cache, loader, sequence, animation, info) { }
 
-		protected override string GetSpriteSrc(ModData modData, TileSet tileSet, string sequence, string animation, string sprite, Dictionary<string, MiniYaml> d)
+		protected override Sprite GetSprite(int start, int frame, WAngle facing)
+		{
+			return base.GetSprite(start, frame, facing);
+		}
+
+		protected override string GetSpriteSrc(ModData modData, string tileSet, string sequence, string animation, string sprite, Dictionary<string, MiniYaml> d)
 		{
 			var loader = (DrTilesetSpecificSpriteSequenceLoader)Loader;
 
@@ -45,15 +51,15 @@ namespace OpenRA.Mods.Dr.Graphics
 			{
 				if (spriteName.StartsWith("tileset|"))
 				{
-					if (validTilesetIds.Contains(tileSet.Id))
-						spriteName = spriteName.Replace("tileset", tileSet.Id.ToLower());
+					if (validTilesetIds.Contains(tileSet))
+						spriteName = spriteName.Replace("tileset", tileSet.ToLower());
 					else
 						spriteName = spriteName.Replace("tileset", "barren");
 				}
 				else if (spriteName.StartsWith("tilesetEx|"))
 				{
-					if (validTilesetIds.Contains(tileSet.Id))
-						spriteName = spriteName.Replace("tilesetEx", tileSet.Id.ToLower() + "Ex");
+					if (validTilesetIds.Contains(tileSet))
+						spriteName = spriteName.Replace("tilesetEx", tileSet.ToLower() + "Ex");
 					else
 						spriteName = spriteName.Replace("tilesetEx", "barrenEx");
 				}

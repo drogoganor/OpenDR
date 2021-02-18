@@ -14,7 +14,7 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Common.Traits
 {
-	public class DrResourceTypeInfo : ITraitInfo
+	public class DrResourceTypeInfo : ITraitInfoInterface
 	{
 		[Desc("Resource index used in the binary map data.")]
 		public readonly int ResourceType = 1;
@@ -45,9 +45,6 @@ namespace OpenRA.Mods.Common.Traits
 
 		[Desc("Allow resource to spawn on ramp tiles.")]
 		public readonly bool AllowOnRamps = false;
-
-		[Desc("Harvester content pip color.")]
-		public PipType PipColor = PipType.Yellow;
 
 		public object Create(ActorInitializer init) { return new DrResourceType(this, init.World); }
 	}

@@ -105,7 +105,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 		public readonly WDist Width = new WDist(1);
 
 		[Desc("If projectile touches an actor with one of these stances during or after the first bounce, trigger explosion.")]
-		public readonly Stance ValidBounceBlockerStances = Stance.Enemy | Stance.Neutral | Stance.Ally;
+		public readonly PlayerRelationship ValidBounceBlockerStances = PlayerRelationship.Enemy | PlayerRelationship.Neutral | PlayerRelationship.Ally;
 
 		[Desc("Number of projectiles to fire.")]
 		public readonly int NumProjectiles = 12;
@@ -158,7 +158,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 
 			projectiles = new VortexProjectileEffect[info.NumProjectiles];
 
-			var mainFacing = (targetpos - sourcepos).Yaw.Facing;
+			var mainFacing = (targetpos - sourcepos).Yaw;
 
 			// used for lerping projectiles at the same pace
 			var estimatedLifespan = Math.Max(args.Weapon.Range.Length / speed.Length, 1);
@@ -167,9 +167,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 			Target target;
 
 			// subprojectiles facing
-			int facing = 0;
-
-			int facingsInterval = 256 / info.NumProjectiles;
+			int slice = 256 / info.NumProjectiles;
 
 			for (int i = 0; i < info.NumProjectiles; i++)
 			{
@@ -180,8 +178,8 @@ namespace OpenRA.Mods.Dr.Projectiles
 					? Math.Max((args.PassiveTarget - args.Source).Length / speed.Length, 1)
 					: estimatedLifespan;
 
-				facing = mainFacing + (facingsInterval * i);
-				var newRotation = WRot.FromFacing(facing);
+				var facing = mainFacing + (new WAngle(i * slice));
+				var newRotation = WRot.FromFacing(facing.Angle);
 				var rotatedTarget = (targetpos - sourcepos).Rotate(newRotation);
 
 				var dx = rotatedTarget.X - sourcepos.X;
@@ -209,7 +207,7 @@ namespace OpenRA.Mods.Dr.Projectiles
 			}
 
 			foreach (var p in projectiles)
-			world.AddFrameEndTask(w => w.Add(p));
+				world.AddFrameEndTask(w => w.Add(p));
 		}
 
 		// gets where main projectile should fly to

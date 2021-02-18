@@ -27,7 +27,7 @@ namespace OpenRA.Mods.Dr.Traits
 	public class DrRefineryInfo : IAcceptDrResourcesInfo, Requires<WithSpriteBodyInfo>
 	{
 		[Desc("Actual harvester facing when docking, 0-255 counter-clock-wise.")]
-		public readonly int DockAngle = 0;
+		public readonly WAngle DockAngle = WAngle.Zero;
 
 		[Desc("Docking cell relative to top-left cell.")]
 		public readonly CVec DockOffset = CVec.Zero;
@@ -74,7 +74,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public bool AllowDocking { get { return !preventDock; } }
 		public CVec DeliveryOffset { get { return info.DockOffset; } }
-		public int DeliveryAngle { get { return info.DockAngle; } }
+		public WAngle DeliveryAngle { get { return info.DockAngle; } }
 		public bool IsDragRequired { get { return info.IsDragRequired; } }
 		public WVec DragOffset { get { return info.DragOffset; } }
 		public int DragLength { get { return info.DragLength; } }

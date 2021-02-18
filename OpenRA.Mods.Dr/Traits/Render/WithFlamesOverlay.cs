@@ -16,7 +16,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Common.Traits.Render
 {
 	[Desc("Renders an overlay when the actor is taking heavy damage.")]
-	public class WithFlamesOverlayInfo : ITraitInfo, Requires<RenderSpritesInfo>
+	public class WithFlamesOverlayInfo : ITraitInfoInterface, Requires<RenderSpritesInfo>
 	{
 		public readonly string Image = "eosmlfl0";
 
