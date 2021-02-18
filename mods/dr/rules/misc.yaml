@@ -45,7 +45,7 @@ detonationspy:
 	Mobile:
 		Speed: 96
 		Locomotor: foot
-		TurnSpeed: 30
+		TurnSpeed: 120
 	RenderSpritesEditorOnly:
 		Image: mpspawn
 	#RenderSprites:
@@ -71,7 +71,7 @@ temporalriftspewer:
 	Mobile:
 		Speed: 96
 		Locomotor: foot
-		TurnSpeed: 30
+		TurnSpeed: 120
 	RenderSpritesEditorOnly:
 		Image: mpspawn
 	AttackFrontal:

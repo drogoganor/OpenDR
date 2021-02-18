@@ -1,63 +1,63 @@
 drdemo: Dark Reign Demo
 	MirrorList: http://drogoganor.net/dr/dr-demo-mirrors.txt
 	Extract:
-		^Content/dr/SPRITES.FTG: Dark Reign/DATA/DARK/GRAPHICS/SPRITES.FTG
-		^Content/dr/BARREN/BARREN.TIL: Dark Reign/DATA/DARK/GRAPHICS/BARREN/BARREN.TIL
-		^Content/dr/BARREN/BARREN.PAL: Dark Reign/DATA/DARK/GRAPHICS/BARREN/BARREN.PAL
-		^Content/dr/BARREN/SPRITES.FTG: Dark Reign/DATA/DARK/GRAPHICS/BARREN/SPRITES.FTG
-		^Content/dr/JUNGLE/JUNGLE.TIL: Dark Reign/DATA/DARK/GRAPHICS/JUNGLE/JUNGLE.TIL
-		^Content/dr/JUNGLE/JUNGLE.PAL: Dark Reign/DATA/DARK/GRAPHICS/JUNGLE/JUNGLE.PAL
-		^Content/dr/JUNGLE/SPRITES.FTG: Dark Reign/DATA/DARK/GRAPHICS/JUNGLE/SPRITES.FTG
-		^Content/dr/SOUNDS.FTG: Dark Reign/DATA/DARK/sndfx/SOUNDS.FTG
-		^Content/dr/shell/SOUNDS.FTG: Dark Reign/DATA/DARK/SHELL/SOUNDS.FTG
-		^Content/dr/mouse.crs: Dark Reign/DATA/DARK/GRAPHICS/INTFACE/MOUSE.CRS
+		^SupportDir|Content/dr/SPRITES.FTG: Dark Reign/DATA/DARK/GRAPHICS/SPRITES.FTG
+		^SupportDir|Content/dr/BARREN/BARREN.TIL: Dark Reign/DATA/DARK/GRAPHICS/BARREN/BARREN.TIL
+		^SupportDir|Content/dr/BARREN/BARREN.PAL: Dark Reign/DATA/DARK/GRAPHICS/BARREN/BARREN.PAL
+		^SupportDir|Content/dr/BARREN/SPRITES.FTG: Dark Reign/DATA/DARK/GRAPHICS/BARREN/SPRITES.FTG
+		^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL: Dark Reign/DATA/DARK/GRAPHICS/JUNGLE/JUNGLE.TIL
+		^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL: Dark Reign/DATA/DARK/GRAPHICS/JUNGLE/JUNGLE.PAL
+		^SupportDir|Content/dr/JUNGLE/SPRITES.FTG: Dark Reign/DATA/DARK/GRAPHICS/JUNGLE/SPRITES.FTG
+		^SupportDir|Content/dr/SOUNDS.FTG: Dark Reign/DATA/DARK/sndfx/SOUNDS.FTG
+		^SupportDir|Content/dr/shell/SOUNDS.FTG: Dark Reign/DATA/DARK/SHELL/SOUNDS.FTG
+		^SupportDir|Content/dr/mouse.crs: Dark Reign/DATA/DARK/GRAPHICS/INTFACE/MOUSE.CRS
 drauranext: Auran Extra Content
 	MirrorList: http://drogoganor.net/dr/dr-auranext-mirrors.txt
 	Extract:
-		^Content/dr/aust/AUST.FTG: aust/AUST.FTG
-		^Content/dr/volcanic/VOLCANIC.FTG: volcanic/VOLCANIC.FTG
-		^Content/dr/auralien/AURALIEN.FTG: auralien/AURALIEN.FTG
-		^Content/dr/asteroid/ASTEROID.FTG: asteroid/ASTEROID.FTG
-		^Content/dr/addon/aurunits/aursprite.ftg: addon/aurunits/aursprite.ftg
-		^Content/dr/addon/aurunits/aursound.ftg: addon/aurunits/aursound.ftg
-		^Content/dr/addon/terrorist/terrsprite.ftg: addon/terrorist/terrsprite.ftg
-		^Content/dr/addon/terrorist/terrsound.ftg: addon/terrorist/terrsound.ftg
-		^Content/dr/legal.txt: legal.txt
+		^SupportDir|Content/dr/aust/AUST.FTG: aust/AUST.FTG
+		^SupportDir|Content/dr/volcanic/VOLCANIC.FTG: volcanic/VOLCANIC.FTG
+		^SupportDir|Content/dr/auralien/AURALIEN.FTG: auralien/AURALIEN.FTG
+		^SupportDir|Content/dr/asteroid/ASTEROID.FTG: asteroid/ASTEROID.FTG
+		^SupportDir|Content/dr/addon/aurunits/aursprite.ftg: addon/aurunits/aursprite.ftg
+		^SupportDir|Content/dr/addon/aurunits/aursound.ftg: addon/aurunits/aursound.ftg
+		^SupportDir|Content/dr/addon/terrorist/terrsprite.ftg: addon/terrorist/terrsprite.ftg
+		^SupportDir|Content/dr/addon/terrorist/terrsound.ftg: addon/terrorist/terrsound.ftg
+		^SupportDir|Content/dr/legal.txt: legal.txt
 drmusic: Music Packages
 	MirrorList: http://drogoganor.net/dr/dr-music-mirrors.txt
 	Extract:
-		^Content/dr/music.zip: music.zip
+		^SupportDir|Content/dr/music.zip: music.zip
 drdevtest: Dev Test Package (Full)
 	MirrorList: http://drogoganor.net/dr/dr-devtest-mirrors.txt
 	Extract:
-		^Content/dr/SPRITES.FTG: SPRITES.FTG
-		^Content/dr/SOUNDS.FTG: SOUNDS.FTG
-		^Content/dr/shell/SOUNDS.FTG: shell/SOUNDS.FTG
-		^Content/dr/SNOW/SNOW.TIL: SNOW/SNOW.TIL
-		^Content/dr/SNOW/SNOW.PAL: SNOW/SNOW.PAL
-		^Content/dr/SNOW/SPRITES.FTG: SNOW/SPRITES.FTG
-		^Content/dr/BARREN/BARREN.TIL: BARREN/BARREN.TIL
-		^Content/dr/BARREN/BARREN.PAL: BARREN/BARREN.PAL
-		^Content/dr/BARREN/SPRITES.FTG: BARREN/SPRITES.FTG
-		^Content/dr/JUNGLE/JUNGLE.TIL: JUNGLE/JUNGLE.TIL
-		^Content/dr/JUNGLE/JUNGLE.PAL: JUNGLE/JUNGLE.PAL
-		^Content/dr/JUNGLE/SPRITES.FTG: JUNGLE/SPRITES.FTG
-		^Content/dr/spriteEx.ftg: spriteEx.ftg
-		^Content/dr/soundsEx.ftg: soundsEx.ftg
-		^Content/dr/ALIEN/ALIEN.TIL: alien/ALIEN.TIL
-		^Content/dr/ALIEN/ALIEN.PAL: alien/ALIEN.PAL
-		^Content/dr/ALIEN/SPRITEEX.FTG: alien/SPRITEEX.FTG
-		^Content/dr/BARREN/spriteEx.ftg: BARREN/spriteEx.ftg
-		^Content/dr/JUNGLE/spriteEx.ftg: JUNGLE/spriteEx.ftg
-		^Content/dr/SNOW/spriteEx.ftg: SNOW/spriteEx.ftg
-		^Content/dr/mouse.crs: MOUSE.CRS
-		^Content/dr/music.zip: music.zip
-		^Content/dr/aust/AUST.FTG: aust/AUST.FTG
-		^Content/dr/volcanic/VOLCANIC.FTG: volcanic/VOLCANIC.FTG
-		^Content/dr/auralien/AURALIEN.FTG: auralien/AURALIEN.FTG
-		^Content/dr/asteroid/ASTEROID.FTG: asteroid/ASTEROID.FTG
-		^Content/dr/addon/aurunits/aursprite.ftg: addon/aurunits/aursprite.ftg
-		^Content/dr/addon/aurunits/aursound.ftg: addon/aurunits/aursound.ftg
-		^Content/dr/addon/terrorist/terrsprite.ftg: addon/terrorist/terrsprite.ftg
-		^Content/dr/addon/terrorist/terrsound.ftg: addon/terrorist/terrsound.ftg
-		^Content/dr/legal.txt: legal.txt
+		^SupportDir|Content/dr/SPRITES.FTG: SPRITES.FTG
+		^SupportDir|Content/dr/SOUNDS.FTG: SOUNDS.FTG
+		^SupportDir|Content/dr/shell/SOUNDS.FTG: shell/SOUNDS.FTG
+		^SupportDir|Content/dr/SNOW/SNOW.TIL: SNOW/SNOW.TIL
+		^SupportDir|Content/dr/SNOW/SNOW.PAL: SNOW/SNOW.PAL
+		^SupportDir|Content/dr/SNOW/SPRITES.FTG: SNOW/SPRITES.FTG
+		^SupportDir|Content/dr/BARREN/BARREN.TIL: BARREN/BARREN.TIL
+		^SupportDir|Content/dr/BARREN/BARREN.PAL: BARREN/BARREN.PAL
+		^SupportDir|Content/dr/BARREN/SPRITES.FTG: BARREN/SPRITES.FTG
+		^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL: JUNGLE/JUNGLE.TIL
+		^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL: JUNGLE/JUNGLE.PAL
+		^SupportDir|Content/dr/JUNGLE/SPRITES.FTG: JUNGLE/SPRITES.FTG
+		^SupportDir|Content/dr/spriteEx.ftg: spriteEx.ftg
+		^SupportDir|Content/dr/soundsEx.ftg: soundsEx.ftg
+		^SupportDir|Content/dr/ALIEN/ALIEN.TIL: alien/ALIEN.TIL
+		^SupportDir|Content/dr/ALIEN/ALIEN.PAL: alien/ALIEN.PAL
+		^SupportDir|Content/dr/ALIEN/SPRITEEX.FTG: alien/SPRITEEX.FTG
+		^SupportDir|Content/dr/BARREN/spriteEx.ftg: BARREN/spriteEx.ftg
+		^SupportDir|Content/dr/JUNGLE/spriteEx.ftg: JUNGLE/spriteEx.ftg
+		^SupportDir|Content/dr/SNOW/spriteEx.ftg: SNOW/spriteEx.ftg
+		^SupportDir|Content/dr/mouse.crs: MOUSE.CRS
+		^SupportDir|Content/dr/music.zip: music.zip
+		^SupportDir|Content/dr/aust/AUST.FTG: aust/AUST.FTG
+		^SupportDir|Content/dr/volcanic/VOLCANIC.FTG: volcanic/VOLCANIC.FTG
+		^SupportDir|Content/dr/auralien/AURALIEN.FTG: auralien/AURALIEN.FTG
+		^SupportDir|Content/dr/asteroid/ASTEROID.FTG: asteroid/ASTEROID.FTG
+		^SupportDir|Content/dr/addon/aurunits/aursprite.ftg: addon/aurunits/aursprite.ftg
+		^SupportDir|Content/dr/addon/aurunits/aursound.ftg: addon/aurunits/aursound.ftg
+		^SupportDir|Content/dr/addon/terrorist/terrsprite.ftg: addon/terrorist/terrsprite.ftg
+		^SupportDir|Content/dr/addon/terrorist/terrsound.ftg: addon/terrorist/terrsound.ftg
+		^SupportDir|Content/dr/legal.txt: legal.txt

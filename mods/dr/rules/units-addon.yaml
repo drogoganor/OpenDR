@@ -89,7 +89,7 @@ TickTank:
 	Armor:
 		Type: TankPlating
 	Turreted:
-		TurnSpeed: 25
+		TurnSpeed: 100
 		Offset: 0, 0, 0
 	Armament:
 		Weapon: TickTankWeapon
@@ -132,10 +132,9 @@ WalkerScout:
 	Cargo:
 		Types: Infantry
 		MaxWeight: 1
-		PipCount: 1
 		LoadingCondition: notmobile
 	Turreted:
-		TurnSpeed: 25
+		TurnSpeed: 100
 		Offset: 0, 0, 160
 	Armament:
 		Weapon: WalkerScoutWeapon
@@ -148,6 +147,11 @@ WalkerScout:
 	-AttackFrontal:
 	AttackTurreted:
 	WithSpriteTurret:
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		CustomPipSequences:
+			yellow: pip-yellow
 
 HoverAssaultTank:
 	Inherits: ^HoverVehicle
@@ -175,7 +179,7 @@ HoverAssaultTank:
 	Armor:
 		Type: TankPlating
 	Turreted:
-		TurnSpeed: 25
+		TurnSpeed: 100
 		Offset: 0, 0, 160
 	Armament:
 		Weapon: HoverAssaultTankWeapon
@@ -215,7 +219,7 @@ FlamingDeath:
 	Armor:
 		Type: TankPlating
 	Turreted:
-		TurnSpeed: 25
+		TurnSpeed: 100
 		Offset: 0, 0, 160
 	Armament:
 		Weapon: FlamingDeathWeapon
@@ -255,7 +259,7 @@ VortexTank:
 	Armor:
 		Type: TankPlating
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 		Offset: 0, 0, 312
 	Armament:
 		Weapon: VortexTankWeapon
@@ -324,7 +328,7 @@ ScoutAlt:
 	Aircraft:
 		Speed: 174
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
 
 # Terrorist units
@@ -459,7 +463,7 @@ StealthChopper:
 	Aircraft:
 		Speed: 174
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
 
 TerroristTransport:
@@ -487,11 +491,15 @@ TerroristTransport:
 	Cargo:
 		Types: Infantry
 		MaxWeight: 8
-		PipCount: 8
 		LoadingCondition: notmobile
 	Armor:
 		Type: TankPlating
 	-Armament:
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		CustomPipSequences:
+			yellow: pip-yellow
 
 TerroristAirRifterAlternate:
 	Inherits: ^Aircraft
@@ -515,7 +523,7 @@ TerroristAirRifterAlternate:
 	Aircraft:
 		Speed: 126
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
 
 TerroristMissileTank:
@@ -593,7 +601,7 @@ TerroristAirborneTroopCarrier:
 	Aircraft:
 		Speed: 150
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
 
 # Third blue faction
@@ -654,7 +662,7 @@ ArmoredGuardWalker:
 	#	LocalOffset: 512,0,112
 	#	Weapon: LaserRifle
 	Turreted:
-		TurnSpeed: 25
+		TurnSpeed: 100
 		Offset: 0, 0, 512
 	Armament:
 		Weapon: ArmoredGuardWalkerWeapon
@@ -690,7 +698,7 @@ ATATWalker:
 	Armor:
 		Type: TankPlating
 	Turreted:
-		TurnSpeed: 25
+		TurnSpeed: 100
 		Offset: 660, 0, 612
 	Armament:
 		Weapon: ATATWalkerWeapon
@@ -807,7 +815,7 @@ GunWalker:
 	Armor:
 		Type: TankPlating
 	Turreted:
-		TurnSpeed: 25
+		TurnSpeed: 100
 		Offset: 0, 0, 312
 	Armament:
 		Weapon: GunWalkerWeapon
@@ -841,7 +849,7 @@ SuicideBot:
 	Aircraft:
 		Speed: 78
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
 	Armor:
 		Type: FlyingArmour
@@ -882,7 +890,7 @@ TickTankAlt: # Not very good
 	Armor:
 		Type: TankPlating
 	Turreted:
-		TurnSpeed: 25
+		TurnSpeed: 100
 		Offset: 0, 0, 0
 	Armament:
 		Weapon: TickTankWeapon
@@ -971,7 +979,7 @@ TerroristAirRifter:
 	Aircraft:
 		Speed: 128
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
 	Armament:
 		LocalOffset: 512,0,112
@@ -1108,5 +1116,5 @@ TerroristHospitalUnit:
 	Aircraft:
 		Speed: 96
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover

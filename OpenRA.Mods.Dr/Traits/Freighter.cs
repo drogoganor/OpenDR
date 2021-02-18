@@ -274,7 +274,7 @@ namespace OpenRA.Mods.Dr.Traits
 		}
 
 		public bool CanHarvestCell(Actor self, CPos cell)
-		{			
+		{
 			// Resources only exist in the ground layer
 			// if (cell.Layer != 0)
 			// 	return false;
@@ -284,7 +284,7 @@ namespace OpenRA.Mods.Dr.Traits
 			// 	return false;
 
 			// Can the harvester collect this kind of resource?
-			//return Info.Resources.Contains(resType.Info.Type);
+			// return Info.Resources.Contains(resType.Info.Type);
 			return self.World.Actors.Any(actor => Info.Resources.Contains(actor.Info.Name) && self.World.Map.CellContaining(actor.CenterPosition) == cell);
 		}
 

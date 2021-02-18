@@ -56,7 +56,7 @@
 	WithBuildingRepairDecoration:
 		Image: allyrepair
 		Sequence: repair
-		ReferencePoint: Center
+		Position: Center
 		Palette: player
 		IsPlayerPalette: True
 
@@ -136,7 +136,7 @@
 	WithBuildingRepairDecoration:
 		Image: allyrepair
 		Sequence: repair
-		ReferencePoint: Center
+		Position: Center
 		Palette: player
 		IsPlayerPalette: True
 	WithFlamesOverlay@Flames1:
@@ -274,15 +274,13 @@
 		RequiresSelection: true
 		Image: pips
 		Sequence: pip-blue
-		ReferencePoint: Bottom, Left
-		ZOffset: 256
+		Position: BottomLeft
 		RequiresCondition: dec1
 	WithDecoration@upgraded2:
 		RequiresSelection: true
 		Image: pips
 		Sequence: pip-red
-		ReferencePoint: Bottom, Left
-		ZOffset: 256
+		Position: BottomLeft
 		RequiresCondition: dec2
 	BaseBuilding:
 	BaseProvider:
@@ -392,8 +390,7 @@
 		RequiresSelection: true
 		Image: pips
 		Sequence: pip-red
-		ReferencePoint: Bottom, Left
-		ZOffset: 256
+		Position: BottomLeft
 		RequiresCondition: stardecoration
 
 ^AssemblyPlant.Constructing:
@@ -497,8 +494,7 @@
 		RequiresSelection: true
 		Image: pips
 		Sequence: pip-red
-		ReferencePoint: Bottom, Left
-		ZOffset: 256
+		Position: BottomLeft
 		RequiresCondition: stardecoration
 
 ^Defense.Constructing:

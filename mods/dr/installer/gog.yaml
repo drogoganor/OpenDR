@@ -8,24 +8,24 @@ drgog: GOG Install Files
 		dark/graphics/spriteEx.ftg: 429667e2fa8c6fa7da727cc64c9d5512ae2c832d
 	Install:
 		copy: .
-			^Content/dr/SPRITES.FTG: dark/graphics/SPRITES.FTG
-			^Content/dr/SOUNDS.FTG: dark/sndfx/SOUNDS.FTG
-			^Content/dr/shell/SOUNDS.FTG: dark/shell/SOUNDS.FTG
-			^Content/dr/SNOW/SNOW.TIL: dark/graphics/SNOW/SNOW.TIL
-			^Content/dr/SNOW/SNOW.PAL: dark/graphics/SNOW/SNOW.PAL
-			^Content/dr/SNOW/SPRITES.FTG: dark/graphics/SNOW/SPRITES.FTG
-			^Content/dr/BARREN/BARREN.TIL: dark/graphics/BARREN/BARREN.TIL
-			^Content/dr/BARREN/BARREN.PAL: dark/graphics/BARREN/BARREN.PAL
-			^Content/dr/BARREN/SPRITES.FTG: dark/graphics/BARREN/SPRITES.FTG
-			^Content/dr/JUNGLE/JUNGLE.TIL: dark/graphics/JUNGLE/JUNGLE.TIL
-			^Content/dr/JUNGLE/JUNGLE.PAL: dark/graphics/JUNGLE/JUNGLE.PAL
-			^Content/dr/JUNGLE/SPRITES.FTG: dark/graphics/JUNGLE/SPRITES.FTG
-			^Content/dr/spriteEx.ftg: dark/graphics/spriteEx.ftg
-			^Content/dr/soundsEx.ftg: dark/sndfx/soundsEx.ftg
-			^Content/dr/ALIEN/ALIEN.TIL: dark/graphics/alien/ALIEN.TIL
-			^Content/dr/ALIEN/ALIEN.PAL: dark/graphics/alien/ALIEN.PAL
-			^Content/dr/ALIEN/SPRITEEX.FTG: dark/graphics/alien/SPRITEEX.FTG
-			^Content/dr/BARREN/spriteEx.ftg: dark/graphics/BARREN/spriteEx.ftg
-			^Content/dr/JUNGLE/spriteEx.ftg: dark/graphics/JUNGLE/spriteEx.ftg
-			^Content/dr/SNOW/spriteEx.ftg: dark/graphics/SNOW/spriteEx.ftg
-			^Content/dr/mouse.crs: dark/graphics/INTFACE/MOUSE.CRS
+			^SupportDir|Content/dr/SPRITES.FTG: dark/graphics/SPRITES.FTG
+			^SupportDir|Content/dr/SOUNDS.FTG: dark/sndfx/SOUNDS.FTG
+			^SupportDir|Content/dr/shell/SOUNDS.FTG: dark/shell/SOUNDS.FTG
+			^SupportDir|Content/dr/SNOW/SNOW.TIL: dark/graphics/SNOW/SNOW.TIL
+			^SupportDir|Content/dr/SNOW/SNOW.PAL: dark/graphics/SNOW/SNOW.PAL
+			^SupportDir|Content/dr/SNOW/SPRITES.FTG: dark/graphics/SNOW/SPRITES.FTG
+			^SupportDir|Content/dr/BARREN/BARREN.TIL: dark/graphics/BARREN/BARREN.TIL
+			^SupportDir|Content/dr/BARREN/BARREN.PAL: dark/graphics/BARREN/BARREN.PAL
+			^SupportDir|Content/dr/BARREN/SPRITES.FTG: dark/graphics/BARREN/SPRITES.FTG
+			^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL: dark/graphics/JUNGLE/JUNGLE.TIL
+			^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL: dark/graphics/JUNGLE/JUNGLE.PAL
+			^SupportDir|Content/dr/JUNGLE/SPRITES.FTG: dark/graphics/JUNGLE/SPRITES.FTG
+			^SupportDir|Content/dr/spriteEx.ftg: dark/graphics/spriteEx.ftg
+			^SupportDir|Content/dr/soundsEx.ftg: dark/sndfx/soundsEx.ftg
+			^SupportDir|Content/dr/ALIEN/ALIEN.TIL: dark/graphics/alien/ALIEN.TIL
+			^SupportDir|Content/dr/ALIEN/ALIEN.PAL: dark/graphics/alien/ALIEN.PAL
+			^SupportDir|Content/dr/ALIEN/SPRITEEX.FTG: dark/graphics/alien/SPRITEEX.FTG
+			^SupportDir|Content/dr/BARREN/spriteEx.ftg: dark/graphics/BARREN/spriteEx.ftg
+			^SupportDir|Content/dr/JUNGLE/spriteEx.ftg: dark/graphics/JUNGLE/spriteEx.ftg
+			^SupportDir|Content/dr/SNOW/spriteEx.ftg: dark/graphics/SNOW/spriteEx.ftg
+			^SupportDir|Content/dr/mouse.crs: dark/graphics/INTFACE/MOUSE.CRS

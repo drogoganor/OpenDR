@@ -12,9 +12,9 @@ MapSize: 98,80
 
 Bounds: 1,1,96,78
 
-Visibility: Lobby
+Visibility: Shellmap
 
-Categories: Competitive
+Categories: Shellmap
 
 Players:
 	PlayerReference@Neutral:

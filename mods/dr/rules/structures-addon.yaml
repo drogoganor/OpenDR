@@ -112,8 +112,8 @@ PulseBlasterTurret:
 	Tooltip:
 		Name: Pulse Blaster Turret
 	Turreted:
-		TurnSpeed: 16
-		InitialFacing: 56
+		TurnSpeed: 64
+		InitialFacing: 224
 		Offset: 256,-24,255
 	Armament:
 		Weapon: GatLaser
@@ -151,8 +151,8 @@ MissileTower:
 	Tooltip:
 		Name: Missile Tower
 	Turreted:
-		TurnSpeed: 16
-		InitialFacing: 56
+		TurnSpeed: 64
+		InitialFacing: 224
 		Offset: 256,-24,255
 	Armament:
 		Weapon: GatLaser
@@ -190,8 +190,8 @@ TerroristFlamerTower:
 	Tooltip:
 		Name: Terrorist Flamer Tower
 	Turreted:
-		TurnSpeed: 16
-		InitialFacing: 56
+		TurnSpeed: 64
+		InitialFacing: 224
 		Offset: 256,-24,255
 	Armament:
 		Weapon: GatLaser
@@ -229,8 +229,8 @@ TerroristGuardTower:
 	Tooltip:
 		Name: Terrorist Guard Tower
 	Turreted:
-		TurnSpeed: 16
-		InitialFacing: 56
+		TurnSpeed: 64
+		InitialFacing: 224
 		Offset: 256,-24,255
 	Armament:
 		Weapon: GatLaser

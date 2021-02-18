@@ -86,11 +86,11 @@ Actors:
 		Location: 68,83
 	Actor29: plasmaturret
 		Owner: Imperium
-		TurretFacing: 92
+		TurretFacing: 368
 		Location: 54,84
 	Actor30: laserturret
 		Owner: Imperium
-		TurretFacing: 92
+		TurretFacing: 368
 		Location: 58,84
 	Actor31: assemblyplant.human
 		Owner: Imperium
@@ -100,11 +100,11 @@ Actors:
 		Location: 80,84
 	Actor33: antiairturret.cyborg
 		Owner: Imperium
-		TurretFacing: 92
+		TurretFacing: 368
 		Location: 54,87
 	Actor34: antiairturret.human
 		Owner: Imperium
-		TurretFacing: 92
+		TurretFacing: 368
 		Location: 58,87
 	Actor35: trainingfacility.fguard
 		Owner: Imperium
@@ -120,11 +120,11 @@ Actors:
 		Location: 80,89
 	Actor39: neutronaccelerator
 		Owner: Imperium
-		TurretFacing: 92
+		TurretFacing: 368
 		Location: 54,90
 	Actor40: heavyrailturret
 		Owner: Imperium
-		TurretFacing: 92
+		TurretFacing: 368
 		Location: 58,90
 	Actor41: hospital.human
 		Owner: Imperium
@@ -150,231 +150,223 @@ Actors:
 	Actor48: raider
 		Owner: Imperium
 		Location: 51,59
-		Facing: 92
+		Facing: 368
 	Actor49: mercenary
 		Owner: Imperium
 		Location: 53,59
-		Facing: 92
+		Facing: 368
 	Actor50: sniper
 		Owner: Imperium
 		Location: 55,59
-		Facing: 92
+		Facing: 368
 	Actor51: scout
 		Owner: Imperium
 		Location: 57,59
-		Facing: 92
+		Facing: 368
 	Actor52: medic
 		Owner: Imperium
 		Location: 59,59
-		Facing: 92
+		Facing: 368
 	Actor53: saboteur
 		Owner: Imperium
 		Location: 61,59
-		Facing: 92
+		Facing: 368
 	Actor54: mechanic
 		Owner: Imperium
 		Location: 51,61
-		Facing: 92
+		Facing: 368
 	Actor55: martyr
 		Owner: Imperium
 		Location: 53,61
-		Facing: 92
+		Facing: 368
 	Actor56: guardian
 		Owner: Imperium
 		Location: 55,61
-		Facing: 92
+		Facing: 368
 	Actor57: bion
 		Owner: Imperium
 		Location: 57,61
-		Facing: 92
+		Facing: 368
 	Actor58: exterminator
 		Owner: Imperium
 		Location: 59,61
-		Facing: 92
+		Facing: 368
 	Actor59: infiltrator
 		Owner: Imperium
 		Location: 61,61
-		Facing: 92
+		Facing: 368
 	Actor60: ranger
 		Owner: Imperium
 		Location: 51,63
-		Facing: 92
+		Facing: 368
 	Actor61: powerspiker
 		Owner: Imperium
 		Location: 53,63
-		Facing: 92
+		Facing: 368
 	Actor62: reaper
 		Owner: Imperium
 		Location: 55,63
-		Facing: 92
+		Facing: 368
 	Actor66: spiderbike
 		Owner: Imperium
 		Location: 66,59
-		Facing: 92
+		Facing: 368
 	Actor67: rat
 		Owner: Imperium
 		Location: 68,59
-		Facing: 92
+		Facing: 368
 	Actor68: skirmishtank
 		Owner: Imperium
 		Location: 70,59
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor69: tankhunter
 		Owner: Imperium
 		Location: 72,59
-		Facing: 92
+		Facing: 368
 	Actor70: phasetank
 		Owner: Imperium
 		Location: 74,59
-		Facing: 92
+		Facing: 368
 	Actor71: flakjack
 		Owner: Imperium
 		Location: 76,59
-		Facing: 92
+		Facing: 368
 	Actor72: triplerailhovertank
 		Owner: Imperium
 		Location: 66,61
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor73: hellstormartillery
 		Owner: Imperium
 		Location: 68,61
-		Facing: 92
+		Facing: 368
 	Actor74: shockwave
 		Owner: Imperium
 		Location: 70,61
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor75: watercontaminator
 		Owner: Imperium
 		Location: 72,61
-		Facing: 92
+		Facing: 368
 	Actor76: phaserunner
 		Owner: Imperium
 		Location: 74,61
-		Facing: 92
+		Facing: 368
 	Actor77: scoutrunner
 		Owner: Imperium
 		Location: 76,61
-		Facing: 92
+		Facing: 368
 	Actor78: itt
 		Owner: Imperium
 		Location: 66,63
-		Facing: 92
+		Facing: 368
 	Actor79: plasmatank
 		Owner: Imperium
 		Location: 68,63
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor80: amper
 		Owner: Imperium
 		Location: 70,63
-		Facing: 92
+		Facing: 368
 	Actor81: mad
 		Owner: Imperium
 		Location: 72,63
-		Facing: 92
+		Facing: 368
 	Actor82: shredder
 		Owner: Imperium
 		Location: 74,63
-		Facing: 92
+		Facing: 368
 	Actor83: hostagetaker
 		Owner: Imperium
 		Location: 76,63
-		Facing: 92
+		Facing: 368
 	Actor84: tachiontank
 		Owner: Imperium
 		Location: 66,65
-		Facing: 92
+		Facing: 368
 	Actor85: scarab
 		Owner: Imperium
 		Location: 68,65
-		Facing: 92
+		Facing: 368
 	Actor86: gant
 		Owner: Imperium
 		Location: 70,65
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor87: grendel
 		Owner: Imperium
 		Location: 72,65
-		Facing: 92
+		Facing: 368
 	Actor88: grendelrider
 		Owner: Imperium
 		Location: 74,65
-		Facing: 92
+		Facing: 368
 	Actor89: ratmk2
 		Owner: Imperium
 		Location: 76,65
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor90: geminitank
 		Owner: Imperium
 		Location: 66,67
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor91: shadowblade
 		Owner: Imperium
 		Location: 68,67
-		Facing: 92
+		Facing: 368
 	Actor92: fury
 		Owner: Imperium
 		Location: 70,67
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor93: empdevice
 		Owner: Imperium
 		Location: 72,67
-		Facing: 92
+		Facing: 368
 	Actor94: roadterraformer
 		Owner: Imperium
 		Location: 74,67
-		Facing: 92
+		Facing: 368
 	Actor95: marshterraformer
 		Owner: Imperium
 		Location: 76,67
-		Facing: 92
+		Facing: 368
 	Actor96: constructionrig
 		Owner: Imperium
 		Location: 61,63
-		Facing: 92
+		Facing: 368
 	Actor97: freighter
 		Owner: Imperium
 		Location: 57,63
-		Facing: 92
+		Facing: 368
 	Actor98: hoverfreighter
 		Owner: Imperium
 		Location: 59,63
-		Facing: 92
+		Facing: 368
 	Actor99: skybike
 		Owner: Imperium
 		Location: 52,66
-		Facing: 92
+		Facing: 368
 	Actor100: outrider
 		Owner: Imperium
 		Location: 54,66
-		Facing: 92
+		Facing: 368
 	Actor101: recondrone
 		Owner: Imperium
 		Location: 56,66
-		Facing: 92
+		Facing: 368
 	Actor102: cyclone
 		Owner: Imperium
 		Location: 58,66
-		Facing: 92
+		Facing: 368
 	Actor103: skyfortress
 		Owner: Imperium
 		Location: 60,66
-		Facing: 92
+		Facing: 368
 	Actor104: avenger
 		Owner: Imperium
 		Location: 55,68
-		Facing: 92
+		Facing: 368
 	Actor105: hadesbomber
 		Owner: Imperium
 		Location: 57,68
-		Facing: 92
+		Facing: 368
 	Actor106: hq.terrorist
 		Owner: Imperium
 		Location: 43,84
@@ -402,43 +394,43 @@ Actors:
 	Actor114: terroristguardtower
 		Owner: Imperium
 		Location: 36,95
-		TurretFacing: 92
+		TurretFacing: 368
 	Actor115: terroristflamertower
 		Owner: Imperium
 		Location: 33,95
-		TurretFacing: 92
+		TurretFacing: 368
 	Actor116: missiletower
 		Owner: Imperium
 		Location: 30,95
-		TurretFacing: 92
+		TurretFacing: 368
 	Actor155: civilian
 		Owner: Imperium
 		Location: 51,56
-		Facing: 92
+		Facing: 368
 	Actor156: rowdycivilian
 		Owner: Imperium
 		Location: 53,56
-		Facing: 92
+		Facing: 368
 	Actor157: colonelmartel
 		Owner: Imperium
 		Location: 55,56
-		Facing: 92
+		Facing: 368
 	Actor158: jebradec
 		Owner: Imperium
 		Location: 57,56
-		Facing: 92
+		Facing: 368
 	Actor159: karoch
 		Owner: Imperium
 		Location: 59,56
-		Facing: 92
+		Facing: 368
 	Actor160: dessicatortransport
 		Owner: Imperium
 		Location: 61,56
-		Facing: 92
+		Facing: 368
 	Actor161: civwheeltransporter
 		Owner: Imperium
 		Location: 64,56
-		Facing: 92
+		Facing: 368
 	Actor162: smallwall2
 		Owner: Imperium
 		Location: 30,100
@@ -565,138 +557,131 @@ Actors:
 	Actor140: gorehunter
 		Owner: Imperium
 		Location: 51,47
-		Facing: 92
+		Facing: 368
 	Actor141: shocktrooper
 		Owner: Imperium
 		Location: 53,47
-		Facing: 92
+		Facing: 368
 	Actor142: santa
 		Owner: Imperium
 		Location: 55,47
-		Facing: 92
+		Facing: 368
 	Actor143: gorebeast
 		Owner: Imperium
 		Location: 57,47
-		Facing: 92
+		Facing: 368
 	Actor144: rastaterroristsoldierveteran
 		Owner: Imperium
 		Location: 59,47
-		Facing: 92
+		Facing: 368
 	Actor145: rastaterroristsoldier
 		Owner: Imperium
 		Location: 61,47
-		Facing: 92
+		Facing: 368
 	Actor146: alternatelardriddenterroristsoldier
 		Owner: Imperium
 		Location: 51,49
-		Facing: 92
+		Facing: 368
 	Actor147: lardriddenterroristsoldierveteran
 		Owner: Imperium
 		Location: 53,49
-		Facing: 92
+		Facing: 368
 	Actor148: skateyscout
 		Owner: Imperium
 		Location: 55,49
-		Facing: 92
+		Facing: 368
 	Actor203: terroristwaa
 		Owner: Imperium
 		Location: 38,47
-		Facing: 92
+		Facing: 368
 	Actor204: terroristwatertank
 		Owner: Imperium
 		Location: 38,49
-		Facing: 92
+		Facing: 368
 	Actor205: terroristwatershock
 		Owner: Imperium
 		Location: 35,47
-		Facing: 92
+		Facing: 368
 	Actor212: gunwalker
 		Owner: Imperium
 		Location: 66,47
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor213: walkerscout
 		Owner: Imperium
 		Location: 68,47
-		Facing: 92
+		Facing: 368
 	Actor214: ticktankalt
 		Owner: Imperium
 		Location: 70,47
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor215: ticktank
 		Owner: Imperium
 		Location: 72,47
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor216: flamingdeath
 		Owner: Imperium
 		Location: 74,47
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor217: hoverassaulttank
 		Owner: Imperium
 		Location: 76,47
-		Facing: 92
+		Facing: 368
 	Actor218: constructionbiot
 		Owner: Imperium
-		Facing: 92
+		Facing: 368
 		Location: 66,51
 	Actor219: constructioncrawler
 		Owner: Imperium
-		Facing: 92
+		Facing: 368
 		Location: 68,51
 	Actor220: terroristwaterfreighter
 		Owner: Imperium
-		Facing: 92
+		Facing: 368
 		Location: 70,51
 	Actor221: terroristtransport
 		Owner: Imperium
-		Facing: 92
+		Facing: 368
 		Location: 72,51
 	Actor222: terroristmissiletank
 		Owner: Imperium
-		Facing: 92
+		Facing: 368
 		Location: 74,51
 	Actor223: terroristartillery
 		Owner: Imperium
-		Facing: 92
+		Facing: 368
 		Location: 76,51
 	Actor206: sonicthumperalternate
 		Owner: Imperium
 		Location: 66,49
-		Facing: 92
+		Facing: 368
 	Actor207: sonicthumper
 		Owner: Imperium
 		Location: 68,49
-		Facing: 92
+		Facing: 368
 	Actor208: vortextank
 		Owner: Imperium
 		Location: 70,49
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor209: armoredguardwalker
 		Owner: Imperium
 		Location: 72,49
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor210: atatwalker
 		Owner: Imperium
 		Location: 75,49
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor211: terroristbreakerboys
 		Owner: Imperium
 		Location: 66,53
-		Facing: 92
+		Facing: 368
 	Actor224: terroristhospitalunit
 		Owner: Imperium
 		Location: 68,53
-		Facing: 92
+		Facing: 368
 	Actor225: terroristwaterbornetroopcarrier
 		Owner: Imperium
 		Location: 35,49
-		Facing: 92
+		Facing: 368
 	Actor226: water
 		Owner: Neutral
 		Location: 62,73

@@ -842,8 +842,8 @@ tcvbvst0:
 	shadow: tcvbvsh0
 		Start: 0
 		Offset: -9, 0
-
 	
+
 # Togran Monolith
 tomlt1l0:
 	idle:

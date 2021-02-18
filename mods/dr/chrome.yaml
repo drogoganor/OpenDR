@@ -37,7 +37,6 @@ production-icons:
 		air: 68, 68, 16, 16
 		air-disabled: 68, 85, 16, 16
 		air-alert: 68, 102, 16, 16
-
 		economy: 102, 68, 16, 16
 		economy-disabled: 102, 85, 16, 16
 		economy-alert: 102, 102, 16, 16
@@ -45,6 +44,7 @@ production-icons:
 		upgrade-disabled: 136, 85, 16, 16
 		upgrade-alert: 136, 102, 16, 16
 		
+
 power-icons:
 	Inherits: ^Glyphs
 	Regions:
@@ -145,7 +145,7 @@ lobby-bits:
 	Regions:
 		spawn-unclaimed: 91, 119, 22, 22
 		spawn-claimed: 68, 119, 22, 22
-        spawn-disabled: 114, 144, 22, 22
+		spawn-disabled: 114, 144, 22, 22
 		admin: 170, 0, 6, 5
 		colorpicker: 68, 119, 22, 22
 		huepicker: 136, 0, 7, 15
@@ -388,11 +388,11 @@ loadscreen-stripe:
 
 sidebar-bits:
 	Inherits: ^Chrome
-    Regions:
-        production-iconoverlay: 128, 75, 238, 48
-        commandbar-background: 0, 123, 434, 44
-        indicator-left: 416, 48, 16, 8
-        indicator-right: 416, 56, 16, 8
+	Regions:
+		production-iconoverlay: 128, 75, 238, 48
+		commandbar-background: 0, 123, 434, 44
+		indicator-left: 416, 48, 16, 8
+		indicator-right: 416, 56, 16, 8
 
 sidebar-fguard:
 	Inherits: ^Chrome
@@ -834,4 +834,3 @@ sidebar-button-observer-disabled:
 sidebar-button-observer-highlighted-disabled:
 	Inherits: ^Chrome
 	PanelRegion: 168, 0, 5, 5, 18, 18, 5, 5
-

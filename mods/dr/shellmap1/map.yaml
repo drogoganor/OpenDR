@@ -278,194 +278,190 @@ Actors:
 	Actor106: raider
 		Owner: Freedom Guard
 		Location: 41,23
-		Facing: 169
+		Facing: 676
 	Actor107: raider
 		Owner: Freedom Guard
 		Location: 41,21
-		Facing: 92
+		Facing: 368
 	Actor108: raider
 		Owner: Freedom Guard
 		Location: 40,21
-		Facing: 92
+		Facing: 368
 	Actor109: raider
 		Owner: Freedom Guard
 		Location: 39,22
-		Facing: 111
+		Facing: 444
 	Actor110: raider
 		Owner: Freedom Guard
 		Location: 38,23
-		Facing: 139
+		Facing: 556
 	Actor111: raider
 		Owner: Freedom Guard
 		Location: 36,24
-		Facing: 122
+		Facing: 488
 	Actor112: raider
 		Owner: Freedom Guard
 		Location: 36,25
-		Facing: 135
+		Facing: 540
 	Actor113: raider
 		Owner: Freedom Guard
 		Location: 37,26
-		Facing: 153
+		Facing: 612
 	Actor114: raider
 		Owner: Freedom Guard
 		Location: 38,26
-		Facing: 119
+		Facing: 476
 	Actor115: mercenary
 		Owner: Freedom Guard
 		Location: 42,22
-		Facing: 139
+		Facing: 556
 	Actor116: mercenary
 		Owner: Freedom Guard
 		Location: 39,23
-		Facing: 162
+		Facing: 648
 	Actor117: mercenary
 		Owner: Freedom Guard
 		Location: 37,25
-		Facing: 179
+		Facing: 716
 	Actor118: medic
 		Owner: Freedom Guard
 		Location: 41,22
-		Facing: 169
+		Facing: 676
 	Actor119: sniper
 		Owner: Freedom Guard
 		Location: 36,26
-		Facing: 155
+		Facing: 620
 	Actor120: spiderbike
 		Owner: Freedom Guard
 		Location: 34,25
-		Facing: 166
+		Facing: 664
 	Actor121: spiderbike
 		Owner: Freedom Guard
 		Location: 33,24
-		Facing: 185
+		Facing: 740
 	Actor122: spiderbike
 		Owner: Freedom Guard
 		Location: 42,20
-		Facing: 157
+		Facing: 628
 	Actor123: skirmishtank
 		Owner: Freedom Guard
 		Location: 39,20
-		Facing: 154
-		TurretFacing: 144
+		Facing: 616
+		TurretFacing: 984
 	Actor124: skirmishtank
 		Owner: Freedom Guard
 		Location: 37,22
-		TurretFacing: 162
-		Facing: 162
+		Facing: 648
 	Actor125: skirmishtank
 		Owner: Freedom Guard
 		Location: 35,23
-		Facing: 163
-		TurretFacing: 169
+		Facing: 652
+		TurretFacing: 24
 	Actor126: triplerailhovertank
 		Owner: Freedom Guard
 		Location: 35,20
-		TurretFacing: 167
-		Facing: 167
+		Facing: 668
 	Actor127: tankhunter
 		Owner: Freedom Guard
 		Location: 37,19
-		Facing: 159
+		Facing: 636
 	Actor128: raider
 		Owner: Freedom Guard
 		Location: 39,25
-		Facing: 136
+		Facing: 544
 	Actor131: raider
 		Owner: Freedom Guard
 		Location: 40,25
-		Facing: 148
+		Facing: 592
 	Actor129: guardian
 		Owner: Imperium
 		Location: 48,37
-		Facing: 92
+		Facing: 368
 	Actor133: guardian
 		Owner: Imperium
 		Location: 50,35
-		Facing: 95
+		Facing: 380
 	Actor134: guardian
 		Owner: Imperium
 		Location: 49,34
-		Facing: 32
+		Facing: 128
 	Actor135: guardian
 		Owner: Imperium
 		Location: 48,36
-		Facing: 92
+		Facing: 368
 	Actor136: guardian
 		Owner: Imperium
 		Location: 52,33
-		Facing: 92
+		Facing: 368
 	Actor137: guardian
 		Owner: Imperium
 		Location: 53,33
-		Facing: 112
+		Facing: 448
 	Actor138: guardian
 		Owner: Imperium
 		Location: 53,32
-		Facing: 36
+		Facing: 144
 	Actor139: bion
 		Owner: Imperium
 		Location: 49,36
-		Facing: 61
+		Facing: 244
 	Actor141: bion
 		Owner: Imperium
 		Location: 53,34
-		Facing: 75
+		Facing: 300
 	Actor140: bion
 		Owner: Imperium
 		Location: 51,34
-		Facing: 44
+		Facing: 176
 	Actor142: scoutrunner
 		Owner: Imperium
 		Location: 46,38
-		Facing: 56
+		Facing: 224
 	Actor143: scoutrunner
 		Owner: Imperium
 		Location: 55,32
-		Facing: 63
+		Facing: 252
 	Actor144: plasmatank
 		Owner: Imperium
 		Location: 55,34
-		TurretFacing: 64
-		Facing: 64
+		Facing: 256
 	Actor145: plasmatank
 		Owner: Imperium
 		Location: 53,36
-		TurretFacing: 59
-		Facing: 59
+		Facing: 236
 	Actor147: tachiontank
 		Owner: Imperium
 		Location: 56,36
 		Health: 100
-		Facing: 55
+		Facing: 220
 	Actor148: amper
 		Owner: Imperium
 		Location: 49,38
-		Facing: 49
+		Facing: 196
 	Actor146: shredder
 		Owner: Imperium
 		Location: 52,38
-		Facing: 92
+		Facing: 368
 	Actor149: guardian
 		Owner: Imperium
 		Location: 51,36
-		Facing: 53
+		Facing: 212
 	Actor130: raider
 		Owner: Freedom Guard
 		Location: 41,24
-		Facing: 139
+		Facing: 556
 	Actor132: raider
 		Owner: Freedom Guard
 		Location: 39,24
-		Facing: 135
+		Facing: 540
 	Actor150: guardian
 		Owner: Imperium
 		Location: 47,36
-		Facing: 46
+		Facing: 184
 	Actor151: guardian
 		Owner: Imperium
 		Location: 51,32
-		Facing: 55
+		Facing: 220
 	Actor152: water
 		Owner: Neutral
 		Location: 73,6

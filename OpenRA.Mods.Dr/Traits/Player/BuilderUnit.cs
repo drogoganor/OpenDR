@@ -18,7 +18,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Dr.Traits
 {
 	[Desc("Attach this to an actor (a builder unit) to let it select buildings to construct.")]
-	public class BuilderUnitInfo : ITraitInfoInterface
+	public class BuilderUnitInfo : TraitInfo
 	{
 		[FieldLoader.Require]
 		[Desc("What kind of production will be added (e.g. Building, Infantry, Vehicle, ...)")]
@@ -35,7 +35,7 @@ namespace OpenRA.Mods.Dr.Traits
 			"The filename of the audio is defined per faction in notifications.yaml.")]
 		public readonly string BlockedAudio = "NoBuild";
 
-		public virtual object Create(ActorInitializer init) { return new BuilderUnit(init, init.Self.Owner.PlayerActor, this); }
+		public override object Create(ActorInitializer init) { return new BuilderUnit(init, init.Self.Owner.PlayerActor, this); }
 
 		public void RulesetLoaded(Ruleset rules, ActorInfo ai)
 		{

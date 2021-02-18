@@ -91,7 +91,7 @@ Sniper:
 		Sequence: shadow
 	Disguise:
 		DisguisedCondition: disguise
-		ValidStances: Neutral
+		ValidRelationships: Neutral
 		TargetTypes: Trees
 		RevealDisguiseOn: Move, Attack
 	-Tooltip:
@@ -113,8 +113,7 @@ Sniper:
 		Image: pips
 		Sequence: pip-blue
 		Palette: effect
-		ReferencePoint: Top, Right
-		ZOffset: 256
+		Position: TopRight
 		RequiresCondition: disguise
 
 Scout:
@@ -146,7 +145,7 @@ Scout:
 		Sequence: shadow
 	Disguise:
 		DisguisedCondition: disguise
-		ValidStances: Neutral
+		ValidRelationships: Neutral
 		TargetTypes: Trees
 		RevealDisguiseOn: Move
 	-Tooltip:
@@ -168,8 +167,7 @@ Scout:
 		Image: pips
 		Sequence: pip-blue
 		Palette: effect
-		ReferencePoint: Top, Right
-		ZOffset: 256
+		Position: TopRight
 		RequiresCondition: disguise
 
 Medic:
@@ -203,8 +201,8 @@ Medic:
 		Weapon: Heal
 		Cursor: heal
 		OutsideRangeCursor: heal
-		TargetStances: Ally
-		ForceTargetStances: None
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry
@@ -273,8 +271,8 @@ Mechanic:
 		Weapon: Repair
 		Cursor: repair
 		OutsideRangeCursor: repair
-		TargetStances: Ally
-		ForceTargetStances: None
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Vehicle
@@ -451,7 +449,7 @@ Infiltrator:
 		GenericName: Soldier
 	-Guard:
 	Infiltrates:
-		ValidStances: Enemy
+		ValidRelationships: Enemy
 		Types: SpyInfiltrate
 		PlayerExperience: 50
 		Notification: BuildingInfiltrated
@@ -468,8 +466,7 @@ Infiltrator:
 		Image: pips
 		Sequence: pip-blue
 		Palette: effect
-		ReferencePoint: Top, Right
-		ZOffset: 256
+		Position: TopRight
 		RequiresCondition: disguise
 	IgnoresDisguise:
 	WithIdleOverlay@SHADOW: # No animated shadow
@@ -509,7 +506,7 @@ ConstructionRig:
 	Passenger:
 		CargoType: Infantry
 		Weight: 5
-		PipType: Yellow
+		CustomPipType: yellow
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	BuilderUnit@Building:
@@ -683,11 +680,15 @@ RAT:
 	Cargo:
 		Types: Infantry
 		MaxWeight: 5
-		PipCount: 5
 		LoadingCondition: notmobile
 	Armor:
 		Type: TankPlating
 	-Armament:
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		CustomPipSequences:
+			yellow: pip-yellow
 
 SkirmishTank:
 	Inherits: ^Vehicle
@@ -705,7 +706,7 @@ SkirmishTank:
 	Selectable:
 		Class: V3
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament:
 		Weapon: SkirmishGun1
 		Recoil: 128
@@ -841,7 +842,7 @@ TripleRailHoverTank:
 	Armor:
 		Type: TankPlating
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament:
 		Weapon: TripleRailGun
 		Recoil: 128
@@ -910,7 +911,7 @@ ShockWave:
 	Armor:
 		Type: TankPlating
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament:
 		Weapon: ShockWaveGun
 		Recoil: 128
@@ -982,11 +983,15 @@ PhaseRunner:
 	Cargo:
 		Types: Infantry
 		MaxWeight: 5
-		PipCount: 5
 		LoadingCondition: notmobile
 	Armor:
 		Type: TankPlating
 	-Armament:
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		CustomPipSequences:
+			yellow: pip-yellow
 
 # Imperium
 
@@ -1047,12 +1052,11 @@ ITT:
 	Cargo:
 		Types: Infantry
 		MaxWeight: 5
-		PipCount: 5
 		LoadingCondition: notmobile
 	Armor:
 		Type: TankPlating
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament:
 		Weapon: LaserRifle
 		Recoil: 128
@@ -1064,6 +1068,11 @@ ITT:
 	-AttackFrontal:
 	AttackTurreted:
 	WithSpriteTurret:
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		CustomPipSequences:
+			yellow: pip-yellow
 
 PlasmaTank:
 	Inherits: ^HoverVehicle
@@ -1091,7 +1100,7 @@ PlasmaTank:
 	Armor:
 		Type: TankPlating
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament:
 		Weapon: PlasmaCannon
 		Recoil: 128
@@ -1311,15 +1320,18 @@ SkyBike:
 		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 20
-		PipCount: 5
-		PipType: Red
 		AmmoCondition: ammo
 		ReloadDelay: 10 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 198
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 5
+		FullSequence: pip-red
 
 Outrider:
 	Inherits: ^Aircraft
@@ -1347,15 +1359,18 @@ Outrider:
 		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 10
-		PipCount: 5
-		PipType: Red
 		AmmoCondition: ammo
 		ReloadDelay: 20 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 174
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 5
+		FullSequence: pip-red
 
 ReconDrone:
 	Inherits: ^Aircraft
@@ -1381,7 +1396,7 @@ ReconDrone:
 	Aircraft:
 		Speed: 126
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
 
 Cyclone:
@@ -1410,15 +1425,17 @@ Cyclone:
 		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 5
-		PipCount: 5
-		PipType: Red
 		AmmoCondition: ammo
 		ReloadDelay: 40 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 174
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		FullSequence: pip-red
 
 SkyFortress:
 	Inherits: ^Aircraft
@@ -1449,15 +1466,17 @@ SkyFortress:
 		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 1
-		PipCount: 1
-		PipType: Red
 		AmmoCondition: ammo
 		ReloadDelay: 200 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 90
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		FullSequence: pip-red
 
 # Expansion
 
@@ -1490,7 +1509,7 @@ Gant:
 	Armor:
 		Type: ToughHuman
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament:
 		Weapon: Claws
 		Recoil: 128
@@ -1689,7 +1708,7 @@ RATmk2:
 	Armor:
 		Type: TankPlating
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 		Offset: 0, 0, 384
 	Armament:
 		Weapon: LaserRifle
@@ -1705,8 +1724,12 @@ RATmk2:
 	Cargo:
 		Types: Infantry
 		MaxWeight: 5
-		PipCount: 5
 		LoadingCondition: notmobile
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		CustomPipSequences:
+			yellow: pip-yellow
 
 GeminiTank:
 	Inherits: ^HoverVehicle
@@ -1736,7 +1759,7 @@ GeminiTank:
 	Armor:
 		Type: ForcePlating
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament:
 		Weapon: GeminiFull
 		Recoil: 128
@@ -1799,7 +1822,7 @@ Fury:
 	Armor:
 		Type: TankPlating
 	Turreted:
-		TurnSpeed: 5
+		TurnSpeed: 20
 	Armament:
 		Weapon: FuryGun1
 		Recoil: 128
@@ -1838,7 +1861,7 @@ EMPDevice:
 	Aircraft:
 		Speed: 102
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
 
 RoadTerraformer:
@@ -1932,15 +1955,17 @@ Avenger:
 		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 1
-		PipCount: 1
-		PipType: Red
 		AmmoCondition: ammo
 		ReloadDelay: 40 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 138
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		FullSequence: pip-red
 
 HadesBomber:
 	Inherits: ^Aircraft
@@ -1971,12 +1996,14 @@ HadesBomber:
 		PauseOnCondition: !ammo
 	AmmoPool:
 		Ammo: 5
-		PipCount: 5
-		PipType: Red
 		AmmoCondition: ammo
 		ReloadDelay: 40 # Hack attribute to be removed, see AmmoPool.cs
 	Aircraft:
 		Speed: 150
 	AttackAircraft:
-		FacingTolerance: 20
+		FacingTolerance: 80
 		AttackType: Hover
+	WithAmmoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		FullSequence: pip-red

@@ -638,4 +638,3 @@ eosmosm2: # Smoke move 2
 		Length: 20 # Should be 22 but this is rectangular
 		Tick: 240
 		ZOffset: 8192
-

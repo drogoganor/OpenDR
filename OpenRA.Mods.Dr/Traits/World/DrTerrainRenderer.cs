@@ -64,7 +64,7 @@ namespace OpenRA.Mods.Common.Traits
 		}
 	}
 
-	public class DrTerrainRendererInfo : ITraitInfoInterface
+	public class DrTerrainRendererInfo : TraitInfo
 	{
 		[FieldLoader.LoadUsing("LoadShorelines")]
 		public Dictionary<string, DrTerrainShorelineInfo> Shorelines;
@@ -83,7 +83,7 @@ namespace OpenRA.Mods.Common.Traits
 			return retList;
 		}
 
-		public object Create(ActorInitializer init) { return new DrTerrainRenderer(init.World, this); }
+		public override object Create(ActorInitializer init) { return new DrTerrainRenderer(init.World, this); }
 	}
 
 	internal static class DrTerrainHelper

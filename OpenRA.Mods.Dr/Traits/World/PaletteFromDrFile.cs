@@ -22,7 +22,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Dr.Traits
 {
 	[Desc("Load a Dark Reign .PAL palette file. Index 0 is hardcoded to be fully transparent/invisible.")]
-	class PaletteFromDrFileInfo : ITraitInfoInterface, IProvidesCursorPaletteInfo
+	class PaletteFromDrFileInfo : TraitInfo, IProvidesCursorPaletteInfo
 	{
 		[FieldLoader.Require]
 		[PaletteDefinition]
@@ -53,7 +53,7 @@ namespace OpenRA.Mods.Dr.Traits
 		[Desc("Increase all RGB values by this amount.")]
 		public readonly int Gamma = 0;
 
-		public object Create(ActorInitializer init) { return new PaletteFromDrFile(init.World, this); }
+		public override object Create(ActorInitializer init) { return new PaletteFromDrFile(init.World, this); }
 
 		string IProvidesCursorPaletteInfo.Palette { get { return CursorPalette ? Name : null; } }
 

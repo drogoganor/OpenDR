@@ -1,0 +1,8 @@
+{
+  "profiles": {
+	"Dark Reign": {
+      "commandName": "Project",
+      "commandLineArgs": "Game.Mod=dr Engine.ModSearchPaths=../mods,./mods"
+    }
+  }
+}

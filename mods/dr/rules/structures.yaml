@@ -18,8 +18,6 @@ Power:
 		DockAngle: 32
 		DockOffset: 0,2
 	StoresResources:
-		PipColor: Green
-		PipCount: 12
 		Capacity: 3000
 	#FreeActor:
 	#	Actor: Freighter
@@ -35,6 +33,10 @@ Power:
 		Sequence: shadow
 	WithIdleOverlay@LAYER4:
 		Sequence: top2
+	WithResourceStoragePipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 12
 
 WaterLaunchPad:
 	Inherits: WaterLaunchPad.Constructing
@@ -60,13 +62,11 @@ WaterLaunchPad:
 		DockAngle: 32
 		DockOffset: 1,2
 	StoresResources:
-		PipColor: Blue
-		PipCount: 18
 		Capacity: 3000
 	FreeActor:
 		Actor: Freighter
 		SpawnOffset: 1,2
-		Facing: 64
+		Facing: 256
 	WithIdleOverlay@LAYER1:
 		Palette: terrain
 		Sequence: underlay
@@ -75,6 +75,11 @@ WaterLaunchPad:
 	WithIdleOverlay@LAYER3:
 		Palette: shadow
 		Sequence: shadow
+	WithResourceStoragePipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		PipCount: 18
+		FullSequence: pip-blue
 
 HQ.human:
 	Inherits: HQ.human.Constructing
@@ -415,8 +420,8 @@ LaserTurret:
 	Tooltip:
 		Name: Laser Turret
 	Turreted:
-		TurnSpeed: 16
-		InitialFacing: 56
+		TurnSpeed: 64
+		InitialFacing: 224
 		Offset: 256,-24,255
 	Armament:
 		Weapon: GatLaser
@@ -435,8 +440,8 @@ PlasmaTurret:
 	Tooltip:
 		Name: Plasma Turret
 	Turreted:
-		TurnSpeed: 12
-		InitialFacing: 56
+		TurnSpeed: 48
+		InitialFacing: 224
 		Offset: 0,0,-24
 	Armament:
 		Weapon: GatPlasma
@@ -468,8 +473,8 @@ AntiAirTurret.human:
 	Power:
 		Amount: -50
 	Turreted:
-		TurnSpeed: 12
-		InitialFacing: 56
+		TurnSpeed: 48
+		InitialFacing: 224
 		Offset: 256,-24,255
 	Armament:
 		Weapon: FixedGroundToAirLaser
@@ -501,8 +506,8 @@ AntiAirTurret.cyborg:
 	Power:
 		Amount: -50
 	Turreted:
-		TurnSpeed: 12
-		InitialFacing: 56
+		TurnSpeed: 48
+		InitialFacing: 224
 		Offset: 256,-24,255
 	Armament:
 		Weapon: IMPFixedGroundToAirLaser
@@ -546,8 +551,8 @@ HeavyRailTurret:
 		Bounds: 72,72,0,0
 		DecorationBounds: 72,72,0,0
 	Turreted:
-		TurnSpeed: 12
-		InitialFacing: 56
+		TurnSpeed: 48
+		InitialFacing: 224
 		Offset: 256,-24,255
 	Armament:
 		Weapon: FixedLaserPlat
@@ -581,8 +586,8 @@ NeutronAccelerator:
 		Bounds: 72,72,0,0
 		DecorationBounds: 72,72,0,0
 	Turreted:
-		TurnSpeed: 12
-		InitialFacing: 56
+		TurnSpeed: 48
+		InitialFacing: 224
 		Offset: 256,-24,255
 	Armament:
 		Weapon: NeutronAss
@@ -835,8 +840,7 @@ PhasingFacility:
 		RequiresSelection: true
 		Image: pips
 		Sequence: pip-red
-		ReferencePoint: Bottom, Left
-		ZOffset: 256
+		Position: BottomLeft
 		RequiresCondition: stardecoration
 	WithSpriteBody:
 		RequiresCondition: !stardecoration
@@ -955,6 +959,8 @@ TemporalGate:
 		DisplayRadarPing: True
 		SelectionCursor: move
 		TargetCursor: attack
+		Dimensions: 3, 3
+		Footprint: _x_ xxx _x_
 
 # Imperium temporal rift creator
 TemporalRiftCreator:

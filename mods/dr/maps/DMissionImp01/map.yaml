@@ -76,7 +76,7 @@ Actors:
 	ABFreighter: freighter
 		Owner: Abandoned Base
 		Location: 51,48
-		Facing: 92
+		Facing: 368
 	Entry1: waypoint
 		Owner: Neutral
 		Location: 17,52
@@ -106,44 +106,44 @@ Actors:
 		Location: 37,5
 	TS101: itt
 		Owner: Trapped Soldiers 1
-		Facing: 92
+		Facing: 368
 		Location: 47,19
 	TS102: itt
 		Owner: Trapped Soldiers 1
-		Facing: 92
+		Facing: 368
 		Location: 49,19
 	TS103: itt
 		Owner: Trapped Soldiers 1
-		Facing: 92
+		Facing: 368
 		Location: 51,20
 	TS104: scoutrunner
 		Owner: Trapped Soldiers 1
-		Facing: 92
+		Facing: 368
 		Location: 51,22
 	TS105: scoutrunner
 		Owner: Trapped Soldiers 1
-		Facing: 92
+		Facing: 368
 		Location: 49,21
 	TS201: guardian
 		Owner: Trapped Soldiers 2
 		Location: 5,30
-		Facing: 92
+		Facing: 368
 	TS202: bion
 		Owner: Trapped Soldiers 2
 		Location: 6,30
-		Facing: 92
+		Facing: 368
 	TS203: bion
 		Owner: Trapped Soldiers 2
 		Location: 7,31
-		Facing: 92
+		Facing: 368
 	TS204: bion
 		Owner: Trapped Soldiers 2
 		Location: 8,32
-		Facing: 92
+		Facing: 368
 	TS205: guardian
 		Owner: Trapped Soldiers 2
 		Location: 6,32
-		Facing: 92
+		Facing: 368
 	Actor25: aotre001
 		Owner: Neutral
 		Location: 22,30
@@ -867,55 +867,55 @@ Actors:
 	Actor360: laserturret
 		Owner: Freedom Guard
 		Location: 25,23
-		TurretFacing: 92
+		TurretFacing: 368
 	Actor367: raider
 		Owner: Freedom Guard
 		Location: 24,26
-		Facing: 92
+		Facing: 368
 	Actor375: raider
 		Owner: Freedom Guard
 		Location: 25,26
-		Facing: 92
+		Facing: 368
 	Actor376: raider
 		Owner: Freedom Guard
 		Location: 28,24
-		Facing: 92
+		Facing: 368
 	Actor377: raider
 		Owner: Freedom Guard
 		Location: 29,24
-		Facing: 92
+		Facing: 368
 	Actor378: raider
 		Owner: Freedom Guard
 		Location: 24,27
-		Facing: 92
+		Facing: 368
 	Actor379: raider
 		Owner: Freedom Guard
 		Location: 29,23
-		Facing: 92
+		Facing: 368
 	Actor380: mercenary
 		Owner: Freedom Guard
 		Location: 28,23
-		Facing: 92
+		Facing: 368
 	Actor381: mercenary
 		Owner: Freedom Guard
 		Location: 23,26
-		Facing: 92
+		Facing: 368
 	Actor382: raider
 		Owner: Freedom Guard
 		Location: 27,25
-		Facing: 92
+		Facing: 368
 	Actor383: raider
 		Owner: Freedom Guard
 		Location: 26,26
-		Facing: 92
+		Facing: 368
 	Actor384: raider
 		Owner: Freedom Guard
 		Location: 32,30
-		Facing: 92
+		Facing: 368
 	Actor385: raider
 		Owner: Freedom Guard
 		Location: 33,31
-		Facing: 92
+		Facing: 368
 	Actor297: aoclf001
 		Owner: Neutral
 		Location: 42,21
@@ -979,43 +979,43 @@ Actors:
 	Actor395: laserturret
 		Owner: Freedom Guard
 		Location: 37,21
-		TurretFacing: 92
+		TurretFacing: 368
 	Actor396: raider
 		Owner: Freedom Guard
 		Location: 36,23
-		Facing: 92
+		Facing: 368
 	Actor401: raider
 		Owner: Freedom Guard
 		Location: 35,22
-		Facing: 92
+		Facing: 368
 	Actor402: raider
 		Owner: Freedom Guard
 		Location: 36,21
-		Facing: 92
+		Facing: 368
 	Actor403: raider
 		Owner: Freedom Guard
 		Location: 39,23
-		Facing: 92
+		Facing: 368
 	Actor404: raider
 		Owner: Freedom Guard
 		Location: 39,21
-		Facing: 92
+		Facing: 368
 	Actor405: raider
 		Owner: Freedom Guard
 		Location: 37,20
-		Facing: 92
+		Facing: 368
 	Actor406: raider
 		Owner: Freedom Guard
 		Location: 38,20
-		Facing: 92
+		Facing: 368
 	Actor407: mercenary
 		Owner: Freedom Guard
 		Location: 35,21
-		Facing: 92
+		Facing: 368
 	Actor408: mercenary
 		Owner: Freedom Guard
 		Location: 38,19
-		Facing: 92
+		Facing: 368
 	Actor409: aoroc001
 		Owner: Neutral
 		Location: 12,8
@@ -1124,96 +1124,94 @@ Actors:
 	Actor444: raider
 		Owner: Freedom Guard
 		Location: 23,24
-		Facing: 92
+		Facing: 368
 	Actor445: raider
 		Owner: Freedom Guard
 		Location: 24,23
-		Facing: 92
+		Facing: 368
 	Actor446: raider
 		Owner: Freedom Guard
 		Location: 26,22
-		Facing: 92
+		Facing: 368
 	Actor447: raider
 		Owner: Freedom Guard
 		Location: 27,22
-		Facing: 92
+		Facing: 368
 	Actor448: raider
 		Owner: Freedom Guard
 		Location: 40,28
-		Facing: 92
+		Facing: 368
 	Actor449: spiderbike
 		Owner: Freedom Guard
 		Location: 42,27
-		Facing: 92
+		Facing: 368
 	Actor450: raider
 		Owner: Freedom Guard
 		Location: 35,6
-		Facing: 92
+		Facing: 368
 	Actor452: raider
 		Owner: Freedom Guard
 		Location: 18,6
-		Facing: 92
+		Facing: 368
 	Actor453: raider
 		Owner: Freedom Guard
 		Location: 19,5
-		Facing: 92
+		Facing: 368
 	Actor455: raider
 		Owner: Freedom Guard
 		Location: 32,11
-		Facing: 92
+		Facing: 368
 	Actor456: mercenary
 		Owner: Freedom Guard
 		Location: 32,10
-		Facing: 92
+		Facing: 368
 	Actor451: raider
 		Owner: Freedom Guard
 		Location: 36,5
-		Facing: 92
+		Facing: 368
 	Actor454: skirmishtank
 		Owner: Freedom Guard
 		Location: 24,25
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor457: skirmishtank
 		Owner: Freedom Guard
 		Location: 36,20
-		Facing: 92
-		TurretFacing: 92
+		Facing: 368
 	Actor458: spiderbike
 		Owner: Freedom Guard
 		Location: 24,22
-		Facing: 92
+		Facing: 368
 	Actor459: spiderbike
 		Owner: Freedom Guard
 		Location: 37,23
-		Facing: 92
+		Facing: 368
 	Actor294: aoroc002
 		Owner: Neutral
 		Location: 46,21
 	Actor463: raider
 		Owner: Freedom Guard
 		Location: 33,40
-		Facing: 92
+		Facing: 368
 	Actor464: raider
 		Owner: Freedom Guard
 		Location: 33,41
-		Facing: 92
+		Facing: 368
 	Actor465: mercenary
 		Owner: Freedom Guard
 		Location: 34,42
-		Facing: 92
+		Facing: 368
 	Actor460: raider
 		Owner: Freedom Guard
 		Location: 27,45
-		Facing: 92
+		Facing: 368
 	Actor461: raider
 		Owner: Freedom Guard
 		Location: 28,44
-		Facing: 92
+		Facing: 368
 	Actor462: raider
 		Owner: Freedom Guard
 		Location: 28,43
-		Facing: 92
+		Facing: 368
 	Actor466: water
 		Owner: Neutral
 		Location: 48,49

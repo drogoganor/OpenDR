@@ -1,0 +1,69 @@
+ModernizeDecorationTraits: Modernize SelectionDecorations and With*Decoration traits.
+   Updating mod... COMPLETE
+   Updating system maps... COMPLETE
+   Manual changes are required to complete this update:
+    * The way that decorations are positioned relative to the selection box has changed.
+      Review the following definitions and define Margin properties as required:
+       * ^Humanoid (rules/defaults.yaml):
+          * WithSpriteControlGroupDecoration
+       * ^Vehicle (rules/defaults.yaml):
+          * WithSpriteControlGroupDecoration
+       * ^Ship (rules/defaults.yaml):
+          * WithSpriteControlGroupDecoration
+       * ^GainsExperience (rules/defaults.yaml):
+          * WithDecoration@RANK-1
+          * WithDecoration@RANK-2
+          * WithDecoration@RANK-3
+          * WithDecoration@RANK-4
+          * WithDecoration@RANK-ELITE
+       * ^CivilianBuilding (rules/defaults-buildings.yaml):
+          * WithBuildingRepairDecoration
+       * ^ConstructedBuildingCommon (rules/defaults-buildings.yaml):
+          * WithBuildingRepairDecoration
+       * ^Headquarters (rules/defaults-buildings.yaml):
+          * WithDecoration@upgraded
+          * WithDecoration@upgraded2
+       * ^TrainingFacility (rules/defaults-buildings.yaml):
+          * WithDecoration@upgraded
+       * ^AssemblyPlant (rules/defaults-buildings.yaml):
+          * WithDecoration@upgraded
+       * Power (rules/structures.yaml):
+          * WithResourceStoragePipsDecoration
+       * WaterLaunchPad (rules/structures.yaml):
+          * WithResourceStoragePipsDecoration
+       * PhasingFacility (rules/structures.yaml):
+          * WithDecoration@upgraded
+       * Sniper (rules/units.yaml):
+          * WithDecoration@disguise
+       * Scout (rules/units.yaml):
+          * WithDecoration@disguise
+       * Infiltrator (rules/units.yaml):
+          * WithDecoration@disguise
+       * RAT (rules/units.yaml):
+          * WithCargoPipsDecoration
+       * PhaseRunner (rules/units.yaml):
+          * WithCargoPipsDecoration
+       * ITT (rules/units.yaml):
+          * WithCargoPipsDecoration
+       * SkyBike (rules/units.yaml):
+          * WithAmmoPipsDecoration
+       * Outrider (rules/units.yaml):
+          * WithAmmoPipsDecoration
+       * Cyclone (rules/units.yaml):
+          * WithAmmoPipsDecoration
+       * SkyFortress (rules/units.yaml):
+          * WithAmmoPipsDecoration
+       * RATmk2 (rules/units.yaml):
+          * WithCargoPipsDecoration
+       * Avenger (rules/units.yaml):
+          * WithAmmoPipsDecoration
+       * HadesBomber (rules/units.yaml):
+          * WithAmmoPipsDecoration
+       * WalkerScout (rules/units-addon.yaml):
+          * WithCargoPipsDecoration
+       * TerroristTransport (rules/units-addon.yaml):
+          * WithCargoPipsDecoration
+       * DessicatorTransport (rules/civilians.yaml):
+          * WithCargoPipsDecoration
+       * CivWheelTransporter (rules/civilians.yaml):
+          * WithCargoPipsDecoration

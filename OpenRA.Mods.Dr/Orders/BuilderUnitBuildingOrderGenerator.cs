@@ -244,7 +244,6 @@ namespace OpenRA.Mods.Dr.Orders
 
 		public void SelectionChanged(World world, IEnumerable<Actor> selected)
 		{
-			
 		}
 	}
 }

@@ -4,7 +4,6 @@
 	GivesExperience:
 		PlayerExperienceModifier: 1
 	ScriptTriggers:
-	ConditionManager:
 	RenderDebugState:
 
 ^SpriteActor:
@@ -33,7 +32,7 @@
 	Mobile:
 		Speed: 96
 		Locomotor: foot
-		TurnSpeed: 30
+		TurnSpeed: 120
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -83,10 +82,10 @@
 		TargetTypes: Heal
 	ExternalCondition@AMPERPOISON:
 		Condition: amperpoison
-	SelfHealing:
+	ChangesHealth:
 		Step: -4
 		Delay: 6
-		HealIfBelow: 200
+		StartIfBelow: 200
 		DamageTypes: DefaultDeath
 		RequiresCondition: amperpoison
 
@@ -169,7 +168,7 @@
 	Mobile:
 		Speed: 72
 		Locomotor: wheeled
-		TurnSpeed: 10
+		TurnSpeed: 40
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -280,8 +279,8 @@
 		ZOffset: -129
 	Aircraft:
 		AirborneCondition: airborne
-		InitialFacing: 224 # helicopter
-		TurnSpeed: 15
+		InitialFacing: 896 # helicopter
+		TurnSpeed: 60
 		Speed: 200
 		LandableTerrainTypes:
 		AltitudeVelocity: 0c58
@@ -350,7 +349,7 @@
 	Mobile:
 		Speed: 72
 		Locomotor: water
-		TurnSpeed: 10
+		TurnSpeed: 40
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
 	Selectable:
@@ -498,42 +497,37 @@
 	InaccuracyMultiplier@RANK-ELITE:
 		RequiresCondition: rank-elite
 		Modifier: 50
-	SelfHealing@ELITE:
+	ChangesHealth@ELITE:
 		Step: 200
 		Delay: 100
-		HealIfBelow: 100
+		StartIfBelow: 100
 		DamageCooldown: 125
 		RequiresCondition: rank-elite
 	WithDecoration@RANK-1:
 		Image: rank
 		Sequence: rank-veteran-1
-		ReferencePoint: Bottom, Right
+		Position: BottomRight
 		RequiresCondition: rank-veteran == 1
-		ZOffset: 256
 	WithDecoration@RANK-2:
 		Image: rank
 		Sequence: rank-veteran-2
-		ReferencePoint: Bottom, Right
+		Position: BottomRight
 		RequiresCondition: rank-veteran == 2
-		ZOffset: 256
 	WithDecoration@RANK-3:
 		Image: rank
 		Sequence: rank-veteran-3
-		ReferencePoint: Bottom, Right
+		Position: BottomRight
 		RequiresCondition: rank-veteran == 3
-		ZOffset: 256
 	WithDecoration@RANK-4:
 		Image: rank
 		Sequence: rank-veteran-4
-		ReferencePoint: Bottom, Right
+		Position: BottomRight
 		RequiresCondition: rank-veteran == 4
-		ZOffset: 256
 	WithDecoration@RANK-ELITE:
 		Image: rank
 		Sequence: rank-elite
-		ReferencePoint: Bottom, Right
+		Position: BottomRight
 		RequiresCondition: rank-elite
-		ZOffset: 256
 		
 
 # AutoTarget

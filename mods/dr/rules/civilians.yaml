@@ -73,8 +73,8 @@ Karoch: # Campaign
 		Weapon: Heal
 		Cursor: heal
 		OutsideRangeCursor: heal
-		TargetStances: Ally
-		ForceTargetStances: None
+		TargetRelationships: Ally
+		ForceTargetRelationships: None
 	AutoTarget:
 	AutoTargetPriority@DEFAULT:
 		ValidTargets: Infantry, Civilian
@@ -103,8 +103,12 @@ DessicatorTransport:
 	Cargo:
 		Types: Infantry
 		MaxWeight: 5
-		PipCount: 5
 		LoadingCondition: notmobile
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		CustomPipSequences:
+			yellow: pip-yellow
 
 # Civ Troop Transport
 CivWheelTransporter:
@@ -129,5 +133,9 @@ CivWheelTransporter:
 	Cargo:
 		Types: Infantry
 		MaxWeight: 5
-		PipCount: 5
 		LoadingCondition: notmobile
+	WithCargoPipsDecoration:
+		Position: BottomLeft
+		RequiresSelection: true
+		CustomPipSequences:
+			yellow: pip-yellow

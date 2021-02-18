@@ -16,7 +16,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Common.Traits.Render
 {
 	[Desc("Renders an overlay when the actor is taking heavy damage.")]
-	public class WithFlamesOverlayInfo : ITraitInfoInterface, Requires<RenderSpritesInfo>
+	public class WithFlamesOverlayInfo : TraitInfo, Requires<RenderSpritesInfo>
 	{
 		public readonly string Image = "eosmlfl0";
 
@@ -33,7 +33,7 @@ namespace OpenRA.Mods.Common.Traits.Render
 		public readonly DamageState MinimumDamageState = DamageState.Heavy;
 		public readonly DamageState MaximumDamageState = DamageState.Dead;
 
-		public object Create(ActorInitializer init) { return new WithFlamesOverlay(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new WithFlamesOverlay(init.Self, this); }
 	}
 
 	public class WithFlamesOverlay : ITick

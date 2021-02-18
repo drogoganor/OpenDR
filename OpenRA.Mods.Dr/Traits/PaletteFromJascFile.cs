@@ -20,7 +20,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Common.Traits
 {
 	[Desc("Load JASC palette. Used for tileset JASC palettes.")]
-	class PaletteFromJascFileInfo : ITraitInfoInterface, IProvidesCursorPaletteInfo
+	class PaletteFromJascFileInfo : TraitInfo, IProvidesCursorPaletteInfo
 	{
 		[FieldLoader.Require]
 		[PaletteDefinition]
@@ -48,7 +48,7 @@ namespace OpenRA.Mods.Common.Traits
 		[Desc("Increase all RGB values by this amount.")]
 		public readonly int Gamma = 0;
 
-		public object Create(ActorInitializer init) { return new PaletteFromJascFile(init.World, this); }
+		public override object Create(ActorInitializer init) { return new PaletteFromJascFile(init.World, this); }
 
 		string IProvidesCursorPaletteInfo.Palette { get { return CursorPalette ? Name : null; } }
 

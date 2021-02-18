@@ -19,7 +19,7 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.Dr.Traits
 {
-	class ProductionQueueOrBuildingPickerFromSelectionInfo : ITraitInfoInterface
+	class ProductionQueueOrBuildingPickerFromSelectionInfo : TraitInfo
 	{
 		public string ProductionParent = null;
 		public string ProductionTabsWidget = null;
@@ -27,7 +27,7 @@ namespace OpenRA.Mods.Dr.Traits
 		public string BuildSelectPalette = null;
 		public string BuildingCancel = null;
 
-		public object Create(ActorInitializer init) { return new ProductionQueueOrBuildingPickerFromSelection(init.World, this); }
+		public override object Create(ActorInitializer init) { return new ProductionQueueOrBuildingPickerFromSelection(init.World, this); }
 	}
 
 	// Copied from ProductionQueueFromSelection

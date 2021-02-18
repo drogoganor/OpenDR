@@ -284,31 +284,31 @@ ModContent:
 	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting GOG install. You will also need to download the Auran Extras.
 	Packages:
 		devtest: Dev Test Package (Full)
-			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/BARREN/BARREN.PAL, ^Content/dr/JUNGLE/JUNGLE.PAL, ^Content/dr/SNOW/SNOW.PAL, ^Content/dr/BARREN/BARREN.TIL, ^Content/dr/JUNGLE/JUNGLE.TIL, ^Content/dr/SNOW/SNOW.TIL, ^Content/dr/BARREN/SPRITES.FTG, ^Content/dr/JUNGLE/SPRITES.FTG, ^Content/dr/SNOW/SPRITES.FTG, ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg, ^Content/dr/ALIEN/ALIEN.TIL, ^Content/dr/ALIEN/ALIEN.PAL, ^Content/dr/ALIEN/SPRITEEX.FTG, ^Content/dr/BARREN/spriteEx.ftg, ^Content/dr/JUNGLE/spriteEx.ftg, ^Content/dr/SNOW/spriteEx.ftg, ^Content/dr/mouse.crs
+			TestFiles: ^SupportDir|Content/dr/SPRITES.FTG, ^SupportDir|Content/dr/SOUNDS.FTG, ^SupportDir|Content/dr/shell/SOUNDS.FTG, ^SupportDir|Content/dr/BARREN/BARREN.PAL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL, ^SupportDir|Content/dr/SNOW/SNOW.PAL, ^SupportDir|Content/dr/BARREN/BARREN.TIL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL, ^SupportDir|Content/dr/SNOW/SNOW.TIL, ^SupportDir|Content/dr/BARREN/SPRITES.FTG, ^SupportDir|Content/dr/JUNGLE/SPRITES.FTG, ^SupportDir|Content/dr/SNOW/SPRITES.FTG, ^SupportDir|Content/dr/spriteEx.ftg, ^SupportDir|Content/dr/soundsEx.ftg, ^SupportDir|Content/dr/ALIEN/ALIEN.TIL, ^SupportDir|Content/dr/ALIEN/ALIEN.PAL, ^SupportDir|Content/dr/ALIEN/SPRITEEX.FTG, ^SupportDir|Content/dr/BARREN/spriteEx.ftg, ^SupportDir|Content/dr/JUNGLE/spriteEx.ftg, ^SupportDir|Content/dr/SNOW/spriteEx.ftg, ^SupportDir|Content/dr/mouse.crs
 			Download: drdevtest
 			Required: true
 		gog: Dark Reign + Exp. (GOG)
-			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/BARREN/BARREN.PAL, ^Content/dr/JUNGLE/JUNGLE.PAL, ^Content/dr/SNOW/SNOW.PAL, ^Content/dr/BARREN/BARREN.TIL, ^Content/dr/JUNGLE/JUNGLE.TIL, ^Content/dr/SNOW/SNOW.TIL, ^Content/dr/BARREN/SPRITES.FTG, ^Content/dr/JUNGLE/SPRITES.FTG, ^Content/dr/SNOW/SPRITES.FTG, ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg, ^Content/dr/ALIEN/ALIEN.TIL, ^Content/dr/ALIEN/ALIEN.PAL, ^Content/dr/ALIEN/SPRITEEX.FTG, ^Content/dr/BARREN/spriteEx.ftg, ^Content/dr/JUNGLE/spriteEx.ftg, ^Content/dr/SNOW/spriteEx.ftg, ^Content/dr/mouse.crs
+			TestFiles: ^SupportDir|Content/dr/SPRITES.FTG, ^SupportDir|Content/dr/SOUNDS.FTG, ^SupportDir|Content/dr/shell/SOUNDS.FTG, ^SupportDir|Content/dr/BARREN/BARREN.PAL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL, ^SupportDir|Content/dr/SNOW/SNOW.PAL, ^SupportDir|Content/dr/BARREN/BARREN.TIL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL, ^SupportDir|Content/dr/SNOW/SNOW.TIL, ^SupportDir|Content/dr/BARREN/SPRITES.FTG, ^SupportDir|Content/dr/JUNGLE/SPRITES.FTG, ^SupportDir|Content/dr/SNOW/SPRITES.FTG, ^SupportDir|Content/dr/spriteEx.ftg, ^SupportDir|Content/dr/soundsEx.ftg, ^SupportDir|Content/dr/ALIEN/ALIEN.TIL, ^SupportDir|Content/dr/ALIEN/ALIEN.PAL, ^SupportDir|Content/dr/ALIEN/SPRITEEX.FTG, ^SupportDir|Content/dr/BARREN/spriteEx.ftg, ^SupportDir|Content/dr/JUNGLE/spriteEx.ftg, ^SupportDir|Content/dr/SNOW/spriteEx.ftg, ^SupportDir|Content/dr/mouse.crs
 			Sources: drgog
 			Required: true
 		base: Dark Reign (Disc)
-			TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/BARREN/BARREN.PAL, ^Content/dr/JUNGLE/JUNGLE.PAL, ^Content/dr/SNOW/SNOW.PAL, ^Content/dr/BARREN/BARREN.TIL, ^Content/dr/JUNGLE/JUNGLE.TIL, ^Content/dr/SNOW/SNOW.TIL, ^Content/dr/BARREN/SPRITES.FTG, ^Content/dr/JUNGLE/SPRITES.FTG, ^Content/dr/SNOW/SPRITES.FTG, ^Content/dr/mouse.crs
+			TestFiles: ^SupportDir|Content/dr/SPRITES.FTG, ^SupportDir|Content/dr/SOUNDS.FTG, ^SupportDir|Content/dr/shell/SOUNDS.FTG, ^SupportDir|Content/dr/BARREN/BARREN.PAL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL, ^SupportDir|Content/dr/SNOW/SNOW.PAL, ^SupportDir|Content/dr/BARREN/BARREN.TIL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL, ^SupportDir|Content/dr/SNOW/SNOW.TIL, ^SupportDir|Content/dr/BARREN/SPRITES.FTG, ^SupportDir|Content/dr/JUNGLE/SPRITES.FTG, ^SupportDir|Content/dr/SNOW/SPRITES.FTG, ^SupportDir|Content/dr/mouse.crs
 			Sources: drorig
 			Required: true
 		expansion: Dark Reign Expansion (Disc)
-			TestFiles: ^Content/dr/spriteEx.ftg, ^Content/dr/soundsEx.ftg, ^Content/dr/ALIEN/ALIEN.TIL, ^Content/dr/ALIEN/ALIEN.PAL, ^Content/dr/ALIEN/SPRITEEX.FTG, ^Content/dr/BARREN/spriteEx.ftg, ^Content/dr/JUNGLE/spriteEx.ftg, ^Content/dr/SNOW/spriteEx.ftg, ^Content/dr/mouse.crs
+			TestFiles: ^SupportDir|Content/dr/spriteEx.ftg, ^SupportDir|Content/dr/soundsEx.ftg, ^SupportDir|Content/dr/ALIEN/ALIEN.TIL, ^SupportDir|Content/dr/ALIEN/ALIEN.PAL, ^SupportDir|Content/dr/ALIEN/SPRITEEX.FTG, ^SupportDir|Content/dr/BARREN/spriteEx.ftg, ^SupportDir|Content/dr/JUNGLE/spriteEx.ftg, ^SupportDir|Content/dr/SNOW/spriteEx.ftg, ^SupportDir|Content/dr/mouse.crs
 			Sources: drexp
 			Required: true
 		#demo: Dark Reign Demo
-		#	TestFiles: ^Content/dr/SPRITES.FTG, ^Content/dr/SOUNDS.FTG, ^Content/dr/shell/SOUNDS.FTG, ^Content/dr/BARREN/BARREN.PAL, ^Content/dr/JUNGLE/JUNGLE.PAL, ^Content/dr/BARREN/BARREN.TIL, ^Content/dr/JUNGLE/JUNGLE.TIL, ^Content/dr/BARREN/SPRITES.FTG, ^Content/dr/JUNGLE/SPRITES.FTG, ^Content/dr/mouse.crs
+		#	TestFiles: ^SupportDir|Content/dr/SPRITES.FTG, ^SupportDir|Content/dr/SOUNDS.FTG, ^SupportDir|Content/dr/shell/SOUNDS.FTG, ^SupportDir|Content/dr/BARREN/BARREN.PAL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL, ^SupportDir|Content/dr/BARREN/BARREN.TIL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL, ^SupportDir|Content/dr/BARREN/SPRITES.FTG, ^SupportDir|Content/dr/JUNGLE/SPRITES.FTG, ^SupportDir|Content/dr/mouse.crs
 		#	Download: drdemo
 		#	Required: true
 		auran: Auran Extras
-			TestFiles: ^Content/dr/aust/AUST.FTG, ^Content/dr/volcanic/VOLCANIC.FTG, ^Content/dr/auralien/AURALIEN.FTG, ^Content/dr/asteroid/ASTEROID.FTG, ^Content/dr/addon/aurunits/aursound.ftg, ^Content/dr/addon/aurunits/aursprite.ftg, ^Content/dr/addon/terrorist/terrsound.ftg, ^Content/dr/addon/terrorist/terrsprite.ftg, ^Content/dr/legal.txt
+			TestFiles: ^SupportDir|Content/dr/aust/AUST.FTG, ^SupportDir|Content/dr/volcanic/VOLCANIC.FTG, ^SupportDir|Content/dr/auralien/AURALIEN.FTG, ^SupportDir|Content/dr/asteroid/ASTEROID.FTG, ^SupportDir|Content/dr/addon/aurunits/aursound.ftg, ^SupportDir|Content/dr/addon/aurunits/aursprite.ftg, ^SupportDir|Content/dr/addon/terrorist/terrsound.ftg, ^SupportDir|Content/dr/addon/terrorist/terrsprite.ftg, ^SupportDir|Content/dr/legal.txt
 			Download: drauranext
 			Required: true
 		music: Music
-			TestFiles: ^Content/dr/music.zip
+			TestFiles: ^SupportDir|Content/dr/music.zip
 			Download: drmusic
 	Downloads:
 		dr|installer/downloads.yaml

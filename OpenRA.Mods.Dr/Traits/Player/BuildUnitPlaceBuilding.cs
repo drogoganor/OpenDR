@@ -18,7 +18,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Dr.Traits
 {
 	[Desc("Allows the player to execute build orders.", " Attach this to the player actor.")]
-	public class BuildUnitPlaceBuildingInfo : ITraitInfoInterface
+	public class BuildUnitPlaceBuildingInfo : TraitInfo
 	{
 		[Desc("Play NewOptionsNotification this many ticks after building placement.")]
 		public readonly int NewOptionsNotificationDelay = 10;
@@ -27,7 +27,7 @@ namespace OpenRA.Mods.Dr.Traits
 		[Desc("Notification to play after building placement if new construction options are available.")]
 		public readonly string NewOptionsNotification = null;
 
-		public object Create(ActorInitializer init) { return new BuildUnitPlaceBuilding(this); }
+		public override object Create(ActorInitializer init) { return new BuildUnitPlaceBuilding(this); }
 	}
 
 	// Copied from PlaceBuilding
