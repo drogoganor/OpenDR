@@ -73,6 +73,7 @@
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	SelfConstructing:
+		Sequence: building
 		Steps: 30
 	ShakeOnDeath:
 	Selectable:

@@ -35,6 +35,7 @@
 		TurnSpeed: 120
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
+		Margin: -2, 0
 	Selectable:
 		Class: Humanoid
 		Bounds: 26,28,1,2
@@ -171,6 +172,7 @@
 		TurnSpeed: 40
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
+		Margin: -2, 0
 	Selectable:
 		Class: V1
 		Bounds: 36,36,0,0
@@ -271,6 +273,7 @@
 		UseLocation: true
 	SelectionDecorations:
 	#WithSpriteControlGroupDecoration:
+	#	Margin: -2, 0
 	Selectable:
 		Bounds: 24,24
 		DecorationBounds: 26,24
@@ -352,6 +355,7 @@
 		TurnSpeed: 40
 	SelectionDecorations:
 	WithSpriteControlGroupDecoration:
+		Margin: -2, 0
 	Selectable:
 		Class: N1
 		Bounds: 36,36,0,0
@@ -507,28 +511,32 @@
 		Image: rank
 		Sequence: rank-veteran-1
 		Position: BottomRight
+		Margin: 5, 6
 		RequiresCondition: rank-veteran == 1
 	WithDecoration@RANK-2:
 		Image: rank
 		Sequence: rank-veteran-2
 		Position: BottomRight
+		Margin: 5, 6
 		RequiresCondition: rank-veteran == 2
 	WithDecoration@RANK-3:
 		Image: rank
 		Sequence: rank-veteran-3
 		Position: BottomRight
+		Margin: 5, 6
 		RequiresCondition: rank-veteran == 3
 	WithDecoration@RANK-4:
 		Image: rank
 		Sequence: rank-veteran-4
 		Position: BottomRight
+		Margin: 5, 6
 		RequiresCondition: rank-veteran == 4
 	WithDecoration@RANK-ELITE:
 		Image: rank
 		Sequence: rank-elite
 		Position: BottomRight
+		Margin: 5, 6
 		RequiresCondition: rank-elite
-		
 
 # AutoTarget
 

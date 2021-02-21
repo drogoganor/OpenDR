@@ -125,7 +125,7 @@ sidebar-bits:
 		production-tooltip-power: 102, 51, 16, 16
 		production-tooltip-cost: 68, 51, 16, 16
 		indicator-muted: 0, 119, 26, 24
-		
+
 flags:
 	Inherits: ^Glyphs
 	Regions:
@@ -352,6 +352,12 @@ checkbox-highlighted:
 	Inherits: ^Dialog
 	PanelRegion: 897, 1, 2, 2, 122, 122, 2, 2
 
+checkbox-highlighted-hover:
+	Inherits: checkbox-highlighted
+
+checkbox-highlighted-disabled:
+	Inherits: checkbox-disabled
+
 scrollitem-selected:
 	Inherits: button-pressed
 
@@ -367,10 +373,36 @@ scrollheader-selected:
 mainmenu-border:
 	Inherits: ^Dialog
 
-dropdown:
+scrollpanel-decorations:
+	Inherits: ^Glyphs
+	Regions:
+		down: 68, 17, 16, 16
+		down-pressed: 68, 17, 16, 16
+		down-disabled: 85, 17, 16, 16
+		up: 102, 17, 16, 16
+		up-pressed: 102, 17, 16, 16
+		up-disabled: 119, 17, 16, 16
+		right: 136, 17, 16, 16
+		right-pressed: 136, 17, 16, 16
+		right-disabled: 153, 17, 16, 16
+		left: 170, 17, 16, 16
+		left-pressed: 170, 17, 16, 16
+		left-disabled: 187, 17, 16, 16
+
+dropdown-decorations:
+	Inherits: ^Glyphs
+	Regions:
+		marker: 68, 17, 16, 16
+		marker-pressed: 68, 17, 16, 16
+		marker-disabled: 85, 17, 16, 16
+
+dropdown-separators:
 	Inherits: ^Dialog
 	Regions:
-		separator: 513, 1, 1, 19
+		separator: 129, 2, 1, 19
+		separator-hover: 161, 2, 1, 19
+		separator-pressed: 129, 34, 1, 19
+		separator-disabled: 161, 34, 1, 19
 
 logos:
 	Inherits: ^LoadScreen

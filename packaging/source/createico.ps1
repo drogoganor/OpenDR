@@ -9,6 +9,7 @@ Invoke-Expression "$imgMagick convert -transparent white -background None -densi
 Invoke-Expression "$imgMagick convert -transparent white -background None -density 384 $image -resize 48x48 mod_48x48.png"
 Invoke-Expression "$imgMagick convert -transparent white -background None -density 384 $image -resize 64x64 mod_64x64.png"
 Invoke-Expression "$imgMagick convert -transparent white -background None -density 384 $image -resize 96x96 mod_96x96.png"
+Invoke-Expression "$imgMagick convert -transparent white -background None -density 384 $image -resize 100x100 mod_100x100.png"
 Invoke-Expression "$imgMagick convert -transparent white -background None -density 384 $image -resize 128x128 mod_128x128.png"
 Invoke-Expression "$imgMagick convert -transparent white -background None -density 384 $image -resize 256x256 mod_256x256.png"
 Invoke-Expression "$imgMagick convert -transparent white -background None -density 384 $image -resize 512x512 mod_512x512.png"

@@ -56,11 +56,12 @@ namespace OpenRA.Mods.Dr.Graphics
 
 		protected override Sprite GetSprite(int start, int frame, WAngle facing)
 		{
-			// if (facing.Angle >= 256) // receiving a facing of 320 when unloading an APC
-			// 	facing.Angle = 0;
+			if (facing.Angle >= 256) // receiving a facing of 320 when unloading an APC
+				facing = WAngle.Zero;
+
 			var f = (int)(facing.Angle * (Facings / 256f));
 			var i = (f * Stride) + (frame % Length);
-			var j = Frames?[i] ?? start + i;
+			var j = Frames != null ? Frames[i] : start + i;
 
 			if (j >= sprites.Length)
 				j = 0;
