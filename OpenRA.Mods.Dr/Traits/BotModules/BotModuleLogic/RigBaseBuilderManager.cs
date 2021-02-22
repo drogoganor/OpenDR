@@ -43,8 +43,6 @@ namespace OpenRA.Mods.Dr.Traits
 
 		readonly Dictionary<uint, RigBuildOrder> rigBuildOrders = new Dictionary<uint, RigBuildOrder>();
 
-		WPos originalRigPosition;
-
 		public RigBaseBuilderManager(RigBaseBuilderBotModule baseBuilder, Player p, PowerManager pm, BitArray resourceTypeIndices)
 		{
 			this.baseBuilder = baseBuilder;
@@ -54,12 +52,6 @@ namespace OpenRA.Mods.Dr.Traits
 
 			minimumExcessPower = baseBuilder.Info.MinimumExcessPower;
 			this.resourceTypeIndices = resourceTypeIndices;
-
-			var firstRig = world.ActorsHavingTrait<BuilderUnit>().FirstOrDefault(a => a.Owner == player);
-			if (firstRig != null)
-			{
-				originalRigPosition = firstRig.CenterPosition;
-			}
 		}
 
 		public void Tick(IBot bot)
@@ -103,24 +95,23 @@ namespace OpenRA.Mods.Dr.Traits
 						type = BuildingTypeDr.Refinery;
 
 					var location = ChooseBuildLocation(building.Name, true, type);
-					if (location != null && location.HasValue)
+					if (location == null) continue;
+
+					var order = new Order("BuildUnitPlaceBuilding", player.PlayerActor, Target.FromCell(world, location.Value), false)
 					{
-						var order = new Order("BuildUnitPlaceBuilding", player.PlayerActor, Target.FromCell(world, location.Value), false)
-						{
-							TargetString = building.Name,
-							ExtraLocation = location.Value,
-							ExtraData = rig.ActorID,
-							SuppressVisualFeedback = true
-						};
+						TargetString = building.Name,
+						ExtraLocation = location.Value,
+						ExtraData = rig.ActorID,
+						SuppressVisualFeedback = true
+					};
 
-						rigBuildOrders.Add(rig.ActorID, new RigBuildOrder()
-						{
-							Rig = rig,
-							Building = building
-						});
+					rigBuildOrders.Add(rig.ActorID, new RigBuildOrder()
+					{
+						Rig = rig,
+						Building = building
+					});
 
-						bot.QueueOrder(order);
-					}
+					bot.QueueOrder(order);
 				}
 			}
 
@@ -372,7 +363,7 @@ namespace OpenRA.Mods.Dr.Traits
 				return null;
 			};
 
-			var baseCenter = world.Map.CellContaining(originalRigPosition);
+			var baseCenter = player.HomeLocation;
 
 			switch (type)
 			{

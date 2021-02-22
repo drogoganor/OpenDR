@@ -10,18 +10,26 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits.Production
 {
-	public class SelfConstructingInfo : WithMakeAnimationInfo
+	public class SelfConstructingInfo : TraitInfo, Requires<WithSpriteBodyInfo>
 	{
+		[SequenceReference]
+		[Desc("Sequence name to use.")]
+		public readonly string Sequence = "make";
+
+		[GrantedConditionReference]
+		[Desc("The condition to grant to self while the make animation is playing.")]
+		public readonly string Condition = null;
+
 		[Desc("Number of make sequences.")]
 		public readonly int Steps = 3;
 
 		[Desc("Actor to turn into once build is complete.")]
 		public readonly string Becomes;
 
-		public new object Create(ActorInitializer init) { return new SelfConstructing(init, this); }
+		public override object Create(ActorInitializer init) { return new SelfConstructing(init, this); }
 	}
 
-	public class SelfConstructing : WithMakeAnimation, ITick, INotifyRemovedFromWorld, INotifyCreated
+	public class SelfConstructing : ITick, INotifyRemovedFromWorld, INotifyCreated
 	{
 		public readonly SelfConstructingInfo Info;
 
@@ -36,13 +44,12 @@ namespace OpenRA.Mods.Dr.Traits.Production
 		private Health health;
 
 		public SelfConstructing(ActorInitializer init, SelfConstructingInfo info)
-			: base(init, info)
 		{
 			Info = info;
 			wsb = init.Self.Trait<WithSpriteBody>();
 
-			if (!string.IsNullOrEmpty(Info.Condition) && token == Actor.InvalidConditionToken)
-				token = init.Self.GrantCondition(Info.Condition);
+			if (token == Actor.InvalidConditionToken)
+				token = init.Self.GrantCondition(info.Condition);
 		}
 
 		void INotifyCreated.Created(Actor self)
