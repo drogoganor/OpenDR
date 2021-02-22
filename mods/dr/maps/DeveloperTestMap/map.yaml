@@ -69,7 +69,7 @@ Actors:
 	Actor21: trainingfacility.xenite
 		Owner: Imperium
 		Location: 78,78
-	Actor22: matrix
+	Actor22: nexus
 		Owner: Imperium
 		Location: 85,78
 	Actor23: power

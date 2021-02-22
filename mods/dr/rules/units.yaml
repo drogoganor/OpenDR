@@ -106,7 +106,7 @@ Sniper:
 	-WithInfantryBody:
 	WithDisguisingInfantryBody:
 		MoveSequence: run
-		DefaultAttackSequence: attack
+		DefaultAttackSequence: shoot
 		IdleSequences: idle2
 		StandSequences: stand
 	WithDecoration@disguise:
@@ -160,7 +160,7 @@ Scout:
 	-WithInfantryBody:
 	WithDisguisingInfantryBody:
 		MoveSequence: run
-		DefaultAttackSequence: attack
+		DefaultAttackSequence: shoot
 		IdleSequences: idle2
 		StandSequences: stand
 	WithDecoration@disguise:
@@ -459,7 +459,7 @@ Infiltrator:
 		ScanRadius: 5
 	-WithInfantryBody:
 	WithDisguisingInfantryBody:
-		DefaultAttackSequence: shoot
+		DefaultAttackSequence: idle
 		IdleSequences: idle
 		StandSequences: stand
 	WithDecoration@disguise:
@@ -509,6 +509,8 @@ ConstructionRig:
 		CustomPipType: yellow
 	MustBeDestroyed:
 		RequiredForShortGame: true
+	WithInfantryBody:
+		DefaultAttackSequence: stand
 	BuilderUnit@Building:
 		Type: Building
 		Group: Building
@@ -561,6 +563,8 @@ Freighter:
 		DecorationBounds: 32,32,0,0
 	Voiced:
 		VoiceSet: FreedomGuardVehicleVoice
+	WithInfantryBody:
+		DefaultAttackSequence: run
 	Valued:
 		Cost: 1000
 	Health:
@@ -575,7 +579,6 @@ Freighter:
 	WithFacingSpriteBody:
 	Freighter:
 		Capacity: 8
-		PipCount: 5
 		Resources: water,taelon
 		BaleLoadDelay: 20
 		BaleUnloadDelay: 20
@@ -614,9 +617,10 @@ HoverFreighter:
 		Type: TankPlating
 	WithDrDockingAnimation:
 	WithFacingSpriteBody:
+	WithInfantryBody:
+		DefaultAttackSequence: stand
 	Freighter:
 		Capacity: 8
-		PipCount: 5
 		Resources: water,taelon
 		BaleLoadDelay: 20
 		BaleUnloadDelay: 18
@@ -684,6 +688,8 @@ RAT:
 	Armor:
 		Type: TankPlating
 	-Armament:
+	WithInfantryBody:
+		DefaultAttackSequence: stand
 	WithCargoPipsDecoration:
 		Position: BottomLeft
 		RequiresSelection: true
@@ -917,7 +923,6 @@ ShockWave:
 		Recoil: 128
 		RecoilRecovery: 38
 		LocalOffset: 720,0,80
-		MuzzleSequence: muzzle
 		ReloadingCondition: reloading
 	KillsSelf:
 		RequiresCondition: reloading
@@ -1561,7 +1566,7 @@ PowerSpiker:
 		Description: This unit can fully shut down enemy powered buildings\nif you can get him next to an enemy power plant.
 		BuildPaletteOrder: 60
 		BuildDuration: 84
-		Prerequisites: ~hq.xenite, ~barracks
+		Prerequisites: ~hq.xenite, upgrade.hq2
 	Voiced:
 		VoiceSet: PowerSpikerVoice
 	Valued:
@@ -1587,7 +1592,7 @@ Grendel:
 		Description: The Grendel has a ranged attack that's effective\nagainst basically everything and can outrange basic\nturrets. Only downside is that it can go feral on\nyou if it goes outside the range of a controller.\nReplaces Tank Hunters.
 		BuildPaletteOrder: 70
 		BuildDuration: 33
-		Prerequisites: ~hq.xenite, ~barracks
+		Prerequisites: ~hq.xenite, ~barracks, upgrade.barracks1
 	Selectable:
 		Bounds: 36,36,0,0
 		DecorationBounds: 32,32,0,0
@@ -1619,7 +1624,7 @@ GrendelRider:
 		Description: Essentially a Grendel with a Ranger on top. Is a\ncontroller, so if you want the easiest to use force\npossible just make a force of these rather than a\nmixed force of Grendels and Riders. Replaces Triple\nRail Hovertanks.
 		BuildPaletteOrder: 80
 		BuildDuration: 51
-		Prerequisites: ~hq.xenite, ~barracks
+		Prerequisites: ~hq.xenite, ~barracks, upgrade.barracks1
 	Selectable:
 		Bounds: 36,36,0,0
 		DecorationBounds: 32,32,0,0
@@ -1739,7 +1744,7 @@ GeminiTank:
 		Name: Gemini Tank
 	Buildable:
 		Description: Fairly straightforward hovering tank. What makes the\nGemini unique is the ability to morph into a fast\nmode where you deal less damage, have your health\nhalved, and move twice as fast. Replaces the Plasma\nTank.
-		Prerequisites: ~vehicles.shadowhand, hq, barracks
+		Prerequisites: ~vehicles.shadowhand, hq, nexus
 		BuildPaletteOrder: 150
 		BuildDuration: 21
 	Voiced:
@@ -1780,7 +1785,7 @@ Shadowblade:
 		Name: Shadowblade
 	Buildable:
 		Description: A Shredder with slightly more health.
-		Prerequisites: ~vehicles.shadowhand, hq
+		Prerequisites: ~vehicles.shadowhand, hq, nexus, nexus
 		BuildPaletteOrder: 150
 		BuildDuration: 21
 	Valued:
@@ -1802,7 +1807,7 @@ Fury:
 		Name: Fury
 	Buildable:
 		Description: Now this is a heavy hitter. At long ranges it uses\nits paired guns to do heavy damage on par with the\nTachyon tank. Anything that closes to point blank\nwill come under fire from its rapid fire Tachyon\nlaser. Plus, it's a walker. Replaces the Tachyon\nTank.
-		Prerequisites: ~vehicles.shadowhand, hq, barracks
+		Prerequisites: ~vehicles.shadowhand, hq, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
 		BuildDuration: 48
 	Voiced:
@@ -1843,7 +1848,7 @@ EMPDevice:
 		Name: EMP Device
 	Buildable:
 		Description: When detonated, shuts down either structures or\nmechanical units within the blast area.
-		Prerequisites: ~vehicles.shadowhand, hq, barracks
+		Prerequisites: ~vehicles.shadowhand, hq, upgrade.hq2, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 150
 		BuildDuration: 78
 	Voiced:
@@ -1934,7 +1939,7 @@ Avenger:
 		Name: Avenger
 	Buildable:
 		Description: The Avenger is the heavy air unit designed for base\nbusting. It can only fire a single shot before having\nto reload but it has a fairly long range and does\na lot of damage.
-		Prerequisites: ~vehicles.xenite, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
+		Prerequisites: ~vehicles.xenite, hq, upgrade.hq2, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
 		BuildDuration: 66
 	Selectable:
@@ -1975,7 +1980,7 @@ HadesBomber:
 		Name: Hades Bomber
 	Buildable:
 		Description: This heavy bomber moves slower than the Cyclone but\nhas a powerful payload of missiles with a large area\nof effect and a high amount of damage. Replaces the\nSky Fortress.
-		Prerequisites: ~vehicles.shadowhand, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
+		Prerequisites: ~vehicles.shadowhand, hq, upgrade.hq2, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
 		BuildDuration: 66
 	Selectable:

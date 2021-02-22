@@ -10,7 +10,6 @@ overlay:
 	build-valid-volcanic: overlay.png
 	build-valid-snow: overlay.png
 	build-valid-jungle: overlay.png
-	build-valid-calypso: overlay.png
 	build-invalid: overlay.png
 		Start: 1
 	target-select: overlay.png
@@ -22,7 +21,6 @@ overlay:
 	target-valid-volcanic: overlay.png
 	target-valid-snow: overlay.png
 	target-valid-jungle: overlay.png
-	target-valid-calypso: overlay.png
 	target-invalid: overlay.png
 		Start: 1
 

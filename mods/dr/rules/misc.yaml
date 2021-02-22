@@ -118,7 +118,6 @@ Water:
 	DrResourceType:
 		Type: water
 		Name: Water
-		PipColor: Blue
 		ResourceType: 1
 		TerrainType: Water
 		ValuePerUnit: 75
@@ -133,7 +132,6 @@ Taelon:
 	DrResourceType:
 		Type: taelon
 		Name: Taelon
-		PipColor: Green
 		ResourceType: 2
 		TerrainType: Taelon
 		ValuePerUnit: 75

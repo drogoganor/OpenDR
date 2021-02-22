@@ -1048,17 +1048,17 @@ TrainingFacility.xenite:
 	#WithIdleOverlay@LAYER5: # Only for upgraded
 	#	Sequence: base
 
-Matrix:
-	Inherits: Matrix.Constructing
+Nexus:
+	Inherits: Nexus.Constructing
 	Inherits@4: ^FactionBuilding
 	-SelfConstructing:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
 	Tooltip:
-		Name: Matrix
-	ProvidesPrerequisite@matrix:
-		Prerequisite: matrix
+		Name: Nexus
+	ProvidesPrerequisite@nexus:
+		Prerequisite: nexus
 	Valued:
 		Cost: 1000
 	Health:

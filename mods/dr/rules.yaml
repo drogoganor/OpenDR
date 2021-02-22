@@ -581,6 +581,7 @@ Player:
 		InsufficientFundsNotification: InsufficientFunds
 		CashTickUpNotification: CashTickUp
 		CashTickDownNotification: CashTickDown
+	DrPlayerResources:
 	ClassicProductionQueue@DummyQueue:
 		Type: Dummy
 		Group: Dummy

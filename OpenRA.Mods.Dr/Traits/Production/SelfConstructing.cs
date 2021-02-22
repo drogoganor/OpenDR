@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using Eluant;
-using OpenRA;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Primitives;
@@ -92,8 +91,6 @@ namespace OpenRA.Mods.Dr.Traits.Production
 			self.Dispose();
 
 			Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", "ConstructionComplete", self.Owner.Faction.InternalName);
-
-			// building.NotifyBuildingComplete(newActor);
 		}
 
 		Actor CreateActor(Actor self, string actorType, bool addToWorld)
@@ -107,8 +104,16 @@ namespace OpenRA.Mods.Dr.Traits.Production
 			{
 				new LocationInit(self.Location),
 				new OwnerInit(owner),
-				new PlaceBuildingInit()
+				new PlaceBuildingInit(),
 			});
+
+			// Copy rally point
+			var oldRallyPoint = self.TraitOrDefault<RallyPoint>();
+			if (oldRallyPoint != null)
+			{
+				var oldRallyPointTarget = Target.FromCell(self.World, oldRallyPoint.Path[0]);
+				self.Owner.World.IssueOrder(new Order("SetRallyPoint", actor, oldRallyPointTarget, false));
+			}
 
 			return actor;
 		}

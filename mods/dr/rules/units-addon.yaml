@@ -142,6 +142,8 @@ WalkerScout:
 		RecoilRecovery: 38
 		LocalOffset: 0,0,80
 		#MuzzleSequence: muzzle
+	WithInfantryBody:
+		DefaultAttackSequence: stand
 	WithTurretAttackAnimation:
 		Sequence: muzzle
 	-AttackFrontal:

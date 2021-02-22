@@ -922,8 +922,8 @@ TrainingFacility.xenite.Constructing:
 		Palette: shadow
 		Sequence: shadow-building
 
-# Shadowhand matrix
-Matrix.Constructing:
+# Shadowhand nexus
+Nexus.Constructing:
 	Inherits: ^FactionBuilding.Constructing
 	Inherits@shape: ^4x4Shape
 	Building:
@@ -936,14 +936,14 @@ Matrix.Constructing:
 	RenderSprites:
 		Image: ninex1l0
 	Tooltip:
-		Name: Matrix
+		Name: Nexus
 	Buildable:
 		Prerequisites: ~rig.shadowhand, hq.shadowhand
 		BuildPaletteOrder: 30
 		BuildDuration: 30
 	SelfConstructing:
 		Steps: 20
-		Becomes: Matrix
+		Becomes: Nexus
 	Valued:
 		Cost: 1800
 	Health:

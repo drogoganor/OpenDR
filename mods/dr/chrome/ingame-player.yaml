@@ -440,9 +440,27 @@ Container@PLAYER_WIDGETS:
 							Y: 5
 							ImageCollection: power-icons
 							ImageName: power-normal
-		Container@SIDEBAR_BACKGROUND: # Unit main panel?
+		Image@SIDEBAR_BACKGROUND_RESOURCES:
+			Logic: AddFactionSuffixLogic
 			X: WINDOW_RIGHT - 250
 			Y: 300
+			Width: 238
+			Height: 24
+			ImageCollection: sidebar
+			ImageName: background-resources
+			ClickThrough: false
+			Children:
+				Label@WATER_LABEL:
+					Logic: DrResourcesLogic
+					X: 3
+					Y: 3
+					Width: PARENT_RIGHT
+					Height: 23
+					Align: Center
+					Font: TinyBold
+		Container@SIDEBAR_BACKGROUND: # Unit main panel?
+			X: WINDOW_RIGHT - 250
+			Y: 324
 			Width: 238
 			Children:
 				Container@PALETTE_BACKGROUND:
@@ -594,7 +612,7 @@ Container@PLAYER_WIDGETS:
 			Logic: BuildingPickerLogic
 				ProductionParent: SIDEBAR_BACKGROUND
 			X: WINDOW_RIGHT - 250
-			Y: 303
+			Y: 327
 			Width: 238
 			Height: 256
 			Children:
@@ -636,7 +654,7 @@ Container@PLAYER_WIDGETS:
 							Visible: false
 		Container@SIDEBAR_BUILDING_CANCEL:
 			X: WINDOW_RIGHT - 250
-			Y: 303
+			Y: 327
 			Width: 238
 			Height: 256
 			Visible: false

@@ -47,7 +47,7 @@
 	WithInfantryBody:
 		DefaultAttackSequence: shoot
 		IdleSequences: idle
-		StandSequences: stand,stand2
+		StandSequences: stand
 	WithDeathAnimation:
 		DeathSequence: die
 		CrushedSequence: diehard
@@ -136,6 +136,8 @@
 		GenericName: Civilian
 	MapEditorData:
 		Categories: Civilian
+	WithInfantryBody:
+		DefaultAttackSequence: stand
 	Voiced:
 		VoiceSet: GenericHumanVoice
 
@@ -309,7 +311,6 @@
 	Guard:
 	Guardable:
 	ActorLostNotification:
-		Notification: UnitLost
 	ProximityCaptor:
 		Types: Plane
 	Tooltip:

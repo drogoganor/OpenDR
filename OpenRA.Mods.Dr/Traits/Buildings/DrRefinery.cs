@@ -61,6 +61,7 @@ namespace OpenRA.Mods.Dr.Traits
 		readonly Actor self;
 		readonly DrRefineryInfo info;
 		PlayerResources playerResources;
+		DrPlayerResources drPlayerResources;
 		RefineryResourceMultiplier[] resourceMultipliers;
 
 		int currentDisplayTick = 0;
@@ -84,6 +85,7 @@ namespace OpenRA.Mods.Dr.Traits
 			this.self = self;
 			this.info = info;
 			playerResources = self.Owner.PlayerActor.Trait<PlayerResources>();
+			drPlayerResources = self.Owner.PlayerActor.Trait<DrPlayerResources>();
 			currentDisplayTick = info.TickRate;
 		}
 
@@ -114,10 +116,16 @@ namespace OpenRA.Mods.Dr.Traits
 				if (info.DiscardExcessResources)
 					amount = Math.Min(amount, playerResources.ResourceCapacity - playerResources.Resources);
 
-				playerResources.GiveResources(amount);
+				drPlayerResources.AddWater(amount);
+
+				// playerResources.GiveResources(amount);
 			}
 			else
-				amount = playerResources.ChangeCash(amount);
+			{
+				amount = drPlayerResources.AddWater(amount);
+
+				// amount = playerResources.ChangeCash(amount);
+			}
 
 			foreach (var notify in self.World.ActorsWithTrait<INotifyResourceAccepted>())
 			{

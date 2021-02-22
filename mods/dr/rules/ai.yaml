@@ -36,7 +36,7 @@ Player:
 			rearmingdeck.human.constructing: rearmingdeck.human.constructing, rearmingdeck.human
 			rearmingdeck.cyborg.constructing: rearmingdeck.cyborg.constructing, rearmingdeck.cyborg
 			phasingfacility.constructing: phasingfacility.constructing, phasingfacility
-			matrix.constructing: matrix.constructing, matrix
+			nexus.constructing: nexus.constructing, nexus
 		BarracksTypes: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing, trainingfacility.xenite.constructing
 		VehiclesFactoryTypes: assemblyplant.human.constructing, assemblyplant.cyborg.constructing
 		ProductionTypes: trainingfacility.fguard.constructing, trainingfacility.cyborg.constructing, assemblyplant.human.constructing, assemblyplant.cyborg.constructing
@@ -59,7 +59,7 @@ Player:
 			#phasingfacility.constructing: 1
 			rearmingdeck.human.constructing: 1
 			rearmingdeck.cyborg.constructing: 1
-			matrix.constructing: 1
+			nexus.constructing: 1
 		BuildingLimits:
 			waterlaunchpad.constructing: 2
 			power.constructing: 2
@@ -77,7 +77,7 @@ Player:
 			phasingfacility.constructing: 1
 			rearmingdeck.human.constructing: 1
 			rearmingdeck.cyborg.constructing: 1
-			matrix.constructing: 1
+			nexus.constructing: 1
 	BuildingRepairBotModule:
 		RequiresCondition: enable-normal-ai
 	SquadManagerBotModule@normal:

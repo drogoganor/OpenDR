@@ -51,7 +51,7 @@ Speech:
 		Training: gvstscl3
 			RateLimit: 800
 		UnitFull: 
-		UnitLost: gvstscl7 # gvstscl8 # building destroyed
+		UnitLost: gvstscl7
 		UnitReady: gvstscl5
 			RateLimit: 900
 		UnitRepaired: gvstscll

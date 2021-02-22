@@ -67,11 +67,6 @@
 		StandardPaletteMultiplier: 4
 		TerrainPaletteMultiplier: 6
 		Gamma: 0
-	PaletteFromJascFile@terrain-calypso:
-		Name: terrain
-		Filename: calypso.pal
-		Tileset: CALYPSO
-		Gamma: 0
 	PaletteFromDrFile@player:
 		Name: player
 		Filename: BARREN/BARREN.PAL
