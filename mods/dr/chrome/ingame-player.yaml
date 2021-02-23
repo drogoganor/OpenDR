@@ -446,9 +446,22 @@ Container@PLAYER_WIDGETS:
 							Y: 5
 							ImageCollection: power-icons
 							ImageName: power-normal
+				ProgressBar@WATER_BAR:
+					Logic: DrResourcesDisplayLogic
+					X: 26
+					Y: 284
+					Width: 86
+					Height: 16
+					Bar: progressbar-water
+				ProgressBar@POWER_BAR:
+					X: 130
+					Y: 284
+					Width: 86
+					Height: 16
+					Bar: progressbar-power
 		Container@SIDEBAR_BACKGROUND: # Unit main panel?
 			X: WINDOW_RIGHT - 250
-			Y: 303
+			Y: 320
 			Width: 238
 			Children:
 				Container@PALETTE_BACKGROUND:
@@ -592,10 +605,10 @@ Container@PLAYER_WIDGETS:
 					BackgroundContainer: PRODUCTION_BACKGROUND
 					PreviousProductionTabKey: PreviousProductionTab
 					NextProductionTabKey: NextProductionTab
-					X: 40
-					Y: 0
-					Width: 191
-					Height: 19
+					X: 38
+					Y: 2
+					Width: 196
+					Height: 18
 		Container@SIDEBAR_BUILDING_SELECT: # Building selector
 			Logic: BuildingPickerLogic
 				ProductionParent: SIDEBAR_BACKGROUND
@@ -653,26 +666,3 @@ Container@PLAYER_WIDGETS:
 					X: 5
 					Y: 0
 					Text: Cancel
-		Image@SIDEBAR_BACKGROUND_RESOURCES:
-			Logic: AddFactionSuffixLogic
-			X: WINDOW_RIGHT - 250
-			Y: 300
-			Width: 238
-			Height: 23
-			ImageCollection: sidebar
-			ImageName: background-resources
-			ClickThrough: false
-			Children:
-				ProgressBar@WATER_BAR:
-					Logic: DrResourcesDisplayLogic
-					X: 19
-					Y: 2
-					Width: 92
-					Height: 18
-					Bar: progressbar-water
-				ProgressBar@POWER_BAR:
-					X: 130
-					Y: 2
-					Width: 92
-					Height: 18
-					Bar: progressbar-power

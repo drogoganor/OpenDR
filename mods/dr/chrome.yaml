@@ -436,10 +436,9 @@ sidebar-bits:
 sidebar-fguard:
 	Inherits: ^Chrome
 	Regions:
-		background-top: 0, 167, 238, 310
-		background-iconrow: 0, 476, 238, 49
-		background-bottom: 0, 527, 238, 6
-		background-resources: 350, 0, 238, 23
+		background-top: 0, 167, 238, 329
+		background-iconrow: 0, 495, 238, 49
+		background-bottom: 0, 546, 238, 6
 		background-supportoverlay: 0, 75, 64, 48
 
 sidebar-button-fguard:
@@ -503,10 +502,9 @@ command-button-fguard-highlighted-disabled:
 sidebar-imperium:
 	Inherits: ^Chrome
 	Regions:
-		background-top: 274, 167, 238, 310
-		background-iconrow: 274, 476, 238, 49
-		background-bottom: 274, 527, 238, 6
-		background-resources: 350, 0, 238, 23
+		background-top: 274, 167, 238, 329
+		background-iconrow: 274, 495, 238, 49
+		background-bottom: 274, 546, 238, 6
 		background-supportoverlay: 64, 75, 64, 48
 		
 sidebar-button-imperium:
@@ -571,10 +569,9 @@ command-button-imperium-highlighted-disabled:
 sidebar-xenite:
 	Inherits: ^Chrome
 	Regions:
-		background-top: 0, 567, 238, 310
-		background-iconrow: 0, 876, 238, 49
-		background-bottom: 0, 927, 238, 6
-		background-resources: 350, 0, 238, 23
+		background-top: 0, 567, 238, 329
+		background-iconrow: 0, 895, 238, 49
+		background-bottom: 0, 946, 238, 6
 		background-supportoverlay: 0, 75, 64, 48
 
 sidebar-button-xenite:
@@ -638,10 +635,9 @@ command-button-xenite-highlighted-disabled:
 sidebar-shadowhand:
 	Inherits: ^Chrome
 	Regions:
-		background-top: 274, 567, 238, 310
-		background-iconrow: 274, 876, 238, 49
-		background-bottom: 274, 927, 238, 6
-		background-resources: 350, 0, 238, 23
+		background-top: 274, 567, 238, 329
+		background-iconrow: 274, 895, 238, 49
+		background-bottom: 274, 946, 238, 6
 		background-supportoverlay: 64, 75, 64, 48
 		
 sidebar-button-shadowhand:
@@ -706,10 +702,9 @@ command-button-shadowhand-highlighted-disabled:
 sidebar-togran:
 	Inherits: ^Chrome
 	Regions:
-		background-top: 574, 567, 238, 310
-		background-iconrow: 574, 876, 238, 49
-		background-bottom: 574, 927, 238, 6
-		background-resources: 350, 0, 238, 23
+		background-top: 574, 567, 238, 329
+		background-iconrow: 574, 895, 238, 49
+		background-bottom: 574, 946, 238, 6
 		background-supportoverlay: 64, 75, 64, 48
 		
 sidebar-button-togran:
@@ -773,10 +768,9 @@ command-button-togran-highlighted-disabled:
 sidebar-terrorist:
 	Inherits: ^Chrome
 	Regions:
-		background-top: 750, 167, 238, 310
-		background-iconrow: 750, 476, 238, 49
-		background-bottom: 750, 527, 238, 6
-		background-resources: 350, 0, 238, 23
+		background-top: 750, 167, 238, 329
+		background-iconrow: 750, 495, 238, 49
+		background-bottom: 750, 546, 238, 6
 		background-supportoverlay: 64, 75, 64, 48
 		
 sidebar-button-terrorist:
