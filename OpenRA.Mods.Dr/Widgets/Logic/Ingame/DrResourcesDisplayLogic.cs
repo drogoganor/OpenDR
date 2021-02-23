@@ -15,27 +15,30 @@ using OpenRA.Widgets;
 
 namespace OpenRA.Mods.Dr.Widgets.Logic
 {
-	public class DrResourcesLogic : ChromeLogic
+	public class DrResourcesDisplayLogic : ChromeLogic
 	{
 		readonly World world;
 		readonly Player player;
 		readonly DrPlayerResources resources;
 
 		[ObjectCreator.UseCtor]
-		public DrResourcesLogic(Widget widget, World world)
+		public DrResourcesDisplayLogic(Widget widget, World world)
 		{
 			this.world = world;
 			player = world.LocalPlayer;
 			resources = player.PlayerActor.Trait<DrPlayerResources>();
 
-			var waterLabelWidget = widget.GetOrNull<LabelWidget>("WATER_LABEL");
-			waterLabelWidget.GetText = () => resources.Water.ToString();
+			var waterBarWidget = widget.GetOrNull<ProgressBarWidget>("WATER_BAR");
+			waterBarWidget.GetPercentage = () => resources.WaterPercentage;
 		}
 
-		// public override void Tick()
-		// {
-		// 	displayResources = resources.Water;
-		// 	displayLabel = waterLabel.F(displayResources);
-		// }
+		public override void Tick()
+		{
+			if (resources.WaterPercentage > 0)
+			{
+				int r = resources.WaterPercentage;
+				r++;
+			}
+		}
 	}
 }

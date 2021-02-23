@@ -297,8 +297,8 @@
 		Bots: normal
 	CashTrickler:
 		RequiresCondition: enable-ai-cash
-		Amount: 200
-		Interval: 100
+		Amount: 5
+		Interval: 500
 		ShowTicks: False
 
 ^TrainingFacility.Constructing:

@@ -26,7 +26,8 @@
 		Amount: -200
 	RenderSprites:
 		Image: bfhqtmn1
-	ProvidesPrerequisite@upgradename:
+	ProvidesPrerequisite:
+		Prerequisite: upgrade.hq1
 
 upgrade.hq1.human:
 	Inherits: ^upgrade.hq1

@@ -423,6 +423,12 @@ Container@PLAYER_WIDGETS:
 					Text: {0}
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: SIMPLE_TOOLTIP
+					Children:
+						Image@CASH_ICON:
+							X: 0-21
+							Y: 4
+							ImageCollection: cash-icons
+							ImageName: cash-normal
 				LabelWithTooltip@POWER:
 					Logic: IngamePowerCounterLogic
 					X: PARENT_RIGHT - WIDTH - 30
@@ -440,27 +446,9 @@ Container@PLAYER_WIDGETS:
 							Y: 5
 							ImageCollection: power-icons
 							ImageName: power-normal
-		Image@SIDEBAR_BACKGROUND_RESOURCES:
-			Logic: AddFactionSuffixLogic
-			X: WINDOW_RIGHT - 250
-			Y: 300
-			Width: 238
-			Height: 24
-			ImageCollection: sidebar
-			ImageName: background-resources
-			ClickThrough: false
-			Children:
-				Label@WATER_LABEL:
-					Logic: DrResourcesLogic
-					X: 3
-					Y: 3
-					Width: PARENT_RIGHT
-					Height: 23
-					Align: Center
-					Font: TinyBold
 		Container@SIDEBAR_BACKGROUND: # Unit main panel?
 			X: WINDOW_RIGHT - 250
-			Y: 324
+			Y: 303
 			Width: 238
 			Children:
 				Container@PALETTE_BACKGROUND:
@@ -612,7 +600,7 @@ Container@PLAYER_WIDGETS:
 			Logic: BuildingPickerLogic
 				ProductionParent: SIDEBAR_BACKGROUND
 			X: WINDOW_RIGHT - 250
-			Y: 327
+			Y: 322
 			Width: 238
 			Height: 256
 			Children:
@@ -654,7 +642,7 @@ Container@PLAYER_WIDGETS:
 							Visible: false
 		Container@SIDEBAR_BUILDING_CANCEL:
 			X: WINDOW_RIGHT - 250
-			Y: 327
+			Y: 322
 			Width: 238
 			Height: 256
 			Visible: false
@@ -665,3 +653,26 @@ Container@PLAYER_WIDGETS:
 					X: 5
 					Y: 0
 					Text: Cancel
+		Image@SIDEBAR_BACKGROUND_RESOURCES:
+			Logic: AddFactionSuffixLogic
+			X: WINDOW_RIGHT - 250
+			Y: 300
+			Width: 238
+			Height: 23
+			ImageCollection: sidebar
+			ImageName: background-resources
+			ClickThrough: false
+			Children:
+				ProgressBar@WATER_BAR:
+					Logic: DrResourcesDisplayLogic
+					X: 19
+					Y: 2
+					Width: 92
+					Height: 18
+					Bar: progressbar-water
+				ProgressBar@POWER_BAR:
+					X: 130
+					Y: 2
+					Width: 92
+					Height: 18
+					Bar: progressbar-power

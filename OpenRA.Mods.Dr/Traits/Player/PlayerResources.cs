@@ -50,6 +50,8 @@ namespace OpenRA.Mods.Dr.Traits
 		[Sync]
 		public int Water;
 
+		public int WaterPercentage => (int)(((float)Water / info.WaterCapacity) * 100f);
+
 		public int AddWater(int amount)
 		{
 			if (amount >= 0)
@@ -76,7 +78,7 @@ namespace OpenRA.Mods.Dr.Traits
 				Water = 0;
 				resources.GiveCash(total);
 				Game.Sound.PlayNotification(owner.World.Map.Rules, owner, "Sounds", "CreditsReceived", null);
-				Game.AddSystemLine($"Sold credits {total.ToString()}");
+				Game.AddSystemLine($"Sold credits: ${total.ToString()}");
 			}
 
 			return amount;

@@ -15,6 +15,13 @@
 ^LoadScreen:
 	Image: loadscreen.png
 
+progressbar-water:
+	Inherits: ^Chrome
+	PanelRegion: 350, 30, 2, 2, 122, 11, 2, 2
+progressbar-power:
+	Inherits: ^Chrome
+	PanelRegion: 350, 46, 2, 2, 122, 11, 2, 2
+
 # ----------------------------------------------------------------------
 # GENERIC
 # ----------------------------------------------------------------------
@@ -432,7 +439,7 @@ sidebar-fguard:
 		background-top: 0, 167, 238, 310
 		background-iconrow: 0, 476, 238, 49
 		background-bottom: 0, 527, 238, 6
-		background-resources: 350, 0, 238, 24
+		background-resources: 350, 0, 238, 23
 		background-supportoverlay: 0, 75, 64, 48
 
 sidebar-button-fguard:
@@ -499,7 +506,7 @@ sidebar-imperium:
 		background-top: 274, 167, 238, 310
 		background-iconrow: 274, 476, 238, 49
 		background-bottom: 274, 527, 238, 6
-		background-resources: 350, 0, 238, 24
+		background-resources: 350, 0, 238, 23
 		background-supportoverlay: 64, 75, 64, 48
 		
 sidebar-button-imperium:
@@ -567,7 +574,7 @@ sidebar-xenite:
 		background-top: 0, 567, 238, 310
 		background-iconrow: 0, 876, 238, 49
 		background-bottom: 0, 927, 238, 6
-		background-resources: 350, 0, 238, 24
+		background-resources: 350, 0, 238, 23
 		background-supportoverlay: 0, 75, 64, 48
 
 sidebar-button-xenite:
@@ -634,7 +641,7 @@ sidebar-shadowhand:
 		background-top: 274, 567, 238, 310
 		background-iconrow: 274, 876, 238, 49
 		background-bottom: 274, 927, 238, 6
-		background-resources: 350, 0, 238, 24
+		background-resources: 350, 0, 238, 23
 		background-supportoverlay: 64, 75, 64, 48
 		
 sidebar-button-shadowhand:
@@ -702,7 +709,7 @@ sidebar-togran:
 		background-top: 574, 567, 238, 310
 		background-iconrow: 574, 876, 238, 49
 		background-bottom: 574, 927, 238, 6
-		background-resources: 350, 0, 238, 24
+		background-resources: 350, 0, 238, 23
 		background-supportoverlay: 64, 75, 64, 48
 		
 sidebar-button-togran:
@@ -769,7 +776,7 @@ sidebar-terrorist:
 		background-top: 750, 167, 238, 310
 		background-iconrow: 750, 476, 238, 49
 		background-bottom: 750, 527, 238, 6
-		background-resources: 350, 0, 238, 24
+		background-resources: 350, 0, 238, 23
 		background-supportoverlay: 64, 75, 64, 48
 		
 sidebar-button-terrorist:
