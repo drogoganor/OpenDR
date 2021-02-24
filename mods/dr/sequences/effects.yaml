@@ -29,6 +29,12 @@ aliensplat:
 		Length: 12
 		Tick: 80
 
+bloody1:
+	splat:
+		Start: 0
+		Length: 30
+		Tick: 60
+
 # Explosions
 
 explosion:
