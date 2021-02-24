@@ -30,7 +30,7 @@ aliensplat:
 		Tick: 80
 
 bloody1:
-	splat:
+	idle:
 		Start: 0
 		Length: 30
 		Tick: 60

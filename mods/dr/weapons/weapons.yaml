@@ -837,6 +837,8 @@ ShockWaveGun:
 		ExplosionInterval: 4
 		ExplodeUnderThisAltitude: -9999
 		Blockable: False
+		Image: bloody1
+		TrailImage: bloody1
 		KillProjectilesWhenReachedTargetLocation: false #try putting true
 		Splay: 5
 		NumProjectiles: 15
@@ -873,6 +875,8 @@ TemporalRiftVortexWeapon:
 		ExplosionInterval: 4
 		ExplodeUnderThisAltitude: -9999
 		Blockable: False
+		Image: bloody1
+		TrailImage: bloody1
 		KillProjectilesWhenReachedTargetLocation: False
 		NumProjectiles: 4
 	Warhead@1Dam: SpreadDamage
