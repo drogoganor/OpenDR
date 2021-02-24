@@ -53,9 +53,6 @@ namespace OpenRA.Mods.Dr.Projectiles
 		[Desc("Interval in ticks between each spawned Trail animation.")]
 		public readonly int TrailInterval = 2;
 
-		[Desc("Image to display.")]
-		public readonly string Image = null;
-
 		[Desc("Loop a randomly chosen sequence of Image from this list while this projectile is moving.")]
 		[SequenceReference("Image")]
 		public readonly string[] Sequences = { "idle" };
@@ -70,9 +67,6 @@ namespace OpenRA.Mods.Dr.Projectiles
 		[Desc("Palette to use for this projectile's shadow if Shadow is true.")]
 		[PaletteReference]
 		public readonly string ShadowPalette = "shadow";
-
-		[Desc("Trail animation.")]
-		public readonly string TrailImage = null;
 
 		[Desc("Loop a randomly chosen sequence of TrailImage from this list while this projectile is moving.")]
 		[SequenceReference("TrailImage")]

@@ -47,7 +47,7 @@ Infiltrator:
 		Prerequisites: ~disabled
 
 # Upgrades
-upgrade.hq1:
+upgrade.hq1.human:
 	Buildable:
 		Prerequisites: ~disabled
 

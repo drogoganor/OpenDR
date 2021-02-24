@@ -75,7 +75,7 @@ SkyFortress:
 		Prerequisites: ~disabled
 
 # Upgrades
-upgrade.hq1:
+upgrade.hq1.imperium:
 	Buildable:
 		Prerequisites: ~disabled
 

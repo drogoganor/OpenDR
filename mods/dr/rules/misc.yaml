@@ -120,7 +120,7 @@ Water:
 		Name: Water
 		ResourceType: 1
 		TerrainType: Water
-		ValuePerUnit: 75
+		ValuePerUnit: 50
 		AllowUnderActors: true
 	Tooltip:
 		Name: Water
@@ -134,7 +134,7 @@ Taelon:
 		Name: Taelon
 		ResourceType: 2
 		TerrainType: Taelon
-		ValuePerUnit: 75
+		ValuePerUnit: 50
 		AllowUnderActors: true
 	Tooltip:
 		Name: Taelon

@@ -25,8 +25,8 @@ namespace OpenRA.Mods.Dr.Effects
 	{
 		readonly ShockWaveProjectileInfo info;
 		readonly ShockwaveProjectileArgs args;
-		readonly Animation anim;
 
+		// readonly Animation anim;
 		ContrailRenderable contrail;
 		string trailPalette;
 
@@ -55,12 +55,11 @@ namespace OpenRA.Mods.Dr.Effects
 			targetpos = args.PassiveTarget;
 			facing = args.Facing.Angle;
 
-			if (!string.IsNullOrEmpty(info.Image))
-			{
-				anim = new Animation(world, info.Image, new Func<WAngle>(GetEffectiveFacing));
-				anim.PlayRepeating(info.Sequences.Random(world.SharedRandom));
-			}
-
+			// if (!string.IsNullOrEmpty(info.Image))
+			// {
+			// 	anim = new Animation(world, info.Image, new Func<WAngle>(GetEffectiveFacing));
+			// 	anim.PlayRepeating(info.Sequences.Random(world.SharedRandom));
+			// }
 			if (info.ContrailLength > 0)
 			{
 				var color = info.ContrailUsePlayerColor ? ContrailRenderable.ChooseColor(args.SourceActor) : info.ContrailColor;
@@ -94,23 +93,23 @@ namespace OpenRA.Mods.Dr.Effects
 			if (info.ContrailLength > 0)
 				yield return contrail;
 
-			if (anim == null || ticks >= lifespan)
+			if (ticks >= lifespan) // anim == null ||
 				yield break;
 
-			if (!world.FogObscures(projectilepos))
-			{
-				if (info.Shadow)
-				{
-					var dat = world.Map.DistanceAboveTerrain(projectilepos);
-					var shadowPos = projectilepos - new WVec(0, 0, dat.Length);
-					foreach (var r in anim.Render(shadowPos, wr.Palette(info.ShadowPalette)))
-						yield return r;
-				}
-
-				var palette = wr.Palette(info.Palette);
-				foreach (var r in anim.Render(projectilepos, palette))
-					yield return r;
-			}
+			// if (!world.FogObscures(projectilepos))
+			// {
+			// 	if (info.Shadow)
+			// 	{
+			// 		var dat = world.Map.DistanceAboveTerrain(projectilepos);
+			// 		var shadowPos = projectilepos - new WVec(0, 0, dat.Length);
+			// 		foreach (var r in anim.Render(shadowPos, wr.Palette(info.ShadowPalette)))
+			// 			yield return r;
+			// 	}
+			//
+			// 	var palette = wr.Palette(info.Palette);
+			// 	foreach (var r in anim.Render(projectilepos, palette))
+			// 		yield return r;
+			// }
 		}
 
 		bool Side(WPos p1, WPos p2, WPos p)
@@ -129,9 +128,9 @@ namespace OpenRA.Mods.Dr.Effects
 		public void Tick(World world)
 		{
 			ticks++;
-			if (anim != null)
-				anim.Tick();
 
+			// if (anim != null)
+			// 	anim.Tick();
 			var lastPos = projectilepos;
 
 			if (!converged)
@@ -157,15 +156,14 @@ namespace OpenRA.Mods.Dr.Effects
 				DetonateSelf = true;
 			}
 
-			if (!string.IsNullOrEmpty(info.TrailImage) && --smokeTicks < 0)
-			{
-				var delayedPos = WPos.Lerp(source, targetpos, ticks - info.TrailDelay, estimatedlifespan);
-				world.AddFrameEndTask(w => w.Add(new SpriteEffect(delayedPos, w, info.TrailImage, info.TrailSequences.Random(world.SharedRandom),
-					trailPalette, false, GetEffectiveFacing().Angle)));
-
-				smokeTicks = info.TrailInterval;
-			}
-
+			// if (!string.IsNullOrEmpty(info.TrailImage) && --smokeTicks < 0)
+			// {
+			// 	var delayedPos = WPos.Lerp(source, targetpos, ticks - info.TrailDelay, estimatedlifespan);
+			// 	world.AddFrameEndTask(w => w.Add(new SpriteEffect(delayedPos, w, info.TrailImage, info.TrailSequences.Random(world.SharedRandom),
+			// 		trailPalette, false, GetEffectiveFacing().Angle)));
+			//
+			// 	smokeTicks = info.TrailInterval;
+			// }
 			if (info.ContrailLength > 0)
 				contrail.Update(projectilepos);
 
