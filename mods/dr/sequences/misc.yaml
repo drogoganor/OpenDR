@@ -63,7 +63,7 @@ mpspawn:
 	idle: mpspawn.png
 		AddExtension: False
 		Length: *
-		Offset: 0, -8
+		Offset: 0, -5
 
 waypoint:
 	idle: waypoint.png
@@ -85,7 +85,7 @@ beacon:
 		AddExtension: False
 		ZOffset: 2535
 		Length: *
-		Offset: 0, -8
+		Offset: 0, -5
 	arrow: mpspawn.png
 	circles: mpspawn.png
 	atomicon: mpspawn.png
@@ -105,12 +105,12 @@ rallypoint:
 		AddExtension: False
 		Length: *
 		ZOffset: 2535
-		Offset: 0, -8
+		Offset: 0, -5
 	circles: mpspawn.png
 		AddExtension: False
 		Length: *
 		ZOffset: 2047
-		Offset: 0, -8
+		Offset: 0, -5
 
 pips:
 	Defaults:
