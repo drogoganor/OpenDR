@@ -20,7 +20,7 @@ namespace OpenRA.Mods.Dr.Traits
 	public class DrPlayerResourcesInfo : TraitInfo
 	{
 		[Desc("Maximum holding capacity of the water refinery before it is sold automatically.")]
-		public readonly int WaterCapacity = 2950;
+		public readonly int WaterCapacity = 3000;
 
 		[Desc("Maximum holding capacity of taelon before it is discarded.")]
 		public readonly int TaelonCapacity = 1000;
