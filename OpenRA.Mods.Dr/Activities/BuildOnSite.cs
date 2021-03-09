@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2018 The OpenRA Developers (see AUTHORS)
+ * Copyright 2007-2021 The OpenRA Developers (see AUTHORS)
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -15,7 +15,6 @@ using OpenRA.Activities;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Activities;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Dr.Traits;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
@@ -24,15 +23,15 @@ namespace OpenRA.Mods.Dr.Activities
 	// Activity to move to a location and construct a building there.
 	public class BuildOnSite : Activity
 	{
-		readonly World world;
-		readonly Target centerBuildingTarget;
-		readonly CPos centerTarget;
-		readonly Order order;
-		readonly string faction;
-		readonly BuildingInfo buildingInfo;
-		readonly ActorInfo buildingActor;
-		readonly WDist minRange;
-		readonly CPos topLeft;
+		private readonly World world;
+		private readonly Target centerBuildingTarget;
+		private readonly CPos centerTarget;
+		private readonly Order order;
+		private readonly string faction;
+		private readonly BuildingInfo buildingInfo;
+		private readonly ActorInfo buildingActor;
+		private readonly WDist minRange;
+		private readonly CPos topLeft;
 
 		public BuildOnSite(World world, Actor self, Order order, string faction, BuildingInfo buildingInfo)
 		{
@@ -56,7 +55,7 @@ namespace OpenRA.Mods.Dr.Activities
 			if (!world.CanPlaceBuilding(topLeft, buildingActor, buildingInfo, self))
 			{
 				// Try clear the area
-				foreach (var ord in ClearBlockersOrders(self, world, topLeft))
+				foreach (var ord in ClearBlockersOrders(self))
 					world.IssueOrder(ord);
 
 				Game.Sound.PlayNotification(world.Map.Rules, self.Owner, "Speech", "BuildingCannotPlaceAudio", faction);
@@ -82,10 +81,10 @@ namespace OpenRA.Mods.Dr.Activities
 		}
 
 		// Copied from PlaceBuildingOrderGenerator, triplicated in BuildOnSite and BuilderUnitBuildingOrderGenerator
-		IEnumerable<Order> ClearBlockersOrders(Actor ownerActor, World world, CPos topLeft)
+		IEnumerable<Order> ClearBlockersOrders(Actor ownerActor)
 		{
 			var allTiles = buildingInfo.Tiles(topLeft).ToArray();
-			var neightborTiles = Util.ExpandFootprint(allTiles, true).Except(allTiles)
+			var neighborTiles = Util.ExpandFootprint(allTiles, true).Except(allTiles)
 				.Where(world.Map.Contains).ToList();
 
 			var blockers = allTiles.SelectMany(world.ActorMap.GetActorsAt)
@@ -94,7 +93,7 @@ namespace OpenRA.Mods.Dr.Activities
 
 			foreach (var blocker in blockers.Where(x => x.Trait != null))
 			{
-				var availableCells = neightborTiles.Where(t => blocker.Trait.CanEnterCell(t)).ToList();
+				var availableCells = neighborTiles.Where(t => blocker.Trait.CanEnterCell(t)).ToList();
 				if (availableCells.Count == 0)
 					continue;
 

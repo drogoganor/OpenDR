@@ -21,6 +21,8 @@
 ^Humanoid:
 	Inherits@1: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
+	RepairableNear:
+		RepairActors: hospital.human, hospital.cyborg
 	Repairable:
 		RepairActors: hospital.human, hospital.cyborg
 	Huntable:

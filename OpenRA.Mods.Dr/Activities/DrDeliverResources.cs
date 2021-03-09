@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2019 The OpenRA Developers (see AUTHORS)
+ * Copyright 2007-2021 The OpenRA Developers (see AUTHORS)
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -22,25 +22,25 @@ namespace OpenRA.Mods.Dr.Activities
 {
 	public class DrDeliverResources : Activity
 	{
-		readonly IMove movement;
-		readonly Freighter harv;
-		readonly Actor targetActor;
-		readonly INotifyFreighterAction[] notifyHarvesterActions;
+		private readonly IMove movement;
+		private readonly Freighter freighter;
+		private readonly Actor targetActor;
+		private readonly INotifyFreighterAction[] notifyFreighterActions;
 
-		Actor proc;
+		private Actor waterRefinery;
 
 		public DrDeliverResources(Actor self, Actor targetActor = null)
 		{
 			movement = self.Trait<IMove>();
-			harv = self.Trait<Freighter>();
+			freighter = self.Trait<Freighter>();
 			this.targetActor = targetActor;
-			notifyHarvesterActions = self.TraitsImplementing<INotifyFreighterAction>().ToArray();
+			notifyFreighterActions = self.TraitsImplementing<INotifyFreighterAction>().ToArray();
 		}
 
 		protected override void OnFirstRun(Actor self)
 		{
 			if (targetActor != null && targetActor.IsInWorld)
-				harv.LinkProc(self, targetActor);
+				freighter.LinkProc(self, targetActor);
 		}
 
 		public override bool Tick(Actor self)
@@ -49,25 +49,25 @@ namespace OpenRA.Mods.Dr.Activities
 				return true;
 
 			// Find the nearest best refinery if not explicitly ordered to a specific refinery:
-			if (harv.LinkedProc == null || !harv.LinkedProc.IsInWorld)
-				harv.ChooseNewProc(self, null);
+			if (freighter.LinkedProc == null || !freighter.LinkedProc.IsInWorld)
+				freighter.ChooseNewProc(self, null);
 
 			// No refineries exist; check again after delay defined in Harvester.
-			if (harv.LinkedProc == null)
+			if (freighter.LinkedProc == null)
 			{
-				QueueChild(new Wait(harv.Info.SearchForDeliveryBuildingDelay));
+				QueueChild(new Wait(freighter.Info.SearchForDeliveryBuildingDelay));
 				return false;
 			}
 
-			proc = harv.LinkedProc;
-			var iao = proc.Trait<IAcceptDrResources>();
+			waterRefinery = freighter.LinkedProc;
+			var iao = waterRefinery.Trait<IAcceptDrResources>();
 
-			if (self.Location != proc.Location + iao.DeliveryOffset)
+			if (self.Location != waterRefinery.Location + iao.DeliveryOffset)
 			{
-				foreach (var n in notifyHarvesterActions)
-					n.MovingToRefinery(self, proc);
+				foreach (var n in notifyFreighterActions)
+					n.MovingToRefinery(self, waterRefinery);
 
-				QueueChild(movement.MoveTo(proc.Location + iao.DeliveryOffset, 0));
+				QueueChild(movement.MoveTo(waterRefinery.Location + iao.DeliveryOffset, 0));
 				return false;
 			}
 
@@ -78,7 +78,7 @@ namespace OpenRA.Mods.Dr.Activities
 
 		public override void Cancel(Actor self, bool keepQueue = false)
 		{
-			foreach (var n in notifyHarvesterActions)
+			foreach (var n in notifyFreighterActions)
 				n.MovementCancelled(self);
 
 			base.Cancel(self, keepQueue);
@@ -86,10 +86,10 @@ namespace OpenRA.Mods.Dr.Activities
 
 		public override IEnumerable<TargetLineNode> TargetLineNodes(Actor self)
 		{
-			if (proc != null)
-				yield return new TargetLineNode(Target.FromActor(proc), Color.Green);
+			if (waterRefinery != null)
+				yield return new TargetLineNode(Target.FromActor(waterRefinery), Color.Green);
 			else
-				yield return new TargetLineNode(Target.FromActor(harv.LinkedProc), Color.Green);
+				yield return new TargetLineNode(Target.FromActor(freighter.LinkedProc), Color.Green);
 		}
 	}
 }
