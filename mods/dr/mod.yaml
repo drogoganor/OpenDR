@@ -182,7 +182,7 @@ LoadScreen: LogoStripeLoadScreen
 	Image: dr|uibits/loadscreen.png
 	Image2x: dr|uibits/loadscreen2x.png
 	Image3x: dr|uibits/loadscreen3x.png
-	Text: Charging tachyon weapon..., Beaming lasers...
+	Text: Charging tachyon weapon..., Beaming lasers..., Painting Taelon green..., Seeding beautiful vortexes...
 
 ServerTraits:
 	LobbyCommands
@@ -314,3 +314,6 @@ ModContent:
 	Sources:
 		dr|installer/drcd.yaml
 		dr|installer/gog.yaml
+
+DiscordService:
+	ApplicationId: 811571076660199444
