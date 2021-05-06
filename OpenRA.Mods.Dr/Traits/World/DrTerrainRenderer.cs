@@ -191,6 +191,7 @@ namespace OpenRA.Mods.Common.Traits
 				if (match)
 				{
 					tile = new TerrainTile(m.SetType, (byte)Game.CosmeticRandom.Next(numIndices));
+					break;
 				}
 			}
 

@@ -22,12 +22,6 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Land
-					#NeighborMatch@east:
-					#	Offset: 1, 0
-					#	Match: Land
-					#NeighborMatch@south:
-					#	Offset: 0, 1
-					#	Match: Land
 			ShoreMatch@ne-inner:
 				Match: Land
 				SetType: 23
@@ -37,12 +31,6 @@
 						Match: Land
 					NeighborMatch@northwest:
 						Offset: -1, -1
-						Match: Land
-					NeighborMatch@east:
-						Offset: 1, 0
-						Match: Land
-					NeighborMatch@south:
-						Offset: 0, 1
 						Match: Land
 					NeighborMatch@west:
 						Offset: -1, 0
@@ -56,12 +44,6 @@
 						Match: Sea
 					NeighborMatch@northwest:
 						Offset: -1, -1
-						Match: Land
-					NeighborMatch@east:
-						Offset: 1, 0
-						Match: Land
-					NeighborMatch@south:
-						Offset: 0, 1
 						Match: Land
 					NeighborMatch@west:
 						Offset: -1, 0
@@ -79,12 +61,6 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Land
-					NeighborMatch@east:
-						Offset: 1, 0
-						Match: Land
-					NeighborMatch@south:
-						Offset: 0, 1
-						Match: Land
 			ShoreMatch@se-outer: # actually nw
 				Match: Land
 				SetType: 26
@@ -98,12 +74,6 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Sea
-					#NeighborMatch@east:
-					#	Offset: 1, 0
-					#	Match: Land
-					#NeighborMatch@south:
-					#	Offset: 0, 1
-					#	Match: Land
 			ShoreMatch@sw-outer: # actually ne
 				Match: Sea
 				SetType: 22
@@ -111,18 +81,12 @@
 					NeighborMatch@north:
 						Offset: 0, -1
 						Match: Sea
-					#NeighborMatch@northwest:
-					#	Offset: -1, -1
-					#	Match: Land
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Sea
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Land
-					NeighborMatch@east:
-						Offset: 1, 0
-						Match: Sea
-					#NeighborMatch@south:
-					#	Offset: 0, 1
-					#	Match: Sea
 			ShoreMatch@ne-outer: # actually sw
 				Match: Sea
 				SetType: 28
@@ -130,75 +94,65 @@
 					NeighborMatch@north:
 						Offset: 0, -1
 						Match: Land
-					#NeighborMatch@northwest:
-					#	Offset: -1, -1
-					#	Match: Sea
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Sea
 					NeighborMatch@west:
 						Offset: -1, 0
-						Match: Sea
-					#NeighborMatch@east:
-					#	Offset: 1, 0
-					#	Match: Land
-					NeighborMatch@south:
-						Offset: 0, 1
 						Match: Sea
 			ShoreMatch@nw-outer: # actually se
 				Match: Sea
 				SetType: 29
 				Neighbors:
-					#NeighborMatch@north:
-					#	Offset: 0, -1
-					#	Match: Sea
-					NeighborMatch@northwest:
-						Offset: -1, -1
-						Match: Land
-					#NeighborMatch@west:
-					#	Offset: -1, 0
-					#	Match: Sea
-					NeighborMatch@east:
-						Offset: 1, 0
+					NeighborMatch@north:
+						Offset: 0, -1
 						Match: Sea
-					NeighborMatch@south:
-						Offset: 0, 1
-						Match: Sea
-			ShoreMatch@north:
-				Match: Sea
-				SetType: 27
-				Neighbors:
-					#NeighborMatch@north:
-					#	Offset: 0, -1
-					#	Match: Land
 					NeighborMatch@northwest:
 						Offset: -1, -1
 						Match: Land
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Sea
-					#NeighborMatch@east:
-					#	Offset: 1, 0
-					#	Match: Land
-					#NeighborMatch@south:
-					#	Offset: 0, 1
-					#	Match: Land
-			ShoreMatch@east:
+			ShoreMatch@se-nw-connector
 				Match: Land
-				SetType: 24
+				SetType: 25
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Sea
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Land
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Sea
+			ShoreMatch@sw-ne-connector
+				Match: Sea
+				SetType: 20
 				Neighbors:
 					NeighborMatch@north:
 						Offset: 0, -1
 						Match: Land
-					NeighborMatch@west:
-						Offset: -1, 0
-						Match: Sea
 					NeighborMatch@northwest:
 						Offset: -1, -1
 						Match: Sea
-					#NeighborMatch@east:
-					#	Offset: 1, 0
-					#	Match: Land
-					#NeighborMatch@south:
-					#	Offset: 0, 1
-					#	Match: Land
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Land
+			ShoreMatch@north:
+				Match: Sea
+				SetType: 27
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Land
+			ShoreMatch@east:
+				Match: Land
+				SetType: 24
+				Neighbors:
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Sea
 			ShoreMatch@south:
 				Match: Land
 				SetType: 18
@@ -206,37 +160,13 @@
 					NeighborMatch@north:
 						Offset: 0, -1
 						Match: Sea
-					NeighborMatch@west:
-						Offset: -1, 0
-						Match: Land
-					NeighborMatch@northwest:
-						Offset: -1, -1
-						Match: Sea
-					#NeighborMatch@east:
-					#	Offset: 1, 0
-					#	Match: Land
-					#NeighborMatch@south:
-					#	Offset: 0, 1
-					#	Match: Land
 			ShoreMatch@west:
 				Match: Sea
 				SetType: 21
 				Neighbors:
-					NeighborMatch@north:
-						Offset: 0, -1
-						Match: Sea
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Land
-					#NeighborMatch@northwest:
-					#	Offset: -1, -1
-					#	Match: Sea
-					#NeighborMatch@east:
-					#	Offset: 1, 0
-					#	Match: Land
-					#NeighborMatch@south:
-					#	Offset: 0, 1
-					#	Match: Land
 	MusicPlaylist:
 		VictoryMusic: acid
 		DefeatMusic: crazylaf
