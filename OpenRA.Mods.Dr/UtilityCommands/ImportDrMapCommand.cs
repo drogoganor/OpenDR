@@ -314,17 +314,11 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 				SetBounds(Map, width + 2, height + 2);
 
-				var byte1Hash = new HashSet<byte>();
-				var byte2Hash = new HashSet<byte>();
-				var byte3Hash = new HashSet<byte>();
-				var byte4Hash = new HashSet<byte>();
-				var byte5Hash = new HashSet<byte>();
-				var byte6Hash = new HashSet<byte>();
 				var unknownTileTypeHash = new HashSet<int>();
 
-				for (int y = 0; y < height; y++)
+				for (var y = 0; y < height; y++)
 				{
-					for (int x = 0; x < width; x++)
+					for (var x = 0; x < width; x++)
 					{
 						var byte1 = stream.ReadUInt8(); // Tile type 0-63, with art variations repeated 1-4
 						var byte2 = stream.ReadUInt8(); // Which art variation to use. 0 = 1-4, 1 = 5-8
@@ -332,19 +326,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						var byte4 = stream.ReadUInt8(); // Unknown, defaults to 36. Seems to be elevation related.
 						var byte5 = stream.ReadUInt8(); // Unknown, defaults to 73. Seems to be elevation related.
 						var byte6 = stream.ReadUInt8(); // Unknown, defaults to 146. Seems to be elevation related.
-
-						if (!byte1Hash.Contains(byte1))
-							byte1Hash.Add(byte1);
-						if (!byte2Hash.Contains(byte2))
-							byte2Hash.Add(byte2);
-						if (!byte3Hash.Contains(byte3))
-							byte3Hash.Add(byte3);
-						if (!byte4Hash.Contains(byte4))
-							byte4Hash.Add(byte4);
-						if (!byte5Hash.Contains(byte5))
-							byte5Hash.Add(byte5);
-						if (!byte6Hash.Contains(byte6))
-							byte6Hash.Add(byte6);
 
 						var subindex = (byte)(byte1 / 64);
 						byte variation = (byte)(subindex * (byte2 + 1));
@@ -356,7 +337,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							tileType = 1; // TODO: Handle edge sprites
 						}
 
-						Map.Tiles[new CPos(x + 1, y + 1)] = new TerrainTile((ushort)tileType, variation); // types[i, j], byte1
+						Map.Tiles[new CPos(x + 1, y + 1)] = new TerrainTile((ushort)tileType, variation);
 					}
 				}
 
@@ -365,7 +346,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				stream.ReadInt32(); // Always 256
 				int length = stream.ReadInt32(); // Byte length of remaining data
 
-				byte1Hash = new HashSet<byte>();
+				var byte1Hash = new HashSet<byte>();
 				var byteList = new List<byte>();
 				for (int i = 0; i < length; i++)
 				{

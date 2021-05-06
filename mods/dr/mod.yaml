@@ -48,6 +48,7 @@ MapFolders:
 
 Rules:
 	dr|rules/palettes.yaml
+	dr|terrainrenderer.yaml
 	dr|rules.yaml
 	dr|rules/shapes.yaml
 	dr|rules/defaults.yaml
