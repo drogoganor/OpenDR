@@ -432,7 +432,6 @@ Actors:
 	Actor147: tachiontank
 		Owner: Imperium
 		Location: 56,36
-		Health: 100
 		Facing: 220
 	Actor148: amper
 		Owner: Imperium

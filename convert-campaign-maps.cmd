@@ -1,16 +1,11 @@
 @echo off
-
-FOR /F "tokens=1,2 delims==" %%A IN (mod.config) DO (set %%A=%%B)
-if exist user.config (FOR /F "tokens=1,2 delims==" %%A IN (user.config) DO (set %%A=%%B))
-
-title OpenRA.Utility.exe %MOD_ID%
-
-set MOD_SEARCH_PATHS=%MOD_SEARCH_PATHS%,./mods
-
-:start
+set IMPORT_DIR=maps-import
+set MOD_ID=dr
+set MOD_SEARCH_PATHS=./../../mods,./../mods
+set ENGINE_DIR=./..
+set ENGINE_DIRECTORY2=./engine/bin
 set TEMPLATE_DIR=%CD%
-if not exist %ENGINE_DIRECTORY%\OpenRA.Game.exe goto noengine
-cd %ENGINE_DIRECTORY%
+cd %ENGINE_DIRECTORY2%
 
 call OpenRA.Utility.exe %MOD_ID% --import-dr-campaign-map "FIXED/M01F/M01F.MAP"
 call OpenRA.Utility.exe %MOD_ID% --import-dr-campaign-map "FIXED/M02F/M02F.MAP"
