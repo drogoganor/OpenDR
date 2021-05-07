@@ -11,6 +11,7 @@
 
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Primitives;
 
@@ -29,18 +30,22 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			public SpriteFrameType Type { get; private set; }
 			public Size Size { get; private set; }
 			public Size FrameSize { get; private set; }
-			public float2 Offset { get; private set; }
+			public float2 Offset { get; set; }
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
 
-			public DrTilFrame(Stream s)
+			public DrTilFrame(Stream s, bool isMask = false)
 			{
 				Type = SpriteFrameType.Indexed;
 				const int tileSize = 24;
 
 				Data = new byte[tileSize * tileSize];
 
-				s.ReadUInt8();
+				if (!isMask)
+				{
+					s.ReadUInt8();
+				}
+
 				for (var i = 0; i < tileSize * tileSize; i++)
 				{
 					Data[i] = s.ReadUInt8();
@@ -89,6 +94,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			const int chunkSize = 577;
 
+			// Skip water animation
 			s.Position += chunkSize * 65;
 			s.Position -= 64;
 
@@ -100,7 +106,30 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					frames.Add(frame);
 				}
 
+				// for (var maskType = 0; maskType < 2; maskType++)
+				// {
+				// 	var frame = new DrTilFrame(s);
+				// 	frames.Add(frame);
+				// }
 				s.Position += 2 * chunkSize; // Skip mask frame
+			}
+
+			var something1 = s.ReadUInt8();
+			var something2 = s.ReadUInt8();
+			var something3 = s.ReadUInt8();
+			var indicesWithFourPad = new[] { 2, 6, 10, 14, 18, 22, 26, 30, 34, 38, 42, 46, 50, 54, 58, 62, 66, 72, 76, 80, 84, 88, 92, 96, 100 };
+			for (var maskType = 0; maskType < 128; maskType++)
+			{
+				var frame = new DrTilFrame(s, isMask: true);
+				frames.Add(frame);
+
+				if (indicesWithFourPad.Contains(maskType))
+				{
+					something1 = s.ReadUInt8(); // ???
+					something2 = s.ReadUInt8(); // ???
+					something3 = s.ReadUInt8(); // ???
+					var something4 = s.ReadUInt8(); // ???
+				}
 			}
 
 			s.Position = start;

@@ -12,7 +12,7 @@
 using System.Collections.Generic;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace OpenRA.Mods.Dr.Traits
 {
 	public class DrResourceTypeInfo : TraitInfo
 	{

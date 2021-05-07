@@ -1,0 +1,125 @@
+^Locomotors:
+	Locomotor@FOOT:
+		Name: foot
+		SharesCell: true
+		TerrainSpeeds:
+			Clear: 100
+			Normal2: 100
+			Normal3: 100
+			Muddy1: 90
+			Muddy2: 90
+			Rough1: 80
+			Rough2: 80
+			Road: 100
+			RoadBase: 100
+			HillSlope1: 65
+			HillSlope2: 65
+			Cliff1: 60
+			Cliff2: 60
+			Cliff3: 60
+			Cliff4: 60
+			SpringWater: 100
+			Taelon: 100
+	Locomotor@MECHFOOT:
+		Name: mechfoot
+		SharesCell: false
+		TerrainSpeeds:
+			Clear: 100
+			Normal2: 100
+			Normal3: 100
+			Muddy1: 90
+			Muddy2: 90
+			Rough1: 80
+			Rough2: 80
+			Road: 100
+			RoadBase: 100
+			HillSlope1: 65
+			HillSlope2: 65
+			Cliff1: 60
+			Cliff2: 60
+			Cliff3: 60
+			Cliff4: 60
+			SpringWater: 100
+			Taelon: 100
+	Locomotor@WHEELED:
+		Name: wheeled
+		TerrainSpeeds:
+			Clear: 100
+			Normal2: 100
+			Normal3: 100
+			Muddy1: 75
+			Muddy2: 75
+			Rough1: 80
+			Rough2: 80
+			Road: 100
+			RoadBase: 100
+			HillSlope1: 60
+			HillSlope2: 60
+			Cliff1: 50
+			Cliff2: 50
+			Cliff3: 50
+			Cliff4: 50
+			SpringWater: 100
+			Taelon: 100
+	Locomotor@WATER:
+		Name: water
+		TerrainSpeeds:
+			Water: 100
+			Clear: 0
+			Normal2: 0
+			Normal3: 0
+			Muddy1: 0
+			Muddy2: 0
+			Rough1: 0
+			Rough2: 0
+			Road: 0
+			RoadBase: 0
+			HillSlope1: 0
+			HillSlope2: 0
+			Cliff1: 0
+			Cliff2: 0
+			Cliff3: 0
+			Cliff4: 0
+	Locomotor@HOVERING:
+		Name: hovering
+		TerrainSpeeds:
+			Clear: 100
+			Normal2: 100
+			Normal3: 100
+			Muddy1: 80
+			Muddy2: 80
+			Rough1: 80
+			Rough2: 80
+			Road: 100
+			RoadBase: 100
+			HillSlope1: 80
+			HillSlope2: 80
+			Cliff1: 75
+			Cliff2: 75
+			Cliff3: 75
+			Cliff4: 75
+			SpringWater: 100
+			Taelon: 100
+			Water: 50
+	Locomotor@SHREDDER:
+		Name: shredder
+		Crushes: infantry
+		TerrainSpeeds: # copy of hover
+			Clear: 100
+			Normal2: 100
+			Normal3: 100
+			Muddy1: 80
+			Muddy2: 80
+			Rough1: 80
+			Rough2: 80
+			Road: 100
+			RoadBase: 100
+			HillSlope1: 80
+			HillSlope2: 80
+			Cliff1: 75
+			Cliff2: 75
+			Cliff3: 75
+			Cliff4: 75
+			SpringWater: 100
+			Taelon: 100
+			Water: 50

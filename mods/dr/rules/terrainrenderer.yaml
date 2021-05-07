@@ -1,0 +1,161 @@
+^TerrainRenderer:
+	DrTerrainRenderer:
+		Shorelines:
+			ShoreMatch@nw-inner:
+				Match: Sea
+				SetType: 19
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Land
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Land
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Land
+			ShoreMatch@ne-inner:
+				Match: Land
+				SetType: 23
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Land
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Land
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Sea
+			ShoreMatch@sw-inner:
+				Match: Land
+				SetType: 17
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Sea
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Land
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Land
+			ShoreMatch@se-inner:
+				Match: Land
+				SetType: 16
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Land
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Sea
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Land
+			ShoreMatch@se-outer: # actually nw
+				Match: Land
+				SetType: 26
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Sea
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Sea
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Sea
+			ShoreMatch@sw-outer: # actually ne
+				Match: Sea
+				SetType: 22
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Sea
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Sea
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Land
+			ShoreMatch@ne-outer: # actually sw
+				Match: Sea
+				SetType: 28
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Land
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Sea
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Sea
+			ShoreMatch@nw-outer: # actually se
+				Match: Sea
+				SetType: 29
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Sea
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Land
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Sea
+			ShoreMatch@se-nw-connector
+				Match: Land
+				SetType: 25
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Sea
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Land
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Sea
+			ShoreMatch@sw-ne-connector
+				Match: Sea
+				SetType: 20
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Land
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Sea
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Land
+			ShoreMatch@north:
+				Match: Sea
+				SetType: 27
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Land
+			ShoreMatch@east:
+				Match: Land
+				SetType: 24
+				Neighbors:
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Sea
+			ShoreMatch@south:
+				Match: Land
+				SetType: 18
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Sea
+			ShoreMatch@west:
+				Match: Sea
+				SetType: 21
+				Neighbors:
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Land

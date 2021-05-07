@@ -9,10 +9,11 @@
  */
 #endregion
 
-using OpenRA.Mods.Common;
+using OpenRA.Mods.Common.Activities;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace OpenRA.Mods.Dr.Traits
 {
 	[Desc("Placed by a SpawnActorWarhead to spy on the destruction after a detonation.")]
 	public class DetonationSpyInfo : ConditionalTraitInfo
@@ -41,7 +42,7 @@ namespace OpenRA.Mods.Common.Traits
 
 			if (ticks > info.StaysFor)
 			{
-				self.QueueActivity(new Activities.RemoveSelf());
+				self.QueueActivity(new RemoveSelf());
 				return;
 			}
 		}

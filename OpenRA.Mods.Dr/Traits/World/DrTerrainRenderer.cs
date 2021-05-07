@@ -15,7 +15,7 @@ using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace OpenRA.Mods.Dr.Traits
 {
 	[Desc("What type of tile is it? Land, Sea, etc.")]
 	public enum TerrainMatchType

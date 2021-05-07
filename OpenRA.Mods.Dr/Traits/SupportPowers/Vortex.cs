@@ -9,10 +9,11 @@
  */
 #endregion
 
-using OpenRA.Mods.Common;
+using OpenRA.Mods.Common.Activities;
+using OpenRA.Mods.Common.Traits;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits
+namespace OpenRA.Mods.Dr.Traits
 {
 	[Desc(".")]
 	public class VortexInfo : ConditionalTraitInfo
@@ -54,7 +55,7 @@ namespace OpenRA.Mods.Common.Traits
 				if (self.CurrentActivity != null)
 					self.CancelActivity();
 
-				self.QueueActivity(new Activities.RemoveSelf());
+				self.QueueActivity(new RemoveSelf());
 				return;
 			}
 
@@ -69,7 +70,7 @@ namespace OpenRA.Mods.Common.Traits
 			if (self.CurrentActivity != null)
 				self.CancelActivity();
 
-			self.QueueActivity(new Activities.Attack(self, tar, true, true));
+			self.QueueActivity(new Attack(self, tar, true, true));
 
 			rotation -= info.RotationRate;
 		}

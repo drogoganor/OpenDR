@@ -11,10 +11,11 @@
 
 using System.Linq;
 using OpenRA.Activities;
+using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Mods.Dr.Traits;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Common.Traits.Render
+namespace OpenRA.Mods.Dr.Traits.Render
 {
 	public class WithDrHarvestAnimationInfo : TraitInfo, Requires<WithSpriteBodyInfo>, Requires<FreighterInfo>
 	{

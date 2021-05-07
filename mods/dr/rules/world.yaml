@@ -1,0 +1,173 @@
+^BaseWorld:
+	AlwaysVisible:
+	Inherits: ^Palettes
+	ScreenMap:
+	ActorMap:
+	Selection:
+	TimeLimitManager:
+	LoadWidgetAtGameStart:
+	Inherits: ^TerrainRenderer
+	Inherits: ^Locomotors
+	MusicPlaylist:
+		VictoryMusic: acid
+		DefeatMusic: crazylaf
+	DebugVisualizations:
+	TerrainGeometryOverlay:
+	ShroudRenderer:
+		FogVariants: shroud
+		Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
+		UseExtendedIndex: true
+	Faction@0:
+		Name: F. Guard
+		InternalName: fguard
+		Side: Original
+		Description: Freedom Guard
+	Faction@1:
+		Name: Imperium
+		InternalName: imperium
+		Side: Original
+		Description: Imperium
+	Faction@2:
+		Name: Xenite
+		InternalName: xenite
+		Side: Original
+		Description: Xenite
+	Faction@3:
+		Name: Shadowhand
+		InternalName: shadowhand
+		Side: Original
+		Description: Shadowhand
+	Faction@4:
+		Name: Any
+		InternalName: Random
+		Side: Original
+		RandomFactionMembers: fguard, imperium, xenite, shadowhand
+		Description: Randomly select Freedom Guard, Imperium, Xenite or Shadowhand.
+	Faction@5:
+		Name: Togran
+		InternalName: togran
+		Side: Addon
+		Description: Togran
+	Faction@6:
+		Name: Terrorist
+		InternalName: terrorist
+		Side: Addon
+		Selectable: false
+		Description: Terrorist
+	Faction@7:
+		Name: Any (All)
+		InternalName: RandomAll
+		Side: Addon
+		RandomFactionMembers: fguard, imperium, xenite, shadowhand, togran
+		Description: Randomly select any faction.
+	ResourceType@water:
+		Type: SpringWater
+		Name: Water Spring DO NOT USE
+		ResourceType: 1
+		TerrainType: SpringWater
+		Palette: player
+		Sequences: water1
+		MaxDensity: 120000
+		ValuePerUnit: 120
+		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
+		AllowUnderActors: true
+	ResourceType@taelon:
+		Type: Taelon
+		Name: Taelon DO NOT USE
+		ResourceType: 2
+		TerrainType: Taelon
+		Palette: player
+		Sequences: taelon1
+		MaxDensity: 120000
+		ValuePerUnit: 120
+		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
+		AllowUnderActors: true
+
+World:
+	Inherits: ^BaseWorld
+	ChatCommands:
+	DevCommands:
+	DebugVisualizationCommands:
+	PlayerCommands:
+	HelpCommand:
+	ScreenShaker:
+	BuildingInfluence:
+	Inherits: ^MpStartUnits
+	#GlobalLightingPaletteEffect:
+	#	Ambient: 1.05
+	ProductionQueueOrBuildingPickerFromSelection:
+		ProductionParent: SIDEBAR_BACKGROUND
+		ProductionTabsWidget: PRODUCTION_TABS
+		BuildSelectPalette: BUILD_SELECT_PALETTE
+		BuildingCancel: SIDEBAR_BUILDING_CANCEL
+	DomainIndex:
+	ResourceLayer:
+	ResourceClaimLayer:
+	WarheadDebugOverlay:
+	CustomTerrainDebugOverlay:
+	SmudgeLayer@MiniCrater:
+		Type: MiniCrater
+		Sequence: aoctr000
+		SmokeImage: aoctr000
+		SmokeChance: 25
+		SmokeSequences: idle
+	SmudgeLayer@SmallCrater:
+		Type: SmallCrater
+		Sequence: aoctr001
+		SmokeImage: aoctr001
+		SmokeChance: 25
+		SmokeSequences: idle
+	SmudgeLayer@MediumCrater:
+		Type: MediumCrater
+		Sequence: aoctr002
+		SmokeImage: aoctr002
+		SmokeChance: 25
+		SmokeSequences: idle
+	SmudgeLayer@BigCrater:
+		Type: BigCrater
+		Sequence: aoctr003
+		SmokeImage: aoctr003
+		SmokeChance: 25
+		SmokeSequences: idle
+	SmudgeLayer@HugeCrater:
+		Type: HugeCrater
+		Sequence: aoctr004
+		SmokeImage: aoctr004
+		SmokeChance: 25
+		SmokeSequences: idle
+	MapCreeps:
+		CheckboxVisible: False
+	SpawnMapActors:
+	MapBuildRadius:
+		AllyBuildRadiusCheckboxDisplayOrder: 4
+		BuildRadiusCheckboxDisplayOrder: 5
+		BuildRadiusCheckboxVisible: False
+		AllyBuildRadiusCheckboxVisible: False
+	MapOptions:
+		GameSpeed: fast
+		ShortGameCheckboxDisplayOrder: 2
+		TechLevelDropdownDisplayOrder: 2
+		GameSpeedDropdownDisplayOrder: 3
+	MPStartLocations:
+	CreateMPPlayers:
+	PathFinder:
+	ValidateOrder:
+	DebugPauseState:
+	ObjectivesPanel:
+		ExitDelay: 1650
+		PanelName: SKIRMISH_STATS
+	RadarPings:
+	LoadWidgetAtGameStart:
+		ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
+	ResourceRenderer:
+		RenderTypes:
+
+EditorWorld:
+	Inherits: ^BaseWorld
+	EditorActorLayer:
+	EditorCursorLayer:
+	EditorResourceLayer:
+	EditorSelectionLayer:
+	EditorActionManager:
+	LoadWidgetAtGameStart:
+	MapOptions:
