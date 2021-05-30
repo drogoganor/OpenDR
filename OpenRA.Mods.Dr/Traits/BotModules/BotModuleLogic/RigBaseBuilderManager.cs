@@ -120,7 +120,7 @@ namespace OpenRA.Mods.Dr.Traits
 			var randomFactor = world.LocalRandom.Next(0, baseBuilder.Info.StructureProductionRandomBonusDelay);
 
 			// Needs to be at least 4 * OrderLatency because otherwise the AI frequently duplicates build orders (i.e. makes the same build decision twice)
-			waitTicks = 4 * world.LobbyInfo.GlobalSettings.OrderLatency + baseBuilder.Info.StructureProductionActiveDelay + randomFactor;
+			waitTicks = 4 * world.OrderLatency + baseBuilder.Info.StructureProductionActiveDelay + randomFactor;
 
 			// : baseBuilder.Info.StructureProductionInactiveDelay + randomFactor;
 		}

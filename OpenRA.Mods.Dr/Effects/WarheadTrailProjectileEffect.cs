@@ -122,7 +122,7 @@ namespace OpenRA.Mods.Dr.Effects
 
 			// Check for walls or other blocking obstacles.
 			WPos blockedPos;
-			if (info.Blockable && BlocksProjectiles.AnyBlockingActorsBetween(world, lastPos, projectilepos, info.Width, out blockedPos))
+			if (info.Blockable && BlocksProjectiles.AnyBlockingActorsBetween(world, world.LocalPlayer, lastPos, projectilepos, info.Width, out blockedPos))
 			{
 				projectilepos = blockedPos;
 				DetonateSelf = true;

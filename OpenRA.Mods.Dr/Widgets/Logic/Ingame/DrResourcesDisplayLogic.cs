@@ -19,14 +19,14 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 	{
 		readonly World world;
 		readonly Player player;
-		readonly DrPlayerResources resources;
+		readonly AcceptsFreshWater resources;
 
 		[ObjectCreator.UseCtor]
 		public DrResourcesDisplayLogic(Widget widget, World world)
 		{
 			this.world = world;
 			player = world.LocalPlayer;
-			resources = player.PlayerActor.Trait<DrPlayerResources>();
+			resources = player.PlayerActor.Trait<AcceptsFreshWater>();
 
 			var waterBarWidget = widget.GetOrNull<ProgressBarWidget>("WATER_BAR");
 			waterBarWidget.GetPercentage = () => resources.WaterPercentage;

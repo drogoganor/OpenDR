@@ -171,10 +171,10 @@ namespace OpenRA.Mods.Dr.Traits
 			playerResources = player.PlayerActor.Trait<PlayerResources>();
 			positionsUpdatedModules = player.PlayerActor.TraitsImplementing<IBotPositionsUpdated>().ToArray();
 
-			var tileset = world.Map.Rules.TileSet;
-			resourceTypeIndices = new BitArray(tileset.TerrainInfo.Length); // Big enough
-			foreach (var t in world.Map.Rules.Actors["world"].TraitInfos<ResourceTypeInfo>())
-				resourceTypeIndices.Set(tileset.GetTerrainIndex(t.TerrainType), true);
+			var tileset = world.Map.Rules.TerrainInfo;
+			resourceTypeIndices = new BitArray(tileset.TerrainTypes.Length); // Big enough
+			foreach (var t in world.Map.Resources)
+				resourceTypeIndices.Set(t.Index, true);
 
 			builder = new RigBaseBuilderManager(this, player, playerPower, resourceTypeIndices);
 		}

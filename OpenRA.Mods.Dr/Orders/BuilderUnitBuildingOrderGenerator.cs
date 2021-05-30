@@ -182,21 +182,19 @@ namespace OpenRA.Mods.Dr.Orders
 			foreach (var r in previewRenderables)
 				yield return r;
 
-			var res = world.WorldActor.TraitOrDefault<ResourceLayer>();
+			var res = world.WorldActor.TraitOrDefault<IResourceLayer>();
 			var isCloseEnough = buildingInfo.IsCloseEnoughToBase(world, world.LocalPlayer, actorInfo, topLeft);
 			foreach (var t in buildingInfo.Tiles(topLeft))
-				cells.Add(t, MakeCellType(isCloseEnough && world.IsCellBuildable(t, actorInfo, buildingInfo) && (res == null || res.GetResourceDensity(t) == 0)));
+				cells.Add(t, MakeCellType(isCloseEnough && world.IsCellBuildable(t, actorInfo, buildingInfo) && (res == null || res.GetResource(t).Type == null)));
 
 			var cellPalette = wr.Palette(footprintPlaceBuildingPreviewInfo.Palette);
-			var linePalette = wr.Palette(footprintPlaceBuildingPreviewInfo.LineBuildSegmentPalette);
 			var topLeftPos = world.Map.CenterOfCell(topLeft);
 			foreach (var c in cells)
 			{
 				var tile = !c.Value.HasFlag(CellType.Invalid) ? buildOk : buildBlocked;
-				var pal = c.Value.HasFlag(CellType.LineBuild) ? linePalette : cellPalette;
 				var pos = world.Map.CenterOfCell(c.Key);
 				yield return new SpriteRenderable(tile, pos, new WVec(0, 0, topLeftPos.Z - pos.Z),
-					-511, pal, 1f, true);
+					-511, cellPalette, 1f, 1f, float3.Ones, TintModifiers.IgnoreWorldTint, true);
 			}
 		}
 

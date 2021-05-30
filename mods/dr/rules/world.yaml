@@ -1,13 +1,12 @@
 ^BaseWorld:
 	AlwaysVisible:
-	Inherits: ^Palettes
+	Inherits@palettes: ^Palettes
 	ScreenMap:
 	ActorMap:
 	Selection:
-	TimeLimitManager:
 	LoadWidgetAtGameStart:
-	Inherits: ^TerrainRenderer
-	Inherits: ^Locomotors
+	Inherits@terrainrenderer: ^TerrainRenderer
+	Inherits@locomotors: ^Locomotors
 	MusicPlaylist:
 		VictoryMusic: acid
 		DefeatMusic: crazylaf
@@ -28,60 +27,76 @@
 		Side: Original
 		Description: Imperium
 	Faction@2:
-		Name: Xenite
-		InternalName: xenite
-		Side: Original
-		Description: Xenite
-	Faction@3:
-		Name: Shadowhand
-		InternalName: shadowhand
-		Side: Original
-		Description: Shadowhand
-	Faction@4:
-		Name: Any
+		Name: Any (Original)
 		InternalName: Random
 		Side: Original
-		RandomFactionMembers: fguard, imperium, xenite, shadowhand
-		Description: Randomly select Freedom Guard, Imperium, Xenite or Shadowhand.
+		RandomFactionMembers: fguard, imperium
+		Description: Randomly select Freedom Guard or Imperium.
+	Faction@3:
+		Name: Xenite
+		InternalName: xenite
+		Side: Expansion
+		Description: Xenite
+	Faction@4:
+		Name: Shadowhand
+		InternalName: shadowhand
+		Side: Expansion
+		Description: Shadowhand
 	Faction@5:
+		Name: Any (Expansion)
+		InternalName: RandomExpansion
+		Side: Expansion
+		RandomFactionMembers: fguard, imperium, xenite, shadowhand
+		Description: Randomly select Freedom Guard, Imperium, Xenite, or Shadowhand.
+	Faction@6:
 		Name: Togran
 		InternalName: togran
-		Side: Addon
+		Side: Custom
 		Description: Togran
-	Faction@6:
+	Faction@7:
 		Name: Terrorist
 		InternalName: terrorist
-		Side: Addon
+		Side: Custom
 		Selectable: false
 		Description: Terrorist
-	Faction@7:
+	Faction@8:
 		Name: Any (All)
 		InternalName: RandomAll
-		Side: Addon
+		Side: Custom
 		RandomFactionMembers: fguard, imperium, xenite, shadowhand, togran
 		Description: Randomly select any faction.
-	ResourceType@water:
-		Type: SpringWater
-		Name: Water Spring DO NOT USE
-		ResourceType: 1
-		TerrainType: SpringWater
-		Palette: player
-		Sequences: water1
-		MaxDensity: 120000
-		ValuePerUnit: 120
-		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
-		AllowUnderActors: true
-	ResourceType@taelon:
-		Type: Taelon
-		Name: Taelon DO NOT USE
-		ResourceType: 2
-		TerrainType: Taelon
-		Palette: player
-		Sequences: taelon1
-		MaxDensity: 120000
-		ValuePerUnit: 120
-		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
-		AllowUnderActors: true
+	#ResourceType@water:
+	#	Type: SpringWater
+	#	Name: Water Spring
+	#	ResourceType: 1
+	#	TerrainType: SpringWater
+	#	Palette: player
+	#	Sequences: water1
+	#	MaxDensity: 120000
+	#	ValuePerUnit: 120
+	#	AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
+	#	AllowUnderActors: true
+	#ResourceType@taelon:
+	#	Type: Taelon
+	#	Name: Taelon
+	#	ResourceType: 2
+	#	TerrainType: Taelon
+	#	Palette: player
+	#	Sequences: taelon1
+	#	MaxDensity: 120000
+	#	ValuePerUnit: 120
+	#	AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
+	#	AllowUnderActors: true
+	ResourceRenderer:
+		ResourceTypes:
+			Water:
+				Sequences: water1
+				Palette: player
+				Name: Water
+			Taelon:
+				Sequences: taelon1
+				Palette: player
+				Name: Taelon
 
 World:
 	Inherits: ^BaseWorld
@@ -90,9 +105,10 @@ World:
 	DebugVisualizationCommands:
 	PlayerCommands:
 	HelpCommand:
+	TimeLimitManager:
 	ScreenShaker:
 	BuildingInfluence:
-	Inherits: ^MpStartUnits
+	Inherits@mpunits: ^MpStartUnits
 	#GlobalLightingPaletteEffect:
 	#	Ambient: 1.05
 	ProductionQueueOrBuildingPickerFromSelection:
@@ -102,6 +118,24 @@ World:
 		BuildingCancel: SIDEBAR_BUILDING_CANCEL
 	DomainIndex:
 	ResourceLayer:
+		RecalculateResourceDensity: false
+		ResourceTypes:
+			Water:
+				ResourceIndex: 1
+				TerrainType: SpringWater
+				AllowedTerrainTypes: Clear,Road,Normal2,Normal3,Muddy1,Muddy2,Rough1,Rough2,RoadBase
+				Sequences: water1
+				Palette: player
+				MaxDensity: 120000
+				ValuePerUnit: 120
+			Gems:
+				ResourceIndex: 2
+				TerrainType: Taelon
+				AllowedTerrainTypes: Clear,Road,Normal2,Normal3,Muddy1,Muddy2,Rough1,Rough2,RoadBase
+				Sequences: taelon1
+				Palette: player
+				MaxDensity: 120000
+				ValuePerUnit: 120
 	ResourceClaimLayer:
 	WarheadDebugOverlay:
 	CustomTerrainDebugOverlay:
@@ -148,8 +182,8 @@ World:
 		ShortGameCheckboxDisplayOrder: 2
 		TechLevelDropdownDisplayOrder: 2
 		GameSpeedDropdownDisplayOrder: 3
-	MPStartLocations:
-	CreateMPPlayers:
+	MapStartingLocations:
+	CreateMapPlayers:
 	PathFinder:
 	ValidateOrder:
 	DebugPauseState:
@@ -159,15 +193,30 @@ World:
 	RadarPings:
 	LoadWidgetAtGameStart:
 		ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
-	ResourceRenderer:
-		RenderTypes:
 
 EditorWorld:
 	Inherits: ^BaseWorld
 	EditorActorLayer:
 	EditorCursorLayer:
 	EditorResourceLayer:
+		RecalculateResourceDensity: false
+		ResourceTypes:
+			Water:
+				ResourceIndex: 1
+				TerrainType: SpringWater
+				AllowedTerrainTypes: Clear,Road,Normal2,Normal3,Muddy1,Muddy2,Rough1,Rough2,RoadBase
+				Sequences: water1
+				Palette: player
+				MaxDensity: 120000
+				ValuePerUnit: 120
+			Gems:
+				ResourceIndex: 2
+				TerrainType: Taelon
+				AllowedTerrainTypes: Clear,Road,Normal2,Normal3,Muddy1,Muddy2,Rough1,Rough2,RoadBase
+				Sequences: taelon1
+				Palette: player
+				MaxDensity: 120000
+				ValuePerUnit: 120
 	EditorSelectionLayer:
 	EditorActionManager:
 	LoadWidgetAtGameStart:
-	MapOptions:

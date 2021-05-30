@@ -52,34 +52,27 @@ namespace OpenRA.Mods.Dr.FileFormats
 
 		public void Load(Stream s)
 		{
-			try
-			{
-				var reader = new StreamReader(s);
+			var reader = new StreamReader(s);
 
-				while (!reader.EndOfStream)
+			while (!reader.EndOfStream)
+			{
+				var line = reader.ReadLine();
+
+				if (line.Length == 0) continue;
+
+				switch (line[0])
 				{
-					var line = reader.ReadLine();
-
-					if (line.Length == 0) continue;
-
-					switch (line[0])
-					{
-						case ';':
-							break;
-						case '{':
-							break;
-						case '}':
-							skipNextBlock = false;
-							break;
-						default:
-							ProcessEntry(line);
-							break;
-					}
+					case ';':
+						break;
+					case '{':
+						break;
+					case '}':
+						skipNextBlock = false;
+						break;
+					default:
+						ProcessEntry(line);
+						break;
 				}
-			}
-			catch (Exception ex)
-			{
-				throw ex;
 			}
 		}
 

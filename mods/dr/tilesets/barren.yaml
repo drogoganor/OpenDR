@@ -538,3 +538,571 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
+	Template@30:
+		Id: 30
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 184
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@31:
+		Id: 31
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 185
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@32:
+		Id: 32
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 186
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@33:
+		Id: 33
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 187
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@34:
+		Id: 34
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 188
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@35:
+		Id: 35
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 189
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@36:
+		Id: 36
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 190
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@37:
+		Id: 37
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 191
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@38:
+		Id: 38
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 192
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@39:
+		Id: 39
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 193
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@40:
+		Id: 40
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 194
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@41:
+		Id: 41
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 195
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@42:
+		Id: 42
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 196
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@43:
+		Id: 43
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 197
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@44:
+		Id: 44
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 198
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@45:
+		Id: 45
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 199
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@46:
+		Id: 46
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 200
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@47:
+		Id: 47
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 201
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@48:
+		Id: 48
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 202
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@49:
+		Id: 49
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 203
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@50:
+		Id: 50
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 204
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@51:
+		Id: 51
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 205
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@52:
+		Id: 52
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 206
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@53:
+		Id: 53
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 207
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@54:
+		Id: 54
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 208
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@55:
+		Id: 55
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 209
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@56:
+		Id: 56
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 210
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@57:
+		Id: 57
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 211
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@58:
+		Id: 58
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 212
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@59:
+		Id: 59
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 213
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@60:
+		Id: 60
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 214
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@61:
+		Id: 61
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 215
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@62:
+		Id: 62
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 216
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@63:
+		Id: 63
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 217
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@64:
+		Id: 64
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 218
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@65:
+		Id: 65
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 219
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@66:
+		Id: 66
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 220
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@67:
+		Id: 67
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 221
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@68:
+		Id: 68
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 222
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@69:
+		Id: 69
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 223
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@70:
+		Id: 70
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 224
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@71:
+		Id: 71
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 225
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@72:
+		Id: 72
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 226
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@73:
+		Id: 73
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 227
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@74:
+		Id: 74
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 228
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@75:
+		Id: 75
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 229
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@76:
+		Id: 76
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 230
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@77:
+		Id: 77
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 231
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@78:
+		Id: 78
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 232
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@79:
+		Id: 79
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 233
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@80:
+		Id: 80
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 234
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@81:
+		Id: 81
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 235
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@82:
+		Id: 82
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 236
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@83:
+		Id: 83
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 237
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@84:
+		Id: 84
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 238
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@85:
+		Id: 85
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 239
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@86:
+		Id: 86
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 240
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@87:
+		Id: 87
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 241
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@88:
+		Id: 88
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 242
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@89:
+		Id: 89
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 243
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@90:
+		Id: 90
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 244
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@91:
+		Id: 91
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 245
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@92:
+		Id: 92
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 246
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@93:
+		Id: 93
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 247
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@94:
+		Id: 94
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 248
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@95:
+		Id: 95
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 249
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@96:
+		Id: 96
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 250
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@97:
+		Id: 97
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 251
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@98:
+		Id: 98
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 252
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@99:
+		Id: 99
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 253
+		Categories: Terrain
+		Tiles:
+			0: Clear
+	Template@100:
+		Id: 100
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 254
+		Categories: Terrain
+		Tiles:
+			0: Clear

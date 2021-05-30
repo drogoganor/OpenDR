@@ -1,23 +1,10 @@
-#region Copyright & License Information
-/*
- * Copyright 2007-2020 The OpenRA Developers (see AUTHORS)
- * This file is part of OpenRA, which is free software. It is made
- * available to you under the terms of the GNU General Public License
- * as published by the Free Software Foundation, either version 3 of
- * the License, or (at your option) any later version. For more
- * information, see COPYING.
- */
-#endregion
-
-using System;
-using OpenRA.Mods.Common.Scripting;
+﻿using System;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits
 {
-	public class DrPlayerResourcesInfo : TraitInfo
+	public class AcceptsFreshWaterInfo : TraitInfo
 	{
 		[Desc("Maximum holding capacity of the water refinery before it is sold automatically.")]
 		public readonly int WaterCapacity = 3000;
@@ -31,16 +18,16 @@ namespace OpenRA.Mods.Dr.Traits
 		[Desc("Ticks to wait before stored credits will be sold automatically.")]
 		public readonly long WaterSaleTimeoutTicks = 10000;
 
-		public override object Create(ActorInitializer init) { return new DrPlayerResources(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new AcceptsFreshWater(init.Self, this); }
 	}
 
-	public class DrPlayerResources : ISync
+	public class AcceptsFreshWater : ISync, INotifyResourceAccepted
 	{
-		private readonly DrPlayerResourcesInfo info;
+		private readonly AcceptsFreshWaterInfo info;
 		private readonly PlayerResources resources;
 		private readonly Player owner;
 
-		public DrPlayerResources(Actor self, DrPlayerResourcesInfo info)
+		public AcceptsFreshWater(Actor self, AcceptsFreshWaterInfo info)
 		{
 			this.info = info;
 			owner = self.Owner;
@@ -52,9 +39,9 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public int WaterPercentage => (int)(((float)Water / info.WaterCapacity) * 100f);
 
-		public int AddWater(int amount)
+		public void OnResourceAccepted(Actor self, Actor refinery, string resourceType, int count, int value)
 		{
-			if (amount >= 0)
+			if (value >= 0)
 			{
 				if (Water < int.MaxValue)
 				{
@@ -62,7 +49,7 @@ namespace OpenRA.Mods.Dr.Traits
 					{
 						checked
 						{
-							Water += amount;
+							Water += value;
 						}
 					}
 					catch (OverflowException)
@@ -80,8 +67,6 @@ namespace OpenRA.Mods.Dr.Traits
 				Game.Sound.PlayNotification(owner.World.Map.Rules, owner, "Sounds", "CreditsReceived", null);
 				Game.AddSystemLine($"Sold credits: ${total.ToString()}");
 			}
-
-			return amount;
 		}
 	}
 }

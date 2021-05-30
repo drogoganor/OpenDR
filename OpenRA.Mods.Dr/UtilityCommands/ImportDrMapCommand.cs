@@ -304,7 +304,10 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 					}
 				}
 
-				Map = new Map(ModData, ModData.DefaultTileSets[tilesetName], width + 2, height + 2)
+				if (!ModData.DefaultTerrainInfo.TryGetValue(tilesetName, out var terrainInfo))
+					throw new InvalidDataException($"Unknown tileset {tilesetName}");
+
+				Map = new Map(ModData, terrainInfo, width + 2, height + 2)
 				{
 					Title = Path.GetFileNameWithoutExtension(filename),
 					Author = "Dark Reign",
@@ -544,8 +547,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 				Map.PlayerDefinitions = MapPlayers.ToMiniYaml();
 			}
-
-			Map.FixOpenAreas();
 
 			var dest = Path.GetFileNameWithoutExtension(args[1]) + ".oramap";
 

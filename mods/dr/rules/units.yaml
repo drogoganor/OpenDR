@@ -575,9 +575,9 @@ Freighter:
 		Speed: 90
 	Armor:
 		Type: TankPlating
-	WithDrDockingAnimation:
+	WithDockingAnimation:
 	WithFacingSpriteBody:
-	Freighter:
+	Harvester:
 		Capacity: 8
 		Resources: water,taelon
 		BaleLoadDelay: 20
@@ -615,11 +615,11 @@ HoverFreighter:
 		Speed: 126
 	Armor:
 		Type: TankPlating
-	WithDrDockingAnimation:
+	WithDockingAnimation:
 	WithFacingSpriteBody:
 	WithInfantryBody:
 		DefaultAttackSequence: stand
-	Freighter:
+	Harvester:
 		Capacity: 8
 		Resources: water,taelon
 		BaleLoadDelay: 20

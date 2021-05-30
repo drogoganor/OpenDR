@@ -115,13 +115,6 @@ temporalriftspewer:
 
 Water:
 	Inherits: ^ResourcePatch
-	DrResourceType:
-		Type: water
-		Name: Water
-		ResourceType: 1
-		TerrainType: Water
-		ValuePerUnit: 50
-		AllowUnderActors: true
 	Tooltip:
 		Name: Water
 	RenderSprites:
@@ -129,13 +122,6 @@ Water:
 
 Taelon:
 	Inherits: ^ResourcePatch
-	DrResourceType:
-		Type: taelon
-		Name: Taelon
-		ResourceType: 2
-		TerrainType: Taelon
-		ValuePerUnit: 50
-		AllowUnderActors: true
 	Tooltip:
 		Name: Taelon
 	RenderSprites:

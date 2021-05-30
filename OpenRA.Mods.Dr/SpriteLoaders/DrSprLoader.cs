@@ -62,7 +62,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			public DrSprFrame(Stream s, SprHeader sph, SprFrameInfo info)
 			{
-				Type = SpriteFrameType.Indexed;
+				Type = SpriteFrameType.Indexed8;
 				var picindex = info.A * sph.Nrots + info.R;
 				var readInt = new Func<int, int>((off) =>
 				{
@@ -259,7 +259,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			return frames.ToArray();
 		}
 
-		public bool TryParseSprite(Stream s, out ISpriteFrame[] frames, out TypeDictionary metadata)
+		public bool TryParseSprite(Stream s, string filename, out ISpriteFrame[] frames, out TypeDictionary metadata)
 		{
 			metadata = null;
 			if (!IsDrSpr(s))
