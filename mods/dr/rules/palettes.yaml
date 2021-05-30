@@ -81,10 +81,6 @@
 	PaletteFromGimpOrJascFile@effect:
 		Name: effect
 		Filename: units.pal
-	PaletteFromGimpOrJascFile@colorpicker:
-		Name: colorpicker
-		Filename: units.pal
-		AllowModifiers: false
 	ShroudPalette@shroud:
 		Name: shroud
 	ShroudPalette@fog:
@@ -111,4 +107,9 @@
 	PlayerColorPalette:
 		BasePalette: player
 		RemapIndex: 39, 38, 37, 36, 35, 34, 33, 32
+	ColorPickerPalette@colorpicker:
+		Name: colorpicker
+		BasePalette: player
+		RemapIndex: 39, 38, 37, 36, 35, 34, 33, 32
+		AllowModifiers: false
 	MenuPaletteEffect:

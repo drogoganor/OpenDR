@@ -112,8 +112,8 @@ Assemblies:
 ChromeLayout:
 	dr|chrome/mainmenu.yaml
 	dr|chrome/ingame-player.yaml
-	dr|chrome/color-picker.yaml
 	dr|chrome/mainmenu-prerelease-notification.yaml
+	common|chrome/color-picker.yaml
 	common|chrome/mainmenu-prompts.yaml
 	common|chrome/ingame-menu.yaml
 	common|chrome/dropdowns.yaml

@@ -40,8 +40,8 @@
 		Margin: -2, 0
 	Selectable:
 		Class: Humanoid
-		Bounds: 26,28,1,2
-		DecorationBounds: 18,22,1,1
+		Bounds: 1109, 1194, 42, 85
+		DecorationBounds: 768, 938, 42, 42
 	Targetable:
 		TargetTypes: Ground, Infantry, Disguise
 	QuantizeFacingsFromSequence:
@@ -106,8 +106,8 @@
 		BuildDurationModifier: 100
 	Selectable:
 		Class: E1
-		Bounds: 26,28,1,2
-		DecorationBounds: 18,22,1,1
+		Bounds: 1109, 1194, 42, 85
+		DecorationBounds: 768, 938, 42, 42
 	Valued:
 		Cost: 100
 	RevealsShroud:
@@ -181,8 +181,8 @@
 		Margin: -2, 0
 	Selectable:
 		Class: V1
-		Bounds: 36,36,1,1
-		DecorationBounds: 28,28,1,1
+		Bounds: 1536, 1536, 42, 42
+		DecorationBounds: 1194, 1194, 42, 42
 	Targetable:
 		TargetTypes: Ground, Vehicle
 	Repairable:
@@ -281,8 +281,8 @@
 	#WithSpriteControlGroupDecoration:
 	#	Margin: -2, 0
 	Selectable:
-		Bounds: 24,24,1,1
-		DecorationBounds: 26,24,1,1
+		Bounds: 1024, 1024, 42, 42
+		DecorationBounds: 1109, 1024, 42, 42
 	WithShadow:
 		Offset: 111, 64, 0
 		ZOffset: -129
@@ -363,8 +363,8 @@
 		Margin: -2, 0
 	Selectable:
 		Class: N1
-		Bounds: 36,36,1,1
-		DecorationBounds: 28,28,1,1
+		Bounds: 1536, 1536, 42, 42
+		DecorationBounds: 1194, 1194, 42, 42
 	Targetable:
 		TargetTypes: Ground, Vehicle
 	#Repairable:

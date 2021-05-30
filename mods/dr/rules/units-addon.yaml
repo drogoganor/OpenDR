@@ -477,8 +477,8 @@ TerroristTransport:
 	-Buildable:
 	Selectable:
 		Class: V2
-		Bounds: 36,36,0,0
-		DecorationBounds: 36,36,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1536, 1536, 0, 0
 	Voiced:
 		VoiceSet: TerroristTransportVoice
 	Valued:
@@ -537,8 +537,8 @@ TerroristMissileTank:
 	-Buildable:
 	Selectable:
 		Class: V7
-		Bounds: 44,44,0,-2
-		DecorationBounds: 38,38,0,-2
+		Bounds: 1877, 1877, 0, -85
+		DecorationBounds: 1621, 1621, 0, -85
 	Voiced:
 		VoiceSet: MissileTankVoice
 	Valued:
@@ -564,8 +564,8 @@ TerroristArtillery:
 	-Buildable:
 	Selectable:
 		Class: V8
-		Bounds: 36,36,0,0
-		DecorationBounds: 28,28,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1194, 1194, 0, 0
 	Voiced:
 		VoiceSet: TerroristArtilleryVoice
 	Valued:

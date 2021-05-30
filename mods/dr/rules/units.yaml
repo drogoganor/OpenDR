@@ -183,8 +183,8 @@ Medic:
 		BuildDuration: 15
 	Selectable:
 		Class: E5
-		Bounds: 26,28,2,-1
-		DecorationBounds: 18,22,0,-2
+		Bounds: 1109, 1194, 85, -42
+		DecorationBounds: 768, 938, 0, -85
 	Voiced:
 		VoiceSet: MedicVoice
 	Valued:
@@ -489,8 +489,8 @@ ConstructionRig:
 	Selectable:
 		Priority: 4
 		Class: C1
-		Bounds: 32,32,1,3
-		DecorationBounds: 27,28,1,2
+		Bounds: 1365, 1365, 42, 128
+		DecorationBounds: 1152, 1194, 42, 85
 	Voiced:
 		VoiceSet: ConstructionVoice
 	Valued:
@@ -559,8 +559,8 @@ Freighter:
 	Selectable:
 		Priority: 5
 		Class: F1
-		Bounds: 36,36,0,0
-		DecorationBounds: 32,32,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1365, 1365, 0, 0
 	Voiced:
 		VoiceSet: FreedomGuardVehicleVoice
 	WithInfantryBody:
@@ -601,8 +601,8 @@ HoverFreighter:
 	Selectable:
 		Priority: 5
 		Class: F2
-		Bounds: 36,36,0,0
-		DecorationBounds: 32,32,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1365, 1365, 0, 0
 	Voiced:
 		VoiceSet: FreedomGuardVehicleVoice
 	Valued:
@@ -670,8 +670,8 @@ RAT:
 		BuildDuration: 14
 	Selectable:
 		Class: V2
-		Bounds: 36,36,0,0
-		DecorationBounds: 36,36,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1536, 1536, 0, 0
 	Valued:
 		Cost: 450
 	Health:
@@ -833,8 +833,8 @@ TripleRailHoverTank:
 		BuildDuration: 39
 	Selectable:
 		Class: V7
-		Bounds: 44,44,0,4
-		DecorationBounds: 38,38,0,4
+		Bounds: 1877, 1877, 0, 170
+		DecorationBounds: 1621, 1621, 0, 170
 	Voiced:
 		VoiceSet: TripleRailTankVoice
 	Valued:
@@ -874,8 +874,8 @@ HellstormArtillery:
 		BuildDuration: 33
 	Selectable:
 		Class: V8
-		Bounds: 36,36,0,4
-		DecorationBounds: 28,28,0,4
+		Bounds: 1536, 1536, 0, 170
+		DecorationBounds: 1194, 1194, 0, 170
 	Voiced:
 		VoiceSet: HellstormArtilleryVoice
 	Valued:
@@ -1041,8 +1041,8 @@ ITT:
 		BuildDuration: 18
 	Selectable:
 		Class: V13
-		Bounds: 36,36,0,0
-		DecorationBounds: 32,32,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1365, 1365, 0, 0
 	Voiced:
 		VoiceSet: ImperiumVehicleVoice
 	Valued:
@@ -1164,8 +1164,8 @@ MAD:
 		BuildDuration: 24
 	Selectable:
 		Class: V6
-		Bounds: 36,36,0,0
-		DecorationBounds: 32,32,0,-3
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1365, 1365, 0, -128
 	Voiced:
 		VoiceSet: ImperiumVehicleVoice
 	Valued:
@@ -1222,8 +1222,8 @@ HostageTaker:
 		BuildDuration: 18
 	Selectable:
 		Class: V17
-		Bounds: 36,36,0,0
-		DecorationBounds: 32,32,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1365, 1365, 0, 0
 	Voiced:
 		VoiceSet: HostageTakerVoice
 	Valued:
@@ -1250,8 +1250,8 @@ TachionTank:
 		BuildDuration: 45
 	Selectable:
 		Class: V18
-		Bounds: 36,36,0,0
-		DecorationBounds: 34,34,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1450, 1450, 0, 0
 	Voiced:
 		VoiceSet: TachionTankVoice
 	Valued:
@@ -1280,8 +1280,8 @@ Scarab:
 		BuildDuration: 39
 	Selectable:
 		Class: V8
-		Bounds: 36,36,0,4
-		DecorationBounds: 28,28,0,4
+		Bounds: 1536, 1536, 0, 170
+		DecorationBounds: 1194, 1194, 0, 170
 	Voiced:
 		VoiceSet: ImperiumVehicleVoice
 	Valued:
@@ -1454,8 +1454,8 @@ SkyFortress:
 		BuildPaletteOrder: 160
 		BuildDuration: 75
 	Selectable:
-		Bounds: 28,28,0,0
-		DecorationBounds: 32,32,0,0
+		Bounds: 1194, 1194, 0, 0
+		DecorationBounds: 1365, 1365, 0, 0
 	Voiced:
 		VoiceSet: SkyFortressVoice
 	Valued:
@@ -1499,8 +1499,8 @@ Gant:
 		BuildDuration: 8
 		Prerequisites: ~hq.xenite, ~barracks
 	Selectable:
-		Bounds: 28,28,0,0
-		DecorationBounds: 28,28,0,0
+		Bounds: 1194, 1194, 0, 0
+		DecorationBounds: 1194, 1194, 0, 0
 	Voiced:
 		VoiceSet: GantVoice
 	Valued:
@@ -1594,8 +1594,8 @@ Grendel:
 		BuildDuration: 33
 		Prerequisites: ~hq.xenite, ~barracks, upgrade.barracks1
 	Selectable:
-		Bounds: 36,36,0,0
-		DecorationBounds: 32,32,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1365, 1365, 0, 0
 	Voiced:
 		VoiceSet: GrendelVoice
 	Valued:
@@ -1626,8 +1626,8 @@ GrendelRider:
 		BuildDuration: 51
 		Prerequisites: ~hq.xenite, ~barracks, upgrade.barracks1
 	Selectable:
-		Bounds: 36,36,0,0
-		DecorationBounds: 32,32,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1365, 1365, 0, 0
 	Voiced:
 		VoiceSet: GrendelRiderVoice
 	Valued:
@@ -1660,8 +1660,8 @@ Reaper:
 		BuildDuration: 13
 		Prerequisites: ~hq.shadowhand, ~barracks
 	Selectable:
-		Bounds: 36,36,0,-3
-		DecorationBounds: 32,32,0,-6
+		Bounds: 1536, 1536, 0, -128
+		DecorationBounds: 1365, 1365, 0, -256
 	Mobile:
 		Locomotor: mechfoot
 	Voiced:
@@ -1699,8 +1699,8 @@ RATmk2:
 		BuildDuration: 14
 	Selectable:
 		#Class: Humanoid
-		Bounds: 36,36,0,0
-		DecorationBounds: 32,32,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1365, 1365, 0, 0
 	Valued:
 		Cost: 450
 	Health:
@@ -1751,8 +1751,8 @@ GeminiTank:
 		VoiceSet: GeminiTankVoice
 	Selectable:
 		#Class: Humanoid
-		Bounds: 36,36,0,0
-		DecorationBounds: 32,32,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1365, 1365, 0, 0
 	Valued:
 		Cost: 700
 	Health:
@@ -1814,8 +1814,8 @@ Fury:
 		VoiceSet: FuryVoice
 	Selectable:
 		#Class: Humanoid
-		Bounds: 36,36,0,0
-		DecorationBounds: 36,36,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1536, 1536, 0, 0
 	Valued:
 		Cost: 1600
 	Health:
@@ -1884,8 +1884,8 @@ RoadTerraformer:
 		VoiceSet: TerraformerVoice
 	Selectable:
 		#Class: Humanoid
-		Bounds: 36,36,0,0
-		DecorationBounds: 36,34,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1536, 1450, 0, 0
 	Valued:
 		Cost: 400
 	Health:
@@ -1914,8 +1914,8 @@ MarshTerraformer:
 		VoiceSet: TerraformerVoice
 	Selectable:
 		#Class: Humanoid
-		Bounds: 36,36,0,0
-		DecorationBounds: 36,34,0,0
+		Bounds: 1536, 1536, 0, 0
+		DecorationBounds: 1536, 1450, 0, 0
 	Valued:
 		Cost: 400
 	Health:
@@ -1943,8 +1943,8 @@ Avenger:
 		BuildPaletteOrder: 160
 		BuildDuration: 66
 	Selectable:
-		Bounds: 28,28,0,0
-		DecorationBounds: 32,32,0,0
+		Bounds: 1194, 1194, 0, 0
+		DecorationBounds: 1365, 1365, 0, 0
 	Voiced:
 		VoiceSet: AvengerVoice
 	Valued:
@@ -1984,8 +1984,8 @@ HadesBomber:
 		BuildPaletteOrder: 160
 		BuildDuration: 66
 	Selectable:
-		Bounds: 28,28,0,-4
-		DecorationBounds: 32,32,0,-4
+		Bounds: 1194, 1194, 0, -170
+		DecorationBounds: 1365, 1365, 0, -170
 	Voiced:
 		VoiceSet: HadesBomberVoice
 	Valued:

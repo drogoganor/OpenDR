@@ -174,7 +174,7 @@ namespace OpenRA.Mods.Dr.Traits
 			var tileset = world.Map.Rules.TerrainInfo;
 			resourceTypeIndices = new BitArray(tileset.TerrainTypes.Length); // Big enough
 			foreach (var t in world.Map.Resources)
-				resourceTypeIndices.Set(t.Index, true);
+				resourceTypeIndices.Set(t.Type, true);
 
 			builder = new RigBaseBuilderManager(this, player, playerPower, resourceTypeIndices);
 		}

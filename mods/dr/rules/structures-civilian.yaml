@@ -22,8 +22,8 @@ SmallSHHorizontalBridge:
 	Armor:
 		Type: BuildingArmour
 	Selectable:
-		Bounds: 96,96,0,0
-		DecorationBounds: 96,96,0,0
+		Bounds: 4096, 4096, 0, 0
+		DecorationBounds: 4096, 4096, 0, 0
 	Tooltip:
 		Name: Horizontal Bridge
 	Health:
@@ -71,8 +71,8 @@ SmallWall2:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 72,72,0,0
-		DecorationBounds: 72,72,0,0
+		Bounds: 3072, 3072, 0, 0
+		DecorationBounds: 3072, 3072, 0, 0
 	RenderSprites:
 		Image: tcswm1l0
 	Tooltip:
@@ -100,8 +100,8 @@ LargeWall1:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 72,72,0,0
-		DecorationBounds: 72,72,0,0
+		Bounds: 3072, 3072, 0, 0
+		DecorationBounds: 3072, 3072, 0, 0
 	RenderSprites:
 		Image: tcbwl1l0
 	Tooltip:
@@ -132,8 +132,8 @@ FreedomGuardTreatyHall:
 		Dimensions: 4,4
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,96,0,0
-		DecorationBounds: 96,96,0,0
+		Bounds: 4096, 4096, 0, 0
+		DecorationBounds: 4096, 4096, 0, 0
 	Tooltip:
 		Name: Freedom Guard Treaty Hall
 	Health:
@@ -164,8 +164,8 @@ ImperiumDesicator:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Imperium Desicator
 	Health:
@@ -194,8 +194,8 @@ RendezvousPoint:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Rendezvous Point
 	Health:
@@ -226,8 +226,8 @@ ImperiumMedicalResearch:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Imperium Medical Research
 	Health:
@@ -256,8 +256,8 @@ ImperiumWaterResearch:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Imperium Water Research
 	Health:
@@ -286,8 +286,8 @@ ImperiumHoverResearch:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Imperium Hover Research
 	Health:
@@ -316,8 +316,8 @@ FGPlanetaryDefense:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: FG Planetary Defense
 	Health:
@@ -346,8 +346,8 @@ FGPlanetaryDefense2:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: FG Planetary Defense 2
 	Health:
@@ -376,8 +376,8 @@ ImperiumPrison:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Imperium Prison
 	Health:
@@ -406,8 +406,8 @@ CivilianEntertainmentFacility:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Entertainment Facility
 	Health:
@@ -436,8 +436,8 @@ CivilianPublicShelter:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Public Shelter
 	Health:
@@ -466,8 +466,8 @@ CivilianSubTransit:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian SubTransit
 	Health:
@@ -496,8 +496,8 @@ CivilianTransitCentre:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Transit Centre
 	Health:
@@ -526,8 +526,8 @@ CivilianCommercial:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Commercial
 	Health:
@@ -556,8 +556,8 @@ CivilianFactory:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Factory
 	Health:
@@ -586,8 +586,8 @@ CivilianHall:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Hall
 	Health:
@@ -616,8 +616,8 @@ CivilianLargeHall:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Large Hall
 	Health:
@@ -646,8 +646,8 @@ CivilianSmallHall:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Small Hall
 	Health:
@@ -676,8 +676,8 @@ CivilianDestiny:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Destiny
 	Health:
@@ -706,8 +706,8 @@ CivilianRural:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Rural
 	Health:
@@ -736,8 +736,8 @@ CivilianGrainFarm:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Grain Field
 	Health:
@@ -763,8 +763,8 @@ CivilianHydroFarm:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Hydro Farm
 	Health:
@@ -790,8 +790,8 @@ CivilianFarmhouse:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Grain Fields
 	Health:
@@ -817,8 +817,8 @@ CivilianBridge:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Bridge
 	Health:
@@ -847,8 +847,8 @@ CivilianVerticalBridge:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Civilian Bridge
 	Health:
@@ -878,8 +878,8 @@ DirtBridge:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Dirt Bridge
 	Health:
@@ -905,8 +905,8 @@ TogranMonolith:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Togran Monolith
 	Health:
@@ -936,8 +936,8 @@ TogranDoor:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Togran Door
 	Health:

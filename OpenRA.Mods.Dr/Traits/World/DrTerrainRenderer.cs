@@ -67,7 +67,7 @@ namespace OpenRA.Mods.Dr.Traits
 		}
 	}
 
-	public class DrTerrainRendererInfo : TraitInfo
+	public class DrTerrainRendererInfo : TerrainRendererInfo
 	{
 		[FieldLoader.LoadUsing("LoadShorelines")]
 		public Dictionary<string, DrTerrainShorelineInfo> Shorelines;
