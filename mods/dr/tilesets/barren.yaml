@@ -1824,7 +1824,7 @@ Templates:
 		Id: 200
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
-		Frames: 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379
+		Frames: 364, 365, 366, 367
 		Categories: Terrain
 		PickAny: True
 		Tiles:
@@ -1832,23 +1832,11 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
-			8: Clear
-			9: Clear
-			10: Clear
-			11: Clear
-			12: Clear
-			13: Clear
-			14: Clear
-			15: Clear
 	Template@201:
 		Id: 201
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
-		Frames: 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395
+		Frames: 368, 369, 370, 371
 		Categories: Terrain
 		PickAny: True
 		Tiles:
@@ -1856,23 +1844,11 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
-			8: Clear
-			9: Clear
-			10: Clear
-			11: Clear
-			12: Clear
-			13: Clear
-			14: Clear
-			15: Clear
 	Template@202:
 		Id: 202
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
-		Frames: 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411
+		Frames: 372, 373, 374, 375
 		Categories: Terrain
 		PickAny: True
 		Tiles:
@@ -1880,23 +1856,11 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
-			8: Clear
-			9: Clear
-			10: Clear
-			11: Clear
-			12: Clear
-			13: Clear
-			14: Clear
-			15: Clear
 	Template@203:
 		Id: 203
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
-		Frames: 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427
+		Frames: 376, 377, 378, 379
 		Categories: Terrain
 		PickAny: True
 		Tiles:
@@ -1904,23 +1868,11 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
-			8: Clear
-			9: Clear
-			10: Clear
-			11: Clear
-			12: Clear
-			13: Clear
-			14: Clear
-			15: Clear
 	Template@204:
 		Id: 204
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
-		Frames: 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443
+		Frames: 380, 381, 382, 383
 		Categories: Terrain
 		PickAny: True
 		Tiles:
@@ -1928,23 +1880,11 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
-			8: Clear
-			9: Clear
-			10: Clear
-			11: Clear
-			12: Clear
-			13: Clear
-			14: Clear
-			15: Clear
 	Template@205:
 		Id: 205
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
-		Frames: 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459
+		Frames: 384, 385, 386, 387
 		Categories: Terrain
 		PickAny: True
 		Tiles:
@@ -1952,23 +1892,11 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
-			8: Clear
-			9: Clear
-			10: Clear
-			11: Clear
-			12: Clear
-			13: Clear
-			14: Clear
-			15: Clear
 	Template@206:
 		Id: 206
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
-		Frames: 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475
+		Frames: 388, 389, 390, 391
 		Categories: Terrain
 		PickAny: True
 		Tiles:
@@ -1976,23 +1904,11 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
-			8: Clear
-			9: Clear
-			10: Clear
-			11: Clear
-			12: Clear
-			13: Clear
-			14: Clear
-			15: Clear
 	Template@207:
 		Id: 207
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
-		Frames: 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491
+		Frames: 392, 393, 394, 395
 		Categories: Terrain
 		PickAny: True
 		Tiles:
@@ -2000,23 +1916,11 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
-			8: Clear
-			9: Clear
-			10: Clear
-			11: Clear
-			12: Clear
-			13: Clear
-			14: Clear
-			15: Clear
 	Template@208:
 		Id: 208
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
-		Frames: 492, 493, 494, 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507
+		Frames: 396, 397, 398, 399
 		Categories: Terrain
 		PickAny: True
 		Tiles:
@@ -2024,23 +1928,11 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
-			8: Clear
-			9: Clear
-			10: Clear
-			11: Clear
-			12: Clear
-			13: Clear
-			14: Clear
-			15: Clear
 	Template@209:
 		Id: 209
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
-		Frames: 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523
+		Frames: 400, 401, 402, 403
 		Categories: Terrain
 		PickAny: True
 		Tiles:
@@ -2048,23 +1940,11 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
-			8: Clear
-			9: Clear
-			10: Clear
-			11: Clear
-			12: Clear
-			13: Clear
-			14: Clear
-			15: Clear
 	Template@210:
 		Id: 210
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
-		Frames: 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539
+		Frames: 404, 405, 406, 407
 		Categories: Terrain
 		PickAny: True
 		Tiles:
@@ -2072,23 +1952,11 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
-			8: Clear
-			9: Clear
-			10: Clear
-			11: Clear
-			12: Clear
-			13: Clear
-			14: Clear
-			15: Clear
 	Template@211:
 		Id: 211
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
-		Frames: 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555
+		Frames: 408, 409, 410, 411
 		Categories: Terrain
 		PickAny: True
 		Tiles:
@@ -2096,15 +1964,3 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
-			4: Clear
-			5: Clear
-			6: Clear
-			7: Clear
-			8: Clear
-			9: Clear
-			10: Clear
-			11: Clear
-			12: Clear
-			13: Clear
-			14: Clear
-			15: Clear

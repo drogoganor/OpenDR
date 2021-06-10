@@ -39,9 +39,9 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			public DrTilFrame()
 			{
-				Type = SpriteFrameType.Rgb24;
+				Type = SpriteFrameType.Bgra32;
 				const int tileSize = 24;
-				Data = new byte[tileSize * tileSize * 3];
+				Data = new byte[tileSize * tileSize * 4];
 				Offset = new float2(0, 0);
 				FrameSize = new Size(tileSize, tileSize);
 				Size = FrameSize;
@@ -171,8 +171,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 		private DrTilFrame[] BuildTransitionTiles(List<DrTilFrame> frames, string filename)
 		{
-			var tiles1 = new[] { 8, 9, 10, 11 };
-			var tiles2 = new[] { 16, 17, 18, 19 };
+			// var tiles1 = new[] { 8, 9, 10, 11 };
+			var tiles1 = new[] { 16, 17, 18, 19 };
 			var masks = new[]
 			{
 				195, 208, 219, 233, // n, e, w, s
@@ -196,34 +196,30 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				{
 					foreach (var tile in tiles1)
 					{
-						foreach (var tile2 in tiles2)
+						var tileFrame1 = frames[tile];
+						var maskFrame = frames[mask];
+						const int tileSize = 24;
+
+						var newTile = new DrTilFrame();
+
+						for (var i = 0; i < tileSize * tileSize; i++)
 						{
-							var tileFrame1 = frames[tile];
-							var tileFrame2 = frames[tile2];
-							var maskFrame = frames[mask];
-							const int tileSize = 24;
+							var index1 = tileFrame1.Data[i];
+							var maskValue = maskFrame.Data[i] * 4;
+							var maskAmount = maskValue / 252.0;
 
-							var newTile = new DrTilFrame();
+							var pixel1 = Color.FromArgb(palette[index1]);
+							var alphaByte = (byte)(255 - (maskAmount * 255));
+							var result = Color.FromArgb(alphaByte, pixel1.R, pixel1.G, pixel1.B);
 
-							for (var i = 0; i < tileSize * tileSize; i++)
-							{
-								var index1 = tileFrame1.Data[i];
-								var index2 = tileFrame2.Data[i];
-								var maskValue = maskFrame.Data[i] * 4;
-								var maskAmount = maskValue / 252.0;
-
-								var pixel1 = Color.FromArgb(palette[index1]);
-								var pixel2 = Color.FromArgb(palette[index2]);
-								var resultPixel = Blend(pixel1, pixel2, maskAmount);
-
-								var startIndex = i * 3;
-								newTile.Data[startIndex] = resultPixel.R;
-								newTile.Data[startIndex + 1] = resultPixel.G;
-								newTile.Data[startIndex + 2] = resultPixel.B;
-							}
-
-							frames.Add(newTile);
+							var startIndex = i * 4;
+							newTile.Data[startIndex] = result.B;
+							newTile.Data[startIndex + 1] = result.G;
+							newTile.Data[startIndex + 2] = result.R;
+							newTile.Data[startIndex + 3] = result.A;
 						}
+
+						frames.Add(newTile);
 					}
 				}
 			}

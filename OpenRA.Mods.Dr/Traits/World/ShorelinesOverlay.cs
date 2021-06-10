@@ -23,7 +23,7 @@ namespace OpenRA.Mods.Dr.Traits
 		internal static bool IsLandTile(this TerrainTile tile) { return tile.Type > 0; }
 		internal static bool IsSeaTile(this TerrainTile tile) { return tile.Type == 0; }
 
-		internal static bool IsMatch(this TerrainTile tile, TerrainMatchType match, TerrainTile ourTile = default)
+		internal static bool IsMatch(this TerrainTile tile, TerrainMatchType match)
 		{
 			switch (match)
 			{
@@ -201,7 +201,7 @@ namespace OpenRA.Mods.Dr.Traits
 					if (map.Tiles.Contains(neighborPos))
 					{
 						var neighbour = map.Tiles[neighborPos];
-						match = neighbour.IsMatch(n.Match, tile);
+						match = neighbour.IsMatch(n.Match);
 						if (!match)
 							break;
 					}

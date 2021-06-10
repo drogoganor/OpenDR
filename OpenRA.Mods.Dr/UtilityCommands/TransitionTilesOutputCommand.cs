@@ -49,7 +49,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			var tilFile = "BARREN/BARREN.TIL";
 			var startIndex = 364;
 			var templateStartIndex = 200;
-			var numFramesPer = 16;
+			var numFramesPer = 4;
 			var numGroups = 16;
 
 			var totalFrames = numGroups * numFramesPer;

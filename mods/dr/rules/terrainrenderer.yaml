@@ -1,19 +1,18 @@
 ^Shorelines:
-	#TileEdgesOverlay:
-	#	TileEdges:
-	#		TileMatch@nw-inner:
-	#			Match: Sea
-	#			SetType: 41
-	#			Neighbors:
-	#				NeighborMatch@north:
-	#					Offset: 0, -1
-	#					Match: Land
-	#				NeighborMatch@northwest:
-	#					Offset: -1, -1
-	#					Match: Land
-	#				NeighborMatch@west:
-	#					Offset: 1, 0
-	#					Match: Land
+	TileEdgesOverlay:
+		TileEdges:
+			TileMatch@nw-inner:
+				SetType: 200
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: LandLower
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: LandLower
+					NeighborMatch@west:
+						Offset: 1, 0
+						Match: LandLower
 	ShorelinesOverlay:
 		Shorelines:
 			ShoreMatch@nw-inner:

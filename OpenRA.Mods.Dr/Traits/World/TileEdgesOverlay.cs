@@ -23,19 +23,28 @@ namespace OpenRA.Mods.Dr.Traits
 {
 	internal static class DrTileEdgesHelper
 	{
-		internal static bool IsLandTile2(this TerrainTile tile) { return tile.Type > 0; }
-		internal static bool IsSeaTile2(this TerrainTile tile) { return tile.Type == 0; }
+		internal static bool IsLandLower(this TerrainTile tile, TerrainTile ourTile)
+		{
+			return tile.Type != 0 && ourTile.Type != 0 &&
+			       ourTile.Type < tile.Type;
+		}
 
-		internal static bool IsMatch(this TerrainTile tile, TileEdgeMatchType match, TerrainTile ourTile = default)
+		internal static bool IsLandHigherOrEqual(this TerrainTile tile, TerrainTile ourTile)
+		{
+			return tile.Type != 0 && ourTile.Type != 0 &&
+			       ourTile.Type >= tile.Type;
+		}
+
+		internal static bool IsMatch(this TerrainTile tile, TileEdgeMatchType match, TerrainTile ourTile)
 		{
 			switch (match)
 			{
-				case TileEdgeMatchType.Land:
-					if (tile.IsLandTile2())
+				case TileEdgeMatchType.LandLower:
+					if (tile.IsLandLower(ourTile))
 						return true;
 					break;
-				case TileEdgeMatchType.Sea:
-					if (tile.IsSeaTile2())
+				case TileEdgeMatchType.LandHigherOrEqual:
+					if (tile.IsLandHigherOrEqual(ourTile))
 						return true;
 					break;
 			}
@@ -47,10 +56,10 @@ namespace OpenRA.Mods.Dr.Traits
 	[Desc("What type of tile is it? Land, Sea, etc.")]
 	public enum TileEdgeMatchType
 	{
-		[Desc("Any type of land tile (1-15).")]
-		Land,
-		[Desc("Sea tile (0).")]
-		Sea,
+		[Desc(".")]
+		LandLower,
+		[Desc(".")]
+		LandHigherOrEqual,
 	}
 
 	[Desc("A neighbour tile and the TerrainMatchType we expect it to be.")]
@@ -66,9 +75,6 @@ namespace OpenRA.Mods.Dr.Traits
 	[Desc("A tile type, a set of neighbour tile match conditions, and a target tile type to set the tile to if all conditions are met.")]
 	public class DrTileEdgeInfo
 	{
-		[Desc("The tile type to inspect.")]
-		public TileEdgeMatchType Match;
-
 		[Desc("The tile type to display if all neighbours match.")]
 		public ushort SetType;
 
@@ -181,7 +187,7 @@ namespace OpenRA.Mods.Dr.Traits
 		bool GetShoreTile(CPos cell, out TerrainTile resultTile)
 		{
 			var tile = map.Tiles[cell];
-			var matchShorelines = info.Shorelines.Values.Where(x => tile.IsMatch(x.Match)).ToArray();
+			var matchShorelines = info.Shorelines.Values.Where(x => tile.Type > 0).ToArray();
 			const int numIndices = 4;
 
 			foreach (var m in matchShorelines)
