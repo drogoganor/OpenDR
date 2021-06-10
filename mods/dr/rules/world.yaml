@@ -5,7 +5,9 @@
 	ActorMap:
 	Selection:
 	LoadWidgetAtGameStart:
-	Inherits@terrainrenderer: ^TerrainRenderer
+	TerrainRenderer:
+	Inherits@shorelines: ^Shorelines
+	#TileEdgesOverlay:
 	Inherits@locomotors: ^Locomotors
 	MusicPlaylist:
 		VictoryMusic: acid
@@ -132,7 +134,7 @@ World:
 				Palette: player
 				MaxDensity: 120000
 				ValuePerUnit: 120
-			Gems:
+			Taelon:
 				ResourceIndex: 2
 				TerrainType: Taelon
 				AllowedTerrainTypes: Clear,Road,Normal2,Normal3,Muddy1,Muddy2,Rough1,Rough2,RoadBase
@@ -213,7 +215,7 @@ EditorWorld:
 				Palette: player
 				MaxDensity: 120000
 				ValuePerUnit: 120
-			Gems:
+			Taelon:
 				ResourceIndex: 2
 				TerrainType: Taelon
 				AllowedTerrainTypes: Clear,Road,Normal2,Normal3,Muddy1,Muddy2,Rough1,Rough2,RoadBase

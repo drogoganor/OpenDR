@@ -34,7 +34,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		[FieldLoader.Require]
 		[Desc("filename to load")]
-		public readonly string Filename = null;
+		public string Filename = null;
 
 		[Desc("Map listed index to shadow. Ignores previous color.")]
 		public readonly int ShadowIndex = 47;
@@ -48,7 +48,7 @@ namespace OpenRA.Mods.Dr.Traits
 		public readonly int StandardPaletteMultiplier = 4;
 
 		[Desc("Multiply terrain palette values by this ( >= 160).")]
-		public readonly int TerrainPaletteMultiplier = 4;
+		public int TerrainPaletteMultiplier = 4;
 
 		[Desc("Increase all RGB values by this amount.")]
 		public readonly int Gamma = 0;

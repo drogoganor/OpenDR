@@ -579,7 +579,7 @@ Freighter:
 	WithFacingSpriteBody:
 	Harvester:
 		Capacity: 8
-		Resources: water,taelon
+		Resources: Water,Taelon
 		BaleLoadDelay: 20
 		BaleUnloadDelay: 20
 		SearchFromProcRadius: 30
@@ -621,7 +621,7 @@ HoverFreighter:
 		DefaultAttackSequence: stand
 	Harvester:
 		Capacity: 8
-		Resources: water,taelon
+		Resources: Water,Taelon
 		BaleLoadDelay: 20
 		BaleUnloadDelay: 18
 		SearchFromProcRadius: 30

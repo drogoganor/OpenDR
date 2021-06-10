@@ -17,8 +17,8 @@ Power:
 	Refinery:
 		DockAngle: 32
 		DockOffset: 0,2
-		UseStorage: true
-		DiscardExcessResources: true
+		UseStorage: false
+		#DiscardExcessResources: true
 	StoresResources:
 		Capacity: 0
 	#FreeActor:

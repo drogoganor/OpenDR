@@ -39,10 +39,13 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public int WaterPercentage => (int)(((float)Water / info.WaterCapacity) * 100f);
 
-		public void OnResourceAccepted(Actor self, Actor refinery, string resourceType, int count, int value)
+		void INotifyResourceAccepted.OnResourceAccepted(Actor self, Actor refinery, string resourceType, int count, int value)
 		{
 			if (value >= 0)
 			{
+				// Reverse the cash we've just granted the player
+				value = resources.ChangeCash(-value);
+
 				if (Water < int.MaxValue)
 				{
 					try

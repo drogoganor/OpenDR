@@ -1,5 +1,20 @@
-^TerrainRenderer:
-	DrTerrainRenderer:
+^Shorelines:
+	#TileEdgesOverlay:
+	#	TileEdges:
+	#		TileMatch@nw-inner:
+	#			Match: Sea
+	#			SetType: 41
+	#			Neighbors:
+	#				NeighborMatch@north:
+	#					Offset: 0, -1
+	#					Match: Land
+	#				NeighborMatch@northwest:
+	#					Offset: -1, -1
+	#					Match: Land
+	#				NeighborMatch@west:
+	#					Offset: 1, 0
+	#					Match: Land
+	ShorelinesOverlay:
 		Shorelines:
 			ShoreMatch@nw-inner:
 				Match: Sea
