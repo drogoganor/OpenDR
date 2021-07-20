@@ -345,10 +345,10 @@ nfvcy1l0:
 		Start: 1
 	top2: tfvcy2l0
 		Start: 1
-	animation: tfvcy2l0 # chimney
-		Start: 3
-		Length: 40
-		Tick: 150
+	#animation: tfvcy2l0 # chimney; retail only
+	#	Start: 3
+	#	Length: 40
+	#	Tick: 150
 	shadow-building: bfvcysh0
 		Start: 0
 		Offset: 16, 20
@@ -917,65 +917,3 @@ nitrc1l0:
 		Offset: 11, 15
 	icon: bitrcmn0
 	fake-icon: bitrcmn0
-
-# Xenite biotech compound
-nfnes1l0:
-	building: tilesetEx|nfnes1l0
-		Start: 0
-	idle: tilesetEx|nfnes1l0
-		Start: 1
-	building2: tilesetEx|nfnes1l0
-		Start: 0
-	idle2: tilesetEx|nfnes1l0
-		Start: 1
-	underlay-building: tilesetEx|nfnes1l0
-		ZOffset: -8192
-		Start: 0
-	underlay: tilesetEx|nfnes1l0
-		ZOffset: -8192
-		Start: 1
-	underlay2: tilesetEx|nfnes1l0
-		ZOffset: -8192
-		Start: 1
-	top-building: tilesetEx|tfnes1l0
-		Start: 0
-	top: tfnes1l0
-		Start: 1
-	top2: tfnes1l0
-		Start: 1
-	shadow-building: bfnessh0
-		Start: 0
-		Offset: 4, -7
-	shadow: bfnessh0
-		Start: 1
-		Offset: 4, -7
-	shadow2: bfnessh0
-		Start: 1
-		Offset: 4, -7
-	icon: bfnesmn0
-	fake-icon: bfnesmn0
-
-# Shadowhand Nexus
-ninex1l0:
-	building:
-		Start: 0
-	idle:
-		Start: 1
-	underlay-building: tilesetEx|ninex1l0
-		ZOffset: -8192
-		Start: 0
-	underlay: tilesetEx|ninex1l0
-		ZOffset: -8192
-		Start: 1
-	top-building: tinex1l0
-		Start: 0
-	top: tinex1l0
-		Start: 1
-	shadow-building: binexsh0
-		Start: 0
-		Offset: 4, -7
-	shadow: binexsh0
-		Start: 1
-		Offset: 4, -7
-	icon: binexmn0
-	fake-icon: binexmn0

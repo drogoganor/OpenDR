@@ -1,0 +1,270 @@
+TrainingFacility.xenite.Constructing:
+	Inherits: ^TrainingFacility.Constructing
+	RenderSprites:
+		Image: nfnes1l0
+	Tooltip:
+		Name: Training Facility
+	Buildable:
+		Queue: Building
+		Prerequisites: ~rig.xenite, hq.xenite
+		BuildDuration: 57
+	SelfConstructing:
+		Steps: 20
+		Becomes: TrainingFacility.xenite
+	Valued:
+		Cost: 1900
+	Health:
+		HP: 750
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@REPEAT:
+		Sequence: building
+	WithIdleOverlay@LAYER2:
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow-building
+
+# Shadowhand nexus
+Nexus.Constructing:
+	Inherits: ^FactionBuilding.Constructing
+	Inherits@shape: ^4x4Shape
+	Building:
+		Footprint: _xx_ xxxx xxxx xxxx
+		Dimensions: 4,4
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,96,0,0
+		DecorationBounds: 96,96,0,0
+	RenderSprites:
+		Image: ninex1l0
+	Tooltip:
+		Name: Nexus
+	Buildable:
+		Prerequisites: ~rig.shadowhand, hq.shadowhand
+		BuildPaletteOrder: 30
+		BuildDuration: 30
+	SelfConstructing:
+		Steps: 20
+		Becomes: Nexus
+	Valued:
+		Cost: 1800
+	Health:
+		HP: 1000
+	RevealsShroud:
+		Range: 8c0
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay-building
+	WithIdleOverlay@LAYER2:
+		Sequence: top-building
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow-building
+
+TrainingFacility.xenite:
+	Inherits: TrainingFacility.xenite.Constructing
+	Inherits@4: ^TrainingFacility
+	-SelfConstructing:
+	-Buildable:
+	-BuilderQueue@Building:
+	Tooltip:
+		Name: Training Facility
+	Valued:
+		Cost: 1900
+	Health:
+		HP: 750
+	RevealsShroud:
+		Range: 8c0
+	-WithIdleOverlay@REPEAT:
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+	#WithIdleOverlay@LAYER4:
+	#	Sequence: animation
+	#WithIdleOverlay@LAYER5: # Only for upgraded
+	#	Sequence: base
+
+Nexus:
+	Inherits: Nexus.Constructing
+	Inherits@4: ^FactionBuilding
+	-SelfConstructing:
+	-Buildable:
+	-Production:
+	-BuilderQueue@Building:
+	Tooltip:
+		Name: Nexus
+	ProvidesPrerequisite@nexus:
+		Prerequisite: nexus
+	Valued:
+		Cost: 1000
+	Health:
+		HP: 1400
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER2:
+		Sequence: top
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# FG Planetary Defense
+FGPlanetaryDefense:
+	Inherits: ^CivilianBuilding
+	RenderSprites:
+		Image: t0rad1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: FG Planetary Defense
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian hall
+CivilianHall:
+	Inherits: ^CivilianBuilding
+	RenderSprites:
+		Image: t0hal1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Hall
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian large hall
+CivilianLargeHall:
+	Inherits: ^CivilianBuilding
+	RenderSprites:
+		Image: t0lar1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Large Hall
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian small hall
+CivilianSmallHall:
+	Inherits: ^CivilianBuilding
+	RenderSprites:
+		Image: t0sma1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Small Hall
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow
+
+# Civilian Destiny
+CivilianDestiny:
+	Inherits: ^CivilianBuilding
+	RenderSprites:
+		Image: t0des1l0
+	Inherits@shape: ^4x3Shape
+	Building:
+		Footprint: _xxx xxxx ===_
+		Dimensions: 4,3
+		LocalCenterOffset: 0,0,0
+	Selectable:
+		Bounds: 96,72,0,0
+		DecorationBounds: 96,72,0,0
+	Tooltip:
+		Name: Civilian Destiny
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 8c0
+	Armor:
+		Type: BuildingArmour
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, Structure
+	WithIdleOverlay@LAYER1:
+		Palette: terrain
+		Sequence: underlay
+	WithIdleOverlay@LAYER3:
+		Palette: shadow
+		Sequence: shadow

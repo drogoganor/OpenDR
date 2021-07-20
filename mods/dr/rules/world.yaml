@@ -27,22 +27,22 @@
 		InternalName: imperium
 		Side: Original
 		Description: Imperium
-	Faction@2:
-		Name: Xenite
-		InternalName: xenite
-		Side: Original
-		Description: Xenite
-	Faction@3:
-		Name: Shadowhand
-		InternalName: shadowhand
-		Side: Original
-		Description: Shadowhand
+	#Faction@2:
+	#	Name: Xenite
+	#	InternalName: xenite
+	#	Side: Original
+	#	Description: Xenite
+	#Faction@3:
+	#	Name: Shadowhand
+	#	InternalName: shadowhand
+	#	Side: Original
+	#	Description: Shadowhand
 	Faction@4:
 		Name: Any
 		InternalName: Random
 		Side: Original
-		RandomFactionMembers: fguard, imperium, xenite, shadowhand
-		Description: Randomly select Freedom Guard, Imperium, Xenite or Shadowhand.
+		RandomFactionMembers: fguard, imperium
+		Description: Randomly select Freedom Guard or Imperium.
 	Faction@5:
 		Name: Togran
 		InternalName: togran
@@ -58,7 +58,7 @@
 		Name: Any (All)
 		InternalName: RandomAll
 		Side: Addon
-		RandomFactionMembers: fguard, imperium, xenite, shadowhand, togran
+		RandomFactionMembers: fguard, imperium, togran
 		Description: Randomly select any faction.
 	ResourceType@water:
 		Type: SpringWater

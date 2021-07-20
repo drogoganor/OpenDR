@@ -1,0 +1,192 @@
+
+# FG Planetary Defense
+t0rad1l0:
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 1
+	underlay: n0rad1l0 # no tileset|xx..
+		ZOffset: -8192
+		Start: 1
+	shadow: b0towsh0
+		Start: 1
+		Offset: 54, 37
+	icon: b0radmn0
+	fake-icon: b0radmn0
+
+# Civilian hall
+t0hal1l0:
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 1
+	underlay: n0hal1l0 # no tileset|xx..
+		ZOffset: -8192
+		Start: 1
+	shadow: b0halsh0
+		Start: 1
+		Offset: 0, 0
+	icon: b0halmn0
+	fake-icon: b0halmn0
+
+# Civilian large hall
+t0lar1l0:
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 1
+	underlay: n0lar1l0 # no tileset|xx..
+		ZOffset: -8192
+		Start: 1
+	shadow: b0larsh0
+		Start: 1
+		Offset: 0, 0
+	icon: b0larmn0
+	fake-icon: b0larmn0
+
+# Civilian small hall
+t0sma1l0:
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 1
+	underlay: n0sma1l0 # no tileset|xx..
+		ZOffset: -8192
+		Start: 1
+	shadow: b0smash0
+		Start: 1
+		Offset: 0, 0
+	icon: b0smamn0
+	fake-icon: b0smamn0
+
+# Civilian Destiny
+t0des1l0:
+	idle:
+		Start: 1
+	make:
+		Start: 1
+	build:
+		Start: 1
+		Length: 1
+	damaged-idle:
+		Start: 1
+	damaged-build:
+		Start: 1
+		Length: 1
+	dead:
+		Start: 1
+		Tick: 1
+	underlay: n0des1l0 # no tileset|xx..
+		ZOffset: -8192
+		Start: 1
+	shadow: b0dessh0
+		Start: 1
+		Offset: 0, 0
+	icon: b0desmn0
+	fake-icon: b0desmn0
+
+# Xenite biotech compound
+nfnes1l0:
+	building: tilesetEx|nfnes1l0
+		Start: 0
+	idle: tilesetEx|nfnes1l0
+		Start: 1
+	building2: tilesetEx|nfnes1l0
+		Start: 0
+	idle2: tilesetEx|nfnes1l0
+		Start: 1
+	underlay-building: tilesetEx|nfnes1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: tilesetEx|nfnes1l0
+		ZOffset: -8192
+		Start: 1
+	underlay2: tilesetEx|nfnes1l0
+		ZOffset: -8192
+		Start: 1
+	top-building: tilesetEx|tfnes1l0
+		Start: 0
+	top: tfnes1l0
+		Start: 1
+	top2: tfnes1l0
+		Start: 1
+	shadow-building: bfnessh0
+		Start: 0
+		Offset: 4, -7
+	shadow: bfnessh0
+		Start: 1
+		Offset: 4, -7
+	shadow2: bfnessh0
+		Start: 1
+		Offset: 4, -7
+	icon: bfnesmn0
+	fake-icon: bfnesmn0
+
+# Shadowhand Nexus
+ninex1l0:
+	building:
+		Start: 0
+	idle:
+		Start: 1
+	underlay-building: tilesetEx|ninex1l0
+		ZOffset: -8192
+		Start: 0
+	underlay: tilesetEx|ninex1l0
+		ZOffset: -8192
+		Start: 1
+	top-building: tinex1l0
+		Start: 0
+	top: tinex1l0
+		Start: 1
+	shadow-building: binexsh0
+		Start: 0
+		Offset: 4, -7
+	shadow: binexsh0
+		Start: 1
+		Offset: 4, -7
+	icon: binexmn0
+	fake-icon: binexmn0

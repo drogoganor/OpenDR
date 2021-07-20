@@ -66,12 +66,6 @@ Actors:
 	Actor20: waterlaunchpad
 		Owner: Imperium
 		Location: 69,78
-	Actor21: trainingfacility.xenite
-		Owner: Imperium
-		Location: 78,78
-	Actor22: nexus
-		Owner: Imperium
-		Location: 85,78
 	Actor23: power
 		Owner: Imperium
 		Location: 64,78
@@ -195,18 +189,6 @@ Actors:
 		Owner: Imperium
 		Location: 61,61
 		Facing: 368
-	Actor60: ranger
-		Owner: Imperium
-		Location: 51,63
-		Facing: 368
-	Actor61: powerspiker
-		Owner: Imperium
-		Location: 53,63
-		Facing: 368
-	Actor62: reaper
-		Owner: Imperium
-		Location: 55,63
-		Facing: 368
 	Actor66: spiderbike
 		Owner: Imperium
 		Location: 66,59
@@ -287,46 +269,6 @@ Actors:
 		Owner: Imperium
 		Location: 68,65
 		Facing: 368
-	Actor86: gant
-		Owner: Imperium
-		Location: 70,65
-		Facing: 368
-	Actor87: grendel
-		Owner: Imperium
-		Location: 72,65
-		Facing: 368
-	Actor88: grendelrider
-		Owner: Imperium
-		Location: 74,65
-		Facing: 368
-	Actor89: ratmk2
-		Owner: Imperium
-		Location: 76,65
-		Facing: 368
-	Actor90: geminitank
-		Owner: Imperium
-		Location: 66,67
-		Facing: 368
-	Actor91: shadowblade
-		Owner: Imperium
-		Location: 68,67
-		Facing: 368
-	Actor92: fury
-		Owner: Imperium
-		Location: 70,67
-		Facing: 368
-	Actor93: empdevice
-		Owner: Imperium
-		Location: 72,67
-		Facing: 368
-	Actor94: roadterraformer
-		Owner: Imperium
-		Location: 74,67
-		Facing: 368
-	Actor95: marshterraformer
-		Owner: Imperium
-		Location: 76,67
-		Facing: 368
 	Actor96: constructionrig
 		Owner: Imperium
 		Location: 61,63
@@ -358,14 +300,6 @@ Actors:
 	Actor103: skyfortress
 		Owner: Imperium
 		Location: 60,66
-		Facing: 368
-	Actor104: avenger
-		Owner: Imperium
-		Location: 55,68
-		Facing: 368
-	Actor105: hadesbomber
-		Owner: Imperium
-		Location: 57,68
 		Facing: 368
 	Actor106: hq.terrorist
 		Owner: Imperium
@@ -461,9 +395,6 @@ Actors:
 	Actor171: imperiumhoverresearch
 		Owner: Imperium
 		Location: 47,105
-	Actor172: fgplanetarydefense
-		Owner: Imperium
-		Location: 52,106
 	Actor173: fgplanetarydefense2
 		Owner: Imperium
 		Location: 30,111
@@ -488,18 +419,6 @@ Actors:
 	Actor180: civilianfactory
 		Owner: Imperium
 		Location: 41,114
-	Actor181: civilianhall
-		Owner: Imperium
-		Location: 46,114
-	Actor182: civilianlargehall
-		Owner: Imperium
-		Location: 51,114
-	Actor183: civiliansmallhall
-		Owner: Imperium
-		Location: 56,114
-	Actor184: civiliandestiny
-		Owner: Imperium
-		Location: 31,117
 	Actor185: civilianrural
 		Owner: Imperium
 		Location: 36,119

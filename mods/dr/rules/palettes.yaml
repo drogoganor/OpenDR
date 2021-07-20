@@ -43,14 +43,14 @@
 		StandardPaletteMultiplier: 4
 		TerrainPaletteMultiplier: 5
 		Gamma: 0
-	PaletteFromDrFile@terrain-snow:
-		Name: terrain
-		Filename: SNOW/SNOW.PAL
-		Tileset: SNOW
-		ShadowIndex: 47
-		StandardPaletteMultiplier: 4
-		TerrainPaletteMultiplier: 4
-		Gamma: 0
+	#PaletteFromDrFile@terrain-snow:
+	#	Name: terrain
+	#	Filename: SNOW/SNOW.PAL
+	#	Tileset: SNOW
+	#	ShadowIndex: 47
+	#	StandardPaletteMultiplier: 4
+	#	TerrainPaletteMultiplier: 4
+	#	Gamma: 0
 	PaletteFromDrFile@terrain-volcanic:
 		Name: terrain
 		Filename: volcanic.pal
