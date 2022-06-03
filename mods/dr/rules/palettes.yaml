@@ -27,14 +27,14 @@
 		StandardPaletteMultiplier: 4
 		TerrainPaletteMultiplier: 5
 		Gamma: 0
-	PaletteFromDrFile@terrain-alien:
-		Name: terrain
-		Filename: ALIEN/ALIEN.PAL
-		Tileset: ALIEN
-		ShadowIndex: 47
-		StandardPaletteMultiplier: 4
-		TerrainPaletteMultiplier: 4
-		Gamma: 0
+	#PaletteFromDrFile@terrain-alien:
+	#	Name: terrain
+	#	Filename: ALIEN/ALIEN.PAL
+	#	Tileset: ALIEN
+	#	ShadowIndex: 47
+	#	StandardPaletteMultiplier: 4
+	#	TerrainPaletteMultiplier: 4
+	#	Gamma: 0
 	PaletteFromDrFile@terrain-auralien:
 		Name: terrain
 		Filename: auralien.pal
