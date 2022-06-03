@@ -85,6 +85,7 @@
 
 World:
 	Inherits: ^BaseWorld
+	Inherits@mpstart: ^MpStartUnits
 	ChatCommands:
 	DevCommands:
 	DebugVisualizationCommands:
@@ -92,7 +93,6 @@ World:
 	HelpCommand:
 	ScreenShaker:
 	BuildingInfluence:
-	Inherits: ^MpStartUnits
 	#GlobalLightingPaletteEffect:
 	#	Ambient: 1.05
 	ProductionQueueOrBuildingPickerFromSelection:

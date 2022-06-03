@@ -115,7 +115,7 @@ Sounds:
 		DisablePower:
 		EnablePower: 
 		ChatLine: 
-		ClickSound: gxclkoc1
+		ClickSound: click
 		ClickDisabledSound:
 		Beacon: 
 		AlertBuzzer: 

@@ -284,14 +284,18 @@ ColorValidator:
 	TeamColorPresets: ffc9ca, f50606, 98331f, f57606, f7bb06, f861a4, da06f3, ddb8ff, 06f739, cef7b2, 200738, 280df6, 2f86f2, 76d2f8, 34ba93, 000000
 
 ModContent:
-	InstallPromptMessage: Dark Reign requires artwork and audio from both original and\nexpansion game discs, or alternatively a GOG install.\n\nPlease select Advanced Install and choose a source for installing\nthe game content.
-	#QuickDownload: drdemo, drauranext
-	HeaderMessage: Game content may be extracted from the original game discs or an\nexisting GOG install. You will also need to download the Auran Extras.
+	InstallPromptMessage: OpenRA Dark Reign requires artwork and audio from the Dark Reign demo.\n\nClick 'Quick Install' to automatically download and install this content.
+	QuickDownload: drdemo
+	HeaderMessage: Download Game Content
 	Packages:
 		demo: Dark Reign Demo
 			TestFiles: ^SupportDir|Content/dr/SPRITES.FTG, ^SupportDir|Content/dr/SOUNDS.FTG, ^SupportDir|Content/dr/shell/SOUNDS.FTG, ^SupportDir|Content/dr/BARREN/BARREN.PAL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL, ^SupportDir|Content/dr/BARREN/BARREN.TIL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL, ^SupportDir|Content/dr/BARREN/SPRITES.FTG, ^SupportDir|Content/dr/JUNGLE/SPRITES.FTG, ^SupportDir|Content/dr/mouse.crs
 			Download: drdemo
 			Required: true
+		auran: Auran Extras
+			TestFiles: ^SupportDir|Content/dr/aust/AUST.FTG, ^SupportDir|Content/dr/volcanic/VOLCANIC.FTG, ^SupportDir|Content/dr/auralien/AURALIEN.FTG, ^SupportDir|Content/dr/asteroid/ASTEROID.FTG, ^SupportDir|Content/dr/addon/aurunits/aursound.ftg, ^SupportDir|Content/dr/addon/aurunits/aursprite.ftg, ^SupportDir|Content/dr/addon/terrorist/terrsound.ftg, ^SupportDir|Content/dr/addon/terrorist/terrsprite.ftg, ^SupportDir|Content/dr/legal.txt
+			Download: drauranext
+			Required: false
 		#devtest: Dev Test Package (Full)
 		#	TestFiles: ^SupportDir|Content/dr/SPRITES.FTG, ^SupportDir|Content/dr/SOUNDS.FTG, ^SupportDir|Content/dr/shell/SOUNDS.FTG, ^SupportDir|Content/dr/BARREN/BARREN.PAL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL, ^SupportDir|Content/dr/SNOW/SNOW.PAL, ^SupportDir|Content/dr/BARREN/BARREN.TIL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL, ^SupportDir|Content/dr/SNOW/SNOW.TIL, ^SupportDir|Content/dr/BARREN/SPRITES.FTG, ^SupportDir|Content/dr/JUNGLE/SPRITES.FTG, ^SupportDir|Content/dr/SNOW/SPRITES.FTG, ^SupportDir|Content/dr/spriteEx.ftg, ^SupportDir|Content/dr/soundsEx.ftg, ^SupportDir|Content/dr/ALIEN/ALIEN.TIL, ^SupportDir|Content/dr/ALIEN/ALIEN.PAL, ^SupportDir|Content/dr/ALIEN/SPRITEEX.FTG, ^SupportDir|Content/dr/BARREN/spriteEx.ftg, ^SupportDir|Content/dr/JUNGLE/spriteEx.ftg, ^SupportDir|Content/dr/SNOW/spriteEx.ftg, ^SupportDir|Content/dr/mouse.crs
 		#	Download: drdevtest
@@ -308,18 +312,15 @@ ModContent:
 		#	TestFiles: ^SupportDir|Content/dr/spriteEx.ftg, ^SupportDir|Content/dr/soundsEx.ftg, ^SupportDir|Content/dr/ALIEN/ALIEN.TIL, ^SupportDir|Content/dr/ALIEN/ALIEN.PAL, ^SupportDir|Content/dr/ALIEN/SPRITEEX.FTG, ^SupportDir|Content/dr/BARREN/spriteEx.ftg, ^SupportDir|Content/dr/JUNGLE/spriteEx.ftg, ^SupportDir|Content/dr/SNOW/spriteEx.ftg, ^SupportDir|Content/dr/mouse.crs
 		#	Sources: drexp
 		#	Required: true
-		auran: Auran Extras
-			TestFiles: ^SupportDir|Content/dr/aust/AUST.FTG, ^SupportDir|Content/dr/volcanic/VOLCANIC.FTG, ^SupportDir|Content/dr/auralien/AURALIEN.FTG, ^SupportDir|Content/dr/asteroid/ASTEROID.FTG, ^SupportDir|Content/dr/addon/aurunits/aursound.ftg, ^SupportDir|Content/dr/addon/aurunits/aursprite.ftg, ^SupportDir|Content/dr/addon/terrorist/terrsound.ftg, ^SupportDir|Content/dr/addon/terrorist/terrsprite.ftg, ^SupportDir|Content/dr/legal.txt
-			Download: drauranext
-			Required: true
-		music: Music
-			TestFiles: ^SupportDir|Content/dr/music.zip
-			Download: drmusic
+		#music: Music
+		#	TestFiles: ^SupportDir|Content/dr/music.zip
+		#	Download: drmusic
 	Downloads:
 		dr|installer/downloads.yaml
-	Sources:
-		dr|installer/drcd.yaml
-		dr|installer/gog.yaml
+		#dr|installer/downloads-retail.yaml
+	#Sources:
+	#	dr|installer/drcd.yaml
+	#	dr|installer/gog.yaml
 
 DiscordService:
 	ApplicationId: 811571076660199444
