@@ -1142,7 +1142,7 @@ ShockTrooperWeapon:
 		Spread: 64
 		Damage: 11
 	Warhead@3Eff: CreateEffect
-		Explosions: eoomktr0
+		Explosions: eooutex0 #eoomktr0
 		ValidTargets: Ground, Ship, Trees
 	-Warhead@4Eff:
 
@@ -1165,10 +1165,10 @@ WalkerScoutWeapon:
 	Inherits: LaserRifle
 
 TickTankWeapon:
-	Inherits: GeminiFull
+	Inherits: PlasmaCannon
 
 FlamingDeathWeapon:
-	Inherits: GeminiFull
+	Inherits: DoubleRailGun
 
 HoverAssaultTankWeapon:
 	Inherits: PlasmaCannon
@@ -1186,7 +1186,7 @@ SonicThumperWeapon:
 	Inherits: PlasmaCannon
 
 AirRifterWeapon:
-	Inherits: GeminiFull
+	Inherits: DoubleRailGun
 
 TerroristMissileTankWeapon:
 	Inherits: PlasmaCannon
