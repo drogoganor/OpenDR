@@ -21,7 +21,7 @@ namespace OpenRA.Mods.Dr.Traits
 	public class BuilderQueue : ProductionQueue
 	{
 		public BuilderQueue(ActorInitializer init, BuilderQueueInfo info)
-			: base(init, init.Self.Owner.PlayerActor, info) { }
+			: base(init, info) { }
 
 		protected override void TickInner(Actor self, bool allProductionPaused)
 		{

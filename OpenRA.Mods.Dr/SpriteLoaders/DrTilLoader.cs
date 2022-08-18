@@ -36,7 +36,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			public DrTilFrame(Stream s, bool isMask = false)
 			{
-				Type = SpriteFrameType.Indexed;
+				Type = SpriteFrameType.Indexed8;
 				const int tileSize = 24;
 
 				Data = new byte[tileSize * tileSize];
@@ -136,7 +136,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			return frames.ToArray();
 		}
 
-		public bool TryParseSprite(Stream s, out ISpriteFrame[] frames, out TypeDictionary metadata)
+		public bool TryParseSprite(Stream s, string filename, out ISpriteFrame[] frames, out TypeDictionary metadata)
 		{
 			metadata = null;
 			if (!IsDrTil(s))

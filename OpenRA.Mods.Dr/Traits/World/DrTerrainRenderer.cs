@@ -9,10 +9,10 @@
  */
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using OpenRA.Graphics;
+using OpenRA.Mods.Common.Terrain;
+using OpenRA.Mods.Common.Traits;
+using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits
@@ -64,7 +64,8 @@ namespace OpenRA.Mods.Dr.Traits
 		}
 	}
 
-	public class DrTerrainRendererInfo : TraitInfo
+	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
+	public class DrTerrainRendererInfo : TraitInfo, ITiledTerrainRendererInfo
 	{
 		[FieldLoader.LoadUsing("LoadShorelines")]
 		public Dictionary<string, DrTerrainShorelineInfo> Shorelines;
@@ -83,7 +84,41 @@ namespace OpenRA.Mods.Dr.Traits
 			return retList;
 		}
 
-		public override object Create(ActorInitializer init) { return new DrTerrainRenderer(init.World, this); }
+		bool ITiledTerrainRendererInfo.ValidateTileSprites(ITemplatedTerrainInfo terrainInfo, Action<string> onError)
+		{
+			var missingImages = new HashSet<string>();
+			var failed = false;
+			Action<uint, string> onMissingImage = (id, f) =>
+			{
+				onError($"\tTemplate `{id}` references sprite `{f}` that does not exist.");
+				missingImages.Add(f);
+				failed = true;
+			};
+
+			var tileCache = new DefaultTileCache((DefaultTerrain)terrainInfo, onMissingImage);
+			foreach (var t in terrainInfo.Templates)
+			{
+				var templateInfo = (DefaultTerrainTemplateInfo)t.Value;
+				for (var v = 0; v < templateInfo.Images.Length; v++)
+				{
+					if (!missingImages.Contains(templateInfo.Images[v]))
+					{
+						for (var i = 0; i < t.Value.TilesCount; i++)
+						{
+							if (t.Value[i] == null || tileCache.HasTileSprite(new TerrainTile(t.Key, (byte)i), v))
+								continue;
+
+							onError($"\tTemplate `{t.Key}` references frame {i} that does not exist in sprite `{templateInfo.Images[v]}`.");
+							failed = true;
+						}
+					}
+				}
+			}
+
+			return failed;
+		}
+
+		public override object Create(ActorInitializer init) { return new TerrainRenderer(init.World); }
 	}
 
 	internal static class DrTerrainHelper
@@ -109,31 +144,31 @@ namespace OpenRA.Mods.Dr.Traits
 		}
 	}
 
-	public sealed class DrTerrainRenderer : IRenderTerrain, IWorldLoaded, INotifyActorDisposing
+	public sealed class DrTerrainRenderer : IRenderTerrain, IWorldLoaded, INotifyActorDisposing, ITiledTerrainRenderer
 	{
-		readonly DrTerrainRendererInfo info;
 		readonly Map map;
-		readonly Dictionary<string, TerrainSpriteLayer> spriteLayers = new Dictionary<string, TerrainSpriteLayer>();
-		Theater theater;
+		readonly DrTerrainRendererInfo info;
+		TerrainSpriteLayer spriteLayer;
+		readonly DefaultTerrain terrainInfo;
+		readonly DefaultTileCache tileCache;
+		WorldRenderer worldRenderer;
 		bool disposed;
 
 		public DrTerrainRenderer(World world, DrTerrainRendererInfo info)
 		{
 			map = world.Map;
 			this.info = info;
+			terrainInfo = map.Rules.TerrainInfo as DefaultTerrain;
+			if (terrainInfo == null)
+				throw new InvalidDataException("TerrainRenderer can only be used with the DefaultTerrain parser");
+
+			tileCache = new DefaultTileCache(terrainInfo);
 		}
 
 		void IWorldLoaded.WorldLoaded(World world, WorldRenderer wr)
 		{
-			theater = wr.Theater;
-
-			foreach (var template in map.Rules.TileSet.Templates)
-			{
-				var palette = template.Value.Palette ?? TileSet.TerrainPaletteInternalName;
-				spriteLayers.GetOrAdd(palette, pal =>
-					new TerrainSpriteLayer(world, wr, theater.Sheet, BlendMode.Alpha, wr.Palette(palette), world.Type != WorldType.Editor));
-			}
-
+			worldRenderer = wr;
+			spriteLayer = new TerrainSpriteLayer(world, wr, tileCache.MissingTile, BlendMode.Alpha, world.Type != WorldType.Editor);
 			foreach (var cell in map.AllCells)
 				UpdateCell(cell);
 
@@ -154,13 +189,15 @@ namespace OpenRA.Mods.Dr.Traits
 
 					var tile = map.Tiles[newCell];
 					var palette = TileSet.TerrainPaletteInternalName;
-					if (map.Rules.TileSet.Templates.ContainsKey(tile.Type))
-						palette = map.Rules.TileSet.Templates[tile.Type].Palette ?? palette;
+					if (terrainInfo.Templates.TryGetValue(tile.Type, out var template))
+						palette = ((DefaultTerrainTemplateInfo)template).Palette ?? palette;
+
 
 					tile = GetShoreTile(newCell);
-					var sprite = theater.TileSprite(tile);
-					foreach (var kv in spriteLayers)
-						kv.Value.Update(newCell, palette == kv.Key ? sprite : null, false);
+
+					var sprite = tileCache.TileSprite(tile);
+					var paletteReference = worldRenderer.Palette(palette);
+					spriteLayer.Update(cell, sprite, paletteReference);
 				}
 			}
 		}
@@ -198,10 +235,10 @@ namespace OpenRA.Mods.Dr.Traits
 			return tile;
 		}
 
+
 		void IRenderTerrain.RenderTerrain(WorldRenderer wr, Viewport viewport)
 		{
-			foreach (var kv in spriteLayers.Values)
-				kv.Draw(wr.Viewport);
+			spriteLayer.Draw(wr.Viewport);
 
 			foreach (var r in wr.World.WorldActor.TraitsImplementing<IRenderOverlay>())
 				r.Render(wr);
@@ -215,10 +252,95 @@ namespace OpenRA.Mods.Dr.Traits
 			map.Tiles.CellEntryChanged -= UpdateCell;
 			map.Height.CellEntryChanged -= UpdateCell;
 
-			foreach (var kv in spriteLayers.Values)
-				kv.Dispose();
+			spriteLayer.Dispose();
 
+			tileCache.Dispose();
 			disposed = true;
+		}
+
+		Sprite ITiledTerrainRenderer.MissingTile => tileCache.MissingTile;
+
+		Sprite ITiledTerrainRenderer.TileSprite(TerrainTile r, int? variant)
+		{
+			return tileCache.TileSprite(r, variant);
+		}
+
+		Rectangle ITiledTerrainRenderer.TemplateBounds(TerrainTemplateInfo template)
+		{
+			Rectangle? templateRect = null;
+			var tileSize = map.Grid.TileSize;
+
+			var i = 0;
+			for (var y = 0; y < template.Size.Y; y++)
+			{
+				for (var x = 0; x < template.Size.X; x++)
+				{
+					var tile = new TerrainTile(template.Id, (byte)(i++));
+					if (!terrainInfo.TryGetTileInfo(tile, out var tileInfo))
+						continue;
+
+					var sprite = tileCache.TileSprite(tile);
+					var u = map.Grid.Type == MapGridType.Rectangular ? x : (x - y) / 2f;
+					var v = map.Grid.Type == MapGridType.Rectangular ? y : (x + y) / 2f;
+
+					var tl = new float2(u * tileSize.Width, (v - 0.5f * tileInfo.Height) * tileSize.Height) - 0.5f * sprite.Size;
+					var rect = new Rectangle((int)(tl.X + sprite.Offset.X), (int)(tl.Y + sprite.Offset.Y), (int)sprite.Size.X, (int)sprite.Size.Y);
+					templateRect = templateRect.HasValue ? Rectangle.Union(templateRect.Value, rect) : rect;
+				}
+			}
+
+			return templateRect ?? Rectangle.Empty;
+		}
+
+		IEnumerable<IRenderable> ITiledTerrainRenderer.RenderUIPreview(WorldRenderer wr, TerrainTemplateInfo t, int2 origin, float scale)
+		{
+			if (!(t is DefaultTerrainTemplateInfo template))
+				yield break;
+
+			var ts = map.Grid.TileSize;
+			var gridType = map.Grid.Type;
+
+			var i = 0;
+			for (var y = 0; y < template.Size.Y; y++)
+			{
+				for (var x = 0; x < template.Size.X; x++)
+				{
+					var tile = new TerrainTile(template.Id, (byte)i++);
+					if (!terrainInfo.TryGetTileInfo(tile, out var tileInfo))
+						continue;
+
+					var sprite = tileCache.TileSprite(tile, 0);
+					var u = gridType == MapGridType.Rectangular ? x : (x - y) / 2f;
+					var v = gridType == MapGridType.Rectangular ? y : (x + y) / 2f;
+					var offset = (new float2(u * ts.Width, (v - 0.5f * tileInfo.Height) * ts.Height) - 0.5f * sprite.Size.XY).ToInt2();
+					var palette = template.Palette ?? terrainInfo.Palette;
+
+					yield return new UISpriteRenderable(sprite, WPos.Zero, origin + offset, 0, wr.Palette(palette), scale);
+				}
+			}
+		}
+
+		IEnumerable<IRenderable> ITiledTerrainRenderer.RenderPreview(WorldRenderer wr, TerrainTemplateInfo t, WPos origin)
+		{
+			if (!(t is DefaultTerrainTemplateInfo template))
+				yield break;
+
+			var i = 0;
+			for (var y = 0; y < template.Size.Y; y++)
+			{
+				for (var x = 0; x < template.Size.X; x++)
+				{
+					var tile = new TerrainTile(template.Id, (byte)i++);
+					if (!terrainInfo.TryGetTileInfo(tile, out var tileInfo))
+						continue;
+
+					var sprite = tileCache.TileSprite(tile, 0);
+					var offset = map.Offset(new CVec(x, y), tileInfo.Height);
+					var palette = wr.Palette(template.Palette ?? terrainInfo.Palette);
+
+					yield return new SpriteRenderable(sprite, origin, offset, 0, palette, 1f, 1f, float3.Ones, TintModifiers.None, false);
+				}
+			}
 		}
 	}
 }

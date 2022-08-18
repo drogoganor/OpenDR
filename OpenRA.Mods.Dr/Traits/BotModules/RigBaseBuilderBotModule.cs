@@ -48,6 +48,9 @@ namespace OpenRA.Mods.Dr.Traits
 		[Desc("Tells the AI what building types are considered silos (resource storage).")]
 		public readonly HashSet<string> SiloTypes = new HashSet<string>();
 
+		[Desc("Tells the AI what building types are considered defenses.")]
+		public readonly HashSet<string> DefenseTypes = new HashSet<string>();
+
 		[Desc("Production queues AI uses for buildings.")]
 		public readonly HashSet<string> BuildingQueues = new HashSet<string> { "Building" };
 
@@ -72,13 +75,19 @@ namespace OpenRA.Mods.Dr.Traits
 		[Desc("Increase maintained excess power by ExcessPowerIncrement for every N base buildings.")]
 		public readonly int ExcessPowerIncreaseThreshold = 1;
 
+		[Desc("Number of refineries to build before building a barracks.")]
+		public readonly int InititalMinimumRefineryCount = 1;
+
+		[Desc("Number of refineries to build additionally after building a barracks.")]
+		public readonly int AdditionalMinimumRefineryCount = 1;
+
 		[Desc("Additional delay (in ticks) between structure production checks when there is no active production.",
 			"StructureProductionRandomBonusDelay is added to this.")]
 		public readonly int StructureProductionInactiveDelay = 125;
 
 		[Desc("Additional delay (in ticks) added between structure production checks when actively building things.",
-			"Note: The total delay is gamespeed OrderLatency x 4 + this + StructureProductionRandomBonusDelay.")]
-		public readonly int StructureProductionActiveDelay = 0;
+			"Note: this should be at least as large as the typical order latency to avoid duplicated build choices.")]
+		public readonly int StructureProductionActiveDelay = 25;
 
 		[Desc("A random delay (in ticks) of up to this is added to active/inactive production delays.")]
 		public readonly int StructureProductionRandomBonusDelay = 10;
@@ -254,26 +263,14 @@ namespace OpenRA.Mods.Dr.Traits
 			return info != null && world.IsCellBuildable(x, null, info);
 		}
 
-		public bool HasAdequateRefineryCount
-		{
-			get
-			{
-				// Require at least one refinery, unless we can't build it.
-				return AIUtils.CountBuildingByCommonName(Info.RefineryTypes, player) >= MinimumRefineryCount ||
-					AIUtils.CountBuildingByCommonName(Info.PowerTypes, player) == 0 ||
-					AIUtils.CountBuildingByCommonName(Info.HQTypes, player) == 0;
-			}
-		}
+		// Require at least one refinery, unless we can't build it.
+		public bool HasAdequateRefineryCount =>
+			Info.RefineryTypes.Count == 0 ||
+			AIUtils.CountBuildingByCommonName(Info.RefineryTypes, player) >= MinimumRefineryCount ||
+			AIUtils.CountBuildingByCommonName(Info.PowerTypes, player) == 0 ||
+			AIUtils.CountBuildingByCommonName(Info.ConstructionYardTypes, player) == 0;
 
-		int MinimumRefineryCount
-		{
-			get
-			{
-				// Unless we have no barracks (higher priority), require a 2nd refinery.
-				// TODO: Possibly unhardcode this, at least the targeted minimum of 2 (the fallback can probably stay at 1).
-				return AIUtils.CountBuildingByCommonName(Info.BarracksTypes, player) > 0 ? 2 : 1;
-			}
-		}
+		int MinimumRefineryCount => AIUtils.CountBuildingByCommonName(Info.BarracksTypes, player) > 0 ? Info.InititalMinimumRefineryCount + Info.AdditionalMinimumRefineryCount : Info.InititalMinimumRefineryCount;
 
 		List<MiniYamlNode> IGameSaveTraitData.IssueTraitData(Actor self)
 		{

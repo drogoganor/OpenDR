@@ -35,6 +35,12 @@ namespace OpenRA.Mods.Dr.Traits
 			"The filename of the audio is defined per faction in notifications.yaml.")]
 		public readonly string BlockedAudio = "NoBuild";
 
+		[NotificationReference("Speech")]
+		[Desc("Notification played when you can't place a building.",
+			"Overrides PlaceBuilding.CannotPlaceNotification for this queue.",
+			"The filename of the audio is defined per faction in notifications.yaml.")]
+		public readonly string CannotPlaceAudio = null;
+
 		public override object Create(ActorInitializer init) { return new BuilderUnit(init, init.Self.Owner.PlayerActor, this); }
 
 		public void RulesetLoaded(Ruleset rules, ActorInfo ai)

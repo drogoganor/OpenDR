@@ -44,7 +44,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			public DrCrsFrame(Stream s, CrsHeader sph, CrsFrameInfo info)
 			{
-				Type = SpriteFrameType.Indexed;
+				Type = SpriteFrameType.Indexed8;
 				const int width = 32;
 				const int numPixels = width * width;
 				Data = new byte[numPixels];
@@ -159,7 +159,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			return frames.ToArray();
 		}
 
-		public bool TryParseSprite(Stream s, out ISpriteFrame[] frames, out TypeDictionary metadata)
+		public bool TryParseSprite(Stream s, string filename, out ISpriteFrame[] frames, out TypeDictionary metadata)
 		{
 			metadata = null;
 			if (!IsDrCrs(s))
