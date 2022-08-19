@@ -23,27 +23,71 @@ using OpenRA.Mods.Dr.Traits;
 using OpenRA.Orders;
 using OpenRA.Primitives;
 using OpenRA.Traits;
+using OpenRA.Widgets;
 
 namespace OpenRA.Mods.Dr.Orders
 {
 	// Copied from PlaceBuildingOrderGenerator
 	public class BuilderUnitBuildingOrderGenerator : IOrderGenerator
 	{
+		readonly string worldDefaultCursor = ChromeMetrics.Get<string>("WorldDefaultCursor");
+
+		class VariantWrapper
+		{
+			public readonly ActorInfo ActorInfo;
+			public readonly BuildingInfo BuildingInfo;
+			public readonly IPlaceBuildingPreview Preview;
+
+			public VariantWrapper(WorldRenderer wr, BuilderUnit queue, ActorInfo ai)
+			{
+				ActorInfo = ai;
+				BuildingInfo = ActorInfo.TraitInfo<BuildingInfo>();
+
+				var previewGeneratorInfo = ActorInfo.TraitInfoOrDefault<IPlaceBuildingPreviewGeneratorInfo>();
+				if (previewGeneratorInfo != null)
+				{
+					string faction;
+					var buildableInfo = ActorInfo.TraitInfoOrDefault<BuildableInfo>();
+					if (buildableInfo != null && buildableInfo.ForceFaction != null)
+						faction = buildableInfo.ForceFaction;
+					else
+					{
+						var mostLikelyProducer = queue.MostLikelyProducer();
+						faction = mostLikelyProducer.Trait != null ? mostLikelyProducer.Trait.Faction : queue.Actor.Owner.Faction.InternalName;
+					}
+
+					var td = new TypeDictionary()
+					{
+						new FactionInit(faction),
+						new OwnerInit(queue.Actor.Owner),
+					};
+
+					foreach (var api in ActorInfo.TraitInfos<IActorPreviewInitInfo>())
+						foreach (var o in api.ActorPreviewInits(ActorInfo, ActorPreviewType.PlaceBuilding))
+							td.Add(o);
+
+					Preview = previewGeneratorInfo.CreatePreview(wr, ActorInfo, td);
+				}
+			}
+		}
+
 		readonly BuilderUnit queue;
 		readonly ActorInfo actorInfo;
 		readonly BuildingInfo buildingInfo;
 		readonly PlaceBuildingInfo placeBuildingInfo;
-		readonly FootprintPlaceBuildingPreviewInfo footprintPlaceBuildingPreviewInfo;
-		readonly string faction;
-		readonly Sprite buildOk;
-		readonly Sprite buildBlocked;
+		//readonly FootprintPlaceBuildingPreviewInfo footprintPlaceBuildingPreviewInfo;
+		//readonly string faction;
+		//readonly Sprite buildOk;
+		//readonly Sprite buildBlocked;
 		readonly IResourceLayer resourceLayer;
 		readonly Viewport viewport;
-		readonly WVec centerOffset;
-		readonly int2 topLeftScreenOffset;
+		//readonly WVec centerOffset;
+		//readonly int2 topLeftScreenOffset;
 		IActorPreview[] preview;
+		readonly VariantWrapper[] variants;
+		int variant;
 
-		bool initialized;
+		//bool initialized;
 
 		public BuilderUnitBuildingOrderGenerator(BuilderUnit queue, string name, WorldRenderer worldRenderer)
 		{
@@ -57,25 +101,40 @@ namespace OpenRA.Mods.Dr.Orders
 			if (Game.Settings.Game.UseClassicMouseStyle)
 				world.Selection.Clear();
 
-			var map = world.Map;
-			var tileset = world.Map.Tileset.ToLowerInvariant();
+			var variants = new List<VariantWrapper>()
+			{
+				new VariantWrapper(worldRenderer, queue, world.Map.Rules.Actors[name])
+			};
 
-			actorInfo = map.Rules.Actors[name];
-			footprintPlaceBuildingPreviewInfo = actorInfo.TraitInfo<FootprintPlaceBuildingPreviewInfo>();
-			buildingInfo = actorInfo.TraitInfo<BuildingInfo>();
-			centerOffset = buildingInfo.CenterOffset(world);
-			topLeftScreenOffset = -worldRenderer.ScreenPxOffset(centerOffset);
+			foreach (var v in variants[0].ActorInfo.TraitInfos<PlaceBuildingVariantsInfo>())
+				foreach (var a in v.Actors)
+					variants.Add(new VariantWrapper(worldRenderer, queue, world.Map.Rules.Actors[a]));
 
-			var buildableInfo = actorInfo.TraitInfo<BuildableInfo>();
-			var mostLikelyProducer = queue.MostLikelyProducer();
-			faction = buildableInfo.ForceFaction
-				?? (mostLikelyProducer.Trait != null ? mostLikelyProducer.Trait.Faction : queue.Actor.Owner.Faction.InternalName);
+			this.variants = variants.ToArray();
 
-			if (map.Rules.Sequences.HasSequence("overlay", "build-valid-{0}".F(tileset)))
-				buildOk = map.Rules.Sequences.GetSequence("overlay", "build-valid-{0}".F(tileset)).GetSprite(0);
-			else
-				buildOk = map.Rules.Sequences.GetSequence("overlay", "build-valid").GetSprite(0);
-			buildBlocked = map.Rules.Sequences.GetSequence("overlay", "build-invalid").GetSprite(0);
+
+
+
+
+			//var map = world.Map;
+			//var tileset = world.Map.Tileset.ToLowerInvariant();
+
+			//actorInfo = map.Rules.Actors[name];
+			//footprintPlaceBuildingPreviewInfo = actorInfo.TraitInfo<FootprintPlaceBuildingPreviewInfo>();
+			//buildingInfo = actorInfo.TraitInfo<BuildingInfo>();
+			//centerOffset = buildingInfo.CenterOffset(world);
+			//topLeftScreenOffset = -worldRenderer.ScreenPxOffset(centerOffset);
+
+			//var buildableInfo = actorInfo.TraitInfo<BuildableInfo>();
+			//var mostLikelyProducer = queue.MostLikelyProducer();
+			//faction = buildableInfo.ForceFaction
+			//	?? (mostLikelyProducer.Trait != null ? mostLikelyProducer.Trait.Faction : queue.Actor.Owner.Faction.InternalName);
+
+			//if (map.Rules.Sequences.HasSequence("overlay", "build-valid-{0}".F(tileset)))
+			//	buildOk = map.Rules.Sequences.GetSequence("overlay", "build-valid-{0}".F(tileset)).GetSprite(0);
+			//else
+			//	buildOk = map.Rules.Sequences.GetSequence("overlay", "build-valid").GetSprite(0);
+			//buildBlocked = map.Rules.Sequences.GetSequence("overlay", "build-invalid").GetSprite(0);
 		}
 
 		PlaceBuildingCellType MakeCellType(bool valid, bool lineBuild = false)
@@ -137,8 +196,8 @@ namespace OpenRA.Mods.Dr.Orders
 
 				if (!world.CanPlaceBuilding(topLeft, actorInfo, buildingInfo, queue.Actor))
 				{
-					foreach (var order in ClearBlockersOrders(world, topLeft))
-						yield return order;
+					//foreach (var order in ClearBlockersOrders(world, topLeft))
+					//	yield return order;
 
 					Game.Sound.PlayNotification(world.Map.Rules, owner, "Speech", notification, owner.Faction.InternalName);
 					TextNotificationsManager.AddTransientLine(placeBuildingInfo.CannotPlaceTextNotification, owner);
@@ -181,44 +240,10 @@ namespace OpenRA.Mods.Dr.Orders
 		{
 			var topLeft = TopLeft;
 			var footprint = new Dictionary<CPos, PlaceBuildingCellType>();
-			var buildingInfo = actorInfo.TraitInfo<BuildingInfo>();
-			//var activeVariant = variants[variant];
-			//var plugInfo = activeVariant.PlugInfo;
-			//var lineBuildInfo = activeVariant.LineBuildInfo;
-			IPlaceBuildingPreview preview;
+			var activeVariant = variants[variant];
+			var buildingInfo = activeVariant.BuildingInfo;
+			var preview = activeVariant.Preview;
 
-
-
-			var previewGeneratorInfo = actorInfo.TraitInfoOrDefault<IPlaceBuildingPreviewGeneratorInfo>();
-			if (previewGeneratorInfo != null)
-			{
-				string faction;
-				var buildableInfo = actorInfo.TraitInfoOrDefault<BuildableInfo>();
-				if (buildableInfo != null && buildableInfo.ForceFaction != null)
-					faction = buildableInfo.ForceFaction;
-				else
-				{
-					var mostLikelyProducer = queue.MostLikelyProducer();
-					faction = mostLikelyProducer.Trait != null ? mostLikelyProducer.Trait.Faction : queue.Actor.Owner.Faction.InternalName;
-				}
-
-				var td = new TypeDictionary()
-					{
-						new FactionInit(faction),
-						new OwnerInit(queue.Actor.Owner),
-					};
-
-				foreach (var api in actorInfo.TraitInfos<IActorPreviewInitInfo>())
-					foreach (var o in api.ActorPreviewInits(actorInfo, ActorPreviewType.PlaceBuilding))
-						td.Add(o);
-
-				preview = previewGeneratorInfo.CreatePreview(wr, actorInfo, td);
-			}
-
-
-			var owner = queue.Actor.Owner;
-
-			
 			var isCloseEnough = buildingInfo.IsCloseEnoughToBase(world, world.LocalPlayer, actorInfo, topLeft);
 			foreach (var t in buildingInfo.Tiles(topLeft))
 				footprint.Add(t, MakeCellType(isCloseEnough && world.IsCellBuildable(t, actorInfo, buildingInfo) && (resourceLayer == null || resourceLayer.GetResource(t).Type == null)));
@@ -252,38 +277,38 @@ namespace OpenRA.Mods.Dr.Orders
 
 		void IOrderGenerator.Deactivate() { }
 
-		IEnumerable<Order> ClearBlockersOrders(World world, CPos topLeft)
-		{
-			var allTiles = variants[variant].BuildingInfo.Tiles(topLeft).ToArray();
-			var adjacentTiles = Util.ExpandFootprint(allTiles, true).Except(allTiles)
-				.Where(world.Map.Contains).ToList();
+		//IEnumerable<Order> ClearBlockersOrders(World world, CPos topLeft)
+		//{
+		//	var allTiles = variants[variant].BuildingInfo.Tiles(topLeft).ToArray();
+		//	var adjacentTiles = Util.ExpandFootprint(allTiles, true).Except(allTiles)
+		//		.Where(world.Map.Contains).ToList();
 
-			var blockers = allTiles.SelectMany(world.ActorMap.GetActorsAt)
-				.Where(a => a.Owner == Queue.Actor.Owner && a.IsIdle)
-				.Select(a => new TraitPair<IMove>(a, a.TraitOrDefault<IMove>()))
-				.Where(x => x.Trait != null);
+		//	var blockers = allTiles.SelectMany(world.ActorMap.GetActorsAt)
+		//		.Where(a => a.Owner == Queue.Actor.Owner && a.IsIdle)
+		//		.Select(a => new TraitPair<IMove>(a, a.TraitOrDefault<IMove>()))
+		//		.Where(x => x.Trait != null);
 
-			foreach (var blocker in blockers)
-			{
-				CPos moveCell;
-				if (blocker.Trait is Mobile mobile)
-				{
-					var availableCells = adjacentTiles.Where(t => mobile.CanEnterCell(t)).ToList();
-					if (availableCells.Count == 0)
-						continue;
+		//	foreach (var blocker in blockers)
+		//	{
+		//		CPos moveCell;
+		//		if (blocker.Trait is Mobile mobile)
+		//		{
+		//			var availableCells = adjacentTiles.Where(t => mobile.CanEnterCell(t)).ToList();
+		//			if (availableCells.Count == 0)
+		//				continue;
 
-					moveCell = blocker.Actor.ClosestCell(availableCells);
-				}
-				else if (blocker.Trait is Aircraft)
-					moveCell = blocker.Actor.Location;
-				else
-					continue;
+		//			moveCell = blocker.Actor.ClosestCell(availableCells);
+		//		}
+		//		else if (blocker.Trait is Aircraft)
+		//			moveCell = blocker.Actor.Location;
+		//		else
+		//			continue;
 
-				yield return new Order("Move", blocker.Actor, Target.FromCell(world, moveCell), false)
-				{
-					SuppressVisualFeedback = true
-				};
-			}
-		}
+		//		yield return new Order("Move", blocker.Actor, Target.FromCell(world, moveCell), false)
+		//		{
+		//			SuppressVisualFeedback = true
+		//		};
+		//	}
+		//}
 	}
 }

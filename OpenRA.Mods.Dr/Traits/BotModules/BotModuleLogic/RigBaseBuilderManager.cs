@@ -29,29 +29,32 @@ namespace OpenRA.Mods.Dr.Traits
 
 	class RigBaseBuilderManager
 	{
+		readonly string category;
+
 		readonly RigBaseBuilderBotModule baseBuilder;
 		readonly World world;
 		readonly Player player;
 		readonly PowerManager playerPower;
+		readonly PlayerResources playerResources;
+		readonly IResourceLayer resourceLayer;
 
 		int waitTicks;
-
 		Actor[] playerBuildings;
-
 		int minimumExcessPower;
-		BitArray resourceTypeIndices;
 
 		readonly Dictionary<uint, RigBuildOrder> rigBuildOrders = new Dictionary<uint, RigBuildOrder>();
 
-		public RigBaseBuilderManager(RigBaseBuilderBotModule baseBuilder, Player p, PowerManager pm, BitArray resourceTypeIndices)
+		public RigBaseBuilderManager(RigBaseBuilderBotModule baseBuilder, string category, Player p, PowerManager pm,
+			PlayerResources pr, IResourceLayer rl)
 		{
 			this.baseBuilder = baseBuilder;
 			world = p.World;
 			player = p;
 			playerPower = pm;
-
+			playerResources = pr;
+			resourceLayer = rl;
+			this.category = category;
 			minimumExcessPower = baseBuilder.Info.MinimumExcessPower;
-			this.resourceTypeIndices = resourceTypeIndices;
 		}
 
 		public void Tick(IBot bot)
@@ -119,10 +122,7 @@ namespace OpenRA.Mods.Dr.Traits
 			// Minimum should not be negative as delays in HackyAI could be zero.
 			var randomFactor = world.LocalRandom.Next(0, baseBuilder.Info.StructureProductionRandomBonusDelay);
 
-			// Needs to be at least 4 * OrderLatency because otherwise the AI frequently duplicates build orders (i.e. makes the same build decision twice)
-			waitTicks = 4 * world.LobbyInfo.GlobalSettings.OrderLatency + baseBuilder.Info.StructureProductionActiveDelay + randomFactor;
-
-			// : baseBuilder.Info.StructureProductionInactiveDelay + randomFactor;
+			waitTicks = baseBuilder.Info.StructureProductionActiveDelay + randomFactor;
 		}
 
 		public List<Actor> GetIdleRigs()
@@ -384,7 +384,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 					// Try and place the refinery near a resource field
 					var nearbyResources = world.Map.FindTilesInAnnulus(baseCenter, baseBuilder.Info.MinBaseRadius, baseBuilder.Info.MaxBaseRadius)
-						.Where(a => resourceTypeIndices.Get(world.Map.GetTerrainIndex(a)))
+						.Where(a => resourceLayer.GetResource(a).Type != null)
 						.Shuffle(world.LocalRandom).Take(baseBuilder.Info.MaxResourceCellsToCheck);
 
 					foreach (var r in nearbyResources)

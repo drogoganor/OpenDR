@@ -161,6 +161,7 @@ namespace OpenRA.Mods.Dr.Traits
 		readonly Player player;
 		PowerManager playerPower;
 		PlayerResources playerResources;
+		IResourceLayer resourceLayer;
 		IBotPositionsUpdated[] positionsUpdatedModules;
 		BitArray resourceTypeIndices;
 		CPos initialBaseCenter;
@@ -178,14 +179,10 @@ namespace OpenRA.Mods.Dr.Traits
 		{
 			playerPower = player.PlayerActor.TraitOrDefault<PowerManager>();
 			playerResources = player.PlayerActor.Trait<PlayerResources>();
+			resourceLayer = self.World.WorldActor.TraitOrDefault<IResourceLayer>();
 			positionsUpdatedModules = player.PlayerActor.TraitsImplementing<IBotPositionsUpdated>().ToArray();
 
-			var tileset = world.Map.Rules.TileSet;
-			resourceTypeIndices = new BitArray(tileset.TerrainInfo.Length); // Big enough
-			foreach (var t in world.Map.Rules.Actors["world"].TraitInfos<ResourceTypeInfo>())
-				resourceTypeIndices.Set(tileset.GetTerrainIndex(t.TerrainType), true);
-
-			builder = new RigBaseBuilderManager(this, player, playerPower, resourceTypeIndices);
+			builder = new RigBaseBuilderManager(this, "All", player, playerPower, playerResources, resourceLayer);
 		}
 
 		void IBotPositionsUpdated.UpdatedBaseCenter(CPos newLocation)
@@ -268,7 +265,7 @@ namespace OpenRA.Mods.Dr.Traits
 			Info.RefineryTypes.Count == 0 ||
 			AIUtils.CountBuildingByCommonName(Info.RefineryTypes, player) >= MinimumRefineryCount ||
 			AIUtils.CountBuildingByCommonName(Info.PowerTypes, player) == 0 ||
-			AIUtils.CountBuildingByCommonName(Info.ConstructionYardTypes, player) == 0;
+			AIUtils.CountBuildingByCommonName(Info.HQTypes, player) == 0;
 
 		int MinimumRefineryCount => AIUtils.CountBuildingByCommonName(Info.BarracksTypes, player) > 0 ? Info.InititalMinimumRefineryCount + Info.AdditionalMinimumRefineryCount : Info.InititalMinimumRefineryCount;
 
