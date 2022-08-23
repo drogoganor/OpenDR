@@ -75,14 +75,14 @@ namespace OpenRA.Mods.Dr.Orders
 		readonly ActorInfo actorInfo;
 		readonly BuildingInfo buildingInfo;
 		readonly PlaceBuildingInfo placeBuildingInfo;
-		//readonly FootprintPlaceBuildingPreviewInfo footprintPlaceBuildingPreviewInfo;
-		//readonly string faction;
-		//readonly Sprite buildOk;
-		//readonly Sprite buildBlocked;
+		readonly FootprintPlaceBuildingPreviewInfo footprintPlaceBuildingPreviewInfo;
+		readonly string faction;
+		readonly Sprite buildOk;
+		readonly Sprite buildBlocked;
 		readonly IResourceLayer resourceLayer;
 		readonly Viewport viewport;
-		//readonly WVec centerOffset;
-		//readonly int2 topLeftScreenOffset;
+		readonly WVec centerOffset;
+		readonly int2 topLeftScreenOffset;
 		IActorPreview[] preview;
 		readonly VariantWrapper[] variants;
 		int variant;
@@ -116,25 +116,25 @@ namespace OpenRA.Mods.Dr.Orders
 
 
 
-			//var map = world.Map;
-			//var tileset = world.Map.Tileset.ToLowerInvariant();
+			var map = world.Map;
+			var tileset = world.Map.Tileset.ToLowerInvariant();
 
-			//actorInfo = map.Rules.Actors[name];
-			//footprintPlaceBuildingPreviewInfo = actorInfo.TraitInfo<FootprintPlaceBuildingPreviewInfo>();
-			//buildingInfo = actorInfo.TraitInfo<BuildingInfo>();
-			//centerOffset = buildingInfo.CenterOffset(world);
-			//topLeftScreenOffset = -worldRenderer.ScreenPxOffset(centerOffset);
+			actorInfo = map.Rules.Actors[name];
+			footprintPlaceBuildingPreviewInfo = actorInfo.TraitInfo<FootprintPlaceBuildingPreviewInfo>();
+			buildingInfo = actorInfo.TraitInfo<BuildingInfo>();
+			centerOffset = buildingInfo.CenterOffset(world);
+			topLeftScreenOffset = -worldRenderer.ScreenPxOffset(centerOffset);
 
-			//var buildableInfo = actorInfo.TraitInfo<BuildableInfo>();
-			//var mostLikelyProducer = queue.MostLikelyProducer();
-			//faction = buildableInfo.ForceFaction
-			//	?? (mostLikelyProducer.Trait != null ? mostLikelyProducer.Trait.Faction : queue.Actor.Owner.Faction.InternalName);
+			var buildableInfo = actorInfo.TraitInfo<BuildableInfo>();
+			var mostLikelyProducer = queue.MostLikelyProducer();
+			faction = buildableInfo.ForceFaction
+				?? (mostLikelyProducer.Trait != null ? mostLikelyProducer.Trait.Faction : queue.Actor.Owner.Faction.InternalName);
 
-			//if (map.Rules.Sequences.HasSequence("overlay", "build-valid-{0}".F(tileset)))
-			//	buildOk = map.Rules.Sequences.GetSequence("overlay", "build-valid-{0}".F(tileset)).GetSprite(0);
-			//else
-			//	buildOk = map.Rules.Sequences.GetSequence("overlay", "build-valid").GetSprite(0);
-			//buildBlocked = map.Rules.Sequences.GetSequence("overlay", "build-invalid").GetSprite(0);
+			if (map.Rules.Sequences.HasSequence("overlay", "build-valid-{0}".F(tileset)))
+				buildOk = map.Rules.Sequences.GetSequence("overlay", "build-valid-{0}".F(tileset)).GetSprite(0);
+			else
+				buildOk = map.Rules.Sequences.GetSequence("overlay", "build-valid").GetSprite(0);
+			buildBlocked = map.Rules.Sequences.GetSequence("overlay", "build-invalid").GetSprite(0);
 		}
 
 		PlaceBuildingCellType MakeCellType(bool valid, bool lineBuild = false)

@@ -4,6 +4,7 @@
 	ScreenMap:
 	ActorMap:
 	Selection:
+	ControlGroups:
 	TimeLimitManager:
 	LoadWidgetAtGameStart:
 	Inherits: ^TerrainRenderer
@@ -137,6 +138,20 @@ World:
 	LoadWidgetAtGameStart:
 		ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
 	ResourceRenderer:
+		ResourceTypes:
+			Tiberium:
+				Sequences: water1
+				Palette: terrain
+				Name: Water
+			BlueTiberium:
+				Sequences: taelon1
+				Palette: terrain
+				Name: Taelon
+	ColorPickerManager:
+		PreviewActor: freighter.colorpicker
+		PresetHues: 0, 0.125, 0.185, 0.4, 0.54, 0.66, 0.79, 0.875, 0, 0.14, 0.23, 0.43, 0.54, 0.625, 0.77, 0.85
+		PresetSaturations: 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.9, 0.4, 0.5, 0.4, 0.5, 0.4, 0.5, 0.4, 0.5
+	HierarchicalPathFinderOverlay:
 
 EditorWorld:
 	Inherits: ^BaseWorld
@@ -147,3 +162,5 @@ EditorWorld:
 	EditorActionManager:
 	LoadWidgetAtGameStart:
 	MapOptions:
+	BuildableTerrainOverlay:
+		AllowedTerrainTypes: Clear, Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase

@@ -2,13 +2,12 @@ Background@ASSETBROWSER_PANEL:
 	Logic: AssetBrowserLogic
 	X: (WINDOW_RIGHT - WIDTH) / 2
 	Y: (WINDOW_BOTTOM - HEIGHT) / 2
-	Width: 700
-	Height: 500
+	Width: 900
+	Height: 600
 	Children:
 		LogicTicker@ANIMATION_TICKER:
-		ColorPreviewManager@COLOR_MANAGER:
 		Label@ASSETBROWSER_TITLE:
-			Y: 21
+			Y: 16
 			Width: PARENT_RIGHT
 			Height: 25
 			Font: Bold
@@ -17,7 +16,7 @@ Background@ASSETBROWSER_PANEL:
 		Label@SOURCE_SELECTOR_DESC:
 			X: 20
 			Y: 36
-			Width: 160
+			Width: 195
 			Height: 25
 			Font: TinyBold
 			Align: Center
@@ -25,22 +24,21 @@ Background@ASSETBROWSER_PANEL:
 		DropDownButton@SOURCE_SELECTOR:
 			X: 20
 			Y: 60
-			Width: 160
+			Width: 195
 			Height: 25
 			Font: Bold
 			Text: Folders
 		ScrollPanel@ASSET_LIST:
 			X: 20
 			Y: 90
-			Width: 160
-			Height: 275
+			Width: 195
+			Height: PARENT_BOTTOM - 225
 			CollapseHiddenChildren: True
 			Children:
 				ScrollItem@ASSET_TEMPLATE:
 					Width: PARENT_RIGHT - 27
 					Height: 25
 					X: 2
-					Y: 0
 					Visible: false
 					EnableChildMouseOver: True
 					Children:
@@ -52,18 +50,48 @@ Background@ASSETBROWSER_PANEL:
 							TooltipTemplate: SIMPLE_TOOLTIP
 		Label@FILENAME_DESC:
 			X: 20
-			Y: 371
-			Width: 160
+			Y: 471
+			Width: 195
 			Height: 25
 			Font: TinyBold
 			Align: Center
 			Text: Filter by name
 		TextField@FILENAME_INPUT:
 			X: 20
-			Y: 395
-			Width: 160
+			Y: PARENT_BOTTOM - 105
+			Width: 195
 			Height: 25
 			Type: Filename
+		Label@SPRITE_SCALE:
+			X: PARENT_RIGHT - WIDTH - 440
+			Y: 60
+			Width: 40
+			Height: 25
+			Font: Bold
+			Align: Left
+			Text: Scale:
+		Slider@SPRITE_SCALE_SLIDER:
+			X: PARENT_RIGHT - WIDTH - 330
+			Y: 62
+			Width: 100
+			Height: 20
+			MinimumValue: 0.5
+			MaximumValue: 4
+		Label@MODEL_SCALE:
+			X: PARENT_RIGHT - WIDTH - 440
+			Y: 60
+			Width: 40
+			Height: 25
+			Font: Bold
+			Align: Left
+			Text: Scale:
+		Slider@MODEL_SCALE_SLIDER:
+			X: PARENT_RIGHT - WIDTH - 330
+			Y: 62
+			Width: 100
+			Height: 20
+			MinimumValue: 10
+			MaximumValue: 64
 		Label@PALETTE_DESC:
 			X: PARENT_RIGHT - WIDTH - 270
 			Y: 60
@@ -90,10 +118,10 @@ Background@ASSETBROWSER_PANEL:
 					Width: PARENT_RIGHT - 35
 					Height: PARENT_BOTTOM - 12
 		Background@SPRITE_BG:
-			X: 190
+			X: 226
 			Y: 90
-			Width: 490
-			Height: 330
+			Width: PARENT_RIGHT - 226 - 20
+			Height: PARENT_BOTTOM - 170
 			Background: dialog3
 			Children:
 				Sprite@SPRITE:
@@ -109,20 +137,17 @@ Background@ASSETBROWSER_PANEL:
 					Palette: colorpicker
 					PlayerPalette: colorpicker
 				Label@ERROR:
-					Y: 1
-					X: 5
-					Width: 490 - 10
-					Height: 330
+					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM
 					Align: Center
 					Visible: false
 					Text: Error displaying file. See assetbrowser.log for details.
 		Container@FRAME_SELECTOR:
-			X: 190
-			Y: 425
+			X: 226
+			Y: PARENT_BOTTOM - 75
+			Width: PARENT_RIGHT - 226
 			Children:
 				Button@BUTTON_PREV:
-					X: 0
-					Y: 0
 					Width: 26
 					Height: 26
 					Key: LEFT
@@ -134,7 +159,6 @@ Background@ASSETBROWSER_PANEL:
 							ImageName: prev
 				Button@BUTTON_PLAY:
 					X: 35
-					Y: 0
 					Width: 26
 					Height: 26
 					Key: SPACE
@@ -147,7 +171,6 @@ Background@ASSETBROWSER_PANEL:
 				Button@BUTTON_PAUSE:
 					Visible: false
 					X: 35
-					Y: 0
 					Width: 26
 					Height: 26
 					Key: SPACE
@@ -159,7 +182,6 @@ Background@ASSETBROWSER_PANEL:
 							ImageName: pause
 				Button@BUTTON_STOP:
 					X: 70
-					Y: 0
 					Width: 26
 					Height: 26
 					Key: RETURN
@@ -171,7 +193,6 @@ Background@ASSETBROWSER_PANEL:
 							ImageName: stop
 				Button@BUTTON_NEXT:
 					X: 105
-					Y: 0
 					Width: 26
 					Height: 26
 					Key: RIGHT
@@ -184,22 +205,21 @@ Background@ASSETBROWSER_PANEL:
 				Slider@FRAME_SLIDER:
 					X: 140
 					Y: 3
-					Width: 300
+					Width: PARENT_RIGHT - 140 - 85
 					Height: 20
 					MinimumValue: 0
 				Label@FRAME_COUNT:
-					X: 445
-					Y: 1
-					Width: 40
+					X: PARENT_RIGHT - WIDTH + 5
+					Y: 0
+					Width: 85
 					Height: 25
 					Font: TinyBold
 					Align: Left
 		Container@VOXEL_SELECTOR:
-			X: 60
-			Y: 425
+			X: 226
+			Y: PARENT_BOTTOM - 75
 			Children:
 				Label@ROLL:
-					X: 140
 					Y: 1
 					Width: 40
 					Height: 25
@@ -207,14 +227,14 @@ Background@ASSETBROWSER_PANEL:
 					Align: Left
 					Text: Roll
 				Slider@ROLL_SLIDER:
-					X: 165
+					X: 30
 					Y: 3
 					Width: 100
 					Height: 20
 					MinimumValue: 1
 					MaximumValue: 1023
 				Label@PITCH:
-					X: 310
+					X: 150
 					Y: 1
 					Width: 40
 					Height: 25
@@ -222,14 +242,14 @@ Background@ASSETBROWSER_PANEL:
 					Align: Left
 					Text: Pitch
 				Slider@PITCH_SLIDER:
-					X: 335
+					X: 190
 					Y: 3
 					Width: 100
 					Height: 20
 					MinimumValue: 1
 					MaximumValue: 1023
 				Label@YAW:
-					X: 480
+					X: 305
 					Y: 1
 					Width: 40
 					Height: 25
@@ -237,7 +257,7 @@ Background@ASSETBROWSER_PANEL:
 					Align: Left
 					Text: Yaw
 				Slider@YAW_SLIDER:
-					X: 505
+					X: 335
 					Y: 3
 					Width: 100
 					Height: 20

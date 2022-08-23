@@ -186,6 +186,30 @@ reload-icon:
 		disabled-10: 187, 34, 16, 16
 		disabled-11: 204, 34, 16, 16
 
+checkmark-tick:
+	Inherits: ^Chrome
+	Regions:
+		checked: 972, 17, 16, 16
+		checked-pressed: 989, 17, 16, 16
+		checked-disabled: 989, 17, 16, 16
+		unchecked: 0, 0, 0, 0
+		unchecked-pressed: 989, 17, 16, 16
+
+checkmark-highlighted-tick:
+	Inherits: checkmark-tick
+
+checkmark-cross:
+	Inherits: ^Chrome
+	Regions:
+		checked: 972, 0, 16, 16
+		checked-pressed: 989, 0, 16, 16
+		checked-disabled: 989, 0, 16, 16
+		unchecked: 0, 0, 0, 0
+		unchecked-pressed: 989, 0, 16, 16
+
+checkmark-highlighted-cross:
+	Inherits: checkmark-cross
+
 music:
 	Inherits: ^Glyphs
 	Regions:
@@ -439,6 +463,7 @@ sidebar-bits:
 sidebar-fguard:
 	Inherits: ^Chrome
 	Regions:
+		radar: 290, 67, 222, 222
 		background-top: 0, 167, 238, 329
 		background-iconrow: 0, 495, 238, 49
 		background-bottom: 0, 546, 238, 6
@@ -505,6 +530,7 @@ command-button-fguard-highlighted-disabled:
 sidebar-imperium:
 	Inherits: ^Chrome
 	Regions:
+		radar: 290, 67, 222, 222
 		background-top: 274, 167, 238, 329
 		background-iconrow: 274, 495, 238, 49
 		background-bottom: 274, 546, 238, 6

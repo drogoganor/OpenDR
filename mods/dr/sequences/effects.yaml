@@ -29,12 +29,6 @@ aliensplat:
 		Length: 12
 		Tick: 80
 
-bloody1:
-	idle:
-		Start: 0
-		Length: 30
-		Tick: 60
-
 # Explosions
 
 explosion:
@@ -66,8 +60,6 @@ explosion:
 	ecsmolg5: ecsmolg5 # Unused, black smoke
 	ecsmosm0: ecsmosm0 # Unused, smoke puff, bad
 	ecsmosm1: ecsmosm1 # Unused, smoke puff, bad
-	efgebex0: efgebex0 # Unused, blue swirly
-	eifurex0: eifurex0 # Fury
 	eoampex0: eoampex0 # Unused, amper bolt explosion
 	eoblalg0: eoblalg0 # Unused, cool explosion !!!
 	eoblalg1: eoblalg1
@@ -118,9 +110,6 @@ explosion:
 	eoiarex1: eoiarex1 # scarab explosion
 		BlendMode: Subtractive
 	eoiarex2: eoiarex2 # scarab explosion
-	eoiarex4: eoiarex4 # scarab explosion
-	eoiarex5: eoiarex5 # Hades
-	eoiempw0: eoiempw0 # Unused, teleport effect
 	eolasex0: eolasex0
 	eolasex1: eolasex1
 		Offset: 13, -10
@@ -144,8 +133,6 @@ explosion:
 	eoncnex0: eoncnex0 # cyclone explosion
 	eoncnpr1: eoncnpr1 # Small blue spark projectile that's good as an explosion too
 	eonukex0: eonukex0 # Unused, stumpy mushroom cloud
-	eoomktr0: eoomktr0 # small blue lightning ball
-		BlendMode: Multiplicative
 	eooutex0: eooutex0 # outrider
 	eopamex0: eopamex0 # amper explosion
 	eoplsex0: eoplsex0 # bion
@@ -229,20 +216,6 @@ eoiarpr0: # cool fireball
 		Length: 5
 		Tick: 40
 
-eoiarpr1: # Hades
-	idle:
-		Start: 0
-		Length: 3
-		Facings: 24
-		Tick: 40
-
-eoifury1: # Fury
-	idle:
-		Start: 0
-		Length: 4
-		Facings: 16
-		Tick: 40
-
 eolaspr0: # Animated dual red bolt
 	idle:
 		Start: 0
@@ -272,17 +245,6 @@ eolaspr3: # Large red bolt
 eolaspr4: # Non-Animated dual red bolt, stubby
 	idle:
 		Start: 0
-		Facings: 24
-
-eolgtpr1: # Unused gemini tank
-	idle:
-		Start: 0
-		Facings: 24
-
-eolgtpr2: # Gemini tank
-	idle:
-		Start: 0
-		Length: 1
 		Facings: 24
 
 eomadpr0: # MAD projectile

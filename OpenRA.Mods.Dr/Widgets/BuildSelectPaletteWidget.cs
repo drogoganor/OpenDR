@@ -417,17 +417,17 @@ namespace OpenRA.Mods.Dr.Widgets
 			// Overlays
 			foreach (var icon in icons.Values)
 			{
-				var total = icon.Queued.Count;
-				if (total > 0)
-				{
-					var first = icon.Queued[0];
+				//var total = icon.Queued.Count;
+				//if (total > 0)
+				//{
+				//	var first = icon.Queued[0];
 					//var waiting = !CurrentQueue.IsProducing(first) && !first.Done;
 					//if (first.Done)
 					//{
-						if (ReadyTextStyle == ReadyTextStyleOptions.Solid || orderManager.LocalFrameNumber * worldRenderer.World.Timestep / 360 % 2 == 0)
-							overlayFont.DrawTextWithContrast(ReadyText, icon.Pos + readyOffset, Color.White, Color.Black, 1);
-						else if (ReadyTextStyle == ReadyTextStyleOptions.AlternatingColor)
-							overlayFont.DrawTextWithContrast(ReadyText, icon.Pos + readyOffset, ReadyTextAltColor, Color.Black, 1);
+						//if (ReadyTextStyle == ReadyTextStyleOptions.Solid || orderManager.LocalFrameNumber * worldRenderer.World.Timestep / 360 % 2 == 0)
+						//	overlayFont.DrawTextWithContrast(ReadyText, icon.Pos + readyOffset, Color.White, Color.Black, 1);
+						//else if (ReadyTextStyle == ReadyTextStyleOptions.AlternatingColor)
+						//	overlayFont.DrawTextWithContrast(ReadyText, icon.Pos + readyOffset, ReadyTextAltColor, Color.Black, 1);
 					//}
 					//else if (first.Paused)
 					//	overlayFont.DrawTextWithContrast(HoldText,
@@ -446,7 +446,7 @@ namespace OpenRA.Mods.Dr.Widgets
 					//	overlayFont.DrawTextWithContrast(total.ToString(),
 					//		icon.Pos + queuedOffset,
 					//		Color.White, Color.Black, 1);
-				}
+				//}
 			}
 		}
 

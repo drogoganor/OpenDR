@@ -1,8 +1,12 @@
 Container@CHAT_CONTAINER:
 	Y: 20
 	Width: PARENT_RIGHT
-	Height: PARENT_BOTTOM - 100
+	Height: PARENT_BOTTOM - 105
 	Logic: IngameChatLogic
+		Templates:
+			Chat: CHAT_LINE_TEMPLATE
+			System: SYSTEM_LINE_TEMPLATE
+			Mission: CHAT_LINE_TEMPLATE
 	Children:
 		Container@CHAT_CHROME:
 			X: 20
@@ -15,6 +19,9 @@ Container@CHAT_CONTAINER:
 					Height: 25
 					Text: Team
 					Font: Bold
+					Key: ToggleChatMode
+					TooltipText: Toggle chat mode
+					TooltipContainer: TOOLTIP_CONTAINER
 				TextField@CHAT_TEXTFIELD:
 					X: 55
 					Y: PARENT_BOTTOM - HEIGHT
@@ -25,20 +32,3 @@ Container@CHAT_CONTAINER:
 					Height: PARENT_BOTTOM - 30
 					TopBottomSpacing: 3
 					ItemSpacing: 2
-					Children:
-						Container@CHAT_TEMPLATE:
-							X: 2
-							Width: PARENT_RIGHT - 27
-							Height: 16
-							Children:
-								Label@NAME:
-									X: 3
-									Width: 50
-									Height: 16
-									Shadow: True
-								Label@TEXT:
-									X: 12
-									Width: PARENT_RIGHT - 17
-									Height: 16
-									WordWrap: true
-									Shadow: True

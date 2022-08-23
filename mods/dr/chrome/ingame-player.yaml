@@ -1,7 +1,16 @@
 Container@PLAYER_WIDGETS:
+	Logic: LoadIngameChatLogic
 	Children:
-		LogicKeyListener@CONTROLGROUP_KEYHANDLER:
-			Logic: ControlGroupLogic
+		Container@CHAT_ROOT:
+		LogicKeyListener@PLAYER_KEYHANDLER:
+			Logic: RemoveFromControlGroupHotkeyLogic
+				RemoveFromControlGroupKey: RemoveFromControlGroup
+		ControlGroups@CONTROLGROUPS:
+			SelectGroupKeyPrefix: ControlGroupSelect
+			CreateGroupKeyPrefix: ControlGroupCreate
+			AddToGroupKeyPrefix: ControlGroupAddTo
+			CombineWithGroupKeyPrefix: ControlGroupCombineWith
+			JumpToGroupKeyPrefix: ControlGroupJumpTo
 		LogicTicker@SIDEBAR_TICKER:
 		Container@SUPPORT_POWERS:
 			Logic: SupportPowerBinLogic
@@ -51,7 +60,7 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 26
 					VisualHeight: 0
-					Background: command-button
+					Background: sidebar-button
 					Key: AttackMove
 					DisableKeySound: true
 					TooltipText: Attack Move
@@ -70,10 +79,10 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 26
 					VisualHeight: 0
-					Background: command-button
+					Background: sidebar-button
 					DisableKeySound: true
 					TooltipText: Force Move
-					TooltipDesc: Selected units will move to the desired location\n - Default activity for the target is suppressed\n - Vehicles will attempt to crush enemies at the target location\n - Units entering transports will consider nearby alternatives\n - Chrono Tanks will teleport towards the target location\n\nLeft-click icon then right-click on target.\nHold {(Alt)} to activate temporarily while commanding units.
+					TooltipDesc: Selected units will move to the desired location\n - Default activity for the target is suppressed\n - Vehicles will attempt to crush enemies at the target location\n - Helicopters will land at the target location\n - Chrono Tanks will teleport towards the target location\n\nLeft-click icon then right-click on target.\nHold {(Alt)} to activate temporarily while commanding units.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
@@ -88,10 +97,10 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 26
 					VisualHeight: 0
-					Background: command-button
+					Background: sidebar-button
 					DisableKeySound: true
 					TooltipText: Force Attack
-					TooltipDesc: Selected units will attack the targeted unit or location\nignoring their default activity for the target.\n\nLeft-click icon then right-click on target.\nHold {(Ctrl)} to activate temporarily while commanding units.
+					TooltipDesc: Selected units will attack the targeted unit or location\n - Default activity for the target is suppressed\n - Allows targeting of own or ally forces\n - Long-range artillery units will always target the\n   location, ignoring units and buildings\n\nLeft-click icon then right-click on target.\nHold {(Ctrl)} to activate temporarily while commanding units.
 					TooltipContainer: TOOLTIP_CONTAINER
 					TooltipTemplate: BUTTON_WITH_DESC_HIGHLIGHT_TOOLTIP
 					Children:
@@ -106,7 +115,7 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 26
 					VisualHeight: 0
-					Background: command-button
+					Background: sidebar-button
 					Key: Guard
 					DisableKeySound: true
 					TooltipText: Guard
@@ -124,7 +133,7 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 26
 					VisualHeight: 0
-					Background: command-button
+					Background: sidebar-button
 					Key: Deploy
 					DisableKeyRepeat: true
 					DisableKeySound: true
@@ -143,7 +152,7 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 26
 					VisualHeight: 0
-					Background: command-button
+					Background: sidebar-button
 					Key: Scatter
 					DisableKeyRepeat: true
 					DisableKeySound: true
@@ -162,7 +171,7 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 26
 					VisualHeight: 0
-					Background: command-button
+					Background: sidebar-button
 					Key: Stop
 					DisableKeyRepeat: true
 					DisableKeySound: true
@@ -181,7 +190,7 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 26
 					VisualHeight: 0
-					Background: command-button
+					Background: sidebar-button
 					DisableKeySound: true
 					TooltipText: Waypoint Mode
 					TooltipDesc: Use Waypoint Mode to give multiple linking commands\nto the selected units. Units will execute the commands\nimmediately upon receiving them.\n\nLeft-click icon then give commands in the game world.\nHold {(Shift)} to activate temporarily while commanding units.
@@ -205,7 +214,7 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 26
 					VisualHeight: 0
-					Background: command-button
+					Background: sidebar-button
 					Key: StanceAttackAnything
 					DisableKeyRepeat: true
 					DisableKeySound: true
@@ -224,7 +233,7 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 26
 					VisualHeight: 0
-					Background: command-button
+					Background: sidebar-button
 					Key: StanceDefend
 					DisableKeyRepeat: true
 					DisableKeySound: true
@@ -243,7 +252,7 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 26
 					VisualHeight: 0
-					Background: command-button
+					Background: sidebar-button
 					Key: StanceReturnFire
 					DisableKeyRepeat: true
 					DisableKeySound: true
@@ -262,7 +271,7 @@ Container@PLAYER_WIDGETS:
 					Width: 34
 					Height: 26
 					VisualHeight: 0
-					Background: command-button
+					Background: sidebar-button
 					Key: StanceHoldFire
 					DisableKeyRepeat: true
 					DisableKeySound: true
@@ -275,12 +284,32 @@ Container@PLAYER_WIDGETS:
 							Y: 5
 							ImageCollection: stance-icons
 							ImageName: hold-fire
+		Container@MUTE_INDICATOR:
+			Logic: MuteIndicatorLogic
+			X: WINDOW_RIGHT - WIDTH - 260
+			Y: 10
+			Width: 200
+			Height: 25
+			Children:
+				Image@ICON:
+					X: PARENT_RIGHT - WIDTH
+					Y: 1
+					Width: 24
+					Height: 24
+					ImageCollection: sidebar-bits
+					ImageName: indicator-muted
+				Label@LABEL:
+					Width: PARENT_RIGHT - 30
+					Height: 25
+					Align: Right
+					Text: Audio Muted
+					Contrast: true
 		Image@SIDEBAR_BACKGROUND_TOP:
 			Logic: AddFactionSuffixLogic
 			X: WINDOW_RIGHT - 250
 			Y: 10
 			Width: 238
-			Height: 291
+			Height: 262
 			ImageCollection: sidebar
 			ImageName: background-top
 			ClickThrough: false
@@ -294,7 +323,7 @@ Container@PLAYER_WIDGETS:
 							Logic: BeaconOrderButtonLogic, AddFactionSuffixLogic
 							Width: 28
 							Height: 28
-							Background: command-button
+							Background: sidebar-button
 							Key: PlaceBeacon
 							TooltipText: Place Beacon
 							TooltipContainer: TOOLTIP_CONTAINER
@@ -309,7 +338,7 @@ Container@PLAYER_WIDGETS:
 							X: 32
 							Width: 28
 							Height: 28
-							Background: command-button
+							Background: sidebar-button
 							Key: Sell
 							TooltipText: Sell
 							TooltipContainer: TOOLTIP_CONTAINER
@@ -324,7 +353,7 @@ Container@PLAYER_WIDGETS:
 							X: 64
 							Width: 28
 							Height: 28
-							Background: command-button
+							Background: sidebar-button
 							Key: PowerDown
 							TooltipText: Power Down
 							TooltipContainer: TOOLTIP_CONTAINER
@@ -339,7 +368,7 @@ Container@PLAYER_WIDGETS:
 							X: 96
 							Width: 28
 							Height: 28
-							Background: command-button
+							Background: sidebar-button
 							Key: Repair
 							TooltipText: Repair
 							TooltipContainer: TOOLTIP_CONTAINER
@@ -349,29 +378,12 @@ Container@PLAYER_WIDGETS:
 									X: 6
 									Y: 6
 									ImageCollection: order-icons
-						MenuButton@DEBUG_BUTTON:
-							Logic: AddFactionSuffixLogic
-							X: 128
-							Width: 28
-							Height: 28
-							Background: command-button
-							Key: escape Shift
-							TooltipText: Debug Menu
-							TooltipContainer: TOOLTIP_CONTAINER
-							DisableWorldSounds: true
-							VisualHeight: 0
-							Children:
-								Image@ICON:
-									X: 6
-									Y: 6
-									ImageCollection: order-icons
-									ImageName: debug
 						MenuButton@OPTIONS_BUTTON:
 							Logic: AddFactionSuffixLogic
 							X: 192
 							Width: 28
 							Height: 28
-							Background: command-button
+							Background: sidebar-button
 							Key: escape
 							TooltipText: Options
 							TooltipContainer: TOOLTIP_CONTAINER
@@ -383,25 +395,29 @@ Container@PLAYER_WIDGETS:
 									Y: 6
 									ImageCollection: order-icons
 									ImageName: options
-				Container@RADAR:
-					Logic: IngameRadarDisplayLogic
+				Image@RADAR:
+					Logic: AddFactionSuffixLogic, IngameRadarDisplayLogic
+					X: 8
+					Y: 40
+					ImageCollection: sidebar
+					ImageName: radar
 					Children:
 						LogicTicker@RADAR_TICKER:
 						ColorBlock@RADAR_FADETOBLACK:
-							X: 8
-							Y: 40
 							Width: 222
 							Height: 222
 						Radar@RADAR_MINIMAP:
 							WorldInteractionController: INTERACTION_CONTROLLER
-							X: 9
-							Y: 41
+							X: 1
+							Y: 1
 							Width: 220
 							Height: 220
+							SoundUp: RadarUp
+							SoundDown: RadarDown
 							Children:
-						VqaPlayer@PLAYER:
-							X: 8
-							Y: 40
+						VideoPlayer@PLAYER:
+							X: 1
+							Y: 1
 							Width: 220
 							Height: 220
 							Skippable: false
@@ -583,7 +599,7 @@ Container@PLAYER_WIDGETS:
 						Background@ICON_TEMPLATE:
 							Width: 64
 							Height: 49
-							Background: command-button
+							Background: sidebar-button
 							Visible: false
 				ProductionPalette@PRODUCTION_PALETTE: # the actual building icons to click on
 					X: 40
@@ -666,3 +682,16 @@ Container@PLAYER_WIDGETS:
 					X: 5
 					Y: 0
 					Text: Cancel
+		Container@HPF_OVERLAY:
+			Logic: HierarchicalPathFinderOverlayLogic
+			X: WINDOW_RIGHT - WIDTH - 260
+			Y: 40
+			Width: 150
+			Height: 25
+			Children:
+				DropDownButton@HPF_OVERLAY_LOCOMOTOR:
+					Width: PARENT_RIGHT
+					Height: PARENT_BOTTOM
+					Text: Select Locomotor
+					Font: Regular
+

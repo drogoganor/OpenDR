@@ -56,7 +56,7 @@ Container@SKIRMISH_STATS:
 			X: 20
 			Y: 105
 			Width: 482
-			Height: 265
+			Height: 280
 			ItemSpacing: 5
 			Children:
 				ScrollItem@TEAM_TEMPLATE:
@@ -107,11 +107,13 @@ Container@SKIRMISH_STATS:
 							Y: 5
 							Width: 32
 							Height: 16
-						Label@FACTION:
+						LabelWithTooltip@FACTION:
 							X: 264
 							Width: 86
 							Height: 25
 							Shadow: True
+							TooltipContainer: TOOLTIP_CONTAINER
+							TooltipTemplate: SIMPLE_TOOLTIP
 						Label@SCORE:
 							X: 360
 							Width: 75
