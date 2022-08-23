@@ -250,38 +250,39 @@ SoundFormats: Aud, Wav
 
 SpriteFormats: DrSpr, DrTil, DrCrs, ShpTD, TmpRA, TmpTD, ShpTS, PngSheet
 
+TerrainFormat: DefaultTerrain
+
 SpriteSequenceFormat: DrTilesetSpecificSpriteSequence
 
 ModelSequenceFormat: PlaceholderModelSequence
 
 GameSpeeds:
-	slower:
-		Name: Slower
-		Timestep: 65
-		OrderLatency: 1
-	slow:
-		Name: Slow
-		Timestep: 50
-		OrderLatency: 1
-	default:
-		Name: Normal
-		Timestep: 40
-		OrderLatency: 1
-	fast:
-		Name: Fast
-		Timestep: 34
-		OrderLatency: 2
-	faster:
-		Name: Faster
-		Timestep: 28
-		OrderLatency: 4
-	fastest:
-		Name: Fastest
-		Timestep: 22
-		OrderLatency: 6
-
-ColorValidator:
-	TeamColorPresets: ffc9ca, f50606, 98331f, f57606, f7bb06, f861a4, da06f3, ddb8ff, 06f739, cef7b2, 200738, 280df6, 2f86f2, 76d2f8, 34ba93, 000000
+	DefaultSpeed: default
+	Speeds:
+		slower:
+			Name: Slower
+			Timestep: 65
+			OrderLatency: 1
+		slow:
+			Name: Slow
+			Timestep: 50
+			OrderLatency: 1
+		default:
+			Name: Normal
+			Timestep: 40
+			OrderLatency: 1
+		fast:
+			Name: Fast
+			Timestep: 34
+			OrderLatency: 2
+		faster:
+			Name: Faster
+			Timestep: 28
+			OrderLatency: 4
+		fastest:
+			Name: Fastest
+			Timestep: 22
+			OrderLatency: 6
 
 ModContent:
 	InstallPromptMessage: OpenRA Dark Reign requires artwork and audio from the Dark Reign demo.\n\nClick 'Quick Install' to automatically download and install this content.

@@ -2,6 +2,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenRA.Mods.Dr", "OpenRA.Mods.Dr\OpenRA.Mods.Dr.csproj", "{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}"
+EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenRA.Game", "engine\OpenRA.Game\OpenRA.Game.csproj", "{0DFB103F-2962-400F-8C6D-E2C28CCBA633}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenRA.Mods.Common", "engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj", "{FE6C8CC0-2F07-442A-B29F-17617B3B7FC6}"
@@ -13,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenRA.Launcher", "engine\OpenRA.Launcher\OpenRA.Launcher.csproj", "{BDB0A758-C2E3-4C0A-B1BF-1F90DA295E41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenRA.Mods.Dr", "OpenRA.Mods.Dr\OpenRA.Mods.Dr.csproj", "{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenRA.Utility", "engine\OpenRA.Utility\OpenRA.Utility.csproj", "{F9445C7A-EDE3-4DF5-A9C1-C43AFDB0984B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +48,12 @@ Global
 		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Release-x86|Any CPU.ActiveCfg = Release|Any CPU
 		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Release-x86|Any CPU.Build.0 = Release|Any CPU
+		{F9445C7A-EDE3-4DF5-A9C1-C43AFDB0984B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9445C7A-EDE3-4DF5-A9C1-C43AFDB0984B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9445C7A-EDE3-4DF5-A9C1-C43AFDB0984B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9445C7A-EDE3-4DF5-A9C1-C43AFDB0984B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9445C7A-EDE3-4DF5-A9C1-C43AFDB0984B}.Release-x86|Any CPU.ActiveCfg = Release|Any CPU
+		{F9445C7A-EDE3-4DF5-A9C1-C43AFDB0984B}.Release-x86|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

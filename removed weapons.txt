@@ -1,0 +1,26 @@
+	Projectile: ShockWaveProjectile
+		Inaccuracy: 0c0
+		Weapon: ShockWaveShock
+		Speed: 220
+		ExplosionInterval: 4
+		ExplodeUnderThisAltitude: -9999
+		Blockable: False
+		Image: bloody1
+		TrailImage: bloody1
+		KillProjectilesWhenReachedTargetLocation: false #try putting true
+		Splay: 5
+		NumProjectiles: 15
+		SpreadUntilDistance: 5c0
+		
+		
+	Projectile: VortexProjectile
+		Inaccuracy: 0c0
+		Weapon: TemporalRiftVortexBolt
+		Speed: 350
+		ExplosionInterval: 4
+		ExplodeUnderThisAltitude: -9999
+		Blockable: False
+		Image: bloody1
+		TrailImage: bloody1
+		KillProjectilesWhenReachedTargetLocation: False
+		NumProjectiles: 4
