@@ -105,7 +105,7 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Sea
-			ShoreMatch@se-nw-connector
+			ShoreMatch@se-nw-connector:
 				Match: Land
 				SetType: 25
 				Neighbors:
@@ -118,7 +118,7 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Sea
-			ShoreMatch@sw-ne-connector
+			ShoreMatch@sw-ne-connector:
 				Match: Sea
 				SetType: 20
 				Neighbors:

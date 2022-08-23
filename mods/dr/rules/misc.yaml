@@ -75,6 +75,7 @@ temporalriftspewer:
 	RenderSpritesEditorOnly:
 		Image: mpspawn
 	AttackFrontal:
+		FacingTolerance: 0
 	Armament:
 		LocalOffset: 0,0,112
 		Weapon: TemporalRiftVortexWeapon

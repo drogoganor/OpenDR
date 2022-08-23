@@ -2,8 +2,8 @@ Player:
 	-ConquestVictoryConditions:
 
 World:
-	-SpawnMPUnits:
-	-MPStartLocations:
+	-SpawnStartingUnits:
+	-MapStartingLocations:
 	MusicPlaylist:
 		DisableWorldSounds: true
 	LuaScript:

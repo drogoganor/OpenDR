@@ -259,8 +259,8 @@ TerroristWaterUnit.Constructing:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Selectable:
-		Bounds: 48,48,0,0
-		DecorationBounds: 48,48,0,0
+		Bounds: 2048, 2048, 0, 0
+		DecorationBounds: 2048, 2048, 0, 0
 	RevealsShroud:
 		Range: 9c0
 	#WithIdleOverlay@LAYER1:
@@ -312,8 +312,8 @@ TerroristConstructionFacility.Constructing:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Selectable:
-		Bounds: 48,48,0,0
-		DecorationBounds: 48,48,0,0
+		Bounds: 2048, 2048, 0, 0
+		DecorationBounds: 2048, 2048, 0, 0
 	RevealsShroud:
 		Range: 9c0
 	#WithIdleOverlay@LAYER1:
@@ -359,8 +359,8 @@ TerroristFieldHospital.Constructing:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Selectable:
-		Bounds: 48,48,0,0
-		DecorationBounds: 48,48,0,0
+		Bounds: 2048, 2048, 0, 0
+		DecorationBounds: 2048, 2048, 0, 0
 	RevealsShroud:
 		Range: 9c0
 	#WithIdleOverlay@LAYER1:
@@ -406,8 +406,8 @@ TerroristRepairBay.Constructing:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Selectable:
-		Bounds: 48,48,0,0
-		DecorationBounds: 48,48,0,0
+		Bounds: 2048, 2048, 0, 0
+		DecorationBounds: 2048, 2048, 0, 0
 	RevealsShroud:
 		Range: 9c0
 	#WithIdleOverlay@LAYER1:
@@ -453,8 +453,8 @@ TerroristRearmingDeck.Constructing:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Selectable:
-		Bounds: 48,48,0,0
-		DecorationBounds: 48,48,0,0
+		Bounds: 2048, 2048, 0, 0
+		DecorationBounds: 2048, 2048, 0, 0
 	RevealsShroud:
 		Range: 9c0
 	#WithIdleOverlay@LAYER1:

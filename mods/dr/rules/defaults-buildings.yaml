@@ -188,8 +188,8 @@
 			TopLeft: -2048, -2048
 			BottomRight: 2048, 2048
 	Selectable:
-		Bounds: 96,96,0,0
-		DecorationBounds: 96,96,0,0
+		Bounds: 4096, 4096, 0, 0
+		DecorationBounds: 4096, 4096, 0, 0
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 0
@@ -325,8 +325,8 @@
 		Dimensions: 5,4
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 120,96,0,0
-		DecorationBounds: 120,96,0,0
+		Bounds: 5120, 4096, 0, 0
+		DecorationBounds: 5120, 4096, 0, 0
 	Targetable:
 		TargetTypes: Ground, C4, DetonateAttack, Structure, SpyInfiltrate
 
@@ -417,8 +417,8 @@
 		Dimensions: 5,5
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 120,120,0,0
-		DecorationBounds: 120,120,0,0
+		Bounds: 5120, 5120, 0, 0
+		DecorationBounds: 5120, 5120, 0, 0
 	Valued:
 		Cost: 2200
 	Armor:
@@ -511,8 +511,8 @@
 		Footprint: xx xx
 		Dimensions: 2,2
 	Selectable:
-		Bounds: 48,48,0,0
-		DecorationBounds: 48,48,0,0
+		Bounds: 2048, 2048, 0, 0
+		DecorationBounds: 2048, 2048, 0, 0
 	RevealsShroud:
 		Range: 9c0
 	WithIdleOverlay@LAYER1:

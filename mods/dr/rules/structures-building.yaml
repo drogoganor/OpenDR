@@ -19,8 +19,8 @@ Power.Constructing:
 	Inherits@shape: ^3x4Shape
 	SelectionDecorations:
 	Selectable:
-		Bounds: 72,84,0,-12
-		DecorationBounds: 72,84,0,-12
+		Bounds: 3072, 3584, 0, -512
+		DecorationBounds: 3072, 3584, 0, -512
 	Building:
 		Footprint: _== xxx =xx ===
 		Dimensions: 3,4
@@ -66,8 +66,8 @@ WaterLaunchPad.Constructing:
 	Inherits@shape: ^4x3Shape
 	SelectionDecorations:
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Building:
 		Footprint: _xx_ xxxx ==x=
 		Dimensions: 4,3
@@ -281,8 +281,8 @@ AssemblyPlant.cyborg.Constructing:
 		Dimensions: 5,5
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 120,120,0,0
-		DecorationBounds: 120,120,0,0
+		Bounds: 5120, 5120, 0, 0
+		DecorationBounds: 5120, 5120, 0, 0
 	HitShape:
 		Type: Rectangle
 			TopLeft: -2560, -2560
@@ -429,8 +429,8 @@ HeavyRailTurret.Constructing:
 		Steps: 20
 		Becomes: HeavyRailTurret
 	Selectable:
-		Bounds: 72,72,0,0
-		DecorationBounds: 72,72,0,0
+		Bounds: 3072, 3072, 0, 0
+		DecorationBounds: 3072, 3072, 0, 0
 	Valued:
 		Cost: 1700
 	Health:
@@ -464,8 +464,8 @@ NeutronAccelerator.Constructing:
 		Steps: 20
 		Becomes: NeutronAccelerator
 	Selectable:
-		Bounds: 72,72,0,0
-		DecorationBounds: 72,72,0,0
+		Bounds: 3072, 3072, 0, 0
+		DecorationBounds: 3072, 3072, 0, 0
 	Valued:
 		Cost: 1700
 	Health:
@@ -489,8 +489,8 @@ CameraTower.Constructing:
 		Dimensions: 1,1
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 24,38,0,-8
-		DecorationBounds: 24,38,0,-8
+		Bounds: 1024, 1621, 0, -341
+		DecorationBounds: 1024, 1621, 0, -341
 	Tooltip:
 		Name: Camera Tower
 	Buildable:
@@ -524,8 +524,8 @@ Hospital.human.Constructing:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Field Hospital
 	Buildable:
@@ -567,8 +567,8 @@ Hospital.cyborg.Constructing:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Field Hospital
 	Buildable:
@@ -619,8 +619,8 @@ Repair.human.Constructing:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	SelectionDecorations:
 	Valued:
 		Cost: 800
@@ -653,8 +653,8 @@ Repair.cyborg.Constructing:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
 		Name: Repair Station
 	Buildable:
@@ -707,8 +707,8 @@ PhasingFacility.Constructing:
 		Dimensions: 4,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,72,0,0
-		DecorationBounds: 96,72,0,0
+		Bounds: 4096, 3072, 0, 0
+		DecorationBounds: 4096, 3072, 0, 0
 	Valued:
 		Cost: 1200
 	Health:
@@ -748,8 +748,8 @@ RearmingDeck.human.Constructing:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 72,72,0,16
-		DecorationBounds: 72,72,0,16
+		Bounds: 3072, 3072, 0, 682
+		DecorationBounds: 3072, 3072, 0, 682
 	Valued:
 		Cost: 1000
 	Health:
@@ -778,8 +778,8 @@ RearmingDeck.cyborg.Constructing:
 		Dimensions: 3,3
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 72,72,0,16
-		DecorationBounds: 72,72,0,16
+		Bounds: 3072, 3072, 0, 682
+		DecorationBounds: 3072, 3072, 0, 682
 	RenderSprites:
 		Image: nirrm1l0
 	Tooltip:
@@ -821,8 +821,8 @@ TemporalGate.Constructing:
 		Dimensions: 3,2
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 72,72,0,0
-		DecorationBounds: 72,72,0,0
+		Bounds: 3072, 3072, 0, 0
+		DecorationBounds: 3072, 3072, 0, 0
 	RenderSprites:
 		Image: nitgt1l0
 	Tooltip:
@@ -862,8 +862,8 @@ TemporalRiftCreator.Constructing:
 		Dimensions: 4,4
 		LocalCenterOffset: 0,0,0
 	Selectable:
-		Bounds: 96,96,0,0
-		DecorationBounds: 96,96,0,0
+		Bounds: 4096, 4096, 0, 0
+		DecorationBounds: 4096, 4096, 0, 0
 	RenderSprites:
 		Image: nitrc1l0
 	Tooltip:

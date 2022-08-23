@@ -1,8 +1,8 @@
 ^MpStartUnits:
-	SpawnMPUnits:
+	SpawnStartingUnits:
 		StartingUnitsClass: light
 		DropdownDisplayOrder: 0
-	MPStartUnits@mcvonly:
+	StartingUnits@mcvonly:
 		Class: none
 		ClassName: One Rig
 		Factions: fguard, xenite, terrorist
@@ -10,7 +10,7 @@
 		SupportActors: ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
-	MPStartUnits@mcvonlyimp:
+	StartingUnits@mcvonlyimp:
 		Class: none
 		ClassName: One Rig
 		Factions: imperium, shadowhand
@@ -18,7 +18,7 @@
 		SupportActors: ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
-	MPStartUnits@mcvonlytogran:
+	StartingUnits@mcvonlytogran:
 		Class: none
 		ClassName: One Rig
 		Factions: togran
@@ -26,7 +26,7 @@
 		SupportActors: ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
-	MPStartUnits@threerigs:
+	StartingUnits@threerigs:
 		Class: light
 		ClassName: Three Rigs
 		Factions: fguard, xenite, terrorist
@@ -34,7 +34,7 @@
 		SupportActors: ConstructionRig,ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
-	MPStartUnits@threerigsimp:
+	StartingUnits@threerigsimp:
 		Class: light
 		ClassName: Three Rigs
 		Factions: imperium, shadowhand
@@ -42,7 +42,7 @@
 		SupportActors: ConstructionRig,ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
-	MPStartUnits@threerigstogran:
+	StartingUnits@threerigstogran:
 		Class: light
 		ClassName: Three Rigs
 		Factions: togran

@@ -60,28 +60,6 @@
 		Side: Addon
 		RandomFactionMembers: fguard, imperium, togran
 		Description: Randomly select any faction.
-	ResourceType@water:
-		Type: SpringWater
-		Name: Water Spring DO NOT USE
-		ResourceType: 1
-		TerrainType: SpringWater
-		Palette: player
-		Sequences: water1
-		MaxDensity: 120000
-		ValuePerUnit: 120
-		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
-		AllowUnderActors: true
-	ResourceType@taelon:
-		Type: Taelon
-		Name: Taelon DO NOT USE
-		ResourceType: 2
-		TerrainType: Taelon
-		Palette: player
-		Sequences: taelon1
-		MaxDensity: 120000
-		ValuePerUnit: 120
-		AllowedTerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
-		AllowUnderActors: true
 
 World:
 	Inherits: ^BaseWorld
@@ -147,8 +125,8 @@ World:
 		ShortGameCheckboxDisplayOrder: 2
 		TechLevelDropdownDisplayOrder: 2
 		GameSpeedDropdownDisplayOrder: 3
-	MPStartLocations:
-	CreateMPPlayers:
+	MapStartingLocations:
+	CreateMapPlayers:
 	PathFinder:
 	ValidateOrder:
 	DebugPauseState:
@@ -159,7 +137,6 @@ World:
 	LoadWidgetAtGameStart:
 		ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
 	ResourceRenderer:
-		RenderTypes:
 
 EditorWorld:
 	Inherits: ^BaseWorld

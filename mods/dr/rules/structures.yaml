@@ -548,8 +548,8 @@ HeavyRailTurret:
 	Power:
 		Amount: -100
 	Selectable:
-		Bounds: 72,72,0,0
-		DecorationBounds: 72,72,0,0
+		Bounds: 3072, 3072, 0, 0
+		DecorationBounds: 3072, 3072, 0, 0
 	Turreted:
 		TurnSpeed: 48
 		InitialFacing: 224
@@ -583,8 +583,8 @@ NeutronAccelerator:
 	Power:
 		Amount: -100
 	Selectable:
-		Bounds: 72,72,0,0
-		DecorationBounds: 72,72,0,0
+		Bounds: 3072, 3072, 0, 0
+		DecorationBounds: 3072, 3072, 0, 0
 	Turreted:
 		TurnSpeed: 48
 		InitialFacing: 224
@@ -948,8 +948,8 @@ TemporalGate:
 		#PauseOnCondition: disabled
 		Icon: bitgtmn0
 		ChargeInterval: 1000
-		Description: Temporal Gate
-		LongDesc: Teleports a group of units across\nthe map for 20 seconds.
+		Name: Temporal Gate
+		Description: Teleports a group of units across\nthe map for 20 seconds.
 		#SelectTargetSpeechNotification: SelectTarget
 		#InsufficientPowerSpeechNotification: InsufficientPower
 		#BeginChargeSpeechNotification: ChronosphereCharging
@@ -997,8 +997,8 @@ TemporalRiftCreator:
 		#Cursor: ioncannon
 		Icon: bitrcmn0
 		ActivationSequence:
-		Description: Temporal Rift
-		LongDesc: Opens a temporal rift at the target location.
+		Name: Temporal Rift
+		Description: Opens a temporal rift at the target location.
 		OrderName: TemporalRift
 		Weapon: TemporalRiftCreatorGun
 		#TargetCircleRange: 7c0
