@@ -1,11 +1,8 @@
-^Chrome:
-	Image: chrome.png
+^Sidebar:
+	Image: sidebar.png
 
 ^Dialog:
 	Image: dialog.png
-
-^Buttons:
-	Image: buttons.png
 
 ^Glyphs:
 	Image: glyphs.png
@@ -14,20 +11,166 @@
 
 ^LoadScreen:
 	Image: loadscreen.png
+	Image2x: loadscreen-2x.png
+	Image3x: loadscreen-3x.png
+
+# --------- DR CUSTOM -----------
 
 progressbar-water:
-	Inherits: ^Chrome
+	Inherits: ^Sidebar
 	PanelRegion: 350, 30, 2, 2, 122, 11, 2, 2
+
 progressbar-power:
-	Inherits: ^Chrome
+	Inherits: ^Sidebar
 	PanelRegion: 350, 46, 2, 2, 122, 11, 2, 2
 
 panel-black:
 	Inherits: button
 
-# ----------------------------------------------------------------------
-# GENERIC
-# ----------------------------------------------------------------------
+sidebar-bits:
+	Inherits: ^Sidebar
+	Regions:
+		commandbar-background: 0, 123, 434, 44
+
+production-icons:
+	Inherits: ^Glyphs
+	Regions:
+		economy: 102, 68, 16, 16
+		economy-disabled: 102, 85, 16, 16
+		economy-alert: 102, 102, 16, 16
+		upgrade: 136, 68, 16, 16
+		upgrade-disabled: 136, 85, 16, 16
+		upgrade-alert: 136, 102, 16, 16
+
+# -----------------------------------------
+
+sidebar-fguard:
+	Inherits: ^Sidebar
+	Regions:
+		radar: 5, 172, 228, 257
+		background-top: 0, 167, 238, 329
+		#background-moneybin: 0, 85, 238, 28
+		#background-iconbg: 12, 227, 190, 47
+		background-iconrow: 0, 495, 238, 49
+		background-bottom: 0, 546, 238, 6
+		background-supportoverlay: 0, 75, 64, 48
+
+sidebar-button-fguard:
+	Inherits: ^Sidebar
+	PanelRegion: 56, 28, 3, 3, 22, 22, 3, 3
+sidebar-button-fguard-hover:
+	Inherits: ^Sidebar
+	PanelRegion: 56, 0, 3, 3, 22, 22, 3, 3
+sidebar-button-fguard-pressed:
+	Inherits: sidebar-button-fguard
+sidebar-button-fguard-highlighted:
+	Inherits: ^Sidebar
+	PanelRegion: 84, 28, 3, 3, 22, 22, 3, 3
+sidebar-button-fguard-highlighted-hover:
+	Inherits: ^Sidebar
+	PanelRegion: 84, 0, 3, 3, 22, 22, 3, 3
+sidebar-button-fguard-highlighted-pressed:
+	Inherits: sidebar-button-fguard-highlighted
+sidebar-button-fguard-disabled:
+	Inherits: ^Sidebar
+	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
+sidebar-button-fguard-highlighted-disabled:
+	Inherits: sidebar-button-fguard-disabled
+
+command-button-fguard:
+	Inherits: ^Sidebar
+	PanelRegion: 59, 31, 0, 0, 22, 22, 0, 0
+	PanelSides: Center
+command-button-fguard-hover:
+	Inherits: ^Sidebar
+	PanelRegion: 59, 3, 0, 0, 22, 22, 0, 0
+	PanelSides: Center
+command-button-fguard-pressed:
+	Inherits: command-button-fguard
+command-button-fguard-highlighted:
+	Inherits: ^Sidebar
+	PanelRegion: 87, 31, 0, 0, 22, 22, 0, 0
+	PanelSides: Center
+command-button-fguard-highlighted-hover:
+	Inherits: ^Sidebar
+	PanelRegion: 87, 3, 0, 0, 22, 22, 0, 0
+	PanelSides: Center
+command-button-fguard-highlighted-pressed:
+	Inherits: command-button-fguard-highlighted
+command-button-fguard-disabled:
+	Inherits: command-button-fguard
+command-button-fguard-highlighted-disabled:
+	Inherits: command-button-fguard-highlighted
+
+sidebar-imperium:
+	Inherits: ^Sidebar
+	Regions:
+		radar: 279, 172, 228, 257
+		background-top: 274, 167, 238, 329
+		#background-moneybin: 0, 54, 238, 28
+		#background-iconbg: 12, 275, 190, 47
+		background-iconrow: 274, 495, 238, 49
+		background-bottom: 274, 546, 238, 6
+		background-supportoverlay: 64, 75, 64, 48
+
+sidebar-button-imperium:
+	Inherits: ^Sidebar
+	PanelRegion: 0, 28, 3, 3, 22, 22, 3, 3
+sidebar-button-imperium-hover:
+	Inherits: ^Sidebar
+	PanelRegion: 0, 0, 3, 3, 22, 22, 3, 3
+sidebar-button-imperium-pressed:
+	Inherits: sidebar-button-imperium
+sidebar-button-imperium-highlighted:
+	Inherits: ^Sidebar
+	PanelRegion: 28, 28, 3, 3, 22, 22, 3, 3
+sidebar-button-imperium-highlighted-hover:
+	Inherits: ^Sidebar
+	PanelRegion: 28, 0, 3, 3, 22, 22, 3, 3
+sidebar-button-imperium-highlighted-pressed:
+	Inherits: sidebar-button-imperium-highlighted
+sidebar-button-imperium-disabled:
+	Inherits: sidebar-button-fguard-disabled
+sidebar-button-imperium-highlighted-disabled:
+	Inherits: sidebar-button-fguard-disabled
+
+command-button-imperium:
+	Inherits: ^Sidebar
+	PanelRegion: 3, 31, 0, 0, 22, 22, 0, 0
+	PanelSides: Center
+command-button-imperium-hover:
+	Inherits: ^Sidebar
+	PanelRegion: 3, 3, 0, 0, 22, 22, 0, 0
+	PanelSides: Center
+command-button-imperium-pressed:
+	Inherits: command-button-imperium
+command-button-imperium-highlighted:
+	Inherits: ^Sidebar
+	PanelRegion: 31, 31, 0, 0, 22, 22, 0, 0
+	PanelSides: Center
+command-button-imperium-highlighted-hover:
+	Inherits: ^Sidebar
+	PanelRegion: 31, 3, 0, 0, 22, 22, 0, 0
+	PanelSides: Center
+command-button-imperium-highlighted-pressed:
+	Inherits: command-button-imperium-highlighted
+command-button-imperium-disabled:
+	Inherits: command-button-imperium
+command-button-imperium-highlighted-disabled:
+	Inherits: command-button-imperium-highlighted
+
+sidebar-bits:
+	Inherits: ^Glyphs
+	Regions:
+		production-tooltip-time: 136, 51, 16, 16
+		production-tooltip-power: 102, 51, 16, 16
+		production-tooltip-cost: 68, 51, 16, 16
+		indicator-muted: 221, 17, 26, 24
+
+commandbar:
+	Inherits: ^Sidebar
+	Regions:
+		background: 0, 123, 434, 44
 
 production-icons:
 	Inherits: ^Glyphs
@@ -44,35 +187,16 @@ production-icons:
 		vehicle: 51, 68, 16, 16
 		vehicle-disabled: 51, 85, 16, 16
 		vehicle-alert: 51, 102, 16, 16
-		air: 68, 68, 16, 16
-		air-disabled: 68, 85, 16, 16
-		air-alert: 68, 102, 16, 16
-		economy: 102, 68, 16, 16
-		economy-disabled: 102, 85, 16, 16
-		economy-alert: 102, 102, 16, 16
-		upgrade: 136, 68, 16, 16
-		upgrade-disabled: 136, 85, 16, 16
-		upgrade-alert: 136, 102, 16, 16
-		
-
-power-icons:
-	Inherits: ^Glyphs
-	Regions:
-		power-normal: 102, 51, 16, 16
-		power-critical: 119, 51, 16, 16
-
-cash-icons:
-	Inherits: ^Glyphs
-	Regions:
-		cash-normal: 68, 51, 16, 16
-		cash-critical: 85, 51, 16, 16
+		aircraft: 68, 68, 16, 16
+		aircraft-disabled: 68, 85, 16, 16
+		aircraft-alert: 68, 102, 16, 16
+		ship: 187, 68, 16, 16
+		ship-disabled: 187, 85, 16, 16
+		ship-alert: 187, 102, 16, 16
 
 order-icons:
 	Inherits: ^Glyphs
 	Regions:
-		debug: 85, 68, 16, 16
-		debug-disabled: 85, 85, 16, 16
-		debug-active: 85, 102, 16, 16
 		repair: 136, 68, 16, 16
 		repair-disabled: 136, 85, 16, 16
 		repair-active: 136, 102, 16, 16
@@ -91,6 +215,18 @@ order-icons:
 		stats: 204, 68, 16, 16
 		stats-disabled: 204, 85, 16, 16
 		stats-active: 204, 102, 16, 16
+
+power-icons:
+	Inherits: ^Glyphs
+	Regions:
+		power-normal: 102, 51, 16, 16
+		power-critical: 119, 51, 16, 16
+
+cash-icons:
+	Inherits: ^Glyphs
+	Regions:
+		cash-normal: 68, 51, 16, 16
+		cash-critical: 85, 51, 16, 16
 
 stance-icons:
 	Inherits: ^Glyphs
@@ -128,34 +264,101 @@ command-icons:
 		queue-orders: 175, 207, 24, 24
 		queue-orders-disabled: 175, 232, 24, 24
 
-sidebar-bits:
-	Inherits: ^Glyphs
+sidebar-observer:
+	Inherits: ^Sidebar
 	Regions:
-		production-tooltip-time: 136, 51, 16, 16
-		production-tooltip-power: 102, 51, 16, 16
-		production-tooltip-cost: 68, 51, 16, 16
-		indicator-muted: 0, 119, 26, 24
+		background: 512, 167, 238, 287
+		replay-bottom: 512, 454, 238, 40
+		observer-bottom: 512, 495, 238, 8
 
-flags:
-	Inherits: ^Glyphs
+sidebar-button-observershroud:
+sidebar-button-observershroud-pressed:
+sidebar-button-observershroud-hover:
+
+sidebar-button-observer:
+	Inherits: ^Sidebar
+	PanelRegion: 260, 397, 5, 5, 18, 18, 5, 5
+sidebar-button-observer-hover:
+	Inherits: ^Sidebar
+	PanelRegion: 260, 368, 5, 5, 18, 18, 5, 5
+sidebar-button-observer-pressed:
+	Inherits: sidebar-button-observer
+sidebar-button-observer-highlighted:
+	Inherits: ^Sidebar
+	PanelRegion: 260, 455, 5, 5, 18, 18, 5, 5
+sidebar-button-observer-highlighted-hover:
+	Inherits: ^Sidebar
+	PanelRegion: 260, 426, 5, 5, 18, 18, 5, 5
+sidebar-button-observer-highlighted-pressed:
+	Inherits: sidebar-button-observer-highlighted
+sidebar-button-observer-disabled:
+	Inherits: sidebar-button-fguard-disabled
+sidebar-button-observer-highlighted-disabled:
+	Inherits: sidebar-button-fguard-disabled
+
+observer-scrollpanel-button:
+	Inherits: ^Dialog
+	PanelRegion: 769, 257, 2, 2, 122, 122, 2, 2
+
+observer-scrollpanel-button-hover:
+	Inherits: observer-scrollpanel-button
+
+observer-scrollpanel-button-pressed:
+	Inherits: ^Dialog
+	PanelRegion: 897, 257, 2, 2, 122, 122, 2, 2
+
+observer-scrollpanel-button-disabled:
+	Inherits: ^Dialog
+	PanelRegion: 769, 385, 2, 2, 122, 122, 2, 2
+
+observer-scrollheader-selected:
+	Inherits: observer-scrollpanel-button-disabled
+
+observer-scrollitem-selected:
+	Inherits: observer-scrollpanel-button-pressed
+
+observer-scrollitem-hover:
+	Inherits: observer-scrollpanel-button
+
+# Used for the main menu frame
+dialog:
+	Inherits: ^Dialog
 	Regions:
-		terrorist: 226, 145, 30, 15
-		shadowhand: 226, 161, 30, 15
-		xenite: 226, 177, 30, 15
-		togran: 226, 193, 30, 15
-		fguard: 226, 209, 30, 15
-		imperium: 226, 225, 30, 15
-		Random: 226, 241, 30, 15
-		RandomExpansion: 226, 241, 30, 15
-		RandomAll: 226, 241, 30, 15
-		spectator: 226, 241, 30, 15
+		background: 1, 1, 478, 478
+		border-r: 483, 1, 9, 151
+		border-l: 481, 1, 9, 151
+		border-b: 1, 483, 151, 9
+		border-t: 1, 481, 151, 9
+		corner-tl: 393, 481, 21, 21
+		corner-tr: 415, 481, 21, 21
+		corner-bl: 437, 481, 21, 21
+		corner-br: 459, 481, 21, 21
+
+# Used for Music and Map selection (normal button)
+dialog2:
+	Inherits: button
+
+# It's a Container, used in various places, like Hotkeys, ColorPicker, Asset Browser frames (looks like a pressed button)
+dialog3:
+	Inherits: button-pressed
+
+# Used for tooltips and the video player
+dialog4:
+	Inherits: ^Dialog
+	PanelRegion: 512, 387, 6, 6, 52, 52, 6, 6
+
+# completely black tile
+dialog5:
+	Inherits: ^Dialog
+	PanelRegion: 580, 388, 0, 0, 62, 62, 0, 0
+	PanelSides: Center
 
 lobby-bits:
 	Inherits: ^Glyphs
 	Regions:
-		spawn-unclaimed: 91, 119, 22, 22
 		spawn-claimed: 68, 119, 22, 22
-		spawn-disabled: 114, 144, 22, 22
+		spawn-unclaimed: 91, 119, 22, 22
+		spawn-disabled: 114, 119, 22, 22
 		admin: 170, 0, 6, 5
 		colorpicker: 68, 119, 22, 22
 		huepicker: 136, 0, 7, 15
@@ -186,29 +389,27 @@ reload-icon:
 		disabled-10: 187, 34, 16, 16
 		disabled-11: 204, 34, 16, 16
 
-checkmark-tick:
-	Inherits: ^Chrome
+strategic:
+	Inherits: ^Glyphs
 	Regions:
-		checked: 972, 17, 16, 16
-		checked-pressed: 989, 17, 16, 16
-		checked-disabled: 989, 17, 16, 16
-		unchecked: 0, 0, 0, 0
-		unchecked-pressed: 989, 17, 16, 16
+		unowned: 68, 119, 22, 22
+		critical_unowned: 137, 119, 22, 22
+		enemy_owned: 160, 119, 22, 22
+		player_owned: 160, 142, 22, 22
 
-checkmark-highlighted-tick:
-	Inherits: checkmark-tick
-
-checkmark-cross:
-	Inherits: ^Chrome
+flags:
+	Inherits: ^Glyphs
 	Regions:
-		checked: 972, 0, 16, 16
-		checked-pressed: 989, 0, 16, 16
-		checked-disabled: 989, 0, 16, 16
-		unchecked: 0, 0, 0, 0
-		unchecked-pressed: 989, 0, 16, 16
-
-checkmark-highlighted-cross:
-	Inherits: checkmark-cross
+		terrorist: 226, 145, 30, 15
+		shadowhand: 226, 161, 30, 15
+		xenite: 226, 177, 30, 15
+		togran: 226, 193, 30, 15
+		fguard: 226, 209, 30, 15
+		imperium: 226, 225, 30, 15
+		Random: 226, 241, 30, 15
+		RandomExpansion: 226, 241, 30, 15
+		RandomAll: 226, 241, 30, 15
+		spectator: 226, 241, 30, 15
 
 music:
 	Inherits: ^Glyphs
@@ -220,47 +421,6 @@ music:
 		prev: 68, 0, 16, 16
 		fastforward: 85, 0, 16, 16
 
-scrollbar:
-	Inherits: ^Glyphs
-	Regions:
-		down_arrow: 68, 17, 16, 16
-		down_pressed: 85, 17, 16, 16
-		up_arrow: 102, 17, 16, 16
-		up_pressed: 119, 17, 16, 16
-		right_arrow: 136, 17, 16, 16
-		right_pressed: 153, 17, 16, 16
-		left_arrow: 170, 17, 16, 16
-		left_pressed: 187, 17, 16, 16
-
-# ----------------------------------------------------------------------
-# Other UI stuff
-# ----------------------------------------------------------------------
-
-# Used for the menu
-dialog:
-	Inherits: ^Dialog
-	Regions:
-		background: 1, 1, 478, 478
-		border-r: 483, 1, 9, 151
-		border-l: 481, 1, 9, 151
-		border-b: 1, 483, 151, 9
-		border-t: 1, 481, 151, 9
-		corner-tl: 393, 481, 21, 21
-		corner-tr: 415, 481, 21, 21
-		corner-bl: 437, 481, 21, 21
-		corner-br: 459, 481, 21, 21
-
-dialog2:
-	Inherits: button
-
-dialog3:
-	Inherits: button-pressed
-
-# Same as the half transparent frame used in the Asset Browser
-dialog4:
-	Inherits: ^Dialog
-	PanelRegion: 512, 387, 6, 6, 52, 52, 6, 6
-
 progressbar-bg:
 	Inherits: button-pressed
 
@@ -271,6 +431,7 @@ button:
 	Inherits: ^Dialog
 	PanelRegion: 513, 1, 2, 2, 122, 122, 2, 2
 
+# 5% lighter than a normal button (mouseover)
 button-hover:
 	Inherits: ^Dialog
 	PanelRegion: 513, 129, 2, 2, 122, 122, 2, 2
@@ -279,6 +440,7 @@ button-pressed:
 	Inherits: ^Dialog
 	PanelRegion: 641, 1, 2, 2, 122, 122, 2, 2
 
+# 50% grey (disabled button)
 button-disabled:
 	Inherits: ^Dialog
 	PanelRegion: 513, 257, 2, 2, 122, 122, 2, 2
@@ -323,7 +485,7 @@ textfield-hover:
 	Inherits: checkbox-hover
 
 textfield-disabled:
-	Inherits: button-pressed
+	Inherits: checkbox-disabled
 
 textfield-focused:
 	Inherits: button-pressed
@@ -346,10 +508,10 @@ scrollpanel-button-disabled:
 slider:
 	Inherits: ^Dialog
 	Regions:
-		tick: 513, 1, 1, 4
+		tick: 513, 2, 2, 4
 
 slider-track:
-	Inherits: button-pressed
+	Inherits: button
 
 slider-thumb:
 	Inherits: button
@@ -361,22 +523,39 @@ slider-thumb-pressed:
 	Inherits: button-pressed
 
 slider-thumb-disabled:
-	Inherits: button
+	Inherits: button-disabled
 
 checkbox:
 	Inherits: button-pressed
 
-checkbox-bits:
+checkmark-tick:
 	Inherits: ^Glyphs
 	Regions:
 		checked: 187, 0, 16, 16
-		checked-disabled: 204, 0, 16, 16
-		crossed: 221, 0, 16, 16
-		crossed-disabled: 238, 0, 16, 16
+		checked-pressed: 204, 0, 16, 16
+		unchecked: 0, 0, 0, 0
+		unchecked-pressed: 204, 0, 16, 16
+
+checkmark-highlighted-tick:
+	Inherits: checkmark-tick
+
+checkmark-cross:
+	Inherits: ^Glyphs
+	Regions:
+		checked: 221, 0, 16, 16
+		checked-pressed: 238, 0, 16, 16
+		unchecked: 0, 0, 0, 0
+		unchecked-pressed: 238, 0, 16, 16
+
+checkmark-highlighted-cross:
+	Inherits: checkmark-cross
 
 checkbox-hover:
 	Inherits: ^Dialog
 	PanelRegion: 641, 129, 2, 2, 122, 122, 2, 2
+
+checkbox-pressed:
+	Inherits: checkbox-hover
 
 checkbox-disabled:
 	Inherits: ^Dialog
@@ -389,6 +568,9 @@ checkbox-highlighted:
 checkbox-highlighted-hover:
 	Inherits: checkbox-highlighted
 
+checkbox-highlighted-pressed:
+	Inherits: checkbox-highlighted
+
 checkbox-highlighted-disabled:
 	Inherits: checkbox-disabled
 
@@ -398,45 +580,12 @@ scrollitem-selected:
 scrollitem-hover:
 	Inherits: button
 
-scrollitem-nohover:
-	Inherits: ^Dialog
-
 scrollheader-selected:
 	Inherits: button
 
-mainmenu-border:
-	Inherits: ^Dialog
+scrollitem-nohover:
 
-scrollpanel-decorations:
-	Inherits: ^Glyphs
-	Regions:
-		down: 68, 17, 16, 16
-		down-pressed: 68, 17, 16, 16
-		down-disabled: 85, 17, 16, 16
-		up: 102, 17, 16, 16
-		up-pressed: 102, 17, 16, 16
-		up-disabled: 119, 17, 16, 16
-		right: 136, 17, 16, 16
-		right-pressed: 136, 17, 16, 16
-		right-disabled: 153, 17, 16, 16
-		left: 170, 17, 16, 16
-		left-pressed: 170, 17, 16, 16
-		left-disabled: 187, 17, 16, 16
-
-dropdown-decorations:
-	Inherits: ^Glyphs
-	Regions:
-		marker: 68, 17, 16, 16
-		marker-pressed: 68, 17, 16, 16
-		marker-disabled: 85, 17, 16, 16
-
-dropdown-separators:
-	Inherits: ^Dialog
-	Regions:
-		separator: 129, 2, 1, 19
-		separator-hover: 161, 2, 1, 19
-		separator-pressed: 129, 34, 1, 19
-		separator-disabled: 161, 34, 1, 19
+scrollitem-nohover-hover:
 
 logos:
 	Inherits: ^LoadScreen
@@ -448,457 +597,37 @@ loadscreen-stripe:
 	PanelRegion: 258, 0, 0, 0, 253, 256, 0, 0
 	PanelSides: Center
 
-# ----------------------------------------------------------------------
-# Chrome - DARK REIGN
-# ----------------------------------------------------------------------
+mainmenu-border:
+	Inherits: ^Dialog
+	PanelRegion: 650, 389, 39, 39, 38, 38, 39, 39
+	PanelSides: Edges
 
-sidebar-bits:
-	Inherits: ^Chrome
+scrollpanel-decorations:
+	Inherits: ^Glyphs
 	Regions:
-		production-iconoverlay: 128, 75, 238, 48
-		commandbar-background: 0, 123, 434, 44
-		indicator-left: 416, 48, 16, 8
-		indicator-right: 416, 56, 16, 8
+		down: 68, 17, 16, 16
+		down-disabled: 85, 17, 16, 16
+		up: 102, 17, 16, 16
+		up-disabled: 119, 17, 16, 16
+		right: 136, 17, 16, 16
+		right-disabled: 153, 17, 16, 16
+		left: 170, 17, 16, 16
+		left-disabled: 187, 17, 16, 16
 
-sidebar-fguard:
-	Inherits: ^Chrome
+dropdown-decorations:
+	Inherits: ^Glyphs
 	Regions:
-		radar: 290, 67, 222, 222
-		background-top: 0, 167, 238, 329
-		background-iconrow: 0, 495, 238, 49
-		background-bottom: 0, 546, 238, 6
-		background-supportoverlay: 0, 75, 64, 48
+		marker: 68, 17, 16, 16
+		marker-disabled: 85, 17, 16, 16
 
-sidebar-button-fguard:
-	Inherits: ^Chrome
-	PanelRegion: 56, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-fguard-hover:
-	Inherits: ^Chrome
-	PanelRegion: 56, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-fguard-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 56, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-fguard-highlighted:
-	Inherits: ^Chrome
-	PanelRegion: 84, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-fguard-highlighted-hover:
-	Inherits: ^Chrome
-	PanelRegion: 84, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-fguard-highlighted-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 84, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-fguard-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-fguard-highlighted-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
-
-command-button-fguard:
-	Inherits: ^Chrome
-	PanelRegion: 59, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-fguard-hover:
-	Inherits: ^Chrome
-	PanelRegion: 59, 3, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-fguard-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 59, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-fguard-highlighted:
-	Inherits: ^Chrome
-	PanelRegion: 87, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-fguard-highlighted-hover:
-	Inherits: ^Chrome
-	PanelRegion: 87, 3, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-fguard-highlighted-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 87, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-fguard-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 59, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-fguard-highlighted-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 87, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-
-sidebar-imperium:
-	Inherits: ^Chrome
+dropdown-separators:
+	Inherits: ^Dialog
 	Regions:
-		radar: 290, 67, 222, 222
-		background-top: 274, 167, 238, 329
-		background-iconrow: 274, 495, 238, 49
-		background-bottom: 274, 546, 238, 6
-		background-supportoverlay: 64, 75, 64, 48
-		
-sidebar-button-imperium:
-	Inherits: ^Chrome
-	PanelRegion: 0, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-imperium-hover:
-	Inherits: ^Chrome
-	PanelRegion: 0, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-imperium-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 0, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-imperium-highlighted:
-	Inherits: ^Chrome
-	PanelRegion: 28, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-imperium-highlighted-hover:
-	Inherits: ^Chrome
-	PanelRegion: 28, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-imperium-highlighted-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 28, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-imperium-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-imperium-highlighted-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
+		separator: 513, 2, 1, 19
+		separator-hover: 513, 130, 1, 19
+		separator-pressed: 766, 2, 1, 19
+		separator-disabled: 513, 258, 1, 19
+		observer-separator: 769, 258, 1, 19
 
-command-button-imperium:
-	Inherits: ^Chrome
-	PanelRegion: 3, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-imperium-hover:
-	Inherits: ^Chrome
-	PanelRegion: 3, 3, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-imperium-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 3, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-imperium-highlighted:
-	Inherits: ^Chrome
-	PanelRegion: 31, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-imperium-highlighted-hover:
-	Inherits: ^Chrome
-	PanelRegion: 31, 3, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-imperium-highlighted-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 31, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-imperium-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 3, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-imperium-highlighted-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 31, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-
-
-sidebar-xenite:
-	Inherits: ^Chrome
-	Regions:
-		background-top: 0, 567, 238, 329
-		background-iconrow: 0, 895, 238, 49
-		background-bottom: 0, 946, 238, 6
-		background-supportoverlay: 0, 75, 64, 48
-
-sidebar-button-xenite:
-	Inherits: ^Chrome
-	PanelRegion: 252, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-xenite-hover:
-	Inherits: ^Chrome
-	PanelRegion: 252, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-xenite-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 252, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-xenite-highlighted:
-	Inherits: ^Chrome
-	PanelRegion: 280, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-xenite-highlighted-hover:
-	Inherits: ^Chrome
-	PanelRegion: 280, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-xenite-highlighted-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 280, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-xenite-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-xenite-highlighted-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
-
-command-button-xenite:
-	Inherits: ^Chrome
-	PanelRegion: 255, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-xenite-hover:
-	Inherits: ^Chrome
-	PanelRegion: 255, 3, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-xenite-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 255, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-xenite-highlighted:
-	Inherits: ^Chrome
-	PanelRegion: 283, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-xenite-highlighted-hover:
-	Inherits: ^Chrome
-	PanelRegion: 283, 3, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-xenite-highlighted-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 283, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-xenite-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 255, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-xenite-highlighted-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 283, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-
-sidebar-shadowhand:
-	Inherits: ^Chrome
-	Regions:
-		background-top: 274, 567, 238, 329
-		background-iconrow: 274, 895, 238, 49
-		background-bottom: 274, 946, 238, 6
-		background-supportoverlay: 64, 75, 64, 48
-		
-sidebar-button-shadowhand:
-	Inherits: ^Chrome
-	PanelRegion: 196, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-shadowhand-hover:
-	Inherits: ^Chrome
-	PanelRegion: 196, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-shadowhand-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 196, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-shadowhand-highlighted:
-	Inherits: ^Chrome
-	PanelRegion: 224, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-shadowhand-highlighted-hover:
-	Inherits: ^Chrome
-	PanelRegion: 224, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-shadowhand-highlighted-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 224, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-shadowhand-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-shadowhand-highlighted-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
-
-command-button-shadowhand:
-	Inherits: ^Chrome
-	PanelRegion: 199, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-shadowhand-hover:
-	Inherits: ^Chrome
-	PanelRegion: 199, 3, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-shadowhand-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 199, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-shadowhand-highlighted:
-	Inherits: ^Chrome
-	PanelRegion: 227, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-shadowhand-highlighted-hover:
-	Inherits: ^Chrome
-	PanelRegion: 227, 3, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-shadowhand-highlighted-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 227, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-shadowhand-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 199, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-shadowhand-highlighted-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 227, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-
-
-sidebar-togran:
-	Inherits: ^Chrome
-	Regions:
-		background-top: 574, 567, 238, 329
-		background-iconrow: 574, 895, 238, 49
-		background-bottom: 574, 946, 238, 6
-		background-supportoverlay: 64, 75, 64, 48
-		
-sidebar-button-togran:
-	Inherits: ^Chrome
-	PanelRegion: 730, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-togran-hover:
-	Inherits: ^Chrome
-	PanelRegion: 730, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-togran-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 730, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-togran-highlighted:
-	Inherits: ^Chrome
-	PanelRegion: 758, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-togran-highlighted-hover:
-	Inherits: ^Chrome
-	PanelRegion: 758, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-togran-highlighted-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 758, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-togran-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-togran-highlighted-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
-
-command-button-togran:
-	Inherits: ^Chrome
-	PanelRegion: 733, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-togran-hover:
-	Inherits: ^Chrome
-	PanelRegion: 733, 3, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-togran-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 733, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-togran-highlighted:
-	Inherits: ^Chrome
-	PanelRegion: 761, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-togran-highlighted-hover:
-	Inherits: ^Chrome
-	PanelRegion: 761, 3, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-togran-highlighted-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 761, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-togran-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 733, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-togran-highlighted-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 761, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-
-sidebar-terrorist:
-	Inherits: ^Chrome
-	Regions:
-		background-top: 750, 167, 238, 329
-		background-iconrow: 750, 495, 238, 49
-		background-bottom: 750, 546, 238, 6
-		background-supportoverlay: 64, 75, 64, 48
-		
-sidebar-button-terrorist:
-	Inherits: ^Chrome
-	PanelRegion: 730, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-terrorist-hover:
-	Inherits: ^Chrome
-	PanelRegion: 730, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-terrorist-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 730, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-terrorist-highlighted:
-	Inherits: ^Chrome
-	PanelRegion: 758, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-terrorist-highlighted-hover:
-	Inherits: ^Chrome
-	PanelRegion: 758, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-terrorist-highlighted-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 758, 28, 3, 3, 22, 22, 3, 3
-sidebar-button-terrorist-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
-sidebar-button-terrorist-highlighted-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 3, 3, 22, 22, 3, 3
-
-command-button-terrorist:
-	Inherits: ^Chrome
-	PanelRegion: 733, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-terrorist-hover:
-	Inherits: ^Chrome
-	PanelRegion: 733, 3, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-terrorist-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 733, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-terrorist-highlighted:
-	Inherits: ^Chrome
-	PanelRegion: 761, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-terrorist-highlighted-hover:
-	Inherits: ^Chrome
-	PanelRegion: 761, 3, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-terrorist-highlighted-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 761, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-terrorist-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 733, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-command-button-terrorist-highlighted-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 761, 31, 0, 0, 22, 22, 0, 0
-	PanelSides: Center
-
-
-# In-game observer
-
-sidebar-observer:
-	Inherits: ^Chrome
-	PanelRegion: 512, 167, 0, 0, 238, 287, 0, 0
-	PanelSides: Center
-	Regions:
-		replay-bottom: 512, 454, 238, 40
-		observer-bottom: 512, 495, 238, 8
-
-sidebar-button-observershroud:
-	Inherits: ^Chrome
-sidebar-button-observershroud-pressed:
-	Inherits: ^Chrome
-sidebar-button-observershroud-hover:
-	Inherits: ^Chrome
-
-sidebar-button-observer:
-	Inherits: ^Chrome
-	PanelRegion: 112, 28, 5, 5, 18, 18, 5, 5
-sidebar-button-observer-hover:
-	Inherits: ^Chrome
-	PanelRegion: 112, 0, 5, 5, 18, 18, 5, 5
-sidebar-button-observer-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 112, 28, 5, 5, 18, 18, 5, 5
-sidebar-button-observer-highlighted:
-	Inherits: ^Chrome
-	PanelRegion: 140, 28, 5, 5, 18, 18, 5, 5
-sidebar-button-observer-highlighted-hover:
-	Inherits: ^Chrome
-	PanelRegion: 140, 0, 5, 5, 18, 18, 5, 5
-sidebar-button-observer-highlighted-pressed:
-	Inherits: ^Chrome
-	PanelRegion: 28, 28, 5, 5, 18, 18, 5, 5
-sidebar-button-observer-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 5, 5, 18, 18, 5, 5
-sidebar-button-observer-highlighted-disabled:
-	Inherits: ^Chrome
-	PanelRegion: 168, 0, 5, 5, 18, 18, 5, 5
+separator:
+	Inherits: button
