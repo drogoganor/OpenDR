@@ -54,19 +54,12 @@ namespace OpenRA.Mods.Dr.Graphics
 		{
 		}
 
-		//protected override Sprite GetSprite(int start, int frame, WAngle facing)
-		//{
-		//	if (facing.Facing >= 256) // receiving a facing of 320 when unloading an APC
-		//		facing = WAngle.Zero;
+		protected override Sprite GetSprite(int start, int frame, WAngle facing)
+		{
+			if (facing.Facing >= 256) // receiving a facing of 320 when unloading an APC
+				facing = WAngle.Zero;
 
-		//	var f = (int)(facing.Facing * (Facings / 256f));
-		//	var i = (f * Stride) + (frame % Length);
-		//	var j = Frames != null ? Frames[i] : start + i;
-
-		//	if (j >= sprites.Length)
-		//		j = 0;
-
-		//	return sprites[j];
-		//}
+			return base.GetSprite(start, frame, facing);
+		}
 	}
 }

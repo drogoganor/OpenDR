@@ -61,6 +61,16 @@
 		Side: Addon
 		RandomFactionMembers: fguard, imperium, togran
 		Description: Randomly select any faction.
+	ResourceRenderer:
+		ResourceTypes:
+			Water:
+				Sequences: water1
+				Palette: terrain
+				Name: Water
+			Taelon:
+				Sequences: taelon1
+				Palette: terrain
+				Name: Taelon
 
 World:
 	Inherits: ^BaseWorld
@@ -79,7 +89,6 @@ World:
 		ProductionTabsWidget: PRODUCTION_TABS
 		BuildSelectPalette: BUILD_SELECT_PALETTE
 		BuildingCancel: SIDEBAR_BUILDING_CANCEL
-	ResourceLayer:
 	ResourceClaimLayer:
 	WarheadDebugOverlay:
 	CustomTerrainDebugOverlay:
@@ -137,16 +146,19 @@ World:
 	RadarPings:
 	LoadWidgetAtGameStart:
 		ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
-	ResourceRenderer:
+	DrResourceLayer:
+		ResourceValueMultiplier: 1000
 		ResourceTypes:
-			Tiberium:
-				Sequences: water1
-				Palette: terrain
-				Name: Water
-			BlueTiberium:
-				Sequences: taelon1
-				Palette: terrain
-				Name: Taelon
+			Water:
+				ResourceIndex: 1
+				TerrainType: Clear
+				AllowedTerrainTypes: Clear, Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase
+				MaxDensity: 9000000
+			Taelon:
+				ResourceIndex: 2
+				TerrainType: Clear
+				AllowedTerrainTypes: Clear, Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase
+				MaxDensity: 9000000
 	ColorPickerManager:
 		PreviewActor: freighter.colorpicker
 		PresetHues: 0, 0.125, 0.185, 0.4, 0.54, 0.66, 0.79, 0.875, 0, 0.14, 0.23, 0.43, 0.54, 0.625, 0.77, 0.85
@@ -158,9 +170,21 @@ EditorWorld:
 	EditorActorLayer:
 	EditorCursorLayer:
 	EditorResourceLayer:
+		RecalculateResourceDensity: true
+		ResourceTypes:
+			Water:
+				ResourceIndex: 1
+				TerrainType: Clear
+				AllowedTerrainTypes: Clear, Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase
+				MaxDensity: 9000000
+			Taelon:
+				ResourceIndex: 2
+				TerrainType: Clear
+				AllowedTerrainTypes: Clear, Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase
+				MaxDensity: 9000000
 	EditorSelectionLayer:
-	EditorActionManager:
 	LoadWidgetAtGameStart:
-	MapOptions:
+	EditorActionManager:
 	BuildableTerrainOverlay:
 		AllowedTerrainTypes: Clear, Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase
+	MapOptions: # not sure why this is required

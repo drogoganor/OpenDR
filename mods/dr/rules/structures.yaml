@@ -14,7 +14,7 @@ Power:
 	Power:
 		Amount: 500
 	ScalePowerWithHealth:
-	Refinery:
+	DrRefinery:
 		DockAngle: 32
 		DockOffset: 0,2
 	StoresResources:
@@ -58,7 +58,7 @@ WaterLaunchPad:
 		Range: 8c0
 	Power:
 		Amount: -100
-	Refinery:
+	DrRefinery:
 		DockAngle: 32
 		DockOffset: 1,2
 	StoresResources:

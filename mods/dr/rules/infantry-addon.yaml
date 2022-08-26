@@ -1,0 +1,292 @@
+
+# Togran units
+
+ShockTrooper:
+	Inherits: ^Infantry
+	RenderSprites:
+		Image: unskst0
+	Tooltip:
+		Name: Shock Trooper
+	Buildable:
+		Description: Base trooper of the Togran.
+		Prerequisites: ~infantry.togran
+		BuildPaletteOrder: 10
+		BuildDuration: 6
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: ShockTrooperVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 78
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: ShockTrooperWeapon
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+GoreHunter:
+	Inherits: ^Infantry
+	RenderSprites:
+		Image: unhvst0
+	Tooltip:
+		Name: Gore Hunter
+	Buildable:
+		Description: Heavy trooper of the Tograns.
+		Prerequisites: ~infantry.togran
+		BuildPaletteOrder: 10
+		BuildDuration: 11
+	Selectable:
+		Class: E2
+	Voiced:
+		VoiceSet: GoreHunterVoice
+	Valued:
+		Cost: 300
+	Health:
+		HP: 125
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 64
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: GoreHunterWeapon
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+# Terrorist units
+
+LardriddenTerroristSoldierVeteran:
+	Inherits: ^Infantry
+	RenderSprites:
+		Image: utfatst0
+	Tooltip:
+		Name: Eliminator
+	Buildable:
+		Description: Equivalent to a Merc
+		Prerequisites: ~infantry.terrorist
+		BuildPaletteOrder: 10
+		BuildDuration: 11
+	Selectable:
+		Class: E2
+	Voiced:
+		VoiceSet: LardVoice2
+	Valued:
+		Cost: 350
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 66
+	Armor:
+		Type: PowerHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: PlasmaRifle
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+RastaTerroristSoldierVeteran:
+	Inherits: ^Infantry
+	RenderSprites:
+		Image: utravst0
+	Tooltip:
+		Name: Rasta Terrorist Soldier Veteran
+	-Buildable:
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: RastaVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 78
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+RastaTerroristSoldier:
+	Inherits: ^Infantry
+	RenderSprites:
+		Image: utrasst0
+	Tooltip:
+		Name: Rasta Terrorist Soldier
+	-Buildable:
+	Selectable:
+		Class: E2
+	Voiced:
+		VoiceSet: RastaVoice
+	Valued:
+		Cost: 300
+	Health:
+		HP: 125
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 78
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: RailGun
+	WithIdleOverlay@SHADOW: # No animated shadow
+		Sequence: shadow
+
+# Third blue faction
+
+AlternateLardriddenTerroristSoldier:
+	Inherits: ^Infantry
+	RenderSprites:
+		Image: utfadst0
+	Tooltip:
+		Name: Alternate Lardridden Terrorist Soldier
+	-Buildable:
+	Selectable:
+		Class: E9
+	Voiced:
+		VoiceSet: LardVoice
+	Valued:
+		Cost: 500
+	Health:
+		HP: 75
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	-Crushable:
+	Armor:
+		Type: PowerHuman
+	Armament@PRIMARY:
+		Weapon: PolyAcid
+	Hovers:
+	WithShadow:
+		Offset: 111, 64, 0
+		ZOffset: -129
+
+# Unused units
+
+Santa:
+	Inherits: ^Infantry
+	RenderSprites:
+		Image: unsanst0
+	Tooltip:
+		Name: Satan Clawz
+	-Buildable:
+	Selectable:
+		Class: E3
+	Voiced:
+		VoiceSet: SantaVoice
+	Valued:
+		Cost: 200
+	Health:
+		HP: 125
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 64
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: SantaWeapon
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
+
+GoreBeast:
+	Inherits: ^Infantry
+	RenderSprites:
+		Image: unmonst0
+	Tooltip:
+		Name: Gore Beast
+	-Buildable:
+	Selectable:
+		Class: E4
+	Voiced:
+		VoiceSet: GoreBeastVoice
+	Valued:
+		Cost: 250
+	Health:
+		HP: 150
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: GoreBeastWeapon
+	WithShadow:
+		Offset: 122, 56, 0
+		ZOffset: -129
+
+# Terrorist
+
+SkateyScout:
+	Inherits: ^Infantry
+	RenderSprites:
+		Image: utagsst0
+	Tooltip:
+		Name: Skatey Scout
+	-Buildable:
+	Selectable:
+		Class: E4
+	Voiced:
+		VoiceSet: SkateyVoice
+	Valued:
+		Cost: 300
+	Health:
+		HP: 66
+	RevealsShroud:
+		Range: 12c0
+	Mobile:
+		Speed: 102
+	Armor:
+		Type: ToughHuman
+	Hovers:
+	WithShadow:
+		Offset: 111, 64, 0
+		ZOffset: -129
+
+TerroristBreakerBoys:
+	Inherits: ^Infantry
+	RenderSprites:
+		Image: utboyst0
+	Tooltip:
+		Name: Terrorist Breaker Boys
+	-Buildable:
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: GenericHumanVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 78
+	Armor:
+		Type: ToughHuman

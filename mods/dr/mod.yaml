@@ -56,6 +56,7 @@ Rules:
 	dr|rules/shapes.yaml
 	dr|rules/defaults.yaml
 	dr|rules/defaults-buildings.yaml
+	dr|rules/resources-as-actors.yaml
 	dr|rules/misc.yaml
 	dr|rules/structures-building.yaml
 	dr|rules/structures.yaml
@@ -64,9 +65,14 @@ Rules:
 	dr|rules/structures-addon.yaml
 	dr|rules/upgrades.yaml
 	dr|rules/ai.yaml
-	dr|rules/units.yaml
+	dr|rules/infantry.yaml
+	dr|rules/vehicles.yaml
+	dr|rules/aircraft.yaml
+	dr|rules/infantry-addon.yaml
+	dr|rules/vehicles-addon.yaml
+	dr|rules/aircraft-addon.yaml
+	dr|rules/ships-addon.yaml
 	#dr|rules/units-retail.yaml
-	dr|rules/units-addon.yaml
 	dr|rules/civilians.yaml
 	dr|rules/decorations.yaml
 	dr|rules/decorations-manual.yaml
@@ -126,6 +132,7 @@ ChromeLayout:
 	common|chrome/ingame-menu.yaml
 	dr|chrome/mainmenu.yaml
 	dr|chrome/ingame-player.yaml
+	dr|chrome/ingame-observer.yaml
 	#dr|chrome/color-picker.yaml
 	dr|chrome/mainmenu-prerelease-notification.yaml
 	common|chrome/ingame-perf.yaml

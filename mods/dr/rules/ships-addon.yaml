@@ -1,0 +1,87 @@
+
+TerroristWaterborneTroopCarrier:
+	Inherits: ^Ship
+	RenderSprites:
+		Image: uttwtst0
+	Tooltip:
+		Name: Terrorist Water-borne Troop Carrier
+	Selectable:
+		Class: N2
+	Voiced:
+		VoiceSet: WaterborneTroopCarrierVoice
+	Valued:
+		Cost: 750
+	Health:
+		HP: 125
+	RevealsShroud:
+		Range: 9c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: TankPlating
+
+TerroristWAA:
+	Inherits: ^Ship
+	RenderSprites:
+		Image: unwaast0
+	Tooltip:
+		Name: Terrorist WAA
+	Selectable:
+		Class: N3
+	Voiced:
+		VoiceSet: TerroristWAAVoice
+	Valued:
+		Cost: 200
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 78
+	Armor:
+		Type: TankPlating
+
+TerroristWaterTank:
+	Inherits: ^Ship
+	RenderSprites:
+		Image: unwtkst0
+	Tooltip:
+		Name: Terrorist Water Tank
+	Selectable:
+		Class: N4
+	Voiced:
+		VoiceSet: TerroristWaterTankVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 50
+	RevealsShroud:
+		Range: 7c0
+	Mobile:
+		Speed: 96
+	Armor:
+		Type: TankPlating
+
+TerroristWaterShock:
+	Inherits: ^Ship
+	RenderSprites:
+		Image: unwswst0
+	Tooltip:
+		Name: Terrorist Water Shock
+	Selectable:
+		Class: E1
+	Voiced:
+		VoiceSet: TerroristWaterTankVoice
+	Valued:
+		Cost: 150
+	Health:
+		HP: 100
+	RevealsShroud:
+		Range: 8c0
+	Mobile:
+		Speed: 78
+	Armor:
+		Type: ToughHuman
+	Armament@PRIMARY:
+		LocalOffset: 512,0,112
+		Weapon: LaserRifle

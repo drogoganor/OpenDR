@@ -1,0 +1,45 @@
+# Unused - we used to have resources as actors
+
+^ResourcePatch:
+	Inherits@1: ^ExistsInWorld
+	Inherits@shape: ^1x1Shape
+	Interactable:
+	RenderSprites:
+		Palette: terrain
+	WithSpriteBody:
+	BodyOrientation:
+	QuantizeFacingsFromSequence:
+	Building:
+		Dimensions: 1,1
+		Footprint: =
+	AlwaysVisible:
+	MapEditorData:
+		Categories: Resources
+
+Water:
+	Inherits: ^ResourcePatch
+	DrResourceType:
+		Type: water
+		Name: Water
+		ResourceType: 1
+		TerrainType: Water
+		ValuePerUnit: 50
+		AllowUnderActors: true
+	Tooltip:
+		Name: Water
+	RenderSprites:
+		Image: ncwel1l0
+
+Taelon:
+	Inherits: ^ResourcePatch
+	DrResourceType:
+		Type: taelon
+		Name: Taelon
+		ResourceType: 2
+		TerrainType: Taelon
+		ValuePerUnit: 50
+		AllowUnderActors: true
+	Tooltip:
+		Name: Taelon
+	RenderSprites:
+		Image: ncmin1l0

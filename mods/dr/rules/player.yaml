@@ -1,6 +1,10 @@
 ^BasePlayer:
 	AlwaysVisible:
 	Shroud:
+	PlayerResources:
+		ResourceValues:
+			Water: 120 # 25 in RA
+			Taelon: 120
 
 EditorPlayer:
 	Inherits: ^BasePlayer

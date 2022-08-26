@@ -11,18 +11,24 @@
 
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits
 {
+	public class DrRefineryInfo : RefineryInfo
+	{
+		public override object Create(ActorInitializer init) { return new DrRefinery(init.Self, this); }
+	}
+
 	public class DrRefinery : Refinery, INotifyCreated, IAcceptResources, INotifyOwnerChanged
 	{
-		readonly RefineryInfo info;
+		readonly DrRefineryInfo info;
 		PlayerResources playerResources;
 		IEnumerable<int> resourceValueModifiers;
 		DrPlayerResources drPlayerResources;
 
-		public DrRefinery(Actor self, RefineryInfo info) : base(self, info)
+		public DrRefinery(Actor self, DrRefineryInfo info) : base(self, info)
 		{
 			this.info = info;
 			playerResources = self.Owner.PlayerActor.Trait<PlayerResources>();
@@ -36,6 +42,10 @@ namespace OpenRA.Mods.Dr.Traits
 
 		void INotifyOwnerChanged.OnOwnerChanged(Actor self, Player oldOwner, Player newOwner)
 		{
+			// Unlink any harvesters
+			foreach (var harv in GetLinkedHarvesters())
+				harv.Trait.UnlinkProc(harv.Actor, self);
+
 			drPlayerResources = newOwner.PlayerActor.Trait<DrPlayerResources>();
 			playerResources = newOwner.PlayerActor.Trait<PlayerResources>();
 		}
