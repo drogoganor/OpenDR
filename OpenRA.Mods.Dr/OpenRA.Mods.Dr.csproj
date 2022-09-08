@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /F /Y $(OutDir)$(AssemblyName).dll ..\engine\bin\$(AssemblyName).dll" />
+    <Exec Command="xcopy /Y /F $(OutDir)$(AssemblyName).dll ..\engine\bin\" />
   </Target>
 
 </Project>

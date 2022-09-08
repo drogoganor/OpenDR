@@ -1,6 +1,6 @@
 Metadata:
 	Title: Mod Content Manager
-	Version: {DEV_VERSION}
+	Version: 6ccd000
 	Hidden: true
 
 Packages:
@@ -34,6 +34,9 @@ LoadScreen: ModContentLoadScreen
 ChromeMetrics:
 	common|metrics.yaml
 	modcontent|metrics.yaml
+
+Translations:
+	common|languages/en.ftl
 
 Fonts:
 	Tiny:
