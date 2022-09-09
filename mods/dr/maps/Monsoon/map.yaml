@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: dr
 
@@ -451,15 +451,6 @@ Actors:
 	Actor542: aoroc000.jungle
 		Owner: Neutral
 		Location: 36,7
-	Actor945: water
-		Owner: Neutral
-		Location: 10,12
-	Actor946: water
-		Owner: Neutral
-		Location: 13,26
-	Actor947: taelon
-		Owner: Neutral
-		Location: 36,19
 	Actor948: mpspawn
 		Location: 75,14
 		Owner: Neutral
@@ -1665,33 +1656,6 @@ Actors:
 		Owner: Neutral
 	Actor1349: aoroc000.jungle
 		Location: 61,72
-		Owner: Neutral
-	Actor1350: water
-		Location: 87,12
-		Owner: Neutral
-	Actor1351: water
-		Location: 10,67
-		Owner: Neutral
-	Actor1352: water
-		Location: 87,67
-		Owner: Neutral
-	Actor1353: water
-		Location: 84,26
-		Owner: Neutral
-	Actor1354: water
-		Location: 13,53
-		Owner: Neutral
-	Actor1355: water
-		Location: 84,53
-		Owner: Neutral
-	Actor1356: taelon
-		Location: 61,19
-		Owner: Neutral
-	Actor1357: taelon
-		Location: 36,60
-		Owner: Neutral
-	Actor1358: taelon
-		Location: 61,60
 		Owner: Neutral
 
 Rules: rules.yaml

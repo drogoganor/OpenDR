@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: dr
 
@@ -261,24 +261,6 @@ Actors:
 	Actor73: aotre003
 		Owner: Neutral
 		Location: 54,35
-	Actor148: water
-		Owner: Neutral
-		Location: 21,5
-	Actor149: water
-		Owner: Neutral
-		Location: 11,25
-	Actor150: taelon
-		Owner: Neutral
-		Location: 5,13
-	Actor151: taelon
-		Owner: Neutral
-		Location: 55,7
-	Actor152: water
-		Owner: Neutral
-		Location: 72,23
-	Actor153: water
-		Owner: Neutral
-		Location: 60,34
 	Actor154: mpspawn
 		Location: 19,79
 		Owner: Neutral
@@ -500,22 +482,4 @@ Actors:
 		Owner: Neutral
 	Actor227: aotre003
 		Location: 54,63
-		Owner: Neutral
-	Actor228: water
-		Location: 21,92
-		Owner: Neutral
-	Actor229: water
-		Location: 11,72
-		Owner: Neutral
-	Actor230: taelon
-		Location: 5,84
-		Owner: Neutral
-	Actor231: taelon
-		Location: 55,90
-		Owner: Neutral
-	Actor232: water
-		Location: 72,74
-		Owner: Neutral
-	Actor233: water
-		Location: 60,63
 		Owner: Neutral

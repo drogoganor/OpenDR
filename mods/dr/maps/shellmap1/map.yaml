@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: dr
 
@@ -461,14 +461,5 @@ Actors:
 		Owner: Imperium
 		Location: 51,32
 		Facing: 220
-	Actor152: water
-		Owner: Neutral
-		Location: 73,6
-	Actor153: water
-		Owner: Neutral
-		Location: 86,8
-	Actor154: taelon
-		Owner: Neutral
-		Location: 82,15
 
 Rules: rules.yaml

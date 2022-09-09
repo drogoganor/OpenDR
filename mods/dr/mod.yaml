@@ -173,7 +173,10 @@ ChromeLayout:
 	common|chrome/editor.yaml
 	common|chrome/playerprofile.yaml
 	common|chrome/text-notifications.yaml
-	
+
+Translations:
+	common|languages/en.ftl
+
 Weapons:
 	dr|weapons/weapons.yaml
 	dr|weapons/other.yaml

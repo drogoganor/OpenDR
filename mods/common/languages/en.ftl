@@ -442,7 +442,7 @@ delete-all-maps-accept = Delete
 
 ## MissionBrowserLogic
 no-video-title = Video not installed
-no-video-text = The game videos can be installed from the
+no-video-prompt = The game videos can be installed from the
     "Manage Content" menu in the mod chooser.
 no-video-cancel = Back
 
@@ -466,6 +466,9 @@ loading-player-profile-failed = Failed to load player profile.
 duration = Duration: { $time }
 singleplayer = Singleplayer
 multiplayer = Multiplayer
+
+victory = Victory
+defeat = Defeat
 
 today = Today
 last-week = Last 7 days

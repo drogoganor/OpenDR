@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: dr
 
@@ -601,14 +601,5 @@ Actors:
 		Owner: Imperium
 		Location: 35,49
 		Facing: 368
-	Actor226: water
-		Owner: Neutral
-		Location: 62,73
-	Actor227: water
-		Owner: Neutral
-		Location: 67,73
-	Actor228: water
-		Owner: Neutral
-		Location: 75,80
 
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml

@@ -1,4 +1,4 @@
-MapFormat: 11
+MapFormat: 12
 
 RequiresMod: dr
 
@@ -1212,11 +1212,5 @@ Actors:
 		Owner: Freedom Guard
 		Location: 28,43
 		Facing: 368
-	Actor466: water
-		Owner: Neutral
-		Location: 48,49
-	Actor467: water
-		Owner: Neutral
-		Location: 20,3
 
 Rules: dr|rules/campaign-maprules.yaml, dr|rules/campaign-tooltips.yaml, rules.yaml
