@@ -23,9 +23,10 @@ namespace OpenRA.Mods.Dr.Graphics
 			: base(modData)
 		{
 			var metadata = modData.Manifest.Get<SpriteSequenceFormat>().Metadata;
-			MiniYaml yaml;
-			if (metadata.TryGetValue("DefaultSpriteExtension", out yaml))
+			if (metadata.TryGetValue("DefaultSpriteExtension", out var yaml))
+			{
 				DefaultSpriteExtension = yaml.Value;
+			}
 		}
 
 		public override ISpriteSequence CreateSequence(ModData modData, string tileSet, SpriteCache cache, string sequence, string animation,

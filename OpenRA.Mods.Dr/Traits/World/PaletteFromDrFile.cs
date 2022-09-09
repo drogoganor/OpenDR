@@ -9,10 +9,6 @@
  */
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using OpenRA.FileSystem;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits;

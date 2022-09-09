@@ -59,6 +59,10 @@ namespace OpenRA.Mods.Dr.FileFormats
 				while (!reader.EndOfStream)
 				{
 					var line = reader.ReadLine();
+					if (line == null)
+					{
+						break;
+					}
 
 					if (line.Length == 0) continue;
 
@@ -77,9 +81,9 @@ namespace OpenRA.Mods.Dr.FileFormats
 					}
 				}
 			}
-			catch (Exception ex)
+			catch (Exception)
 			{
-				throw ex;
+				throw;
 			}
 		}
 

@@ -20,8 +20,6 @@ using OpenRA.Network;
 using OpenRA.Primitives;
 using OpenRA.Widgets;
 
-#nullable disable
-
 namespace OpenRA.Mods.Dr.Widgets
 {
 	public class BuildSelectIcon : ProductionIcon

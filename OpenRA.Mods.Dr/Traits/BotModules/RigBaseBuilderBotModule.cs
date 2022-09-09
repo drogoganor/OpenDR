@@ -163,7 +163,6 @@ namespace OpenRA.Mods.Dr.Traits
 		PlayerResources playerResources;
 		IResourceLayer resourceLayer;
 		IBotPositionsUpdated[] positionsUpdatedModules;
-		BitArray resourceTypeIndices;
 		CPos initialBaseCenter;
 		CPos defenseCenter;
 		RigBaseBuilderManager builder;

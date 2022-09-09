@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2018 The OpenRA Developers (see AUTHORS)
+ * Copyright 2007-2022 The OpenRA Developers (see AUTHORS)
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -9,11 +9,6 @@
  */
 #endregion
 
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using Linguini.Syntax.Ast;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Graphics;
@@ -76,18 +71,11 @@ namespace OpenRA.Mods.Dr.Orders
 		readonly BuildingInfo buildingInfo;
 		readonly PlaceBuildingInfo placeBuildingInfo;
 		readonly FootprintPlaceBuildingPreviewInfo footprintPlaceBuildingPreviewInfo;
-		readonly string faction;
-		readonly Sprite buildOk;
-		readonly Sprite buildBlocked;
 		readonly IResourceLayer resourceLayer;
 		readonly Viewport viewport;
 		readonly WVec centerOffset;
-		readonly int2 topLeftScreenOffset;
-		IActorPreview[] preview;
 		readonly VariantWrapper[] variants;
 		int variant;
-
-		//bool initialized;
 
 		public BuilderUnitBuildingOrderGenerator(BuilderUnit queue, string name, WorldRenderer worldRenderer)
 		{
@@ -123,18 +111,6 @@ namespace OpenRA.Mods.Dr.Orders
 			footprintPlaceBuildingPreviewInfo = actorInfo.TraitInfo<FootprintPlaceBuildingPreviewInfo>();
 			buildingInfo = actorInfo.TraitInfo<BuildingInfo>();
 			centerOffset = buildingInfo.CenterOffset(world);
-			topLeftScreenOffset = -worldRenderer.ScreenPxOffset(centerOffset);
-
-			var buildableInfo = actorInfo.TraitInfo<BuildableInfo>();
-			var mostLikelyProducer = queue.MostLikelyProducer();
-			faction = buildableInfo.ForceFaction
-				?? (mostLikelyProducer.Trait != null ? mostLikelyProducer.Trait.Faction : queue.Actor.Owner.Faction.InternalName);
-
-			if (map.Rules.Sequences.HasSequence("overlay", "build-valid-{0}".F(tileset)))
-				buildOk = map.Rules.Sequences.GetSequence("overlay", "build-valid-{0}".F(tileset)).GetSprite(0);
-			else
-				buildOk = map.Rules.Sequences.GetSequence("overlay", "build-valid").GetSprite(0);
-			buildBlocked = map.Rules.Sequences.GetSequence("overlay", "build-invalid").GetSprite(0);
 		}
 
 		PlaceBuildingCellType MakeCellType(bool valid, bool lineBuild = false)
@@ -226,11 +202,11 @@ namespace OpenRA.Mods.Dr.Orders
 			if (queue == null)
 				world.CancelInputMode();
 
-			if (preview == null)
-				return;
+			//if (preview == null)
+			//	return;
 
-			foreach (var p in preview)
-				p.Tick();
+			//foreach (var p in preview)
+			//	p.Tick();
 		}
 
 		void IOrderGenerator.SelectionChanged(World world, IEnumerable<Actor> selected) { }

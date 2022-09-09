@@ -9,9 +9,6 @@
  */
 #endregion
 
-using System;
-using System.Collections.Generic;
-using OpenRA.Network;
 using OpenRA.Widgets;
 
 namespace OpenRA.Mods.Dr.Widgets.Logic
