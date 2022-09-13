@@ -39,11 +39,6 @@ upgrade.hq1.imperium:
 	Buildable:
 		Prerequisites: ~hq.imperium, ~barracks, ~vehicles
 
-upgrade.hq1.shadowhand:
-	Inherits: ^upgrade.hq1
-	Buildable:
-		Prerequisites: ~hq.shadowhand, ~nexus
-
 upgrade.hq2:
 	Inherits: ^Upgrade
 	Tooltip:

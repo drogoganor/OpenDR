@@ -1,0 +1,5 @@
+
+upgrade.hq1.shadowhand:
+	Inherits: ^upgrade.hq1
+	Buildable:
+		Prerequisites: ~hq.shadowhand, ~nexus

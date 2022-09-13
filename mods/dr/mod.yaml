@@ -192,7 +192,7 @@ Music:
 	dr|audio/music.yaml
 
 Translations:
-	dr|english.yaml
+	common|languages/en.ftl
 
 Hotkeys:
 	common|hotkeys/game.yaml
@@ -201,6 +201,9 @@ Hotkeys:
 	common|hotkeys/production-peractor.yaml
 	common|hotkeys/supportpowers.yaml
 	common|hotkeys/viewport.yaml
+	common|hotkeys/chat.yaml
+	common|hotkeys/editor.yaml
+	common|hotkeys/control-groups.yaml
 	dr|hotkeys.yaml
 
 LoadScreen: LogoStripeLoadScreen

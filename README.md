@@ -16,6 +16,8 @@ Join us on the [Dark Reign discord](https://discord.gg/3MKcGSW) if you want to t
 
 You will need to switch to OpenRA.Launcher and set the command line arguments to: `Engine.EngineDir=".." Engine.ModSearchPaths="..\\..\\mods" Game.Mod=dr`
 
+Also for some reason you'll need to copy the mod DLL by setting the Post-build event for OpenRA.Mods.Dr to: `xcopy /Y /F $(OutDir)$(AssemblyName).dll ..\engine\bin\`
+
 ## Thanks to
 
 * [OpenRA](http://www.openra.net/) and associates
