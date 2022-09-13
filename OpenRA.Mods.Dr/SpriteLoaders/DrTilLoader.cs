@@ -9,14 +9,8 @@
  */
 #endregion
 
-using System.Collections.Generic;
-using System.Diagnostics.Metrics;
-using System.IO;
-using System.Linq;
-using OpenRA.FileFormats;
 using OpenRA.Graphics;
 using OpenRA.Primitives;
-using TagLib.Riff;
 using Size = OpenRA.Primitives.Size;
 
 namespace OpenRA.Mods.Dr.SpriteLoaders

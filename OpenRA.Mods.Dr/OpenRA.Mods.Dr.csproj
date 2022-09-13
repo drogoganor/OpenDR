@@ -1,19 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
 	<EngineRootPath>../engine</EngineRootPath>
   </PropertyGroup>
-
   <ItemGroup>
-    <Folder Include="Properties\" />
+    <ProjectReference Include="$(EngineRootPath)/OpenRA.Game/OpenRA.Game.csproj">
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="$(EngineRootPath)/OpenRA.Mods.Common/OpenRA.Mods.Common.csproj">
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\engine\OpenRA.Game\OpenRA.Game.csproj" />
-    <ProjectReference Include="..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj" />
-  </ItemGroup>
-
 </Project>
