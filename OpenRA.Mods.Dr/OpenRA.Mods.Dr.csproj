@@ -16,8 +16,4 @@
     <ProjectReference Include="..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj" />
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="xcopy /Y /F $(OutDir)$(AssemblyName).dll ..\engine\bin\" />
-  </Target>
-
 </Project>
