@@ -22,6 +22,7 @@ jobs:
       - name: Check Code
         run: |
           make check
+          make check-packaging-scripts
 
       - name: Check Mods
         run: |
@@ -64,10 +65,8 @@ jobs:
         shell: powershell
         run: |
           # Work around runtime failures on the GH Actions runner
-          dotnet nuget add source https://api.nuget.org/v3/index.json -n nuget.org
+          dotnet nuget locals all --clear
           .\make.ps1 check
-          dotnet build OpenRA.Mods.Dr\OpenRA.Mods.Dr.csproj -c Debug --nologo -p:TargetPlatform=win-x64
-          dotnet test bin\OpenRA.Mods.Dr.dll --test-adapter-path:.
 
       - name: Check Mods
         run: |
