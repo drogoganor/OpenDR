@@ -332,10 +332,10 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			if (string.IsNullOrWhiteSpace(flag))
 				flag = "VH";
 
-			bool flipHorizontal = flag.Contains("H");
-			bool flipVertical = flag.Contains("V");
+			var flipHorizontal = flag.Contains('H');
+			var flipVertical = flag.Contains('V');
 
-			MirrorType mirrorType = MirrorType.Horizontal;
+			var mirrorType = MirrorType.Horizontal;
 			if (flipVertical)
 				mirrorType = MirrorType.Vertical;
 			if (flipHorizontal && flipVertical)

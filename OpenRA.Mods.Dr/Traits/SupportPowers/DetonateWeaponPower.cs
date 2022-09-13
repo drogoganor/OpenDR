@@ -8,8 +8,6 @@
  */
 #endregion
 
-using System;
-using System.Collections.Generic;
 using OpenRA.Effects;
 using OpenRA.GameRules;
 using OpenRA.Graphics;
@@ -100,7 +98,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 			var targetPosition = order.Target.CenterPosition + new WVec(WDist.Zero, WDist.Zero, Info.AirburstAltitude);
 
-			Action detonateWeapon = () => self.World.AddFrameEndTask(w => Info.WeaponInfo.Impact(Target.FromPos(targetPosition), new WarheadArgs() { SourceActor = self, DamageModifiers = new int[0] }));
+			Action detonateWeapon = () => self.World.AddFrameEndTask(w => Info.WeaponInfo.Impact(Target.FromPos(targetPosition), new WarheadArgs() { SourceActor = self, DamageModifiers = Array.Empty<int>() }));
 
 			self.World.AddFrameEndTask(w => w.Add(new DelayedAction(Info.ActivationDelay, detonateWeapon)));
 

@@ -25,12 +25,12 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		public ModData ModData;
 		public Map Map;
-		public List<string> Players = new List<string>();
+		public List<string> Players = new();
 		public MapPlayers MapPlayers;
-		private int numMultiStarts = 0;
+		int numMultiStarts = 0;
 		protected bool skipActors = true;
 
-		private static string[] knownUnknownThings = new string[]
+		static readonly string[] KnownUnknownThings = new string[]
 		{
 			"smcrater", // Not sure if these are ever deliberately placed on a map
 			"medcrater",
@@ -44,7 +44,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			"hugecrater6"
 		};
 
-		private static string[] knownUnknownBuildings = new string[]
+		static readonly string[] KnownUnknownBuildings = new string[]
 		{
 			"fh1_decoy",
 			"ih1_decoy",
@@ -60,11 +60,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			"impar_decoy",
 		};
 
-		private static string[] knownUnknownUnits = new string[]
-		{
-		};
+		static readonly string[] KnownUnknownUnits = Array.Empty<string>();
 
-		static Dictionary<string, string> thingNames = new Dictionary<string, string>
+		static readonly Dictionary<string, string> ThingNames = new()
 		{
 			{ "tree1", "aotre000" },
 			{ "tree2", "aotre001" },
@@ -105,7 +103,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "watercrater", "eowcocr0" },
 		};
 
-		static Dictionary<string, string> unitNames = new Dictionary<string, string>
+		static readonly Dictionary<string, string> UnitNames = new Dictionary<string, string>
 		{
 			{ "FGConstructionCrew", "ConstructionRig" },
 			{ "FGGroundTransporter", "Freighter" },
@@ -178,7 +176,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "TConstructionCrew", "ConstructionRig" }
 		};
 
-		private static Dictionary<string, string> buildingNames = new Dictionary<string, string>
+		static readonly Dictionary<string, string> BuildingNames = new Dictionary<string, string>
 		{
 			{ "fgpp", "Power" },
 			{ "imppp", "Power" },
@@ -395,9 +393,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 						var matchingActor = string.Empty;
 
-						if (thingNames.ContainsKey(type))
-							matchingActor = thingNames[type];
-						else if (!knownUnknownThings.Contains(type))
+						if (ThingNames.ContainsKey(type))
+							matchingActor = ThingNames[type];
+						else if (!KnownUnknownThings.Contains(type))
 							throw new Exception("Unknown thing name: " + type);
 
 						if (x >= 0 && y >= 0 && !string.IsNullOrEmpty(matchingActor))
@@ -436,9 +434,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 							var matchingActor = string.Empty;
 
-							if (unitNames.ContainsKey(type))
-								matchingActor = unitNames[type];
-							else if (!knownUnknownUnits.Contains(type))
+							if (UnitNames.ContainsKey(type))
+								matchingActor = UnitNames[type];
+							else if (!KnownUnknownUnits.Contains(type))
 								throw new Exception("Unknown unit name: " + type);
 
 							if (x >= 0 && y >= 0 && !string.IsNullOrEmpty(matchingActor))
@@ -473,9 +471,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 							var matchingActor = string.Empty;
 
-							if (buildingNames.ContainsKey(type))
-								matchingActor = buildingNames[type];
-							else if (!knownUnknownBuildings.Contains(type))
+							if (BuildingNames.ContainsKey(type))
+								matchingActor = BuildingNames[type];
+							else if (!KnownUnknownBuildings.Contains(type))
 								throw new Exception("Unknown building name: " + type);
 
 							var isResource = type == "impww" || type == "impmn";
@@ -517,8 +515,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 						var matchingActor = string.Empty;
 
-						if (buildingNames.ContainsKey(type))
-							matchingActor = buildingNames[type];
+						if (BuildingNames.ContainsKey(type))
+							matchingActor = BuildingNames[type];
 
 						if (x >= 0 && y >= 0 && !string.IsNullOrEmpty(matchingActor))
 						{

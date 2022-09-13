@@ -21,7 +21,7 @@ namespace OpenRA.Mods.Dr.Warheads
 	public class SpawnActorWarhead : Warhead, IRulesetLoaded<WeaponInfo>
 	{
 		[Desc("Actors to spawn.")]
-		public readonly string[] Actors = { };
+		public readonly string[] Actors = Array.Empty<string>();
 
 		[Desc("Defines the image of an optional animation played at the spawning location.")]
 		public readonly string Image = null;
@@ -35,7 +35,7 @@ namespace OpenRA.Mods.Dr.Warheads
 		public readonly string Palette = "effect";
 
 		[Desc("List of sounds that can be played at the spawning location.")]
-		public readonly string[] Sounds = new string[0];
+		public readonly string[] Sounds = Array.Empty<string>();
 
 		public readonly bool UsePlayerPalette = false;
 
