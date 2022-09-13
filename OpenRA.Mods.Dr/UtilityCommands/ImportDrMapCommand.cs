@@ -9,6 +9,10 @@
  */
 #endregion
 
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using OpenRA.FileSystem;
 using OpenRA.Mods.Dr.FileFormats;
 using OpenRA.Primitives;
@@ -25,7 +29,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		public ModData ModData;
 		public Map Map;
-		public List<string> Players = new();
+		public List<string> Players = new List<string>();
 		public MapPlayers MapPlayers;
 		int numMultiStarts = 0;
 		protected bool skipActors = true;
@@ -62,7 +66,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		static readonly string[] KnownUnknownUnits = Array.Empty<string>();
 
-		static readonly Dictionary<string, string> ThingNames = new()
+		static readonly Dictionary<string, string> ThingNames = new Dictionary<string, string>()
 		{
 			{ "tree1", "aotre000" },
 			{ "tree2", "aotre001" },

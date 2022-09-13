@@ -9,6 +9,8 @@
  */
 #endregion
 
+using System.Collections.Generic;
+using System.IO;
 using OpenRA.Graphics;
 using OpenRA.Primitives;
 using Size = OpenRA.Primitives.Size;

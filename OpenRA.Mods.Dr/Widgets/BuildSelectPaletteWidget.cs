@@ -9,6 +9,9 @@
  */
 #endregion
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Lint;
 using OpenRA.Mods.Common.Traits;
@@ -102,7 +105,7 @@ namespace OpenRA.Mods.Dr.Widgets
 		}
 
 		public override Rectangle EventBounds { get { return eventBounds; } }
-		Dictionary<Rectangle, BuildSelectIcon> icons = new();
+		Dictionary<Rectangle, BuildSelectIcon> icons = new Dictionary<Rectangle, BuildSelectIcon>();
 		readonly Animation cantBuild;
 		readonly Animation clock;
 		Rectangle eventBounds = Rectangle.Empty;

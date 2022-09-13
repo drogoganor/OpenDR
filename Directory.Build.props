@@ -5,7 +5,7 @@
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <Optimize>true</Optimize>
-    <LangVersion>10.0</LangVersion>
+    <LangVersion>7.3</LangVersion>
     <DebugSymbols>true</DebugSymbols>
     <EngineRootPath Condition="'$(EngineRootPath)' == ''">..\\engine</EngineRootPath>
     <OutputPath>$(EngineRootPath)/bin</OutputPath>
