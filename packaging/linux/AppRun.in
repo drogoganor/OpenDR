@@ -1,0 +1,16 @@
+#!/bin/sh
+
+HERE="$(dirname "$(readlink -f "${0}")")"
+
+# Run the game or server
+if [ -n "$1" ] && [ "$1" = "--server" ]; then
+	# Drop the --server argument
+	shift
+	"${HERE}/usr/bin/openra-{MODID}-server" "$@"
+elif [ -n "$1" ] && [ "$1" = "--utility" ]; then
+	# Drop the --utility argument
+	shift
+	"${HERE}/usr/bin/openra-{MODID}-utility" "$@"
+else
+	"${HERE}/usr/bin/openra-{MODID}" "$@"
+fi

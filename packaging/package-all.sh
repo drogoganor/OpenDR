@@ -1,50 +1,38 @@
 #!/bin/bash
-set -e
+# OpenRA master packaging script
 
-if [ $# -eq "0" ]; then
-	echo "Usage: `basename $0` version [outputdir]"
+if [ $# -ne "2" ]; then
+	echo "Usage: ${0##*/} version outputdir."
 	exit 1
 fi
 
-TAG="$1"
-if [ $# -eq "1" ]; then
-	OUTPUTDIR=$(pwd)
-else
-	OUTPUTDIR=$2
-fi
+export GIT_TAG="$1"
+export BUILD_OUTPUT_DIR="$2"
 
-command -v python3 >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK packaging requires python 3."; exit 1; }
-command -v make >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK packaging requires make."; exit 1; }
+# Set the working dir to the location of this script using bash parameter expansion
+cd "${0%/*}" || exit 1
 
-if [[ "$OSTYPE" != "darwin"* ]]; then
-	command -v curl >/dev/null 2>&1 || command -v wget > /dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK packaging requires curl or wget."; exit 1; }
-	command -v makensis >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK packaging requires makensis."; exit 1; }
-fi
+#build packages using a subshell so directory changes do not persist beyond the function
+function build_package() (
+	function on_build() {
+		echo "$1 package build failed." 1>&2
+	}
+	#trap function executes on any error in the following commands
+	trap "on_build $1" ERR
+	set -e
+	echo "Building $1 package(s)."
+	cd "$1"
+	./buildpackage.sh "${GIT_TAG}" "${BUILD_OUTPUT_DIR}"
+)
 
-PACKAGING_DIR=$(python3 -c "import os; print(os.path.dirname(os.path.realpath('$0')))")
-
+#exit on any non-zero exited (failed) command
+set -e
 if [[ "$OSTYPE" == "darwin"* ]]; then
-	echo "Windows packaging requires a Linux host."
-	echo "Linux AppImage packaging requires a Linux host."
-	echo "Building macOS package"
-	${PACKAGING_DIR}/macos/buildpackage.sh "${TAG}" "${OUTPUTDIR}"
-	if [ $? -ne 0 ]; then
-		echo "macOS package build failed."
-	fi
+  build_package macos
 else
-	echo "Building Windows package"
-	${PACKAGING_DIR}/windows/buildpackage.sh "${TAG}" "${OUTPUTDIR}"
-	if [ $? -ne 0 ]; then
-		echo "Windows package build failed."
-	fi
-
-	echo "Building Linux AppImage package"
-	${PACKAGING_DIR}/linux/buildpackage.sh "${TAG}" "${OUTPUTDIR}"
-	if [ $? -ne 0 ]; then
-		echo "Linux AppImage package build failed."
-	fi
-
-	echo "macOS packaging requires a macOS host."
+  build_package windows
+  build_package linux
+  build_package source
 fi
 
 echo "Package build done."
