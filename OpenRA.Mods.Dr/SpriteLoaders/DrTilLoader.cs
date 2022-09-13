@@ -51,18 +51,16 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					Data[i] = s.ReadUInt8();
 				}
 
-				//var rgbByteArray = new List<byte>();
-				//for (var i = 0; i < TileSize * TileSize; i++)
-				//{
-				//	var byteVal = (byte)(Data[i] * 4);
-				//	rgbByteArray.AddRange(new[] { byteVal, byteVal, byteVal, (byte)255 });
-				//}
+				// var rgbByteArray = new List<byte>();
+				// for (var i = 0; i < TileSize * TileSize; i++)
+				// {
+				// 	var byteVal = (byte)(Data[i] * 4);
+				// 	rgbByteArray.AddRange(new[] { byteVal, byteVal, byteVal, (byte)255 });
+				// }
 
-				//var png = new Png(rgbByteArray.ToArray(), SpriteFrameType.Rgba32, TileSize, TileSize);
-				//png.Save($"C:\\temp\\{counter:D4}-til.png");
-				//counter++;
-
-
+				// var png = new Png(rgbByteArray.ToArray(), SpriteFrameType.Rgba32, TileSize, TileSize);
+				// png.Save($"C:\\temp\\{counter:D4}-til.png");
+				// counter++;
 				Offset = new float2(0, 0);
 				FrameSize = new Size(TileSize, TileSize);
 				Size = FrameSize;

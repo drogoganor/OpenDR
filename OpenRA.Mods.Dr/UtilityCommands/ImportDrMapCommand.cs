@@ -544,8 +544,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				Map.PlayerDefinitions = MapPlayers.ToMiniYaml();
 			}
 
-			// Map.FixOpenAreas();
-
 			var dest = Path.GetFileNameWithoutExtension(args[1]) + ".oramap";
 
 			Map.Save(ZipFileLoader.Create(dest));

@@ -405,10 +405,9 @@ namespace OpenRA.Mods.Dr.Widgets
 				foreach (var pio in pios.Where(p => p.IsOverlayActive(icon.Actor)))
 					WidgetUtils.DrawSpriteCentered(pio.Sprite, worldRenderer.Palette(pio.Palette), icon.Pos + iconOffset + pio.Offset(IconSize));
 
-				//var pio = pios.FirstOrDefault(p => p.IsOverlayActive(icon.Actor));
-				//if (pio != null)
-				//	WidgetUtils.DrawSpriteCentered(pio.Sprite, worldRenderer.Palette(pio.Palette), icon.Pos + iconOffset + pio.Offset(IconSize));
-
+				// var pio = pios.FirstOrDefault(p => p.IsOverlayActive(icon.Actor));
+				// if (pio != null)
+				// 	WidgetUtils.DrawSpriteCentered(pio.Sprite, worldRenderer.Palette(pio.Palette), icon.Pos + iconOffset + pio.Offset(IconSize));
 				if (!buildableItems.Any(a => a.Name == icon.Name))
 					WidgetUtils.DrawSpriteCentered(cantBuild.Image, icon.IconDarkenPalette, icon.Pos + iconOffset);
 			}
@@ -418,36 +417,36 @@ namespace OpenRA.Mods.Dr.Widgets
 			// Overlays
 			foreach (var icon in icons.Values)
 			{
-				//var total = icon.Queued.Count;
-				//if (total > 0)
-				//{
-				//	var first = icon.Queued[0];
-					//var waiting = !CurrentQueue.IsProducing(first) && !first.Done;
-					//if (first.Done)
-					//{
-						//if (ReadyTextStyle == ReadyTextStyleOptions.Solid || orderManager.LocalFrameNumber * worldRenderer.World.Timestep / 360 % 2 == 0)
-						//	overlayFont.DrawTextWithContrast(ReadyText, icon.Pos + readyOffset, Color.White, Color.Black, 1);
-						//else if (ReadyTextStyle == ReadyTextStyleOptions.AlternatingColor)
-						//	overlayFont.DrawTextWithContrast(ReadyText, icon.Pos + readyOffset, ReadyTextAltColor, Color.Black, 1);
-					//}
-					//else if (first.Paused)
-					//	overlayFont.DrawTextWithContrast(HoldText,
-					//		icon.Pos + holdOffset,
-					//		Color.White, Color.Black, 1);
-					//else if (!waiting && DrawTime)
-					//	overlayFont.DrawTextWithContrast(WidgetUtils.FormatTime(first.Queue.RemainingTimeActual(first), World.Timestep),
-					//		icon.Pos + timeOffset,
-					//		Color.White, Color.Black, 1);
+				// var total = icon.Queued.Count;
+				// if (total > 0)
+				// {
+				// 	var first = icon.Queued[0];
+					// var waiting = !CurrentQueue.IsProducing(first) && !first.Done;
+					// if (first.Done)
+					// {
+						// if (ReadyTextStyle == ReadyTextStyleOptions.Solid || orderManager.LocalFrameNumber * worldRenderer.World.Timestep / 360 % 2 == 0)
+						// 	overlayFont.DrawTextWithContrast(ReadyText, icon.Pos + readyOffset, Color.White, Color.Black, 1);
+						// else if (ReadyTextStyle == ReadyTextStyleOptions.AlternatingColor)
+						// 	overlayFont.DrawTextWithContrast(ReadyText, icon.Pos + readyOffset, ReadyTextAltColor, Color.Black, 1);
+					// }
+					// else if (first.Paused)
+					// 	overlayFont.DrawTextWithContrast(HoldText,
+					// 		icon.Pos + holdOffset,
+					// 		Color.White, Color.Black, 1);
+					// else if (!waiting && DrawTime)
+					// 	overlayFont.DrawTextWithContrast(WidgetUtils.FormatTime(first.Queue.RemainingTimeActual(first), World.Timestep),
+					// 		icon.Pos + timeOffset,
+					// 		Color.White, Color.Black, 1);
 
-					//if (first.Infinite && symbolFont != null)
-					//	symbolFont.DrawTextWithContrast(InfiniteSymbol,
-					//		icon.Pos + infiniteOffset,
-					//		Color.White, Color.Black, 1);
-					//else if (total > 1 || waiting)
-					//	overlayFont.DrawTextWithContrast(total.ToString(),
-					//		icon.Pos + queuedOffset,
-					//		Color.White, Color.Black, 1);
-				//}
+					// if (first.Infinite && symbolFont != null)
+					// 	symbolFont.DrawTextWithContrast(InfiniteSymbol,
+					// 		icon.Pos + infiniteOffset,
+					// 		Color.White, Color.Black, 1);
+					// else if (total > 1 || waiting)
+					// 	overlayFont.DrawTextWithContrast(total.ToString(),
+					// 		icon.Pos + queuedOffset,
+					// 		Color.White, Color.Black, 1);
+				// }
 			}
 		}
 

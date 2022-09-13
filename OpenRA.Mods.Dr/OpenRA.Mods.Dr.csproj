@@ -3,6 +3,7 @@
     <Nullable>disable</Nullable>
 	<EngineRootPath>../engine</EngineRootPath>
   </PropertyGroup>
+  <Import Project="../engine/Directory.Build.props" />
   <ItemGroup>
     <ProjectReference Include="$(EngineRootPath)/OpenRA.Game/OpenRA.Game.csproj">
       <Private>False</Private>

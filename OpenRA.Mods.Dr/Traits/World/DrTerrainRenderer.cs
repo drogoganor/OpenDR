@@ -125,7 +125,7 @@ namespace OpenRA.Mods.Dr.Traits
 		public override object Create(ActorInitializer init) { return new TerrainRenderer(init.World); }
 	}
 
-	internal static class DrTerrainHelper
+	public static class DrTerrainHelper
 	{
 		internal static bool IsLandTile(this TerrainTile tile) { return tile.Type > 0; }
 		internal static bool IsSeaTile(this TerrainTile tile) { return tile.Type == 0; }
@@ -196,7 +196,6 @@ namespace OpenRA.Mods.Dr.Traits
 					if (terrainInfo.Templates.TryGetValue(tile.Type, out var template))
 						palette = ((DefaultTerrainTemplateInfo)template).Palette ?? palette;
 
-
 					tile = GetShoreTile(newCell);
 
 					var sprite = tileCache.TileSprite(tile);
@@ -238,7 +237,6 @@ namespace OpenRA.Mods.Dr.Traits
 
 			return tile;
 		}
-
 
 		void IRenderTerrain.RenderTerrain(WorldRenderer wr, Viewport viewport)
 		{

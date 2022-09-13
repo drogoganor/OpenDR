@@ -25,12 +25,12 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		bool IUtilityCommand.ValidateArguments(string[] args) { return ValidateArguments(args); }
 
 		[Desc("Convert old actor-based Dark Reign map resources to the new plain old resources.")]
-		void IUtilityCommand.Run(Utility utility, string[] args) { Run(utility, args); }
+		void IUtilityCommand.Run(Utility utility, string[] args) { Run(utility); }
 
 		public ModData ModData;
 		public Map Map;
 		public List<string> Players = new List<string>();
-		private int numMultiStarts = 0;
+		int numMultiStarts = 0;
 		protected bool skipActors = true;
 
 		protected bool ValidateArguments(string[] args)
@@ -38,16 +38,14 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			return args.Length >= 0;
 		}
 
-		protected void Run(Utility utility, string[] args)
+		protected void Run(Utility utility)
 		{
 			// HACK: The engine code assumes that Game.modData is set.
 			Game.ModData = ModData = utility.ModData;
 
-
-
 			var targetPath = "..\\..\\mods\\dr\\maps";
 
-			//var packedMapFiles = Directory.GetFiles(targetPath, "*.oramap");
+			// var packedMapFiles = Directory.GetFiles(targetPath, "*.oramap");
 			var packedMapFiles = Directory.GetDirectories(targetPath);
 
 			foreach (var packedMapFile in packedMapFiles)
@@ -63,11 +61,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 				var duds = Map.ActorDefinitions.Where(x => !x.Value.Value.Contains("jungle")).ToArray();
 				var resourceActors = Map.ActorDefinitions.Where(x => x.Value.Value == "water" || x.Value.Value == "taelon").ToArray();
-
-				if (packedMapFile.Contains("Monsoon"))
-				{
-					;
-				}
 
 				foreach (var resourceActor in resourceActors)
 				{
@@ -87,8 +80,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				Map.Save(new Folder(packedMapFile));
 				Console.WriteLine(packedMapFile + " saved.");
 			}
-
-
 		}
 
 		static void SetBounds(Map map, int width, int height)

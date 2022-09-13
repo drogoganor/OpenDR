@@ -13,7 +13,6 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Graphics;
 using OpenRA.Mods.Common.Orders;
 using OpenRA.Mods.Common.Traits;
 using OpenRA.Mods.Dr.Traits;
@@ -72,10 +71,8 @@ namespace OpenRA.Mods.Dr.Orders
 		readonly ActorInfo actorInfo;
 		readonly BuildingInfo buildingInfo;
 		readonly PlaceBuildingInfo placeBuildingInfo;
-		readonly FootprintPlaceBuildingPreviewInfo footprintPlaceBuildingPreviewInfo;
 		readonly IResourceLayer resourceLayer;
 		readonly Viewport viewport;
-		readonly WVec centerOffset;
 		readonly VariantWrapper[] variants;
 		int variant;
 
@@ -102,17 +99,11 @@ namespace OpenRA.Mods.Dr.Orders
 
 			this.variants = variants.ToArray();
 
-
-
-
-
 			var map = world.Map;
 			var tileset = world.Map.Tileset.ToLowerInvariant();
 
 			actorInfo = map.Rules.Actors[name];
-			footprintPlaceBuildingPreviewInfo = actorInfo.TraitInfo<FootprintPlaceBuildingPreviewInfo>();
 			buildingInfo = actorInfo.TraitInfo<BuildingInfo>();
-			centerOffset = buildingInfo.CenterOffset(world);
 		}
 
 		PlaceBuildingCellType MakeCellType(bool valid, bool lineBuild = false)
@@ -148,9 +139,6 @@ namespace OpenRA.Mods.Dr.Orders
 			get
 			{
 				var offsetPos = Viewport.LastMousePos;
-				//if (variants[variant].Preview != null)
-				//	offsetPos += variants[variant].Preview.TopLeftScreenOffset;
-
 				return viewport.ViewToWorld(offsetPos);
 			}
 		}
@@ -165,18 +153,10 @@ namespace OpenRA.Mods.Dr.Orders
 			{
 				var orderType = "BuildUnitPlaceBuilding";
 				var topLeft = TopLeft;
-
-
-				//var ai = variants[variant].ActorInfo;
-				//var bi = variants[variant].BuildingInfo;
 				var notification = queue.Info.CannotPlaceAudio ?? placeBuildingInfo.CannotPlaceNotification;
-
 
 				if (!world.CanPlaceBuilding(topLeft, actorInfo, buildingInfo, queue.Actor))
 				{
-					//foreach (var order in ClearBlockersOrders(world, topLeft))
-					//	yield return order;
-
 					Game.Sound.PlayNotification(world.Map.Rules, owner, "Speech", notification, owner.Faction.InternalName);
 					TextNotificationsManager.AddTransientLine(placeBuildingInfo.CannotPlaceTextNotification, owner);
 
@@ -203,12 +183,6 @@ namespace OpenRA.Mods.Dr.Orders
 		{
 			if (queue == null)
 				world.CancelInputMode();
-
-			//if (preview == null)
-			//	return;
-
-			//foreach (var p in preview)
-			//	p.Tick();
 		}
 
 		void IOrderGenerator.SelectionChanged(World world, IEnumerable<Actor> selected) { }
@@ -254,39 +228,5 @@ namespace OpenRA.Mods.Dr.Orders
 		}
 
 		void IOrderGenerator.Deactivate() { }
-
-		//IEnumerable<Order> ClearBlockersOrders(World world, CPos topLeft)
-		//{
-		//	var allTiles = variants[variant].BuildingInfo.Tiles(topLeft).ToArray();
-		//	var adjacentTiles = Util.ExpandFootprint(allTiles, true).Except(allTiles)
-		//		.Where(world.Map.Contains).ToList();
-
-		//	var blockers = allTiles.SelectMany(world.ActorMap.GetActorsAt)
-		//		.Where(a => a.Owner == Queue.Actor.Owner && a.IsIdle)
-		//		.Select(a => new TraitPair<IMove>(a, a.TraitOrDefault<IMove>()))
-		//		.Where(x => x.Trait != null);
-
-		//	foreach (var blocker in blockers)
-		//	{
-		//		CPos moveCell;
-		//		if (blocker.Trait is Mobile mobile)
-		//		{
-		//			var availableCells = adjacentTiles.Where(t => mobile.CanEnterCell(t)).ToList();
-		//			if (availableCells.Count == 0)
-		//				continue;
-
-		//			moveCell = blocker.Actor.ClosestCell(availableCells);
-		//		}
-		//		else if (blocker.Trait is Aircraft)
-		//			moveCell = blocker.Actor.Location;
-		//		else
-		//			continue;
-
-		//		yield return new Order("Move", blocker.Actor, Target.FromCell(world, moveCell), false)
-		//		{
-		//			SuppressVisualFeedback = true
-		//		};
-		//	}
-		//}
 	}
 }

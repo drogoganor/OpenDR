@@ -14,7 +14,6 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits
@@ -31,7 +30,8 @@ namespace OpenRA.Mods.Dr.Traits
 		IEnumerable<int> resourceValueModifiers;
 		DrPlayerResources drPlayerResources;
 
-		public DrRefinery(Actor self, DrRefineryInfo info) : base(self, info)
+		public DrRefinery(Actor self, DrRefineryInfo info)
+            : base(self, info)
 		{
 			this.info = info;
 			playerResources = self.Owner.PlayerActor.Trait<PlayerResources>();
@@ -77,14 +77,13 @@ namespace OpenRA.Mods.Dr.Traits
 			else
 				drPlayerResources.AddWater(value);
 
-			//foreach (var notify in self.World.ActorsWithTrait<INotifyResourceAccepted>())
-			//{
-			//	if (notify.Actor.Owner != self.Owner)
-			//		continue;
+			// foreach (var notify in self.World.ActorsWithTrait<INotifyResourceAccepted>())
+			// {
+			// 	if (notify.Actor.Owner != self.Owner)
+			// 		continue;
 
-			//	notify.Trait.OnResourceAccepted(notify.Actor, self, resourceType, count, value);
-			//}
-
+			// 	notify.Trait.OnResourceAccepted(notify.Actor, self, resourceType, count, value);
+			// }
 			return count;
 		}
 	}
