@@ -3,9 +3,7 @@ name: Release Packaging
 on:
   push:
     tags:
-    - 'release-*'
-    - 'playtest-*'
-    - 'devtest-*'
+    - '*'
 
 jobs:
   linux:
