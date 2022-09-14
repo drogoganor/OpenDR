@@ -1,5 +1,5 @@
 #!/bin/bash
-# OpenRA packaging script for macOS
+# OpenRA Mod SDK packaging script for macOS
 #
 # The application bundles will be signed if the following environment variables are defined:
 #   MACOS_DEVELOPER_IDENTITY: The alphanumeric identifier listed in the certificate name ("Developer ID Application: <your name> (<identity>)")
@@ -15,21 +15,55 @@
 #
 set -e
 
-MONO_TAG="osx-launcher-20201222"
-
-if [ $# -ne "2" ]; then
-	echo "Usage: $(basename "$0") tag outputdir"
-	exit 1
-fi
-
-if [[ "${OSTYPE}" != "darwin"* ]]; then
+if [[ "$OSTYPE" != "darwin"* ]]; then
 	echo >&2 "macOS packaging requires a macOS host"
 	exit 1
 fi
 
-# Set the working dir to the location of this script
-cd "$(dirname "${0}")" || exit 1
-. ../functions.sh
+command -v make >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK macOS packaging requires make."; exit 1; }
+command -v python3 >/dev/null 2>&1 || { echo >&2 "The OpenRA mod SDK macOS packaging requires python 3."; exit 1; }
+
+require_variables() {
+	missing=""
+	for i in "$@"; do
+		eval check="\$$i"
+		[ -z "${check}" ] && missing="${missing}   ${i}\n"
+	done
+	if [ -n "${missing}" ]; then
+		printf "Required mod.config variables are missing:\n%sRepair your mod.config (or user.config) and try again.\n" "${missing}"
+		exit 1
+	fi
+}
+
+if [ $# -eq "0" ]; then
+	echo "Usage: $(basename "$0") version [outputdir]"
+	exit 1
+fi
+
+PACKAGING_DIR=$(python3 -c "import os; print(os.path.dirname(os.path.realpath('$0')))")
+TEMPLATE_ROOT="${PACKAGING_DIR}/../../"
+ARTWORK_DIR="${PACKAGING_DIR}/../artwork/"
+
+# shellcheck source=mod.config
+. "${TEMPLATE_ROOT}/mod.config"
+
+if [ -f "${TEMPLATE_ROOT}/user.config" ]; then
+	# shellcheck source=user.config
+	. "${TEMPLATE_ROOT}/user.config"
+fi
+
+require_variables "MOD_ID" "ENGINE_DIRECTORY" "PACKAGING_DISPLAY_NAME" "PACKAGING_INSTALLER_NAME" "PACKAGING_COPY_CNC_DLL" "PACKAGING_COPY_D2K_DLL" \
+	"PACKAGING_OSX_DMG_MOD_ICON_POSITION" "PACKAGING_OSX_DMG_APPLICATION_ICON_POSITION" "PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION" \
+	"PACKAGING_FAQ_URL" "PACKAGING_OVERWRITE_MOD_VERSION"
+
+if [ ! -f "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/Makefile" ]; then
+	echo "Required engine files not found."
+	echo "Run \`make\` in the mod directory to fetch and build the required files, then try again.";
+	exit 1
+fi
+
+. "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/functions.sh"
+. "${TEMPLATE_ROOT}/packaging/functions.sh"
 
 # Import code signing certificate
 if [ -n "${MACOS_DEVELOPER_CERTIFICATE_BASE64}" ] && [ -n "${MACOS_DEVELOPER_CERTIFICATE_PASSWORD}" ] && [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
@@ -43,132 +77,137 @@ if [ -n "${MACOS_DEVELOPER_CERTIFICATE_BASE64}" ] && [ -n "${MACOS_DEVELOPER_CER
 	rm -fr build.p12
 fi
 
-TAG="${1}"
-OUTPUTDIR="${2}"
-SRCDIR="$(pwd)/../.."
-BUILTDIR="$(pwd)/build"
-ARTWORK_DIR="$(pwd)/../artwork/"
+TAG="$1"
+if [ $# -eq "1" ]; then
+	OUTPUTDIR=$(python3 -c "import os; print(os.path.realpath('.'))")
+else
+	OUTPUTDIR=$(python3 -c "import os; print(os.path.realpath('$2'))")
+fi
+
+if [ ! -d "${OUTPUTDIR}" ]; then
+	echo "Output directory '${OUTPUTDIR}' does not exist.";
+	exit 1
+fi
+
+BUILTDIR="${PACKAGING_DIR}/build"
+PACKAGING_OSX_APP_NAME="OpenRA - ${PACKAGING_DISPLAY_NAME}.app"
+
+# Set the working dir to the location of this script
+cd "${PACKAGING_DIR}"
 
 modify_plist() {
-	sed "s|${1}|${2}|g" "${3}" > "${3}.tmp" && mv "${3}.tmp" "${3}"
+	sed "s|$1|$2|g" "$3" > "$3.tmp" && mv "$3.tmp" "$3"
 }
 
-# Copies the game files and sets metadata
-build_app() {
+build_platform() {
 	PLATFORM="${1}"
-	TEMPLATE_DIR="${2}"
-	LAUNCHER_DIR="${3}"
-	MOD_ID="${4}"
-	MOD_NAME="${5}"
-	DISCORD_APPID="${6}"
-
+	DMG_NAME="${2}"
+	LAUNCHER_DIR="${BUILTDIR}/${PACKAGING_OSX_APP_NAME}"
 	LAUNCHER_CONTENTS_DIR="${LAUNCHER_DIR}/Contents"
 	LAUNCHER_ASSEMBLY_DIR="${LAUNCHER_CONTENTS_DIR}/MacOS"
 	LAUNCHER_RESOURCES_DIR="${LAUNCHER_CONTENTS_DIR}/Resources"
 
-	cp -r "${TEMPLATE_DIR}" "${LAUNCHER_DIR}"
+	echo "Building launcher (${PLATFORM})"
 
-	IS_D2K="False"
-	if [ "${MOD_ID}" = "d2k" ]; then
-		IS_D2K="True"
+	mkdir -p "${LAUNCHER_RESOURCES_DIR}"
+	mkdir -p "${LAUNCHER_CONTENTS_DIR}/MacOS"
+	echo "APPL????" > "${LAUNCHER_CONTENTS_DIR}/PkgInfo"
+	cp "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/Info.plist.in" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+
+	modify_plist "{DEV_VERSION}" "${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+	modify_plist "{FAQ_URL}" "${PACKAGING_FAQ_URL}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+	modify_plist "{MOD_ID}" "${MOD_ID}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+	modify_plist "{MOD_NAME}" "${PACKAGING_DISPLAY_NAME}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+	modify_plist "{JOIN_SERVER_URL_SCHEME}" "openra-${MOD_ID}-${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+
+	if [ -n "${DISCORD_APPID}" ]; then
+		modify_plist "{DISCORD_URL_SCHEME}" "discord-${DISCORD_APPID}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+	else
+		modify_plist "<string>{DISCORD_URL_SCHEME}</string>" "" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
 	fi
 
-	# Install engine and mod files
+	if [ "${PLATFORM}" = "mono" ]; then
+		modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.9" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+		clang -m64 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher-mono.m" -o "${LAUNCHER_ASSEMBLY_DIR}/Launcher" -framework AppKit -mmacosx-version-min=10.9
+	else
+		modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.14" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+		clang -m64 "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/launcher.m" -o "${LAUNCHER_ASSEMBLY_DIR}/Launcher" -framework AppKit -mmacosx-version-min=10.14
+	fi
+
+	echo "Building core files"
 	RUNTIME="net6"
 	if [ "${PLATFORM}" = "mono" ]; then
 		RUNTIME="mono"
 	fi
 
-	install_assemblies "${SRCDIR}" "${LAUNCHER_ASSEMBLY_DIR}" "osx-x64" "${RUNTIME}" "True" "True" "${IS_D2K}"
-	install_data "${SRCDIR}" "${LAUNCHER_RESOURCES_DIR}" "${MOD_ID}"
-	set_engine_version "${TAG}" "${LAUNCHER_RESOURCES_DIR}"
-	set_mod_version "${TAG}" "${LAUNCHER_RESOURCES_DIR}/mods/${MOD_ID}/mod.yaml" "${LAUNCHER_RESOURCES_DIR}/mods/modcontent/mod.yaml"
+	install_assemblies "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_ASSEMBLY_DIR}" "osx-x64" "${RUNTIME}" "True" "${PACKAGING_COPY_CNC_DLL}" "${PACKAGING_COPY_D2K_DLL}"
+	install_data "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}" "${LAUNCHER_RESOURCES_DIR}"
+
+	for f in ${PACKAGING_COPY_ENGINE_FILES}; do
+		mkdir -p "${LAUNCHER_RESOURCES_DIR}/$(dirname "${f}")"
+		cp -r "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/${f}" "${LAUNCHER_RESOURCES_DIR}/${f}"
+	done
+
+	echo "Building mod files"
+	install_mod_assemblies "${TEMPLATE_ROOT}" "${LAUNCHER_ASSEMBLY_DIR}" "osx-x64" "${RUNTIME}" "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}"
+
+	cp -LR "${TEMPLATE_ROOT}mods/"* "${LAUNCHER_RESOURCES_DIR}/mods"
+
+	set_engine_version "${ENGINE_VERSION}" "${LAUNCHER_RESOURCES_DIR}"
+	if [ "${PACKAGING_OVERWRITE_MOD_VERSION}" == "True" ]; then
+		set_mod_version "${TAG}" "${LAUNCHER_RESOURCES_DIR}/mods/${MOD_ID}/mod.yaml"
+	else
+		MOD_VERSION=$(grep 'Version:' "${LAUNCHER_RESOURCES_DIR}/mods/${MOD_ID}/mod.yaml" | awk '{print $2}')
+		echo "Mod version ${MOD_VERSION} will remain unchanged.";
+	fi
 
 	# Assemble multi-resolution icon
-	mkdir "${MOD_ID}.iconset"
-	cp "${ARTWORK_DIR}/${MOD_ID}_16x16.png" "${MOD_ID}.iconset/icon_16x16.png"
-	cp "${ARTWORK_DIR}/${MOD_ID}_32x32.png" "${MOD_ID}.iconset/icon_16x16@2.png"
-	cp "${ARTWORK_DIR}/${MOD_ID}_32x32.png" "${MOD_ID}.iconset/icon_32x32.png"
-	cp "${ARTWORK_DIR}/${MOD_ID}_64x64.png" "${MOD_ID}.iconset/icon_32x32@2x.png"
-	cp "${ARTWORK_DIR}/${MOD_ID}_128x128.png" "${MOD_ID}.iconset/icon_128x128.png"
-	cp "${ARTWORK_DIR}/${MOD_ID}_256x256.png" "${MOD_ID}.iconset/icon_128x128@2x.png"
-	cp "${ARTWORK_DIR}/${MOD_ID}_256x256.png" "${MOD_ID}.iconset/icon_256x256.png"
-	cp "${ARTWORK_DIR}/${MOD_ID}_512x512.png" "${MOD_ID}.iconset/icon_256x256@2x.png"
-	cp "${ARTWORK_DIR}/${MOD_ID}_1024x1024.png" "${MOD_ID}.iconset/icon_512x512@2x.png"
-	iconutil --convert icns "${MOD_ID}.iconset" -o "${LAUNCHER_RESOURCES_DIR}/${MOD_ID}.icns"
-	rm -rf "${MOD_ID}.iconset"
-
-	# Set launcher metadata
-	modify_plist "{MOD_ID}" "${MOD_ID}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-	modify_plist "{MOD_NAME}" "${MOD_NAME}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-	modify_plist "{JOIN_SERVER_URL_SCHEME}" "openra-${MOD_ID}-${TAG}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
-	modify_plist "{DISCORD_URL_SCHEME}" "discord-${DISCORD_APPID}" "${LAUNCHER_CONTENTS_DIR}/Info.plist"
+	mkdir "${BUILTDIR}/mod.iconset"
+	cp "${ARTWORK_DIR}/icon_16x16.png" "${BUILTDIR}/mod.iconset/icon_16x16.png"
+	cp "${ARTWORK_DIR}/icon_32x32.png" "${BUILTDIR}/mod.iconset/icon_16x16@2.png"
+	cp "${ARTWORK_DIR}/icon_32x32.png" "${BUILTDIR}/mod.iconset/icon_32x32.png"
+	cp "${ARTWORK_DIR}/icon_64x64.png" "${BUILTDIR}/mod.iconset/icon_32x32@2x.png"
+	cp "${ARTWORK_DIR}/icon_128x128.png" "${BUILTDIR}/mod.iconset/icon_128x128.png"
+	cp "${ARTWORK_DIR}/icon_256x256.png" "${BUILTDIR}/mod.iconset/icon_128x128@2x.png"
+	cp "${ARTWORK_DIR}/icon_256x256.png" "${BUILTDIR}/mod.iconset/icon_256x256.png"
+	cp "${ARTWORK_DIR}/icon_512x512.png" "${BUILTDIR}/mod.iconset/icon_256x256@2x.png"
+	iconutil --convert icns "${BUILTDIR}/mod.iconset" -o "${LAUNCHER_RESOURCES_DIR}/${MOD_ID}.icns"
+	rm -rf "${BUILTDIR}/mod.iconset"
 
 	# Sign binaries with developer certificate
 	if [ -n "${MACOS_DEVELOPER_IDENTITY}" ]; then
-		codesign -s "${MACOS_DEVELOPER_IDENTITY}" --timestamp --options runtime -f --entitlements entitlements.plist --deep "${LAUNCHER_DIR}"
+		codesign -s "${MACOS_DEVELOPER_IDENTITY}" --timestamp --options runtime -f --entitlements "${TEMPLATE_ROOT}/${ENGINE_DIRECTORY}/packaging/macos/entitlements.plist" --deep "${LAUNCHER_DIR}"
 	fi
-}
-
-build_platform() {
-	PLATFORM="${1}"
-	DMG_PATH="${2}"
-	echo "Building launchers (${PLATFORM})"
-
-	# Prepare generic template for the mods to duplicate and customize
-	TEMPLATE_DIR="${BUILTDIR}/template.app"
-	mkdir -p "${TEMPLATE_DIR}/Contents/Resources"
-	mkdir -p "${TEMPLATE_DIR}/Contents/MacOS"
-	echo "APPL????" > "${TEMPLATE_DIR}/Contents/PkgInfo"
-	cp Info.plist.in "${TEMPLATE_DIR}/Contents/Info.plist"
-	modify_plist "{DEV_VERSION}" "${TAG}" "${TEMPLATE_DIR}/Contents/Info.plist"
-	modify_plist "{FAQ_URL}" "http://wiki.openra.net/FAQ" "${TEMPLATE_DIR}/Contents/Info.plist"
-
-	if [ "${PLATFORM}" = "mono" ]; then
-		modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.9" "${TEMPLATE_DIR}/Contents/Info.plist"
-		clang -m64 launcher-mono.m -o "${TEMPLATE_DIR}/Contents/MacOS/Launcher" -framework AppKit -mmacosx-version-min=10.9
-	else
-		modify_plist "{MINIMUM_SYSTEM_VERSION}" "10.14" "${TEMPLATE_DIR}/Contents/Info.plist"
-		clang -m64 launcher.m -o "${TEMPLATE_DIR}/Contents/MacOS/Launcher" -framework AppKit -mmacosx-version-min=10.14
-	fi
-
-	build_app "${PLATFORM}" "${TEMPLATE_DIR}" "${BUILTDIR}/OpenRA - Red Alert.app" "ra" "Red Alert" "699222659766026240"
-	build_app "${PLATFORM}" "${TEMPLATE_DIR}" "${BUILTDIR}/OpenRA - Tiberian Dawn.app" "cnc" "Tiberian Dawn" "699223250181292033"
-	build_app "${PLATFORM}" "${TEMPLATE_DIR}" "${BUILTDIR}/OpenRA - Dune 2000.app" "d2k" "Dune 2000" "712711732770111550"
-
-	rm -rf "${TEMPLATE_DIR}"
 
 	echo "Packaging disk image"
-	hdiutil create "${DMG_PATH}" -format UDRW -volname "OpenRA" -fs HFS+ -srcfolder build
-	DMG_DEVICE=$(hdiutil attach -readwrite -noverify -noautoopen "${DMG_PATH}" | egrep '^/dev/' | sed 1q | awk '{print $1}')
+	hdiutil create "${PACKAGING_DIR}/${DMG_NAME}" -format UDRW -volname "${PACKAGING_DISPLAY_NAME}" -fs HFS+ -srcfolder "${BUILTDIR}"
+	DMG_DEVICE=$(hdiutil attach -readwrite -noverify -noautoopen "${PACKAGING_DIR}/${DMG_NAME}" | egrep '^/dev/' | sed 1q | awk '{print $1}')
 	sleep 2
 
 	# Background image is created from source svg in artsrc repository
-	mkdir "/Volumes/OpenRA/.background/"
-	tiffutil -cathidpicheck "${ARTWORK_DIR}/macos-background.png" "${ARTWORK_DIR}/macos-background-2x.png" -out "/Volumes/OpenRA/.background/background.tiff"
+	mkdir "/Volumes/${PACKAGING_DISPLAY_NAME}/.background/"
+	tiffutil -cathidpicheck "${ARTWORK_DIR}/macos-background.png" "${ARTWORK_DIR}/macos-background-2x.png" -out "/Volumes/${PACKAGING_DISPLAY_NAME}/.background/background.tiff"
 
-	cp "${BUILTDIR}/OpenRA - Red Alert.app/Contents/Resources/ra.icns" "/Volumes/OpenRA/.VolumeIcon.icns"
+	cp "${LAUNCHER_DIR}/Contents/Resources/${MOD_ID}.icns" "/Volumes/${PACKAGING_DISPLAY_NAME}/.VolumeIcon.icns"
 
 	echo '
 	   tell application "Finder"
-	     tell disk "'OpenRA'"
+	     tell disk "'${PACKAGING_DISPLAY_NAME}'"
 	           open
 	           set current view of container window to icon view
 	           set toolbar visible of container window to false
 	           set statusbar visible of container window to false
-	           set the bounds of container window to {400, 100, 1040, 580}
+	           set the bounds of container window to {400, 100, 1000, 550}
 	           set theViewOptions to the icon view options of container window
 	           set arrangement of theViewOptions to not arranged
 	           set icon size of theViewOptions to 72
 	           set background picture of theViewOptions to file ".background:background.tiff"
 	           make new alias file at container window to POSIX file "/Applications" with properties {name:"Applications"}
-	           set position of item "'OpenRA - Tiberian Dawn.app'" of container window to {160, 106}
-	           set position of item "'OpenRA - Red Alert.app'" of container window to {320, 106}
-	           set position of item "'OpenRA - Dune 2000.app'" of container window to {480, 106}
-	           set position of item "Applications" of container window to {320, 298}
-	           set position of item ".background" of container window to {160, 298}
-	           set position of item ".fseventsd" of container window to {160, 298}
-	           set position of item ".VolumeIcon.icns" of container window to {160, 298}
+	           set position of item "'${PACKAGING_OSX_APP_NAME}'" of container window to {'${PACKAGING_OSX_DMG_MOD_ICON_POSITION}'}
+	           set position of item "Applications" of container window to {'${PACKAGING_OSX_DMG_APPLICATION_ICON_POSITION}'}
+	           set position of item ".background" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
+	           set position of item ".fseventsd" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
+	           set position of item ".VolumeIcon.icns" of container window to {'${PACKAGING_OSX_DMG_HIDDEN_ICON_POSITION}'}
 	           update without registering applications
 	           delay 5
 	           close
@@ -177,30 +216,11 @@ build_platform() {
 	' | osascript
 
 	# HACK: Copy the volume icon again - something in the previous step seems to delete it...?
-	cp "${BUILTDIR}/OpenRA - Red Alert.app/Contents/Resources/ra.icns" "/Volumes/OpenRA/.VolumeIcon.icns"
-	SetFile -c icnC "/Volumes/OpenRA/.VolumeIcon.icns"
-	SetFile -a C "/Volumes/OpenRA"
+	cp "${LAUNCHER_DIR}/Contents/Resources/${MOD_ID}.icns" "/Volumes/${PACKAGING_DISPLAY_NAME}/.VolumeIcon.icns"
+	SetFile -c icnC "/Volumes/${PACKAGING_DISPLAY_NAME}/.VolumeIcon.icns"
+	SetFile -a C "/Volumes/${PACKAGING_DISPLAY_NAME}"
 
-	# Replace duplicate .NET runtime files with hard links to improve compression
-	if [ "${PLATFORM}" != "mono" ]; then
-		OIFS="$IFS"
-		IFS=$'\n'
-		for MOD in "Red Alert" "Tiberian Dawn"; do
-			for f in $(find /Volumes/OpenRA/OpenRA\ -\ ${MOD}.app/Contents/MacOS/*); do
-				g="/Volumes/OpenRA/OpenRA - Dune 2000.app/Contents/MacOS/"$(basename "${f}")
-				hashf=$(shasum "${f}" | awk '{ print $1 }')
-				hashg=$(shasum "${g}" | awk '{ print $1 }')
-				if [ "${hashf}" = "${hashg}" ]; then
-					echo "Deduplicating ${f}"
-					rm "${f}"
-					ln "${g}" "${f}"
-				fi
-			done
-		done
-		IFS="$OIFS"
-	fi
-
-	chmod -Rf go-w /Volumes/OpenRA
+	chmod -Rf go-w "/Volumes/${PACKAGING_DISPLAY_NAME}"
 	sync
 	sync
 
@@ -219,7 +239,7 @@ notarize_package() {
 	# Create a temporary read-only dmg for submission (notarization service rejects read/write images)
 	hdiutil convert "${DMG_PATH}" -format ULFO -ov -o "${NOTARIZE_DMG_PATH}"
 
-	NOTARIZATION_UUID=$(xcrun altool --notarize-app --primary-bundle-id "net.openra.packaging" -u "${MACOS_DEVELOPER_USERNAME}" -p "${MACOS_DEVELOPER_PASSWORD}" --file "${NOTARIZE_DMG_PATH}" 2>&1 | awk -F' = ' '/RequestUUID/ { print $2; exit }')
+	NOTARIZATION_UUID=$(xcrun altool --notarize-app --primary-bundle-id "net.openra.modsdk" -u "${MACOS_DEVELOPER_USERNAME}" -p "${MACOS_DEVELOPER_PASSWORD}" --file "${NOTARIZE_DMG_PATH}" 2>&1 | awk -F' = ' '/RequestUUID/ { print $2; exit }')
 	if [ -z "${NOTARIZATION_UUID}" ]; then
 		echo "Submission failed"
 		exit 1
@@ -245,9 +265,7 @@ notarize_package() {
 			DMG_DEVICE=$(hdiutil attach -readwrite -noverify -noautoopen "${DMG_PATH}" | egrep '^/dev/' | sed 1q | awk '{print $1}')
 			sleep 2
 
-			xcrun stapler staple "/Volumes/OpenRA/OpenRA - Red Alert.app"
-			xcrun stapler staple "/Volumes/OpenRA/OpenRA - Tiberian Dawn.app"
-			xcrun stapler staple "/Volumes/OpenRA/OpenRA - Dune 2000.app"
+			xcrun stapler staple "/Volumes/${PACKAGING_DISPLAY_NAME}/${PACKAGING_OSX_APP_NAME}"
 
 			sync
 			sync
@@ -287,5 +305,5 @@ if [ -n "${MACOS_DEVELOPER_USERNAME}" ] && [ -n "${MACOS_DEVELOPER_PASSWORD}" ];
 	wait
 fi
 
-finalize_package "standard" "build.dmg" "${OUTPUTDIR}/OpenRA-${TAG}.dmg"
-finalize_package "mono" "build-mono.dmg" "${OUTPUTDIR}/OpenRA-${TAG}-mono.dmg"
+finalize_package "standard" "build.dmg" "${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${TAG}.dmg"
+finalize_package "mono" "build-mono.dmg" "${OUTPUTDIR}/${PACKAGING_INSTALLER_NAME}-${TAG}-mono.dmg"
