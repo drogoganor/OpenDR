@@ -28,31 +28,25 @@ namespace OpenRA.Mods.Dr.Traits
 
 	class RigBaseBuilderManager
 	{
-		readonly string category;
-
 		readonly RigBaseBuilderBotModule baseBuilder;
 		readonly World world;
 		readonly Player player;
 		readonly PowerManager playerPower;
-		readonly PlayerResources playerResources;
 		readonly IResourceLayer resourceLayer;
+		readonly int minimumExcessPower;
 
 		int waitTicks;
 		Actor[] playerBuildings;
-		int minimumExcessPower;
 
 		readonly Dictionary<uint, RigBuildOrder> rigBuildOrders = new Dictionary<uint, RigBuildOrder>();
 
-		public RigBaseBuilderManager(RigBaseBuilderBotModule baseBuilder, string category, Player p, PowerManager pm,
-			PlayerResources pr, IResourceLayer rl)
+		public RigBaseBuilderManager(RigBaseBuilderBotModule baseBuilder, Player p, PowerManager pm, IResourceLayer rl)
 		{
 			this.baseBuilder = baseBuilder;
 			world = p.World;
 			player = p;
 			playerPower = pm;
-			playerResources = pr;
 			resourceLayer = rl;
-			this.category = category;
 			minimumExcessPower = baseBuilder.Info.MinimumExcessPower;
 		}
 

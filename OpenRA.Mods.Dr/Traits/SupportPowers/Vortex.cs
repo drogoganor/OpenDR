@@ -30,17 +30,17 @@ namespace OpenRA.Mods.Dr.Traits
 		[Desc("Rotation rate.")]
 		public readonly int RotationRate = 15;
 
-		public override object Create(ActorInitializer init) { return new Vortex(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new Vortex(this); }
 	}
 
 	public class Vortex : ConditionalTrait<VortexInfo>, ITick
 	{
 		readonly VortexInfo info;
+		readonly WVec targetVec = new WVec(8192, 0, 0);
 		int rotation = 0;
-		WVec targetVec = new WVec(8192, 0, 0);
 		int ticks = 0;
 
-		public Vortex(Actor self, VortexInfo info)
+		public Vortex(VortexInfo info)
 			: base(info)
 		{
 			this.info = info;

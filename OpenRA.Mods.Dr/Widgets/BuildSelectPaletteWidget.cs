@@ -19,7 +19,6 @@ using OpenRA.Mods.Common.Traits.Render;
 using OpenRA.Mods.Common.Widgets;
 using OpenRA.Mods.Dr.Orders;
 using OpenRA.Mods.Dr.Traits;
-using OpenRA.Network;
 using OpenRA.Primitives;
 using OpenRA.Widgets;
 
@@ -79,7 +78,6 @@ namespace OpenRA.Mods.Dr.Widgets
 		public Func<BuildSelectIcon> GetTooltipIcon;
 		public readonly World World;
 		readonly ModData modData;
-		readonly OrderManager orderManager;
 
 		public int MinimumRows = 4;
 		public int MaximumRows = int.MaxValue;
@@ -107,13 +105,9 @@ namespace OpenRA.Mods.Dr.Widgets
 		public override Rectangle EventBounds { get { return eventBounds; } }
 		Dictionary<Rectangle, BuildSelectIcon> icons = new Dictionary<Rectangle, BuildSelectIcon>();
 		readonly Animation cantBuild;
-		readonly Animation clock;
 		Rectangle eventBounds = Rectangle.Empty;
 
 		readonly WorldRenderer worldRenderer;
-
-		SpriteFont overlayFont, symbolFont;
-		float2 iconOffset, holdOffset, readyOffset, timeOffset, queuedOffset, infiniteOffset;
 
 		Player cachedQueueOwner;
 		IProductionIconOverlay[] pios;
@@ -141,10 +135,9 @@ namespace OpenRA.Mods.Dr.Widgets
 		}
 
 		[ObjectCreator.UseCtor]
-		public BuildSelectPaletteWidget(ModData modData, OrderManager orderManager, World world, WorldRenderer worldRenderer)
+		public BuildSelectPaletteWidget(ModData modData, World world, WorldRenderer worldRenderer)
 		{
 			this.modData = modData;
-			this.orderManager = orderManager;
 			World = world;
 			this.worldRenderer = worldRenderer;
 			GetTooltipIcon = () => TooltipIcon;
@@ -153,7 +146,6 @@ namespace OpenRA.Mods.Dr.Widgets
 
 			cantBuild = new Animation(world, NotBuildableAnimation);
 			cantBuild.PlayFetchIndex(NotBuildableSequence, () => 0);
-			clock = new Animation(world, ClockAnimation);
 		}
 
 		public override void Initialize(WidgetArgs args)
@@ -163,18 +155,7 @@ namespace OpenRA.Mods.Dr.Widgets
 			hotkeys = Exts.MakeArray(HotkeyCount,
 				i => modData.Hotkeys[HotkeyPrefix + (i + 1).ToString("D2")]);
 
-			overlayFont = Game.Renderer.Fonts[OverlayFont];
-			Game.Renderer.Fonts.TryGetValue(SymbolsFont, out symbolFont);
-
-			iconOffset = 0.5f * IconSize.ToFloat2() + IconSpriteOffset;
-			queuedOffset = new float2(4, 2);
-			holdOffset = iconOffset - overlayFont.Measure(HoldText) / 2;
-			readyOffset = iconOffset - overlayFont.Measure(ReadyText) / 2;
-
-			if (ChromeMetrics.TryGet("InfiniteOffset", out infiniteOffset))
-				infiniteOffset += queuedOffset;
-			else
-				infiniteOffset = queuedOffset;
+			Game.Renderer.Fonts.TryGetValue(SymbolsFont, out var symbolFont);
 		}
 
 		public void ScrollDown()
@@ -261,7 +242,7 @@ namespace OpenRA.Mods.Dr.Widgets
 			if (mi.Event != MouseInputEvent.Down)
 				return true;
 
-			return HandleEvent(icon, mi.Button, mi.Modifiers);
+			return HandleEvent(icon, mi.Button);
 		}
 
 		bool HandleLeftClick(BuildSelectIcon icon)
@@ -271,7 +252,7 @@ namespace OpenRA.Mods.Dr.Widgets
 			return true;
 		}
 
-		bool HandleEvent(BuildSelectIcon icon, MouseButton btn, Modifiers modifiers)
+		bool HandleEvent(BuildSelectIcon icon, MouseButton btn)
 		{
 			var handled = btn == MouseButton.Left ? HandleLeftClick(icon) : false;
 
@@ -294,7 +275,7 @@ namespace OpenRA.Mods.Dr.Widgets
 			// HACK: enable production if the shift key is pressed
 			e.Modifiers &= ~Modifiers.Shift;
 			var toBuild = icons.Values.FirstOrDefault(i => i.Hotkey != null && i.Hotkey.IsActivatedBy(e));
-			return toBuild != null ? HandleEvent(toBuild, MouseButton.Left, batchModifiers) : false;
+			return toBuild != null ? HandleEvent(toBuild, MouseButton.Left) : false;
 		}
 
 		bool SelectProductionBuilding()
@@ -388,8 +369,6 @@ namespace OpenRA.Mods.Dr.Widgets
 
 		public override void Draw()
 		{
-			timeOffset = iconOffset - overlayFont.Measure(WidgetUtils.FormatTime(0, World.Timestep)) / 2;
-
 			if (CurrentQueue == null)
 				return;
 
@@ -399,17 +378,17 @@ namespace OpenRA.Mods.Dr.Widgets
 			Game.Renderer.EnableAntialiasingFilter();
 			foreach (var icon in icons.Values)
 			{
-				WidgetUtils.DrawSpriteCentered(icon.Sprite, icon.Palette, icon.Pos + iconOffset);
+				WidgetUtils.DrawSpriteCentered(icon.Sprite, icon.Palette, icon.Pos);
 
 				// Draw the ProductionIconOverlay's sprite
 				foreach (var pio in pios.Where(p => p.IsOverlayActive(icon.Actor)))
-					WidgetUtils.DrawSpriteCentered(pio.Sprite, worldRenderer.Palette(pio.Palette), icon.Pos + iconOffset + pio.Offset(IconSize));
+					WidgetUtils.DrawSpriteCentered(pio.Sprite, worldRenderer.Palette(pio.Palette), icon.Pos + pio.Offset(IconSize));
 
 				// var pio = pios.FirstOrDefault(p => p.IsOverlayActive(icon.Actor));
 				// if (pio != null)
 				// 	WidgetUtils.DrawSpriteCentered(pio.Sprite, worldRenderer.Palette(pio.Palette), icon.Pos + iconOffset + pio.Offset(IconSize));
 				if (!buildableItems.Any(a => a.Name == icon.Name))
-					WidgetUtils.DrawSpriteCentered(cantBuild.Image, icon.IconDarkenPalette, icon.Pos + iconOffset);
+					WidgetUtils.DrawSpriteCentered(cantBuild.Image, icon.IconDarkenPalette, icon.Pos);
 			}
 
 			Game.Renderer.DisableAntialiasingFilter();

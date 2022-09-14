@@ -41,11 +41,7 @@ namespace OpenRA.Mods.Dr.Traits
 			"The filename of the audio is defined per faction in notifications.yaml.")]
 		public readonly string CannotPlaceAudio = null;
 
-		public override object Create(ActorInitializer init) { return new BuilderUnit(init, init.Self.Owner.PlayerActor, this); }
-
-		public void RulesetLoaded(Ruleset rules, ActorInfo ai)
-		{
-		}
+		public override object Create(ActorInitializer init) { return new BuilderUnit(init, this); }
 	}
 
 	// Copied from ProductionQueue
@@ -73,7 +69,7 @@ namespace OpenRA.Mods.Dr.Traits
 		[Sync]
 		public bool IsValidFaction { get; private set; }
 
-		public BuilderUnit(ActorInitializer init, Actor playerActor, BuilderUnitInfo info)
+		public BuilderUnit(ActorInitializer init, BuilderUnitInfo info)
 		{
 			self = init.Self;
 			Info = info;
@@ -92,7 +88,7 @@ namespace OpenRA.Mods.Dr.Traits
 			techTree = self.Owner.PlayerActor.Trait<TechTree>();
 
 			productionTraits = self.TraitsImplementing<BuilderUnit>().ToArray();
-			CacheProducibles(self.Owner.PlayerActor);
+			CacheProducibles();
 		}
 
 		void INotifyKilled.Killed(Actor killed, AttackInfo e) { if (killed == self) { Enabled = false; } }
@@ -103,7 +99,7 @@ namespace OpenRA.Mods.Dr.Traits
 		void INotifyTransform.OnTransform(Actor self) { }
 		void INotifyTransform.AfterTransform(Actor self) { }
 
-		void CacheProducibles(Actor playerActor)
+		void CacheProducibles()
 		{
 			Producible.Clear();
 			if (!Enabled)

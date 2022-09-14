@@ -10,9 +10,7 @@
 #endregion
 
 using System;
-using OpenRA.Mods.Common.Scripting;
 using OpenRA.Mods.Common.Traits;
-using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits
@@ -36,9 +34,9 @@ namespace OpenRA.Mods.Dr.Traits
 
 	public class DrPlayerResources : ISync
 	{
-		private readonly DrPlayerResourcesInfo info;
-		private readonly PlayerResources resources;
-		private readonly Player owner;
+		readonly DrPlayerResourcesInfo info;
+		readonly PlayerResources resources;
+		readonly Player owner;
 
 		public DrPlayerResources(Actor self, DrPlayerResourcesInfo info)
 		{

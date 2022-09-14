@@ -21,7 +21,7 @@ namespace OpenRA.Mods.Dr.Traits
 		[Desc("Stays for this many ticks.")]
 		public readonly int StaysFor = 10;
 
-		public override object Create(ActorInitializer init) { return new DetonationSpy(init.Self, this); }
+		public override object Create(ActorInitializer init) { return new DetonationSpy(this); }
 	}
 
 	public class DetonationSpy : ConditionalTrait<DetonationSpyInfo>, ITick
@@ -30,7 +30,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		int ticks = 0;
 
-		public DetonationSpy(Actor self, DetonationSpyInfo info)
+		public DetonationSpy(DetonationSpyInfo info)
 			: base(info)
 		{
 			this.info = info;

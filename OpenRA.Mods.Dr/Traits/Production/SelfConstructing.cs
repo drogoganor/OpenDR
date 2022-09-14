@@ -32,15 +32,15 @@ namespace OpenRA.Mods.Dr.Traits.Production
 	{
 		public readonly SelfConstructingInfo Info;
 
-		private readonly WithSpriteBody wsb;
+		readonly WithSpriteBody wsb;
 
-		private int token = Actor.InvalidConditionToken;
+		int token = Actor.InvalidConditionToken;
 
-		private ProductionItem productionItem;
+		ProductionItem productionItem;
 
-		private List<int> healthSteps;
-		private int healthStep = 0;
-		private Health health;
+		List<int> healthSteps;
+		int healthStep = 0;
+		Health health;
 
 		public SelfConstructing(ActorInitializer init, SelfConstructingInfo info)
 		{
@@ -76,7 +76,7 @@ namespace OpenRA.Mods.Dr.Traits.Production
 			wsb.PlayCustomAnimationRepeating(self, "building");
 		}
 
-		private void OnComplete(Actor self)
+		void OnComplete(Actor self)
 		{
 			var world = self.World;
 			var rules = world.Map.Rules;

@@ -21,19 +21,14 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 	{
 		CrsHeader header;
 
-		private class CrsHeader
+		class CrsHeader
 		{
 			public string Magic1;
 			public int Version;
 			public int Nanims;
 		}
 
-		private class CrsFrameInfo
-		{
-			public int FrameIndex;
-		}
-
-		private class DrCrsFrame : ISpriteFrame
+		class DrCrsFrame : ISpriteFrame
 		{
 			public SpriteFrameType Type { get; private set; }
 			public Size Size { get; private set; }
@@ -42,18 +37,18 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
 
-			public DrCrsFrame(Stream s, CrsHeader sph, CrsFrameInfo info)
+			public DrCrsFrame(Stream s)
 			{
+				const int Width = 32;
+				const int NumPixels = Width * Width;
 				Type = SpriteFrameType.Indexed8;
-				const int width = 32;
-				const int numPixels = width * width;
-				Data = new byte[numPixels];
+				Data = new byte[NumPixels];
 
-				var pixindex = new Func<int, int, int>((x, y) => y * width + x);
+				var pixindex = new Func<int, int, int>((x, y) => y * Width + x);
 
-				for (var y = 0; y < width; ++y)
+				for (var y = 0; y < Width; ++y)
 				{
-					for (var x = 0; x < width; ++x)
+					for (var x = 0; x < Width; ++x)
 					{
 						var newIndex = pixindex(x, y);
 						Data[newIndex] = s.ReadUInt8();
@@ -61,12 +56,12 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				}
 
 				Offset = new float2(0, 0);
-				FrameSize = new Size(width, width);
+				FrameSize = new Size(Width, Width);
 				Size = FrameSize;
 			}
 		}
 
-		private bool IsDrCrs(Stream s)
+		bool IsDrCrs(Stream s)
 		{
 			var start = s.Position;
 			var h = new CrsHeader()
@@ -93,18 +88,14 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			return true;
 		}
 
-		private DrCrsFrame[] ParseFrames(Stream s)
+		DrCrsFrame[] ParseFrames(Stream s)
 		{
 			var start = s.Position;
 
 			var frames = new List<DrCrsFrame>();
 			for (var i = 0; i < header.Nanims; ++i)
 			{
-				var sfi = new CrsFrameInfo()
-				{
-					FrameIndex = i
-				};
-				var frame = new DrCrsFrame(s, header, sfi);
+				var frame = new DrCrsFrame(s);
 				frames.Add(frame);
 			}
 

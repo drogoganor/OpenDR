@@ -23,17 +23,16 @@ namespace OpenRA.Mods.Dr.Activities
 	// Activity to move to a location and construct a building there.
 	public class BuildOnSite : Activity
 	{
-		private readonly World world;
-		private readonly Target centerBuildingTarget;
-		private readonly CPos centerTarget;
-		private readonly Order order;
-		private readonly string faction;
-		private readonly BuildingInfo buildingInfo;
-		private readonly ActorInfo buildingActor;
-		private readonly WDist minRange;
-		private readonly CPos topLeft;
+		readonly World world;
+		readonly Target centerBuildingTarget;
+		readonly Order order;
+		readonly string faction;
+		readonly BuildingInfo buildingInfo;
+		readonly ActorInfo buildingActor;
+		readonly WDist minRange;
+		readonly CPos topLeft;
 
-		public BuildOnSite(World world, Actor self, Order order, string faction, BuildingInfo buildingInfo)
+		public BuildOnSite(World world, Order order, string faction, BuildingInfo buildingInfo)
 		{
 			this.buildingInfo = buildingInfo;
 			this.world = world;
@@ -41,7 +40,6 @@ namespace OpenRA.Mods.Dr.Activities
 			this.faction = faction;
 			topLeft = order.ExtraLocation;
 			centerBuildingTarget = order.Target;
-			centerTarget = world.Map.CellContaining(centerBuildingTarget.CenterPosition);
 			minRange = new WDist(1024);
 			buildingActor = world.Map.Rules.Actors.FirstOrDefault(x => x.Key == order.TargetString).Value;
 		}

@@ -27,7 +27,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 	class TileTransform
 	{
-		static Dictionary<ushort, ushort> horizontalDictionary = new Dictionary<ushort, ushort>()
+		static readonly Dictionary<ushort, ushort> HorizontalDictionary = new Dictionary<ushort, ushort>()
 		{
 			{ 24, 21 }, // LR
 			{ 21, 24 },
@@ -41,7 +41,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ 28, 29 },
 		};
 
-		static Dictionary<ushort, ushort> verticalDictionary = new Dictionary<ushort, ushort>()
+		static readonly Dictionary<ushort, ushort> VerticalDictionary = new Dictionary<ushort, ushort>()
 		{
 			{ 27, 18 }, // TB
 			{ 18, 27 },
@@ -55,7 +55,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ 28, 26 },
 		};
 
-		static Dictionary<ushort, ushort> horizontalAndVerticalDictionary = new Dictionary<ushort, ushort>()
+		static readonly Dictionary<ushort, ushort> HorizontalAndVerticalDictionary = new Dictionary<ushort, ushort>()
 		{
 			{ 24, 21 }, // LR
 			{ 21, 24 },
@@ -116,16 +116,16 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			switch (mirrorType)
 			{
 				case MirrorType.Horizontal:
-					if (horizontalDictionary.ContainsKey(Tile.Type))
-						return new TerrainTile(horizontalDictionary[Tile.Type], Tile.Index);
+					if (HorizontalDictionary.ContainsKey(Tile.Type))
+						return new TerrainTile(HorizontalDictionary[Tile.Type], Tile.Index);
 					break;
 				case MirrorType.Vertical:
-					if (verticalDictionary.ContainsKey(Tile.Type))
-						return new TerrainTile(verticalDictionary[Tile.Type], Tile.Index);
+					if (VerticalDictionary.ContainsKey(Tile.Type))
+						return new TerrainTile(VerticalDictionary[Tile.Type], Tile.Index);
 					break;
 				case MirrorType.HorizontalAndVertical:
-					if (horizontalAndVerticalDictionary.ContainsKey(Tile.Type))
-						return new TerrainTile(horizontalAndVerticalDictionary[Tile.Type], Tile.Index);
+					if (HorizontalAndVerticalDictionary.ContainsKey(Tile.Type))
+						return new TerrainTile(HorizontalAndVerticalDictionary[Tile.Type], Tile.Index);
 					break;
 			}
 
@@ -178,7 +178,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 	class ActorTransform
 	{
-		static Dictionary<string, int2> mirrorOffsets = new Dictionary<string, int2>()
+		static readonly Dictionary<string, int2> MirrorOffsets = new Dictionary<string, int2>()
 		{
 			{ "mpspawn", new int2(3, 3) },
 			{ "power", new int2(2, 3) },
@@ -271,8 +271,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		public IEnumerable<ActorTransform> GetTransforms(Map map)
 		{
 			var offset = int2.Zero;
-			if (mirrorOffsets.ContainsKey(Actor.Type))
-				offset = mirrorOffsets[Actor.Type];
+			if (MirrorOffsets.ContainsKey(Actor.Type))
+				offset = MirrorOffsets[Actor.Type];
 
 			var horizontalTransform = new ActorTransform()
 			{

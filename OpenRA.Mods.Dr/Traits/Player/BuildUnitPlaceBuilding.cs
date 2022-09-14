@@ -95,7 +95,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 				// Make the actor move to the location
 				var moveActivity = new Move(targetActor, cell, WDist.FromCells(1), null, true, Primitives.Color.Green);
-				var buildActivity = new BuildOnSite(w, targetActor, order, faction, buildingInfo);
+				var buildActivity = new BuildOnSite(w, order, faction, buildingInfo);
 
 				targetActor.QueueActivity(moveActivity);
 				targetActor.ShowTargetLines();

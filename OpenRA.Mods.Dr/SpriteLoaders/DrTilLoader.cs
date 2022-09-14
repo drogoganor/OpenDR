@@ -67,7 +67,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			}
 		}
 
-		public static bool IsDrTil(Stream s)
+		static bool IsDrTil(Stream s)
 		{
 			var start = s.Position;
 			var h = new TilHeader()
@@ -87,7 +87,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			return false;
 		}
 
-		public static DrTilFrame[] ParseFrames(Stream s)
+		static DrTilFrame[] ParseFrames(Stream s)
 		{
 			var start = s.Position;
 

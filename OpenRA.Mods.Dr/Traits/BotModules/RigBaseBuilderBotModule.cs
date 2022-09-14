@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Mods.Common;
@@ -160,7 +159,6 @@ namespace OpenRA.Mods.Dr.Traits
 		readonly World world;
 		readonly Player player;
 		PowerManager playerPower;
-		PlayerResources playerResources;
 		IResourceLayer resourceLayer;
 		IBotPositionsUpdated[] positionsUpdatedModules;
 		CPos initialBaseCenter;
@@ -177,11 +175,10 @@ namespace OpenRA.Mods.Dr.Traits
 		protected override void TraitEnabled(Actor self)
 		{
 			playerPower = player.PlayerActor.TraitOrDefault<PowerManager>();
-			playerResources = player.PlayerActor.Trait<PlayerResources>();
 			resourceLayer = self.World.WorldActor.TraitOrDefault<IResourceLayer>();
 			positionsUpdatedModules = player.PlayerActor.TraitsImplementing<IBotPositionsUpdated>().ToArray();
 
-			builder = new RigBaseBuilderManager(this, "All", player, playerPower, playerResources, resourceLayer);
+			builder = new RigBaseBuilderManager(this, player, playerPower, resourceLayer);
 		}
 
 		void IBotPositionsUpdated.UpdatedBaseCenter(CPos newLocation)
