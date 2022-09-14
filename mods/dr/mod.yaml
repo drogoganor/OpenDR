@@ -56,7 +56,7 @@ Rules:
 	dr|rules/shapes.yaml
 	dr|rules/defaults.yaml
 	dr|rules/defaults-buildings.yaml
-	dr|rules/resources-as-actors.yaml
+	#dr|rules/resources-as-actors.yaml
 	dr|rules/misc.yaml
 	dr|rules/structures-building.yaml
 	dr|rules/structures.yaml
