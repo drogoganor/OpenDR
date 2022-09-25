@@ -375,7 +375,7 @@ Templates:
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 139, 153, 167, 181 # T
+		Frames: 203, 217, 231, 245 # T
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -387,7 +387,7 @@ Templates:
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 136, 150, 164, 178 # R
+		Frames: 200, 214, 228, 242 # R
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -447,7 +447,7 @@ Templates:
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 128, 142, 156, 170 # BRI
+		Frames: 192, 206, 220, 234 # BRI
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -519,7 +519,7 @@ Templates:
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 132, 146, 160, 174 # TR/BL-O
+		Frames: 196, 210, 224, 238 # TR/BL-O
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -531,10 +531,234 @@ Templates:
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 137, 151, 165, 179 # TL/BR-O
+		Frames: 201, 215, 229, 243 # TL/BR-O
 		Categories: Terrain
 		Tiles:
 			0: Clear
 			1: Clear
 			2: Clear
 			3: Clear
+	Template@30: # Water animation tiles
+		Id: 30
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 128, 129, 130, 131, 132, 133, 134, 135
+		Categories: System
+		Tiles:
+			0: Water
+			1: Water
+			2: Water
+			3: Water
+			4: Water
+			5: Water
+			6: Water
+			7: Water
+	Template@31:
+		Id: 31
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 136, 137, 138, 139, 140, 141, 142, 143
+		Categories: System
+		Tiles:
+			0: Water
+			1: Water
+			2: Water
+			3: Water
+			4: Water
+			5: Water
+			6: Water
+			7: Water
+	Template@32:
+		Id: 32
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 144, 145, 146, 147, 148, 149, 150, 151
+		Categories: System
+		Tiles:
+			0: Water
+			1: Water
+			2: Water
+			3: Water
+			4: Water
+			5: Water
+			6: Water
+			7: Water
+	Template@33:
+		Id: 33
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 152, 153, 154, 155, 156, 157, 158, 159
+		Categories: System
+		Tiles:
+			0: Water
+			1: Water
+			2: Water
+			3: Water
+			4: Water
+			5: Water
+			6: Water
+			7: Water
+	Template@34:
+		Id: 34
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 160, 161, 162, 163, 164, 165, 166, 167
+		Categories: System
+		Tiles:
+			0: Water
+			1: Water
+			2: Water
+			3: Water
+			4: Water
+			5: Water
+			6: Water
+			7: Water
+	Template@35:
+		Id: 35
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 168, 169, 170, 171, 172, 173, 174, 175
+		Categories: System
+		Tiles:
+			0: Water
+			1: Water
+			2: Water
+			3: Water
+			4: Water
+			5: Water
+			6: Water
+			7: Water
+	Template@36:
+		Id: 36
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 176, 177, 178, 179, 180, 181, 182, 183
+		Categories: System
+		Tiles:
+			0: Water
+			1: Water
+			2: Water
+			3: Water
+			4: Water
+			5: Water
+			6: Water
+			7: Water
+	Template@37:
+		Id: 37
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 184, 185, 186, 187, 188, 189, 190, 191
+		Categories: System
+		Tiles:
+			0: Water
+			1: Water
+			2: Water
+			3: Water
+			4: Water
+			5: Water
+			6: Water
+			7: Water
+	Template@38: # Alpha-blended transition tiles
+		Id: 38
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 248
+		Categories: System
+		Tiles:
+			0: Water
+	Template@39:
+		Id: 39
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 249
+		Categories: System
+		Tiles:
+			0: Water
+	Template@40:
+		Id: 40
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 250
+		Categories: System
+		Tiles:
+			0: Water
+	Template@41:
+		Id: 41
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 251
+		Categories: System
+		Tiles:
+			0: Water
+	Template@42:
+		Id: 42
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 252
+		Categories: System
+		Tiles:
+			0: Water
+	Template@43:
+		Id: 43
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 253
+		Categories: System
+		Tiles:
+			0: Water
+	Template@44:
+		Id: 44
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 254
+		Categories: System
+		Tiles:
+			0: Water
+	Template@45:
+		Id: 45
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 255
+		Categories: System
+		Tiles:
+			0: Water
+	Template@46:
+		Id: 46
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 256
+		Categories: System
+		Tiles:
+			0: Water
+	Template@47:
+		Id: 47
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 257
+		Categories: System
+		Tiles:
+			0: Water
+	Template@48:
+		Id: 48
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 258
+		Categories: System
+		Tiles:
+			0: Water
+	Template@49:
+		Id: 49
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 259
+		Categories: System
+		Tiles:
+			0: Water

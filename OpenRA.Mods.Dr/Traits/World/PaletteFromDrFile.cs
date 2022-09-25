@@ -57,6 +57,18 @@ namespace OpenRA.Mods.Dr.Traits
 
 		string IProvidesCursorPaletteInfo.Palette { get { return CursorPalette ? Name : null; } }
 
+		public PaletteFromDrFileInfo()
+		{
+		}
+
+		public PaletteFromDrFileInfo(string name, string filename, string tileset, int terrainPaletteMultiplier)
+		{
+			Name = name;
+			Filename = filename;
+			Tileset = tileset;
+			TerrainPaletteMultiplier = terrainPaletteMultiplier;
+		}
+
 		ImmutablePalette IProvidesCursorPaletteInfo.ReadPalette(IReadOnlyFileSystem fileSystem)
 		{
 			using (var s = fileSystem.Open(Filename))
