@@ -406,7 +406,7 @@
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	RallyPoint:
-		Path: 0,6
+		Path: 0,5
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 40

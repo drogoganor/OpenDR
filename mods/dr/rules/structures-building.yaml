@@ -140,6 +140,8 @@ HQ.cyborg.Constructing:
 	SelfConstructing:
 		Steps: 20
 		Becomes: HQ.cyborg
+	RallyPoint:
+		Path: 1,4
 	Health:
 		HP: 1440
 	WithIdleOverlay@LAYER1:

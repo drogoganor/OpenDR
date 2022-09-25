@@ -108,6 +108,7 @@ namespace OpenRA.Mods.Dr.Widgets
 		Rectangle eventBounds = Rectangle.Empty;
 
 		readonly WorldRenderer worldRenderer;
+		float2 iconOffset;
 
 		Player cachedQueueOwner;
 		IProductionIconOverlay[] pios;
@@ -156,6 +157,8 @@ namespace OpenRA.Mods.Dr.Widgets
 				i => modData.Hotkeys[HotkeyPrefix + (i + 1).ToString("D2")]);
 
 			Game.Renderer.Fonts.TryGetValue(SymbolsFont, out var symbolFont);
+
+			iconOffset = 0.5f * IconSize.ToFloat2() + IconSpriteOffset;
 		}
 
 		public void ScrollDown()
@@ -378,55 +381,17 @@ namespace OpenRA.Mods.Dr.Widgets
 			Game.Renderer.EnableAntialiasingFilter();
 			foreach (var icon in icons.Values)
 			{
-				WidgetUtils.DrawSpriteCentered(icon.Sprite, icon.Palette, icon.Pos);
+				WidgetUtils.DrawSpriteCentered(icon.Sprite, icon.Palette, icon.Pos + iconOffset);
 
 				// Draw the ProductionIconOverlay's sprite
 				foreach (var pio in pios.Where(p => p.IsOverlayActive(icon.Actor)))
-					WidgetUtils.DrawSpriteCentered(pio.Sprite, worldRenderer.Palette(pio.Palette), icon.Pos + pio.Offset(IconSize));
+					WidgetUtils.DrawSpriteCentered(pio.Sprite, worldRenderer.Palette(pio.Palette), icon.Pos + iconOffset + pio.Offset(IconSize));
 
-				// var pio = pios.FirstOrDefault(p => p.IsOverlayActive(icon.Actor));
-				// if (pio != null)
-				// 	WidgetUtils.DrawSpriteCentered(pio.Sprite, worldRenderer.Palette(pio.Palette), icon.Pos + iconOffset + pio.Offset(IconSize));
 				if (!buildableItems.Any(a => a.Name == icon.Name))
-					WidgetUtils.DrawSpriteCentered(cantBuild.Image, icon.IconDarkenPalette, icon.Pos);
+					WidgetUtils.DrawSpriteCentered(cantBuild.Image, icon.IconDarkenPalette, icon.Pos + iconOffset);
 			}
 
 			Game.Renderer.DisableAntialiasingFilter();
-
-			// Overlays
-			foreach (var icon in icons.Values)
-			{
-				// var total = icon.Queued.Count;
-				// if (total > 0)
-				// {
-				// 	var first = icon.Queued[0];
-					// var waiting = !CurrentQueue.IsProducing(first) && !first.Done;
-					// if (first.Done)
-					// {
-						// if (ReadyTextStyle == ReadyTextStyleOptions.Solid || orderManager.LocalFrameNumber * worldRenderer.World.Timestep / 360 % 2 == 0)
-						// 	overlayFont.DrawTextWithContrast(ReadyText, icon.Pos + readyOffset, Color.White, Color.Black, 1);
-						// else if (ReadyTextStyle == ReadyTextStyleOptions.AlternatingColor)
-						// 	overlayFont.DrawTextWithContrast(ReadyText, icon.Pos + readyOffset, ReadyTextAltColor, Color.Black, 1);
-					// }
-					// else if (first.Paused)
-					// 	overlayFont.DrawTextWithContrast(HoldText,
-					// 		icon.Pos + holdOffset,
-					// 		Color.White, Color.Black, 1);
-					// else if (!waiting && DrawTime)
-					// 	overlayFont.DrawTextWithContrast(WidgetUtils.FormatTime(first.Queue.RemainingTimeActual(first), World.Timestep),
-					// 		icon.Pos + timeOffset,
-					// 		Color.White, Color.Black, 1);
-
-					// if (first.Infinite && symbolFont != null)
-					// 	symbolFont.DrawTextWithContrast(InfiniteSymbol,
-					// 		icon.Pos + infiniteOffset,
-					// 		Color.White, Color.Black, 1);
-					// else if (total > 1 || waiting)
-					// 	overlayFont.DrawTextWithContrast(total.ToString(),
-					// 		icon.Pos + queuedOffset,
-					// 		Color.White, Color.Black, 1);
-				// }
-			}
 		}
 
 		public override string GetCursor(int2 pos)
