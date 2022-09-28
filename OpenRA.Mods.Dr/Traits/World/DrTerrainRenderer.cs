@@ -122,7 +122,7 @@ namespace OpenRA.Mods.Dr.Traits
 			return failed;
 		}
 
-		public override object Create(ActorInitializer init) { return new TerrainRenderer(init.World); }
+		public override object Create(ActorInitializer init) { return new DrTerrainRenderer(init.World, this); }
 	}
 
 	public static class DrTerrainHelper
@@ -182,9 +182,9 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public void UpdateCell(CPos cell)
 		{
-			for (int x = -1; x < 2; x++)
+			for (var x = -1; x < 2; x++)
 			{
-				for (int y = -1; y < 2; y++)
+				for (var y = -1; y < 2; y++)
 				{
 					var newCell = cell + new CVec(x, y);
 
@@ -192,15 +192,17 @@ namespace OpenRA.Mods.Dr.Traits
 						continue;
 
 					var tile = map.Tiles[newCell];
-					var palette = TileSet.TerrainPaletteInternalName;
-					if (terrainInfo.Templates.TryGetValue(tile.Type, out var template))
-						palette = ((DefaultTerrainTemplateInfo)template).Palette ?? palette;
 
 					tile = GetShoreTile(newCell);
 
+					var palette = terrainInfo.Palette;
+					if (terrainInfo.Templates.TryGetValue(tile.Type, out var template))
+						palette = ((DefaultTerrainTemplateInfo)template).Palette ?? palette;
+
 					var sprite = tileCache.TileSprite(tile);
 					var paletteReference = worldRenderer.Palette(palette);
-					spriteLayer.Update(cell, sprite, paletteReference);
+					spriteLayer.Clear(newCell);
+					spriteLayer.Update(newCell, sprite, paletteReference);
 				}
 			}
 		}
@@ -209,12 +211,12 @@ namespace OpenRA.Mods.Dr.Traits
 		{
 			var tile = map.Tiles[cell];
 			var matchShorelines = info.Shorelines.Values.Where(x => tile.IsMatch(x.Match));
-			int numIndices = 4;
+			var numIndices = 4;
 
 			foreach (var m in matchShorelines)
 			{
-				bool match = true;
-				int count = 0;
+				var match = true;
+				var count = 0;
 				foreach (var n in m.Neighbors.Values)
 				{
 					var neighborPos = cell + n.Offset;

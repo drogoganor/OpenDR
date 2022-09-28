@@ -471,7 +471,7 @@ Templates:
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 138, 152, 166, 180 # TLO
+		Frames: 202, 216, 230, 244 # TLO
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -483,7 +483,7 @@ Templates:
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 134, 148, 162, 176 # TRO
+		Frames: 198, 212, 226, 240 # TRO
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -495,7 +495,7 @@ Templates:
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 141, 155, 169, 183 # BRO
+		Frames: 205, 219, 233, 247 # BRO
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -507,7 +507,7 @@ Templates:
 		Images: BARREN/BARREN.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 140, 154, 168, 182 # BLO
+		Frames: 204, 218, 232, 246 # BLO
 		Categories: Terrain
 		Tiles:
 			0: Clear

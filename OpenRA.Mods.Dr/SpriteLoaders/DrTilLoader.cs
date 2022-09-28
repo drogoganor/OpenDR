@@ -208,18 +208,18 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				var west = CombineMaskTiles(sw, nw);
 
 				// frames.AddRange(new[] { MaskToRgbaTile(north), MaskToRgbaTile(east), MaskToRgbaTile(south), MaskToRgbaTile(west) });
-
 				var neInner = CombineMaskTiles(north, east);
 				var nwInner = CombineMaskTiles(north, west);
 				var swInner = CombineMaskTiles(south, west);
 				var seInner = CombineMaskTiles(south, east);
 
 				// frames.AddRange(new[] { MaskToRgbaTile(neInner), MaskToRgbaTile(nwInner), MaskToRgbaTile(swInner), MaskToRgbaTile(seInner) });
-
 				for (var tileIndex = 2; tileIndex < 16; tileIndex++)
 				{
 					var mappedTileIndex = tileIndex * 8;
 					var sourceTile = frames[mappedTileIndex];
+
+					// Starts at 248
 					frames.Add(MaskTile(sourceTile, se));
 					frames.Add(MaskTile(sourceTile, sw));
 					frames.Add(MaskTile(sourceTile, nw));
