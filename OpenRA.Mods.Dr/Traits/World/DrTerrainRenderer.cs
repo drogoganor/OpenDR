@@ -21,53 +21,6 @@ using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits
 {
-	[Desc("What type of tile is it? Land, Sea, etc.")]
-	public enum TerrainMatchType
-	{
-		[Desc("Any type of land tile (1-15).")]
-		Land,
-		[Desc("Sea tile (0).")]
-		Sea
-	}
-
-	[Desc("A neighbour tile and the TerrainMatchType we expect it to be.")]
-	public class DrTerrainNeighborInfo
-	{
-		[Desc("Position of this tile relative to the target.")]
-		public CVec Offset;
-
-		[Desc("Check if this tile matches this condition.")]
-		public TerrainMatchType Match;
-	}
-
-	[Desc("A tile type, a set of neighbour tile match conditions, and a target tile type to set the tile to if all conditions are met.")]
-	public class DrTerrainShorelineInfo
-	{
-		[Desc("The tile type to inspect.")]
-		public TerrainMatchType Match;
-
-		[Desc("The tile type to display if all neighbours match.")]
-		public ushort SetType;
-
-		[Desc("Set of neighbour tiles and types to match against.")]
-		[FieldLoader.LoadUsing("LoadNeighbors")]
-		public Dictionary<string, DrTerrainNeighborInfo> Neighbors;
-
-		static object LoadNeighbors(MiniYaml yaml)
-		{
-			var retList = new Dictionary<string, DrTerrainNeighborInfo>();
-			var neighbors = yaml.Nodes.First(x => x.Key == "Neighbors");
-			foreach (var node in neighbors.Value.Nodes.Where(n => n.Key.StartsWith("NeighborMatch")))
-			{
-				var ret = new DrTerrainNeighborInfo();
-				FieldLoader.Load(ret, node.Value);
-				retList.Add(node.Key, ret);
-			}
-
-			return retList;
-		}
-	}
-
 	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
 	public class DrTerrainRendererInfo : TraitInfo, ITiledTerrainRendererInfo
 	{
@@ -81,6 +34,23 @@ namespace OpenRA.Mods.Dr.Traits
 			foreach (var node in shorelines.Value.Nodes.Where(n => n.Key.StartsWith("ShoreMatch")))
 			{
 				var ret = new DrTerrainShorelineInfo();
+				FieldLoader.Load(ret, node.Value);
+				retList.Add(node.Key, ret);
+			}
+
+			return retList;
+		}
+
+		[FieldLoader.LoadUsing("LoadEdges")]
+		public Dictionary<string, DrTerrainEdgeInfo> Edges;
+
+		static object LoadEdges(MiniYaml yaml)
+		{
+			var retList = new Dictionary<string, DrTerrainEdgeInfo>();
+			var shorelines = yaml.Nodes.First(x => x.Key == "Edges");
+			foreach (var node in shorelines.Value.Nodes.Where(n => n.Key.StartsWith("EdgeMatch")))
+			{
+				var ret = new DrTerrainEdgeInfo();
 				FieldLoader.Load(ret, node.Value);
 				retList.Add(node.Key, ret);
 			}
@@ -130,16 +100,33 @@ namespace OpenRA.Mods.Dr.Traits
 		internal static bool IsLandTile(this TerrainTile tile) { return tile.Type > 0; }
 		internal static bool IsSeaTile(this TerrainTile tile) { return tile.Type == 0; }
 
-		internal static bool IsMatch(this TerrainTile tile, TerrainMatchType match)
+		internal static bool IsMatch(this TerrainTile tile, ShorelineMatchType match)
 		{
 			switch (match)
 			{
-				case TerrainMatchType.Land:
+				case ShorelineMatchType.Land:
 					if (tile.IsLandTile())
 						return true;
 					break;
-				case TerrainMatchType.Sea:
+				case ShorelineMatchType.Sea:
 					if (tile.IsSeaTile())
+						return true;
+					break;
+			}
+
+			return false;
+		}
+
+		internal static bool IsMatch(this TerrainTile tile, ushort type, EdgeMatchType match)
+		{
+			switch (match)
+			{
+				case EdgeMatchType.Below:
+					if (tile.Type < type)
+						return true;
+					break;
+				case EdgeMatchType.Equal:
+					if (tile.Type == type)
 						return true;
 					break;
 			}
@@ -150,9 +137,17 @@ namespace OpenRA.Mods.Dr.Traits
 
 	public sealed class DrTerrainRenderer : IRenderTerrain, IWorldLoaded, INotifyActorDisposing, ITiledTerrainRenderer
 	{
+		const int NumEdgeLayers = 15;
+		const int EdgeTileStart = 40;
+		const int NumEdgeTiles = 12;
+		const int NumSkipEdgeTiles = 2;
+
 		readonly Map map;
 		readonly DrTerrainRendererInfo info;
+		readonly TerrainSpriteLayer[] edgeLayers;
 		TerrainSpriteLayer spriteLayer;
+		TerrainSpriteLayer shimLayer;
+
 		readonly DefaultTerrain terrainInfo;
 		readonly DefaultTileCache tileCache;
 		WorldRenderer worldRenderer;
@@ -167,21 +162,41 @@ namespace OpenRA.Mods.Dr.Traits
 				throw new InvalidDataException("TerrainRenderer can only be used with the DefaultTerrain parser");
 
 			tileCache = new DefaultTileCache(terrainInfo);
+			edgeLayers = new TerrainSpriteLayer[NumEdgeLayers];
 		}
 
 		void IWorldLoaded.WorldLoaded(World world, WorldRenderer wr)
 		{
 			worldRenderer = wr;
 			spriteLayer = new TerrainSpriteLayer(world, wr, tileCache.MissingTile, BlendMode.Alpha, world.Type != WorldType.Editor);
-			foreach (var cell in map.AllCells)
-				UpdateCell(cell);
+			shimLayer = new TerrainSpriteLayer(world, wr, tileCache.MissingTile, BlendMode.Alpha, world.Type != WorldType.Editor);
+			for (var i = 0; i < NumEdgeLayers; i++)
+			{
+				edgeLayers[i] = new TerrainSpriteLayer(world, wr, tileCache.MissingTile, BlendMode.Alpha, world.Type != WorldType.Editor);
+			}
 
-			map.Tiles.CellEntryChanged += UpdateCell;
-			map.Height.CellEntryChanged += UpdateCell;
+			foreach (var cell in map.AllCells)
+			{
+				SetBaseCell(cell);
+				UpdateShorelineCell(cell);
+				UpdateEdgeCell(cell);
+			}
+
+			map.Tiles.CellEntryChanged += SetBaseCell;
+			map.Height.CellEntryChanged += SetBaseCell;
+			map.Tiles.CellEntryChanged += UpdateShorelineCell;
+			map.Height.CellEntryChanged += UpdateShorelineCell;
+			map.Tiles.CellEntryChanged += UpdateEdgeCell;
+			map.Height.CellEntryChanged += UpdateEdgeCell;
 		}
 
-		public void UpdateCell(CPos cell)
+		public void UpdateEdgeCell(CPos cell)
 		{
+			var thisTile = map.Tiles[cell];
+			if (thisTile.Type == 0 || thisTile.Type >= 15)
+				return;
+
+			var palette = terrainInfo.Palette;
 			for (var x = -1; x < 2; x++)
 			{
 				for (var y = -1; y < 2; y++)
@@ -191,7 +206,115 @@ namespace OpenRA.Mods.Dr.Traits
 					if (!map.Contains(newCell))
 						continue;
 
-					var tile = map.Tiles[newCell];
+					ClearEdgeTile(newCell);
+					var ok = GetEdgeTile(newCell, out var tile);
+
+					if (!ok)
+						continue;
+
+					// Do a sum to get the matching base tile type from the edge tile
+					var edgeTileType = (int)Math.Floor((double)(tile.Type - EdgeTileStart) / NumEdgeTiles) + NumSkipEdgeTiles;
+
+					// Create shim tile
+					if (thisTile.Type == edgeTileType)
+					{
+						// Use a shim tile of the tile to the northwest
+						var shimTilePos = newCell - new CVec(1, 1);
+						var shimTile = map.Tiles[shimTilePos];
+						shimLayer.Clear(newCell);
+
+						if (terrainInfo.Templates.TryGetValue(tile.Type, out var shimTemplate))
+							palette = ((DefaultTerrainTemplateInfo)shimTemplate).Palette ?? palette;
+
+						var shimSprite = tileCache.TileSprite(shimTile);
+						var shimPaletteReference = worldRenderer.Palette(palette);
+						shimLayer.Update(newCell, shimSprite, shimPaletteReference);
+					}
+					else
+					{
+						// Base tile is sufficient
+						shimLayer.Clear(newCell);
+					}
+
+					if (terrainInfo.Templates.TryGetValue(tile.Type, out var template))
+						palette = ((DefaultTerrainTemplateInfo)template).Palette ?? palette;
+
+					var sprite = tileCache.TileSprite(tile);
+					var paletteReference = worldRenderer.Palette(palette);
+
+					edgeLayers[thisTile.Type].Update(newCell, sprite, paletteReference);
+				}
+			}
+		}
+
+		void ClearEdgeTile(CPos cell)
+		{
+			for (var i = 0; i < NumEdgeLayers; i++)
+			{
+				edgeLayers[i].Clear(cell);
+			}
+		}
+
+		bool GetEdgeTile(CPos cell, out TerrainTile result)
+		{
+			var tile = map.Tiles[cell];
+			var matchEdges = info.Edges.Values;
+			var numIndices = 1;
+
+			foreach (var m in matchEdges)
+			{
+				var match = true;
+				var count = 0;
+				foreach (var n in m.Neighbors.Values)
+				{
+					var neighborPos = cell + n.Offset;
+					if (map.Tiles.Contains(neighborPos))
+					{
+						count++;
+						var neighbour = map.Tiles[neighborPos];
+						match = neighbour.IsMatch(tile.Type, n.Match);
+						if (!match)
+							break;
+					}
+				}
+
+				if (match)
+				{
+					result = new TerrainTile(m.SetType, (byte)Game.CosmeticRandom.Next(numIndices));
+					return true;
+				}
+			}
+
+			result = tile;
+			return false;
+		}
+
+		public void SetBaseCell(CPos cell)
+		{
+			var tile = map.Tiles[cell];
+			var palette = terrainInfo.Palette;
+			if (terrainInfo.Templates.TryGetValue(tile.Type, out var template))
+				palette = ((DefaultTerrainTemplateInfo)template).Palette ?? palette;
+
+			var sprite = tileCache.TileSprite(tile);
+			var paletteReference = worldRenderer.Palette(palette);
+			spriteLayer.Update(cell, sprite, paletteReference);
+		}
+
+		public void UpdateShorelineCell(CPos cell)
+		{
+			var tile = map.Tiles[cell];
+			if (tile.Type != 0)
+				return;
+
+			for (var x = -1; x < 2; x++)
+			{
+				for (var y = -1; y < 2; y++)
+				{
+					var newCell = cell + new CVec(x, y);
+
+					if (!map.Contains(newCell))
+						continue;
 
 					tile = GetShoreTile(newCell);
 
@@ -243,6 +366,12 @@ namespace OpenRA.Mods.Dr.Traits
 		void IRenderTerrain.RenderTerrain(WorldRenderer wr, Viewport viewport)
 		{
 			spriteLayer.Draw(wr.Viewport);
+			shimLayer.Draw(wr.Viewport);
+
+			for (var i = 0; i < NumEdgeLayers; i++)
+			{
+				edgeLayers[i].Draw(wr.Viewport);
+			}
 
 			foreach (var r in wr.World.WorldActor.TraitsImplementing<IRenderOverlay>())
 				r.Render(wr);
@@ -253,8 +382,8 @@ namespace OpenRA.Mods.Dr.Traits
 			if (disposed)
 				return;
 
-			map.Tiles.CellEntryChanged -= UpdateCell;
-			map.Height.CellEntryChanged -= UpdateCell;
+			map.Tiles.CellEntryChanged -= UpdateShorelineCell;
+			map.Height.CellEntryChanged -= UpdateShorelineCell;
 
 			spriteLayer.Dispose();
 

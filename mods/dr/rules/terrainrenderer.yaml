@@ -159,3 +159,31 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Land
+		Edges:
+			EdgeMatch@nw-outer:
+				Match: Equal
+				SetType: 46
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Below
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Below
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Below
+			EdgeMatch@ne-outer:
+				Match: Below
+				SetType: 47
+				Neighbors:
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Below
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Below
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Equal
+
