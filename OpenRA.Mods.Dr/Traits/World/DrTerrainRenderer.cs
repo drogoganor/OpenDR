@@ -139,7 +139,7 @@ namespace OpenRA.Mods.Dr.Traits
 	{
 		const int NumEdgeLayers = 15;
 		const int EdgeTileStart = 40;
-		const int NumEdgeTiles = 12;
+		const int NumEdgeTiles = 14;
 		const int NumSkipEdgeTiles = 2;
 
 		readonly Map map;

@@ -200,7 +200,7 @@
 						Offset: -1, 0
 						Match: Below
 			EdgeMatch@w:
-				SelfMatchType: Equal
+				SelfMatchType: Below
 				SetType: 43
 				Neighbors:
 					NeighborMatch@northwest:
@@ -340,6 +340,44 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Equal
+					#NeighborMatch@east:
+					#	Offset: 1, 0
+					#	Match: Equal
+					#NeighborMatch@south:
+					#	Offset: 0, 1
+					#	Match: Equal
+			EdgeMatch@ne-sw-bridge:
+				SelfMatchType: Below
+				SetType: 51
+				Neighbors:
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Below
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Equal
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Equal
+					#NeighborMatch@east:
+					#	Offset: 1, 0
+					#	Match: Equal
+					#NeighborMatch@south:
+					#	Offset: 0, 1
+					#	Match: Equal
+			EdgeMatch@nw-se-bridge:
+				SelfMatchType: Equal
+				SetType: 50
+				Neighbors:
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Equal
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Below
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Below
 					#NeighborMatch@east:
 					#	Offset: 1, 0
 					#	Match: Equal

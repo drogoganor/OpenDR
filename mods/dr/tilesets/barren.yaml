@@ -2010,3 +2010,227 @@ Templates:
 		Categories: System
 		Tiles:
 			0: Clear
+	Template@206:
+		Id: 206
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 416
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@207:
+		Id: 207
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 417
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@208:
+		Id: 208
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 418
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@209:
+		Id: 209
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 419
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@210:
+		Id: 210
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 420
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@211:
+		Id: 211
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 421
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@212:
+		Id: 212
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 422
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@213:
+		Id: 213
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 423
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@214:
+		Id: 214
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 424
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@215:
+		Id: 215
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 425
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@216:
+		Id: 216
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 426
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@217:
+		Id: 217
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 427
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@218:
+		Id: 218
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 428
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@219:
+		Id: 219
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 429
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@220:
+		Id: 220
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 430
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@221:
+		Id: 221
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 431
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@222:
+		Id: 222
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 432
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@223:
+		Id: 223
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 433
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@224:
+		Id: 224
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 434
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@225:
+		Id: 225
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 435
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@226:
+		Id: 226
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 436
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@227:
+		Id: 227
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 437
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@228:
+		Id: 228
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 438
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@229:
+		Id: 229
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 439
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@230:
+		Id: 230
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 440
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@231:
+		Id: 231
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 441
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@232:
+		Id: 232
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 442
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@233:
+		Id: 233
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 443
+		Categories: System
+		Tiles:
+			0: Clear

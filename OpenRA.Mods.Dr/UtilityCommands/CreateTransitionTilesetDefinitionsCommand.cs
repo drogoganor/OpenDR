@@ -37,7 +37,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 			var startId = 38;
 			var startFrame = 248;
-			var numberOfTransitionTiles = 12;
+			var numberOfTransitionTiles = 14;
 			var numberOfValidTiles = 14;
 
 			var targetPath = "..\\";

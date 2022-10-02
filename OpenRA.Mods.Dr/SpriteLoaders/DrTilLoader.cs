@@ -202,16 +202,19 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				var ne = maskFrames[cornerSet[3]];
 
 				// Create edge tiles by adding
-				var north = CombineMaskTiles(nw, ne);
-				var east = CombineMaskTiles(se, ne);
-				var south = CombineMaskTiles(sw, se);
-				var west = CombineMaskTiles(sw, nw);
+				var north = CombineMaskTilesAdditive(nw, ne);
+				var east = CombineMaskTilesAdditive(se, ne);
+				var south = CombineMaskTilesAdditive(sw, se);
+				var west = CombineMaskTilesAdditive(sw, nw);
 
 				// frames.AddRange(new[] { MaskToRgbaTile(north), MaskToRgbaTile(east), MaskToRgbaTile(south), MaskToRgbaTile(west) });
-				var neInner = CombineMaskTiles(north, east);
-				var nwInner = CombineMaskTiles(north, west);
-				var swInner = CombineMaskTiles(south, west);
-				var seInner = CombineMaskTiles(south, east);
+				var neInner = CombineMaskTilesAdditive(north, east);
+				var nwInner = CombineMaskTilesAdditive(north, west);
+				var swInner = CombineMaskTilesAdditive(south, west);
+				var seInner = CombineMaskTilesAdditive(south, east);
+
+				var neSwBridge = CombineMaskTilesSubtractive(neInner, swInner);
+				var nwSeBridge = CombineMaskTilesSubtractive(nwInner, seInner);
 
 				// frames.AddRange(new[] { MaskToRgbaTile(neInner), MaskToRgbaTile(nwInner), MaskToRgbaTile(swInner), MaskToRgbaTile(seInner) });
 				for (var tileIndex = 2; tileIndex < 16; tileIndex++)
@@ -232,6 +235,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					frames.Add(MaskTile(sourceTile, swInner));
 					frames.Add(MaskTile(sourceTile, nwInner));
 					frames.Add(MaskTile(sourceTile, neInner));
+					frames.Add(MaskTile(sourceTile, neSwBridge));
+					frames.Add(MaskTile(sourceTile, nwSeBridge));
 				}
 			}
 
@@ -256,12 +261,28 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				return newFrame;
 			}
 
-			DrTilFrame CombineMaskTiles(DrTilFrame a, DrTilFrame b)
+			DrTilFrame CombineMaskTilesAdditive(DrTilFrame a, DrTilFrame b)
 			{
 				var newFrame = new DrTilFrame(SpriteFrameType.Indexed8);
 				for (var i = 0; i < 24 * 24; i++)
 				{
 					var newVal = (byte)Math.Min(255, a.Data[i] + b.Data[i]);
+					newFrame.Data[i] = newVal;
+				}
+
+				return newFrame;
+			}
+
+			DrTilFrame CombineMaskTilesSubtractive(DrTilFrame a, DrTilFrame b, bool invert = false)
+			{
+				var newFrame = new DrTilFrame(SpriteFrameType.Indexed8);
+				for (var i = 0; i < 24 * 24; i++)
+				{
+					var newVal = Math.Min(a.Data[i], b.Data[i]);
+
+					if (invert)
+						newVal = (byte)(byte.MaxValue - newVal);
+
 					newFrame.Data[i] = newVal;
 				}
 
