@@ -216,7 +216,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				// frames.AddRange(new[] { MaskToRgbaTile(neInner), MaskToRgbaTile(nwInner), MaskToRgbaTile(swInner), MaskToRgbaTile(seInner) });
 				for (var tileIndex = 2; tileIndex < 16; tileIndex++)
 				{
-					var mappedTileIndex = tileIndex * 4;
+					var mappedTileIndex = tileIndex * 8;
 					var sourceTile = frames[mappedTileIndex];
 
 					// Starts at 248

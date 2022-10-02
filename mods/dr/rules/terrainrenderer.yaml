@@ -160,30 +160,189 @@
 						Offset: -1, 0
 						Match: Land
 		Edges:
-			EdgeMatch@nw-outer:
-				Match: Equal
-				SetType: 46
+			EdgeMatch@n:
+				SelfMatchType: Equal
+				SetType: 44
 				Neighbors:
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Below
 					NeighborMatch@north:
 						Offset: 0, -1
 						Match: Below
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Equal
+			EdgeMatch@e:
+				SelfMatchType: Below
+				SetType: 45
+				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
+						Match: Equal
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Below
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Equal
+			EdgeMatch@s:
+				SelfMatchType: Below
+				SetType: 42
+				Neighbors:
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Equal
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Equal
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Below
+			EdgeMatch@w:
+				SelfMatchType: Equal
+				SetType: 43
+				Neighbors:
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Below
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Equal
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Below
+			EdgeMatch@nw-outer:
+				SelfMatchType: Equal
+				SetType: 40
+				Neighbors:
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Below
+					NeighborMatch@north:
+						Offset: 0, -1
 						Match: Below
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Below
 			EdgeMatch@ne-outer:
-				Match: Below
-				SetType: 47
+				SelfMatchType: Below
+				SetType: 41
 				Neighbors:
-					NeighborMatch@north:
-						Offset: 0, -1
-						Match: Below
 					NeighborMatch@northwest:
 						Offset: -1, -1
+						Match: Below
+					NeighborMatch@north:
+						Offset: 0, -1
 						Match: Below
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Equal
-
+					#NeighborMatch@south-special:
+					#	Offset: 1, 0
+					#	Match: Below
+			EdgeMatch@sw-outer:
+				SelfMatchType: Below
+				SetType: 39
+				Neighbors:
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Below
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Equal
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Below
+					#NeighborMatch@south:
+					#	Offset: 0, -1
+					#	Match: Below
+			EdgeMatch@se-outer:
+				SelfMatchType: Below
+				SetType: 38
+				Neighbors:
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Equal
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Below
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Below
+			EdgeMatch@ne-inner:
+				SelfMatchType: Equal
+				SetType: 47
+				Neighbors:
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Equal
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Equal
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Below
+					#NeighborMatch@east:
+					#	Offset: 1, 0
+					#	Match: Equal
+					#NeighborMatch@south:
+					#	Offset: 0, 1
+					#	Match: Below
+			EdgeMatch@nw-inner:
+				SelfMatchType: Below
+				SetType: 46
+				Neighbors:
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Equal
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Equal
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Equal
+					#NeighborMatch@east:
+					#	Offset: 1, 0
+					#	Match: Below
+					#NeighborMatch@south:
+					#	Offset: 0, 1
+					#	Match: Below
+			EdgeMatch@sw-inner:
+				SelfMatchType: Equal
+				SetType: 48
+				Neighbors:
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Below
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Equal
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Equal
+					#NeighborMatch@east:
+					#	Offset: 1, 0
+					#	Match: Equal
+					#NeighborMatch@south:
+					#	Offset: 0, 1
+					#	Match: Equal
+			EdgeMatch@se-inner:
+				SelfMatchType: Equal
+				SetType: 49
+				Neighbors:
+					NeighborMatch@northwest:
+						Offset: -1, -1
+						Match: Equal
+					NeighborMatch@north:
+						Offset: 0, -1
+						Match: Below
+					NeighborMatch@west:
+						Offset: -1, 0
+						Match: Equal
+					#NeighborMatch@east:
+					#	Offset: 1, 0
+					#	Match: Equal
+					#NeighborMatch@south:
+					#	Offset: 0, 1
+					#	Match: Equal

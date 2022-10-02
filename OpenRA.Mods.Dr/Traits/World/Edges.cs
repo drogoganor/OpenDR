@@ -6,6 +6,7 @@ namespace OpenRA.Mods.Dr.Traits
 	[Desc("What type of match is it?")]
 	public enum EdgeMatchType
 	{
+		None,
 		Below,
 		Equal,
 	}
@@ -22,8 +23,7 @@ namespace OpenRA.Mods.Dr.Traits
 	[Desc("A tile type, a set of neighbour tile match conditions, and a target tile type to set the tile to if all conditions are met.")]
 	public class DrTerrainEdgeInfo
 	{
-		[Desc("The tile type to inspect.")]
-		public EdgeMatchType Match;
+		public EdgeMatchType SelfMatchType;
 
 		[Desc("The tile type to display if all neighbours match.")]
 		public ushort SetType;
