@@ -200,7 +200,7 @@
 						Offset: -1, 0
 						Match: Below
 			EdgeMatch@w:
-				SelfMatchType: Below
+				SelfMatchType: Equal
 				SetType: 43
 				Neighbors:
 					NeighborMatch@northwest:

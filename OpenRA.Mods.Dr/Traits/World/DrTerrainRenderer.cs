@@ -315,7 +315,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 				if (match)
 				{
-					var resultTileType = (ushort)(m.SetType + ((tileType.Value - 2) * 12));
+					var resultTileType = (ushort)(m.SetType + ((tileType.Value - NumSkipEdgeTiles) * NumEdgeTiles));
 
 					result = new TerrainTile(resultTileType, (byte)Game.CosmeticRandom.Next(numIndices));
 					return true;
