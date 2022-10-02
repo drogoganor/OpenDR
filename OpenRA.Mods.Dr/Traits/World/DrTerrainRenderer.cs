@@ -142,11 +142,13 @@ namespace OpenRA.Mods.Dr.Traits
 		const int NumEdgeTiles = 14;
 		const int NumSkipEdgeTiles = 2;
 
+		readonly TerrainTile emptyShimTile = new TerrainTile(15, 0);
 		readonly Map map;
 		readonly DrTerrainRendererInfo info;
 		readonly TerrainSpriteLayer[] edgeLayers;
 		TerrainSpriteLayer spriteLayer;
 		TerrainSpriteLayer shimLayer;
+		CellLayer<TerrainTile> shimTiles;
 
 		readonly DefaultTerrain terrainInfo;
 		readonly DefaultTileCache tileCache;
@@ -163,6 +165,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 			tileCache = new DefaultTileCache(terrainInfo);
 			edgeLayers = new TerrainSpriteLayer[NumEdgeLayers];
+			shimTiles = new CellLayer<TerrainTile>(map);
 		}
 
 		void IWorldLoaded.WorldLoaded(World world, WorldRenderer wr)
@@ -219,12 +222,22 @@ namespace OpenRA.Mods.Dr.Traits
 					// Create shim tile
 					if (localTile.Type == baseTileMatchType)
 					{
+						// If tile is lower than current, clear and replace
+						if (shimTile.Type < shimTiles[newCell].Type)
+						{
+							shimTiles[newCell] = shimTile;
+						}
+
 						if (terrainInfo.Templates.TryGetValue(shimTile.Type, out var shimTemplate))
 							palette = ((DefaultTerrainTemplateInfo)shimTemplate).Palette ?? terrainInfo.Palette;
 
 						var shimSprite = tileCache.TileSprite(shimTile);
 						var shimPaletteReference = worldRenderer.Palette(palette);
 						shimLayer.Update(newCell, shimSprite, shimPaletteReference);
+					}
+					else
+					{
+						shimTiles[newCell] = emptyShimTile;
 					}
 
 					if (terrainInfo.Templates.TryGetValue(outEdgeTile.Type, out var template))
