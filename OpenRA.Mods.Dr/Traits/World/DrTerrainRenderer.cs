@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using OpenRA.Graphics;
@@ -137,6 +138,14 @@ namespace OpenRA.Mods.Dr.Traits
 
 	public sealed class DrTerrainRenderer : IRenderTerrain, IWorldLoaded, INotifyActorDisposing, ITiledTerrainRenderer
 	{
+		class EdgeTileResult
+		{
+			public TerrainTile Tile;
+			public CPos Cell;
+			public CVec Offset;
+			public bool Self;
+		}
+
 		const int NumEdgeLayers = 15;
 		const int EdgeTileStart = 40;
 		const int NumEdgeTiles = 14;
@@ -214,81 +223,90 @@ namespace OpenRA.Mods.Dr.Traits
 
 
 					var tile = map.Tiles[newCell];
-					var matchEdges = info.Edges.Values;
 					var numIndices = 1;
 					var shimTile = tile;
 					ushort tileMatchType = 0;
 					TerrainTile outEdgeTile = emptyShimTile;
 
-					foreach (var m in matchEdges)
+					var edges = GetEdgeTiles(newCell);
+
+					if (CreateEdgesForStemMatch(edges, out var shimType))
 					{
-						ushort? tileType = null;
-						if (m.SelfMatchType == EdgeMatchType.Equal)
-						{
-							tileType = tile.Type;
-						}
+						// TODO: Handle shim
+					}
 
-						var allDependentTilesMatch = true;
 
-						var equalNeighbors = m.Neighbors.Values.Where(nb => nb.Match == EdgeMatchType.Equal);
-						if (equalNeighbors.Any())
-						{
-							foreach (var n in equalNeighbors)
-							{
-								var neighborPos = newCell + n.Offset;
-								if (map.Tiles.Contains(neighborPos))
-								{
-									var neighbour = map.Tiles[neighborPos];
-									if (tileType == null)
-									{
-										tileType = neighbour.Type;
-									}
-									else if (tileType.Value != neighbour.Type)
-									{
-										allDependentTilesMatch = false;
-										break;
-									}
-								}
-							}
-						}
 
-						if (!allDependentTilesMatch)
-							continue;
 
-						if (m.SelfMatchType == EdgeMatchType.Below && tileType == tile.Type)
-							continue;
 
-						tileMatchType = tileType.Value;
 
-						var match = true;
-						foreach (var n in m.Neighbors.Values.Where(nb => nb.Match == EdgeMatchType.Below))
+					/*
+					ushort? tileType = null;
+					if (edgeInfo.SelfMatchType == EdgeMatchType.Equal)
+					{
+						tileType = tile.Type;
+					}
+
+					var allDependentTilesMatch = true;
+
+					var equalNeighbors = edgeInfo.Neighbors.Values.Where(nb => nb.Match == EdgeMatchType.Equal);
+					if (equalNeighbors.Any())
+					{
+						foreach (var n in equalNeighbors)
 						{
 							var neighborPos = newCell + n.Offset;
 							if (map.Tiles.Contains(neighborPos))
 							{
 								var neighbour = map.Tiles[neighborPos];
-								if (shimTile.Type == tile.Type)
+								if (tileType == null)
 								{
-									shimTile = neighbour;
+									tileType = neighbour.Type;
 								}
-
-								if (neighbour.Type >= tileType)
+								else if (tileType.Value != neighbour.Type)
 								{
-									match = false;
+									allDependentTilesMatch = false;
 									break;
 								}
 							}
 						}
+					}
 
-						if (match)
+					if (!allDependentTilesMatch)
+						continue;
+
+					if (edgeInfo.SelfMatchType == EdgeMatchType.Below && tileType == tile.Type)
+						continue;
+
+					tileMatchType = tileType.Value;
+
+					var match = true;
+					foreach (var n in edgeInfo.Neighbors.Values.Where(nb => nb.Match == EdgeMatchType.Below))
+					{
+						var neighborPos = newCell + n.Offset;
+						if (map.Tiles.Contains(neighborPos))
 						{
-							var resultTileType = (ushort)(m.SetType + ((tileType.Value - NumSkipEdgeTiles) * NumEdgeTiles));
+							var neighbour = map.Tiles[neighborPos];
+							if (shimTile.Type == tile.Type)
+							{
+								shimTile = neighbour;
+							}
 
-							outEdgeTile = new TerrainTile(resultTileType, (byte)Game.CosmeticRandom.Next(numIndices));
-							ok = true;
-							break;
+							if (neighbour.Type >= tileType)
+							{
+								match = false;
+								break;
+							}
 						}
 					}
+
+					if (match)
+					{
+						var resultTileType = (ushort)(edgeInfo.SetType + ((tileType.Value - NumSkipEdgeTiles) * NumEdgeTiles));
+
+						outEdgeTile = new TerrainTile(resultTileType, (byte)Game.CosmeticRandom.Next(numIndices));
+						ok = true;
+						break;
+					}*/
 
 					//outEdgeTile = tile;
 					//tileMatchType = tile.Type;
@@ -297,7 +315,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 
 					shimLayer.Clear(newCell);
-					ClearEdgeTile(newCell);
+					//ClearEdgeTile(newCell);
 
 					if (!ok)
 						continue;
@@ -334,6 +352,178 @@ namespace OpenRA.Mods.Dr.Traits
 					edgeLayers[thisTile.Type].Update(newCell, sprite, paletteReference);
 				}
 			}
+		}
+
+		bool CreateEdgesForStemMatch(EdgeTileResult[] edges, out ushort? shimType)
+		{
+			shimType = null;
+
+			var self = edges.First(x => x.Self == true);
+			var tile = self.Tile;
+			var matchEdges = info.Edges.Values;
+
+			// NOTE: The difference between the SelfMatch of Equal and Below:
+			// When set to Equal, the current value of the tile should be used.
+			// When set to Below, the value is Equal to the highest Above neighbor.
+			// We need to calculate the highest Equal neighbor value before determining which neighbors are above or below.
+
+			// Go through each match set
+			foreach (var matchEdge in matchEdges)
+			{
+				var selfValue = tile.Type;
+				var isSelfMatchBelow = matchEdge.SelfMatchType == EdgeMatchType.Below;
+				if (isSelfMatchBelow && GetHighestEqualNeighbor(edges, matchEdge, out var highestValue))
+				{
+					selfValue = highestValue.Value;
+				}
+
+				var allDependentTilesMatch = true;
+
+				// Go through each neighbor in the set
+				var matchNeighbors = matchEdge.Neighbors.Values;
+				var index = 0;
+				foreach (var matchNeighbor in matchNeighbors)
+				{
+					// TODO: Dodgy association here by index, but should be ordered in terrainrenderer.yaml
+					var neighbour = edges[index];
+
+					if (matchNeighbor.Match == EdgeMatchType.Below)
+					{
+						if (neighbour.Tile.Type >= selfValue)
+						{
+							return false;
+						}
+
+						// Get first below neighbor as shim
+						if (shimType == null)
+						{
+							shimType = neighbour.Tile.Type;
+						}
+					}
+					else if (matchNeighbor.Match == EdgeMatchType.Equal)
+					{
+						if (neighbour.Tile.Type < selfValue)
+						{
+							return false;
+						}
+					}
+
+					index++;
+				}
+
+				if (!allDependentTilesMatch)
+					continue;
+
+				// Match is good at this point
+			}
+
+
+
+			var resultTileType = (ushort)(edgeInfo.SetType + ((tileType.Value - NumSkipEdgeTiles) * NumEdgeTiles));
+
+			outEdgeTile = new TerrainTile(resultTileType, (byte)Game.CosmeticRandom.Next(numIndices));
+
+			if (terrainInfo.Templates.TryGetValue(outEdgeTile.Type, out var template))
+				palette = ((DefaultTerrainTemplateInfo)template).Palette ?? terrainInfo.Palette;
+
+			var sprite = tileCache.TileSprite(outEdgeTile);
+			var paletteReference = worldRenderer.Palette(palette);
+
+			edgeLayers[thisTile.Type].Update(newCell, sprite, paletteReference);
+
+			return true;
+		}
+
+		bool GetHighestEqualNeighbor(EdgeTileResult[] edges, DrTerrainEdgeInfo edgeInfo, out ushort? highestValue)
+		{
+			highestValue = null;
+			foreach (var edge in edges)
+			{
+				var matchedEdge = edgeInfo.Neighbors.Values
+					.SingleOrDefault(x => x.Offset == edge.Offset && x.Match == EdgeMatchType.Equal);
+
+				if (matchedEdge == null)
+					continue;
+
+				if (!highestValue.HasValue || edge.Tile.Type > highestValue.Value)
+				{
+					highestValue = edge.Tile.Type;
+				}
+			}
+
+			return highestValue.HasValue;
+		}
+
+		Dictionary<ushort, List<CPos>> GetTileNeighborPossibilities(EdgeTileResult[] edges)
+		{
+			// Get above tile positions.
+			// We need to create transparent edge tiles for potentially more than one set of joins.
+			var highTilePositions = new Dictionary<ushort, List<CPos>>();
+			foreach (var edge in edges)
+			{
+				if (edge.Self == true)
+					continue;
+
+				if (!highTilePositions.ContainsKey(edge.Tile.Type))
+				{
+					highTilePositions.Add(edge.Tile.Type, new List<CPos>() { edge.Cell });
+				}
+				else
+				{
+					highTilePositions[edge.Tile.Type].Add(edge.Cell);
+				}
+			}
+
+			// Fill out all combinations i.e. if we have E:3, N:2, and W:1, we'll get results (E:3), (E:2, N:2), (E:1, N:1, W:1).
+			var orderedPositions = highTilePositions.OrderByDescending(x => x.Key);
+			var positionIndex = 0;
+			foreach (var pair in orderedPositions)
+			{
+				foreach (var innerPair in orderedPositions.Skip(positionIndex))
+				{
+					foreach (var pairPosition in pair.Value)
+					{
+						if (!innerPair.Value.Contains(pairPosition))
+						{
+							innerPair.Value.Add(pairPosition);
+						}
+						else
+						{
+							throw new Exception("why");
+						}
+					}
+				}
+
+				positionIndex++;
+			}
+
+			return highTilePositions;
+		}
+
+		EdgeTileResult[] GetEdgeTiles(CPos newCell)
+		{
+			var results = new List<EdgeTileResult>();
+			for (var y = -1; y <= 0; y++)
+			{
+				for (var x = -1; x <= 0; x++)
+				{
+					var offset = new CVec(x, y);
+					var neighborPos = newCell + offset;
+					if (map.Tiles.Contains(neighborPos))
+					{
+						var neighbour = map.Tiles[neighborPos];
+						results.Add(new EdgeTileResult
+						{
+							Cell = neighborPos,
+							Offset = offset,
+							Tile = neighbour,
+							Self = neighborPos == newCell
+						});
+					}
+				}
+			}
+
+			return results.ToArray();
 		}
 
 		void ClearEdgeTile(CPos cell)
