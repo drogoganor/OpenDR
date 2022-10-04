@@ -315,11 +315,15 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				return false;
 			}
 
-			var paletteFile = filename.Replace(".TIL", ".PAL");
+			var paletteFile = filename.Replace(".TIL", ".PAL").Replace(".til", ".pal");
 			var terrainPaletteMultiplier = 4;
-			if (paletteFile.Contains("BARREN"))
+			if (paletteFile.Contains("BARREN") || paletteFile.Contains("JUNGLE"))
 			{
 				terrainPaletteMultiplier = 6;
+			}
+			if (paletteFile.Contains("aust"))
+			{
+				terrainPaletteMultiplier = 5;
 			}
 
 			ImmutablePalette palette = null;

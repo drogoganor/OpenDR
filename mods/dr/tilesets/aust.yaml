@@ -381,7 +381,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 139, 153, 167, 181 # T
+		Frames: 203, 217, 231, 245 # T
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -393,7 +393,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 136, 150, 164, 178 # R
+		Frames: 200, 214, 228, 242 # R
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -405,7 +405,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 130, 144, 158, 172 # B
+		Frames: 194, 208, 222, 236 # B
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -417,7 +417,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 133, 147, 161, 175 # L
+		Frames: 197, 211, 225, 239 # L
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -429,7 +429,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 131, 145, 159, 173 # TLI
+		Frames: 195, 209, 223, 237 # TLI
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -441,7 +441,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 135, 149, 163, 177 # TRI
+		Frames: 199, 213, 227, 241 # TRI
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -453,7 +453,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 128, 142, 156, 170 # BRI
+		Frames: 192, 206, 220, 234 # BRI
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -465,7 +465,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 129, 143, 157, 171 # BLI
+		Frames: 193, 207, 221, 235 # BLI
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -477,7 +477,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 138, 152, 166, 180 # TLO
+		Frames: 202, 216, 230, 244 # TLO
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -489,7 +489,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 134, 148, 162, 176 # TRO
+		Frames: 198, 212, 226, 240 # TRO
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -501,7 +501,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 141, 155, 169, 183 # BRO
+		Frames: 205, 219, 233, 247 # BRO
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -513,7 +513,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 140, 154, 168, 182 # BLO
+		Frames: 204, 218, 232, 246 # BLO
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -525,7 +525,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 132, 146, 160, 174 # TR/BL-O
+		Frames: 196, 210, 224, 238 # TR/BL-O
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -537,7 +537,7 @@ Templates:
 		Images: aust.til
 		Size: 1,1
 		PickAny: True
-		Frames: 137, 151, 165, 179 # TL/BR-O
+		Frames: 201, 215, 229, 243 # TL/BR-O
 		Categories: Terrain
 		Tiles:
 			0: Clear

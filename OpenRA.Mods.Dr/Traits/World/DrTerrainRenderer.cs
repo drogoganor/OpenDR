@@ -184,26 +184,24 @@ namespace OpenRA.Mods.Dr.Traits
 
 			foreach (var cell in map.AllCells)
 			{
-				SetBaseCell(cell);
-				UpdateShorelineCell(cell);
-				UpdateEdgeCell(cell);
+				OnCellEntryChanged(cell);
 			}
 
-			map.Tiles.CellEntryChanged += SetBaseCell;
-
-			// map.Height.CellEntryChanged += SetBaseCell;
-			map.Tiles.CellEntryChanged += UpdateShorelineCell;
-
-			// map.Height.CellEntryChanged += UpdateShorelineCell;
-			map.Tiles.CellEntryChanged += UpdateEdgeCell;
-
-			// map.Height.CellEntryChanged += UpdateEdgeCell;
+			map.Tiles.CellEntryChanged += OnCellEntryChanged;
+			// map.Height.CellEntryChanged += OnCellEntryChanged;
 		}
 
-		public void UpdateEdgeCell(CPos cell)
+		void OnCellEntryChanged(CPos cell)
+		{
+			SetBaseCell(cell);
+			UpdateEdgeCell(cell);
+			UpdateShorelineCell(cell);
+		}
+
+		void UpdateEdgeCell(CPos cell)
 		{
 			var thisTile = map.Tiles[cell];
-			if (thisTile.Type == 0 || thisTile.Type >= 15)
+			if (thisTile.Type == 0)
 				return;
 
 			for (var x = -1; x < 2; x++)
@@ -229,6 +227,9 @@ namespace OpenRA.Mods.Dr.Traits
 			var tile = self.Tile;
 			var matchEdges = info.Edges.Values;
 
+			// TODO: This still has a bug integrating with the shorelines.
+			// We need to check if this tile is a shoreline and not permit any edges or shims to be created.
+
 			// NOTE: The difference between the SelfMatch of Equal and Below:
 			// When set to Equal, the current value of the tile should be used.
 			// When set to Below, the value is Equal to the highest Above neighbor.
@@ -243,10 +244,15 @@ namespace OpenRA.Mods.Dr.Traits
 			{
 				var selfValue = tile.Type;
 				var isSelfMatchBelow = matchEdge.SelfMatchType == EdgeMatchType.Below;
+
 				var validLowestEqualNeighbor = GetLowestEqualNeighbor(edges, matchEdge, out var highestValue);
 				if (isSelfMatchBelow && validLowestEqualNeighbor)
 				{
 					selfValue = highestValue.Value;
+
+					// Don't transition to sea tiles
+					if (selfValue == 0)
+						continue;
 
 					// Bomb out if our highest neighbour is 0 or 1, or equal to the current tile type
 					if (highestValue.Value < NumSkipEdgeTiles || highestValue.Value == tile.Type)
@@ -264,9 +270,9 @@ namespace OpenRA.Mods.Dr.Traits
 				foreach (var matchNeighbor in matchNeighbors)
 				{
 					// TODO: Dodgy association here by index, but should be ordered in terrainrenderer.yaml
-					var neighbour = edges.First(x => x.Offset == matchNeighbor.Offset);
+					// var neighbour = edges.First(x => x.Offset == matchNeighbor.Offset);
+					var neighbour = edges[index];
 
-					// var neighbour = edges[index];
 					if (matchNeighbor.Match == EdgeMatchType.Below)
 					{
 						if (neighbour.Tile.Type >= selfValue)
@@ -322,6 +328,9 @@ namespace OpenRA.Mods.Dr.Traits
 
 				// Match is good at this point; create edge tile
 
+				if (lowestMatchValue.HasValue && lowestMatchValue.Value < 2)
+					continue;
+
 				// Get the right edge type for this tile type by adding the result tile type to the base tile type multiplied by how many edge tiles we have
 				var resultTileType = (ushort)(matchEdge.SetType + ((lowestMatchValue - NumSkipEdgeTiles) * NumEdgeTiles));
 
@@ -336,7 +345,7 @@ namespace OpenRA.Mods.Dr.Traits
 				edgeLayers[lowestMatchValue.Value].Update(self.Cell, sprite, paletteReference);
 			}
 
-			if (shimType != null)
+			if (shimType != null && shimType != 0)
 			{
 				if (terrainInfo.Templates.TryGetValue(shimType.Value, out var shimTemplate))
 					palette = ((DefaultTerrainTemplateInfo)shimTemplate).Palette ?? terrainInfo.Palette;
@@ -348,29 +357,6 @@ namespace OpenRA.Mods.Dr.Traits
 			}
 		}
 
-		bool GetHighestEqualNeighbor(EdgeTileResult[] edges, DrTerrainEdgeInfo edgeInfo, out ushort? highestValue)
-		{
-			highestValue = null;
-			foreach (var edge in edges)
-			{
-				if (edge.Self == true)
-					continue;
-
-				var matchedEdge = edgeInfo.Neighbors.Values
-					.SingleOrDefault(x => x.Offset == edge.Offset && x.Match == EdgeMatchType.Equal);
-
-				if (matchedEdge == null)
-					continue;
-
-				if (!highestValue.HasValue || edge.Tile.Type > highestValue.Value)
-				{
-					highestValue = edge.Tile.Type;
-				}
-			}
-
-			return highestValue.HasValue;
-		}
-
 		bool GetLowestEqualNeighbor(EdgeTileResult[] edges, DrTerrainEdgeInfo edgeInfo, out ushort? lowestValue)
 		{
 			lowestValue = null;
@@ -380,7 +366,7 @@ namespace OpenRA.Mods.Dr.Traits
 					continue;
 
 				var matchedEdge = edgeInfo.Neighbors.Values
-					.SingleOrDefault(x => x.Offset == edge.Offset && x.Match == EdgeMatchType.Equal);
+				 	.SingleOrDefault(x => x.Offset == edge.Offset && x.Match == EdgeMatchType.Equal);
 
 				if (matchedEdge == null)
 					continue;
@@ -392,52 +378,6 @@ namespace OpenRA.Mods.Dr.Traits
 			}
 
 			return lowestValue.HasValue;
-		}
-
-		Dictionary<ushort, List<CPos>> GetTileNeighborPossibilities(EdgeTileResult[] edges)
-		{
-			// Get above tile positions.
-			// We need to create transparent edge tiles for potentially more than one set of joins.
-			var highTilePositions = new Dictionary<ushort, List<CPos>>();
-			foreach (var edge in edges)
-			{
-				if (edge.Self == true)
-					continue;
-
-				if (!highTilePositions.ContainsKey(edge.Tile.Type))
-				{
-					highTilePositions.Add(edge.Tile.Type, new List<CPos>() { edge.Cell });
-				}
-				else
-				{
-					highTilePositions[edge.Tile.Type].Add(edge.Cell);
-				}
-			}
-
-			// Fill out all combinations i.e. if we have E:3, N:2, and W:1, we'll get results (E:3), (E:2, N:2), (E:1, N:1, W:1).
-			var orderedPositions = highTilePositions.OrderByDescending(x => x.Key);
-			var positionIndex = 0;
-			foreach (var pair in orderedPositions)
-			{
-				foreach (var innerPair in orderedPositions.Skip(positionIndex))
-				{
-					foreach (var pairPosition in pair.Value)
-					{
-						if (!innerPair.Value.Contains(pairPosition))
-						{
-							innerPair.Value.Add(pairPosition);
-						}
-						else
-						{
-							throw new Exception("why");
-						}
-					}
-				}
-
-				positionIndex++;
-			}
-
-			return highTilePositions;
 		}
 
 		EdgeTileResult[] GetEdgeTiles(CPos newCell)
@@ -474,7 +414,7 @@ namespace OpenRA.Mods.Dr.Traits
 			}
 		}
 
-		public void SetBaseCell(CPos cell)
+		void SetBaseCell(CPos cell)
 		{
 			var tile = map.Tiles[cell];
 			var palette = terrainInfo.Palette;
@@ -486,11 +426,11 @@ namespace OpenRA.Mods.Dr.Traits
 			spriteLayer.Update(cell, sprite, paletteReference);
 		}
 
-		public void UpdateShorelineCell(CPos cell)
+		void UpdateShorelineCell(CPos cell)
 		{
 			var tile = map.Tiles[cell];
-			if (tile.Type != 0)
-				return;
+			//if (tile.Type != 0)
+			//	return;
 
 			for (var x = -1; x < 2; x++)
 			{
@@ -500,6 +440,9 @@ namespace OpenRA.Mods.Dr.Traits
 
 					if (!map.Contains(newCell))
 						continue;
+
+					//ClearEdgeTile(newCell);
+					//shimLayer.Clear(newCell);
 
 					tile = GetShoreTile(newCell);
 
