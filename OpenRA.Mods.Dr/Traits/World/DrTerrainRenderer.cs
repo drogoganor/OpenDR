@@ -11,7 +11,6 @@
 
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using OpenRA.Graphics;
@@ -147,17 +146,14 @@ namespace OpenRA.Mods.Dr.Traits
 		}
 
 		const int NumEdgeLayers = 16;
-		const int EdgeTileStart = 40;
 		const int NumEdgeTiles = 14;
 		const int NumSkipEdgeTiles = 2;
 
-		readonly TerrainTile emptyShimTile = new TerrainTile(15, 0);
 		readonly Map map;
 		readonly DrTerrainRendererInfo info;
 		readonly TerrainSpriteLayer[] edgeLayers;
 		TerrainSpriteLayer spriteLayer;
 		TerrainSpriteLayer shimLayer;
-		// CellLayer<TerrainTile> shimTiles;
 
 		readonly DefaultTerrain terrainInfo;
 		readonly DefaultTileCache tileCache;
@@ -174,7 +170,6 @@ namespace OpenRA.Mods.Dr.Traits
 
 			tileCache = new DefaultTileCache(terrainInfo);
 			edgeLayers = new TerrainSpriteLayer[NumEdgeLayers];
-			//shimTiles = new CellLayer<TerrainTile>(map);
 		}
 
 		void IWorldLoaded.WorldLoaded(World world, WorldRenderer wr)
@@ -195,11 +190,14 @@ namespace OpenRA.Mods.Dr.Traits
 			}
 
 			map.Tiles.CellEntryChanged += SetBaseCell;
-			//map.Height.CellEntryChanged += SetBaseCell;
-			//map.Tiles.CellEntryChanged += UpdateShorelineCell;
-			//map.Height.CellEntryChanged += UpdateShorelineCell;
+
+			// map.Height.CellEntryChanged += SetBaseCell;
+			map.Tiles.CellEntryChanged += UpdateShorelineCell;
+
+			// map.Height.CellEntryChanged += UpdateShorelineCell;
 			map.Tiles.CellEntryChanged += UpdateEdgeCell;
-			//map.Height.CellEntryChanged += UpdateEdgeCell;
+
+			// map.Height.CellEntryChanged += UpdateEdgeCell;
 		}
 
 		public void UpdateEdgeCell(CPos cell)
@@ -225,8 +223,6 @@ namespace OpenRA.Mods.Dr.Traits
 
 		void CreateEdgesForMatches(EdgeTileResult[] edges)
 		{
-			const int NumIndices = 4;
-
 			ushort? shimType = null;
 			string palette = null;
 			var self = edges.First(x => x.Self == true);
@@ -247,7 +243,8 @@ namespace OpenRA.Mods.Dr.Traits
 			{
 				var selfValue = tile.Type;
 				var isSelfMatchBelow = matchEdge.SelfMatchType == EdgeMatchType.Below;
-				if (isSelfMatchBelow && GetHighestEqualNeighbor(edges, matchEdge, out var highestValue))
+				var validLowestEqualNeighbor = GetLowestEqualNeighbor(edges, matchEdge, out var highestValue);
+				if (isSelfMatchBelow && validLowestEqualNeighbor)
 				{
 					selfValue = highestValue.Value;
 
@@ -268,8 +265,8 @@ namespace OpenRA.Mods.Dr.Traits
 				{
 					// TODO: Dodgy association here by index, but should be ordered in terrainrenderer.yaml
 					var neighbour = edges.First(x => x.Offset == matchNeighbor.Offset);
-					// var neighbour = edges[index];
 
+					// var neighbour = edges[index];
 					if (matchNeighbor.Match == EdgeMatchType.Below)
 					{
 						if (neighbour.Tile.Type >= selfValue)
@@ -279,7 +276,7 @@ namespace OpenRA.Mods.Dr.Traits
 						}
 
 						// Get first below neighbor as shim
-						if (shimType == null || neighbour.Tile.Type < shimType)
+						if (!isSelfMatchBelow && (shimType == null || neighbour.Tile.Type < shimType))
 						{
 							shimType = neighbour.Tile.Type;
 						}
@@ -292,9 +289,14 @@ namespace OpenRA.Mods.Dr.Traits
 							break;
 						}
 
-						if (!lowestMatchValue.HasValue || neighbour.Tile.Type < lowestMatchValue.Value)
+						if ((!lowestMatchValue.HasValue || neighbour.Tile.Type < lowestMatchValue.Value) && neighbour.Tile.Type >= NumSkipEdgeTiles)
 						{
 							lowestMatchValue = neighbour.Tile.Type;
+
+							if (lowestMatchValue.Value == 0 || lowestMatchValue.Value > 15)
+							{
+								throw new Exception("WTF");
+							}
 						}
 					}
 
@@ -304,9 +306,9 @@ namespace OpenRA.Mods.Dr.Traits
 				if (!allDependentTilesMatch)
 					continue;
 
-				// If our lowest match value is ourselves, we don't have a match
-				//if (!isSelfMatchBelow && lowestMatchValue.HasValue && lowestMatchValue.Value == tile.Type)
-				//	continue;
+				// If our lowest Above neighbour is higher than ourself, use ourself
+				if (!isSelfMatchBelow && lowestMatchValue.HasValue && lowestMatchValue.Value > tile.Type)
+					lowestMatchValue = tile.Type;
 
 				// If we don't have a lowest match value, it's ourself
 				if (lowestMatchValue == null)
@@ -323,7 +325,7 @@ namespace OpenRA.Mods.Dr.Traits
 				// Get the right edge type for this tile type by adding the result tile type to the base tile type multiplied by how many edge tiles we have
 				var resultTileType = (ushort)(matchEdge.SetType + ((lowestMatchValue - NumSkipEdgeTiles) * NumEdgeTiles));
 
-				var edgeTile = new TerrainTile(resultTileType, 0); // (byte)Game.CosmeticRandom.Next(NumIndices));
+				var edgeTile = new TerrainTile(resultTileType, 0);
 
 				if (terrainInfo.Templates.TryGetValue(edgeTile.Type, out var template))
 					palette = ((DefaultTerrainTemplateInfo)template).Palette ?? terrainInfo.Palette;
@@ -367,6 +369,29 @@ namespace OpenRA.Mods.Dr.Traits
 			}
 
 			return highestValue.HasValue;
+		}
+
+		bool GetLowestEqualNeighbor(EdgeTileResult[] edges, DrTerrainEdgeInfo edgeInfo, out ushort? lowestValue)
+		{
+			lowestValue = null;
+			foreach (var edge in edges)
+			{
+				if (edge.Self == true)
+					continue;
+
+				var matchedEdge = edgeInfo.Neighbors.Values
+					.SingleOrDefault(x => x.Offset == edge.Offset && x.Match == EdgeMatchType.Equal);
+
+				if (matchedEdge == null)
+					continue;
+
+				if (!lowestValue.HasValue || edge.Tile.Type < lowestValue.Value)
+				{
+					lowestValue = edge.Tile.Type;
+				}
+			}
+
+			return lowestValue.HasValue;
 		}
 
 		Dictionary<ushort, List<CPos>> GetTileNeighborPossibilities(EdgeTileResult[] edges)

@@ -308,7 +308,7 @@
 					#NeighborMatch@south:
 					#	Offset: 0, 1
 					#	Match: Below
-			EdgeMatch@sw-inner:
+			EdgeMatch@se-inner:
 				SelfMatchType: Equal
 				SetType: 48
 				Neighbors:
@@ -327,7 +327,7 @@
 					#NeighborMatch@south:
 					#	Offset: 0, 1
 					#	Match: Equal
-			EdgeMatch@se-inner:
+			EdgeMatch@sw-inner:
 				SelfMatchType: Equal
 				SetType: 49
 				Neighbors:
