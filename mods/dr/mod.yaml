@@ -96,6 +96,7 @@ Sequences:
 	dr|sequences/decorations-manual.yaml
 	#dr|sequences/decorations-snow.yaml
 	dr|sequences/decorations-jungle.yaml
+	dr|sequences/splashes.yaml
 
 TileSets:
 	#dr|tilesets/alien.yaml

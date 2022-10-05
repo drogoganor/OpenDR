@@ -1,0 +1,20 @@
+
+splash-barren:
+	Defaults:
+		AddExtension: False
+	splash1: BARREN/BARREN.TIL
+		Start: 128
+		Length: 8
+		Tick: 100
+	splash2: BARREN/BARREN.TIL
+		Start: 144
+		Length: 8
+		Tick: 100
+	splash3: BARREN/BARREN.TIL
+		Start: 160
+		Length: 8
+		Tick: 100
+	splash4: BARREN/BARREN.TIL
+		Start: 176
+		Length: 8
+		Tick: 100
