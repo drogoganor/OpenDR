@@ -2,19 +2,45 @@
 splash-barren:
 	Defaults:
 		AddExtension: False
+		Tick: 50
 	splash1: BARREN/BARREN.TIL
 		Start: 128
 		Length: 8
-		Tick: 100
 	splash2: BARREN/BARREN.TIL
+		Start: 136
+		Length: 8
+	splash3: BARREN/BARREN.TIL
+		Start: 144
+		Length: 8
+	splash4: BARREN/BARREN.TIL
+		Start: 152
+		Length: 8
+	splash5: BARREN/BARREN.TIL
+		Start: 160
+		Length: 8
+	splash6: BARREN/BARREN.TIL
+		Start: 168
+		Length: 8
+	splash7: BARREN/BARREN.TIL
+		Start: 176
+		Length: 8
+
+splash-jungle:
+	Defaults:
+		AddExtension: False
+	splash1: JUNGLE/JUNGLE.TIL
+		Start: 128
+		Length: 8
+		Tick: 100
+	splash2: JUNGLE/JUNGLE.TIL
 		Start: 144
 		Length: 8
 		Tick: 100
-	splash3: BARREN/BARREN.TIL
+	splash3: JUNGLE/JUNGLE.TIL
 		Start: 160
 		Length: 8
 		Tick: 100
-	splash4: BARREN/BARREN.TIL
+	splash4: JUNGLE/JUNGLE.TIL
 		Start: 176
 		Length: 8
 		Tick: 100

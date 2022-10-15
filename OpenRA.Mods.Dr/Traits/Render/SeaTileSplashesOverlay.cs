@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits.Render;
+using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits.Render
@@ -22,8 +23,8 @@ namespace OpenRA.Mods.Dr.Traits.Render
 	{
 		public readonly float Percent = 0.03f;
 
-		public readonly int RoundDelay = 40;
-		public readonly int RandomMax = 15;
+		public readonly int RoundDelay = 80;
+		public readonly int RandomMax = 40;
 		public readonly int TickLength = 1600;
 
 		public readonly string SequencePrefix = "splash";
@@ -47,7 +48,7 @@ namespace OpenRA.Mods.Dr.Traits.Render
 		}
 	}
 
-	public class SeaTileSplashesOverlay : ITick, IWorldLoaded, IRenderAnnotations
+	public class SeaTileSplashesOverlay : ITick, IWorldLoaded, IRenderOverlay
 	{
 		class SeaTileAnimation
 		{
@@ -58,9 +59,13 @@ namespace OpenRA.Mods.Dr.Traits.Render
 		class SeaTileSplash
 		{
 			public int Delay;
-			public string Sequence;
 			public Animation Animation;
+			public int Frame;
+			public int Tick;
+			public string SequenceName;
+			public ISpriteSequence Sequence;
 			public WPos Position;
+			public CPos Cell;
 		}
 
 		struct SeaTileSample
@@ -71,10 +76,10 @@ namespace OpenRA.Mods.Dr.Traits.Render
 
 		readonly Actor self;
 		readonly SeaTileSplashesOverlayInfo info;
-		readonly List<SeaTileAnimation> splashAnimations = new List<SeaTileAnimation>();
 		readonly List<SeaTileSplash> splashes = new List<SeaTileSplash>();
 
-		bool IRenderAnnotations.SpatiallyPartitionable => false;
+		TerrainSpriteLayer spriteLayer;
+		PaletteReference palette;
 
 		public SeaTileSplashesOverlay(Actor self, SeaTileSplashesOverlayInfo info)
 		{
@@ -87,13 +92,22 @@ namespace OpenRA.Mods.Dr.Traits.Render
 		void IWorldLoaded.WorldLoaded(World w, WorldRenderer wr)
 		{
 			var splashImageName = $"{info.SequencePrefix}-{self.World.Map.Tileset.ToLowerInvariant()}";
+			var sequences = w.Map.Rules.Sequences;
+			palette = wr.Palette("terrain");
+
+			if (spriteLayer == null)
+			{
+				var first = sequences.GetSequence(splashImageName, "splash1").GetSprite(0);
+				var emptySprite = new Sprite(first.Sheet, Rectangle.Empty, TextureChannel.Alpha);
+				spriteLayer = new TerrainSpriteLayer(w, wr, emptySprite, first.BlendMode, wr.World.Type != WorldType.Editor);
+			}
 
 			// Get all sea tiles
 			var seaTiles = new List<SeaTileSample>();
 			foreach (var cell in self.World.Map.AllCells)
 			{
 				var tile = self.World.Map.Tiles[cell];
-				if (tile.Type == 0)
+				if (tile.Type == 0 && IsValidSeaTile(cell))
 				{
 					seaTiles.Add(new SeaTileSample
 					{
@@ -106,27 +120,54 @@ namespace OpenRA.Mods.Dr.Traits.Render
 			// Get the percentage of these sea tiles
 			var numSplashes = info.Frames.Length;
 			var percentAbsolute = (int)(seaTiles.Count * info.Percent);
-			var selectedSeaTiles = seaTiles.OrderBy(x => self.World.LocalRandom.Next()).Take(percentAbsolute);
+			var selectedSeaTiles = seaTiles
+				.OrderBy(x => self.World.LocalRandom.Next())
+				.Take(percentAbsolute);
 
 			foreach (var selectedSeaTile in selectedSeaTiles)
 			{
 				// Pick the underlying variant as animation index
 				var tileIndex = selectedSeaTile.Tile.Index % info.Frames.Length;
-				//if (tileIndex >= info.Frames.Length) // Or random if we don't have that one
-				//	tileIndex = (byte)info.Frames[self.World.LocalRandom.Next(info.Frames.Length - 1)];
 
 				var splashSequenceName = $"{info.SequencePrefix}{tileIndex + 1}";
 				var animation = new Animation(self.World, splashImageName);
 				animation.Play(splashSequenceName);
 
+				var sequence = sequences.GetSequence(splashImageName, splashSequenceName);
 				splashes.Add(new SeaTileSplash
 				{
 					Animation = animation,
-					Sequence = splashSequenceName,
+					Cell = selectedSeaTile.Cell,
+					SequenceName = splashSequenceName,
+					Sequence = sequence,
 					Delay = self.World.LocalRandom.Next(info.RandomMax),
 					Position = self.World.Map.CenterOfCell(selectedSeaTile.Cell) - new WVec(512, 512, 0)
 				});
 			}
+		}
+
+		bool IsValidSeaTile(CPos cell)
+		{
+			var map = self.World.Map;
+			for (var y = -1; y <= 0; y++)
+			{
+				for (var x = -1; x <= 0; x++)
+				{
+					var offset = new CVec(x, y);
+					var neighborPos = cell + offset;
+					if (neighborPos == cell)
+						continue;
+
+					if (map.Tiles.Contains(neighborPos))
+					{
+						var neighbour = map.Tiles[neighborPos];
+						if (neighbour.Type > 0)
+							return false;
+					}
+				}
+			}
+
+			return true;
 		}
 
 		void ITick.Tick(Actor self)
@@ -138,30 +179,37 @@ namespace OpenRA.Mods.Dr.Traits.Render
 			else
 				tick++;
 
-
 			// Render
 			for (var i = 0; i < splashes.Count; i++)
 			{
 				var splash = splashes[i];
 				if (splash.Delay == tick)
 				{
-					splash.Animation.Play(splash.Sequence);
+					// Start animation
+					splash.Animation.Play(splash.SequenceName);
+					UpdateSpriteLayers(splash.Cell, splash.Sequence, 0, palette);
 				}
 
 				splash.Animation.Tick();
+				UpdateSpriteLayers(splash.Cell, splash.Sequence, splash.Animation.CurrentFrame, palette);
 			}
 		}
 
-		IEnumerable<IRenderable> IRenderAnnotations.RenderAnnotations(Actor self, WorldRenderer wr)
+		void UpdateSpriteLayers(CPos cell, ISpriteSequence sequence, int frame, PaletteReference palette)
 		{
-			var palette = wr.Palette("terrain");
-			foreach (var splash in splashes)
+			if (sequence != null)
 			{
-				foreach (var renderable in splash.Animation.Render(splash.Position, palette))
-				{
-					yield return renderable;
-				}
+				spriteLayer.Update(cell, sequence, palette, frame);
 			}
+			else
+			{
+				spriteLayer.Clear(cell);
+			}
+		}
+
+		void IRenderOverlay.Render(WorldRenderer wr)
+		{
+			spriteLayer.Draw(wr.Viewport);
 		}
 	}
 }

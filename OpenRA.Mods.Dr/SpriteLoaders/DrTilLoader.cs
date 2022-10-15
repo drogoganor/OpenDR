@@ -12,7 +12,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using OpenRA.FileFormats;
 using OpenRA.Graphics;
 using OpenRA.Mods.Dr.Traits;
 using OpenRA.Primitives;
@@ -38,8 +37,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			public float2 Offset { get; set; }
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
-
-			public static int Counter = 0;
 
 			public DrTilFrame(SpriteFrameType type)
 			{
@@ -86,10 +83,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 						rgbByteArray.AddRange(new[] { color.R, color.G, color.B, (byte)255 });
 					}
 				}
-
-				var png = new Png(rgbByteArray.ToArray(), SpriteFrameType.Rgba32, TileSize, TileSize);
-				png.Save($"C:\\temp\\{Counter:D4}-til.png");
-				Counter++;
 
 				Offset = new float2(0, 0);
 				FrameSize = new Size(TileSize, TileSize);
@@ -288,22 +281,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 				return newFrame;
 			}
-
-			DrTilFrame MaskToRgbaTile(DrTilFrame frame)
-			{
-				var newFrame = new DrTilFrame(SpriteFrameType.Rgba32);
-				for (var i = 0; i < 24 * 24; i++)
-				{
-					var newIndex = i * 4;
-					var newVal = (byte)Math.Min(255, frame.Data[i] * 4);
-					newFrame.Data[newIndex] = newVal;
-					newFrame.Data[newIndex + 1] = newVal;
-					newFrame.Data[newIndex + 2] = newVal;
-					newFrame.Data[newIndex + 3] = 255;
-				}
-
-				return newFrame;
-			}
 		}
 
 		public bool TryParseSprite(Stream s, string filename, out ISpriteFrame[] frames, out TypeDictionary metadata)
@@ -321,6 +298,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			{
 				terrainPaletteMultiplier = 6;
 			}
+
 			if (paletteFile.Contains("aust"))
 			{
 				terrainPaletteMultiplier = 5;
@@ -335,7 +313,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			frames = ParseFrames(s, palette);
 
-			DrTilFrame.Counter = 0;
 			return true;
 		}
 	}

@@ -195,15 +195,10 @@ namespace OpenRA.Mods.Dr.Traits
 		{
 			SetBaseCell(cell);
 			UpdateEdgeCell(cell);
-			UpdateShorelineCell(cell);
 		}
 
 		void UpdateEdgeCell(CPos cell)
 		{
-			var thisTile = map.Tiles[cell];
-			if (thisTile.Type == 0)
-				return;
-
 			for (var x = -1; x < 2; x++)
 			{
 				for (var y = -1; y < 2; y++)
@@ -213,8 +208,29 @@ namespace OpenRA.Mods.Dr.Traits
 					if (!map.Contains(newCell))
 						continue;
 
-					var edges = GetEdgeTiles(newCell);
-					CreateEdgesForMatches(edges);
+					ClearEdgeTile(newCell);
+					shimLayer.Clear(newCell);
+
+					if (GetShoreTile(newCell, out var tile))
+					{
+						var palette = terrainInfo.Palette;
+						if (terrainInfo.Templates.TryGetValue(tile.Type, out var template))
+							palette = ((DefaultTerrainTemplateInfo)template).Palette ?? palette;
+
+						var sprite = tileCache.TileSprite(tile);
+						var paletteReference = worldRenderer.Palette(palette);
+						spriteLayer.Clear(newCell);
+						spriteLayer.Update(newCell, sprite, paletteReference);
+					}
+					else
+					{
+						var thisTile = map.Tiles[newCell];
+						if (thisTile.Type == 0)
+							continue;
+
+						var edges = GetEdgeTiles(newCell);
+						CreateEdgesForMatches(edges);
+					}
 				}
 			}
 		}
@@ -250,9 +266,9 @@ namespace OpenRA.Mods.Dr.Traits
 				{
 					selfValue = highestValue.Value;
 
-					// Don't transition to sea tiles
-					if (selfValue == 0)
-						continue;
+					//// Don't transition to sea tiles
+					//if (selfValue == 0)
+					//	continue;
 
 					// Bomb out if our highest neighbour is 0 or 1, or equal to the current tile type
 					if (highestValue.Value < NumSkipEdgeTiles || highestValue.Value == tile.Type)
@@ -436,32 +452,14 @@ namespace OpenRA.Mods.Dr.Traits
 			{
 				for (var y = -1; y < 2; y++)
 				{
-					var newCell = cell + new CVec(x, y);
-
-					if (!map.Contains(newCell))
-						continue;
-
-					//ClearEdgeTile(newCell);
-					//shimLayer.Clear(newCell);
-
-					tile = GetShoreTile(newCell);
-
-					var palette = terrainInfo.Palette;
-					if (terrainInfo.Templates.TryGetValue(tile.Type, out var template))
-						palette = ((DefaultTerrainTemplateInfo)template).Palette ?? palette;
-
-					var sprite = tileCache.TileSprite(tile);
-					var paletteReference = worldRenderer.Palette(palette);
-					spriteLayer.Clear(newCell);
-					spriteLayer.Update(newCell, sprite, paletteReference);
 				}
 			}
 		}
 
-		TerrainTile GetShoreTile(CPos cell)
+		bool GetShoreTile(CPos cell, out TerrainTile tile)
 		{
-			var tile = map.Tiles[cell];
-			var matchShorelines = info.Shorelines.Values.Where(x => tile.IsMatch(x.Match));
+			var ourTile = map.Tiles[cell];
+			var matchShorelines = info.Shorelines.Values.Where(x => ourTile.IsMatch(x.Match));
 			var numIndices = 4;
 
 			foreach (var m in matchShorelines)
@@ -484,11 +482,12 @@ namespace OpenRA.Mods.Dr.Traits
 				if (match)
 				{
 					tile = new TerrainTile(m.SetType, (byte)Game.CosmeticRandom.Next(numIndices));
-					break;
+					return true;
 				}
 			}
 
-			return tile;
+			tile = ourTile;
+			return false;
 		}
 
 		void IRenderTerrain.RenderTerrain(WorldRenderer wr, Viewport viewport)
