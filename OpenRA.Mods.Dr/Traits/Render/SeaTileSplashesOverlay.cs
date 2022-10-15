@@ -50,21 +50,12 @@ namespace OpenRA.Mods.Dr.Traits.Render
 
 	public class SeaTileSplashesOverlay : ITick, IWorldLoaded, IRenderOverlay
 	{
-		class SeaTileAnimation
-		{
-			public string Sequence;
-			public Animation Animation;
-		}
-
 		class SeaTileSplash
 		{
 			public int Delay;
 			public Animation Animation;
-			public int Frame;
-			public int Tick;
 			public string SequenceName;
 			public ISpriteSequence Sequence;
-			public WPos Position;
 			public CPos Cell;
 		}
 
@@ -97,7 +88,7 @@ namespace OpenRA.Mods.Dr.Traits.Render
 
 			if (spriteLayer == null)
 			{
-				var first = sequences.GetSequence(splashImageName, "splash1").GetSprite(0);
+				var first = sequences.GetSequence(splashImageName, $"{info.SequencePrefix}1").GetSprite(0);
 				var emptySprite = new Sprite(first.Sheet, Rectangle.Empty, TextureChannel.Alpha);
 				spriteLayer = new TerrainSpriteLayer(w, wr, emptySprite, first.BlendMode, wr.World.Type != WorldType.Editor);
 			}
@@ -140,8 +131,7 @@ namespace OpenRA.Mods.Dr.Traits.Render
 					Cell = selectedSeaTile.Cell,
 					SequenceName = splashSequenceName,
 					Sequence = sequence,
-					Delay = self.World.LocalRandom.Next(info.RandomMax),
-					Position = self.World.Map.CenterOfCell(selectedSeaTile.Cell) - new WVec(512, 512, 0)
+					Delay = self.World.LocalRandom.Next(info.RandomMax)
 				});
 			}
 		}
