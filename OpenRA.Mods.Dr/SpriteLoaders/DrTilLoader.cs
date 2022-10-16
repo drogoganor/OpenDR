@@ -12,6 +12,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using OpenRA.FileFormats;
 using OpenRA.Graphics;
 using OpenRA.Mods.Dr.Traits;
 using OpenRA.Primitives;
@@ -29,6 +30,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 		public class DrTilFrame : ISpriteFrame
 		{
+			const bool ExportPng = false;
+
 			const int TileSize = 24;
 
 			public SpriteFrameType Type { get; private set; }
@@ -37,6 +40,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			public float2 Offset { get; set; }
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
+
+			public static int Counter = 0;
 
 			public DrTilFrame(SpriteFrameType type)
 			{
@@ -69,19 +74,26 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					Data[i] = s.ReadUInt8();
 				}
 
-				var rgbByteArray = new List<byte>();
-				for (var i = 0; i < TileSize * TileSize; i++)
+				if (ExportPng)
 				{
-					if (palette == null)
+					var rgbByteArray = new List<byte>();
+					for (var i = 0; i < TileSize * TileSize; i++)
 					{
-						var byteVal = (byte)(Data[i] * 4);
-						rgbByteArray.AddRange(new[] { byteVal, byteVal, byteVal, (byte)255 });
+						if (palette == null)
+						{
+							var byteVal = (byte)(Data[i] * 4);
+							rgbByteArray.AddRange(new[] { byteVal, byteVal, byteVal, (byte)255 });
+						}
+						else
+						{
+							var color = palette.GetColor(Data[i]);
+							rgbByteArray.AddRange(new[] { color.R, color.G, color.B, (byte)255 });
+						}
 					}
-					else
-					{
-						var color = palette.GetColor(Data[i]);
-						rgbByteArray.AddRange(new[] { color.R, color.G, color.B, (byte)255 });
-					}
+
+					var png = new Png(rgbByteArray.ToArray(), SpriteFrameType.Rgba32, TileSize, TileSize);
+					png.Save($"C:\\temp\\{Counter:D4}-til.png");
+					Counter++;
 				}
 
 				Offset = new float2(0, 0);
@@ -313,6 +325,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			frames = ParseFrames(s, palette);
 
+			DrTilFrame.Counter = 0;
 			return true;
 		}
 	}
