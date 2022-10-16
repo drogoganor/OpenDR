@@ -498,6 +498,13 @@ namespace OpenRA.Mods.Dr.Traits
 
 			spriteLayer.Dispose();
 
+			shimLayer.Dispose();
+
+			foreach (var edgeLayer in edgeLayers)
+			{
+				edgeLayer.Dispose();
+			}
+
 			tileCache.Dispose();
 			disposed = true;
 		}

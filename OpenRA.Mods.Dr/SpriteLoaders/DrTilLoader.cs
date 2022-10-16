@@ -313,10 +313,13 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			{
 				terrainPaletteMultiplier = 6;
 			}
-
-			if (paletteFile.Contains("aust"))
+			else if (paletteFile.Contains("aust") || paletteFile.Contains("auralien"))
 			{
 				terrainPaletteMultiplier = 5;
+			}
+			else if (paletteFile.Contains("volcanic"))
+			{
+				terrainPaletteMultiplier = 4;
 			}
 
 			ImmutablePalette palette = null;
