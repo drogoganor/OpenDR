@@ -12,7 +12,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using OpenRA.FileFormats;
 using OpenRA.Graphics;
 using OpenRA.Mods.Dr.Traits;
 using OpenRA.Primitives;
@@ -30,8 +29,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 		public class DrTilFrame : ISpriteFrame
 		{
-			const bool ExportPng = false;
-
 			const int TileSize = 24;
 
 			public SpriteFrameType Type { get; private set; }
@@ -41,8 +38,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
 
-			public static int Counter = 0;
-
+			// readonly bool exportPng = false;
+			// public static int Counter = 0;
 			public DrTilFrame(SpriteFrameType type)
 			{
 				Type = type;
@@ -74,7 +71,12 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					Data[i] = s.ReadUInt8();
 				}
 
-				if (ExportPng)
+				if (palette == null)
+				{
+				}
+
+				/*
+				if (exportPng)
 				{
 					var rgbByteArray = new List<byte>();
 					for (var i = 0; i < TileSize * TileSize; i++)
@@ -95,6 +97,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					png.Save($"C:\\temp\\{Counter:D4}-til.png");
 					Counter++;
 				}
+				*/
 
 				Offset = new float2(0, 0);
 				FrameSize = new Size(TileSize, TileSize);
@@ -325,7 +328,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			frames = ParseFrames(s, palette);
 
-			DrTilFrame.Counter = 0;
+			// DrTilFrame.Counter = 0;
 			return true;
 		}
 	}

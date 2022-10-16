@@ -21,7 +21,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		bool IUtilityCommand.ValidateArguments(string[] args) { return ValidateArguments(args); }
 
 		[Desc("FILENAME", "Strip manually-placed system tiles from all maps")]
-		void IUtilityCommand.Run(Utility utility, string[] args) { Run(utility, args); }
+		void IUtilityCommand.Run(Utility utility, string[] _) { Run(utility); }
 
 		public ModData ModData;
 		public Map Map;
@@ -31,7 +31,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			return args.Length >= 0;
 		}
 
-		protected void Run(Utility utility, string[] args)
+		protected void Run(Utility utility)
 		{
 			// HACK: The engine code assumes that Game.modData is set.
 			Game.ModData = ModData = utility.ModData;
