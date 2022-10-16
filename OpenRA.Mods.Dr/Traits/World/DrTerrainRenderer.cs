@@ -188,6 +188,7 @@ namespace OpenRA.Mods.Dr.Traits
 			}
 
 			map.Tiles.CellEntryChanged += OnCellEntryChanged;
+
 			// map.Height.CellEntryChanged += OnCellEntryChanged;
 		}
 
@@ -266,10 +267,9 @@ namespace OpenRA.Mods.Dr.Traits
 				{
 					selfValue = highestValue.Value;
 
-					//// Don't transition to sea tiles
-					//if (selfValue == 0)
-					//	continue;
-
+					// Don't transition to sea tiles
+					// if (selfValue == 0)
+					// 	continue;
 					// Bomb out if our highest neighbour is 0 or 1, or equal to the current tile type
 					if (highestValue.Value < NumSkipEdgeTiles || highestValue.Value == tile.Type)
 						continue;
@@ -342,11 +342,10 @@ namespace OpenRA.Mods.Dr.Traits
 
 				usedEdges.Add(lowestMatchValue.Value);
 
-				// Match is good at this point; create edge tile
-
 				if (lowestMatchValue.HasValue && lowestMatchValue.Value < 2)
 					continue;
 
+				// Match is good at this point; create edge tile
 				// Get the right edge type for this tile type by adding the result tile type to the base tile type multiplied by how many edge tiles we have
 				var resultTileType = (ushort)(matchEdge.SetType + ((lowestMatchValue - NumSkipEdgeTiles) * NumEdgeTiles));
 
@@ -442,20 +441,6 @@ namespace OpenRA.Mods.Dr.Traits
 			spriteLayer.Update(cell, sprite, paletteReference);
 		}
 
-		void UpdateShorelineCell(CPos cell)
-		{
-			var tile = map.Tiles[cell];
-			//if (tile.Type != 0)
-			//	return;
-
-			for (var x = -1; x < 2; x++)
-			{
-				for (var y = -1; y < 2; y++)
-				{
-				}
-			}
-		}
-
 		bool GetShoreTile(CPos cell, out TerrainTile tile)
 		{
 			var ourTile = map.Tiles[cell];
@@ -509,8 +494,7 @@ namespace OpenRA.Mods.Dr.Traits
 			if (disposed)
 				return;
 
-			map.Tiles.CellEntryChanged -= UpdateShorelineCell;
-			map.Height.CellEntryChanged -= UpdateShorelineCell;
+			map.Tiles.CellEntryChanged -= OnCellEntryChanged;
 
 			spriteLayer.Dispose();
 

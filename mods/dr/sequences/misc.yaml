@@ -39,23 +39,11 @@ shroud:
 		AddExtension: False
 		Length: *
 
-ncwel1l0:
-	idle: tileset|ncwel1l0
-		ZOffset: -8196
-		Length: 1
-		Start: 1
-
-ncmin1l0:
-	idle: tileset|ncmin1l0
-		ZOffset: -8196
-		Length: 1
-		Start: 1
-
 resources:
-	water1: ncwel1l0
+	water1: tileset|ncwel1l0
 		ZOffset: -8196
 		Length: *
-	taelon1: ncmin1l0
+	taelon1: tileset|ncmin1l0
 		ZOffset: -8196
 		Length: *
 

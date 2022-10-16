@@ -162,7 +162,7 @@
 		Edges:
 			EdgeMatch@n:
 				SelfMatchType: Equal
-				SetType: 44
+				SetType: 36
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
@@ -175,7 +175,7 @@
 						Match: Equal
 			EdgeMatch@e:
 				SelfMatchType: Below
-				SetType: 45
+				SetType: 37
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
@@ -188,7 +188,7 @@
 						Match: Equal
 			EdgeMatch@s:
 				SelfMatchType: Below
-				SetType: 42
+				SetType: 34
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
@@ -201,7 +201,7 @@
 						Match: Below
 			EdgeMatch@w:
 				SelfMatchType: Equal
-				SetType: 43
+				SetType: 35
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
@@ -214,7 +214,7 @@
 						Match: Below
 			EdgeMatch@nw-outer:
 				SelfMatchType: Equal
-				SetType: 40
+				SetType: 32
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
@@ -227,7 +227,7 @@
 						Match: Below
 			EdgeMatch@ne-outer:
 				SelfMatchType: Below
-				SetType: 41
+				SetType: 33
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
@@ -243,7 +243,7 @@
 					#	Match: Below
 			EdgeMatch@sw-outer:
 				SelfMatchType: Below
-				SetType: 39
+				SetType: 31
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
@@ -259,7 +259,7 @@
 					#	Match: Below
 			EdgeMatch@se-outer:
 				SelfMatchType: Below
-				SetType: 38
+				SetType: 30
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
@@ -272,7 +272,7 @@
 						Match: Below
 			EdgeMatch@ne-inner:
 				SelfMatchType: Equal
-				SetType: 47
+				SetType: 39
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
@@ -291,7 +291,7 @@
 					#	Match: Below
 			EdgeMatch@nw-inner:
 				SelfMatchType: Below
-				SetType: 46
+				SetType: 38
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
@@ -310,7 +310,7 @@
 					#	Match: Below
 			EdgeMatch@se-inner:
 				SelfMatchType: Equal
-				SetType: 48
+				SetType: 40
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
@@ -329,7 +329,7 @@
 					#	Match: Equal
 			EdgeMatch@sw-inner:
 				SelfMatchType: Equal
-				SetType: 49
+				SetType: 41
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
@@ -348,7 +348,7 @@
 					#	Match: Equal
 			EdgeMatch@ne-sw-bridge:
 				SelfMatchType: Below
-				SetType: 51
+				SetType: 43
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1
@@ -367,7 +367,7 @@
 					#	Match: Equal
 			EdgeMatch@nw-se-bridge:
 				SelfMatchType: Equal
-				SetType: 50
+				SetType: 42
 				Neighbors:
 					NeighborMatch@northwest:
 						Offset: -1, -1

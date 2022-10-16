@@ -35,7 +35,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			// HACK: The engine code assumes that Game.modData is set.
 			Game.ModData = ModData = utility.ModData;
 
-			var startId = 38;
+			var startId = 30;
 			var startFrame = 248;
 			var numberOfTransitionTiles = 14;
 			var numberOfValidTiles = 14;
