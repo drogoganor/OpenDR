@@ -248,6 +248,44 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				}
 			}
 
+			// Mask sea tiles
+
+			// Inner: 4, 9, 18, 35 (SW, NW, NE, SE)
+			// Edge: 12, 25, 36, 50 (N, E, S, W)
+			// Outer: 28, 57, 44, 52 (NE, SE, NW, SW)
+			// Bridge: 41, 20 (NWSE, NESW)
+
+			var seaTiles = new List<int> { 4, 9, 18, 35, 12, 25, 50, 36, 44, 28, 57, 52, 20, 41 };
+			var seaTileMasks = new List<List<int>>
+			{
+				new List<int> { 192, 206, 220, 234 }, // 4
+				new List<int> { 193, 207, 221, 235 }, // 9
+				new List<int> { 195, 209, 223, 237 }, // 18
+				new List<int> { 199, 213, 227, 241 }, // 35
+				new List<int> { 194, 208, 222, 236 }, // 12
+				new List<int> { 197, 211, 225, 239 }, // 25
+				new List<int> { 203, 217, 231, 245 }, // 50
+				new List<int> { 200, 214, 228, 242 }, // 36
+				new List<int> { 202, 216, 230, 244 }, // 44
+				new List<int> { 198, 212, 226, 240 }, // 28
+				new List<int> { 205, 219, 233, 247 }, // 57
+				new List<int> { 204, 218, 232, 246 }, // 52
+				new List<int> { 196, 210, 224, 238 }, // 20
+				new List<int> { 201, 215, 229, 243 }, // 41
+			};
+
+			for (var maskIndex = 0; maskIndex < seaTiles.Count; maskIndex++)
+			{
+				var seaTileMask = seaTiles[maskIndex];
+				var thisSeaTiles = seaTileMasks[maskIndex];
+
+				foreach (var seaTile in thisSeaTiles)
+				{
+					// Mask it up
+					frames.Add(MaskTile(frames[seaTile], maskFrames[seaTileMask]));
+				}
+			}
+
 			s.Position = start;
 			return frames.ToArray();
 
