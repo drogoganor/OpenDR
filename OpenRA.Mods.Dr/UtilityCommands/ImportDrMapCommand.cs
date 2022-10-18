@@ -333,7 +333,13 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						if (tileType >= 16)
 						{
 							unknownTileTypeHash.Add(tileType);
-							tileType = 1; // TODO: Handle edge sprites
+							tileType = 0; // TODO: Handle edge sprites
+						}
+
+						tileType--;
+						if (tileType < 0)
+						{
+							tileType = 15;
 						}
 
 						Map.Tiles[new CPos(x + 1, y + 1)] = new TerrainTile((ushort)tileType, variation);

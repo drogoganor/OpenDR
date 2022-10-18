@@ -121,8 +121,8 @@ Terrain:
 		Color: 877F70
 
 Templates:
-	Template@1:
-		Id: 1
+	Template@0:
+		Id: 0
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -137,8 +137,8 @@ Templates:
 			5: Clear
 			6: Clear
 			7: Clear
-	Template@2:
-		Id: 2
+	Template@1:
+		Id: 1
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -153,8 +153,8 @@ Templates:
 			5: Normal2
 			6: Normal2
 			7: Normal2
-	Template@3:
-		Id: 3
+	Template@2:
+		Id: 2
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -169,8 +169,8 @@ Templates:
 			5: Normal3
 			6: Normal3
 			7: Normal3
-	Template@4:
-		Id: 4
+	Template@3:
+		Id: 3
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -185,8 +185,8 @@ Templates:
 			5: Muddy1
 			6: Muddy1
 			7: Muddy1
-	Template@5:
-		Id: 5
+	Template@4:
+		Id: 4
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -201,8 +201,8 @@ Templates:
 			5: Muddy2
 			6: Muddy2
 			7: Muddy2
-	Template@6:
-		Id: 6
+	Template@5:
+		Id: 5
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -217,8 +217,8 @@ Templates:
 			5: Rough1
 			6: Rough1
 			7: Rough1
-	Template@7:
-		Id: 7
+	Template@6:
+		Id: 6
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -233,8 +233,8 @@ Templates:
 			5: Rough2
 			6: Rough2
 			7: Rough2
-	Template@8:
-		Id: 8
+	Template@7:
+		Id: 7
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -249,8 +249,8 @@ Templates:
 			5: Road
 			6: Road
 			7: Road
-	Template@9:
-		Id: 9
+	Template@8:
+		Id: 8
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -265,8 +265,8 @@ Templates:
 			5: RoadBase
 			6: RoadBase
 			7: RoadBase
-	Template@10:
-		Id: 10
+	Template@9:
+		Id: 9
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -281,8 +281,8 @@ Templates:
 			5: HillSlope1
 			6: HillSlope1
 			7: HillSlope1
-	Template@11:
-		Id: 11
+	Template@10:
+		Id: 10
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -297,8 +297,8 @@ Templates:
 			5: HillSlope2
 			6: HillSlope2
 			7: HillSlope2
-	Template@12:
-		Id: 12
+	Template@11:
+		Id: 11
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -313,8 +313,8 @@ Templates:
 			5: Cliff1
 			6: Cliff1
 			7: Cliff1
-	Template@13:
-		Id: 13
+	Template@12:
+		Id: 12
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -329,8 +329,8 @@ Templates:
 			5: Cliff2
 			6: Cliff2
 			7: Cliff2
-	Template@14:
-		Id: 14
+	Template@13:
+		Id: 13
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -345,8 +345,8 @@ Templates:
 			5: Cliff3
 			6: Cliff3
 			7: Cliff3
-	Template@15:
-		Id: 15
+	Template@14:
+		Id: 14
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -361,8 +361,8 @@ Templates:
 			5: Cliff4
 			6: Cliff4
 			7: Cliff4
-	Template@0:
-		Id: 0
+	Template@15:
+		Id: 15
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
@@ -381,7 +381,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 139, 153, 167, 181 # T
+		Frames: 203, 217, 231, 245 # T
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -393,7 +393,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 136, 150, 164, 178 # R
+		Frames: 200, 214, 228, 242 # R
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -405,7 +405,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 130, 144, 158, 172 # B
+		Frames: 194, 208, 222, 236 # B
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -417,7 +417,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 133, 147, 161, 175 # L
+		Frames: 197, 211, 225, 239 # L
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -429,7 +429,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 131, 145, 159, 173 # TLI
+		Frames: 195, 209, 223, 237 # TLI
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -441,7 +441,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 135, 149, 163, 177 # TRI
+		Frames: 199, 213, 227, 241 # TRI
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -453,7 +453,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 128, 142, 156, 170 # BRI
+		Frames: 192, 206, 220, 234 # BRI
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -465,7 +465,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 129, 143, 157, 171 # BLI
+		Frames: 193, 207, 221, 235 # BLI
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -477,7 +477,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 138, 152, 166, 180 # TLO
+		Frames: 202, 216, 230, 244 # TLO
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -489,7 +489,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 134, 148, 162, 176 # TRO
+		Frames: 198, 212, 226, 240 # TRO
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -501,7 +501,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 141, 155, 169, 183 # BRO
+		Frames: 205, 219, 233, 247 # BRO
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -513,7 +513,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 140, 154, 168, 182 # BLO
+		Frames: 204, 218, 232, 246 # BLO
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -525,7 +525,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 132, 146, 160, 174 # TR/BL-O
+		Frames: 196, 210, 224, 238 # TR/BL-O
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -537,7 +537,7 @@ Templates:
 		Images: SNOW/SNOW.TIL
 		Size: 1,1
 		PickAny: True
-		Frames: 137, 151, 165, 179 # TL/BR-O
+		Frames: 201, 215, 229, 243 # TL/BR-O
 		Categories: Terrain
 		Tiles:
 			0: Clear
@@ -2112,4 +2112,171 @@ Templates:
 		Categories: System
 		Tiles:
 			0: Clear
-
+	Template@226: # Sea tiles masked
+		Id: 226
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1032, 1033, 1034, 1035
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@227:
+		Id: 227
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1036, 1037, 1038, 1039
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@228:
+		Id: 228
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1040, 1041, 1042, 1043
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@229:
+		Id: 229
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1044, 1045, 1046, 1047
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@230:
+		Id: 230
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1048, 1049, 1050, 1051
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@231:
+		Id: 231
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1052, 1053, 1054, 1055
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@232:
+		Id: 232
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1056, 1057, 1058, 1059
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@233:
+		Id: 233
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1060, 1061, 1062, 1063
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@234:
+		Id: 234
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1064, 1065, 1066, 1067
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@235:
+		Id: 235
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1068, 1069, 1070, 1071
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@236:
+		Id: 236
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1072, 1073, 1074, 1075
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@237:
+		Id: 237
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1076, 1077, 1078, 1079
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@238:
+		Id: 238
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1080, 1081, 1082, 1083
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@239:
+		Id: 239
+		Images: SNOW/SNOW.TIL
+		Size: 1,1
+		PickAny: True
+		Frames: 1084, 1085, 1086, 1087
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear

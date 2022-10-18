@@ -24,23 +24,6 @@ namespace OpenRA.Mods.Dr.Traits
 	[TraitLocation(SystemActors.World | SystemActors.EditorWorld)]
 	public class DrTerrainRendererInfo : TraitInfo, ITiledTerrainRendererInfo
 	{
-		[FieldLoader.LoadUsing("LoadShorelines")]
-		public Dictionary<string, DrTerrainShorelineInfo> Shorelines;
-
-		static object LoadShorelines(MiniYaml yaml)
-		{
-			var retList = new Dictionary<string, DrTerrainShorelineInfo>();
-			var shorelines = yaml.Nodes.First(x => x.Key == "Shorelines");
-			foreach (var node in shorelines.Value.Nodes.Where(n => n.Key.StartsWith("ShoreMatch")))
-			{
-				var ret = new DrTerrainShorelineInfo();
-				FieldLoader.Load(ret, node.Value);
-				retList.Add(node.Key, ret);
-			}
-
-			return retList;
-		}
-
 		[FieldLoader.LoadUsing("LoadEdges")]
 		public Dictionary<string, DrTerrainEdgeInfo> Edges;
 
@@ -95,46 +78,6 @@ namespace OpenRA.Mods.Dr.Traits
 		public override object Create(ActorInitializer init) { return new DrTerrainRenderer(init.World, this); }
 	}
 
-	public static class DrTerrainHelper
-	{
-		internal static bool IsLandTile(this TerrainTile tile) { return tile.Type > 0; }
-		internal static bool IsSeaTile(this TerrainTile tile) { return tile.Type == 0; }
-
-		internal static bool IsMatch(this TerrainTile tile, ShorelineMatchType match)
-		{
-			switch (match)
-			{
-				case ShorelineMatchType.Land:
-					if (tile.IsLandTile())
-						return true;
-					break;
-				case ShorelineMatchType.Sea:
-					if (tile.IsSeaTile())
-						return true;
-					break;
-			}
-
-			return false;
-		}
-
-		internal static bool IsMatch(this TerrainTile tile, ushort type, EdgeMatchType match)
-		{
-			switch (match)
-			{
-				case EdgeMatchType.Below:
-					if (tile.Type < type)
-						return true;
-					break;
-				case EdgeMatchType.Equal:
-					if (tile.Type == type)
-						return true;
-					break;
-			}
-
-			return false;
-		}
-	}
-
 	public sealed class DrTerrainRenderer : IRenderTerrain, IWorldLoaded, INotifyActorDisposing, ITiledTerrainRenderer
 	{
 		class EdgeTileResult
@@ -147,7 +90,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		const int NumEdgeLayers = 16;
 		const int NumEdgeTiles = 14;
-		const int NumSkipEdgeTiles = 2;
+		const int NumSkipEdgeTiles = 1;
 
 		readonly Map map;
 		readonly DrTerrainRendererInfo info;
@@ -212,26 +155,12 @@ namespace OpenRA.Mods.Dr.Traits
 					ClearEdgeTile(newCell);
 					shimLayer.Clear(newCell);
 
-					if (GetShoreTile(newCell, out var tile))
-					{
-						var palette = terrainInfo.Palette;
-						if (terrainInfo.Templates.TryGetValue(tile.Type, out var template))
-							palette = ((DefaultTerrainTemplateInfo)template).Palette ?? palette;
-
-						var sprite = tileCache.TileSprite(tile);
-						var paletteReference = worldRenderer.Palette(palette);
-						spriteLayer.Clear(newCell);
-						spriteLayer.Update(newCell, sprite, paletteReference);
-					}
-					else
-					{
-						var thisTile = map.Tiles[newCell];
-						if (thisTile.Type == 0)
-							continue;
-
-						var edges = GetEdgeTiles(newCell);
-						CreateEdgesForMatches(edges);
-					}
+					// TODO: Is this even required?
+					// var thisTile = map.Tiles[newCell];
+					// if (thisTile.Type == 15)
+					// 	continue;
+					var edges = GetEdgeTiles(newCell);
+					CreateEdgesForMatches(edges);
 				}
 			}
 		}
@@ -267,10 +196,7 @@ namespace OpenRA.Mods.Dr.Traits
 				{
 					selfValue = highestValue.Value;
 
-					// Don't transition to sea tiles
-					// if (selfValue == 0)
-					// 	continue;
-					// Bomb out if our highest neighbour is 0 or 1, or equal to the current tile type
+					// Bomb out if our highest neighbour is 0, or equal to the current tile type
 					if (highestValue.Value < NumSkipEdgeTiles || highestValue.Value == tile.Type)
 						continue;
 				}
@@ -342,7 +268,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 				usedEdges.Add(lowestMatchValue.Value);
 
-				if (lowestMatchValue.HasValue && lowestMatchValue.Value < 2)
+				if (lowestMatchValue.HasValue && lowestMatchValue.Value < 1)
 					continue;
 
 				// Match is good at this point; create edge tile
@@ -360,7 +286,7 @@ namespace OpenRA.Mods.Dr.Traits
 				edgeLayers[lowestMatchValue.Value].Update(self.Cell, sprite, paletteReference);
 			}
 
-			if (shimType != null && shimType != 0)
+			if (shimType != null && shimType != 15)
 			{
 				if (terrainInfo.Templates.TryGetValue(shimType.Value, out var shimTemplate))
 					palette = ((DefaultTerrainTemplateInfo)shimTemplate).Palette ?? terrainInfo.Palette;
@@ -439,40 +365,6 @@ namespace OpenRA.Mods.Dr.Traits
 			var sprite = tileCache.TileSprite(tile);
 			var paletteReference = worldRenderer.Palette(palette);
 			spriteLayer.Update(cell, sprite, paletteReference);
-		}
-
-		bool GetShoreTile(CPos cell, out TerrainTile tile)
-		{
-			var ourTile = map.Tiles[cell];
-			var matchShorelines = info.Shorelines.Values.Where(x => ourTile.IsMatch(x.Match));
-			var numIndices = 4;
-
-			foreach (var m in matchShorelines)
-			{
-				var match = true;
-				var count = 0;
-				foreach (var n in m.Neighbors.Values)
-				{
-					var neighborPos = cell + n.Offset;
-					if (map.Tiles.Contains(neighborPos))
-					{
-						count++;
-						var neighbour = map.Tiles[neighborPos];
-						match = neighbour.IsMatch(n.Match);
-						if (!match)
-							break;
-					}
-				}
-
-				if (match)
-				{
-					tile = new TerrainTile(m.SetType, (byte)Game.CosmeticRandom.Next(numIndices));
-					return true;
-				}
-			}
-
-			tile = ourTile;
-			return false;
 		}
 
 		void IRenderTerrain.RenderTerrain(WorldRenderer wr, Viewport viewport)

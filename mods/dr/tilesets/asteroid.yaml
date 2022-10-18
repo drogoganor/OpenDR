@@ -121,8 +121,8 @@ Terrain:
 		Color: 877F70
 
 Templates:
-	Template@1:
-		Id: 1
+	Template@0:
+		Id: 0
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -137,8 +137,8 @@ Templates:
 			5: Clear
 			6: Clear
 			7: Clear
-	Template@2:
-		Id: 2
+	Template@1:
+		Id: 1
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -153,8 +153,8 @@ Templates:
 			5: Normal2
 			6: Normal2
 			7: Normal2
-	Template@3:
-		Id: 3
+	Template@2:
+		Id: 2
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -169,8 +169,8 @@ Templates:
 			5: Normal3
 			6: Normal3
 			7: Normal3
-	Template@4:
-		Id: 4
+	Template@3:
+		Id: 3
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -185,8 +185,8 @@ Templates:
 			5: Muddy1
 			6: Muddy1
 			7: Muddy1
-	Template@5:
-		Id: 5
+	Template@4:
+		Id: 4
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -201,8 +201,8 @@ Templates:
 			5: Muddy2
 			6: Muddy2
 			7: Muddy2
-	Template@6:
-		Id: 6
+	Template@5:
+		Id: 5
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -217,8 +217,8 @@ Templates:
 			5: Rough1
 			6: Rough1
 			7: Rough1
-	Template@7:
-		Id: 7
+	Template@6:
+		Id: 6
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -233,8 +233,8 @@ Templates:
 			5: Rough2
 			6: Rough2
 			7: Rough2
-	Template@8:
-		Id: 8
+	Template@7:
+		Id: 7
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -249,8 +249,8 @@ Templates:
 			5: Road
 			6: Road
 			7: Road
-	Template@9:
-		Id: 9
+	Template@8:
+		Id: 8
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -265,8 +265,8 @@ Templates:
 			5: RoadBase
 			6: RoadBase
 			7: RoadBase
-	Template@10:
-		Id: 10
+	Template@9:
+		Id: 9
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -281,8 +281,8 @@ Templates:
 			5: HillSlope1
 			6: HillSlope1
 			7: HillSlope1
-	Template@11:
-		Id: 11
+	Template@10:
+		Id: 10
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -297,8 +297,8 @@ Templates:
 			5: HillSlope2
 			6: HillSlope2
 			7: HillSlope2
-	Template@12:
-		Id: 12
+	Template@11:
+		Id: 11
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -313,8 +313,8 @@ Templates:
 			5: Cliff1
 			6: Cliff1
 			7: Cliff1
-	Template@13:
-		Id: 13
+	Template@12:
+		Id: 12
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -329,8 +329,8 @@ Templates:
 			5: Cliff2
 			6: Cliff2
 			7: Cliff2
-	Template@14:
-		Id: 14
+	Template@13:
+		Id: 13
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -345,8 +345,8 @@ Templates:
 			5: Cliff3
 			6: Cliff3
 			7: Cliff3
-	Template@15:
-		Id: 15
+	Template@14:
+		Id: 14
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -361,8 +361,8 @@ Templates:
 			5: Cliff4
 			6: Cliff4
 			7: Cliff4
-	Template@0:
-		Id: 0
+	Template@15:
+		Id: 15
 		Images: asteroid.til
 		Size: 1,1
 		PickAny: True
@@ -546,7 +546,7 @@ Templates:
 			3: Clear
 	Template@30:
 		Id: 30
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 248
 		Categories: System
@@ -554,7 +554,7 @@ Templates:
 			0: Clear
 	Template@31:
 		Id: 31
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 249
 		Categories: System
@@ -562,7 +562,7 @@ Templates:
 			0: Clear
 	Template@32:
 		Id: 32
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 250
 		Categories: System
@@ -570,7 +570,7 @@ Templates:
 			0: Clear
 	Template@33:
 		Id: 33
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 251
 		Categories: System
@@ -578,7 +578,7 @@ Templates:
 			0: Clear
 	Template@34:
 		Id: 34
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 252
 		Categories: System
@@ -586,7 +586,7 @@ Templates:
 			0: Clear
 	Template@35:
 		Id: 35
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 253
 		Categories: System
@@ -594,7 +594,7 @@ Templates:
 			0: Clear
 	Template@36:
 		Id: 36
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 254
 		Categories: System
@@ -602,7 +602,7 @@ Templates:
 			0: Clear
 	Template@37:
 		Id: 37
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 255
 		Categories: System
@@ -610,7 +610,7 @@ Templates:
 			0: Clear
 	Template@38:
 		Id: 38
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 256
 		Categories: System
@@ -618,7 +618,7 @@ Templates:
 			0: Clear
 	Template@39:
 		Id: 39
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 257
 		Categories: System
@@ -626,7 +626,7 @@ Templates:
 			0: Clear
 	Template@40:
 		Id: 40
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 258
 		Categories: System
@@ -634,7 +634,7 @@ Templates:
 			0: Clear
 	Template@41:
 		Id: 41
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 259
 		Categories: System
@@ -642,7 +642,7 @@ Templates:
 			0: Clear
 	Template@42:
 		Id: 42
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 260
 		Categories: System
@@ -650,7 +650,7 @@ Templates:
 			0: Clear
 	Template@43:
 		Id: 43
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 261
 		Categories: System
@@ -658,7 +658,7 @@ Templates:
 			0: Clear
 	Template@44:
 		Id: 44
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 262
 		Categories: System
@@ -666,7 +666,7 @@ Templates:
 			0: Clear
 	Template@45:
 		Id: 45
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 263
 		Categories: System
@@ -674,7 +674,7 @@ Templates:
 			0: Clear
 	Template@46:
 		Id: 46
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 264
 		Categories: System
@@ -682,7 +682,7 @@ Templates:
 			0: Clear
 	Template@47:
 		Id: 47
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 265
 		Categories: System
@@ -690,7 +690,7 @@ Templates:
 			0: Clear
 	Template@48:
 		Id: 48
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 266
 		Categories: System
@@ -698,7 +698,7 @@ Templates:
 			0: Clear
 	Template@49:
 		Id: 49
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 267
 		Categories: System
@@ -706,7 +706,7 @@ Templates:
 			0: Clear
 	Template@50:
 		Id: 50
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 268
 		Categories: System
@@ -714,7 +714,7 @@ Templates:
 			0: Clear
 	Template@51:
 		Id: 51
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 269
 		Categories: System
@@ -722,7 +722,7 @@ Templates:
 			0: Clear
 	Template@52:
 		Id: 52
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 270
 		Categories: System
@@ -730,7 +730,7 @@ Templates:
 			0: Clear
 	Template@53:
 		Id: 53
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 271
 		Categories: System
@@ -738,7 +738,7 @@ Templates:
 			0: Clear
 	Template@54:
 		Id: 54
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 272
 		Categories: System
@@ -746,7 +746,7 @@ Templates:
 			0: Clear
 	Template@55:
 		Id: 55
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 273
 		Categories: System
@@ -754,7 +754,7 @@ Templates:
 			0: Clear
 	Template@56:
 		Id: 56
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 274
 		Categories: System
@@ -762,7 +762,7 @@ Templates:
 			0: Clear
 	Template@57:
 		Id: 57
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 275
 		Categories: System
@@ -770,7 +770,7 @@ Templates:
 			0: Clear
 	Template@58:
 		Id: 58
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 276
 		Categories: System
@@ -778,7 +778,7 @@ Templates:
 			0: Clear
 	Template@59:
 		Id: 59
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 277
 		Categories: System
@@ -786,7 +786,7 @@ Templates:
 			0: Clear
 	Template@60:
 		Id: 60
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 278
 		Categories: System
@@ -794,7 +794,7 @@ Templates:
 			0: Clear
 	Template@61:
 		Id: 61
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 279
 		Categories: System
@@ -802,7 +802,7 @@ Templates:
 			0: Clear
 	Template@62:
 		Id: 62
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 280
 		Categories: System
@@ -810,7 +810,7 @@ Templates:
 			0: Clear
 	Template@63:
 		Id: 63
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 281
 		Categories: System
@@ -818,7 +818,7 @@ Templates:
 			0: Clear
 	Template@64:
 		Id: 64
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 282
 		Categories: System
@@ -826,7 +826,7 @@ Templates:
 			0: Clear
 	Template@65:
 		Id: 65
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 283
 		Categories: System
@@ -834,7 +834,7 @@ Templates:
 			0: Clear
 	Template@66:
 		Id: 66
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 284
 		Categories: System
@@ -842,7 +842,7 @@ Templates:
 			0: Clear
 	Template@67:
 		Id: 67
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 285
 		Categories: System
@@ -850,7 +850,7 @@ Templates:
 			0: Clear
 	Template@68:
 		Id: 68
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 286
 		Categories: System
@@ -858,7 +858,7 @@ Templates:
 			0: Clear
 	Template@69:
 		Id: 69
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 287
 		Categories: System
@@ -866,7 +866,7 @@ Templates:
 			0: Clear
 	Template@70:
 		Id: 70
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 288
 		Categories: System
@@ -874,7 +874,7 @@ Templates:
 			0: Clear
 	Template@71:
 		Id: 71
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 289
 		Categories: System
@@ -882,7 +882,7 @@ Templates:
 			0: Clear
 	Template@72:
 		Id: 72
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 290
 		Categories: System
@@ -890,7 +890,7 @@ Templates:
 			0: Clear
 	Template@73:
 		Id: 73
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 291
 		Categories: System
@@ -898,7 +898,7 @@ Templates:
 			0: Clear
 	Template@74:
 		Id: 74
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 292
 		Categories: System
@@ -906,7 +906,7 @@ Templates:
 			0: Clear
 	Template@75:
 		Id: 75
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 293
 		Categories: System
@@ -914,7 +914,7 @@ Templates:
 			0: Clear
 	Template@76:
 		Id: 76
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 294
 		Categories: System
@@ -922,7 +922,7 @@ Templates:
 			0: Clear
 	Template@77:
 		Id: 77
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 295
 		Categories: System
@@ -930,7 +930,7 @@ Templates:
 			0: Clear
 	Template@78:
 		Id: 78
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 296
 		Categories: System
@@ -938,7 +938,7 @@ Templates:
 			0: Clear
 	Template@79:
 		Id: 79
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 297
 		Categories: System
@@ -946,7 +946,7 @@ Templates:
 			0: Clear
 	Template@80:
 		Id: 80
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 298
 		Categories: System
@@ -954,7 +954,7 @@ Templates:
 			0: Clear
 	Template@81:
 		Id: 81
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 299
 		Categories: System
@@ -962,7 +962,7 @@ Templates:
 			0: Clear
 	Template@82:
 		Id: 82
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 300
 		Categories: System
@@ -970,7 +970,7 @@ Templates:
 			0: Clear
 	Template@83:
 		Id: 83
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 301
 		Categories: System
@@ -978,7 +978,7 @@ Templates:
 			0: Clear
 	Template@84:
 		Id: 84
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 302
 		Categories: System
@@ -986,7 +986,7 @@ Templates:
 			0: Clear
 	Template@85:
 		Id: 85
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 303
 		Categories: System
@@ -994,7 +994,7 @@ Templates:
 			0: Clear
 	Template@86:
 		Id: 86
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 304
 		Categories: System
@@ -1002,7 +1002,7 @@ Templates:
 			0: Clear
 	Template@87:
 		Id: 87
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 305
 		Categories: System
@@ -1010,7 +1010,7 @@ Templates:
 			0: Clear
 	Template@88:
 		Id: 88
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 306
 		Categories: System
@@ -1018,7 +1018,7 @@ Templates:
 			0: Clear
 	Template@89:
 		Id: 89
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 307
 		Categories: System
@@ -1026,7 +1026,7 @@ Templates:
 			0: Clear
 	Template@90:
 		Id: 90
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 308
 		Categories: System
@@ -1034,7 +1034,7 @@ Templates:
 			0: Clear
 	Template@91:
 		Id: 91
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 309
 		Categories: System
@@ -1042,7 +1042,7 @@ Templates:
 			0: Clear
 	Template@92:
 		Id: 92
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 310
 		Categories: System
@@ -1050,7 +1050,7 @@ Templates:
 			0: Clear
 	Template@93:
 		Id: 93
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 311
 		Categories: System
@@ -1058,7 +1058,7 @@ Templates:
 			0: Clear
 	Template@94:
 		Id: 94
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 312
 		Categories: System
@@ -1066,7 +1066,7 @@ Templates:
 			0: Clear
 	Template@95:
 		Id: 95
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 313
 		Categories: System
@@ -1074,7 +1074,7 @@ Templates:
 			0: Clear
 	Template@96:
 		Id: 96
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 314
 		Categories: System
@@ -1082,7 +1082,7 @@ Templates:
 			0: Clear
 	Template@97:
 		Id: 97
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 315
 		Categories: System
@@ -1090,7 +1090,7 @@ Templates:
 			0: Clear
 	Template@98:
 		Id: 98
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 316
 		Categories: System
@@ -1098,7 +1098,7 @@ Templates:
 			0: Clear
 	Template@99:
 		Id: 99
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 317
 		Categories: System
@@ -1106,7 +1106,7 @@ Templates:
 			0: Clear
 	Template@100:
 		Id: 100
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 318
 		Categories: System
@@ -1114,7 +1114,7 @@ Templates:
 			0: Clear
 	Template@101:
 		Id: 101
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 319
 		Categories: System
@@ -1122,7 +1122,7 @@ Templates:
 			0: Clear
 	Template@102:
 		Id: 102
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 320
 		Categories: System
@@ -1130,7 +1130,7 @@ Templates:
 			0: Clear
 	Template@103:
 		Id: 103
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 321
 		Categories: System
@@ -1138,7 +1138,7 @@ Templates:
 			0: Clear
 	Template@104:
 		Id: 104
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 322
 		Categories: System
@@ -1146,7 +1146,7 @@ Templates:
 			0: Clear
 	Template@105:
 		Id: 105
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 323
 		Categories: System
@@ -1154,7 +1154,7 @@ Templates:
 			0: Clear
 	Template@106:
 		Id: 106
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 324
 		Categories: System
@@ -1162,7 +1162,7 @@ Templates:
 			0: Clear
 	Template@107:
 		Id: 107
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 325
 		Categories: System
@@ -1170,7 +1170,7 @@ Templates:
 			0: Clear
 	Template@108:
 		Id: 108
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 326
 		Categories: System
@@ -1178,7 +1178,7 @@ Templates:
 			0: Clear
 	Template@109:
 		Id: 109
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 327
 		Categories: System
@@ -1186,7 +1186,7 @@ Templates:
 			0: Clear
 	Template@110:
 		Id: 110
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 328
 		Categories: System
@@ -1194,7 +1194,7 @@ Templates:
 			0: Clear
 	Template@111:
 		Id: 111
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 329
 		Categories: System
@@ -1202,7 +1202,7 @@ Templates:
 			0: Clear
 	Template@112:
 		Id: 112
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 330
 		Categories: System
@@ -1210,7 +1210,7 @@ Templates:
 			0: Clear
 	Template@113:
 		Id: 113
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 331
 		Categories: System
@@ -1218,7 +1218,7 @@ Templates:
 			0: Clear
 	Template@114:
 		Id: 114
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 332
 		Categories: System
@@ -1226,7 +1226,7 @@ Templates:
 			0: Clear
 	Template@115:
 		Id: 115
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 333
 		Categories: System
@@ -1234,7 +1234,7 @@ Templates:
 			0: Clear
 	Template@116:
 		Id: 116
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 334
 		Categories: System
@@ -1242,7 +1242,7 @@ Templates:
 			0: Clear
 	Template@117:
 		Id: 117
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 335
 		Categories: System
@@ -1250,7 +1250,7 @@ Templates:
 			0: Clear
 	Template@118:
 		Id: 118
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 336
 		Categories: System
@@ -1258,7 +1258,7 @@ Templates:
 			0: Clear
 	Template@119:
 		Id: 119
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 337
 		Categories: System
@@ -1266,7 +1266,7 @@ Templates:
 			0: Clear
 	Template@120:
 		Id: 120
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 338
 		Categories: System
@@ -1274,7 +1274,7 @@ Templates:
 			0: Clear
 	Template@121:
 		Id: 121
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 339
 		Categories: System
@@ -1282,7 +1282,7 @@ Templates:
 			0: Clear
 	Template@122:
 		Id: 122
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 340
 		Categories: System
@@ -1290,7 +1290,7 @@ Templates:
 			0: Clear
 	Template@123:
 		Id: 123
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 341
 		Categories: System
@@ -1298,7 +1298,7 @@ Templates:
 			0: Clear
 	Template@124:
 		Id: 124
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 342
 		Categories: System
@@ -1306,7 +1306,7 @@ Templates:
 			0: Clear
 	Template@125:
 		Id: 125
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 343
 		Categories: System
@@ -1314,7 +1314,7 @@ Templates:
 			0: Clear
 	Template@126:
 		Id: 126
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 344
 		Categories: System
@@ -1322,7 +1322,7 @@ Templates:
 			0: Clear
 	Template@127:
 		Id: 127
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 345
 		Categories: System
@@ -1330,7 +1330,7 @@ Templates:
 			0: Clear
 	Template@128:
 		Id: 128
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 346
 		Categories: System
@@ -1338,7 +1338,7 @@ Templates:
 			0: Clear
 	Template@129:
 		Id: 129
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 347
 		Categories: System
@@ -1346,7 +1346,7 @@ Templates:
 			0: Clear
 	Template@130:
 		Id: 130
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 348
 		Categories: System
@@ -1354,7 +1354,7 @@ Templates:
 			0: Clear
 	Template@131:
 		Id: 131
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 349
 		Categories: System
@@ -1362,7 +1362,7 @@ Templates:
 			0: Clear
 	Template@132:
 		Id: 132
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 350
 		Categories: System
@@ -1370,7 +1370,7 @@ Templates:
 			0: Clear
 	Template@133:
 		Id: 133
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 351
 		Categories: System
@@ -1378,7 +1378,7 @@ Templates:
 			0: Clear
 	Template@134:
 		Id: 134
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 352
 		Categories: System
@@ -1386,7 +1386,7 @@ Templates:
 			0: Clear
 	Template@135:
 		Id: 135
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 353
 		Categories: System
@@ -1394,7 +1394,7 @@ Templates:
 			0: Clear
 	Template@136:
 		Id: 136
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 354
 		Categories: System
@@ -1402,7 +1402,7 @@ Templates:
 			0: Clear
 	Template@137:
 		Id: 137
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 355
 		Categories: System
@@ -1410,7 +1410,7 @@ Templates:
 			0: Clear
 	Template@138:
 		Id: 138
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 356
 		Categories: System
@@ -1418,7 +1418,7 @@ Templates:
 			0: Clear
 	Template@139:
 		Id: 139
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 357
 		Categories: System
@@ -1426,7 +1426,7 @@ Templates:
 			0: Clear
 	Template@140:
 		Id: 140
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 358
 		Categories: System
@@ -1434,7 +1434,7 @@ Templates:
 			0: Clear
 	Template@141:
 		Id: 141
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 359
 		Categories: System
@@ -1442,7 +1442,7 @@ Templates:
 			0: Clear
 	Template@142:
 		Id: 142
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 360
 		Categories: System
@@ -1450,7 +1450,7 @@ Templates:
 			0: Clear
 	Template@143:
 		Id: 143
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 361
 		Categories: System
@@ -1458,7 +1458,7 @@ Templates:
 			0: Clear
 	Template@144:
 		Id: 144
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 362
 		Categories: System
@@ -1466,7 +1466,7 @@ Templates:
 			0: Clear
 	Template@145:
 		Id: 145
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 363
 		Categories: System
@@ -1474,7 +1474,7 @@ Templates:
 			0: Clear
 	Template@146:
 		Id: 146
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 364
 		Categories: System
@@ -1482,7 +1482,7 @@ Templates:
 			0: Clear
 	Template@147:
 		Id: 147
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 365
 		Categories: System
@@ -1490,7 +1490,7 @@ Templates:
 			0: Clear
 	Template@148:
 		Id: 148
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 366
 		Categories: System
@@ -1498,7 +1498,7 @@ Templates:
 			0: Clear
 	Template@149:
 		Id: 149
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 367
 		Categories: System
@@ -1506,7 +1506,7 @@ Templates:
 			0: Clear
 	Template@150:
 		Id: 150
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 368
 		Categories: System
@@ -1514,7 +1514,7 @@ Templates:
 			0: Clear
 	Template@151:
 		Id: 151
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 369
 		Categories: System
@@ -1522,7 +1522,7 @@ Templates:
 			0: Clear
 	Template@152:
 		Id: 152
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 370
 		Categories: System
@@ -1530,7 +1530,7 @@ Templates:
 			0: Clear
 	Template@153:
 		Id: 153
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 371
 		Categories: System
@@ -1538,7 +1538,7 @@ Templates:
 			0: Clear
 	Template@154:
 		Id: 154
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 372
 		Categories: System
@@ -1546,7 +1546,7 @@ Templates:
 			0: Clear
 	Template@155:
 		Id: 155
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 373
 		Categories: System
@@ -1554,7 +1554,7 @@ Templates:
 			0: Clear
 	Template@156:
 		Id: 156
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 374
 		Categories: System
@@ -1562,7 +1562,7 @@ Templates:
 			0: Clear
 	Template@157:
 		Id: 157
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 375
 		Categories: System
@@ -1570,7 +1570,7 @@ Templates:
 			0: Clear
 	Template@158:
 		Id: 158
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 376
 		Categories: System
@@ -1578,7 +1578,7 @@ Templates:
 			0: Clear
 	Template@159:
 		Id: 159
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 377
 		Categories: System
@@ -1586,7 +1586,7 @@ Templates:
 			0: Clear
 	Template@160:
 		Id: 160
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 378
 		Categories: System
@@ -1594,7 +1594,7 @@ Templates:
 			0: Clear
 	Template@161:
 		Id: 161
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 379
 		Categories: System
@@ -1602,7 +1602,7 @@ Templates:
 			0: Clear
 	Template@162:
 		Id: 162
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 380
 		Categories: System
@@ -1610,7 +1610,7 @@ Templates:
 			0: Clear
 	Template@163:
 		Id: 163
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 381
 		Categories: System
@@ -1618,7 +1618,7 @@ Templates:
 			0: Clear
 	Template@164:
 		Id: 164
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 382
 		Categories: System
@@ -1626,7 +1626,7 @@ Templates:
 			0: Clear
 	Template@165:
 		Id: 165
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 383
 		Categories: System
@@ -1634,7 +1634,7 @@ Templates:
 			0: Clear
 	Template@166:
 		Id: 166
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 384
 		Categories: System
@@ -1642,7 +1642,7 @@ Templates:
 			0: Clear
 	Template@167:
 		Id: 167
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 385
 		Categories: System
@@ -1650,7 +1650,7 @@ Templates:
 			0: Clear
 	Template@168:
 		Id: 168
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 386
 		Categories: System
@@ -1658,7 +1658,7 @@ Templates:
 			0: Clear
 	Template@169:
 		Id: 169
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 387
 		Categories: System
@@ -1666,7 +1666,7 @@ Templates:
 			0: Clear
 	Template@170:
 		Id: 170
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 388
 		Categories: System
@@ -1674,7 +1674,7 @@ Templates:
 			0: Clear
 	Template@171:
 		Id: 171
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 389
 		Categories: System
@@ -1682,7 +1682,7 @@ Templates:
 			0: Clear
 	Template@172:
 		Id: 172
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 390
 		Categories: System
@@ -1690,7 +1690,7 @@ Templates:
 			0: Clear
 	Template@173:
 		Id: 173
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 391
 		Categories: System
@@ -1698,7 +1698,7 @@ Templates:
 			0: Clear
 	Template@174:
 		Id: 174
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 392
 		Categories: System
@@ -1706,7 +1706,7 @@ Templates:
 			0: Clear
 	Template@175:
 		Id: 175
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 393
 		Categories: System
@@ -1714,7 +1714,7 @@ Templates:
 			0: Clear
 	Template@176:
 		Id: 176
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 394
 		Categories: System
@@ -1722,7 +1722,7 @@ Templates:
 			0: Clear
 	Template@177:
 		Id: 177
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 395
 		Categories: System
@@ -1730,7 +1730,7 @@ Templates:
 			0: Clear
 	Template@178:
 		Id: 178
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 396
 		Categories: System
@@ -1738,7 +1738,7 @@ Templates:
 			0: Clear
 	Template@179:
 		Id: 179
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 397
 		Categories: System
@@ -1746,7 +1746,7 @@ Templates:
 			0: Clear
 	Template@180:
 		Id: 180
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 398
 		Categories: System
@@ -1754,7 +1754,7 @@ Templates:
 			0: Clear
 	Template@181:
 		Id: 181
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 399
 		Categories: System
@@ -1762,7 +1762,7 @@ Templates:
 			0: Clear
 	Template@182:
 		Id: 182
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 400
 		Categories: System
@@ -1770,7 +1770,7 @@ Templates:
 			0: Clear
 	Template@183:
 		Id: 183
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 401
 		Categories: System
@@ -1778,7 +1778,7 @@ Templates:
 			0: Clear
 	Template@184:
 		Id: 184
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 402
 		Categories: System
@@ -1786,7 +1786,7 @@ Templates:
 			0: Clear
 	Template@185:
 		Id: 185
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 403
 		Categories: System
@@ -1794,7 +1794,7 @@ Templates:
 			0: Clear
 	Template@186:
 		Id: 186
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 404
 		Categories: System
@@ -1802,7 +1802,7 @@ Templates:
 			0: Clear
 	Template@187:
 		Id: 187
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 405
 		Categories: System
@@ -1810,7 +1810,7 @@ Templates:
 			0: Clear
 	Template@188:
 		Id: 188
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 406
 		Categories: System
@@ -1818,7 +1818,7 @@ Templates:
 			0: Clear
 	Template@189:
 		Id: 189
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 407
 		Categories: System
@@ -1826,7 +1826,7 @@ Templates:
 			0: Clear
 	Template@190:
 		Id: 190
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 408
 		Categories: System
@@ -1834,7 +1834,7 @@ Templates:
 			0: Clear
 	Template@191:
 		Id: 191
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 409
 		Categories: System
@@ -1842,7 +1842,7 @@ Templates:
 			0: Clear
 	Template@192:
 		Id: 192
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 410
 		Categories: System
@@ -1850,7 +1850,7 @@ Templates:
 			0: Clear
 	Template@193:
 		Id: 193
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 411
 		Categories: System
@@ -1858,7 +1858,7 @@ Templates:
 			0: Clear
 	Template@194:
 		Id: 194
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 412
 		Categories: System
@@ -1866,7 +1866,7 @@ Templates:
 			0: Clear
 	Template@195:
 		Id: 195
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 413
 		Categories: System
@@ -1874,7 +1874,7 @@ Templates:
 			0: Clear
 	Template@196:
 		Id: 196
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 414
 		Categories: System
@@ -1882,7 +1882,7 @@ Templates:
 			0: Clear
 	Template@197:
 		Id: 197
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 415
 		Categories: System
@@ -1890,7 +1890,7 @@ Templates:
 			0: Clear
 	Template@198:
 		Id: 198
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 416
 		Categories: System
@@ -1898,7 +1898,7 @@ Templates:
 			0: Clear
 	Template@199:
 		Id: 199
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 417
 		Categories: System
@@ -1906,7 +1906,7 @@ Templates:
 			0: Clear
 	Template@200:
 		Id: 200
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 418
 		Categories: System
@@ -1914,7 +1914,7 @@ Templates:
 			0: Clear
 	Template@201:
 		Id: 201
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 419
 		Categories: System
@@ -1922,7 +1922,7 @@ Templates:
 			0: Clear
 	Template@202:
 		Id: 202
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 420
 		Categories: System
@@ -1930,7 +1930,7 @@ Templates:
 			0: Clear
 	Template@203:
 		Id: 203
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 421
 		Categories: System
@@ -1938,7 +1938,7 @@ Templates:
 			0: Clear
 	Template@204:
 		Id: 204
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 422
 		Categories: System
@@ -1946,7 +1946,7 @@ Templates:
 			0: Clear
 	Template@205:
 		Id: 205
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 423
 		Categories: System
@@ -1954,7 +1954,7 @@ Templates:
 			0: Clear
 	Template@206:
 		Id: 206
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 424
 		Categories: System
@@ -1962,7 +1962,7 @@ Templates:
 			0: Clear
 	Template@207:
 		Id: 207
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 425
 		Categories: System
@@ -1970,7 +1970,7 @@ Templates:
 			0: Clear
 	Template@208:
 		Id: 208
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 426
 		Categories: System
@@ -1978,7 +1978,7 @@ Templates:
 			0: Clear
 	Template@209:
 		Id: 209
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 427
 		Categories: System
@@ -1986,7 +1986,7 @@ Templates:
 			0: Clear
 	Template@210:
 		Id: 210
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 428
 		Categories: System
@@ -1994,7 +1994,7 @@ Templates:
 			0: Clear
 	Template@211:
 		Id: 211
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 429
 		Categories: System
@@ -2002,7 +2002,7 @@ Templates:
 			0: Clear
 	Template@212:
 		Id: 212
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 430
 		Categories: System
@@ -2010,7 +2010,7 @@ Templates:
 			0: Clear
 	Template@213:
 		Id: 213
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 431
 		Categories: System
@@ -2018,7 +2018,7 @@ Templates:
 			0: Clear
 	Template@214:
 		Id: 214
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 432
 		Categories: System
@@ -2026,7 +2026,7 @@ Templates:
 			0: Clear
 	Template@215:
 		Id: 215
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 433
 		Categories: System
@@ -2034,7 +2034,7 @@ Templates:
 			0: Clear
 	Template@216:
 		Id: 216
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 434
 		Categories: System
@@ -2042,7 +2042,7 @@ Templates:
 			0: Clear
 	Template@217:
 		Id: 217
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 435
 		Categories: System
@@ -2050,7 +2050,7 @@ Templates:
 			0: Clear
 	Template@218:
 		Id: 218
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 436
 		Categories: System
@@ -2058,7 +2058,7 @@ Templates:
 			0: Clear
 	Template@219:
 		Id: 219
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 437
 		Categories: System
@@ -2066,7 +2066,7 @@ Templates:
 			0: Clear
 	Template@220:
 		Id: 220
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 438
 		Categories: System
@@ -2074,7 +2074,7 @@ Templates:
 			0: Clear
 	Template@221:
 		Id: 221
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 439
 		Categories: System
@@ -2082,7 +2082,7 @@ Templates:
 			0: Clear
 	Template@222:
 		Id: 222
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 440
 		Categories: System
@@ -2090,7 +2090,7 @@ Templates:
 			0: Clear
 	Template@223:
 		Id: 223
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 441
 		Categories: System
@@ -2098,7 +2098,7 @@ Templates:
 			0: Clear
 	Template@224:
 		Id: 224
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 442
 		Categories: System
@@ -2106,10 +2106,179 @@ Templates:
 			0: Clear
 	Template@225:
 		Id: 225
-		Images: aust.til
+		Images: asteroid.til
 		Size: 1,1
 		Frames: 443
 		Categories: System
 		Tiles:
 			0: Clear
+	Template@226: # Sea tiles masked
+		Id: 226
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1032, 1033, 1034, 1035
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@227:
+		Id: 227
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1036, 1037, 1038, 1039
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@228:
+		Id: 228
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1040, 1041, 1042, 1043
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@229:
+		Id: 229
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1044, 1045, 1046, 1047
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@230:
+		Id: 230
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1048, 1049, 1050, 1051
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@231:
+		Id: 231
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1052, 1053, 1054, 1055
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@232:
+		Id: 232
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1056, 1057, 1058, 1059
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@233:
+		Id: 233
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1060, 1061, 1062, 1063
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@234:
+		Id: 234
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1064, 1065, 1066, 1067
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@235:
+		Id: 235
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1068, 1069, 1070, 1071
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@236:
+		Id: 236
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1072, 1073, 1074, 1075
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@237:
+		Id: 237
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1076, 1077, 1078, 1079
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@238:
+		Id: 238
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1080, 1081, 1082, 1083
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+	Template@239:
+		Id: 239
+		Images: asteroid.til
+		Size: 1,1
+		PickAny: True
+		Frames: 1084, 1085, 1086, 1087
+		Categories: System
+		Tiles:
+			0: Clear
+			1: Clear
+			2: Clear
+			3: Clear
+
 

@@ -254,7 +254,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			// Edge: 12, 25, 36, 50 (N, E, S, W)
 			// Outer: 28, 57, 44, 52 (NE, SE, NW, SW)
 			// Bridge: 41, 20 (NWSE, NESW)
-
 			var seaTiles = new List<int> { 4, 9, 18, 35, 12, 25, 50, 36, 44, 28, 57, 52, 20, 41 };
 			var seaTileMasks = new List<List<int>>
 			{

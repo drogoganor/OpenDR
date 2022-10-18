@@ -15,12 +15,12 @@ using OpenRA.FileSystem;
 
 namespace OpenRA.Mods.Dr.UtilityCommands
 {
-	class StripManualSystemTilesCommand : IUtilityCommand
+	class RemapMapTilesCommand : IUtilityCommand
 	{
-		string IUtilityCommand.Name { get { return "--strip-system-tiles"; } }
+		string IUtilityCommand.Name { get { return "--remap-tiles"; } }
 		bool IUtilityCommand.ValidateArguments(string[] args) { return ValidateArguments(args); }
 
-		[Desc("FILENAME", "Strip manually-placed system tiles from all maps")]
+		[Desc("FILENAME", "Remap tiles from old IDs to new")]
 		void IUtilityCommand.Run(Utility utility, string[] _) { Run(utility); }
 
 		public ModData ModData;
@@ -76,10 +76,13 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			foreach (var cell in map.AllCells)
 			{
 				var tile = map.Tiles[cell];
-				if (tile.Type > 15)
+				var newTile = tile.Type - 1;
+				if (newTile < 0)
 				{
-					map.Tiles[cell] = new TerrainTile(0, (byte)Game.CosmeticRandom.Next(8));
+					newTile = 15;
 				}
+
+				map.Tiles[cell] = new TerrainTile((ushort)newTile, (byte)Game.CosmeticRandom.Next(8));
 			}
 
 			return map;

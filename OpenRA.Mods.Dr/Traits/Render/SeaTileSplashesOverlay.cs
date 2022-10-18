@@ -71,14 +71,13 @@ namespace OpenRA.Mods.Dr.Traits.Render
 
 		TerrainSpriteLayer spriteLayer;
 		PaletteReference palette;
+		int tick = 0;
 
 		public SeaTileSplashesOverlay(Actor self, SeaTileSplashesOverlayInfo info)
 		{
 			this.info = info;
 			this.self = self;
 		}
-
-		int tick = 0;
 
 		void IWorldLoaded.WorldLoaded(World w, WorldRenderer wr)
 		{
@@ -98,7 +97,7 @@ namespace OpenRA.Mods.Dr.Traits.Render
 			foreach (var cell in self.World.Map.AllCells)
 			{
 				var tile = self.World.Map.Tiles[cell];
-				if (tile.Type == 0 && IsValidSeaTile(cell))
+				if (tile.Type == 15 && IsValidSeaTile(cell))
 				{
 					seaTiles.Add(new SeaTileSample
 					{
@@ -151,7 +150,7 @@ namespace OpenRA.Mods.Dr.Traits.Render
 					if (map.Tiles.Contains(neighborPos))
 					{
 						var neighbour = map.Tiles[neighborPos];
-						if (neighbour.Type > 0)
+						if (neighbour.Type != 15)
 							return false;
 					}
 				}
