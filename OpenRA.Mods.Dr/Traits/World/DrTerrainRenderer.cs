@@ -243,7 +243,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 							if (lowestMatchValue.Value == 0 || lowestMatchValue.Value > 15)
 							{
-								throw new Exception("WTF");
+								continue;
 							}
 						}
 					}
@@ -268,7 +268,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 				usedEdges.Add(lowestMatchValue.Value);
 
-				if (lowestMatchValue.HasValue && lowestMatchValue.Value < 1)
+				if (lowestMatchValue.HasValue && (lowestMatchValue.Value < 1 || lowestMatchValue.Value >= 240))
 					continue;
 
 				// Match is good at this point; create edge tile

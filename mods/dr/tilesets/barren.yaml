@@ -376,7 +376,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 203, 217, 231, 245 # T
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -388,7 +388,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 200, 214, 228, 242 # R
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -400,7 +400,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 194, 208, 222, 236 # B
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -412,7 +412,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 197, 211, 225, 239 # L
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -424,7 +424,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 195, 209, 223, 237 # TLI
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -436,7 +436,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 199, 213, 227, 241 # TRI
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -448,7 +448,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 192, 206, 220, 234 # BRI
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -460,7 +460,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 193, 207, 221, 235 # BLI
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -472,7 +472,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 202, 216, 230, 244 # TLO
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -484,7 +484,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 198, 212, 226, 240 # TRO
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -496,7 +496,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 205, 219, 233, 247 # BRO
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -508,7 +508,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 204, 218, 232, 246 # BLO
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -520,7 +520,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 196, 210, 224, 238 # TR/BL-O
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -532,7 +532,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 201, 215, 229, 243 # TL/BR-O
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -2274,3 +2274,116 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
+	Template@240: # Shadows
+		Id: 240
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1088
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@241:
+		Id: 241
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1089
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@242:
+		Id: 242
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1090
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@243:
+		Id: 243
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1091
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@244:
+		Id: 244
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1092
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@245:
+		Id: 245
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1093
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@246:
+		Id: 246
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1094
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@247:
+		Id: 247
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1095
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@248:
+		Id: 248
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1096
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@249:
+		Id: 249
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1097
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@250:
+		Id: 250
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1098
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@251:
+		Id: 251
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1099
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@252:
+		Id: 252
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1100
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@253:
+		Id: 253
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1101
+		Categories: System
+		Tiles:
+			0: Clear
+

@@ -382,7 +382,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 139, 153, 167, 181 # T
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -394,7 +394,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 136, 150, 164, 178 # R
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -406,7 +406,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 130, 144, 158, 172 # B
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -418,7 +418,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 133, 147, 161, 175 # L
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -430,7 +430,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 131, 145, 159, 173 # TLI
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -442,7 +442,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 135, 149, 163, 177 # TRI
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -454,7 +454,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 128, 142, 156, 170 # BRI
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -466,7 +466,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 129, 143, 157, 171 # BLI
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -478,7 +478,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 138, 152, 166, 180 # TLO
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -490,7 +490,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 134, 148, 162, 176 # TRO
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -502,7 +502,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 141, 155, 169, 183 # BRO
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -514,7 +514,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 140, 154, 168, 182 # BLO
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -526,7 +526,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 132, 146, 160, 174 # TR/BL-O
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear
@@ -538,7 +538,7 @@ Templates:
 		Size: 1,1
 		PickAny: True
 		Frames: 137, 151, 165, 179 # TL/BR-O
-		Categories: Terrain
+		Categories: System
 		Tiles:
 			0: Clear
 			1: Clear

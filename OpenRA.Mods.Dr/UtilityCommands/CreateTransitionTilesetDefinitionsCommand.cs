@@ -35,12 +35,12 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			// HACK: The engine code assumes that Game.modData is set.
 			Game.ModData = ModData = utility.ModData;
 
-			var startId = 30;
-			var startFrame = 248;
-			var numberOfTransitionTiles = 14;
+			var startId = 240;
+			var startFrame = 1088;
+			var numberOfTransitionTiles = 1;
 			var numberOfValidTiles = 14;
 
-			var targetPath = "..\\";
+			var targetPath = "..\\..\\";
 
 			var sb = new StringBuilder();
 			for (int i = 0; i < (numberOfTransitionTiles * numberOfValidTiles); i++)
@@ -65,7 +65,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				outputFile.Write(sb);
 			}
 
-			Console.WriteLine(outFile + "Saved.");
+			Console.WriteLine(outFile + " Saved.");
 		}
 	}
 }

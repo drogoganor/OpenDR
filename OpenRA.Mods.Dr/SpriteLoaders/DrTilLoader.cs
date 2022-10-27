@@ -285,10 +285,31 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				}
 			}
 
+			for (var maskIndex = 0; maskIndex < seaTiles.Count; maskIndex++)
+			{
+				var seaTileMask = seaTiles[maskIndex];
+				frames.Add(ShadowTile(maskFrames[seaTileMask], 0, 50));
+			}
+
 			s.Position = start;
 			return frames.ToArray();
 
 			////////////////////////////////////////////////
+
+			DrTilFrame ShadowTile(DrTilFrame mask, byte color, byte alpha)
+			{
+				var newFrame = new DrTilFrame(SpriteFrameType.Rgba32);
+				for (var i = 0; i < 24 * 24; i++)
+				{
+					var newIndex = i * 4;
+					newFrame.Data[newIndex] = color;
+					newFrame.Data[newIndex + 1] = color;
+					newFrame.Data[newIndex + 2] = color;
+					newFrame.Data[newIndex + 3] = (byte)Math.Min(alpha, mask.Data[i] * 4);
+				}
+
+				return newFrame;
+			}
 
 			DrTilFrame MaskTile(DrTilFrame source, DrTilFrame mask)
 			{
