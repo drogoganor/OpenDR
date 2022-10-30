@@ -285,11 +285,16 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				}
 			}
 
+			byte shadowAlpha = 50;
+			byte shadowColor = 0;
+
 			for (var maskIndex = 0; maskIndex < seaTiles.Count; maskIndex++)
 			{
 				var seaTileMask = seaTiles[maskIndex];
-				frames.Add(ShadowTile(maskFrames[seaTileMask], 0, 50));
+				frames.Add(ShadowTile(maskFrames[seaTileMask], shadowColor, shadowAlpha));
 			}
+
+			frames.Add(FullShadowTile(shadowColor, shadowAlpha));
 
 			s.Position = start;
 			return frames.ToArray();
@@ -306,6 +311,21 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					newFrame.Data[newIndex + 1] = color;
 					newFrame.Data[newIndex + 2] = color;
 					newFrame.Data[newIndex + 3] = (byte)Math.Min(alpha, mask.Data[i] * 4);
+				}
+
+				return newFrame;
+			}
+
+			DrTilFrame FullShadowTile(byte color, byte alpha)
+			{
+				var newFrame = new DrTilFrame(SpriteFrameType.Rgba32);
+				for (var i = 0; i < 24 * 24; i++)
+				{
+					var newIndex = i * 4;
+					newFrame.Data[newIndex] = color;
+					newFrame.Data[newIndex + 1] = color;
+					newFrame.Data[newIndex + 2] = color;
+					newFrame.Data[newIndex + 3] = (byte)Math.Min(alpha, (byte)255);
 				}
 
 				return newFrame;

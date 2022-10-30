@@ -88,6 +88,7 @@ namespace OpenRA.Mods.Dr.Traits
 			public bool Self;
 		}
 
+		const int NumShadowLayers = 2;
 		const int NumEdgeLayers = 16;
 		const int NumEdgeTiles = 14;
 		const int NumSkipEdgeTiles = 1;
@@ -97,6 +98,7 @@ namespace OpenRA.Mods.Dr.Traits
 		readonly TerrainSpriteLayer[] edgeLayers;
 		TerrainSpriteLayer spriteLayer;
 		TerrainSpriteLayer shimLayer;
+		readonly TerrainSpriteLayer[] shadowLayers;
 
 		readonly DefaultTerrain terrainInfo;
 		readonly DefaultTileCache tileCache;
@@ -113,6 +115,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 			tileCache = new DefaultTileCache(terrainInfo);
 			edgeLayers = new TerrainSpriteLayer[NumEdgeLayers];
+			shadowLayers = new TerrainSpriteLayer[NumShadowLayers];
 		}
 
 		void IWorldLoaded.WorldLoaded(World world, WorldRenderer wr)
@@ -125,6 +128,11 @@ namespace OpenRA.Mods.Dr.Traits
 				edgeLayers[i] = new TerrainSpriteLayer(world, wr, tileCache.MissingTile, BlendMode.Alpha, world.Type != WorldType.Editor);
 			}
 
+			for (var i = 0; i < NumShadowLayers; i++)
+			{
+				shadowLayers[i] = new TerrainSpriteLayer(world, wr, tileCache.MissingTile, BlendMode.Alpha, world.Type != WorldType.Editor);
+			}
+
 			foreach (var cell in map.AllCells)
 			{
 				OnCellEntryChanged(cell);
@@ -132,7 +140,54 @@ namespace OpenRA.Mods.Dr.Traits
 
 			map.Tiles.CellEntryChanged += OnCellEntryChanged;
 
-			// map.Height.CellEntryChanged += OnCellEntryChanged;
+			map.Height.CellEntryChanged += OnCellEntryHeightChanged;
+		}
+
+		void OnCellEntryHeightChanged(CPos cell)
+		{
+			var currentElevation = 0;
+			var currentCell = cell;
+			var scrollIndex = 0;
+			string palette = null;
+
+			do
+			{
+				var rightCell = currentCell + new CVec(1, 0);
+				if (!map.Contains(rightCell) || !map.Contains(currentCell))
+					break;
+
+				var thisHeight = map.Height[currentCell];
+				var rightHeight = map.Height[rightCell];
+
+				if (thisHeight > 0)
+				{
+					throw new Exception("Height!");
+				}
+
+				currentElevation += thisHeight - rightHeight;
+
+				//if (scrollIndex % 2 == 0)
+				//	currentCell += new CVec(0, 1);
+
+				if (currentElevation > 0)
+				{
+					// Place shadow
+					ushort shadowTileType = 254;
+					var shadowTile = new TerrainTile(shadowTileType, 0);
+
+					if (terrainInfo.Templates.TryGetValue(shadowTileType, out var template))
+						palette = ((DefaultTerrainTemplateInfo)template).Palette ?? terrainInfo.Palette;
+
+					var sprite = tileCache.TileSprite(shadowTile);
+					var paletteReference = worldRenderer.Palette(palette);
+
+					shadowLayers[0].Update(currentCell, sprite, paletteReference);
+				}
+
+				currentElevation -= 2;
+				currentCell = rightCell;
+				scrollIndex++;
+			} while (currentElevation > 1);
 		}
 
 		void OnCellEntryChanged(CPos cell)
@@ -375,6 +430,11 @@ namespace OpenRA.Mods.Dr.Traits
 			for (var i = 0; i < NumEdgeLayers; i++)
 			{
 				edgeLayers[i].Draw(wr.Viewport);
+			}
+
+			for (var i = 0; i < NumShadowLayers; i++)
+			{
+				shadowLayers[i].Draw(wr.Viewport);
 			}
 
 			foreach (var r in wr.World.WorldActor.TraitsImplementing<IRenderOverlay>())

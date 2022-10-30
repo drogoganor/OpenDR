@@ -2386,4 +2386,12 @@ Templates:
 		Categories: System
 		Tiles:
 			0: Clear
+	Template@254:
+		Id: 254
+		Images: BARREN/BARREN.TIL
+		Size: 1,1
+		Frames: 1101
+		Categories: System
+		Tiles:
+			0: Clear
 

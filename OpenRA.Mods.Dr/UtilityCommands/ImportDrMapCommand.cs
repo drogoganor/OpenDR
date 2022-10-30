@@ -265,7 +265,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			// HACK: The engine code assumes that Game.modData is set.
 			Game.ModData = ModData = utility.ModData;
 
-			var filename = args[1];
+			var rootPath = "..\\..\\DrMaps\\";
+
+			var filename = rootPath + args[1];
 			using (var stream = File.OpenRead(filename))
 			{
 				var headerString = stream.ReadASCII(4);
@@ -283,7 +285,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 				var width = stream.ReadInt32();
 				var height = stream.ReadInt32();
-				stream.ReadInt32(); // Tileset num???
+				var tilesetNum = stream.ReadInt32(); // Tileset num???
 				var tilesetName = "BARREN";
 
 				filename = filename.ToLowerInvariant();
@@ -342,7 +344,11 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							tileType = 15;
 						}
 
-						Map.Tiles[new CPos(x + 1, y + 1)] = new TerrainTile((ushort)tileType, variation);
+						Console.WriteLine($"{byte3}: {byte4}, {byte5}, {byte6}");
+
+						var tilePos = new CPos(x + 1, y + 1);
+						Map.Tiles[tilePos] = new TerrainTile((ushort)tileType, variation);
+						Map.Height[tilePos] = byte3;
 					}
 				}
 
