@@ -2,9 +2,9 @@
 # DR weapons
 # These values come from the darkreign.ws release which includes raw unit & building data, and also a compilation by dr_zaphod.
 # These files are at: 
-# Dark Reign 1.7\DARK\DEFTXT\*.txt (Original game)
-# Dark Reign 1.7\DARK\deftxtEx\*.txt (Expansion)
-# Dark Reign 1.7\manuals\Unit and Building Tables\english.txt
+# DARK\DEFTXT\*.txt (Original game)
+# DARK\deftxtEx\*.txt (Expansion)
+# manuals\Unit and Building Tables\english.txt
 
 # Anything to do with size must be multiplied by (1024 / 24), the WPos cell size divided by the tile size.
 # Speed and Spread are calculated using this formula.
