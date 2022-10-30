@@ -43,7 +43,7 @@ Container@MAINMENU:
 							Y: 20
 							Width: 200
 							Height: 30
-							Text: Dark Reign
+							Text: OpenDR
 							Align: Center
 							Font: Bold
 						Button@SINGLEPLAYER_BUTTON:

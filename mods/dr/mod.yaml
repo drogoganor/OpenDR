@@ -1,7 +1,7 @@
 Metadata:
-	Title: Dark Reign
+	Title: OpenDR
 	Version: devtest-20210309
-	Website: https://github.com/drogoganor/DarkReign
+	Website: https://github.com/drogoganor/OpenDR
 	WebIcon32: https://www.drogoganor.net/dr/dr_32x32.png
 
 PackageFormats: FtgFile
@@ -309,11 +309,11 @@ GameSpeeds:
 			OrderLatency: 6
 
 ModContent:
-	InstallPromptMessage: OpenRA Dark Reign requires artwork and audio from the Dark Reign demo.\n\nClick 'Quick Install' to automatically download and install this content.
+	InstallPromptMessage: OpenDR requires artwork and audio from the original demo.\n\nClick 'Quick Install' to automatically download and install this content.
 	QuickDownload: drdemo
 	HeaderMessage: Download Game Content
 	Packages:
-		demo: Dark Reign Demo
+		demo: DR Demo
 			TestFiles: ^SupportDir|Content/dr/SPRITES.FTG, ^SupportDir|Content/dr/SOUNDS.FTG, ^SupportDir|Content/dr/shell/SOUNDS.FTG, ^SupportDir|Content/dr/BARREN/BARREN.PAL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL, ^SupportDir|Content/dr/BARREN/BARREN.TIL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL, ^SupportDir|Content/dr/BARREN/SPRITES.FTG, ^SupportDir|Content/dr/JUNGLE/SPRITES.FTG, ^SupportDir|Content/dr/mouse.crs
 			Download: drdemo
 			Required: true

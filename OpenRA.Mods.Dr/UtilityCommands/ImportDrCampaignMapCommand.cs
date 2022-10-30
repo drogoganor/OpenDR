@@ -22,7 +22,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		string IUtilityCommand.Name { get { return "--import-dr-campaign-map"; } }
 		bool IUtilityCommand.ValidateArguments(string[] args) { return ValidateArguments(args); }
 
-		[Desc("FILENAME", "Convert a Dark Reign campaign map to the OpenRA format.")]
+		[Desc("FILENAME", "Convert a DR campaign map to the OpenRA format.")]
 		void IUtilityCommand.Run(Utility utility, string[] args)
 		{
 			skipActors = false;

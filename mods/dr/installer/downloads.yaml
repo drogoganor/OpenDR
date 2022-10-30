@@ -1,4 +1,4 @@
-drdemo: Dark Reign Demo
+drdemo: DR Demo
 	MirrorList: http://drogoganor.net/dr/dr-demo-mirrors.txt
 	Extract:
 		^SupportDir|Content/dr/SPRITES.FTG: Dark Reign/DATA/DARK/GRAPHICS/SPRITES.FTG

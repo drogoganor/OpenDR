@@ -24,7 +24,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		string IUtilityCommand.Name { get { return "--import-dr-map"; } }
 		bool IUtilityCommand.ValidateArguments(string[] args) { return ValidateArguments(args); }
 
-		[Desc("FILENAME", "Convert a Dark Reign map to the OpenRA format.")]
+		[Desc("FILENAME", "Convert a DR map to the OpenRA format.")]
 		void IUtilityCommand.Run(Utility utility, string[] args) { Run(utility, args); }
 
 		public ModData ModData;
@@ -307,7 +307,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				Map = new Map(ModData, terrainInfo, width + 2, height + 2)
 				{
 					Title = Path.GetFileNameWithoutExtension(filename),
-					Author = "Dark Reign",
+					Author = "OpenDR",
 					RequiresMod = ModData.Manifest.Id
 				};
 

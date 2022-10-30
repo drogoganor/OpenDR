@@ -314,7 +314,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		string IUtilityCommand.Name { get { return "--mirror-map"; } }
 		bool IUtilityCommand.ValidateArguments(string[] args) { return ValidateArguments(args); }
 
-		[Desc("FILENAME", "Mirror an OpenRA Dark Reign map.")]
+		[Desc("FILENAME", "Mirror an OpenDR map.")]
 		void IUtilityCommand.Run(Utility utility, string[] args) { Run(utility, args); }
 
 		public ModData ModData;

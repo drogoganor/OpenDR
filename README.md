@@ -1,22 +1,20 @@
-[![Travis CI](https://travis-ci.org/drogoganor/DarkReign.svg?branch=master)](https://travis-ci.org/drogoganor/DarkReign/builds#) [![Discord](https://img.shields.io/discord/102860784329052160.svg)](https://discord.gg/3MKcGSW)
+[![Discord](https://img.shields.io/discord/102860784329052160.svg)](https://discord.gg/3MKcGSW)
 
-# Dark Reign mod for OpenRA
+# OpenDR
 
-A Dark Reign mod for the [OpenRA](https://github.com/OpenRA/OpenRA) strategy game engine. Created using the [OpenRAModSDK](https://github.com/OpenRA/OpenRAModSDK).
+A mod for the [OpenRA](https://github.com/OpenRA/OpenRA) strategy game engine that aims to recreate the original Auran RTS classic. Created using the [OpenRAModSDK](https://github.com/OpenRA/OpenRAModSDK).
 
 Please note this mod is a work-in-progress. Many features are missing or incomplete at this stage.
 
-You can get the latest release from the [Releases page](https://github.com/drogoganor/DarkReign/releases). If you have trouble installing or would like to compile from source, please see the [Installation page](https://github.com/drogoganor/DarkReign/wiki/Installation).
+You can get the latest release from the [Releases page](https://github.com/drogoganor/OpenDR/releases). If you have trouble installing or would like to compile from source, please see the [Installation page](https://github.com/drogoganor/OpenDR/wiki/Installation).
 
-This mod installs content from the freely-available Dark Reign demo.
+This mod installs content from the freely-available DR demo.
 
-Join us on the [Dark Reign discord](https://discord.gg/3MKcGSW) if you want to talk about the mod.
+Join us on the [OpenDR discord](https://discord.gg/3MKcGSW) if you want to talk about the mod.
 
 ## A note on running the mod in Visual Studio
 
 You will need to switch to OpenRA.Launcher and set the command line arguments to: `Engine.EngineDir=".." Engine.ModSearchPaths="..\\..\\mods" Game.Mod=dr`
-
-Also for some reason you'll need to copy the mod DLL by setting the Post-build event for OpenRA.Mods.Dr to: `xcopy /Y /F $(OutDir)$(AssemblyName).dll ..\engine\bin\`
 
 ## Thanks to
 

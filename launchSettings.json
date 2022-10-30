@@ -1,6 +1,6 @@
 {
   "profiles": {
-	"Dark Reign": {
+    "OpenDR": {
       "commandName": "Project",
       "commandLineArgs": "Game.Mod=dr Engine.ModSearchPaths=../mods,./mods"
     }

@@ -24,7 +24,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		string IUtilityCommand.Name { get { return "--convert-dr-map-resources"; } }
 		bool IUtilityCommand.ValidateArguments(string[] args) { return ValidateArguments(args); }
 
-		[Desc("Convert old actor-based Dark Reign map resources to the new plain old resources.")]
+		[Desc("Convert old actor-based DR map resources to the new plain old resources.")]
 		void IUtilityCommand.Run(Utility utility, string[] args) { Run(utility); }
 
 		public ModData ModData;
