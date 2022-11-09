@@ -1,5 +1,6 @@
 ^TerrainRenderer:
 	DrTerrainRenderer:
+		RenderShadows: False
 		Edges:
 			EdgeMatch@n:
 				SelfMatchType: Equal

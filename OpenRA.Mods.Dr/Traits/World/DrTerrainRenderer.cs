@@ -75,6 +75,9 @@ namespace OpenRA.Mods.Dr.Traits
 			return failed;
 		}
 
+		[Desc("Whether to render the elevation shadowing (incomplete).")]
+		public readonly bool RenderShadows = true;
+
 		public override object Create(ActorInitializer init) { return new DrTerrainRenderer(init.World, this); }
 	}
 
@@ -136,11 +139,15 @@ namespace OpenRA.Mods.Dr.Traits
 			foreach (var cell in map.AllCells)
 			{
 				OnCellEntryChanged(cell);
-				OnCellEntryHeightChanged(cell);
+
+				if (info.RenderShadows)
+					OnCellEntryHeightChanged(cell);
 			}
 
 			map.Tiles.CellEntryChanged += OnCellEntryChanged;
-			map.Height.CellEntryChanged += OnCellEntryHeightChanged;
+
+			if (info.RenderShadows)
+				map.Height.CellEntryChanged += OnCellEntryHeightChanged;
 		}
 
 		bool CellInMap(Map map, CPos pos)

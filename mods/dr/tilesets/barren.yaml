@@ -3,7 +3,7 @@ General:
 	Id: BARREN
 	SheetSize: 1024
 	EditorTemplateOrder: Terrain
-	HeightDebugColors: 0000ff37, 0042ff29, 007fff1c, 0000CC80, 0000FF80, 4400CC80, 88008880, CC004480, FF110080, FF550080, FF990080, FFDD0080, DDFF0080, 99FF0080, 55FF0080, 11FF0080
+	HeightDebugColors: 00ff36ff, 74f400ff, a2e700ff, c6d800ff, e6c700ff, ffb400ff, ff9f00ff, ff8600ff, ff6800ff, ff4335ff, ff0057ff, ff0078ff, ff0098ff, ff00b9ff, ff00d8ff, ff00f6ff
 
 Terrain:
 	TerrainType@Clear:
