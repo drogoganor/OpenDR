@@ -136,11 +136,22 @@ namespace OpenRA.Mods.Dr.Traits
 			foreach (var cell in map.AllCells)
 			{
 				OnCellEntryChanged(cell);
+				OnCellEntryHeightChanged(cell);
 			}
 
 			map.Tiles.CellEntryChanged += OnCellEntryChanged;
-
 			map.Height.CellEntryChanged += OnCellEntryHeightChanged;
+		}
+
+		bool CellInMap(Map map, CPos pos)
+		{
+			if (pos.X <= 0 || pos.Y <= 0)
+				return false;
+
+			if (pos.X >= (map.MapSize.X - 1) || pos.Y >= (map.MapSize.Y - 1))
+				return false;
+
+			return true;
 		}
 
 		void OnCellEntryHeightChanged(CPos cell)
@@ -153,18 +164,13 @@ namespace OpenRA.Mods.Dr.Traits
 			do
 			{
 				var rightCell = currentCell + new CVec(1, 0);
-				if (!map.Contains(rightCell) || !map.Contains(currentCell))
+				if (!CellInMap(map, new CPos(rightCell.X, rightCell.Y)) || !CellInMap(map, new CPos(currentCell.X, currentCell.Y)))
 					break;
 
 				var thisHeight = map.Height[currentCell];
 				var rightHeight = map.Height[rightCell];
 
-				if (thisHeight > 0)
-				{
-					throw new Exception("Height!");
-				}
-
-				currentElevation += thisHeight - rightHeight;
+				currentElevation += (thisHeight - rightHeight) * 2;
 
 				//if (scrollIndex % 2 == 0)
 				//	currentCell += new CVec(0, 1);
@@ -184,7 +190,7 @@ namespace OpenRA.Mods.Dr.Traits
 					shadowLayers[0].Update(currentCell, sprite, paletteReference);
 				}
 
-				currentElevation -= 2;
+				currentElevation -= 1;
 				currentCell = rightCell;
 				scrollIndex++;
 			} while (currentElevation > 1);
@@ -204,7 +210,7 @@ namespace OpenRA.Mods.Dr.Traits
 				{
 					var newCell = cell + new CVec(x, y);
 
-					if (!map.Contains(newCell))
+					if (!CellInMap(map, newCell))
 						continue;
 
 					ClearEdgeTile(newCell);

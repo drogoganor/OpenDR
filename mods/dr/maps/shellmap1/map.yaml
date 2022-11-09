@@ -25,7 +25,7 @@ Players:
 	PlayerReference@Freedom Guard:
 		Name: Freedom Guard
 		Faction: fguard
-		Color: 1C73FF
+		Color: 0051D3
 		Enemies: Imperium
 	PlayerReference@Imperium:
 		Name: Imperium

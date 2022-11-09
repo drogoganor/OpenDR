@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.AccessControl;
 using OpenRA.FileSystem;
 using OpenRA.Mods.Dr.FileFormats;
 using OpenRA.Primitives;
@@ -21,7 +22,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 {
 	class ImportDrMapCommand : IUtilityCommand
 	{
-		string IUtilityCommand.Name { get { return "--import-dr-map"; } }
+		string IUtilityCommand.Name { get { return "--import-dr-maps"; } }
 		bool IUtilityCommand.ValidateArguments(string[] args) { return ValidateArguments(args); }
 
 		[Desc("FILENAME", "Convert a DR map to the OpenRA format.")]
@@ -45,7 +46,13 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			"hugecrater3",
 			"hugecrater4",
 			"hugecrater5",
-			"hugecrater6"
+			"hugecrater6",
+			"animtree1",
+			"animtree2",
+			"animtree3",
+			"animtree4",
+			"animtree5",
+			"animtree6"
 		};
 
 		static readonly string[] KnownUnknownBuildings = new string[]
@@ -62,6 +69,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			"impho_decoy",
 			"fgar_decoy",
 			"impar_decoy",
+			"impww",
+			"impmn",
 		};
 
 		static readonly string[] KnownUnknownUnits = Array.Empty<string>();
@@ -251,8 +260,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "tfs", "AntiAirTurret.human" },
 			{ "tih1", "HQ.cyborg" },
 			{ "timpre", "Repair.cyborg" },
-			{ "impww", "Water" },
-			{ "impmn", "Taelon" }
 		};
 
 		protected bool ValidateArguments(string[] args)
@@ -265,9 +272,22 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			// HACK: The engine code assumes that Game.modData is set.
 			Game.ModData = ModData = utility.ModData;
 
-			var rootPath = "..\\..\\DrMaps\\";
+			var rootPath = $"..\\..\\{args[1]}\\";
 
-			var filename = rootPath + args[1];
+			var drMapDirs = Directory.GetDirectories(rootPath);
+			foreach (var drMapDir in drMapDirs)
+			{
+				var dirName = new DirectoryInfo(drMapDir).Name;
+				var targetMapFile = $"{dirName}\\{dirName}.map";
+				ConvertMap(rootPath, targetMapFile);
+			}
+		}
+
+		void ConvertMap(string rootPath, string mapFilename)
+		{
+			var filename = rootPath + mapFilename;
+			Console.WriteLine($"Processing {filename}");
+
 			using (var stream = File.OpenRead(filename))
 			{
 				var headerString = stream.ReadASCII(4);
@@ -285,6 +305,10 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 				var width = stream.ReadInt32();
 				var height = stream.ReadInt32();
+
+				if (width == 0 || height == 0)
+					return;
+
 				var tilesetNum = stream.ReadInt32(); // Tileset num???
 				var tilesetName = "BARREN";
 
@@ -301,6 +325,16 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 						tilesetName = scnSection.ValuesStr.ToUpperInvariant();
 					}
+				}
+
+				// Change Snow and Alien to something else
+				if (tilesetName == "SNOW")
+				{
+					tilesetName = "AURALIEN";
+				}
+				else if (tilesetName == "ALIEN")
+				{
+					tilesetName = "ASTEROID";
 				}
 
 				if (!ModData.DefaultTerrainInfo.TryGetValue(tilesetName, out var terrainInfo))
@@ -329,22 +363,14 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						var byte6 = stream.ReadUInt8(); // Unknown, defaults to 146. Seems to be elevation related.
 
 						var subindex = (byte)(byte1 / 64);
-						byte variation = (byte)(subindex * (byte2 + 1));
-						int tileType = byte1 % 64;
-
-						if (tileType >= 16)
-						{
-							unknownTileTypeHash.Add(tileType);
-							tileType = 0; // TODO: Handle edge sprites
-						}
+						var variation = (byte)(subindex * (byte2 + 1));
+						var tileType = byte1 % 16;
 
 						tileType--;
 						if (tileType < 0)
 						{
 							tileType = 15;
 						}
-
-						Console.WriteLine($"{byte3}: {byte4}, {byte5}, {byte6}");
 
 						var tilePos = new CPos(x + 1, y + 1);
 						Map.Tiles[tilePos] = new TerrainTile((ushort)tileType, variation);
@@ -355,11 +381,11 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				// What's after the tiles? Water/Taelon?
 				stream.ReadInt32(); // Always one
 				stream.ReadInt32(); // Always 256
-				int length = stream.ReadInt32(); // Byte length of remaining data
+				var length = stream.ReadInt32(); // Byte length of remaining data
 
 				var byte1Hash = new HashSet<byte>();
 				var byteList = new List<byte>();
-				for (int i = 0; i < length; i++)
+				for (var i = 0; i < length; i++)
 				{
 					var byte1 = stream.ReadUInt8();
 					if (!byte1Hash.Contains(byte1))
@@ -376,15 +402,15 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 					SetMapPlayers(scnFile, Players, MapPlayers);
 
 					// Place start locations
-					int i = 0;
+					var i = 0;
 					foreach (var scnSection in scnFile.Entries)
 					{
 						if (scnSection.Name != "SetStartLocation")
 							continue;
 
-						int divisor = 24;
-						int x = Convert.ToInt32(scnSection.Values[0]) / divisor;
-						int y = Convert.ToInt32(scnSection.Values[1]) / divisor;
+						var divisor = 24;
+						var x = Convert.ToInt32(scnSection.Values[0]) / divisor;
+						var y = Convert.ToInt32(scnSection.Values[1]) / divisor;
 						if (x != 0 && y != 0)
 						{
 							var ar = new ActorReference("mpspawn")
@@ -403,9 +429,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						if (scnSection.Name != "AddThingAt")
 							continue;
 
-						string type = scnSection.Values[1];
-						int x = Convert.ToInt32(scnSection.Values[2]);
-						int y = Convert.ToInt32(scnSection.Values[3]);
+						var type = scnSection.Values[1];
+						var x = Convert.ToInt32(scnSection.Values[2]);
+						var y = Convert.ToInt32(scnSection.Values[3]);
 
 						var matchingActor = string.Empty;
 
@@ -426,7 +452,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						}
 					}
 
-					int currentTeam = 0;
+					var currentTeam = 0;
 
 					if (!skipActors)
 					{
@@ -442,11 +468,11 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							if (scnSection.Name != "PutUnitAt")
 								continue;
 
-							int playerIndex = GetMatchingPlayerIndex(currentTeam); // to skip creeps and neutral if necessary
+							var playerIndex = GetMatchingPlayerIndex(currentTeam); // to skip creeps and neutral if necessary
 
-							string type = scnSection.Values[1];
-							int x = Convert.ToInt32(scnSection.Values[2]);
-							int y = Convert.ToInt32(scnSection.Values[3]);
+							var type = scnSection.Values[1];
+							var x = Convert.ToInt32(scnSection.Values[2]);
+							var y = Convert.ToInt32(scnSection.Values[3]);
 
 							var matchingActor = string.Empty;
 
@@ -479,11 +505,11 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							if (scnSection.Name != "AddBuildingAt")
 								continue;
 
-							int playerIndex = GetMatchingPlayerIndex(currentTeam); // to skip creeps and neutral if necessary
+							var playerIndex = GetMatchingPlayerIndex(currentTeam); // to skip creeps and neutral if necessary
 
-							string type = scnSection.Values[1];
-							int x = Convert.ToInt32(scnSection.Values[2]);
-							int y = Convert.ToInt32(scnSection.Values[3]);
+							var type = scnSection.Values[1];
+							var x = Convert.ToInt32(scnSection.Values[2]);
+							var y = Convert.ToInt32(scnSection.Values[3]);
 
 							var matchingActor = string.Empty;
 
@@ -492,21 +518,13 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							else if (!KnownUnknownBuildings.Contains(type))
 								throw new Exception("Unknown building name: " + type);
 
-							var isResource = type == "impww" || type == "impmn";
-							var ownerName = isResource
-								? "Neutral"
-								: MapPlayers.Players.Values.First(p => p.Team == playerIndex).Name;
-
-							if (isResource == true)
-							{
-								throw new ArgumentException("FART");
-							}
-
+							// Resources
+							var ownerName = MapPlayers.Players.Values.First(p => p.Team == playerIndex).Name;
 							if (x >= 0 && y >= 0 && !string.IsNullOrEmpty(matchingActor))
 							{
 								var ar = new ActorReference(matchingActor)
 								{
-									new LocationInit(new CPos(x + 1, y + 1)),
+									new LocationInit(new CPos(x, y)),
 									new OwnerInit(ownerName)
 								};
 
@@ -515,34 +533,24 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						}
 					}
 
-					// Do resources
 					foreach (var scnSection in scnFile.Entries)
 					{
 						if (scnSection.Name != "AddBuildingAt")
 							continue;
 
-						string type = scnSection.Values[1];
-						int x = Convert.ToInt32(scnSection.Values[2]);
-						int y = Convert.ToInt32(scnSection.Values[3]);
+						var type = scnSection.Values[1];
+						var x = Convert.ToInt32(scnSection.Values[2]);
+						var y = Convert.ToInt32(scnSection.Values[3]);
 
-						var isResource = type == "impww" || type == "impmn";
-						if (!isResource)
-							continue;
-
-						var matchingActor = string.Empty;
-
-						if (BuildingNames.ContainsKey(type))
-							matchingActor = BuildingNames[type];
-
-						if (x >= 0 && y >= 0 && !string.IsNullOrEmpty(matchingActor))
+						if (type == "impww")
 						{
-							var ar = new ActorReference(matchingActor)
-							{
-								new LocationInit(new CPos(x + 1, y + 1)),
-								new OwnerInit("Neutral")
-							};
-
-							Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
+							// Place water well
+							Map.Resources[new CPos(x, y)] = new ResourceTile(1, 255);
+						}
+						else if (type == "impmn")
+						{
+							// Place taelon
+							Map.Resources[new CPos(x, y)] = new ResourceTile(2, 255);
 						}
 					}
 				}
@@ -556,7 +564,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				Map.PlayerDefinitions = MapPlayers.ToMiniYaml();
 			}
 
-			var dest = Path.GetFileNameWithoutExtension(args[1]) + ".oramap";
+			var dest = Path.Combine("..\\..\\mods\\dr\\maps", Path.GetFileNameWithoutExtension(mapFilename).ToLowerInvariant() + ".oramap");
 
 			Map.Save(ZipFileLoader.Create(dest));
 			Console.WriteLine(dest + " saved.");

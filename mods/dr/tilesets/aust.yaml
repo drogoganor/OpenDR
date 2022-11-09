@@ -3,7 +3,7 @@ General:
 	Id: AUST
 	SheetSize: 1024
 	EditorTemplateOrder: Terrain
-	HeightDebugColors: AA0000
+	HeightDebugColors: 00000080, 00004480, 00008880, 0000CC80, 0000FF80, 4400CC80, 88008880, CC004480, FF110080, FF550080, FF990080, FFDD0080, DDFF0080, 99FF0080, 55FF0080, 11FF0080
 
 Terrain:
 	TerrainType@Clear:
@@ -99,13 +99,13 @@ Terrain:
 	TerrainType@SpringWater:
 		Type: SpringWater
 		TargetTypes: Ground
-		Color: 8470FF
-		RestrictPlayerColor: true
+		Color: 425EFF
+		RestrictPlayerColor: false
 	TerrainType@Taelon:
 		Type: Taelon
 		TargetTypes: Ground
-		Color: 948060
-		RestrictPlayerColor: true
+		Color: 51EF63
+		RestrictPlayerColor: false
 	TerrainType@Water:
 		Type: Water
 		TargetTypes: Water
@@ -2280,4 +2280,124 @@ Templates:
 			1: Clear
 			2: Clear
 			3: Clear
+	Template@240: # Shadows
+		Id: 240
+		Images: aust.til
+		Size: 1,1
+		Frames: 1088
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@241:
+		Id: 241
+		Images: aust.til
+		Size: 1,1
+		Frames: 1089
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@242:
+		Id: 242
+		Images: aust.til
+		Size: 1,1
+		Frames: 1090
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@243:
+		Id: 243
+		Images: aust.til
+		Size: 1,1
+		Frames: 1091
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@244:
+		Id: 244
+		Images: aust.til
+		Size: 1,1
+		Frames: 1092
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@245:
+		Id: 245
+		Images: aust.til
+		Size: 1,1
+		Frames: 1093
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@246:
+		Id: 246
+		Images: aust.til
+		Size: 1,1
+		Frames: 1094
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@247:
+		Id: 247
+		Images: aust.til
+		Size: 1,1
+		Frames: 1095
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@248:
+		Id: 248
+		Images: aust.til
+		Size: 1,1
+		Frames: 1096
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@249:
+		Id: 249
+		Images: aust.til
+		Size: 1,1
+		Frames: 1097
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@250:
+		Id: 250
+		Images: aust.til
+		Size: 1,1
+		Frames: 1098
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@251:
+		Id: 251
+		Images: aust.til
+		Size: 1,1
+		Frames: 1099
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@252:
+		Id: 252
+		Images: aust.til
+		Size: 1,1
+		Frames: 1100
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@253:
+		Id: 253
+		Images: aust.til
+		Size: 1,1
+		Frames: 1101
+		Categories: System
+		Tiles:
+			0: Clear
+	Template@254:
+		Id: 254
+		Images: aust.til
+		Size: 1,1
+		Frames: 1102
+		Categories: System
+		Tiles:
+			0: Clear
 

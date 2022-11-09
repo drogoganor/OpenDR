@@ -38,6 +38,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			var unpackedMapFiles = Directory.GetDirectories(targetPath);
 			foreach (var unpackedMapFile in unpackedMapFiles)
 			{
+				if (!unpackedMapFile.EndsWith("shellmap1"))
+					continue;
+
 				var package = new Folder(".").OpenPackage(unpackedMapFile, ModData.ModFiles);
 				if (package == null)
 				{
@@ -50,6 +53,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				map.Save(new Folder(unpackedMapFile));
 				Console.WriteLine(unpackedMapFile + " saved.");
 			}
+
+			return;
 
 			var packedMapFiles = Directory.GetFiles(targetPath, "*.oramap");
 			foreach (var packedMapFile in packedMapFiles)
@@ -76,10 +81,10 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			foreach (var cell in map.AllCells)
 			{
 				var tile = map.Tiles[cell];
-				var newTile = tile.Type - 1;
-				if (newTile < 0)
+				var newTile = tile.Type + 1;
+				if (newTile > 15)
 				{
-					newTile = 15;
+					newTile = 0;
 				}
 
 				map.Tiles[cell] = new TerrainTile((ushort)newTile, (byte)Game.CosmeticRandom.Next(8));

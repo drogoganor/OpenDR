@@ -79,9 +79,6 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Equal
-					#NeighborMatch@south-special:
-					#	Offset: 1, 0
-					#	Match: Below
 			EdgeMatch@sw-outer:
 				SelfMatchType: Below
 				SetType: 31
@@ -95,9 +92,6 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Below
-					#NeighborMatch@south:
-					#	Offset: 0, -1
-					#	Match: Below
 			EdgeMatch@se-outer:
 				SelfMatchType: Below
 				SetType: 30
@@ -124,12 +118,6 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Below
-					#NeighborMatch@east:
-					#	Offset: 1, 0
-					#	Match: Equal
-					#NeighborMatch@south:
-					#	Offset: 0, 1
-					#	Match: Below
 			EdgeMatch@nw-inner:
 				SelfMatchType: Below
 				SetType: 38
@@ -143,12 +131,6 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Equal
-					#NeighborMatch@east:
-					#	Offset: 1, 0
-					#	Match: Below
-					#NeighborMatch@south:
-					#	Offset: 0, 1
-					#	Match: Below
 			EdgeMatch@se-inner:
 				SelfMatchType: Equal
 				SetType: 40
@@ -162,12 +144,6 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Equal
-					#NeighborMatch@east:
-					#	Offset: 1, 0
-					#	Match: Equal
-					#NeighborMatch@south:
-					#	Offset: 0, 1
-					#	Match: Equal
 			EdgeMatch@sw-inner:
 				SelfMatchType: Equal
 				SetType: 41
@@ -181,12 +157,6 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Equal
-					#NeighborMatch@east:
-					#	Offset: 1, 0
-					#	Match: Equal
-					#NeighborMatch@south:
-					#	Offset: 0, 1
-					#	Match: Equal
 			EdgeMatch@ne-sw-bridge:
 				SelfMatchType: Below
 				SetType: 43
@@ -200,12 +170,6 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Equal
-					#NeighborMatch@east:
-					#	Offset: 1, 0
-					#	Match: Equal
-					#NeighborMatch@south:
-					#	Offset: 0, 1
-					#	Match: Equal
 			EdgeMatch@nw-se-bridge:
 				SelfMatchType: Equal
 				SetType: 42
@@ -219,9 +183,3 @@
 					NeighborMatch@west:
 						Offset: -1, 0
 						Match: Below
-					#NeighborMatch@east:
-					#	Offset: 1, 0
-					#	Match: Equal
-					#NeighborMatch@south:
-					#	Offset: 0, 1
-					#	Match: Equal

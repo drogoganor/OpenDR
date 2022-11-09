@@ -12,6 +12,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using OpenRA.FileFormats;
 using OpenRA.Graphics;
 using OpenRA.Mods.Dr.Traits;
 using OpenRA.Primitives;
@@ -38,7 +39,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
 
-			// readonly bool exportPng = false;
+			// readonly bool exportPng = true;
 			// public static int Counter = 0;
 			public DrTilFrame(SpriteFrameType type)
 			{
@@ -71,33 +72,27 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					Data[i] = s.ReadUInt8();
 				}
 
-				if (palette == null)
-				{
-				}
+				// if (exportPng)
+				// {
+				// 	var rgbByteArray = new List<byte>();
+				// 	for (var i = 0; i < TileSize * TileSize; i++)
+				// 	{
+				// 		if (palette == null)
+				// 		{
+				// 			var byteVal = (byte)(Data[i] * 4);
+				// 			rgbByteArray.AddRange(new[] { byteVal, byteVal, byteVal, (byte)255 });
+				// 		}
+				// 		else
+				// 		{
+				// 			var color = palette.GetColor(Data[i]);
+				// 			rgbByteArray.AddRange(new[] { color.R, color.G, color.B, (byte)255 });
+				// 		}
+				// 	}
 
-				/*
-				if (exportPng)
-				{
-					var rgbByteArray = new List<byte>();
-					for (var i = 0; i < TileSize * TileSize; i++)
-					{
-						if (palette == null)
-						{
-							var byteVal = (byte)(Data[i] * 4);
-							rgbByteArray.AddRange(new[] { byteVal, byteVal, byteVal, (byte)255 });
-						}
-						else
-						{
-							var color = palette.GetColor(Data[i]);
-							rgbByteArray.AddRange(new[] { color.R, color.G, color.B, (byte)255 });
-						}
-					}
-
-					var png = new Png(rgbByteArray.ToArray(), SpriteFrameType.Rgba32, TileSize, TileSize);
-					png.Save($"C:\\temp\\{Counter:D4}-til.png");
-					Counter++;
-				}
-				*/
+				// 	var png = new Png(rgbByteArray.ToArray(), SpriteFrameType.Rgba32, TileSize, TileSize);
+				// 	png.Save($"C:\\temp\\{(Counter - 248):D4}-til.png");
+				// 	Counter++;
+				// }
 
 				Offset = new float2(0, 0);
 				FrameSize = new Size(TileSize, TileSize);
@@ -176,15 +171,12 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 				var frame = new DrTilFrame(s, isMask: true);
 				maskFrames.Add(frame);
-
-				// frames.Add(frame);
 			}
 
+			// Editor mask select tiles (discard)
 			for (var maskTemplateType = 0; maskTemplateType < 4; maskTemplateType++)
 			{
 				var frame = new DrTilFrame(s, isMask: true);
-
-				// frames.Add(frame);
 			}
 
 			var cornerIndices = new List<List<int>>
@@ -215,7 +207,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				var south = CombineMaskTilesAdditive(sw, se);
 				var west = CombineMaskTilesAdditive(sw, nw);
 
-				// frames.AddRange(new[] { MaskToRgbaTile(north), MaskToRgbaTile(east), MaskToRgbaTile(south), MaskToRgbaTile(west) });
 				var neInner = CombineMaskTilesAdditive(north, east);
 				var nwInner = CombineMaskTilesAdditive(north, west);
 				var swInner = CombineMaskTilesAdditive(south, west);
@@ -224,7 +215,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				var neSwBridge = CombineMaskTilesSubtractive(neInner, swInner);
 				var nwSeBridge = CombineMaskTilesSubtractive(nwInner, seInner);
 
-				// frames.AddRange(new[] { MaskToRgbaTile(neInner), MaskToRgbaTile(nwInner), MaskToRgbaTile(swInner), MaskToRgbaTile(seInner) });
 				for (var tileIndex = 2; tileIndex < 16; tileIndex++)
 				{
 					var mappedTileIndex = tileIndex * 8;
@@ -288,6 +278,41 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			byte shadowAlpha = 50;
 			byte shadowColor = 0;
 
+
+			//var combinedShadowMaskTiles = new DrTilFrame[]
+			//{
+			//	//CombineMaskTilesAdditive(maskFrames[18], maskFrames[35]), // N High
+			//	//CombineMaskTilesAdditive(maskFrames[35], maskFrames[4]), // E High
+			//	//CombineMaskTilesAdditive(maskFrames[4], maskFrames[9]), // S High
+			//	//CombineMaskTilesAdditive(maskFrames[9], maskFrames[18]), // W High
+			//	maskFrames[50], // N High
+			//	maskFrames[36], // E High
+			//	maskFrames[12], // S High
+			//	maskFrames[25], // W High
+
+			//	CombineMaskTilesAdditive(maskFrames[2], maskFrames[3]), // N Med
+			//	CombineMaskTilesAdditive(maskFrames[3], maskFrames[0]), // E Med
+			//	CombineMaskTilesAdditive(maskFrames[0], maskFrames[1]), // S Med
+			//	CombineMaskTilesAdditive(maskFrames[1], maskFrames[2]), // W Med
+
+			//	CombineMaskTilesAdditive(maskFrames[14], maskFrames[15]), // N Low
+			//	CombineMaskTilesAdditive(maskFrames[24], maskFrames[27]), // E Low
+			//	CombineMaskTilesAdditive(maskFrames[48], maskFrames[49]), // S Low
+			//	CombineMaskTilesAdditive(maskFrames[1], maskFrames[2]), // W Low
+			//};
+
+			var combinedShadowMaskTiles = new DrTilFrame[]
+			{
+				maskFrames[50], // N High
+				maskFrames[36], // E High
+				maskFrames[12], // S High
+				maskFrames[25], // W High
+				CombineMaskTilesAdditive(maskFrames[2], maskFrames[3]), // N Med
+				CombineMaskTilesAdditive(maskFrames[3], maskFrames[0]), // E Med
+				CombineMaskTilesAdditive(maskFrames[0], maskFrames[1]), // S Med
+				CombineMaskTilesAdditive(maskFrames[1], maskFrames[2]), // W Med
+			};
+
 			for (var maskIndex = 0; maskIndex < seaTiles.Count; maskIndex++)
 			{
 				var seaTileMask = seaTiles[maskIndex];
@@ -300,6 +325,23 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			return frames.ToArray();
 
 			////////////////////////////////////////////////
+
+			DrTilFrame InvertMaskTile(DrTilFrame mask)
+			{
+				var newFrame = new DrTilFrame(SpriteFrameType.Rgba32);
+				for (var i = 0; i < 24 * 24; i++)
+				{
+					var newIndex = i * 4;
+					var invertColor = (byte)(255 - (mask.Data[i] * 4) + 3);
+
+					newFrame.Data[newIndex] = invertColor;
+					newFrame.Data[newIndex + 1] = invertColor;
+					newFrame.Data[newIndex + 2] = invertColor;
+					newFrame.Data[newIndex + 3] = invertColor;
+				}
+
+				return newFrame;
+			}
 
 			DrTilFrame ShadowTile(DrTilFrame mask, byte color, byte alpha)
 			{
