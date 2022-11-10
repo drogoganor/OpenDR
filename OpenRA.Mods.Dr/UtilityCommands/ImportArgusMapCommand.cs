@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using OpenRA.FileSystem;
-using OpenRA.Mods.Dr.FileFormats;
 using OpenRA.Primitives;
 
 namespace OpenRA.Mods.Dr.UtilityCommands
@@ -29,8 +28,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		public ModData ModData;
 		public Map Map;
 		public List<string> Players = new List<string>();
-		public MapPlayers MapPlayers;
-		int numMultiStarts = 0;
 		protected bool skipActors = true;
 
 		protected bool ValidateArguments(string[] args)
@@ -141,7 +138,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				stream.Seek(sectionLength, SeekOrigin.Current);
 				headerString = stream.ReadASCII(4);
 
-
 				if (headerString == "ALOW")
 				{
 					sectionLength = stream.ReadUInt32();
@@ -243,14 +239,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						Map.Tiles[new CPos(x + 1, y + 1)] = new TerrainTile(tile, 0);
 					}
 				}
-
-				// Reset teams var
-				foreach (var playersValue in MapPlayers.Players.Values)
-				{
-					playersValue.Team = 0;
-				}
-
-				Map.PlayerDefinitions = MapPlayers.ToMiniYaml();
 			}
 
 			var dest = Path.GetFileNameWithoutExtension(args[1]) + ".oramap";
@@ -283,45 +271,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				mapPlayers.Players.Add(section, pr);
 			else
 				mapPlayers.Players[section] = pr;
-		}
-
-		protected virtual int GetMatchingPlayerIndex(int index)
-		{
-			if (index > numMultiStarts)
-			{
-				// Just add to neutral
-				return 0;
-			}
-
-			return index + 2;
-		}
-
-		protected virtual void SetMapPlayers(ScnFile file, List<string> players, MapPlayers mapPlayers)
-		{
-			int i = 0;
-			foreach (var scnSection in file.Entries)
-			{
-				if (scnSection.Name != "SetStartLocation")
-					continue;
-
-				int x = Convert.ToInt32(scnSection.Values[0]);
-				int y = Convert.ToInt32(scnSection.Values[1]);
-				if (x != 0 && y != 0)
-				{
-					var multi = new PlayerReference
-					{
-						Name = "Multi" + i,
-						Team = i + 2,
-						Playable = true,
-						Faction = "Random"
-					};
-
-					mapPlayers.Players.Add(multi.Name, multi);
-					i++;
-				}
-			}
-
-			numMultiStarts = i;
 		}
 	}
 }

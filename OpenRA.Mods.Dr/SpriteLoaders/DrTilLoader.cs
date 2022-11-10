@@ -22,6 +22,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 {
 	public class DrTilLoader : ISpriteLoader
 	{
+		readonly bool exportPng = false;
+
 		public class TilHeader
 		{
 			public string Magic1;
@@ -39,8 +41,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
 
-			// readonly bool exportPng = true;
-			// public static int Counter = 0;
 			public DrTilFrame(SpriteFrameType type)
 			{
 				Type = type;
@@ -56,7 +56,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				Size = FrameSize;
 			}
 
-			public DrTilFrame(Stream s, bool isMask = false, ImmutablePalette palette = null)
+			public DrTilFrame(Stream s, bool isMask = false)
 			{
 				Type = SpriteFrameType.Indexed8;
 
@@ -71,28 +71,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				{
 					Data[i] = s.ReadUInt8();
 				}
-
-				// if (exportPng)
-				// {
-				// 	var rgbByteArray = new List<byte>();
-				// 	for (var i = 0; i < TileSize * TileSize; i++)
-				// 	{
-				// 		if (palette == null)
-				// 		{
-				// 			var byteVal = (byte)(Data[i] * 4);
-				// 			rgbByteArray.AddRange(new[] { byteVal, byteVal, byteVal, (byte)255 });
-				// 		}
-				// 		else
-				// 		{
-				// 			var color = palette.GetColor(Data[i]);
-				// 			rgbByteArray.AddRange(new[] { color.R, color.G, color.B, (byte)255 });
-				// 		}
-				// 	}
-
-				// 	var png = new Png(rgbByteArray.ToArray(), SpriteFrameType.Rgba32, TileSize, TileSize);
-				// 	png.Save($"C:\\temp\\{(Counter - 248):D4}-til.png");
-				// 	Counter++;
-				// }
 
 				Offset = new float2(0, 0);
 				FrameSize = new Size(TileSize, TileSize);
@@ -130,14 +108,14 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			{
 				for (var types = 0; types < 16; types++)
 				{
-					var frame = new DrTilFrame(s, palette: palette);
+					var frame = new DrTilFrame(s);
 					frames.Add(frame);
 				}
 			}
 
 			for (var waterFrame = 0; waterFrame < 64; waterFrame++)
 			{
-				var frame = new DrTilFrame(s, isMask: true, palette: palette);
+				var frame = new DrTilFrame(s, isMask: true);
 				frames.Add(frame);
 			}
 
@@ -150,7 +128,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 				for (var shoreType = 0; shoreType < 14; shoreType++)
 				{
-					var frame = new DrTilFrame(s, palette: palette);
+					var frame = new DrTilFrame(s);
 					frames.Add(frame);
 				}
 
@@ -275,57 +253,37 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				}
 			}
 
+			/*
 			byte shadowAlpha = 50;
 			byte shadowColor = 0;
 
-
-			//var combinedShadowMaskTiles = new DrTilFrame[]
-			//{
-			//	//CombineMaskTilesAdditive(maskFrames[18], maskFrames[35]), // N High
-			//	//CombineMaskTilesAdditive(maskFrames[35], maskFrames[4]), // E High
-			//	//CombineMaskTilesAdditive(maskFrames[4], maskFrames[9]), // S High
-			//	//CombineMaskTilesAdditive(maskFrames[9], maskFrames[18]), // W High
-			//	maskFrames[50], // N High
-			//	maskFrames[36], // E High
-			//	maskFrames[12], // S High
-			//	maskFrames[25], // W High
-
-			//	CombineMaskTilesAdditive(maskFrames[2], maskFrames[3]), // N Med
-			//	CombineMaskTilesAdditive(maskFrames[3], maskFrames[0]), // E Med
-			//	CombineMaskTilesAdditive(maskFrames[0], maskFrames[1]), // S Med
-			//	CombineMaskTilesAdditive(maskFrames[1], maskFrames[2]), // W Med
-
-			//	CombineMaskTilesAdditive(maskFrames[14], maskFrames[15]), // N Low
-			//	CombineMaskTilesAdditive(maskFrames[24], maskFrames[27]), // E Low
-			//	CombineMaskTilesAdditive(maskFrames[48], maskFrames[49]), // S Low
-			//	CombineMaskTilesAdditive(maskFrames[1], maskFrames[2]), // W Low
-			//};
-
 			var combinedShadowMaskTiles = new DrTilFrame[]
 			{
+				CombineMaskTilesAdditive(maskFrames[0], maskFrames[50]), // N High Inner
 				maskFrames[50], // N High
-				maskFrames[36], // E High
-				maskFrames[12], // S High
-				maskFrames[25], // W High
-				CombineMaskTilesAdditive(maskFrames[2], maskFrames[3]), // N Med
-				CombineMaskTilesAdditive(maskFrames[3], maskFrames[0]), // E Med
-				CombineMaskTilesAdditive(maskFrames[0], maskFrames[1]), // S Med
-				CombineMaskTilesAdditive(maskFrames[1], maskFrames[2]), // W Med
+				CombineMaskTilesAdditive(maskFrames[35], maskFrames[2]), // N High to Med
+				CombineMaskTilesAdditive(maskFrames[3], maskFrames[2]), // N Med
+				CombineMaskTilesAdditive(maskFrames[3], maskFrames[14]), // N Med to Low
+				CombineMaskTilesAdditive(maskFrames[14], maskFrames[15]), // N Low
+				maskFrames[15], // N Low Outer
 			};
 
-			for (var maskIndex = 0; maskIndex < seaTiles.Count; maskIndex++)
+			for (var maskIndex = 0; maskIndex < combinedShadowMaskTiles.Length; maskIndex++)
 			{
-				var seaTileMask = seaTiles[maskIndex];
-				frames.Add(ShadowTile(maskFrames[seaTileMask], shadowColor, shadowAlpha));
+				var combinedShadowMaskTile = combinedShadowMaskTiles[maskIndex];
+				frames.Add(ShadowTile(combinedShadowMaskTile, 255, 255));
 			}
 
-			frames.Add(FullShadowTile(shadowColor, shadowAlpha));
+			// frames.Add(FullShadowTile(shadowColor, shadowAlpha));
+			frames.Add(maskFrames[124]);
+			*/
 
 			s.Position = start;
 			return frames.ToArray();
 
 			////////////////////////////////////////////////
 
+			/*
 			DrTilFrame InvertMaskTile(DrTilFrame mask)
 			{
 				var newFrame = new DrTilFrame(SpriteFrameType.Rgba32);
@@ -372,6 +330,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 				return newFrame;
 			}
+			*/
 
 			DrTilFrame MaskTile(DrTilFrame source, DrTilFrame mask)
 			{
@@ -451,7 +410,32 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			frames = ParseFrames(s, palette);
 
-			// DrTilFrame.Counter = 0;
+			if (exportPng)
+			{
+				var tileSize = 24;
+				for (var tileIndex = 0; tileIndex < frames.Length; tileIndex++)
+				{
+					var tile = frames[tileIndex];
+					var rgbByteArray = new List<byte>();
+					for (var i = 0; i < tileSize * tileSize; i++)
+					{
+						if (palette == null)
+						{
+							var byteVal = (byte)(tile.Data[i] * 4);
+							rgbByteArray.AddRange(new[] { byteVal, byteVal, byteVal, (byte)255 });
+						}
+						else
+						{
+							var color = palette.GetColor(tile.Data[i]);
+							rgbByteArray.AddRange(new[] { color.R, color.G, color.B, (byte)255 });
+						}
+					}
+
+					var png = new Png(rgbByteArray.ToArray(), SpriteFrameType.Rgba32, tileSize, tileSize);
+					png.Save($"C:\\temp\\{tileIndex:D4}-til.png");
+				}
+			}
+
 			return true;
 		}
 	}

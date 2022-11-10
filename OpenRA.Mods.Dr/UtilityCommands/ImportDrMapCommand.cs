@@ -13,7 +13,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Security.AccessControl;
 using OpenRA.FileSystem;
 using OpenRA.Mods.Dr.FileFormats;
 using OpenRA.Primitives;
@@ -630,8 +629,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				if (scnSection.Name != "SetStartLocation")
 					continue;
 
-				int x = Convert.ToInt32(scnSection.Values[0]);
-				int y = Convert.ToInt32(scnSection.Values[1]);
+				var x = Convert.ToInt32(scnSection.Values[0]);
+				var y = Convert.ToInt32(scnSection.Values[1]);
 				if (x != 0 && y != 0)
 				{
 					var multi = new PlayerReference

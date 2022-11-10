@@ -179,9 +179,8 @@ namespace OpenRA.Mods.Dr.Traits
 
 				currentElevation += (thisHeight - rightHeight) * 2;
 
-				//if (scrollIndex % 2 == 0)
-				//	currentCell += new CVec(0, 1);
-
+				// if (scrollIndex % 2 == 0)
+				// 	currentCell += new CVec(0, 1);
 				if (currentElevation > 0)
 				{
 					// Place shadow
@@ -200,7 +199,8 @@ namespace OpenRA.Mods.Dr.Traits
 				currentElevation -= 1;
 				currentCell = rightCell;
 				scrollIndex++;
-			} while (currentElevation > 1);
+			}
+			while (currentElevation > 1);
 		}
 
 		void OnCellEntryChanged(CPos cell)
@@ -223,10 +223,6 @@ namespace OpenRA.Mods.Dr.Traits
 					ClearEdgeTile(newCell);
 					shimLayer.Clear(newCell);
 
-					// TODO: Is this even required?
-					// var thisTile = map.Tiles[newCell];
-					// if (thisTile.Type == 15)
-					// 	continue;
 					var edges = GetEdgeTiles(newCell);
 					CreateEdgesForMatches(edges);
 				}
