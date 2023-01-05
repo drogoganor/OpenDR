@@ -170,21 +170,21 @@ namespace OpenRA.Mods.Dr.Traits
 
 			do
 			{
-				var rightCell = currentCell + new CVec(1, 0);
-				if (!CellInMap(map, new CPos(rightCell.X, rightCell.Y)) || !CellInMap(map, new CPos(currentCell.X, currentCell.Y)))
+				var leftCell = currentCell - new CVec(1, 0);
+				if (!CellInMap(map, new CPos(leftCell.X, leftCell.Y)) || !CellInMap(map, new CPos(currentCell.X, currentCell.Y)))
 					break;
 
 				var thisHeight = map.Height[currentCell];
-				var rightHeight = map.Height[rightCell];
+				var leftHeight = map.Height[leftCell];
 
-				currentElevation += (thisHeight - rightHeight) * 2;
+				currentElevation += leftHeight - thisHeight;
 
 				// if (scrollIndex % 2 == 0)
 				// 	currentCell += new CVec(0, 1);
 				if (currentElevation > 0)
 				{
 					// Place shadow
-					ushort shadowTileType = 254;
+					ushort shadowTileType = 240;
 					var shadowTile = new TerrainTile(shadowTileType, 0);
 
 					if (terrainInfo.Templates.TryGetValue(shadowTileType, out var template))
@@ -197,7 +197,7 @@ namespace OpenRA.Mods.Dr.Traits
 				}
 
 				currentElevation -= 1;
-				currentCell = rightCell;
+				currentCell += new CVec(1, 0);
 				scrollIndex++;
 			}
 			while (currentElevation > 1);
@@ -487,7 +487,7 @@ namespace OpenRA.Mods.Dr.Traits
 			{
 				for (var x = 0; x < template.Size.X; x++)
 				{
-					var tile = new TerrainTile(template.Id, (byte)(i++));
+					var tile = new TerrainTile(template.Id, (byte)i++);
 					if (!terrainInfo.TryGetTileInfo(tile, out var tileInfo))
 						continue;
 
@@ -495,7 +495,7 @@ namespace OpenRA.Mods.Dr.Traits
 					var u = map.Grid.Type == MapGridType.Rectangular ? x : (x - y) / 2f;
 					var v = map.Grid.Type == MapGridType.Rectangular ? y : (x + y) / 2f;
 
-					var tl = new float2(u * tileSize.Width, (v - 0.5f * tileInfo.Height) * tileSize.Height) - 0.5f * sprite.Size;
+					var tl = new float2(u * tileSize.Width, (v - (0.5f * tileInfo.Height)) * tileSize.Height) - (0.5f * sprite.Size);
 					var rect = new Rectangle((int)(tl.X + sprite.Offset.X), (int)(tl.Y + sprite.Offset.Y), (int)sprite.Size.X, (int)sprite.Size.Y);
 					templateRect = templateRect.HasValue ? Rectangle.Union(templateRect.Value, rect) : rect;
 				}
@@ -524,7 +524,7 @@ namespace OpenRA.Mods.Dr.Traits
 					var sprite = tileCache.TileSprite(tile, 0);
 					var u = gridType == MapGridType.Rectangular ? x : (x - y) / 2f;
 					var v = gridType == MapGridType.Rectangular ? y : (x + y) / 2f;
-					var offset = (new float2(u * ts.Width, (v - 0.5f * tileInfo.Height) * ts.Height) - 0.5f * sprite.Size.XY).ToInt2();
+					var offset = (new float2(u * ts.Width, (v - (0.5f * tileInfo.Height)) * ts.Height) - (0.5f * sprite.Size.XY)).ToInt2();
 					var palette = template.Palette ?? terrainInfo.Palette;
 
 					yield return new UISpriteRenderable(sprite, WPos.Zero, origin + offset, 0, wr.Palette(palette), scale);

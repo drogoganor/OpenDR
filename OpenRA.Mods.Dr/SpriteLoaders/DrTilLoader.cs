@@ -253,10 +253,11 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				}
 			}
 
-			/*
 			byte shadowAlpha = 50;
 			byte shadowColor = 0;
+			frames.Add(FullShadowTile(shadowColor, shadowAlpha));
 
+			/*
 			var combinedShadowMaskTiles = new DrTilFrame[]
 			{
 				CombineMaskTilesAdditive(maskFrames[0], maskFrames[50]), // N High Inner
@@ -315,6 +316,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 				return newFrame;
 			}
+			*/
 
 			DrTilFrame FullShadowTile(byte color, byte alpha)
 			{
@@ -330,7 +332,6 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 				return newFrame;
 			}
-			*/
 
 			DrTilFrame MaskTile(DrTilFrame source, DrTilFrame mask)
 			{
