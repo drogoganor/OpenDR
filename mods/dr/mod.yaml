@@ -275,7 +275,7 @@ SoundFormats: Aud, Wav
 
 SpriteFormats: DrSpr, DrTil, DrCrs, ShpTD, TmpRA, TmpTD, ShpTS, PngSheet
 
-TerrainFormat: DefaultTerrain
+TerrainFormat: DrTerrain
 
 SpriteSequenceFormat: DrTilesetSpecificSpriteSequence
 

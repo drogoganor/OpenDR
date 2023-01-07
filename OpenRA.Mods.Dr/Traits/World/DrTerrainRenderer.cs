@@ -16,6 +16,7 @@ using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Terrain;
 using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.Dr.Terrain;
 using OpenRA.Primitives;
 using OpenRA.Traits;
 
@@ -27,10 +28,27 @@ namespace OpenRA.Mods.Dr.Traits
 		[FieldLoader.LoadUsing("LoadEdges")]
 		public Dictionary<string, DrTerrainEdgeInfo> Edges;
 
+		[FieldLoader.LoadUsing("LoadShadowEdges")]
+		public Dictionary<string, DrTerrainEdgeInfo> ShadowEdges;
+
 		static object LoadEdges(MiniYaml yaml)
 		{
 			var retList = new Dictionary<string, DrTerrainEdgeInfo>();
 			var shorelines = yaml.Nodes.First(x => x.Key == "Edges");
+			foreach (var node in shorelines.Value.Nodes.Where(n => n.Key.StartsWith("EdgeMatch")))
+			{
+				var ret = new DrTerrainEdgeInfo();
+				FieldLoader.Load(ret, node.Value);
+				retList.Add(node.Key, ret);
+			}
+
+			return retList;
+		}
+
+		static object LoadShadowEdges(MiniYaml yaml)
+		{
+			var retList = new Dictionary<string, DrTerrainEdgeInfo>();
+			var shorelines = yaml.Nodes.First(x => x.Key == "ShadowEdges");
 			foreach (var node in shorelines.Value.Nodes.Where(n => n.Key.StartsWith("EdgeMatch")))
 			{
 				var ret = new DrTerrainEdgeInfo();
@@ -52,7 +70,7 @@ namespace OpenRA.Mods.Dr.Traits
 				failed = true;
 			};
 
-			var tileCache = new DefaultTileCache((DefaultTerrain)terrainInfo, onMissingImage);
+			var tileCache = new DrTileCache((DrTerrain)terrainInfo, onMissingImage);
 			foreach (var t in terrainInfo.Templates)
 			{
 				var templateInfo = (DefaultTerrainTemplateInfo)t.Value;
@@ -103,8 +121,10 @@ namespace OpenRA.Mods.Dr.Traits
 		TerrainSpriteLayer shimLayer;
 		readonly TerrainSpriteLayer[] shadowLayers;
 
-		readonly DefaultTerrain terrainInfo;
-		readonly DefaultTileCache tileCache;
+		readonly CellLayer<TerrainTile>[] shadowTiles;
+
+		readonly DrTerrain terrainInfo;
+		readonly DrTileCache tileCache;
 		WorldRenderer worldRenderer;
 		bool disposed;
 
@@ -112,11 +132,18 @@ namespace OpenRA.Mods.Dr.Traits
 		{
 			map = world.Map;
 			this.info = info;
-			terrainInfo = map.Rules.TerrainInfo as DefaultTerrain;
+			terrainInfo = map.Rules.TerrainInfo as DrTerrain;
 			if (terrainInfo == null)
 				throw new InvalidDataException("TerrainRenderer can only be used with the DefaultTerrain parser");
 
-			tileCache = new DefaultTileCache(terrainInfo);
+			shadowTiles = new CellLayer<TerrainTile>[NumShadowLayers];
+
+			for (var i = 0; i < shadowTiles.Length; i++)
+			{
+				shadowTiles[i] = new CellLayer<TerrainTile>(map);
+			}
+
+			tileCache = new DrTileCache(terrainInfo);
 			edgeLayers = new TerrainSpriteLayer[NumEdgeLayers];
 			shadowLayers = new TerrainSpriteLayer[NumShadowLayers];
 		}
@@ -140,14 +167,25 @@ namespace OpenRA.Mods.Dr.Traits
 			{
 				OnCellEntryChanged(cell);
 
+				// Build shadow tiles
 				if (info.RenderShadows)
-					OnCellEntryHeightChanged(cell);
+				{
+					CalculateShadowTiles(cell, 0, 1, 1);
+					CalculateShadowTiles(cell, 1, 4, 3);
+				}
+			}
+
+			// Create shadow tile sprites
+			if (info.RenderShadows)
+			{
+				foreach (var cell in map.AllCells)
+				{
+					UpdateShadowEdgeCell(cell, 0);
+					UpdateShadowEdgeCell(cell, 1);
+				}
 			}
 
 			map.Tiles.CellEntryChanged += OnCellEntryChanged;
-
-			if (info.RenderShadows)
-				map.Height.CellEntryChanged += OnCellEntryHeightChanged;
 		}
 
 		bool CellInMap(Map map, CPos pos)
@@ -161,12 +199,12 @@ namespace OpenRA.Mods.Dr.Traits
 			return true;
 		}
 
-		void OnCellEntryHeightChanged(CPos cell)
+		void CalculateShadowTiles(CPos cell, int shadowLayerIndex, int falloff, int minGradient)
 		{
+			const int MaxElevation = 10;
 			var currentElevation = 0;
 			var currentCell = cell;
 			var scrollIndex = 0;
-			string palette = null;
 
 			do
 			{
@@ -174,33 +212,156 @@ namespace OpenRA.Mods.Dr.Traits
 				if (!CellInMap(map, new CPos(leftCell.X, leftCell.Y)) || !CellInMap(map, new CPos(currentCell.X, currentCell.Y)))
 					break;
 
-				var thisHeight = map.Height[currentCell];
 				var leftHeight = map.Height[leftCell];
+				var thisHeight = map.Height[currentCell];
 
 				currentElevation += leftHeight - thisHeight;
 
-				// if (scrollIndex % 2 == 0)
-				// 	currentCell += new CVec(0, 1);
-				if (currentElevation > 0)
+				// Cap max shadow length
+				currentElevation = Math.Min(currentElevation, MaxElevation);
+
+				if (currentElevation > minGradient)
 				{
 					// Place shadow
-					ushort shadowTileType = 240;
+					ushort shadowTileType = 254;
 					var shadowTile = new TerrainTile(shadowTileType, 0);
 
-					if (terrainInfo.Templates.TryGetValue(shadowTileType, out var template))
-						palette = ((DefaultTerrainTemplateInfo)template).Palette ?? terrainInfo.Palette;
-
-					var sprite = tileCache.TileSprite(shadowTile);
-					var paletteReference = worldRenderer.Palette(palette);
-
-					shadowLayers[0].Update(currentCell, sprite, paletteReference);
+					var shadowLayer = shadowTiles[shadowLayerIndex];
+					shadowLayer[currentCell] = shadowTile;
 				}
 
-				currentElevation -= 1;
+				currentElevation -= falloff;
 				currentCell += new CVec(1, 0);
 				scrollIndex++;
 			}
-			while (currentElevation > 1);
+			while (currentElevation > minGradient);
+		}
+
+		EdgeTileResult[] GetShadowEdgeTiles(CPos newCell, int shadowLayerIndex)
+		{
+			var results = new List<EdgeTileResult>();
+			for (var y = -1; y <= 0; y++)
+			{
+				for (var x = -1; x <= 0; x++)
+				{
+					var offset = new CVec(x, y);
+					var neighborPos = newCell + offset;
+					if (map.Tiles.Contains(neighborPos))
+					{
+						var shadowLayer = shadowTiles[shadowLayerIndex];
+
+						var neighbour = shadowLayer[neighborPos];
+						results.Add(new EdgeTileResult
+						{
+							Cell = neighborPos,
+							Offset = offset,
+							Tile = neighbour,
+							Self = neighborPos == newCell
+						});
+					}
+				}
+			}
+
+			return results.ToArray();
+		}
+
+		void UpdateShadowEdgeCell(CPos cell, int shadowLayerIndex)
+		{
+			if (!CellInMap(map, cell))
+				return;
+
+			var edges = GetShadowEdgeTiles(cell, shadowLayerIndex);
+			CreateShadowEdgesForMatches(edges, shadowLayerIndex);
+		}
+
+		void CreateShadowEdgesForMatches(EdgeTileResult[] edges, int shadowLayerIndex)
+		{
+			var self = edges.First(x => x.Self == true);
+			var tile = self.Tile;
+			var matchEdges = info.ShadowEdges.Values;
+
+			var usedEdges = new HashSet<ushort>();
+
+			// Go through each match set
+			var foundMatch = false;
+			ushort match = 0;
+			foreach (var matchEdge in matchEdges)
+			{
+				var selfValue = tile.Type;
+				var isSelfMatchBelow = matchEdge.SelfMatchType == EdgeMatchType.Below;
+				var allDependentTilesMatch = true;
+
+				var validLowestEqualNeighbor = GetLowestEqualNeighbor(edges, matchEdge, out var highestValue);
+				if (isSelfMatchBelow && validLowestEqualNeighbor)
+				{
+					selfValue = highestValue.Value;
+
+					// Bomb out if our highest neighbour is equal to the current tile type
+					if (highestValue.Value == 0 || highestValue.Value == tile.Type)
+						continue;
+				}
+
+				// Go through each neighbor in the set
+				var matchNeighbors = matchEdge.Neighbors.Values;
+				var index = 0;
+				foreach (var matchNeighbor in matchNeighbors)
+				{
+					// TODO: Implied association here by index, but will be ok if it's ordered in terrainrenderer.yaml
+					// var neighbour = edges.First(x => x.Offset == matchNeighbor.Offset);
+					var neighbour = edges[index];
+
+					if (matchNeighbor.Match == EdgeMatchType.Below)
+					{
+						if (neighbour.Tile.Type >= selfValue)
+						{
+							allDependentTilesMatch = false;
+							break;
+						}
+					}
+					else if (matchNeighbor.Match == EdgeMatchType.Equal)
+					{
+						if (neighbour.Tile.Type < selfValue)
+						{
+							allDependentTilesMatch = false;
+							break;
+						}
+					}
+
+					index++;
+				}
+
+				if (!allDependentTilesMatch)
+					continue;
+
+				// Only allow one match per tile type
+				if (usedEdges.Contains(tile.Type))
+					continue;
+
+				usedEdges.Add(tile.Type);
+
+				// Match is good
+				foundMatch = true;
+				match = matchEdge.SetType;
+			}
+
+			if (!foundMatch && self.Tile.Type == 254)
+				SetShadowTile(self.Cell, 254, shadowLayerIndex);
+			else
+				SetShadowTile(self.Cell, match, shadowLayerIndex);
+		}
+
+		void SetShadowTile(CPos cell, ushort type, int shadowLayerIndex)
+		{
+			string palette = null;
+			var edgeTile = new TerrainTile(type, 0);
+
+			if (terrainInfo.EdgeTemplates.TryGetValue(type, out var template))
+				palette = ((DefaultTerrainTemplateInfo)template).Palette ?? terrainInfo.Palette;
+
+			var sprite = tileCache.TileSprite(edgeTile);
+			var paletteReference = worldRenderer.Palette(palette);
+
+			shadowLayers[shadowLayerIndex].Update(cell, sprite, paletteReference);
 		}
 
 		void OnCellEntryChanged(CPos cell)
@@ -237,13 +398,6 @@ namespace OpenRA.Mods.Dr.Traits
 			var tile = self.Tile;
 			var matchEdges = info.Edges.Values;
 
-			// TODO: This still has a bug integrating with the shorelines.
-			// We need to check if this tile is a shoreline and not permit any edges or shims to be created.
-
-			// NOTE: The difference between the SelfMatch of Equal and Below:
-			// When set to Equal, the current value of the tile should be used.
-			// When set to Below, the value is Equal to the highest Above neighbor.
-			// We need to calculate the highest Equal neighbor value before determining which neighbors are above or below.
 			ClearEdgeTile(self.Cell);
 			shimLayer.Clear(self.Cell);
 
@@ -275,7 +429,7 @@ namespace OpenRA.Mods.Dr.Traits
 				var index = 0;
 				foreach (var matchNeighbor in matchNeighbors)
 				{
-					// TODO: Dodgy association here by index, but should be ordered in terrainrenderer.yaml
+					// TODO: Implied association here by index, but will be ok if it's ordered in terrainrenderer.yaml
 					// var neighbour = edges.First(x => x.Offset == matchNeighbor.Offset);
 					var neighbour = edges[index];
 
@@ -341,7 +495,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 				var edgeTile = new TerrainTile(resultTileType, 0);
 
-				if (terrainInfo.Templates.TryGetValue(edgeTile.Type, out var template))
+				if (terrainInfo.EdgeTemplates.TryGetValue(edgeTile.Type, out var template))
 					palette = ((DefaultTerrainTemplateInfo)template).Palette ?? terrainInfo.Palette;
 
 				var sprite = tileCache.TileSprite(edgeTile);

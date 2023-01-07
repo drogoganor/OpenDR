@@ -119,7 +119,7 @@
 	MapEditorData:
 		Categories: Building
 	RepairableBuilding:
-		RepairStep: 5
+		RepairStep: 8
 		PlayerExperience: 25
 		RepairingNotification: Repairing
 	EngineerRepairable:
