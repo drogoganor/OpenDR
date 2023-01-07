@@ -253,12 +253,21 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				}
 			}
 
-			// Shadow tiles
-			byte shadowAlpha = 50;
-			byte shadowColor = 0;
+			AddShadowFrames();
 
-			foreach (var cornerSet in cornerIndices)
+			s.Position = start;
+			return frames.ToArray();
+
+			////////////////////////////////////////////////
+
+			void AddShadowFrames()
 			{
+				// Shadow tiles
+				byte shadowAlpha = 50;
+				byte shadowColor = 0;
+
+				var cornerSet = cornerIndices[1];
+
 				var se = maskFrames[cornerSet[0]];
 				var sw = maskFrames[cornerSet[1]];
 				var nw = maskFrames[cornerSet[2]];
@@ -295,15 +304,9 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 				frames.Add(ShadowTile(nwSeBridge, shadowColor, shadowAlpha));
 				frames.Add(ShadowTile(neSwBridge, shadowColor, shadowAlpha));
-				break;
+
+				frames.Add(FullShadowTile(shadowColor, shadowAlpha));
 			}
-
-			frames.Add(FullShadowTile(shadowColor, shadowAlpha));
-
-			s.Position = start;
-			return frames.ToArray();
-
-			////////////////////////////////////////////////
 
 			DrTilFrame ShadowTile(DrTilFrame mask, byte color, byte alpha)
 			{
