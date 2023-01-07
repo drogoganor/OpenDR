@@ -329,11 +329,11 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				// Change Snow and Alien to something else
 				if (tilesetName == "SNOW")
 				{
-					tilesetName = "AURALIEN";
+					tilesetName = "AUST";
 				}
 				else if (tilesetName == "ALIEN")
 				{
-					tilesetName = "ASTEROID";
+					tilesetName = "AURALIEN";
 				}
 
 				if (!ModData.DefaultTerrainInfo.TryGetValue(tilesetName, out var terrainInfo))
@@ -414,7 +414,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						{
 							var ar = new ActorReference("mpspawn")
 							{
-								new LocationInit(new CPos(x + 1, y + 1)),
+								new LocationInit(new CPos(x + 2, y + 2)),
 								new OwnerInit("Neutral")
 							};
 
@@ -484,7 +484,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							{
 								var ar = new ActorReference(matchingActor)
 								{
-									new LocationInit(new CPos(x + 1, y + 1)),
+									new LocationInit(new CPos(x + 2, y + 2)),
 									new OwnerInit(MapPlayers.Players.Values.First(p => p.Team == playerIndex).Name)
 								};
 
@@ -523,7 +523,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							{
 								var ar = new ActorReference(matchingActor)
 								{
-									new LocationInit(new CPos(x, y)),
+									new LocationInit(new CPos(x + 1, y + 1)),
 									new OwnerInit(ownerName)
 								};
 
@@ -544,12 +544,12 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						if (type == "impww")
 						{
 							// Place water well
-							Map.Resources[new CPos(x, y)] = new ResourceTile(1, 255);
+							Map.Resources[new CPos(x + 2, y + 2)] = new ResourceTile(1, 255);
 						}
 						else if (type == "impmn")
 						{
 							// Place taelon
-							Map.Resources[new CPos(x, y)] = new ResourceTile(2, 255);
+							Map.Resources[new CPos(x + 2, y + 2)] = new ResourceTile(2, 255);
 						}
 					}
 				}

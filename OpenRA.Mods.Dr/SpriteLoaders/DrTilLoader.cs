@@ -263,7 +263,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			void AddShadowFrames()
 			{
 				// Shadow tiles
-				byte shadowAlpha = 50;
+				byte shadowAlpha = 35;
 				byte shadowColor = 0;
 
 				var cornerSet = cornerIndices[1];
@@ -317,7 +317,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					newFrame.Data[newIndex] = color;
 					newFrame.Data[newIndex + 1] = color;
 					newFrame.Data[newIndex + 2] = color;
-					newFrame.Data[newIndex + 3] = (byte)Math.Min(alpha, mask.Data[i] * 4);
+					newFrame.Data[newIndex + 3] = (byte)Math.Min(alpha, mask.Data[i]);
 				}
 
 				return newFrame;
