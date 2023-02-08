@@ -22,7 +22,7 @@ using OpenRA.Traits;
 namespace OpenRA.Mods.Dr.Traits
 {
 	[Desc("Load a DR .PAL palette file. Index 0 is hardcoded to be fully transparent/invisible.")]
-	class PaletteFromDrFileInfo : TraitInfo, IProvidesCursorPaletteInfo
+	class PaletteFromDrFileInfo : TraitInfo, ITilesetSpecificPaletteInfo, IProvidesCursorPaletteInfo
 	{
 		[FieldLoader.Require]
 		[PaletteDefinition]
@@ -54,6 +54,8 @@ namespace OpenRA.Mods.Dr.Traits
 		public readonly int Gamma = 0;
 
 		public override object Create(ActorInitializer init) { return new PaletteFromDrFile(init.World, this); }
+
+		string ITilesetSpecificPaletteInfo.Tileset => Tileset;
 
 		string IProvidesCursorPaletteInfo.Palette { get { return CursorPalette ? Name : null; } }
 

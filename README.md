@@ -16,6 +16,14 @@ Join us on the [OpenDR discord](https://discord.gg/3MKcGSW) if you want to talk 
 
 You will need to switch to OpenRA.Launcher and set the command line arguments to: `Engine.EngineDir=".." Engine.ModSearchPaths="..\\..\\mods" Game.Mod=dr`
 
+When running OpenRA.Utility, set the environment variables to the following:
+
+----------------------------------
+| ENGINE_DIR | .. |
+-----------------------------------
+| MOD_SEARCH_PATHS | ..\\..\\mods |
+-----------------------------------
+
 ## Thanks to
 
 * [OpenRA](http://www.openra.net/) and associates

@@ -8,25 +8,25 @@
 		Filename: BARREN/BARREN.PAL
 		Tileset: BARREN
 		ShadowIndex: 47
-		StandardPaletteMultiplier: 4
+		StandardPaletteMultiplier: 6
 		TerrainPaletteMultiplier: 6
 		Gamma: 0
-	PaletteFromDrFile@terrain-aust:
+	PaletteFromDrFile@terrain-jungle:
 		Name: terrain
-		Filename: aust.pal
-		Tileset: AUST
+		Filename: JUNGLE/JUNGLE.PAL
+		Tileset: JUNGLE
 		ShadowIndex: 47
-		StandardPaletteMultiplier: 4
-		TerrainPaletteMultiplier: 5
+		StandardPaletteMultiplier: 6
+		TerrainPaletteMultiplier: 6
 		Gamma: 0
-	PaletteFromDrFile@terrain-asteroid:
-		Name: terrain
-		Filename: asteroid.pal
-		Tileset: ASTEROID
-		ShadowIndex: 47
-		StandardPaletteMultiplier: 4
-		TerrainPaletteMultiplier: 5
-		Gamma: 0
+	#PaletteFromDrFile@terrain-snow:
+	#	Name: terrain
+	#	Filename: SNOW/SNOW.PAL
+	#	Tileset: SNOW
+	#	ShadowIndex: 47
+	#	StandardPaletteMultiplier: 4
+	#	TerrainPaletteMultiplier: 4
+	#	Gamma: 0
 	#PaletteFromDrFile@terrain-alien:
 	#	Name: terrain
 	#	Filename: ALIEN/ALIEN.PAL
@@ -40,17 +40,25 @@
 		Filename: auralien.pal
 		Tileset: AURALIEN
 		ShadowIndex: 47
-		StandardPaletteMultiplier: 4
+		StandardPaletteMultiplier: 5
 		TerrainPaletteMultiplier: 5
 		Gamma: 0
-	#PaletteFromDrFile@terrain-snow:
-	#	Name: terrain
-	#	Filename: SNOW/SNOW.PAL
-	#	Tileset: SNOW
-	#	ShadowIndex: 47
-	#	StandardPaletteMultiplier: 4
-	#	TerrainPaletteMultiplier: 4
-	#	Gamma: 0
+	PaletteFromDrFile@terrain-asteroid:
+		Name: terrain
+		Filename: asteroid.pal
+		Tileset: ASTEROID
+		ShadowIndex: 47
+		StandardPaletteMultiplier: 5
+		TerrainPaletteMultiplier: 5
+		Gamma: 0
+	PaletteFromDrFile@terrain-aust:
+		Name: terrain
+		Filename: aust.pal
+		Tileset: AUST
+		ShadowIndex: 47
+		StandardPaletteMultiplier: 5
+		TerrainPaletteMultiplier: 5
+		Gamma: 0
 	PaletteFromDrFile@terrain-volcanic:
 		Name: terrain
 		Filename: volcanic.pal
@@ -58,14 +66,6 @@
 		ShadowIndex: 47
 		StandardPaletteMultiplier: 4
 		TerrainPaletteMultiplier: 4
-		Gamma: 0
-	PaletteFromDrFile@terrain-jungle:
-		Name: terrain
-		Filename: JUNGLE/JUNGLE.PAL
-		Tileset: JUNGLE
-		ShadowIndex: 47
-		StandardPaletteMultiplier: 4
-		TerrainPaletteMultiplier: 6
 		Gamma: 0
 	PaletteFromDrFile@player:
 		Name: player
