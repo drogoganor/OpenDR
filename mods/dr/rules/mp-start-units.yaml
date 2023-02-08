@@ -4,7 +4,7 @@
 		DropdownDisplayOrder: 0
 	StartingUnits@mcvonly:
 		Class: none
-		ClassName: One Rig
+		ClassName: options-starting-units.one-rig
 		Factions: fguard, xenite, terrorist
 		BaseActor: HQ.human
 		SupportActors: ConstructionRig
@@ -12,7 +12,7 @@
 		OuterSupportRadius: 4
 	StartingUnits@mcvonlyimp:
 		Class: none
-		ClassName: One Rig
+		ClassName: options-starting-units.one-rig
 		Factions: imperium, shadowhand
 		BaseActor: HQ.cyborg
 		SupportActors: ConstructionRig
@@ -20,7 +20,7 @@
 		OuterSupportRadius: 4
 	StartingUnits@mcvonlytogran:
 		Class: none
-		ClassName: One Rig
+		ClassName: options-starting-units.one-rig
 		Factions: togran
 		BaseActor: HQ.togran
 		SupportActors: ConstructionRig
@@ -28,7 +28,7 @@
 		OuterSupportRadius: 4
 	StartingUnits@threerigs:
 		Class: light
-		ClassName: Three Rigs
+		ClassName: options-starting-units.three-rigs
 		Factions: fguard, xenite, terrorist
 		BaseActor: ConstructionRig
 		SupportActors: ConstructionRig,ConstructionRig
@@ -36,7 +36,7 @@
 		OuterSupportRadius: 4
 	StartingUnits@threerigsimp:
 		Class: light
-		ClassName: Three Rigs
+		ClassName: options-starting-units.three-rigs
 		Factions: imperium, shadowhand
 		BaseActor: ConstructionRig
 		SupportActors: ConstructionRig,ConstructionRig
@@ -44,7 +44,7 @@
 		OuterSupportRadius: 4
 	StartingUnits@threerigstogran:
 		Class: light
-		ClassName: Three Rigs
+		ClassName: options-starting-units.three-rigs
 		Factions: togran
 		BaseActor: ConstructionRig
 		SupportActors: ConstructionRig,ConstructionRig

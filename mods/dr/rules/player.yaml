@@ -52,23 +52,23 @@ Player:
 	PlayerStatistics:
 	PlaceBeacon:
 	ProvidesTechPrerequisite@infonly:
-		Name: Infantry Only
+		Name: options-tech-level.infantry-only
 		Prerequisites: techlevel.infonly
 		Id: infantryonly
 	ProvidesTechPrerequisite@low:
-		Name: Low
+		Name: options-tech-level.low
 		Prerequisites: techlevel.infonly, techlevel.low
 		Id: low
 	ProvidesTechPrerequisite@medium:
-		Name: Medium
+		Name: options-tech-level.medium
 		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium
 		Id: medium
 	ProvidesTechPrerequisite@high:
-		Name: No Superweapons
+		Name: options-tech-level.no-superweapons
 		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium, techlevel.high
 		Id: nosuperweapons
 	ProvidesTechPrerequisite@unrestricted:
-		Name: Unrestricted
+		Name: options-tech-level.unrestricted
 		Prerequisites: techlevel.infonly, techlevel.low, techlevel.medium, techlevel.high, techlevel.unrestricted
 		Id: unrestricted
 	GrantConditionOnPrerequisiteManager:

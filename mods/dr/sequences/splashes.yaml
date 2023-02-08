@@ -32,18 +32,194 @@ splash-jungle:
 	Defaults:
 		AddExtension: False
 	splash1: JUNGLE/JUNGLE.TIL
-		Start: 128
 		Length: 8
-		Tick: 100
+		Frames: 128, 136, 144, 152, 160, 168, 176, 184
 	splash2: JUNGLE/JUNGLE.TIL
-		Start: 144
 		Length: 8
-		Tick: 100
+		Frames: 129, 137, 145, 153, 161, 169, 177, 185
 	splash3: JUNGLE/JUNGLE.TIL
-		Start: 160
 		Length: 8
-		Tick: 100
+		Frames: 130, 138, 146, 154, 162, 170, 178, 186
 	splash4: JUNGLE/JUNGLE.TIL
-		Start: 176
 		Length: 8
-		Tick: 100
+		Frames: 131, 139, 147, 155, 163, 171, 179, 187
+	splash5: JUNGLE/JUNGLE.TIL
+		Length: 8
+		Frames: 132, 140, 148, 156, 164, 172, 180, 188
+	splash6: JUNGLE/JUNGLE.TIL
+		Length: 8
+		Frames: 133, 141, 149, 157, 165, 173, 181, 189
+	splash7: JUNGLE/JUNGLE.TIL
+		Length: 8
+		Frames: 134, 142, 150, 158, 166, 174, 182, 190
+	splash8: JUNGLE/JUNGLE.TIL
+		Length: 8
+		Frames: 135, 143, 151, 159, 167, 175, 183, 191
+
+splash-auralien:
+	Defaults:
+		AddExtension: False
+	splash1: auralien.til
+		Length: 8
+		Frames: 128, 136, 144, 152, 160, 168, 176, 184
+	splash2: auralien.til
+		Length: 8
+		Frames: 129, 137, 145, 153, 161, 169, 177, 185
+	splash3: auralien.til
+		Length: 8
+		Frames: 130, 138, 146, 154, 162, 170, 178, 186
+	splash4: auralien.til
+		Length: 8
+		Frames: 131, 139, 147, 155, 163, 171, 179, 187
+	splash5: auralien.til
+		Length: 8
+		Frames: 132, 140, 148, 156, 164, 172, 180, 188
+	splash6: auralien.til
+		Length: 8
+		Frames: 133, 141, 149, 157, 165, 173, 181, 189
+	splash7: auralien.til
+		Length: 8
+		Frames: 134, 142, 150, 158, 166, 174, 182, 190
+	splash8: auralien.til
+		Length: 8
+		Frames: 135, 143, 151, 159, 167, 175, 183, 191
+
+splash-asteroid:
+	Defaults:
+		AddExtension: False
+	splash1: asteroid.til
+		Length: 8
+		Frames: 128, 136, 144, 152, 160, 168, 176, 184
+	splash2: asteroid.til
+		Length: 8
+		Frames: 129, 137, 145, 153, 161, 169, 177, 185
+	splash3: asteroid.til
+		Length: 8
+		Frames: 130, 138, 146, 154, 162, 170, 178, 186
+	splash4: asteroid.til
+		Length: 8
+		Frames: 131, 139, 147, 155, 163, 171, 179, 187
+	splash5: asteroid.til
+		Length: 8
+		Frames: 132, 140, 148, 156, 164, 172, 180, 188
+	splash6: asteroid.til
+		Length: 8
+		Frames: 133, 141, 149, 157, 165, 173, 181, 189
+	splash7: asteroid.til
+		Length: 8
+		Frames: 134, 142, 150, 158, 166, 174, 182, 190
+	splash8: asteroid.til
+		Length: 8
+		Frames: 135, 143, 151, 159, 167, 175, 183, 191
+
+splash-aust:
+	Defaults:
+		AddExtension: False
+	splash1: aust.til
+		Length: 8
+		Frames: 128, 136, 144, 152, 160, 168, 176, 184
+	splash2: aust.til
+		Length: 8
+		Frames: 129, 137, 145, 153, 161, 169, 177, 185
+	splash3: aust.til
+		Length: 8
+		Frames: 130, 138, 146, 154, 162, 170, 178, 186
+	splash4: aust.til
+		Length: 8
+		Frames: 131, 139, 147, 155, 163, 171, 179, 187
+	splash5: aust.til
+		Length: 8
+		Frames: 132, 140, 148, 156, 164, 172, 180, 188
+	splash6: aust.til
+		Length: 8
+		Frames: 133, 141, 149, 157, 165, 173, 181, 189
+	splash7: aust.til
+		Length: 8
+		Frames: 134, 142, 150, 158, 166, 174, 182, 190
+	splash8: aust.til
+		Length: 8
+		Frames: 135, 143, 151, 159, 167, 175, 183, 191
+
+splash-volcanic:
+	Defaults:
+		AddExtension: False
+	splash1: volcanic.til
+		Length: 8
+		Frames: 128, 136, 144, 152, 160, 168, 176, 184
+	splash2: volcanic.til
+		Length: 8
+		Frames: 129, 137, 145, 153, 161, 169, 177, 185
+	splash3: volcanic.til
+		Length: 8
+		Frames: 130, 138, 146, 154, 162, 170, 178, 186
+	splash4: volcanic.til
+		Length: 8
+		Frames: 131, 139, 147, 155, 163, 171, 179, 187
+	splash5: volcanic.til
+		Length: 8
+		Frames: 132, 140, 148, 156, 164, 172, 180, 188
+	splash6: volcanic.til
+		Length: 8
+		Frames: 133, 141, 149, 157, 165, 173, 181, 189
+	splash7: volcanic.til
+		Length: 8
+		Frames: 134, 142, 150, 158, 166, 174, 182, 190
+	splash8: volcanic.til
+		Length: 8
+		Frames: 135, 143, 151, 159, 167, 175, 183, 191
+
+splash-alien:
+	Defaults:
+		AddExtension: False
+	splash1: ALIEN/ALIEN.TIL
+		Length: 8
+		Frames: 128, 136, 144, 152, 160, 168, 176, 184
+	splash2: ALIEN/ALIEN.TIL
+		Length: 8
+		Frames: 129, 137, 145, 153, 161, 169, 177, 185
+	splash3: ALIEN/ALIEN.TIL
+		Length: 8
+		Frames: 130, 138, 146, 154, 162, 170, 178, 186
+	splash4: ALIEN/ALIEN.TIL
+		Length: 8
+		Frames: 131, 139, 147, 155, 163, 171, 179, 187
+	splash5: ALIEN/ALIEN.TIL
+		Length: 8
+		Frames: 132, 140, 148, 156, 164, 172, 180, 188
+	splash6: ALIEN/ALIEN.TIL
+		Length: 8
+		Frames: 133, 141, 149, 157, 165, 173, 181, 189
+	splash7: ALIEN/ALIEN.TIL
+		Length: 8
+		Frames: 134, 142, 150, 158, 166, 174, 182, 190
+	splash8: ALIEN/ALIEN.TIL
+		Length: 8
+		Frames: 135, 143, 151, 159, 167, 175, 183, 191
+
+splash-snow:
+	Defaults:
+		AddExtension: False
+	splash1: SNOW/SNOW.TIL
+		Length: 8
+		Frames: 128, 136, 144, 152, 160, 168, 176, 184
+	splash2: SNOW/SNOW.TIL
+		Length: 8
+		Frames: 129, 137, 145, 153, 161, 169, 177, 185
+	splash3: SNOW/SNOW.TIL
+		Length: 8
+		Frames: 130, 138, 146, 154, 162, 170, 178, 186
+	splash4: SNOW/SNOW.TIL
+		Length: 8
+		Frames: 131, 139, 147, 155, 163, 171, 179, 187
+	splash5: SNOW/SNOW.TIL
+		Length: 8
+		Frames: 132, 140, 148, 156, 164, 172, 180, 188
+	splash6: SNOW/SNOW.TIL
+		Length: 8
+		Frames: 133, 141, 149, 157, 165, 173, 181, 189
+	splash7: SNOW/SNOW.TIL
+		Length: 8
+		Frames: 134, 142, 150, 158, 166, 174, 182, 190
+	splash8: SNOW/SNOW.TIL
+		Length: 8
+		Frames: 135, 143, 151, 159, 167, 175, 183, 191
