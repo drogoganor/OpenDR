@@ -4,26 +4,29 @@ splash-barren:
 		AddExtension: False
 		Tick: 50
 	splash1: BARREN/BARREN.TIL
-		Start: 128
 		Length: 8
+		Frames: 128, 136, 144, 152, 160, 168, 176, 184
 	splash2: BARREN/BARREN.TIL
-		Start: 136
 		Length: 8
+		Frames: 129, 137, 145, 153, 161, 169, 177, 185
 	splash3: BARREN/BARREN.TIL
-		Start: 144
 		Length: 8
+		Frames: 130, 138, 146, 154, 162, 170, 178, 186
 	splash4: BARREN/BARREN.TIL
-		Start: 152
 		Length: 8
+		Frames: 131, 139, 147, 155, 163, 171, 179, 187
 	splash5: BARREN/BARREN.TIL
-		Start: 160
 		Length: 8
+		Frames: 132, 140, 148, 156, 164, 172, 180, 188
 	splash6: BARREN/BARREN.TIL
-		Start: 168
 		Length: 8
+		Frames: 133, 141, 149, 157, 165, 173, 181, 189
 	splash7: BARREN/BARREN.TIL
-		Start: 176
 		Length: 8
+		Frames: 134, 142, 150, 158, 166, 174, 182, 190
+	splash8: BARREN/BARREN.TIL
+		Length: 8
+		Frames: 135, 143, 151, 159, 167, 175, 183, 191
 
 splash-jungle:
 	Defaults:
