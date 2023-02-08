@@ -18,11 +18,10 @@ You will need to switch to OpenRA.Launcher and set the command line arguments to
 
 When running OpenRA.Utility, set the environment variables to the following:
 
-----------------------------------
-| ENGINE_DIR | .. |
------------------------------------
-| MOD_SEARCH_PATHS | ..\\..\\mods |
------------------------------------
+| Name             | Value         |
+| ---------------- | ------------- |
+| ENGINE_DIR       | ..            |
+| MOD_SEARCH_PATHS | ..\\..\\mods  |
 
 ## Thanks to
 

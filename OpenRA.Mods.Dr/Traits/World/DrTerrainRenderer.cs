@@ -291,8 +291,7 @@ namespace OpenRA.Mods.Dr.Traits
 				var isSelfMatchBelow = matchEdge.SelfMatchType == EdgeMatchType.Below;
 				var allDependentTilesMatch = true;
 
-				var validLowestEqualNeighbor = GetLowestEqualNeighbor(edges, matchEdge, out var highestValue);
-				if (isSelfMatchBelow && validLowestEqualNeighbor)
+				if (isSelfMatchBelow && GetLowestEqualNeighbor(edges, matchEdge, out var highestValue))
 				{
 					selfValue = highestValue.Value;
 
@@ -409,8 +408,7 @@ namespace OpenRA.Mods.Dr.Traits
 				var selfValue = tile.Type;
 				var isSelfMatchBelow = matchEdge.SelfMatchType == EdgeMatchType.Below;
 
-				var validLowestEqualNeighbor = GetLowestEqualNeighbor(edges, matchEdge, out var highestValue);
-				if (isSelfMatchBelow && validLowestEqualNeighbor)
+				if (isSelfMatchBelow && GetLowestEqualNeighbor(edges, matchEdge, out var highestValue))
 				{
 					selfValue = highestValue.Value;
 
