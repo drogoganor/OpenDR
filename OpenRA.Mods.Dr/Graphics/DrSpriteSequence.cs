@@ -16,17 +16,7 @@ namespace OpenRA.Mods.Dr.Graphics
 {
 	public class DrSpriteSequenceLoader : DefaultSpriteSequenceLoader
 	{
-		public readonly string DefaultSpriteExtension = ".spr";
-
-		public DrSpriteSequenceLoader(ModData modData)
-			: base(modData)
-		{
-			var metadata = modData.Manifest.Get<SpriteSequenceFormat>().Metadata;
-			if (metadata.TryGetValue("DefaultSpriteExtension", out var yaml))
-			{
-				DefaultSpriteExtension = yaml.Value;
-			}
-		}
+		public DrSpriteSequenceLoader(ModData modData) : base(modData) { }
 
 		public override ISpriteSequence CreateSequence(ModData modData, string tileSet, SpriteCache cache, string image, string sequence,
 			MiniYaml data, MiniYaml defaults)
@@ -37,30 +27,9 @@ namespace OpenRA.Mods.Dr.Graphics
 
 	public class DrSpriteSequence : DefaultSpriteSequence
 	{
-		// TODO: Fix
-		//protected override string GetSpriteSrc(ModData modData, string tileSet, string image, string sequence, string sprite, Dictionary<string, MiniYaml> d)
-		//{
-		//	var loader = (DrSpriteSequenceLoader)Loader;
-
-		//	if (LoadField(d, "AddExtension", true))
-		//	{
-		//		return (sprite ?? image) + loader.DefaultSpriteExtension;
-		//	}
-
-		//	return sprite ?? image;
-		//}
-
 		public DrSpriteSequence(ModData modData, string tileSet, SpriteCache cache, ISpriteSequenceLoader loader, string image, string sequence, MiniYaml data, MiniYaml defaults)
 			: base(cache, loader, image, sequence, data, defaults)
 		{
-		}
-
-		public override Sprite GetSprite(int frame, WAngle facing)
-		{
-			//if (facing.Facing >= 245 && facing.Facing <= 250) // receiving a facing of 320 when unloading an APC
-			//	facing = WAngle.Zero;
-
-			return base.GetSprite(frame, facing);
 		}
 	}
 }

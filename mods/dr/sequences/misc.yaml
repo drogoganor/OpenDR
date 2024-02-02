@@ -60,11 +60,11 @@ shroud:
 
 resources:
 	water1:
-		Filename: ncwel1l0.spr
+		Filename: tileset|ncwel1l0.spr
 		ZOffset: -8196
 		Length: *
 	taelon1:
-		Filename: ncmin1l0.spr
+		Filename: tileset|ncmin1l0.spr
 		ZOffset: -8196
 		Length: *
 
