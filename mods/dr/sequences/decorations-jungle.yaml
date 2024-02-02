@@ -3,114 +3,114 @@ aotre000.jungle:
 	Defaults:
 		Offset: -4,-19
 	idle:
-		Filename: aotre000.spr
+		Filename: tileset|aotre000.spr
 		Length: 1
 	run: # for sniper and scout disguise
-		Filename: aotre000.spr
+		Filename: tileset|aotre000.spr
 		Length: 1
 	attack: # for sniper and scout disguise
-		Filename: aotre000.spr
+		Filename: tileset|aotre000.spr
 		Length: 1
 	stand: # for sniper and scout disguise
-		Filename: aotre000.spr
+		Filename: tileset|aotre000.spr
 		Length: 1
 	shadow:
-		Filename: aotre0sh.spr
+		Filename: tileset|aotre0sh.spr
 		Offset: 12, 8
 
 aotre001.jungle:
 	Defaults:
 		Offset: 0,-10
 	idle:
-		Filename: aotre001.spr
+		Filename: tileset|aotre001.spr
 		Length: 1
 	run: # for sniper and scout disguise
-		Filename: aotre001.spr
+		Filename: tileset|aotre001.spr
 		Length: 1
 	attack: # for sniper and scout disguise
-		Filename: aotre001.spr
+		Filename: tileset|aotre001.spr
 		Length: 1
 	stand: # for sniper and scout disguise
-		Filename: aotre001.spr
+		Filename: tileset|aotre001.spr
 		Length: 1
 	shadow:
-		Filename: aotre1sh.spr
+		Filename: tileset|aotre1sh.spr
 		Offset: 14, 14
 
 aotre002.jungle:
 	Defaults:
 		Offset: -1,-14
 	idle:
-		Filename: aotre002.spr
+		Filename: tileset|aotre002.spr
 		Length: 1
 	run: # for sniper and scout disguise
-		Filename: aotre002.spr
+		Filename: tileset|aotre002.spr
 		Length: 1
 	attack: # for sniper and scout disguise
-		Filename: aotre002.spr
+		Filename: tileset|aotre002.spr
 		Length: 1
 	stand: # for sniper and scout disguise
-		Filename: aotre002.spr
+		Filename: tileset|aotre002.spr
 		Length: 1
 	shadow:
-		Filename: aotre2sh.spr
+		Filename: tileset|aotre2sh.spr
 		Offset: 16, 8
 
 aotre003.jungle:
 	Defaults:
 		Offset: 3,-15
 	idle:
-		Filename: aotre003.spr
+		Filename: tileset|aotre003.spr
 		Length: 1
 	run: # for sniper and scout disguise
-		Filename: aotre003.spr
+		Filename: tileset|aotre003.spr
 		Length: 1
 	attack: # for sniper and scout disguise
-		Filename: aotre003.spr
+		Filename: tileset|aotre003.spr
 		Length: 1
 	stand: # for sniper and scout disguise
-		Filename: aotre003.spr
+		Filename: tileset|aotre003.spr
 		Length: 1
 	shadow:
-		Filename: aotre3sh.spr
+		Filename: tileset|aotre3sh.spr
 		Offset: 12, 4
 
 aotre004.jungle:
 	Defaults:
 		Offset: 1,-10
 	idle:
-		Filename: aotre004.spr
+		Filename: tileset|aotre004.spr
 		Length: 1
 	run: # for sniper and scout disguise
-		Filename: aotre004.spr
+		Filename: tileset|aotre004.spr
 		Length: 1
 	attack: # for sniper and scout disguise
-		Filename: aotre004.spr
+		Filename: tileset|aotre004.spr
 		Length: 1
 	stand: # for sniper and scout disguise
-		Filename: aotre004.spr
+		Filename: tileset|aotre004.spr
 		Length: 1
 	shadow:
-		Filename: aotre4sh.spr
+		Filename: tileset|aotre4sh.spr
 		Offset: 10, 5
 
 aotre005.jungle:
 	Defaults:
 		Offset: 2,-9
 	idle:
-		Filename: aotre005.spr
+		Filename: tileset|aotre005.spr
 		Length: 1
 	run: # for sniper and scout disguise
-		Filename: aotre005.spr
+		Filename: tileset|aotre005.spr
 		Length: 1
 	attack: # for sniper and scout disguise
-		Filename: aotre005.spr
+		Filename: tileset|aotre005.spr
 		Length: 1
 	stand: # for sniper and scout disguise
-		Filename: aotre005.spr
+		Filename: tileset|aotre005.spr
 		Length: 1
 	shadow:
-		Filename: aotre5sh.spr
+		Filename: tileset|aotre5sh.spr
 		Offset: 10, 4
 
 # Plant
@@ -118,30 +118,30 @@ aopln000.jungle:
 	Defaults:
 		Offset: -2,-4
 	idle:
-		Filename: aopln000.spr
+		Filename: tileset|aopln000.spr
 		Length: 1
 	shadow:
-		Filename: aopln0sh.spr
+		Filename: tileset|aopln0sh.spr
 		Offset: -2, -4
 
 aopln001.jungle:
 	Defaults:
 		Offset: 1,1
 	idle:
-		Filename: aopln001.spr
+		Filename: tileset|aopln001.spr
 		Length: 1
 	shadow:
-		Filename: aopln1sh.spr
+		Filename: tileset|aopln1sh.spr
 		Offset: 1, 1
 
 aopln002.jungle:
 	Defaults:
 		Offset: 4,2
 	idle:
-		Filename: aopln002.spr
+		Filename: tileset|aopln002.spr
 		Length: 1
 	shadow:
-		Filename: aopln2sh.spr
+		Filename: tileset|aopln2sh.spr
 		Offset: 6, 8
 
 # Rocks
@@ -149,60 +149,60 @@ aoroc000.jungle:
 	Defaults:
 		Offset: 0,0
 	idle:
-		Filename: aoroc000.spr
+		Filename: tileset|aoroc000.spr
 		Length: 1
 	shadow:
-		Filename: aoroc0sh.spr
+		Filename: tileset|aoroc0sh.spr
 		Offset: 5, 2
 
 aoroc001.jungle:
 	Defaults:
 		Offset: 0,0
 	idle:
-		Filename: aoroc001.spr
+		Filename: tileset|aoroc001.spr
 		Length: 1
 	shadow:
-		Filename: aoroc1sh.spr
+		Filename: tileset|aoroc1sh.spr
 		Offset: 5, 0
 
 aoroc002.jungle:
 	Defaults:
 		Offset: 0,0
 	idle:
-		Filename: aoroc002.spr
+		Filename: tileset|aoroc002.spr
 		Length: 1
 	shadow:
-		Filename: aoroc2sh.spr
+		Filename: tileset|aoroc2sh.spr
 		Offset: 5, 1
 
 aoroc003.jungle:
 	Defaults:
 		Offset: 0,2
 	idle:
-		Filename: aoroc003.spr
+		Filename: tileset|aoroc003.spr
 		Length: 1
 	shadow:
-		Filename: aoroc3sh.spr
+		Filename: tileset|aoroc3sh.spr
 		Offset: 2, 2
 
 aoroc004.jungle:
 	Defaults:
 		Offset: 2,2
 	idle:
-		Filename: aoroc004.spr
+		Filename: tileset|aoroc004.spr
 		Length: 1
 	shadow:
-		Filename: aoroc4sh.spr
+		Filename: tileset|aoroc4sh.spr
 		Offset: 7, 2
 
 aoroc005.jungle:
 	Defaults:
 		Offset: 1,0
 	idle:
-		Filename: aoroc005.spr
+		Filename: tileset|aoroc005.spr
 		Length: 1
 	shadow:
-		Filename: aoroc5sh.spr
+		Filename: tileset|aoroc5sh.spr
 		Offset: 11, 0
 
 # Cliff
@@ -210,52 +210,52 @@ aoclf000.jungle:
 	Defaults:
 		Offset: -3, -2
 	idle:
-		Filename: aoclf000.spr
+		Filename: tileset|aoclf000.spr
 		Length: 1
 	shadow:
-		Filename: aoclf0sh.spr
+		Filename: tileset|aoclf0sh.spr
 		Offset: 12, 19
 
 aoclf001.jungle:
 	Defaults:
 		Offset: -3, -1
 	idle:
-		Filename: aoclf001.spr
+		Filename: tileset|aoclf001.spr
 		Length: 1
 	shadow:
-		Filename: aoclf1sh.spr
+		Filename: tileset|aoclf1sh.spr
 		Offset: 9, 17
 
 aoclf002.jungle:
 	idle:
-		Filename: aoclf002.spr
+		Filename: tileset|aoclf002.spr
 		Length: 1
 	shadow:
-		Filename: aoclf2sh.spr
+		Filename: tileset|aoclf2sh.spr
 		Offset: 19, 24
 
 aoclf003.jungle:
 	idle:
-		Filename: aoclf003.spr
+		Filename: tileset|aoclf003.spr
 		Length: 1
 	shadow:
-		Filename: aoclf3sh.spr
+		Filename: tileset|aoclf3sh.spr
 		Offset: 11, 20
 
 aoclf004.jungle:
 	idle:
-		Filename: aoclf004.spr
+		Filename: tileset|aoclf004.spr
 		Length: 1
 	shadow:
-		Filename: aoclf4sh.spr
+		Filename: tileset|aoclf4sh.spr
 		Offset: 12, 12
 
 aoclf005.jungle:
 	Defaults:
 		Offset: 0, 0
 	idle:
-		Filename: aoclf005.spr
+		Filename: tileset|aoclf005.spr
 		Length: 1
 	shadow:
-		Filename: aoclf5sh.spr
+		Filename: tileset|aoclf5sh.spr
 		Offset: 9, 22

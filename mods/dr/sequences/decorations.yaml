@@ -3,90 +3,90 @@ aotre000:
 	Defaults:
 		Offset: -4,-19
 	idle:
-		Filename: aotre000.spr
+		Filename: tileset|aotre000.spr
 	run: # for sniper and scout disguise
-		Filename: aotre000.spr
+		Filename: tileset|aotre000.spr
 	attack:
-		Filename: aotre000.spr
+		Filename: tileset|aotre000.spr
 	stand:
-		Filename: aotre000.spr
+		Filename: tileset|aotre000.spr
 	shadow:
-		Filename: aotre0sh.spr
+		Filename: tileset|aotre0sh.spr
 		Offset: 21, 10
 
 aotre001:
 	Defaults:
 		Offset: 0,-10
 	idle:
-		Filename: aotre001.spr
+		Filename: tileset|aotre001.spr
 	run: # for sniper and scout disguise
-		Filename: aotre001.spr
+		Filename: tileset|aotre001.spr
 	attack:
-		Filename: aotre001.spr
+		Filename: tileset|aotre001.spr
 	stand:
-		Filename: aotre001.spr
+		Filename: tileset|aotre001.spr
 	shadow:
-		Filename: aotre1sh.spr
+		Filename: tileset|aotre1sh.spr
 		Offset: 15, 9
 
 aotre002:
 	Defaults:
 		Offset: -1,-14
 	idle:
-		Filename: aotre002.spr
+		Filename: tileset|aotre002.spr
 	run: # for sniper and scout disguise
-		Filename: aotre002.spr
+		Filename: tileset|aotre002.spr
 	attack:
-		Filename: aotre002.spr
+		Filename: tileset|aotre002.spr
 	stand:
-		Filename: aotre002.spr
+		Filename: tileset|aotre002.spr
 	shadow:
-		Filename: aotre2sh.spr
+		Filename: tileset|aotre2sh.spr
 		Offset: 19, 11
 
 aotre003:
 	Defaults:
 		Offset: 3,-15
 	idle:
-		Filename: aotre003.spr
+		Filename: tileset|aotre003.spr
 	run: # for sniper and scout disguise
-		Filename: aotre003.spr
+		Filename: tileset|aotre003.spr
 	attack:
-		Filename: aotre003.spr
+		Filename: tileset|aotre003.spr
 	stand:
-		Filename: aotre003.spr
+		Filename: tileset|aotre003.spr
 	shadow:
-		Filename: aotre3sh.spr
+		Filename: tileset|aotre3sh.spr
 		Offset: 23, 11
 
 aotre004:
 	Defaults:
 		Offset: 1,-10
 	idle:
-		Filename: aotre004.spr
+		Filename: tileset|aotre004.spr
 	run: # for sniper and scout disguise
-		Filename: aotre004.spr
+		Filename: tileset|aotre004.spr
 	attack:
-		Filename: aotre004.spr
+		Filename: tileset|aotre004.spr
 	stand:
-		Filename: aotre004.spr
+		Filename: tileset|aotre004.spr
 	shadow:
-		Filename: aotre4sh.spr
+		Filename: tileset|aotre4sh.spr
 		Offset: 10, 8
 
 aotre005:
 	Defaults:
 		Offset: 2,-9
 	idle:
-		Filename: aotre005.spr
+		Filename: tileset|aotre005.spr
 	run: # for sniper and scout disguise
-		Filename: aotre005.spr
+		Filename: tileset|aotre005.spr
 	attack:
-		Filename: aotre005.spr
+		Filename: tileset|aotre005.spr
 	stand:
-		Filename: aotre005.spr
+		Filename: tileset|aotre005.spr
 	shadow:
-		Filename: aotre5sh.spr
+		Filename: tileset|aotre5sh.spr
 		Offset: 13, 6
 
 # Plant
@@ -94,27 +94,27 @@ aopln000:
 	Defaults:
 		Offset: -2,-4
 	idle:
-		Filename: aopln000.spr
+		Filename: tileset|aopln000.spr
 	shadow:
-		Filename: aopln0sh.spr
+		Filename: tileset|aopln0sh.spr
 		Offset: -4, -3
 
 aopln001:
 	Defaults:
 		Offset: 1,1
 	idle:
-		Filename: aopln001.spr
+		Filename: tileset|aopln001.spr
 	shadow:
-		Filename: aopln1sh.spr
+		Filename: tileset|aopln1sh.spr
 		Offset: 1, 1
 
 aopln002:
 	Defaults:
 		Offset: 4,2
 	idle:
-		Filename: aopln002.spr
+		Filename: tileset|aopln002.spr
 	shadow:
-		Filename: aopln2sh.spr
+		Filename: tileset|aopln2sh.spr
 		Offset: 6, 7
 
 # Rocks
@@ -122,54 +122,54 @@ aoroc000:
 	Defaults:
 		Offset: 0,0
 	idle:
-		Filename: aoroc000.spr
+		Filename: tileset|aoroc000.spr
 	shadow:
-		Filename: aoroc0sh.spr
+		Filename: tileset|aoroc0sh.spr
 		Offset: 5, 1
 
 aoroc001:
 	Defaults:
 		Offset: 0,0
 	idle:
-		Filename: aoroc001.spr
+		Filename: tileset|aoroc001.spr
 	shadow:
-		Filename: aoroc1sh.spr
+		Filename: tileset|aoroc1sh.spr
 		Offset: 6, 3
 
 aoroc002:
 	Defaults:
 		Offset: 0,0
 	idle:
-		Filename: aoroc002.spr
+		Filename: tileset|aoroc002.spr
 	shadow:
-		Filename: aoroc2sh.spr
+		Filename: tileset|aoroc2sh.spr
 		Offset: 8, 7
 
 aoroc003:
 	Defaults:
 		Offset: 0,2
 	idle:
-		Filename: aoroc003.spr
+		Filename: tileset|aoroc003.spr
 	shadow:
-		Filename: aoroc3sh.spr
+		Filename: tileset|aoroc3sh.spr
 		Offset: 7, 20
 
 aoroc004:
 	Defaults:
 		Offset: 2,2
 	idle:
-		Filename: aoroc004.spr
+		Filename: tileset|aoroc004.spr
 	shadow:
-		Filename: aoroc4sh.spr
+		Filename: tileset|aoroc4sh.spr
 		Offset: 10, 25
 
 aoroc005:
 	Defaults:
 		Offset: 1,0
 	idle:
-		Filename: aoroc005.spr
+		Filename: tileset|aoroc005.spr
 	shadow:
-		Filename: aoroc5sh.spr
+		Filename: tileset|aoroc5sh.spr
 		Offset: 12, 35
 
 # Cliff
@@ -177,46 +177,46 @@ aoclf000:
 	Defaults:
 		Offset: -3, -2
 	idle:
-		Filename: aoclf000.spr
+		Filename: tileset|aoclf000.spr
 	shadow:
-		Filename: aoclf0sh.spr
+		Filename: tileset|aoclf0sh.spr
 		Offset: 9, 11
 
 aoclf001:
 	Defaults:
 		Offset: -3, -1
 	idle:
-		Filename: aoclf001.spr
+		Filename: tileset|aoclf001.spr
 	shadow:
-		Filename: aoclf1sh.spr
+		Filename: tileset|aoclf1sh.spr
 		Offset: 12, 23
 
 aoclf002:
 	idle:
-		Filename: aoclf002.spr
+		Filename: tileset|aoclf002.spr
 	shadow:
-		Filename: aoclf2sh.spr
+		Filename: tileset|aoclf2sh.spr
 		Offset: 12, 25
 
 aoclf003:
 	idle:
-		Filename: aoclf003.spr
+		Filename: tileset|aoclf003.spr
 	shadow:
-		Filename: aoclf3sh.spr
+		Filename: tileset|aoclf3sh.spr
 		Offset: 13, 23
 
 aoclf004:
 	idle:
-		Filename: aoclf004.spr
+		Filename: tileset|aoclf004.spr
 	shadow:
-		Filename: aoclf4sh.spr
+		Filename: tileset|aoclf4sh.spr
 		Offset: 11, 15
 
 aoclf005:
 	idle:
-		Filename: aoclf005.spr
+		Filename: tileset|aoclf005.spr
 	shadow:
-		Filename: aoclf5sh.spr
+		Filename: tileset|aoclf5sh.spr
 		Offset: 8, 25
 
 # Rubble

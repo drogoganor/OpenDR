@@ -11,11 +11,11 @@ ncpow1l0:
 	idle:
 		Start: 1
 	underlay-building:
-		Filename: ncpow1l0.spr
+		Filename: tileset|ncpow1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: ncpow1l0.spr
+		Filename: tileset|ncpow1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -53,11 +53,11 @@ nclnc1l0:
 	idle:
 		Start: 1
 	underlay-building:
-		Filename: nclnc1l0.spr
+		Filename: tileset|nclnc1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nclnc1l0.spr
+		Filename: tileset|nclnc1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -101,19 +101,19 @@ nfhqt1l0:
 		Filename: nfhqt3l0.spr
 		Start: 1
 	underlay-building:
-		Filename: nfhqt1l0.spr
+		Filename: tileset|nfhqt1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nfhqt1l0.spr
+		Filename: tileset|nfhqt1l0.spr
 		ZOffset: -8192
 		Start: 1
 	underlay2:
-		Filename: nfhqt2l0.spr
+		Filename: tileset|nfhqt2l0.spr
 		ZOffset: -8192
 		Start: 1
 	underlay3:
-		Filename: nfhqt3l0.spr
+		Filename: tileset|nfhqt3l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -174,32 +174,32 @@ nihqt1l0:
 		Filename: nihqt3l0.spr
 		Start: 1
 	underlay-building:
-		Filename: nihqt1l0.spr
+		Filename: tileset|nihqt1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nihqt1l0.spr
+		Filename: tileset|nihqt1l0.spr
 		ZOffset: -8192
 		Start: 1
 	underlay2:
-		Filename: nihqt2l0.spr
+		Filename: tileset|nihqt2l0.spr
 		ZOffset: -8192
 		Start: 1
 	underlay3:
-		Filename: nihqt3l0.spr
+		Filename: tileset|nihqt3l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tihqt1l0.spr
+		Filename: tileset|tihqt1l0.spr
 		Start: 0
 	top:
-		Filename: tihqt1l0.spr
+		Filename: tileset|tihqt1l0.spr
 		Start: 1
 	top2:
-		Filename: tihqt2l0.spr
+		Filename: tileset|tihqt2l0.spr
 		Start: 1
 	top3:
-		Filename: tihqt3l0.spr
+		Filename: tileset|tihqt3l0.spr
 		Start: 1
 	shadow-building:
 		Filename: bihqtsh0.spr
@@ -317,15 +317,15 @@ nfutf1l0:
 		Filename: nfutf2l0.spr
 		Start: 1
 	underlay-building:
-		Filename: nfutf1l0.spr
+		Filename: tileset|nfutf1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nfutf1l0.spr
+		Filename: tileset|nfutf1l0.spr
 		ZOffset: -8192
 		Start: 1
 	underlay2:
-		Filename: nfutf2l0.spr
+		Filename: tileset|nfutf2l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -381,15 +381,15 @@ niutf1l0:
 		Filename: niutf2l0.spr
 		Start: 1
 	underlay-building:
-		Filename: niutf1l0.spr
+		Filename: tileset|niutf1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: niutf1l0.spr
+		Filename: tileset|niutf1l0.spr
 		ZOffset: -8192
 		Start: 1
 	underlay2:
-		Filename: niutf2l0.spr
+		Filename: tileset|niutf2l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -445,15 +445,15 @@ nfvcy1l0:
 		Filename: nfvcy2l0.spr
 		Start: 1
 	underlay-building:
-		Filename: nfvcy1l0.spr
+		Filename: tileset|nfvcy1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nfvcy1l0.spr
+		Filename: tileset|nfvcy1l0.spr
 		ZOffset: -8192
 		Start: 1
 	underlay2:
-		Filename: nfvcy2l0.spr
+		Filename: tileset|nfvcy2l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -503,15 +503,15 @@ nivcy1l0:
 		Filename: nivcy2l0.spr
 		Start: 1
 	underlay-building:
-		Filename: nivcy1l0.spr
+		Filename: tileset|nivcy1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nivcy1l0.spr
+		Filename: tileset|nivcy1l0.spr
 		ZOffset: -8192
 		Start: 1
 	underlay2:
-		Filename: nivcy2l0.spr
+		Filename: tileset|nivcy2l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -546,7 +546,7 @@ nivcy1l0:
 # FG Laser turret
 nfgdt1l0:
 	building:
-		Filename: nfgdt1l0.spr
+		Filename: tileset|nfgdt1l0.spr
 		Start: 0
 	idle:
 		Filename: nfgdt1l0_01fixed.png
@@ -560,15 +560,15 @@ nfgdt1l0:
 		Start: 0
 		Facings: 16
 	underlay-building:
-		Filename: nfgdt1l0.spr
+		Filename: tileset|nfgdt1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nfgdt1l0.spr
+		Filename: tileset|nfgdt1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tfgdt1l0.spr
+		Filename: tileset|tfgdt1l0.spr
 		Start: 0
 	#top: nfgdt1l0_01fixed.png
 	#	AddExtension: False
@@ -590,10 +590,10 @@ nfgdt1l0:
 # Imperium Plasma turret
 nigdt1l0:
 	building:
-		Filename: nigdt1l0.spr
+		Filename: tileset|nigdt1l0.spr
 		Start: 0
 	idle:
-		Filename: nigdt1l0.spr
+		Filename: tileset|nigdt1l0.spr
 		Start: 1
 		ZOffset: -128
 	recoil:
@@ -605,11 +605,11 @@ nigdt1l0:
 		Start: 0
 		Facings: 16
 	underlay-building:
-		Filename: nigdt1l0.spr
+		Filename: tileset|nigdt1l0.spr
 		ZOffset: 128
 		Start: 0
 	underlay:
-		Filename: nigdt1l0.spr
+		Filename: tileset|nigdt1l0.spr
 		ZOffset: 128
 		Start: 1
 	top-building:
@@ -648,11 +648,11 @@ nfaar1l0:
 		Start: 0
 		Facings: 16
 	underlay-building:
-		Filename: nfaar1l0.spr
+		Filename: tileset|nfaar1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nfaar1l0.spr
+		Filename: tileset|nfaar1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -692,11 +692,11 @@ niaar1l0:
 		Start: 0
 		Length: 1
 	underlay-building:
-		Filename: niaar1l0.spr
+		Filename: tileset|niaar1l0.spr
 		#ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: niaar1l0.spr
+		Filename: tileset|niaar1l0.spr
 		#ZOffset: -8192
 		Start: 1
 	top-building:
@@ -737,11 +737,11 @@ nfagt1l0:
 		Start: 0
 		Facings: 16
 	underlay-building:
-		Filename: nfagt1l0.spr
+		Filename: tileset|nfagt1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nfagt1l0.spr
+		Filename: tileset|nfagt1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -766,10 +766,10 @@ nfagt1l0:
 # Imperium neutron accelerator
 niagt1l0:
 	building:
-		Filename: niagt1l0.spr
+		Filename: tileset|niagt1l0.spr
 		Start: 0
 	idle:
-		Filename: niagt1l0.spr
+		Filename: tileset|niagt1l0.spr
 		Start: 1
 	recoil:
 		Filename: biagtsp0.spr
@@ -780,11 +780,11 @@ niagt1l0:
 		Start: 0
 		Facings: 16
 	underlay-building:
-		Filename: tiagt1l0.spr
+		Filename: tileset|tiagt1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: tiagt1l0.spr
+		Filename: tileset|tiagt1l0.spr
 		ZOffset: -8192
 		Start: 1
 	#top-building: tiagt1l0
@@ -814,11 +814,11 @@ nccam1l0:
 	idle:
 		Start: 1
 	underlay-building:
-		Filename: nccam1l0.spr
+		Filename: tileset|nccam1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nccam1l0.spr
+		Filename: tileset|nccam1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -860,11 +860,11 @@ nfhsp1l0:
 		Length: 1
 		ZOffset: -1c511
 	underlay-building:
-		Filename: nfhsp1l0.spr
+		Filename: tileset|nfhsp1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nfhsp1l0.spr
+		Filename: tileset|nfhsp1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -905,11 +905,11 @@ nihsp1l0:
 		Length: 1
 		ZOffset: -1c511
 	underlay-building:
-		Filename: nihsp1l0.spr
+		Filename: tileset|nihsp1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nihsp1l0.spr
+		Filename: tileset|nihsp1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -948,11 +948,11 @@ nfrep1l0:
 		Length: 1
 		ZOffset: -1c511
 	underlay-building:
-		Filename: nfrep1l0.spr
+		Filename: tileset|nfrep1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nfrep1l0.spr
+		Filename: tileset|nfrep1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -991,11 +991,11 @@ tirep1l0:
 		Length: 1
 		ZOffset: -1c511
 	underlay-building:
-		Filename: nirep1l0.spr
+		Filename: tileset|nirep1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nirep1l0.spr
+		Filename: tileset|nirep1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -1033,15 +1033,15 @@ nfphf1l0:
 		Filename: nfphf2l0.spr
 		Start: 1
 	underlay-building:
-		Filename: nfphf1l0.spr
+		Filename: tileset|nfphf1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nfphf1l0.spr
+		Filename: tileset|nfphf1l0.spr
 		ZOffset: -8192
 		Start: 1
 	underlay2:
-		Filename: nfphf2l0.spr
+		Filename: tileset|nfphf2l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -1089,11 +1089,11 @@ nfrrm1l0:
 		Start: 1
 		Length: 1
 	underlay-building:
-		Filename: nfrrm1l0.spr
+		Filename: tileset|nfrrm1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nfrrm1l0.spr
+		Filename: tileset|nfrrm1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -1128,11 +1128,11 @@ nirrm1l0:
 	idle:
 		Start: 1
 	underlay-building:
-		Filename: nirrm1l0.spr
+		Filename: tileset|nirrm1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nirrm1l0.spr
+		Filename: tileset|nirrm1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -1165,11 +1165,11 @@ nitgt1l0:
 	idle:
 		Start: 1
 	underlay-building:
-		Filename: nitgt1l0.spr
+		Filename: tileset|nitgt1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nitgt1l0.spr
+		Filename: tileset|nitgt1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
@@ -1200,11 +1200,11 @@ nitrc1l0:
 	idle:
 		Start: 1
 	underlay-building:
-		Filename: nitrc1l0.spr
+		Filename: tileset|nitrc1l0.spr
 		ZOffset: -8192
 		Start: 0
 	underlay:
-		Filename: nitrc1l0.spr
+		Filename: tileset|nitrc1l0.spr
 		ZOffset: -8192
 		Start: 1
 	top-building:
