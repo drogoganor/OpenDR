@@ -23,7 +23,6 @@ notification-requires-host = Only the host can do that.
 notification-invalid-bot-slot = Can't add bots to a slot with another client.
 notification-invalid-bot-type = Invalid bot type.
 notification-admin-change-map = Only the host can change the map.
-notification-lobby-disconnected = { $player } has left.
 notification-player-disconnected = { $player } has disconnected.
 notification-team-player-disconnected = { $player } (Team { $team }) has disconnected.
 notification-observer-disconnected = { $player } (Spectator) has disconnected.
@@ -33,7 +32,8 @@ notification-admin-change-configuration = Only the host can change the configura
 notification-changed-map = { $player } changed the map to { $map }
 notification-option-changed = { $player } changed { $name } to { $value }.
 notification-you-were-kicked = You have been kicked from the server.
-notification-kicked = { $admin } kicked { $player } from the server.
+notification-admin-kicked = { $admin } kicked { $player } from the server.
+notification-kicked = { $player } was kicked from the server.
 notification-temp-ban = { $admin } temporarily banned { $player } from the server.
 notification-admin-transfer-admin = Only admins can transfer admin to another player.
 notification-admin-move-spectators = Only the host can move players to spectators.
@@ -57,15 +57,15 @@ notification-incompatible-protocol = Server is running an incompatible protocol.
 notification-you-were-banned = You have been banned from the server.
 notification-you-were-temp-banned = You have been temporarily banned from the server.
 notification-game-full = The game is full.
-notification-joined = { $player } has joined the game.
 notification-new-admin = { $player } is now the admin.
 notification-option-locked = { $option } cannot be changed.
 notification-invalid-configuration-command = Invalid configuration command.
 notification-admin-option = Only the host can set that option.
 notification-error-number-teams = Number of teams could not be parsed: { $raw }
 notification-admin-kick = Only the host can kick players.
+notification-kick-self = The host is not allowed to kick themselves.
 notification-kick-none = No-one in that slot.
-notification-no-kick-game-started = Only spectators can be kicked after the game has started.
+notification-no-kick-game-started = Only spectators and defeated players can be kicked after the game has started.
 notification-admin-clear-spawn = Only admins can clear spawn points.
 notification-spawn-occupied = You cannot occupy the same spawn point as another player.
 notification-spawn-locked = The spawn point is locked to another player slot.
@@ -84,6 +84,16 @@ notification-requires-authentication = Server requires players to have an OpenRA
 notification-no-permission-to-join = You do not have permission to join this server.
 notification-slot-closed = Your slot was closed by the host.
 
+## ServerOrders, UnitOrders
+notification-joined = { $player } has joined the game.
+notification-lobby-disconnected = { $player } has left.
+
+## UnitOrders
+notification-game-has-started = The game has started.
+notification-game-saved = Game saved.
+notification-game-paused = The game is paused by { $player }
+notification-game-unpaused = The game is un-paused by { $player }
+
 ## Server
 notification-game-started = Game started
 
@@ -93,6 +103,14 @@ notification-chat-temp-disabled =
         [one] Chat is disabled. Please try again in { $remaining } second.
        *[other] Chat is disabled. Please try again in { $remaining } seconds.
     }
+
+## VoteKickTracker
+notification-unable-to-start-a-vote = Unable to start a vote.
+notification-insufficient-votes-to-kick = Insufficient votes to kick player { $kickee }.
+notification-kick-already-voted = You have already voted.
+notification-vote-kick-started = Player { $kicker } has started a vote to kick player { $kickee }.
+notification-vote-kick-in-progress = { $percentage }% of players have voted to kick player { $kickee }.
+notification-vote-kick-ended = Vote to kick player { $kickee } has failed.
 
 ## ActorEditLogic
 label-duplicate-actor-id = Duplicate Actor ID
@@ -129,6 +147,8 @@ dialog-overwrite-map-outside-edit =
     By saving you may overwrite progress
     .confirm = Save
 
+notification-save-current-map = Saved current map.
+
 ## GameInfoLogic
 menu-game-info =
     .objectives = Objectives
@@ -146,11 +166,28 @@ label-mission-failed = Failed
 label-client-state-disconnected = Gone
 label-mute-player = Mute this player
 label-unmute-player = Unmute this player
+button-kick-player = Kick this player
+button-vote-kick-player = Vote to kick this player
 
 dialog-kick =
     .title = Kick { $player }?
-    .prompt = They will not be able to rejoin this game.
+    .prompt = This player will not be able to rejoin the game.
     .confirm = Kick
+
+dialog-vote-kick =
+    .title = Vote to kick { $player }?
+    .prompt = This player will not be able to rejoin the game.
+    .prompt-break-bots =
+    { $bots ->
+        [one] Kicking the game admin will also kick 1 bot.
+       *[other] Kicking the game admin will also kick { $bots } bots.
+    }
+    .vote-start = Start Vote
+    .vote-for = Vote For
+    .vote-against = Vote Against
+    .vote-cancel = Abstain
+
+notification-vote-kick-disabled = Vote kick is disabled on this server.
 
 ## GameTimerLogic
 label-paused = Paused
@@ -211,6 +248,18 @@ dialog-exit-map-editor =
     .confirm-anyway = Exit anyway
     .confirm = Exit
 
+dialog-play-map-warning =
+    .title = Warning
+    .prompt = The map may have been deleted or has
+    errors preventing it from being loaded.
+    .cancel = Okay
+
+dialog-exit-to-map-editor =
+    .title = Leave Mission
+    .prompt = Leave this game and return to the editor?
+    .confirm = Back To Editor
+    .cancel = Stay
+
 ## IngamePowerBarLogic
 ## IngamePowerCounterLogic
 label-power-usage = Power Usage: { $usage }/{ $capacity }
@@ -258,7 +307,7 @@ label-mirror-selection-failed = Online mirror is not available. Please install f
 label-detecting-sources = Detecting drives
 label-checking-sources = Checking Sources
 label-searching-source-for = Searching for { $title }
-label-content-package-installation = The following content packages will be installed:
+label-content-package-installation = Select which content packages you want to install:
 label-game-sources = Game Sources
 label-digital-installs = Digital Installs
 label-game-content-not-found = Game Content Not Found
@@ -348,6 +397,12 @@ options-target-lines =
     .manual = Manual
     .disabled = Disabled
 
+checkbox-frame-limiter = Enable Frame Limiter ({ $fps } FPS)
+
+## HotkeysSettingsLogic
+label-original-notice = The default is "{ $key }"
+label-duplicate-notice = This is already used for "{ $key }" in the { $context } context
+
 ## InputSettingsLogic
 options-mouse-scroll-type =
     .disabled = Disabled
@@ -429,8 +484,9 @@ dialog-overwrite-save =
 
 ## MainMenuLogic
 label-loading-news = Loading news
-label-news-retrival-failed = Failed to retrieve news: { $message }
+label-news-retrieval-failed = Failed to retrieve news: { $message }
 label-news-parsing-failed = Failed to parse news: { $message }
+label-author-datetime = by { $author } at { $datetime }
 
 ## MapChooserLogic
 label-all-maps = All Maps
@@ -444,6 +500,16 @@ label-map-size-huge = (Huge)
 label-map-size-large = (Large)
 label-map-size-medium = (Medium)
 label-map-size-small = (Small)
+label-map-searching-count =
+    { $count ->
+        [one] Searching the OpenRA Resource Center for { $count } map...
+       *[other] Searching the OpenRA Resource Center for { $count } maps...
+    }
+label-map-unavailable-count =
+    { $count ->
+        [one] { $count } map was not found on the OpenRA Resource Center
+       *[other] { $count } maps were not found on the OpenRA Resource Center
+    }
 
 notification-map-deletion-failed = Failed to delete map '{ $map }'. See the debug.log file for details.
 
@@ -459,7 +525,9 @@ dialog-delete-all-maps =
 
 options-order-maps =
     .player-count = Players
-    .date = Map Date
+    .title = Title
+    .date = Date
+    .size = Size
 
 ## MissionBrowserLogic
 dialog-no-video =
@@ -484,6 +552,9 @@ label-audio-unmuted = Audio unmuted.
 ## PlayerProfileLogic
 label-loading-player-profile = Loading player profile...
 label-loading-player-profile-failed = Failed to load player profile.
+
+## ProductionTooltipLogic
+label-requires = Requires { $prequisites }
 
 ## ReplayBrowserLogic
 label-duration = Duration: { $time }
@@ -543,6 +614,22 @@ dialog-incompatible-replay =
     { $version }.
     .prompt-unavailable-map = { -incompatible-replay-recorded } an unavailable map:
     { $map }.
+
+# SelectUnitsByTypeHotkeyLogic
+nothing-selected = Nothing selected.
+
+## SelectUnitsByTypeHotkeyLogic, SelectAllUnitsHotkeyLogic
+selected-units-across-screen =
+    { $units ->
+        [one] Selected one unit across screen.
+       *[other] Selected { $units } units across screen.
+    }
+
+selected-units-across-map =
+    { $units ->
+        [one] Selected one unit across map.
+       *[other] Selected { $units } units across map.
+    }
 
 ## ServerCreationLogic
 label-internet-server-nat-A = Internet Server (UPnP/NAT-PMP
@@ -687,43 +774,7 @@ description-path-debug-overlay = toggles a visualization of path searching.
 ## TerrainGeometryOverlay
 description-terrain-geometry-overlay = toggles the terrain geometry overlay.
 
-## Shroud
-checkbox-fog-of-war =
-    .label = Fog of War
-    .description = Line of sight is required to view enemy forces
-
-checkbox-explored-map =
-    .label = Explored Map
-    .description = Initial map shroud is revealed
-
-## DeveloperMode
-checkbox-debug-menu =
-    .label = Debug Menu
-    .description = Enables cheats and developer commands
-
-## MapBuildRadius
-checkbox-ally-build-radius =
-    .label = Build off Allies
-    .description = Allow allies to place structures inside your build area
-
-checkbox-build-radius =
-    .label = Limit Build Area
-    .description = Limits structure placement to areas around Construction Yards
-
-## MapOptions
-checkbox-short-game =
-    .label = Short Game
-    .description = Players are defeated when their bases are destroyed
-
-dropdown-tech-level =
-    .label = Tech Level
-    .description = The units and abilities that players can use
-
 ## MapOptions, MissionBrowserLogic
-dropdown-game-speed =
-    .label = Game Speed
-    .description = The rate at which time passes
-
 options-game-speed =
     .slowest = Slowest
     .slower = Slower
@@ -732,21 +783,7 @@ options-game-speed =
     .faster = Faster
     .fastest = Fastest
 
-## MapStartingLocations
-checkbox-separate-team-spawns =
-    .label = Separate Team Spawns
-    .description = Players without assigned spawn points will start as far as possible from enemy players
-
-## SpawnStartingUnits
-dropdown-starting-units =
-    .label = Starting Units
-    .description = The units that players start the game with
-
 ## TimeLimitManager
-dropdown-time-limit =
-    .label = Time Limit
-    .description = Player or team with the highest score after this time wins
-
 options-time-limit =
     .no-limit = No limit
     .options =
@@ -756,3 +793,45 @@ options-time-limit =
         }
 
 notification-time-limit-expired = Time limit has expired.
+
+## EditorActorBrush
+notification-added-actor = Added { $name } ({ $id })
+
+## EditorCopyPasteBrush
+notification-copied-tiles =
+    { $amount ->
+       [one] Copied one tile
+      *[other] Copied { $amount } tiles
+    }
+
+## EditorDefaultBrush
+notification-selected-area = Selected area { $x },{ $y } ({ $width },{ $height })
+notification-selected-actor = Selected actor { $id }
+notification-cleared-selection = Cleared selection
+notification-removed-actor = Removed { $name } ({ $id })
+notification-removed-resource = Removed { $type }
+
+## EditorResourceBrush
+notification-added-resource =
+    { $amount ->
+       [one] Added one cell of { $type }
+      *[other] Added { $amount } cells of { $type }
+    }
+
+## EditorTileBrush
+notification-added-tile = Added tile { $id }
+notification-filled-tile = Filled with tile { $id }
+
+## EditorActionManager
+notification-opened = Opened
+
+## ActorEditLogic
+notification-edited-actor = Edited { $name } ({ $id })
+
+## ConquestVictoryConditions, StrategicVictoryConditions
+notification-player-is-victorious = { $player } is victorious.
+notification-player-is-defeated = { $player } is defeated.
+
+## OrderManager
+notification-desync-compare-logs = Out of sync in frame { $frame }.
+    Compare syncreport.log with other players.

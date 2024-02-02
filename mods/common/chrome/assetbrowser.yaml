@@ -12,7 +12,7 @@ Background@ASSETBROWSER_PANEL:
 			Height: 25
 			Font: Bold
 			Align: Center
-			Text: Asset Browser
+			Text: label-assetbrowser-panel-title
 		Label@SOURCE_SELECTOR_DESC:
 			X: 20
 			Y: 36
@@ -20,21 +20,21 @@ Background@ASSETBROWSER_PANEL:
 			Height: 25
 			Font: TinyBold
 			Align: Center
-			Text: Select asset source
+			Text: label-assetbrowser-panel-source-selector-desc
 		DropDownButton@SOURCE_SELECTOR:
 			X: 20
 			Y: 60
 			Width: 195
 			Height: 25
 			Font: Bold
-			Text: Folders
+			Text: dropdownbutton-assetbrowser-panel-source-selector
 		DropDownButton@ASSET_TYPES_DROPDOWN:
 			X: 20
 			Y: 90
 			Width: 195
 			Height: 25
 			Font: Bold
-			Text: Asset types
+			Text: dropdownbutton-assetbrowser-panel-asset-types-dropdown
 		Label@FILENAME_DESC:
 			X: 20
 			Y: 115
@@ -42,7 +42,7 @@ Background@ASSETBROWSER_PANEL:
 			Height: 25
 			Font: TinyBold
 			Align: Center
-			Text: Filter by name
+			Text: label-assetbrowser-panel-filename-desc
 		TextField@FILENAME_INPUT:
 			X: 20
 			Y: 140
@@ -72,11 +72,11 @@ Background@ASSETBROWSER_PANEL:
 		Label@SPRITE_SCALE:
 			X: PARENT_RIGHT - WIDTH - 440
 			Y: 60
-			Width: 40
+			Width: 50
 			Height: 25
 			Font: Bold
 			Align: Left
-			Text: Scale:
+			Text: label-assetbrowser-panel-sprite-scale
 		Slider@SPRITE_SCALE_SLIDER:
 			X: PARENT_RIGHT - WIDTH - 330
 			Y: 62
@@ -84,21 +84,6 @@ Background@ASSETBROWSER_PANEL:
 			Height: 20
 			MinimumValue: 0.5
 			MaximumValue: 4
-		Label@MODEL_SCALE:
-			X: PARENT_RIGHT - WIDTH - 440
-			Y: 60
-			Width: 40
-			Height: 25
-			Font: Bold
-			Align: Left
-			Text: Scale:
-		Slider@MODEL_SCALE_SLIDER:
-			X: PARENT_RIGHT - WIDTH - 330
-			Y: 62
-			Width: 100
-			Height: 20
-			MinimumValue: 10
-			MaximumValue: 64
 		Label@PALETTE_DESC:
 			X: PARENT_RIGHT - WIDTH - 270
 			Y: 60
@@ -106,7 +91,7 @@ Background@ASSETBROWSER_PANEL:
 			Height: 25
 			Font: Bold
 			Align: Right
-			Text: Palette:
+			Text: label-assetbrowser-panel-palette-desc
 		DropDownButton@PALETTE_SELECTOR:
 			X: PARENT_RIGHT - WIDTH - 110
 			Y: 60
@@ -138,17 +123,12 @@ Background@ASSETBROWSER_PANEL:
 					Width: PARENT_RIGHT
 					Height: PARENT_BOTTOM
 					AspectRatio: 1
-				Model@VOXEL:
-					Width: PARENT_RIGHT
-					Height: PARENT_BOTTOM
-					Palette: colorpicker
-					PlayerPalette: colorpicker
 				Label@ERROR:
 					Width: PARENT_RIGHT
 					Height: PARENT_BOTTOM
 					Align: Center
 					Visible: false
-					Text: Error displaying file. See assetbrowser.log for details.
+					Text: label-sprite-bg-error
 		Container@FRAME_SELECTOR:
 			X: 226
 			Y: PARENT_BOTTOM - 75
@@ -222,54 +202,6 @@ Background@ASSETBROWSER_PANEL:
 					Height: 25
 					Font: TinyBold
 					Align: Left
-		Container@VOXEL_SELECTOR:
-			X: 226
-			Y: PARENT_BOTTOM - 75
-			Children:
-				Label@ROLL:
-					Y: 1
-					Width: 40
-					Height: 25
-					Font: TinyBold
-					Align: Left
-					Text: Roll
-				Slider@ROLL_SLIDER:
-					X: 30
-					Y: 3
-					Width: 100
-					Height: 20
-					MinimumValue: 1
-					MaximumValue: 1023
-				Label@PITCH:
-					X: 150
-					Y: 1
-					Width: 40
-					Height: 25
-					Font: TinyBold
-					Align: Left
-					Text: Pitch
-				Slider@PITCH_SLIDER:
-					X: 190
-					Y: 3
-					Width: 100
-					Height: 20
-					MinimumValue: 1
-					MaximumValue: 1023
-				Label@YAW:
-					X: 305
-					Y: 1
-					Width: 40
-					Height: 25
-					Font: TinyBold
-					Align: Left
-					Text: Yaw
-				Slider@YAW_SLIDER:
-					X: 335
-					Y: 3
-					Width: 100
-					Height: 20
-					MinimumValue: 1
-					MaximumValue: 1023
 		Button@CLOSE_BUTTON:
 			Key: escape
 			X: PARENT_RIGHT - 180
@@ -277,7 +209,7 @@ Background@ASSETBROWSER_PANEL:
 			Width: 160
 			Height: 25
 			Font: Bold
-			Text: Close
+			Text: button-assetbrowser-panel-close
 		TooltipContainer@TOOLTIP_CONTAINER:
 
 ScrollPanel@ASSET_TYPES_PANEL:
@@ -291,3 +223,4 @@ ScrollPanel@ASSET_TYPES_PANEL:
 			Y: 5
 			Width: PARENT_RIGHT - 29
 			Height: 20
+

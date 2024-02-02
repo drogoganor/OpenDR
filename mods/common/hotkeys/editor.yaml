@@ -20,6 +20,20 @@ EditorCopy: C Ctrl
 	Platform:
 		OSX: C Meta
 
+EditorQuickSave: S Ctrl
+	Description: Save Map
+	Types: Editor
+	Contexts: Editor
+	Platform:
+		OSX: S Meta
+
+EditorPaste: V Ctrl
+	Description: Paste
+	Types: Editor
+	Contexts: Editor
+	Platform:
+		OSX: V Meta
+
 EditorTilesTab: E
 	Description: Tiles Tab
 	Types: Editor
@@ -35,8 +49,18 @@ EditorActorsTab: T
 	Types: Editor
 	Contexts: Editor
 
-EditorHistoryTab: Y
+EditorToolsTab: Y
+	Description: Tools Tab
+	Types: Editor
+	Contexts: Editor
+
+EditorHistoryTab: U
 	Description: History Tab
+	Types: Editor
+	Contexts: Editor
+
+EditorSettingsTab: I
+	Description: Settings Tab
 	Types: Editor
 	Contexts: Editor
 
