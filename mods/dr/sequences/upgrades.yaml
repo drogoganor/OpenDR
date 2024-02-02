@@ -2,35 +2,44 @@
 # FG HQ Upgrade 1
 bfhqtmn1:
 	icon:
+		Filename: bfhqtmn1.shp
 
 # FG HQ Upgrade 2
 bfhqtmn2:
 	icon:
+		Filename: bfhqtmn2.shp
 
 # FG Training Facility Upgrade 1
 bfutfmn1:
 	icon:
+		Filename: bfutfmn1.shp
 
 # FG Assembly Plant Upgrade 1
 bfvcymn1:
 	icon:
+		Filename: bfvcymn1.shp
 
 # Phasing facility upgrade
 bfphfmn1:
 	icon:
+		Filename: bfphfmn1.shp
 
 # Imperium HQ Upgrade 1
 bihqtmn1:
 	icon:
+		Filename: bihqtmn1.shp
 
 # Imperium HQ Upgrade 2
 bihqtmn2:
 	icon:
+		Filename: bihqtmn2.shp
 
 # Imperium Training Facility Upgrade 1
 biutfmn1:
 	icon:
+		Filename: biutfmn1.shp
 
 # Imperium Assembly Plant Upgrade 1
 bivcymn1:
 	icon:
+		Filename: bivcymn1.shp

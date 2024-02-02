@@ -3,6 +3,8 @@
 # Gore Hunter
 unhvst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unhvst0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -21,17 +23,21 @@ unhvst0:
 		Start: 48
 		Facings: 8
 		Length: 1
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.shp
 		Length: 1
 		Offset: 10, 5
 		ZOffset: -8192
-	icon: unhvmn0
+	icon:
+		Filename: unhvmn0.shp
 
 
 
 # Shock Trooper
 unskst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unskst0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -50,16 +56,20 @@ unskst0:
 		Start: 48
 		Facings: 8
 		Length: 1
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.shp
 		Length: 1
 		Offset: 10, 4
 		ZOffset: -8192
-	icon: unskst0
+	icon:
+		Filename: unskst0.shp
 
 
 # Santa
 unsanst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unsanst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -78,15 +88,19 @@ unsanst0:
 	stand:
 		Start: 112
 		Facings: 16
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.shp
 		Length: 1
 		Offset: 10, 4
 		ZOffset: -8192
-	icon: unsanmn0
+	icon:
+		Filename: unsanmn0.shp
 
 # Gore Beast
 unmonst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unmonst0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -105,11 +119,14 @@ unmonst0:
 	stand:
 		Start: 120
 		Facings: 8
-	icon: unmonmn0
+	icon:
+		Filename: unmonmn0.shp
 
 # Gun Walker
 ungwtst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: ungwtst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -124,19 +141,24 @@ ungwtst0:
 	idle:
 		Start: 112
 		Facings: 16
-	muzzle: ungwtst1
+	muzzle:
+		Filename: ungwtst1.shp
 		Start: 16
 		Facings: 16
 		Length: 2
 		Tick: 40
-	turret: ungwtst1
+	turret:
+		Filename: ungwtst1.shp
 		Start: 0
 		Facings: 16
-	icon: ungwtmn0
+	icon:
+		Filename: ungwtmn0.shp
 
 # Scout Alt
 unwlkac1:
 	Inherits: humansplat
+	Defaults:
+		Filename: unwlkac1.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -154,19 +176,24 @@ unwlkac1:
 		Facings: 16
 		Length: 3
 		Tick: 40
-	turret: unwlkac0
+	turret:
+		Filename: unwlkac0.shp
 		Start: 0
 		Facings: 16
-	turret-fire: unwlkac0 # Unused
+	turret-fire: # Unused
+		Filename: unwlkac0.shp
 		Start: 16
 		Facings: 16
 		Length: 2
 		Tick: 40
-	icon: unwlkmn0
+	icon:
+		Filename: unwlkmn0.shp
 
 # Walker Scout
 unwlkst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unwlkst0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -183,19 +210,24 @@ unwlkst0:
 	idle:
 		Start: 48
 		Facings: 8
-	turret: unwlkac0
+	turret:
+		Filename: unwlkac0.shp
 		Start: 0
 		Facings: 16
-	muzzle: unwlkac0
+	muzzle:
+		Filename: unwlkac0.shp
 		Start: 16
 		Facings: 16
 		Length: 2
 		Tick: 40
-	icon: unwlkmn0
+	icon:
+		Filename: unwlkmn0.shp
 
 # SuicideBot
 unminst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unminst0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -216,10 +248,13 @@ unminst0:
 		Facings: 8
 		Length: 3
 		Tick: 40
-	icon: unminmn0
+	icon:
+		Filename: unminmn0.shp
 
 # Tick Tank Alt
 untikac1:
+	Defaults:
+		Filename: untikac1.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -240,19 +275,24 @@ untikac1:
 		Facings: 8
 		Length: 3
 		Tick: 40
-	turret: untikac0
+	turret:
+		Filename: untikac0.shp
 		Start: 0
 		Facings: 16
-	muzzle: untikac0
+	muzzle:
+		Filename: untikac0.shp
 		Start: 16
 		Facings: 16
 		Length: 3
 		Tick: 40
-	icon: ufspbmn0
+	icon:
+		Filename: ufspbmn0.shp
 
 # Tick Tank
 untikst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: untikst0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -267,19 +307,24 @@ untikst0:
 	idle:
 		Start: 48
 		Facings: 8
-	turret: untikac0
+	turret:
+		Filename: untikac0.shp
 		Start: 0
 		Facings: 16
-	muzzle: untikac0
+	muzzle:
+		Filename: untikac0.shp
 		Start: 16
 		Facings: 16
 		Length: 3
 		Tick: 40
-	icon: untikmn0
+	icon:
+		Filename: untikmn0.shp
 
 # Flaming Death
 unfdtst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unfdtst0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -294,19 +339,24 @@ unfdtst0:
 	idle:
 		Start: 48
 		Facings: 8
-	turret: unfdtac0
+	turret:
+		Filename: unfdtac0.shp
 		Start: 0
 		Facings: 16
-	muzzle: unfdtac0
+	muzzle:
+		Filename: unfdtac0.shp
 		Start: 16
 		Facings: 16
 		Length: 3
 		Tick: 40
-	icon: unfdmmn0
+	icon:
+		Filename: unfdmmn0.shp
 	
 # Hover Assault Tank
 unhovst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unhovst0.shp
 	run:
 		Start: 16
 		Facings: 16
@@ -323,19 +373,24 @@ unhovst0:
 	idle:
 		Start: 0
 		Facings: 16
-	turret: unhovac0
+	turret:
+		Filename: unhovac0.shp
 		Start: 0
 		Facings: 16
-	muzzle: unhovac0
+	muzzle:
+		Filename: unhovac0.shp
 		Start: 16
 		Facings: 16
 		Length: 2
 		Tick: 40
-	icon: unhovmn0
+	icon:
+		Filename: unhovmn0.shp
 
 # Armoured Guard Walker
 unmkwst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unmkwst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -350,19 +405,24 @@ unmkwst0:
 	idle:
 		Start: 128
 		Facings: 16
-	turret: unmkwst1
+	turret:
+		Filename: unmkwst1.shp
 		Start: 0
 		Facings: 16
-	muzzle: unmkwst1
+	muzzle:
+		Filename: unmkwst1.shp
 		Start: 16
 		Facings: 16
 		Length: 1
 		Tick: 40
-	icon: unmkwmn0
+	icon:
+		Filename: unmkwmn0.shp
 
 # AT-AT Walker
 unfrwst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unfrwst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -377,19 +437,24 @@ unfrwst0:
 	idle:
 		Start: 128
 		Facings: 16
-	turret: unfrwst1
+	turret:
+		Filename: unfrwst1.shp
 		Start: 0
 		Facings: 16
-	muzzle: unfrwst1
+	muzzle:
+		Filename: unfrwst1.shp
 		Start: 16
 		Facings: 16
 		Length: 1
 		Tick: 40
-	icon: unfrwmn0
+	icon:
+		Filename: unfrwmn0.shp
 
 # Sonic Thumper Alternate
 utthdst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utthdst0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -411,11 +476,14 @@ utthdst0:
 		Facings: 8
 		Length: 3
 		Tick: 40
-	icon: utthumn0
+	icon:
+		Filename: utthumn0.shp
 
 # Sonic Thumper
 utthust0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utthust0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -437,11 +505,14 @@ utthust0:
 		Facings: 8
 		Length: 3
 		Tick: 40
-	icon: utthumn0
+	icon:
+		Filename: utthumn0.shp
 
 # Alternate Vortex Tank
 unvorst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unvorst0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -456,21 +527,26 @@ unvorst0:
 	idle:
 		Start: 24
 		Facings: 8
-	turret: unvorac0
+	turret:
+		Filename: unvorac0.shp
 		Start: 0
 		Facings: 16
-	muzzle: unvorac0
+	muzzle:
+		Filename: unvorac0.shp
 		Start: 16
 		Facings: 16
 		Length: 2
 		Tick: 40
-	icon: unvormn0
+	icon:
+		Filename: unvormn0.shp
 
 # TERRORIST
 
 # Construction Crawler
 utconst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utconst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -491,11 +567,14 @@ utconst0:
 		Facings: 16
 		Length: 3
 		Tick: 40
-	icon: utconmn0
+	icon:
+		Filename: utconmn0.shp
 
 # Construction Biot
 utiotst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utiotst0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -517,12 +596,15 @@ utiotst0:
 	idle:
 		Start: 144
 		Facings: 8
-	icon: utiotmn0
+	icon:
+		Filename: utiotmn0.shp
 
 #  Terrorist Water Freighter
 
 utminst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utminst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -558,7 +640,8 @@ utminst0:
 		Facings: 16
 		Length: 4
 		Tick: 40
-	icon: utminmn0
+	icon:
+		Filename: utminmn0.shp
 
 
 
@@ -566,6 +649,8 @@ utminst0:
 
 utravst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utravst0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -587,16 +672,20 @@ utravst0:
 	idle:
 		Start: 152
 		Facings: 8
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.shp
 		Length: 1
 		Offset: 10, 6
 		ZOffset: -8192
-	icon: utravmn0
+	icon:
+		Filename: utravmn0.shp
 
 # Rasta Terrorist Soldier
 
 utrasst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utrasst0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -618,16 +707,20 @@ utrasst0:
 	idle:
 		Start: 192
 		Facings: 8
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.shp
 		Length: 1
 		Offset: 10, 6
 		ZOffset: -8192
-	icon: utrasmn0
+	icon:
+		Filename: utrasmn0.shp
 
 # Alternate Lardridden Terrorist Soldier
 
 utfadst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utfadst0.shp
 	run:
 		Start: 16
 		Facings: 8
@@ -658,12 +751,15 @@ utfadst0:
 		Facings: 8
 		Length: 2
 		Tick: 40
-	icon: utfadmn0
+	icon:
+		Filename: utfadmn0.shp
 
 # Lardridden Terrorist Soldier Veteran
 
 utfatst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utfatst0.shp
 	run:
 		Start: 0
 		Facings: 8
@@ -690,15 +786,19 @@ utfatst0:
 	idle:
 		Start: 120
 		Facings: 8
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.shp
 		Length: 1
 		Offset: 10, 6
 		ZOffset: -8192
-	icon: utfatmn0
+	icon:
+		Filename: utfatmn0.shp
 
 # Terrorist SkateyScout
 utagsst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utagsst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -715,11 +815,14 @@ utagsst0:
 	idle:
 		Start: 128
 		Facings: 16
-	icon: utagsmn0
+	icon:
+		Filename: utagsmn0.shp
 
 # Stealth Chopper
 utspnst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utspnst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -740,11 +843,14 @@ utspnst0:
 		Facings: 16
 		Length: 3
 		Tick: 40
-	icon: utspnmn0
+	icon:
+		Filename: utspnmn0.shp
 
 # Terrorist Transport
 uttgtst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: uttgtst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -765,11 +871,14 @@ uttgtst0:
 		Facings: 16
 		Length: 3
 		Tick: 40
-	icon: uttgtmn0
+	icon:
+		Filename: uttgtmn0.shp
 
 # Terrorist : Air Rifter Alternate
 utardst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utardst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -795,11 +904,14 @@ utardst0:
 		Facings: 16
 		Length: 5
 		Tick: 40
-	icon: utardmn0
+	icon:
+		Filename: utardmn0.shp
 
 # Terrorist : Air Rifter
 utarfst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utarfst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -820,11 +932,14 @@ utarfst0:
 		Facings: 16
 		Length: 2
 		Tick: 40
-	icon: utarfmn0
+	icon:
+		Filename: utarfmn0.shp
 
 # Terrorist Missile Tank
 utmttst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utmttst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -845,11 +960,14 @@ utmttst0:
 		Facings: 16
 		Length: 3
 		Tick: 40
-	icon: utmttmn0
+	icon:
+		Filename: utmttmn0.shp
 
 # Terrorist Artillery
 uttiist0:
 	Inherits: humansplat
+	Defaults:
+		Filename: uttiist0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -870,11 +988,14 @@ uttiist0:
 		Facings: 16
 		Length: 3
 		Tick: 40
-	icon: uttiimn0
+	icon:
+		Filename: uttiimn0.shp
 
 # Terrorist Airborne Troop Carrier
 utattst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utattst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -895,11 +1016,14 @@ utattst0:
 		Facings: 16
 		Length: 4
 		Tick: 40
-	icon: utattmn0
+	icon:
+		Filename: utattmn0.shp
 
 # Terrorist Water-borne Troop Carrier
 uttwtst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: uttwtst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -920,11 +1044,14 @@ uttwtst0:
 		Facings: 16
 		Length: 2
 		Tick: 40
-	icon: uttwtmn0
+	icon:
+		Filename: uttwtmn0.shp
 
 # Terrorist WAA
 unwaast0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unwaast0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -941,11 +1068,14 @@ unwaast0:
 	idle:
 		Start: 112
 		Facings: 16
-	icon: unwaamn0
+	icon:
+		Filename: unwaamn0.shp
 
 # Terrorist Water Tank
 unwtkst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unwtkst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -966,11 +1096,14 @@ unwtkst0:
 		Facings: 16
 		Length: 3
 		Tick: 40
-	icon: unwtkmn0
+	icon:
+		Filename: unwtkmn0.shp
 
 # Terrorist WaterShock
 unwswst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: unwswst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -991,11 +1124,14 @@ unwswst0:
 		Facings: 16
 		Length: 4
 		Tick: 40
-	icon: unwswmn0
+	icon:
+		Filename: unwswmn0.shp
 
 # Terrorist Breaker Boys
 utboyst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: utboyst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -1010,11 +1146,14 @@ utboyst0:
 	idle:
 		Start: 112
 		Facings: 16
-	icon: utboymn0
+	icon:
+		Filename: utboymn0.shp
 
 # Terrorist Hospital Unit
 btpthst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: btpthst0.shp
 	run:
 		Start: 0
 		Facings: 16
@@ -1035,4 +1174,5 @@ btpthst0:
 		Facings: 16
 		Length: 2
 		Tick: 40
-	icon: bc000000
+	icon:
+		Filename: bc000000.shp
