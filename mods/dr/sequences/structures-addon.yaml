@@ -3,398 +3,521 @@
 nthqf1l0:
 	Defaults:
 		Offset: -6, -12
-	building: nthqf1l0
+	building:
+		Filename: nthqf1l0.spr
 		Start: 0
-	idle: nthqf1l0
+	idle:
+		Filename: nthqf1l0.spr
 		Start: 1
-	building2: nthqf2l0
+	building2:
+		Filename: nthqf2l0.spr
 		Start: 0
-	idle2: nthqf2l0
+	idle2:
+		Filename: nthqf2l0.spr
 		Start: 1
-	building3: nthqf3l0
+	building3:
+		Filename: nthqf3l0.spr
 		Start: 0
-	idle3: nthqf3l0
+	idle3:
+		Filename: nthqf3l0.spr
 		Start: 1
-	underlay-building: nthqf1l0
+	underlay-building:
+		Filename: nthqf1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: nthqf1l0
+	underlay:
+		Filename: nthqf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	underlay2: nthqf2l0
+	underlay2:
+		Filename: nthqf2l0.spr
 		ZOffset: -8192
 		Start: 1
-	underlay3: nthqf3l0
+	underlay3:
+		Filename: nthqf3l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tthqf1l0
+	top-building:
+		Filename: tthqf1l0.spr
 		Start: 0
-	top: tthqf1l0
+	top:
+		Filename: tthqf1l0.spr
 		Start: 1
-	top2: tthqf2l0
+	top2:
+		Filename: tthqf2l0.spr
 		Start: 1
-	top3: tthqf3l0
+	top3:
+		Filename: tthqf3l0.spr
 		Start: 1
-	shadow-building: bfhqtsh0
+	shadow-building:
+		Filename: bfhqtsh0.spr
 		Start: 0
 		Offset: 8, -11
-	shadow: bfhqtsh0
+	shadow:
+		Filename: bfhqtsh0.spr
 		Start: 1
 		Offset: 8, -11
-	shadow2: bfhqtsh1
+	shadow2:
+		Filename: bfhqtsh1.spr
 		Start: 1
 		Offset: 8, -11
-	shadow3: bfhqtsh2
+	shadow3:
+		Filename: bfhqtsh2.spr
 		Start: 1
 		Offset: 8, -11
-	icon: bthqfmn1
+	icon:
+		Filename: bthqfmn1.spr
 		Offset: 0, 0
-	fake-icon: bthqfmn1
+	fake-icon:
+		Filename: bthqfmn1.spr
 		Offset: 0, 0
 
 # Terrorist Water Launch Pad
 ntlrf1l0:
+	Defaults:
+		Filename: ntlrf1l0.spr
 	building:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: ntlrf1l0
+	underlay-building:
+		Filename: ntlrf1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: ntlrf1l0
+	underlay:
+		Filename: ntlrf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: ttlrf1l0
+	top-building:
+		Filename: ttlrf1l0.spr
 		Start: 0
-	top: ttlrf1l0
+	top:
+		Filename: ttlrf1l0.spr
 		Start: 1
-	shadow-building: bclncsh0
+	shadow-building:
+		Filename: bclncsh0.spr
 		Start: 0
 		Offset: -1, 1
-	shadow: bclncsh0
+	shadow:
+		Filename: bclncsh0.spr
 		Start: 1
 		Offset: -1, 1
-	icon: btlrfmn0
-	fake-icon: btlrfmn0
+	icon:
+		Filename: btlrfmn0.spr
+	fake-icon:
+		Filename: btlrfmn0.spr
 
 # Terrorist Power Generator
 ntwpf1l0:
 	Defaults:
+		Filename: ntwpf1l0.spr
 		Offset: -8, -6
 	building:
 		Start: 0
 		Length: 1
 	idle:
 		Start: 1
-	underlay-building: ntwpf1l0
+	underlay-building:
+		Filename: ntwpf1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: ntwpf1l0
+	underlay:
+		Filename: ntwpf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: ttwpf1l0
+	top-building:
+		Filename: ttwpf1l0.spr
 		Start: 0
-	top: ttwpf1l0
+	top:
+		Filename: ttwpf1l0.spr
 		Start: 1
-	top2: ttwpf1l0
+	top2:
+		Filename: ttwpf1l0.spr
 		Start: 1
-	shadow-building: bcpowsh0
+	shadow-building:
+		Filename: bcpowsh0.spr
 		Start: 0
 		Offset: 4, -7
-	shadow: bcpowsh0
+	shadow:
+		Filename: bcpowsh0.spr
 		Start: 1
 		Offset: 4, -7
-	icon: btwpfmn0
+	icon:
+		Filename: btwpfmn0.spr
 		Offset: 0, 0
-	fake-icon: btwpfmn0
+	fake-icon:
+		Filename: btwpfmn0.spr
 		Offset: 0, 0
 
 # Pulse Blaster Facility
 nnpbt1l0:
 	Defaults:
+		Filename: nnpbt1l0.spr
 		Offset: -8, -6
 	building:
 		Start: 0
 		Length: 1
 	idle:
 		Start: 1
-	turret: bnpbtst0
+	turret:
+		Filename: bnpbtst0.spr
 		Start: 0
 		Facings: 16
-	turret-fire: bnpbtst0 # Unused
+	turret-fire: # Unused
+		Filename: bnpbtst0.spr
 		Start: 16
 		Facings: 16
 		Length: 2
 		Tick: 40
-	underlay-building: nnpbt1l0
+	underlay-building:
+		Filename: nnpbt1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: nnpbt1l0
+	underlay:
+		Filename: nnpbt1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tnpbt1l0
+	top-building:
+		Filename: tnpbt1l0.spr
 		Start: 0
-	top: tnpbt1l0
+	top:
+		Filename: tnpbt1l0.spr
 		Start: 1
-	shadow-building: bcpowsh0
+	shadow-building:
+		Filename: bcpowsh0.spr
 		Start: 0
 		Offset: 4, -7
-	shadow: bcpowsh0
+	shadow:
+		Filename: bcpowsh0.spr
 		Start: 1
 		Offset: 4, -7
-	icon: bnpbtmn0
+	icon:
+		Filename: bnpbtmn0.spr
 		Offset: 0, 0
-	fake-icon: bnpbtmn0
+	fake-icon:
+		Filename: bnpbtmn0.spr
 		Offset: 0, 0
 
 # Missile Tower
 nnmth1l0:
 	Defaults:
+		Filename: nnmth1l0.spr
 		Offset: -8, -6
 	building:
 		Start: 0
 		Length: 1
 	idle:
 		Start: 1
-	turret: bnmthst0
+	turret:
+		Filename: bnmthst0.spr
 		Start: 0
 		Facings: 24
-	turret-fire: bnmthst0 # Unused
+	turret-fire: # Unused
+		Filename: bnmthst0.spr
 		Start: 24
 		Facings: 24
 		Length: 3
 		Tick: 40
-	underlay-building: nnmth1l0
+	underlay-building:
+		Filename: nnmth1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: nnmth1l0
+	underlay:
+		Filename: nnmth1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow-building: bnmtfsh0
+	shadow-building:
+		Filename: bnmtfsh0.spr
 		Start: 0
 		Offset: 4, -7
-	shadow: bnmtfsh0
+	shadow:
+		Filename: bnmtfsh0.spr
 		Start: 1
 		Offset: 4, -7
-	icon: bnmtfmn0
+	icon:
+		Filename: bnmtfmn0.spr
 		Offset: 0, 0
-	fake-icon: bnmtfmn0
+	fake-icon:
+		Filename: bnmtfmn0.spr
 		Offset: 0, 0
 
 # Terrorist Flamer Tower
 nnflh1l0:
 	Defaults:
+		Filename: nnflh1l0.spr
 		Offset: -8, -6
 	building:
 		Start: 0
 		Length: 1
 	idle:
 		Start: 1
-	turret: bnflhst0
+	turret:
+		Filename: bnflhst0.spr
 		Start: 0
 		Facings: 24
-	turret-fire: bnflhst0 # Unused
+	turret-fire: # Unused
+		Filename: bnflhst0.spr
 		Start: 24
 		Facings: 24
 		Length: 3
 		Tick: 40
-	underlay-building: nnflh1l0
+	underlay-building:
+		Filename: nnflh1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: nnflh1l0
+	underlay:
+		Filename: nnflh1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow-building: bnflfsh0
+	shadow-building:
+		Filename: bnflfsh0.spr
 		Start: 0
 		Offset: 4, -7
-	shadow: bnflfsh0
+	shadow:
+		Filename: bnflfsh0.spr
 		Start: 1
 		Offset: 4, -7
-	icon: bnflfmn0
+	icon:
+		Filename: bnflfmn0.spr
 		Offset: 0, 0
-	fake-icon: bnflfmn0
+	fake-icon:
+		Filename: bnflfmn0.spr
 		Offset: 0, 0
 
 # Terrorist Guard Tower
 ntgth1l0:
 	Defaults:
+		Filename: ntgth1l0.spr
 		Offset: -8, -6
 	building:
 		Start: 0
 		Length: 1
 	idle:
 		Start: 1
-	turret: btgtfst0
+	turret:
+		Filename: btgtfst0.spr
 		Start: 0
 		Facings: 24
-	turret-fire: btgtfst0 # Unused
+	turret-fire: # Unused
+		Filename: btgtfst0.spr
 		Start: 24
 		Facings: 24
 		Length: 2
 		Tick: 40
-	underlay-building: ntgth1l0
+	underlay-building:
+		Filename: ntgth1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: ntgth1l0
+	underlay:
+		Filename: ntgth1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow-building: btgtfsh0
+	shadow-building:
+		Filename: btgtfsh0.spr
 		Start: 0
 		Offset: 4, -7
-	shadow: btgtfsh0
+	shadow:
+		Filename: btgtfsh0.spr
 		Start: 1
 		Offset: 4, -7
-	icon: btgtfmn0
+	icon:
+		Filename: btgtfmn0.spr
 		Offset: 0, 0
-	fake-icon: btgtfmn0
+	fake-icon:
+		Filename: btgtfmn0.spr
 		Offset: 0, 0
 
 # Terrorist Construction Facility
 ntcyf1l0:
 	Defaults:
+		Filename: ntcyf1l0.spr
 		Offset: -8, -6
 	building:
 		Start: 0
 		Length: 1
 	idle:
 		Start: 1
-	underlay-building: ntcyf1l0
+	underlay-building:
+		Filename: ntcyf1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: ntcyf1l0
+	underlay:
+		Filename: ntcyf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: ttcyf1l0
+	top-building:
+		Filename: ttcyf1l0.spr
 		Start: 0
-	top: ttcyf1l0
+	top:
+		Filename: ttcyf1l0.spr
 		Start: 1
-	shadow-building: btcyfsh0
+	shadow-building:
+		Filename: btcyfsh0.spr
 		Start: 0
 		Offset: 4, -7
-	shadow: btcyfsh0
+	shadow:
+		Filename: btcyfsh0.spr
 		Start: 1
 		Offset: 4, -7
-	icon: btcyfmn0
+	icon:
+		Filename: btcyfmn0.spr
 		Offset: 0, 0
-	fake-icon: btcyfmn0
+	fake-icon:
+		Filename: btcyfmn0.spr
 		Offset: 0, 0
 
 # Terrorist Field Hospital
 ntptf1l0:
 	Defaults:
+		Filename: ntptf1l0.spr
 		Offset: -8, -6
 	building:
 		Start: 0
 		Length: 1
 	idle:
 		Start: 1
-	underlay-building: ntptf1l0
+	underlay-building:
+		Filename: ntptf1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: ntptf1l0
+	underlay:
+		Filename: ntptf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: ttptf1l0
+	top-building:
+		Filename: ttptf1l0.spr
 		Start: 0
-	top: ttptf1l0
+	top:
+		Filename: ttptf1l0.spr
 		Start: 1
-	shadow-building: btptfsh0
+	shadow-building:
+		Filename: btptfsh0.spr
 		Start: 0
 		Offset: 4, -7
-	shadow: btptfsh0
+	shadow:
+		Filename: btptfsh0.spr
 		Start: 1
 		Offset: 4, -7
-	icon: btptfmn0
+	icon:
+		Filename: btptfmn0.spr
 		Offset: 0, 0
-	fake-icon: btptfmn0
+	fake-icon:
+		Filename: btptfmn0.spr
 		Offset: 0, 0
 
 # Terrorist Repair Bay
 ntrrf1l0:
 	Defaults:
+		Filename: ntrrf1l0.spr
 		Offset: -8, -6
 	building:
 		Start: 0
 		Length: 1
 	idle:
 		Start: 1
-	underlay-building: ntrrf1l0
+	underlay-building:
+		Filename: ntrrf1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: ntrrf1l0
+	underlay:
+		Filename: ntrrf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: ttrrf1l0
+	top-building:
+		Filename: ttrrf1l0.spr
 		Start: 0
-	top: ttrrf1l0
+	top:
+		Filename: ttrrf1l0.spr
 		Start: 1
-	shadow-building: btrrfsh0
+	shadow-building:
+		Filename: btrrfsh0.spr
 		Start: 0
 		Offset: 4, -7
-	shadow: btrrfsh0
+	shadow:
+		Filename: btrrfsh0.spr
 		Start: 1
 		Offset: 4, -7
-	icon: btrrfmn0
+	icon:
+		Filename: btrrfmn0.spr
 		Offset: 0, 0
-	fake-icon: btrrfmn0
+	fake-icon:
+		Filename: btrrfmn0.spr
 		Offset: 0, 0
 
 # Terrorist Rearming Deck
 ntrrf2l0:
 	Defaults:
+		Filename: ntrrf2l0.spr
 		Offset: -8, -6
 	building:
 		Start: 0
 		Length: 1
 	idle:
 		Start: 1
-	underlay-building: ntrrf2l0
+	underlay-building:
+		Filename: ntrrf2l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: ntrrf2l0
+	underlay:
+		Filename: ntrrf2l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: ttrrf2l0
+	top-building:
+		Filename: ttrrf2l0.spr
 		Start: 0
-	top: ttrrf2l0
+	top:
+		Filename: ttrrf2l0.spr
 		Start: 1
-	shadow-building: btrrfsh1
+	shadow-building:
+		Filename: btrrfsh1.spr
 		Start: 0
 		Offset: 4, -7
-	shadow: btrrfsh1
+	shadow:
+		Filename: btrrfsh1.spr
 		Start: 1
 		Offset: 4, -7
-	icon: btrrfmn0
+	icon:
+		Filename: btrrfmn0.spr
 		Offset: 0, 0
-	fake-icon: btrrfmn0
+	fake-icon:
+		Filename: btrrfmn0.spr
 		Offset: 0, 0
 
 # Terrorist Water-Unit Construction Facility
 ntwyf1l0:
 	Defaults:
+		Filename: ntwyf1l0.spr
 		Offset: -8, -6
 	building:
 		Start: 0
 		Length: 1
 	idle:
 		Start: 1
-	underlay-building: ntwyf1l0
+	underlay-building:
+		Filename: ntwyf1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: ntwyf1l0
+	underlay:
+		Filename: ntwyf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: ttwyf1l0
+	top-building:
+		Filename: ttwyf1l0.spr
 		Start: 0
-	top: ttwyf1l0
+	top:
+		Filename: ttwyf1l0.spr
 		Start: 1
-	shadow-building: btwyfsh0
+	shadow-building:
+		Filename: btwyfsh0.spr
 		Start: 0
 		Offset: 4, -7
-	shadow: btwyfsh0
+	shadow:
+		Filename: btwyfsh0.spr
 		Start: 1
 		Offset: 4, -7
-	icon: btwyfmn0
+	icon:
+		Filename: btwyfmn0.spr
 		Offset: 0, 0
-	fake-icon: btwyfmn0
+	fake-icon:
+		Filename: btwyfmn0.spr
 		Offset: 0, 0

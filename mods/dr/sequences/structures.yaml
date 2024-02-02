@@ -2,6 +2,7 @@
 # Taelon Power Generator
 ncpow1l0:
 	Defaults:
+		Filename: ncpow1l0.spr
 		Offset: -8, -6
 	building:
 		Start: 0
@@ -9,625 +10,842 @@ ncpow1l0:
 		Tick: 900000
 	idle:
 		Start: 1
-	underlay-building: tileset|ncpow1l0
+	underlay-building:
+		Filename: ncpow1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|ncpow1l0
+	underlay:
+		Filename: ncpow1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tcpow1l0
+	top-building:
+		Filename: tcpow1l0.spr
 		Start: 0
-	top: tcpow1l0
+	top:
+		Filename: tcpow1l0.spr
 		Start: 1
-	top2: tcpow1l0
+	top2:
+		Filename: tcpow1l0.spr
 		Start: 3
 		Length: 5
 		Tick: 800
-	shadow-building: bcpowsh0
+	shadow-building:
+		Filename: bcpowsh0.spr
 		Start: 0
 		Offset: 4, -7
-	shadow: bcpowsh0
+	shadow:
+		Filename: bcpowsh0.spr
 		Start: 1
 		Offset: 4, -7
-	icon: bcpowmn0
+	icon:
+		Filename: bcpowmn0.spr
 		Offset: 0, 0
-	fake-icon: bcpowmn0
+	fake-icon:
+		Filename: bcpowmn0.spr
 		Offset: 0, 0
 
 # Water Launch Pad
 nclnc1l0:
+	Defaults:
+		Filename: nclnc1l0.spr
 	building:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: tileset|nclnc1l0
+	underlay-building:
+		Filename: nclnc1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nclnc1l0
+	underlay:
+		Filename: nclnc1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tclnc1l0
+	top-building:
+		Filename: tclnc1l0.spr
 		Start: 0
-	top: tclnc1l0
+	top:
+		Filename: tclnc1l0.spr
 		Start: 1
-	shadow-building: bclncsh0
+	shadow-building:
+		Filename: bclncsh0.spr
 		Start: 0
 		Offset: -1, 1
-	shadow: bclncsh0
+	shadow:
+		Filename: bclncsh0.spr
 		Start: 1
 		Offset: -1, 1
-	icon: bclncmn0
-	fake-icon: bclncmn0
+	icon:
+		Filename: bclncmn0.spr
+	fake-icon:
+		Filename: bclncmn0.spr
 
 # Freedom Guard HQ
 nfhqt1l0:
 	Defaults:
+		Filename: nfhqt1l0.spr
 		Offset: -6, -12
 	building:
 		Start: 0
-	building2: nfhqt2l0
+	building2:
+		Filename: nfhqt2l0.spr
 		Start: 0
-	building3: nfhqt3l0
+	building3:
+		Filename: nfhqt3l0.spr
 		Start: 0
 	idle:
 		Start: 1
-	idle2: nfhqt2l0
+	idle2:
+		Filename: nfhqt2l0.spr
 		Start: 1
-	idle3: nfhqt3l0
+	idle3:
+		Filename: nfhqt3l0.spr
 		Start: 1
-	underlay-building: tileset|nfhqt1l0
+	underlay-building:
+		Filename: nfhqt1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nfhqt1l0
+	underlay:
+		Filename: nfhqt1l0.spr
 		ZOffset: -8192
 		Start: 1
-	underlay2: tileset|nfhqt2l0
+	underlay2:
+		Filename: nfhqt2l0.spr
 		ZOffset: -8192
 		Start: 1
-	underlay3: tileset|nfhqt3l0
+	underlay3:
+		Filename: nfhqt3l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tfhqt1l0
+	top-building:
+		Filename: tfhqt1l0.spr
 		Start: 0
-	top: tfhqt1l0
+	top:
+		Filename: tfhqt1l0.spr
 		Start: 1
-	top2: tfhqt2l0
+	top2:
+		Filename: tfhqt2l0.spr
 		Start: 1
-	top3: tfhqt3l0
+	top3:
+		Filename: tfhqt3l0.spr
 		Start: 1
-	shadow-building: bfhqtsh0
+	shadow-building:
+		Filename: bfhqtsh0.spr
 		Start: 0
 		Offset: 8, -11
-	shadow: bfhqtsh0
+	shadow:
+		Filename: bfhqtsh0.spr
 		Start: 1
 		Offset: 8, -11
-	shadow2: bfhqtsh1
+	shadow2:
+		Filename: bfhqtsh1.spr
 		Start: 1
 		Offset: 8, -11
-	shadow3: bfhqtsh2
+	shadow3:
+		Filename: bfhqtsh2.spr
 		Start: 1
 		Offset: 8, -11
-	icon: bfhqtmn0
+	icon:
+		Filename: bfhqtmn0.spr
 		Offset: 0, 0
-	fake-icon: bfhqtmn0
+	fake-icon:
+		Filename: bfhqtmn0.spr
 		Offset: 0, 0
 
 # Imperium HQ
 nihqt1l0:
 	Defaults:
 		Offset: 6, -22
-	building: nihqt1l0
+	building:
+		Filename: nihqt1l0.spr
 		Start: 0
-	idle: nihqt1l0
+	idle:
+		Filename: nihqt1l0.spr
 		Start: 1
-	building2: nihqt2l0
+	building2:
+		Filename: nihqt2l0.spr
 		Start: 0
-	idle2: nihqt2l0
+	idle2:
+		Filename: nihqt2l0.spr
 		Start: 1
-	building3: nihqt3l0
+	building3:
+		Filename: nihqt3l0.spr
 		Start: 0
-	idle3: nihqt3l0
+	idle3:
+		Filename: nihqt3l0.spr
 		Start: 1
-	underlay-building: tileset|nihqt1l0
+	underlay-building:
+		Filename: nihqt1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nihqt1l0
+	underlay:
+		Filename: nihqt1l0.spr
 		ZOffset: -8192
 		Start: 1
-	underlay2: tileset|nihqt2l0
+	underlay2:
+		Filename: nihqt2l0.spr
 		ZOffset: -8192
 		Start: 1
-	underlay3: tileset|nihqt3l0
+	underlay3:
+		Filename: nihqt3l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tileset|tihqt1l0
+	top-building:
+		Filename: tihqt1l0.spr
 		Start: 0
-	top: tileset|tihqt1l0
+	top:
+		Filename: tihqt1l0.spr
 		Start: 1
-	top2: tileset|tihqt2l0
+	top2:
+		Filename: tihqt2l0.spr
 		Start: 1
-	top3: tileset|tihqt3l0
+	top3:
+		Filename: tihqt3l0.spr
 		Start: 1
-	shadow-building: bihqtsh0
+	shadow-building:
+		Filename: bihqtsh0.spr
 		Start: 0
 		Offset: 30, -10
-	shadow: bihqtsh0
+	shadow:
+		Filename: bihqtsh0.spr
 		Start: 1
 		Offset: 30, -10
-	shadow2: bihqtsh1
+	shadow2:
+		Filename: bihqtsh1.spr
 		Start: 1
 		Offset: 30, -10
-	shadow3: bihqtsh2
+	shadow3:
+		Filename: bihqtsh2.spr
 		Start: 1
 		Offset: 30, -10
-	icon: bihqtmn0
+	icon:
+		Filename: bihqtmn0.spr
 		Offset: 0, 0
-	fake-icon: bihqtmn0
+	fake-icon:
+		Filename: bihqtmn0.spr
 		Offset: 0, 0
 
 # Togran HQ
 tothq1l0:
-	building: tothq1l0
+	building:
+		Filename: tothq1l0.spr
 		Start: 0
-	idle: tothq1l0
+	idle:
+		Filename: tothq1l0.spr
 		Start: 1
-	building2: tothq1l0
+	building2:
+		Filename: tothq1l0.spr
 		Start: 0
-	idle2: tothq1l0
+	idle2:
+		Filename: tothq1l0.spr
 		Start: 1
-	building3: tothq1l0
+	building3:
+		Filename: tothq1l0.spr
 		Start: 0
-	idle3: tothq1l0
+	idle3:
+		Filename: tothq1l0.spr
 		Start: 1
-	underlay-building: nothq1l0 # no tileset|xx..
+	underlay-building: # no xx..
+		Filename: nothq1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: nothq1l0 # no tileset|xx..
+	underlay: # no xx..
+		Filename: nothq1l0.spr
 		ZOffset: -8192
 		Start: 1
-	underlay2: nothq1l0
+	underlay2:
+		Filename: nothq1l0.spr
 		ZOffset: -8192
 		Start: 1
-	underlay3: nothq1l0
+	underlay3:
+		Filename: nothq1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tothq1l0
+	top-building:
+		Filename: tothq1l0.spr
 		Start: 3
 		Length: 3
 		Tick: 100
-	top: tothq1l0
+	top:
+		Filename: tothq1l0.spr
 		Start: 3
 		Length: 3
 		Tick: 100
-	top2: tothq1l0
+	top2:
+		Filename: tothq1l0.spr
 		Start: 3
 		Length: 3
 		Tick: 100
-	top3: tothq1l0
+	top3:
+		Filename: tothq1l0.spr
 		Start: 3
 		Length: 3
 		Tick: 100
-	shadow-building: tothqsh0
+	shadow-building:
+		Filename: tothqsh0.spr
 		Start: 0
 		Offset: 13, 9
-	shadow: tothqsh0
+	shadow:
+		Filename: tothqsh0.spr
 		Start: 1
 		Offset: 13, 9
-	shadow2: tothqsh0
+	shadow2:
+		Filename: tothqsh0.spr
 		Start: 1
 		Offset: 13, 9
-	shadow3: tothqsh0
+	shadow3:
+		Filename: tothqsh0.spr
 		Start: 1
 		Offset: 13, 9
-	icon: bothqmn0
-	fake-icon: bothqmn0
+	icon:
+		Filename: bothqmn0.spr
+	fake-icon:
+		Filename: bothqmn0.spr
 
 # Freedom Guard Training Facility
 nfutf1l0:
 	Defaults:
+		Filename: nfutf1l0.spr
 		Offset: 0, -2
 	building:
 		Start: 0
 	idle:
 		Start: 1
-	building2: nfutf2l0
+	building2:
+		Filename: nfutf2l0.spr
 		Start: 0
-	idle2: nfutf2l0
+	idle2:
+		Filename: nfutf2l0.spr
 		Start: 1
-	underlay-building: tileset|nfutf1l0
+	underlay-building:
+		Filename: nfutf1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nfutf1l0
+	underlay:
+		Filename: nfutf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	underlay2: tileset|nfutf2l0
+	underlay2:
+		Filename: nfutf2l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tfutf1l0
+	top-building:
+		Filename: tfutf1l0.spr
 		Start: 0
-	top: tfutf1l0
+	top:
+		Filename: tfutf1l0.spr
 		Start: 1
-	top2: tfutf2l0
+	top2:
+		Filename: tfutf2l0.spr
 		Start: 1
-	up2base: nfutf2l0
+	up2base:
+		Filename: nfutf2l0.spr
 		ZOffset: -8192
 		Start: 1
-	animation: tfutf2l0 # flag
+	animation: # flag
+		Filename: tfutf2l0.spr
 		Start: 3
 		Length: 14
 		Tick: 150
-	shadow-building: bfutfsh0
+	shadow-building:
+		Filename: bfutfsh0.spr
 		Start: 0
 		Offset: 12, -2
-	shadow: bfutfsh0
+	shadow:
+		Filename: bfutfsh0.spr
 		Start: 1
 		Offset: 12, -2
-	shadow2: bfutfsh1
+	shadow2:
+		Filename: bfutfsh1.spr
 		Start: 1
 		Offset: 12, -2
-	icon: bfutfmn0
+	icon:
+		Filename: bfutfmn0.spr
 		Offset: 0, 0
-	fake-icon: bfutfmn0
+	fake-icon:
+		Filename: bfutfmn0.spr
 		Offset: 0, 0
 
 # Imperium Training Facility
 niutf1l0:
 	Defaults:
+		Filename: niutf1l0.spr
 		Offset: 10, 6
 	building:
 		Start: 0
 	idle:
 		Start: 1
-	building2: niutf2l0
+	building2:
+		Filename: niutf2l0.spr
 		Start: 0
-	idle2: niutf2l0
+	idle2:
+		Filename: niutf2l0.spr
 		Start: 1
-	underlay-building: tileset|niutf1l0
+	underlay-building:
+		Filename: niutf1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|niutf1l0
+	underlay:
+		Filename: niutf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	underlay2: tileset|niutf2l0
+	underlay2:
+		Filename: niutf2l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tiutf1l0
+	top-building:
+		Filename: tiutf1l0.spr
 		Start: 0
-	top: tiutf1l0
+	top:
+		Filename: tiutf1l0.spr
 		Start: 1
-	top2: tiutf2l0
+	top2:
+		Filename: tiutf2l0.spr
 		ZOffset: -8192
 		Start: 1
-	up2top: tiutf2l0
+	up2top:
+		Filename: tiutf2l0.spr
 		Start: 1
-	animation: tiutf2l0 # flashing light
+	animation: # flashing light
+		Filename: tiutf2l0.spr
 		Start: 3
 		Length: 5
 		Tick: 500
-	shadow-building: biutfsh0
+	shadow-building:
+		Filename: biutfsh0.spr
 		Start: 0
 		Offset: 22, 6
-	shadow: biutfsh0
+	shadow:
+		Filename: biutfsh0.spr
 		Start: 1
 		Offset: 22, 6
-	shadow2: biutfsh1
+	shadow2:
+		Filename: biutfsh1.spr
 		Start: 1
 		Offset: 22, 6
-	icon: biutfmn0
+	icon:
+		Filename: biutfmn0.spr
 		Offset: 0, 0
-	fake-icon: biutfmn0
+	fake-icon:
+		Filename: biutfmn0.spr
 		Offset: 0, 0
 
 # Freedom Guard Assembly Plant
 nfvcy1l0:
 	Defaults:
+		Filename: nfvcy1l0.spr
 		Offset: 12, 0
 	building:
 		Start: 0
 	idle:
 		Start: 1
-	building2: nfvcy2l0
+	building2:
+		Filename: nfvcy2l0.spr
 		Start: 0
-	idle2: nfvcy2l0
+	idle2:
+		Filename: nfvcy2l0.spr
 		Start: 1
-	underlay-building: tileset|nfvcy1l0
+	underlay-building:
+		Filename: nfvcy1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nfvcy1l0
+	underlay:
+		Filename: nfvcy1l0.spr
 		ZOffset: -8192
 		Start: 1
-	underlay2: tileset|nfvcy2l0
+	underlay2:
+		Filename: nfvcy2l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tfvcy1l0
+	top-building:
+		Filename: tfvcy1l0.spr
 		Start: 0
-	top: tfvcy1l0
+	top:
+		Filename: tfvcy1l0.spr
 		Start: 1
-	top2: tfvcy2l0
+	top2:
+		Filename: tfvcy2l0.spr
 		Start: 1
 	#animation: tfvcy2l0 # chimney; retail only
 	#	Start: 3
 	#	Length: 40
 	#	Tick: 150
-	shadow-building: bfvcysh0
+	shadow-building:
+		Filename: bfvcysh0.spr
 		Start: 0
 		Offset: 16, 20
-	shadow: bfvcysh0
+	shadow:
+		Filename: bfvcysh0.spr
 		Start: 1
 		Offset: 16, 20
-	shadow2: bfvcysh1
+	shadow2:
+		Filename: bfvcysh1.spr
 		Start: 1
 		Offset: 12, -2
-	icon: bfvcymn0
+	icon:
+		Filename: bfvcymn0.spr
 		Offset: 0, 0
-	fake-icon: bfvcymn0
+	fake-icon:
+		Filename: bfvcymn0.spr
 		Offset: 0, 0
 
 # Imperium Assembly Plant
 nivcy1l0:
+	Defaults:
+		Filename: nivcy1l0.spr
 	building:
 		Start: 0
 	idle:
 		Start: 1
-	building2: nivcy2l0
+	building2:
+		Filename: nivcy2l0.spr
 		Start: 0
-	idle2: nivcy2l0
+	idle2:
+		Filename: nivcy2l0.spr
 		Start: 1
-	underlay-building: tileset|nivcy1l0
+	underlay-building:
+		Filename: nivcy1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nivcy1l0
+	underlay:
+		Filename: nivcy1l0.spr
 		ZOffset: -8192
 		Start: 1
-	underlay2: tileset|nivcy2l0
+	underlay2:
+		Filename: nivcy2l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tivcy1l0
+	top-building:
+		Filename: tivcy1l0.spr
 		Start: 0
-	top: tivcy1l0
+	top:
+		Filename: tivcy1l0.spr
 		Start: 1
-	top2: tivcy2l0
+	top2:
+		Filename: tivcy2l0.spr
 		Start: 1
-	up2top: tivcy2l0
+	up2top:
+		Filename: tivcy2l0.spr
 		Start: 1
-	shadow-building: bivcysh0
+	shadow-building:
+		Filename: bivcysh0.spr
 		Start: 0
 		Offset: 11, 12
-	shadow: bivcysh0
+	shadow:
+		Filename: bivcysh0.spr
 		Start: 1
 		Offset: 11, 12
-	shadow2: bivcysh1
+	shadow2:
+		Filename: bivcysh1.spr
 		Start: 1
 		Offset: 11, 12
-	icon: bivcymn0
-	fake-icon: bivcymn0
+	icon:
+		Filename: bivcymn0.spr
+	fake-icon:
+		Filename: bivcymn0.spr
 
 # FG Laser turret
 nfgdt1l0:
-	building: tileset|nfgdt1l0
+	building:
+		Filename: nfgdt1l0.spr
 		Start: 0
-	idle: nfgdt1l0_01fixed.png
-		AddExtension: False
+	idle:
+		Filename: nfgdt1l0_01fixed.png
 		Start: 0
-	recoil: bfgdtsp0
+	recoil:
+		Filename: bfgdtsp0.spr
 		Start: 0
 		Facings: 16
-	turret: bfgdtsp0
+	turret:
+		Filename: bfgdtsp0.spr
 		Start: 0
 		Facings: 16
-	underlay-building: tileset|nfgdt1l0
+	underlay-building:
+		Filename: nfgdt1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nfgdt1l0
+	underlay:
+		Filename: nfgdt1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tileset|tfgdt1l0
+	top-building:
+		Filename: tfgdt1l0.spr
 		Start: 0
 	#top: nfgdt1l0_01fixed.png
 	#	AddExtension: False
 	#	Start: 0
 	#	Offset: -40, -40
-	shadow-building: bfgdtsh0
+	shadow-building:
+		Filename: bfgdtsh0.spr
 		Start: 0
 		Offset: 0, -1
-	shadow: bfgdtsh0
+	shadow:
+		Filename: bfgdtsh0.spr
 		Start: 1
 		Offset: 0, -1
-	icon: bfgdtmn0
-	fake-icon: bfgdtmn0
+	icon:
+		Filename: bfgdtmn0.spr
+	fake-icon:
+		Filename: bfgdtmn0.spr
 
 # Imperium Plasma turret
 nigdt1l0:
-	building: tileset|nigdt1l0
+	building:
+		Filename: nigdt1l0.spr
 		Start: 0
-	idle: tileset|nigdt1l0
+	idle:
+		Filename: nigdt1l0.spr
 		Start: 1
 		ZOffset: -128
-	recoil: bigdtsp0
+	recoil:
+		Filename: bigdtsp0.spr
 		Start: 0
 		Facings: 16
-	turret: bigdtsp0
+	turret:
+		Filename: bigdtsp0.spr
 		Start: 0
 		Facings: 16
-	underlay-building: tileset|nigdt1l0
+	underlay-building:
+		Filename: nigdt1l0.spr
 		ZOffset: 128
 		Start: 0
-	underlay: tileset|nigdt1l0
+	underlay:
+		Filename: nigdt1l0.spr
 		ZOffset: 128
 		Start: 1
-	top-building: tigdt1l0
+	top-building:
+		Filename: tigdt1l0.spr
 		Start: 0
-	top: tigdt1l0
+	top:
+		Filename: tigdt1l0.spr
 		Start: 1
-	shadow-building: bigdtsh0
+	shadow-building:
+		Filename: bigdtsh0.spr
 		Start: 0
 		Offset: 11, 2
-	shadow: bigdtsh0
+	shadow:
+		Filename: bigdtsh0.spr
 		Start: 1
 		Offset: 11, 2
-	icon: bigdtmn0
-	fake-icon: bigdtmn0
+	icon:
+		Filename: bigdtmn0.spr
+	fake-icon:
+		Filename: bigdtmn0.spr
 
 # FG Anti-air turret
 nfaar1l0:
+	Defaults:
+		Filename: nfaar1l0.spr
 	building:
 		Start: 0
 	idle:
 		Start: 1
-	recoil: bfaarsp0
+	recoil:
+		Filename: bfaarsp0.spr
 		Start: 0
 		Facings: 16
-	turret: bfaarsp0
+	turret:
+		Filename: bfaarsp0.spr
 		Start: 0
 		Facings: 16
-	underlay-building: tileset|nfaar1l0
+	underlay-building:
+		Filename: nfaar1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nfaar1l0
+	underlay:
+		Filename: nfaar1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tfaar1l0
+	top-building:
+		Filename: tfaar1l0.spr
 		Start: 0
-	top: tfaar1l0
+	top:
+		Filename: tfaar1l0.spr
 		Start: 1
-	shadow-building: bfaarsh0
+	shadow-building:
+		Filename: bfaarsh0.spr
 		Start: 0
 		Offset: 12, 2
-	shadow: bfaarsh0
+	shadow:
+		Filename: bfaarsh0.spr
 		Start: 1
 		Offset: 12, 2
-	icon: bfaarmn0
-	fake-icon: bfaarmn0
+	icon:
+		Filename: bfaarmn0.spr
+	fake-icon:
+		Filename: bfaarmn0.spr
 
 # Imperium  Anti-air turret
 niaar1l0:
 	Defaults:
+		Filename: niaar1l0.spr
 		Offset: -1, -14
 	building:
 		Start: 0
 	idle:
 		Start: 1
-	recoil: biaarsp0
+	recoil:
+		Filename: biaarsp0.spr
 		Start: 0
 		Length: 1
-	turret: biaarsp0
+	turret:
+		Filename: biaarsp0.spr
 		Start: 0
 		Length: 1
-	underlay-building: tileset|niaar1l0
+	underlay-building:
+		Filename: niaar1l0.spr
 		#ZOffset: -8192
 		Start: 0
-	underlay: tileset|niaar1l0
+	underlay:
+		Filename: niaar1l0.spr
 		#ZOffset: -8192
 		Start: 1
-	top-building: tiaar1l0
+	top-building:
+		Filename: tiaar1l0.spr
 		Start: 0
-	top: tiaar1l0
+	top:
+		Filename: tiaar1l0.spr
 		Start: 1
-	shadow-building: biaarsh0
+	shadow-building:
+		Filename: biaarsh0.spr
 		Start: 0
 		Offset: 10, 0
-	shadow: biaarsh0
+	shadow:
+		Filename: biaarsh0.spr
 		Start: 1
 		Offset: -2, 0
-	icon: biaarmn0
+	icon:
+		Filename: biaarmn0.spr
 		Offset: 0, 0
-	fake-icon: biaarmn0
+	fake-icon:
+		Filename: biaarmn0.spr
 		Offset: 0, 0
 
 # FG Heavy rail
 nfagt1l0:
-	building: base|nfagt1l0
+	building:
+		Filename: base|nfagt1l0.spr
 		Start: 0
-	idle: base|nfagt1l0
+	idle:
+		Filename: base|nfagt1l0.spr
 		Start: 1
-	recoil: bfagtsp0
+	recoil:
+		Filename: bfagtsp0.spr
 		Start: 0
 		Facings: 16
-	turret: bfagtsp0
+	turret:
+		Filename: bfagtsp0.spr
 		Start: 0
 		Facings: 16
-	underlay-building: tileset|nfagt1l0
+	underlay-building:
+		Filename: nfagt1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nfagt1l0
+	underlay:
+		Filename: nfagt1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: base|tfagt1l0
+	top-building:
+		Filename: base|tfagt1l0.spr
 		Start: 0
-	top: base|tfagt1l0
+	top:
+		Filename: base|tfagt1l0.spr
 		Start: 1
-	shadow-building: bfagtsh0
+	shadow-building:
+		Filename: bfagtsh0.spr
 		Start: 0
 		Offset: 12, 12
-	shadow: bfagtsh0
+	shadow:
+		Filename: bfagtsh0.spr
 		Start: 1
 		Offset: 12, 12
-	icon: bfagtmn0
-	fake-icon: bfagtmn0
+	icon:
+		Filename: bfagtmn0.spr
+	fake-icon:
+		Filename: bfagtmn0.spr
 
 # Imperium neutron accelerator
 niagt1l0:
-	building: tileset|niagt1l0
+	building:
+		Filename: niagt1l0.spr
 		Start: 0
-	idle: tileset|niagt1l0
+	idle:
+		Filename: niagt1l0.spr
 		Start: 1
-	recoil: biagtsp0
+	recoil:
+		Filename: biagtsp0.spr
 		Start: 0
 		Facings: 16
-	turret: biagtsp0
+	turret:
+		Filename: biagtsp0.spr
 		Start: 0
 		Facings: 16
-	underlay-building: tileset|tiagt1l0
+	underlay-building:
+		Filename: tiagt1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|tiagt1l0
+	underlay:
+		Filename: tiagt1l0.spr
 		ZOffset: -8192
 		Start: 1
-	#top-building: tileset|tiagt1l0
+	#top-building: tiagt1l0
 	#	Start: 0
-	#top: tileset|tiagt1l0
+	#top: tiagt1l0
 	#	Start: 1
-	shadow-building: biagtsh0
+	shadow-building:
+		Filename: biagtsh0.spr
 		Start: 0
 		Offset: 12, 6
-	shadow: biagtsh0
+	shadow:
+		Filename: biagtsh0.spr
 		Start: 1
 		Offset: 12, 6
-	icon: biagtmn0
-	fake-icon: biagtmn0
+	icon:
+		Filename: biagtmn0.spr
+	fake-icon:
+		Filename: biagtmn0.spr
 
 # Camera tower
 nccam1l0:
 	Defaults:
+		Filename: nccam1l0.spr
 		Offset: 1, -12
 	building:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: tileset|nccam1l0
+	underlay-building:
+		Filename: nccam1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nccam1l0
+	underlay:
+		Filename: nccam1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tccam1l0
+	top-building:
+		Filename: tccam1l0.spr
 		Start: 0
-	top: tccam1l0
+	top:
+		Filename: tccam1l0.spr
 		Start: 1
-	shadow-building: bccamsh0
+	shadow-building:
+		Filename: bccamsh0.spr
 		Start: 0
 		Offset: 13, 0
-	shadow: bccamsh0
+	shadow:
+		Filename: bccamsh0.spr
 		Start: 1
 		Offset: 13, 0
-	icon: bccammn0
+	icon:
+		Filename: bccammn0.spr
 		Offset: 0, 0
-	fake-icon: bccammn0
+	fake-icon:
+		Filename: bccammn0.spr
 		Offset: 0, 0
 
 # FG Field hospital
 nfhsp1l0:
 	Defaults:
+		Filename: nfhsp1l0.spr
 		Offset: -6, 0
 	building:
 		Start: 0
@@ -641,29 +859,39 @@ nfhsp1l0:
 		Start: 1
 		Length: 1
 		ZOffset: -1c511
-	underlay-building: tileset|nfhsp1l0
+	underlay-building:
+		Filename: nfhsp1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nfhsp1l0
+	underlay:
+		Filename: nfhsp1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tfhsp1l0
+	top-building:
+		Filename: tfhsp1l0.spr
 		Start: 0
-	top: tfhsp1l0
+	top:
+		Filename: tfhsp1l0.spr
 		Start: 1
-	shadow-building: bfhspsh0
+	shadow-building:
+		Filename: bfhspsh0.spr
 		Start: 0
 		Offset: -8, 0
-	shadow: bfhspsh0
+	shadow:
+		Filename: bfhspsh0.spr
 		Start: 1
 		Offset: -8, 0
-	icon: bfhspmn0
+	icon:
+		Filename: bfhspmn0.spr
 		Offset: 0, 0
-	fake-icon: bfhspmn0
+	fake-icon:
+		Filename: bfhspmn0.spr
 		Offset: 0, 0
 
 # Imperium field hospital
 nihsp1l0:
+	Defaults:
+		Filename: nihsp1l0.spr
 	building:
 		Start: 0
 	idle:
@@ -676,27 +904,37 @@ nihsp1l0:
 		Start: 1
 		Length: 1
 		ZOffset: -1c511
-	underlay-building: tileset|nihsp1l0
+	underlay-building:
+		Filename: nihsp1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nihsp1l0
+	underlay:
+		Filename: nihsp1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tihsp1l0
+	top-building:
+		Filename: tihsp1l0.spr
 		Start: 0
-	top: tihsp1l0
+	top:
+		Filename: tihsp1l0.spr
 		Start: 1
-	shadow-building: bihspsh0
+	shadow-building:
+		Filename: bihspsh0.spr
 		Start: 0
 		Offset: 1, -2
-	shadow: bihspsh0
+	shadow:
+		Filename: bihspsh0.spr
 		Start: 1
 		Offset: 1, -2
-	icon: bihspmn0
-	fake-icon: bihspmn0
+	icon:
+		Filename: bihspmn0.spr
+	fake-icon:
+		Filename: bihspmn0.spr
 
 # FG Repair
 nfrep1l0:
+	Defaults:
+		Filename: nfrep1l0.spr
 	building:
 		Start: 0
 	idle:
@@ -709,27 +947,37 @@ nfrep1l0:
 		Start: 1
 		Length: 1
 		ZOffset: -1c511
-	underlay-building: tileset|nfrep1l0
+	underlay-building:
+		Filename: nfrep1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nfrep1l0
+	underlay:
+		Filename: nfrep1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tfrep1l0
+	top-building:
+		Filename: tfrep1l0.spr
 		Start: 0
-	top: tfrep1l0
+	top:
+		Filename: tfrep1l0.spr
 		Start: 1
-	shadow-building: bfrepsh0
+	shadow-building:
+		Filename: bfrepsh0.spr
 		Start: 0
 		Offset: 0, 13
-	shadow: bfrepsh0
+	shadow:
+		Filename: bfrepsh0.spr
 		Start: 1
 		Offset: 0, 13
-	icon: bfrepmn0
-	fake-icon: bfrepmn0
+	icon:
+		Filename: bfrepmn0.spr
+	fake-icon:
+		Filename: bfrepmn0.spr
 
 # Imperium repair
 tirep1l0:
+	Defaults:
+		Filename: tirep1l0.spr
 	building:
 		Start: 0
 	idle:
@@ -742,69 +990,92 @@ tirep1l0:
 		Start: 1
 		Length: 1
 		ZOffset: -1c511
-	underlay-building: tileset|nirep1l0
+	underlay-building:
+		Filename: nirep1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nirep1l0
+	underlay:
+		Filename: nirep1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tirep1l0
+	top-building:
+		Filename: tirep1l0.spr
 		Start: 0
-	top: tirep1l0
+	top:
+		Filename: tirep1l0.spr
 		Start: 1
-	shadow-building: birepsh0
+	shadow-building:
+		Filename: birepsh0.spr
 		Start: 0
 		Offset: -1, 0
-	shadow: birepsh0
+	shadow:
+		Filename: birepsh0.spr
 		Start: 1
 		Offset: -1, 0
-	icon: birepmn0
-	fake-icon: birepmn0
+	icon:
+		Filename: birepmn0.spr
+	fake-icon:
+		Filename: birepmn0.spr
 
 # Phasing facility
 nfphf1l0:
 	Defaults:
+		Filename: nfphf1l0.spr
 		Offset: 0, -6
 	building:
 		Start: 0
 	idle:
 		Start: 1
-	building2: nfphf2l0
+	building2:
+		Filename: nfphf2l0.spr
 		Start: 0
-	idle2: nfphf2l0
+	idle2:
+		Filename: nfphf2l0.spr
 		Start: 1
-	underlay-building: tileset|nfphf1l0
+	underlay-building:
+		Filename: nfphf1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nfphf1l0
+	underlay:
+		Filename: nfphf1l0.spr
 		ZOffset: -8192
 		Start: 1
-	underlay2: tileset|nfphf2l0
+	underlay2:
+		Filename: nfphf2l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tfphf1l0
+	top-building:
+		Filename: tfphf1l0.spr
 		Start: 0
-	top: tfphf1l0
+	top:
+		Filename: tfphf1l0.spr
 		Start: 1
-	top2: tfphf2l0
+	top2:
+		Filename: tfphf2l0.spr
 		Start: 1
-	shadow-building: bfphfsh0
+	shadow-building:
+		Filename: bfphfsh0.spr
 		Start: 0
 		Offset: 0, 7
-	shadow: bfphfsh0
+	shadow:
+		Filename: bfphfsh0.spr
 		Start: 1
 		Offset: 0, 7
-	shadow2: bfphfsh1
+	shadow2:
+		Filename: bfphfsh1.spr
 		Start: 1
 		Offset: 0, 7
-	icon: bfphfmn0
+	icon:
+		Filename: bfphfmn0.spr
 		Offset: 0, 0
-	fake-icon: bfphfmn0
+	fake-icon:
+		Filename: bfphfmn0.spr
 		Offset: 0, 0
 
 # FG Rearming deck
 nfrrm1l0:
 	Defaults:
+		Filename: nfrrm1l0.spr
 		Offset: 0, 16
 		ZOffset: -1024
 	building:
@@ -817,103 +1088,140 @@ nfrrm1l0:
 	damaged-active:
 		Start: 1
 		Length: 1
-	underlay-building: tileset|nfrrm1l0
+	underlay-building:
+		Filename: nfrrm1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nfrrm1l0
+	underlay:
+		Filename: nfrrm1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tfrrm1l0
+	top-building:
+		Filename: tfrrm1l0.spr
 		Start: 0
-	top: tfrrm1l0
+	top:
+		Filename: tfrrm1l0.spr
 		Start: 1
-	shadow-building: bfrrmsh0
+	shadow-building:
+		Filename: bfrrmsh0.spr
 		Start: 0
 		Offset: 12, 16
-	shadow: bfrrmsh0
+	shadow:
+		Filename: bfrrmsh0.spr
 		Start: 1
 		Offset: 12, 16
-	icon: bfrrmmn0
+	icon:
+		Filename: bfrrmmn0.spr
 		Offset: 0, 0
-	fake-icon: bfrrmmn0
+	fake-icon:
+		Filename: bfrrmmn0.spr
 		Offset: 0, 0
 
 # Imperium rearming deck
 nirrm1l0:
 	Defaults:
+		Filename: nirrm1l0.spr
 		Offset: 0, 16
 		ZOffset: -1024
 	building:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: tileset|nirrm1l0
+	underlay-building:
+		Filename: nirrm1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nirrm1l0
+	underlay:
+		Filename: nirrm1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: tirrm1l0
+	top-building:
+		Filename: tirrm1l0.spr
 		Start: 0
-	top: tirrm1l0
+	top:
+		Filename: tirrm1l0.spr
 		Start: 1
-	shadow-building: birrmsh0
+	shadow-building:
+		Filename: birrmsh0.spr
 		Start: 0
 		Offset: 23, 37
-	shadow: birrmsh0
+	shadow:
+		Filename: birrmsh0.spr
 		Start: 1
 		Offset: 23, 37
-	icon: birrmmn0
+	icon:
+		Filename: birrmmn0.spr
 		Offset: 0, 0
-	fake-icon: birrmmn0
+	fake-icon:
+		Filename: birrmmn0.spr
 		Offset: 0, 0
 
 # Imperium temporal gate
 nitgt1l0:
+	Defaults:
+		Filename: nitgt1l0.spr
 	building:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: tileset|nitgt1l0
+	underlay-building:
+		Filename: nitgt1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nitgt1l0
+	underlay:
+		Filename: nitgt1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: titgt1l0
+	top-building:
+		Filename: titgt1l0.spr
 		Start: 0
-	top: titgt1l0
+	top:
+		Filename: titgt1l0.spr
 		Start: 1
-	shadow-building: bitgtsh0
+	shadow-building:
+		Filename: bitgtsh0.spr
 		Start: 0
 		Offset: -1, 1
-	shadow: bitgtsh0
+	shadow:
+		Filename: bitgtsh0.spr
 		Start: 1
 		Offset: -1, 1
-	icon: bitgtmn0
-	fake-icon: bitgtmn0
+	icon:
+		Filename: bitgtmn0.spr
+	fake-icon:
+		Filename: bitgtmn0.spr
 
 # Imperium temporal rift creator
 nitrc1l0:
+	Defaults:
+		Filename: nitrc1l0.spr
 	building:
 		Start: 0
 	idle:
 		Start: 1
-	underlay-building: tileset|nitrc1l0
+	underlay-building:
+		Filename: nitrc1l0.spr
 		ZOffset: -8192
 		Start: 0
-	underlay: tileset|nitrc1l0
+	underlay:
+		Filename: nitrc1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top-building: titrc1l0
+	top-building:
+		Filename: titrc1l0.spr
 		Start: 0
-	top: titrc1l0
+	top:
+		Filename: titrc1l0.spr
 		Start: 1
-	shadow-building: bitrcsh0
+	shadow-building:
+		Filename: bitrcsh0.spr
 		Start: 0
 		Offset: 11, 15
-	shadow: bitrcsh0
+	shadow:
+		Filename: bitrcsh0.spr
 		Start: 1
 		Offset: 11, 15
-	icon: bitrcmn0
-	fake-icon: bitrcmn0
+	icon:
+		Filename: bitrcmn0.spr
+	fake-icon:
+		Filename: bitrcmn0.spr

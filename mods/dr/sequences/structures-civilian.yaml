@@ -1,6 +1,8 @@
 
 # SmallSHHorizontalBridge
 tcsbh1l0:
+	Defaults:
+		Filename: tcsbh1l0.spr
 	idle:
 		Start: 0
 	make:
@@ -16,17 +18,23 @@ tcsbh1l0:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: ncsbh1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: ncsbh1l0.spr
 		ZOffset: -8192
 		Start: 0
-	shadow: bcsbvmn0
+	shadow:
+		Filename: bcsbvmn0.spr
 		Start: 0
 		Offset: 0, 1
-	icon: bcsbhmn0
-	fake-icon: bcsbhmn0
+	icon:
+		Filename: bcsbhmn0.spr
+	fake-icon:
+		Filename: bcsbhmn0.spr
 
 # SmallSHVerticalBridge
 tcsbv1l0:
+	Defaults:
+		Filename: tcsbv1l0.spr
 	idle:
 		Start: 0
 	make:
@@ -42,17 +50,23 @@ tcsbv1l0:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: ncsbv1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: ncsbv1l0.spr
 		ZOffset: -8192
 		Start: 0
-	shadow: bcsbvmn0
+	shadow:
+		Filename: bcsbvmn0.spr
 		Start: 0
 		Offset: 0, 1
-	icon: bcsbvmn0
-	fake-icon: bcsbvmn0
+	icon:
+		Filename: bcsbvmn0.spr
+	fake-icon:
+		Filename: bcsbvmn0.spr
 
 # SmallSHCentreBridge
 tcsbc1l0:
+	Defaults:
+		Filename: tcsbc1l0.spr
 	idle:
 		Start: 0
 	make:
@@ -68,20 +82,26 @@ tcsbc1l0:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: ncsbc1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: ncsbc1l0.spr
 		ZOffset: -8192
 		Start: 0
-	shadow: bcsbcsh0
+	shadow:
+		Filename: bcsbcsh0.spr
 		Start: 0
 		Offset: 0, 1
-	icon: bcsbcmn0
-	fake-icon: bcsbcmn0
+	icon:
+		Filename: bcsbcmn0.spr
+	fake-icon:
+		Filename: bcsbcmn0.spr
 
 
 # Civilian stuff now
 
 # Small wall left
 tcswm1l0:
+	Defaults:
+		Filename: tcswm1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -97,14 +117,19 @@ tcswm1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	shadow: ncswmsh0
+	shadow:
+		Filename: ncswmsh0.spr
 		Start: 0
 		Offset: 0, 1
-	icon: bcswmmn0
-	fake-icon: bcswmmn0
+	icon:
+		Filename: bcswmmn0.spr
+	fake-icon:
+		Filename: bcswmmn0.spr
 
 # Small wall right
 tcswl1l0:
+	Defaults:
+		Filename: tcswl1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -120,14 +145,19 @@ tcswl1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	shadow: ncswlsh0
+	shadow:
+		Filename: ncswlsh0.spr
 		Start: 0
 		Offset: 0, 1
-	icon: bcswlmn0
-	fake-icon: bcswlmn0
+	icon:
+		Filename: bcswlmn0.spr
+	fake-icon:
+		Filename: bcswlmn0.spr
 
 # Big wall left
 tcbwl1l0:
+	Defaults:
+		Filename: tcbwl1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -143,14 +173,19 @@ tcbwl1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	shadow: ncbwlsh0
+	shadow:
+		Filename: ncbwlsh0.spr
 		Start: 0
 		Offset: 0, 1
-	icon: bcbwmmn0
-	fake-icon: bcbwmmn0
+	icon:
+		Filename: bcbwmmn0.spr
+	fake-icon:
+		Filename: bcbwmmn0.spr
 
 # Big wall right
 tcbwm1l0:
+	Defaults:
+		Filename: tcbwm1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -166,14 +201,19 @@ tcbwm1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	shadow: ncbwmsh0
+	shadow:
+		Filename: ncbwmsh0.spr
 		Start: 0
 		Offset: 0, 1
-	icon: bcbwlmn0
-	fake-icon: bcbwlmn0
+	icon:
+		Filename: bcbwlmn0.spr
+	fake-icon:
+		Filename: bcbwlmn0.spr
 
 # Freedom Guard Treaty Hall
 totyh1l0:
+	Defaults:
+		Filename: totyh1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -189,21 +229,28 @@ totyh1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: notyh1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: notyh1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top: totyh1l0
+	top:
+		Filename: totyh1l0.spr
 		Start: 3
 		Length: 2
 		Tick: 100
-	shadow: totyhsh0
+	shadow:
+		Filename: totyhsh0.spr
 		Start: 1
 		Offset: 16, 0
-	icon: botyhmn0
-	fake-icon: botyhmn0
+	icon:
+		Filename: botyhmn0.spr
+	fake-icon:
+		Filename: botyhmn0.spr
 
 # Imperium Desicator
 todes1l0:
+	Defaults:
+		Filename: todes1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -219,17 +266,23 @@ todes1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nodes1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nodes1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: todessh0
+	shadow:
+		Filename: todessh0.spr
 		Start: 1
 		Offset: 6, 4
-	icon: bodesmn0
-	fake-icon: bodesmn0
+	icon:
+		Filename: bodesmn0.spr
+	fake-icon:
+		Filename: bodesmn0.spr
 
 # Rendezvous point
 torvp1l0:
+	Defaults:
+		Filename: torvp1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -245,21 +298,28 @@ torvp1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: norvp1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: norvp1l0.spr
 		ZOffset: -8192
 		Start: 1
-	top: torvp1l0
+	top:
+		Filename: torvp1l0.spr
 		Start: 3
 		Length: 6
 		Tick: 100
-	shadow: torvpsh0
+	shadow:
+		Filename: torvpsh0.spr
 		Start: 1
 		Offset: 12, 5
-	icon: borvpmn0
-	fake-icon: borvpmn0
+	icon:
+		Filename: borvpmn0.spr
+	fake-icon:
+		Filename: borvpmn0.spr
 
 # Imperium Medical research
 tomdr1l0:
+	Defaults:
+		Filename: tomdr1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -275,17 +335,23 @@ tomdr1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nomdr1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nomdr1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: tomdrsh0
+	shadow:
+		Filename: tomdrsh0.spr
 		Start: 1
 		Offset: 9, 8
-	icon: bomdrmn0
-	fake-icon: bomdrmn0
+	icon:
+		Filename: bomdrmn0.spr
+	fake-icon:
+		Filename: bomdrmn0.spr
 
 # Imperium Water research
 towat1l0:
+	Defaults:
+		Filename: towat1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -301,17 +367,23 @@ towat1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nowat1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nowat1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: towatsh0
+	shadow:
+		Filename: towatsh0.spr
 		Start: 1
 		Offset: 12, 0
-	icon: bowatmn0
-	fake-icon: bowatmn0
+	icon:
+		Filename: bowatmn0.spr
+	fake-icon:
+		Filename: bowatmn0.spr
 
 # Imperium Hover research
 tohov1l0:
+	Defaults:
+		Filename: tohov1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -327,17 +399,23 @@ tohov1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nohov1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nohov1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: tohovsh0
+	shadow:
+		Filename: tohovsh0.spr
 		Start: 1
 		Offset: 4, 5
-	icon: bohovmn0
-	fake-icon: bohovmn0
+	icon:
+		Filename: bohovmn0.spr
+	fake-icon:
+		Filename: bohovmn0.spr
 
 # FG Planetary Defense 2
 topld1l0:
+	Defaults:
+		Filename: topld1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -353,17 +431,23 @@ topld1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nopld1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nopld1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: topldsh0
+	shadow:
+		Filename: topldsh0.spr
 		Start: 1
 		Offset: 40, 14
-	icon: bopldmn0
-	fake-icon: bopldmn0
+	icon:
+		Filename: bopldmn0.spr
+	fake-icon:
+		Filename: bopldmn0.spr
 
 # Imperium Prison
 topri1l0:
+	Defaults:
+		Filename: topri1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -379,17 +463,23 @@ topri1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nopri1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nopri1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: toprish0
+	shadow:
+		Filename: toprish0.spr
 		Start: 1
 		Offset: 17, 4
-	icon: boprimn0
-	fake-icon: boprimn0
+	icon:
+		Filename: boprimn0.spr
+	fake-icon:
+		Filename: boprimn0.spr
 	
 # Civilian Entertainment Facility
 tocen1l0:
+	Defaults:
+		Filename: tocen1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -405,17 +495,23 @@ tocen1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nocen1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nocen1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: bocensh0
+	shadow:
+		Filename: bocensh0.spr
 		Start: 1
 		Offset: -1, 0
-	icon: bocenmn0
-	fake-icon: bocenmn0
+	icon:
+		Filename: bocenmn0.spr
+	fake-icon:
+		Filename: bocenmn0.spr
 
 # Civilian Public Shelter
 toshl1l0:
+	Defaults:
+		Filename: toshl1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -431,17 +527,23 @@ toshl1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: noshl1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: noshl1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: toshlsh0
+	shadow:
+		Filename: toshlsh0.spr
 		Start: 1
 		Offset: 5, 1
-	icon: boshlmn0
-	fake-icon: boshlmn0
+	icon:
+		Filename: boshlmn0.spr
+	fake-icon:
+		Filename: boshlmn0.spr
 
 #  Civilian SubTransit
 tosub1l0:
+	Defaults:
+		Filename: tosub1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -457,17 +559,23 @@ tosub1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nosub1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nosub1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: tosubsh0
+	shadow:
+		Filename: tosubsh0.spr
 		Start: 1
 		Offset: 0, 0
-	icon: bosubmn0
-	fake-icon: bosubmn0
+	icon:
+		Filename: bosubmn0.spr
+	fake-icon:
+		Filename: bosubmn0.spr
 
 # Civilian Transit Centre
 totcn1l0:
+	Defaults:
+		Filename: totcn1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -483,17 +591,23 @@ totcn1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: notcn1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: notcn1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: totcnsh0
+	shadow:
+		Filename: totcnsh0.spr
 		Start: 1
 		Offset: 0, 0
-	icon: botcnmn0
-	fake-icon: botcnmn0
+	icon:
+		Filename: botcnmn0.spr
+	fake-icon:
+		Filename: botcnmn0.spr
 
 # Civilian Commercial
 tocbs1l0:
+	Defaults:
+		Filename: tocbs1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -509,17 +623,23 @@ tocbs1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nocbs1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nocbs1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: bocbssh0
+	shadow:
+		Filename: bocbssh0.spr
 		Start: 1
 		Offset: 12, 1
-	icon: bocbsmn0
-	fake-icon: bocbsmn0
+	icon:
+		Filename: bocbsmn0.spr
+	fake-icon:
+		Filename: bocbsmn0.spr
 
 # Civilian Factory
 towar1l0:
+	Defaults:
+		Filename: towar1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -535,17 +655,23 @@ towar1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nowar1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nowar1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: bowarsh0
+	shadow:
+		Filename: bowarsh0.spr
 		Start: 1
 		Offset: 0, 1
-	icon: bowarmn0
-	fake-icon: bowarmn0
+	icon:
+		Filename: bowarmn0.spr
+	fake-icon:
+		Filename: bowarmn0.spr
 
 # Civilian Rural
 tochm4l0:
+	Defaults:
+		Filename: tochm4l0.spr
 	idle:
 		Start: 1
 	make:
@@ -561,17 +687,23 @@ tochm4l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nochm4l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nochm4l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: bochmsh0
+	shadow:
+		Filename: bochmsh0.spr
 		Start: 1
 		Offset: 0, 0
-	icon: bochmmn0
-	fake-icon: bochmmn0
+	icon:
+		Filename: bochmmn0.spr
+	fake-icon:
+		Filename: bochmmn0.spr
 
 # Civilian Grain Farm
 tofrm1l0:
+	Defaults:
+		Filename: tofrm1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -587,14 +719,19 @@ tofrm1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nofrm1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nofrm1l0.spr
 		ZOffset: -8192
 		Start: 1
-	icon: tofrmmn0
-	fake-icon: tofrmmn0
+	icon:
+		Filename: tofrmmn0.spr
+	fake-icon:
+		Filename: tofrmmn0.spr
 
 # Civilian Hydro Farm
 tofrm1l1:
+	Defaults:
+		Filename: tofrm1l1.spr
 	idle:
 		Start: 1
 	make:
@@ -610,14 +747,19 @@ tofrm1l1:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nofrm1l1 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nofrm1l1.spr
 		ZOffset: -8192
 		Start: 1
-	icon: tofrmmn1
-	fake-icon: tofrmmn1
+	icon:
+		Filename: tofrmmn1.spr
+	fake-icon:
+		Filename: tofrmmn1.spr
 
 # Civilian Farmhouse
 tofrm1l2:
+	Defaults:
+		Filename: tofrm1l2.spr
 	idle:
 		Start: 1
 	make:
@@ -633,14 +775,19 @@ tofrm1l2:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nofrm1l2 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nofrm1l2.spr
 		ZOffset: -8192
 		Start: 1
-	icon: tofrmmn2
-	fake-icon: tofrmmn2
+	icon:
+		Filename: tofrmmn2.spr
+	fake-icon:
+		Filename: tofrmmn2.spr
 
 # Civilian Bridge
 tobrd1l0:
+	Defaults:
+		Filename: tobrd1l0.spr
 	idle:
 		Start: 1
 	make:
@@ -656,17 +803,23 @@ tobrd1l0:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nobrd1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nobrd1l0.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: tobrdsh0
+	shadow:
+		Filename: tobrdsh0.spr
 		Start: 1
 		Offset: 10, 11
-	icon: bobrdmn0
-	fake-icon: bobrdmn0
+	icon:
+		Filename: bobrdmn0.spr
+	fake-icon:
+		Filename: bobrdmn0.spr
 
 # Civilian Vertical Bridge
 tobrd1l1:
+	Defaults:
+		Filename: tobrd1l1.spr
 	idle:
 		Start: 1
 	make:
@@ -682,18 +835,24 @@ tobrd1l1:
 	dead:
 		Start: 1
 		Tick: 1
-	underlay: nobrd1l1 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nobrd1l1.spr
 		ZOffset: -8192
 		Start: 1
-	shadow: tobrdsh1
+	shadow:
+		Filename: tobrdsh1.spr
 		Start: 1
 		Offset: 24, 12
-	icon: bobrdmn1
-	fake-icon: bobrdmn1
+	icon:
+		Filename: bobrdmn1.spr
+	fake-icon:
+		Filename: bobrdmn1.spr
 
 
 # Dirt bridge
 tcvbvst0:
+	Defaults:
+		Filename: tcvbvst0.spr
 	idle:
 		Start: 0
 	make:
@@ -709,13 +868,16 @@ tcvbvst0:
 	dead:
 		Start: 0
 		Tick: 1
-	shadow: tcvbvsh0
+	shadow:
+		Filename: tcvbvsh0.spr
 		Start: 0
 		Offset: -9, 0
 	
 
 # Togran Monolith
 tomlt1l0:
+	Defaults:
+		Filename: tomlt1l0.spr
 	idle:
 		Start: 0
 	make:
@@ -731,17 +893,23 @@ tomlt1l0:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: nomlt1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: nomlt1l0.spr
 		ZOffset: -8192
 		Start: 0
-	shadow: tomltsh0
+	shadow:
+		Filename: tomltsh0.spr
 		Start: 0
 		Offset: 14, 6
-	icon: bocenmn0
-	fake-icon: bocenmn0
+	icon:
+		Filename: bocenmn0.spr
+	fake-icon:
+		Filename: bocenmn0.spr
 
 # Togran Door
 totdr1l0:
+	Defaults:
+		Filename: totdr1l0.spr
 	idle:
 		Start: 0
 	make:
@@ -757,8 +925,11 @@ totdr1l0:
 	dead:
 		Start: 0
 		Tick: 1
-	underlay: notdr1l0 # no tileset|xx..
+	underlay: # no tileset|xx..
+		Filename: notdr1l0.spr
 		ZOffset: -8192
 		Start: 0
-	icon: botdrmn0
-	fake-icon: botdrmn0
+	icon:
+		Filename: botdrmn0.spr
+	fake-icon:
+		Filename: botdrmn0.spr

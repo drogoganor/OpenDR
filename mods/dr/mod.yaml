@@ -10,7 +10,7 @@ Packages:
 	~^SupportDir|Content/dr/
 	^EngineDir|
 	$dr: dr
-	^EngineDir|/mods/common: common
+	^EngineDir|mods/common: common
 	~BARREN/BARREN.TIL
 	~BARREN/BARREN.PAL
 	~BARREN/SPRITES.FTG: barren
@@ -131,7 +131,8 @@ ChromeLayout:
 	common|chrome/ingame-infostats.yaml
 	common|chrome/ingame-info-lobby-options.yaml
 	common|chrome/ingame-menu.yaml
-	dr|chrome/mainmenu.yaml
+	common|chrome/mainmenu.yaml
+	#dr|chrome/mainmenu.yaml
 	dr|chrome/ingame-player.yaml
 	dr|chrome/ingame-observer.yaml
 	#dr|chrome/color-picker.yaml
@@ -177,12 +178,15 @@ ChromeLayout:
 
 Translations:
 	common|languages/en.ftl
+	#common|languages/chrome/en.ftl
+	common|languages/rules/en.ftl
+	dr|languages/chrome/en.ftl
 	dr|languages/rules/en.ftl
 
 Weapons:
 	dr|weapons/weapons.yaml
 	dr|weapons/other.yaml
-	
+
 Voices:
 	dr|audio/voices.yaml
 	dr|audio/voices-addon.yaml
@@ -192,9 +196,6 @@ Notifications:
 
 Music:
 	dr|audio/music.yaml
-
-Translations:
-	common|languages/en.ftl
 
 Hotkeys:
 	common|hotkeys/game.yaml

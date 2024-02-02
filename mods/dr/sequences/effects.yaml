@@ -1,30 +1,36 @@
 
 # Human death
 humansplat:
-	die: splata
+	die:
+		Filename: splata.spr
 		Start: 0
 		Length: 15
 		Tick: 80
-	diesoft: splata
+	diesoft:
+		Filename: splata.spr
 		Start: 0
 		Length: 15
 		Tick: 80
-	diehard: splatc
+	diehard:
+		Filename: splatc.spr
 		Start: 0
 		Length: 13
 		Tick: 80
 
 # Alien death
 aliensplat:
-	die: splatb
+	die:
+		Filename: splatb.spr
 		Start: 0
 		Length: 15
 		Tick: 80
-	diesoft: splatb
+	diesoft:
+		Filename: splatb.spr
 		Start: 0
 		Length: 15
 		Tick: 80
-	diehard: splatd
+	diehard:
+		Filename: splatd.spr
 		Start: 0
 		Length: 12
 		Tick: 80
@@ -36,167 +42,302 @@ explosion:
 		Length: *
 		ZOffset: 2047
 		BlendMode: Additive
-	ecexplg1: ecexplg1 # Unused, Big energy explosion
-	ecexplg2: ecexplg2 # Unused, Big normal explosion
-	ecexpmd0: ecexpmd0 # generic explosion 1
-	ecexpmd1: ecexpmd1 # generic explosion 2
-	ecexpsm0: ecexpsm0 # Unused, kind of dark orange explosion cloud
-	ecexpsm1: ecexpsm1 # generic explosion
+	ecexplg1: # Unused, Big energy explosion
+		Filename: ecexplg1.spr
+	ecexplg2: # Unused, Big normal explosion
+		Filename: ecexplg2.spr
+	ecexpmd0: # generic explosion 1
+		Filename: ecexpmd0.spr
+	ecexpmd1: # generic explosion 2
+		Filename: ecexpmd1.spr
+	ecexpsm0: # Unused, kind of dark orange explosion cloud
+		Filename: ecexpsm0.spr
+	ecexpsm1: # generic explosion
+		Filename: ecexpsm1.spr
 		BlendMode: DoubleMultiplicative
-	ecexpsp0: ecexpsp0 # Unused, scattered flames
-	ecexpsp1: ecexpsp1 # martyr
-	ecexpsp2: ecexpsp2 # Unused, martyr, dark shadow
-	ecfirlg0: ecfirlg0 # Unused, fire large
-	ecfirsm0: ecfirsm0 # Unused, fire small
-	ecfirsm1: ecfirsm1 # Unused, fire small
-	ecfirsm2: ecfirsm2 # fire small
+	ecexpsp0: # Unused, scattered flames
+		Filename: ecexpsp0.spr
+	ecexpsp1: # martyr
+		Filename: ecexpsp1.spr
+	ecexpsp2: # Unused, martyr, dark shadow
+		Filename: ecexpsp2.spr
+	ecfirlg0: # Unused, fire large
+		Filename: ecfirlg0.spr
+	ecfirsm0: # Unused, fire small
+		Filename: ecfirsm0.spr
+	ecfirsm1: # Unused, fire small
+		Filename: ecfirsm1.spr
+	ecfirsm2: # fire small
+		Filename: ecfirsm2.spr
 		BlendMode: Subtractive
-	ecprj005: ecprj005 # Unused, tiny ricochet, named as projectile
-	ecsmolg0: ecsmolg0 # Unused, black smoke
-	ecsmolg1: ecsmolg1 # Unused, black smoke
-	ecsmolg2: ecsmolg2 # Unused, black smoke
-	ecsmolg3: ecsmolg3 # Unused, black smoke
-	ecsmolg4: ecsmolg4 # Unused, black smoke
-	ecsmolg5: ecsmolg5 # Unused, black smoke
-	ecsmosm0: ecsmosm0 # Unused, smoke puff, bad
-	ecsmosm1: ecsmosm1 # Unused, smoke puff, bad
-	eoampex0: eoampex0 # Unused, amper bolt explosion
-	eoblalg0: eoblalg0 # Unused, cool explosion !!!
-	eoblalg1: eoblalg1
+	ecprj005: # Unused, tiny ricochet, named as projectile
+		Filename: ecprj005.spr
+	ecsmolg0: # Unused, black smoke
+		Filename: ecsmolg0.spr
+	ecsmolg1: # Unused, black smoke
+		Filename: ecsmolg1.spr
+	ecsmolg2: # Unused, black smoke
+		Filename: ecsmolg2.spr
+	ecsmolg3: # Unused, black smoke
+		Filename: ecsmolg3.spr
+	ecsmolg4: # Unused, black smoke
+		Filename: ecsmolg4.spr
+	ecsmolg5: # Unused, black smoke
+		Filename: ecsmolg5.spr
+	ecsmosm0: # Unused, smoke puff, bad
+		Filename: ecsmosm0.spr
+	ecsmosm1: # Unused, smoke puff, bad
+		Filename: ecsmosm1.spr
+	eoampex0: # Unused, amper bolt explosion
+		Filename: eoampex0.spr
+	eoblalg0: # Unused, cool explosion !!!
+		Filename: eoblalg0.spr
+	eoblalg1:
+		Filename: eoblalg1.spr
 		BlendMode: None
-	eoblalg2: eoblalg2 # Unused, cool explosion
-	eoblamd0: eoblamd0 # Unused, cool explosion
-	eoblamd1: eoblamd1 # Explosion
+	eoblalg2: # Unused, cool explosion
+		Filename: eoblalg2.spr
+	eoblamd0: # Unused, cool explosion
+		Filename: eoblamd0.spr
+	eoblamd1: # Explosion
+		Filename: eoblamd1.spr
 		BlendMode: Additive
-	eoblatr0: eoblatr0 # skirmish tank 2, mobile air defense MAD
+	eoblatr0: # skirmish tank 2, mobile air defense MAD
+		Filename: eoblatr0.spr
 		BlendMode: Additive
-	eoblatr1: eoblatr1 # skirmish tank 3
-	eobpfsm0: eobpfsm0 # Unused, funny lookin mushroom cloud
-	eobpfsm1: eobpfsm1 # Unused, funny lookin mushroom cloud, clipped
-	eobpfsm2: eobpfsm2 # Unused, funny lookin mushroom cloud
-	eobpfsm3: eobpfsm3 # Unused, funny lookin mushroom cloud
-	eobpfsm4: eobpfsm4 # Unused, funny lookin mushroom cloud
-	eochfex0: eochfex0 # flak jack 1
-	eochfex1: eochfex1 # flak jack 1
-	eochfex2: eochfex2 # flak jack 1
-	eochfex3: eochfex3
-	eochkex0: eochkex0 # big explosion
+	eoblatr1: # skirmish tank 3
+		Filename: eoblatr1.spr
+	eobpfsm0: # Unused, funny lookin mushroom cloud
+		Filename: eobpfsm0.spr
+	eobpfsm1: # Unused, funny lookin mushroom cloud, clipped
+		Filename: eobpfsm1.spr
+	eobpfsm2: # Unused, funny lookin mushroom cloud
+		Filename: eobpfsm2.spr
+	eobpfsm3: # Unused, funny lookin mushroom cloud
+		Filename: eobpfsm3.spr
+	eobpfsm4: # Unused, funny lookin mushroom cloud
+		Filename: eobpfsm4.spr
+	eochfex0: # flak jack 1
+		Filename: eochfex0.spr
+	eochfex1: # flak jack 1
+		Filename: eochfex1.spr
+	eochfex2: # flak jack 1
+		Filename: eochfex2.spr
+	eochfex3:
+		Filename: eochfex3.spr
+	eochkex0: # big explosion
+		Filename: eochkex0.spr
 		BlendMode: Additive
-	eodeblg0: eodeblg0 # Unused, funny lookin debris scatter
-	eodeblg1: eodeblg1 # Unused, funny lookin debris scatter
-	eodeblg2: eodeblg2 # Unused, funny lookin debris scatter
-	eodeblg3: eodeblg3 # Unused, funny lookin debris scatter
-	eodebmd0: eodebmd0 # Unused, debris scatter
-	eodebmd1: eodebmd1 # Unused, debris scatter
-	eodebmd2: eodebmd2 # Unused, debris scatter
-	eodebsp1: eodebsp1 # Unused, ricochet or something
-	eodebsp2: eodebsp2 # Unused, ricochet or something
-	eodebsp3: eodebsp3 # Unused, ricochet or something
-	eodebsp4: eodebsp4 # Unused, ricochet or something
-	eodebsp5: eodebsp5 # Unused, ricochet or something
-	eodebsp6: eodebsp6 # Unused, ricochet or something
-	eodebsp7: eodebsp7 # Unused, ricochet or something
-	eodebsp8: eodebsp8 # Unused, ricochet or something
-	eodebsp9: eodebsp9 # Unused, ricochet or something
-	eodebspa: eodebspa # Unused, ricochet or something
-	eoexpsp1: eoexpsp1 # nuke
-	eoexpsp2: eoexpsp2 # Unused, nuke, harsh edge
-	eofirlg0: eofirlg0 # Unused, old school flame gif
-	eofirmd0: eofirmd0 # Unused, med old school flame gif
-	eofirsm0: eofirsm0 # Unused, tiny old school flame gif
-	eofarex0: eofarex0 # hellstorm
-	eofarex1: eofarex1 # Unused, hellstorm 2
-	eoiarex0: eoiarex0 # scarab explosion 2
-	eoiarex1: eoiarex1 # scarab explosion
+	eodeblg0: # Unused, funny lookin debris scatter
+		Filename: eodeblg0.spr
+	eodeblg1: # Unused, funny lookin debris scatter
+		Filename: eodeblg1.spr
+	eodeblg2: # Unused, funny lookin debris scatter
+		Filename: eodeblg2.spr
+	eodeblg3: # Unused, funny lookin debris scatter
+		Filename: eodeblg3.spr
+	eodebmd0: # Unused, debris scatter
+		Filename: eodebmd0.spr
+	eodebmd1: # Unused, debris scatter
+		Filename: eodebmd1.spr
+	eodebmd2: # Unused, debris scatter
+		Filename: eodebmd2.spr
+	eodebsp1: # Unused, ricochet or something
+		Filename: eodebsp1.spr
+	eodebsp2: # Unused, ricochet or something
+		Filename: eodebsp2.spr
+	eodebsp3: # Unused, ricochet or something
+		Filename: eodebsp3.spr
+	eodebsp4: # Unused, ricochet or something
+		Filename: eodebsp4.spr
+	eodebsp5: # Unused, ricochet or something
+		Filename: eodebsp5.spr
+	eodebsp6: # Unused, ricochet or something
+		Filename: eodebsp6.spr
+	eodebsp7: # Unused, ricochet or something
+		Filename: eodebsp7.spr
+	eodebsp8: # Unused, ricochet or something
+		Filename: eodebsp8.spr
+	eodebsp9: # Unused, ricochet or something
+		Filename: eodebsp9.spr
+	eodebspa: # Unused, ricochet or something
+		Filename: eodebspa.spr
+	eoexpsp1: # nuke
+		Filename: eoexpsp1.spr
+	eoexpsp2: # Unused, nuke, harsh edge
+		Filename: eoexpsp2.spr
+	eofirlg0: # Unused, old school flame gif
+		Filename: eofirlg0.spr
+	eofirmd0: # Unused, med old school flame gif
+		Filename: eofirmd0.spr
+	eofirsm0: # Unused, tiny old school flame gif
+		Filename: eofirsm0.spr
+	eofarex0: # hellstorm
+		Filename: eofarex0.spr
+	eofarex1: # Unused, hellstorm 2
+		Filename: eofarex1.spr
+	eoiarex0: # scarab explosion 2
+		Filename: eoiarex0.spr
+	eoiarex1: # scarab explosion
+		Filename: eoiarex1.spr
 		BlendMode: Subtractive
-	eoiarex2: eoiarex2 # scarab explosion
-	eolasex0: eolasex0
-	eolasex1: eolasex1
+	eoiarex2: # scarab explosion
+		Filename: eoiarex2.spr
+	eolasex0:
+		Filename: eolasex0.spr
+	eolasex1:
+		Filename: eolasex1.spr
 		Offset: 13, -10
-	eolasex2: eolasex2
-	eolasex3: eolasex3 # Unused, laser explosion
-	eolasex4: eolasex4 # Unused, laser explosion
-	eolasex5: eolasex5
+	eolasex2:
+		Filename: eolasex2.spr
+	eolasex3: # Unused, laser explosion
+		Filename: eolasex3.spr
+	eolasex4: # Unused, laser explosion
+		Filename: eolasex4.spr
+	eolasex5:
+		Filename: eolasex5.spr
 		BlendMode: None
-	eolasex6: eolasex6 # Unused, laser explosion
-	eolasex7: eolasex7 # Unused, laser explosion
-	eolasex8: eolasex8 # Unused, laser explosion
-	eolasex9: eolasex9 # Unused, laser explosion
-	eolspex0: eolspex0 # Unused, tiny laser explosion
-	eolspex1: eolspex1 # Unused, tiny laser explosion
-	eomdfbl0: eomdfbl0 # Unused, flames
-	eomedbl0: eomedbl0 # Unused, flames
-	eomedfl0: eomedfl0 # Unused, flames
-	eomedsm0: eomedsm0 # Unused, smoke
-	eomedsm1: eomedsm1 # Unused, smoke
-	eomedsm2: eomedsm2 # Unused, smoke
-	eoncnex0: eoncnex0 # cyclone explosion
-	eoncnpr1: eoncnpr1 # Small blue spark projectile that's good as an explosion too
-	eonukex0: eonukex0 # Unused, stumpy mushroom cloud
-	eooutex0: eooutex0 # outrider
-	eopamex0: eopamex0 # amper explosion
-	eoplsex0: eoplsex0 # bion
-	eoplsex1: eoplsex1 # exterminator?
-	eoplsex2: eoplsex2 # plasma tank
-	eoplsex3: eoplsex3 # plasma tank
-	eoplsex4: eoplsex4 # fortress cannon
-	eorfgex0: eorfgex0 # exterminator
-	eorfgex1: eorfgex1 # sky fortress explosion 2
-	eorgnex0: eorgnex0 # triple rail gun (hover tank)
-	eorgnex1: eorgnex1 # double rail gun (spider bike), sniper
-	eorgnex2: eorgnex2 # rail gun (merc)
+	eolasex6: # Unused, laser explosion
+		Filename: eolasex6.spr
+	eolasex7: # Unused, laser explosion
+		Filename: eolasex7.spr
+	eolasex8: # Unused, laser explosion
+		Filename: eolasex8.spr
+	eolasex9: # Unused, laser explosion
+		Filename: eolasex9.spr
+	eolspex0: # Unused, tiny laser explosion
+		Filename: eolspex0.spr
+	eolspex1: # Unused, tiny laser explosion
+		Filename: eolspex1.spr
+	eomdfbl0: # Unused, flames
+		Filename: eomdfbl0.spr
+	eomedbl0: # Unused, flames
+		Filename: eomedbl0.spr
+	eomedfl0: # Unused, flames
+		Filename: eomedfl0.spr
+	eomedsm0: # Unused, smoke
+		Filename: eomedsm0.spr
+	eomedsm1: # Unused, smoke
+		Filename: eomedsm1.spr
+	eomedsm2: # Unused, smoke
+		Filename: eomedsm2.spr
+	eoncnex0: # cyclone explosion
+		Filename: eoncnex0.spr
+	eoncnpr1: # Small blue spark projectile that's good as an explosion too
+		Filename: eoncnpr1.spr
+	eonukex0: # Unused, stumpy mushroom cloud
+		Filename: eonukex0.spr
+	eooutex0: # outrider
+		Filename: eooutex0.spr
+	eopamex0: # amper explosion
+		Filename: eopamex0.spr
+	eoplsex0: # bion
+		Filename: eoplsex0.spr
+	eoplsex1: # exterminator?
+		Filename: eoplsex1.spr
+	eoplsex2: # plasma tank
+		Filename: eoplsex2.spr
+	eoplsex3: # plasma tank
+		Filename: eoplsex3.spr
+	eoplsex4: # fortress cannon
+		Filename: eoplsex4.spr
+	eorfgex0: # exterminator
+		Filename: eorfgex0.spr
+	eorfgex1: # sky fortress explosion 2
+		Filename: eorfgex1.spr
+	eorgnex0: # triple rail gun (hover tank)
+		Filename: eorgnex0.spr
+	eorgnex1: # double rail gun (spider bike), sniper
+		Filename: eorgnex1.spr
+	eorgnex2: # rail gun (merc)
+		Filename: eorgnex2.spr
 	# Lots of fire and smoke
-	eosktex0: eosktex0 # skirmish tank
-	eoskyex0: eoskyex0 # sky fortress explosion - seems to be the exact same as the projectile
-	eosmlfl3: eosmlfl3
+	eosktex0: # skirmish tank
+		Filename: eosktex0.spr
+	eoskyex0: # sky fortress explosion - seems to be the exact same as the projectile
+		Filename: eoskyex0.spr
+	eosmlfl3:
+		Filename: eosmlfl3.spr
 		BlendMode: Additive
-	eosmopf0: eosmopf0 # smoke puff
-	eosmopf1: eosmopf1 # smoke puff
-	eosmopf2: eosmopf2 # Unused, repeat of flames named as smoke apparently, probably should be removed from explosions
-	eosmopf3: eosmopf3 # Unused, repeat of flames named as smoke apparently, probably should be removed from explosions
-	eosmopf4: eosmopf4 # Unused, repeat of flames named as smoke apparently, probably should be removed from explosions
-	eosmopf5: eosmopf5 # Unused, repeat of flames named as smoke apparently, probably should be removed from explosions
-	eosmopf6: eosmopf6 # smoke puff
-	eosmopf7: eosmopf7 # smoke puff
-	eosmopf8: eosmopf8 # smoke puff
-	eosmopf9: eosmopf9 # smoke puff
-	eosmosm0: eosmosm0 # sky bike
-	eosmosm1: eosmosm1 # sky bike
-	eosmosm2: eosmosm2 # sky bike 2
-	eosmosm3: eosmosm3 # Unused, smoke
-	eotacex0: eotacex0 # tachion tank
-	eotcnex0: eotcnex0 # Unused, big explosion
-	eothnex0: eothnex0 # tank hunter
+	eosmopf0: # smoke puff
+		Filename: eosmopf0.spr
+	eosmopf1: # smoke puff
+		Filename: eosmopf1.spr
+	eosmopf2: # Unused, repeat of flames named as smoke apparently, probably should be removed from explosions
+		Filename: eosmopf2.spr
+	eosmopf3: # Unused, repeat of flames named as smoke apparently, probably should be removed from explosions
+		Filename: eosmopf3.spr
+	eosmopf4: # Unused, repeat of flames named as smoke apparently, probably should be removed from explosions
+		Filename: eosmopf4.spr
+	eosmopf5: # Unused, repeat of flames named as smoke apparently, probably should be removed from explosions
+		Filename: eosmopf5.spr
+	eosmopf6: # smoke puff
+		Filename: eosmopf6.spr
+	eosmopf7: # smoke puff
+		Filename: eosmopf7.spr
+	eosmopf8: # smoke puff
+		Filename: eosmopf8.spr
+	eosmopf9: # smoke puff
+		Filename: eosmopf9.spr
+	eosmosm0: # sky bike
+		Filename: eosmosm0.spr
+	eosmosm1: # sky bike
+		Filename: eosmosm1.spr
+	eosmosm2: # sky bike 2
+		Filename: eosmosm2.spr
+	eosmosm3: # Unused, smoke
+		Filename: eosmosm3.spr
+	eotacex0: # tachion tank
+		Filename: eotacex0.spr
+	eotcnex0: # Unused, big explosion
+		Filename: eotcnex0.spr
+	eothnex0: # tank hunter
+		Filename: eothnex0.spr
 		BlendMode: DoubleMultiplicative
-	eothnpr0: eothnpr0 # tiny white electricy, named as projectile
+	eothnpr0: # tiny white electricy, named as projectile
+		Filename: eothnpr0.spr
 		BlendMode: Multiplicative
-	eovapex0: eovapex0
+	eovapex0:
+		Filename: eovapex0.spr
 		BlendMode: Multiplicative
-	eovapor1: eovapor1 # Unused, tiny vapor puff
-	eovapor2: eovapor2 # Unused, vapor puff
-	eovapor3: eovapor3 # Unused, vapor puff
-	eovapor4: eovapor4 # Unused, vapor puff
-	eowcost1: eowcost1 # Unused, electrical distortion
+	eovapor1: # Unused, tiny vapor puff
+		Filename: eovapor1.spr
+	eovapor2: # Unused, vapor puff
+		Filename: eovapor2.spr
+	eovapor3: # Unused, vapor puff
+		Filename: eovapor3.spr
+	eovapor4: # Unused, vapor puff
+		Filename: eovapor4.spr
+	eowcost1: # Unused, electrical distortion
+		Filename: eowcost1.spr
 		BlendMode: Multiplicative
-	eowcost2: eowcost2 # Unused, electrical distortion repeat
-	eowcost3: eowcost3 # Unused, electrical distortion repeat
+	eowcost2: # Unused, electrical distortion repeat
+		Filename: eowcost2.spr
+	eowcost3: # Unused, electrical distortion repeat
+		Filename: eowcost3.spr
 	# Custom blends below
-	eoblatr1alt: eoblatr1 # skirmish tank 3
+	eoblatr1alt: # skirmish tank 3
+		Filename: eoblatr1.spr
 		BlendMode: Subtractive
-	eochkex0alt: eochkex0
+	eochkex0alt:
+		Filename: eochkex0.spr
 		BlendMode: Additive
-	eoiarex1hades: eoiarex1 # Hades 2
-	eothnex0alt: eothnex0
+	eoiarex1hades: # Hades 2
+		Filename: eoiarex1.spr
+	eothnex0alt:
+		Filename: eothnex0.spr
 		BlendMode: Multiplicative
 
 # eo Projectiles
 
 eoambex1: # Unused, dual red bolt, named explosion nonetheless (ex)
 	idle:
+		Filename: eoambex1.spr
 		Facings: 24
 
 eochfpr0: # dual rockets 2
 	idle:
+		Filename: eochfpr0.spr
 		Start: 0
 		Facings: 24
 		Length: 3
@@ -204,6 +345,7 @@ eochfpr0: # dual rockets 2
 
 eofarpr0: # big honkin rocket
 	idle:
+		Filename: eofarpr0.spr
 		Start: 0
 		Facings: 24
 		Length: 3
@@ -211,6 +353,7 @@ eofarpr0: # big honkin rocket
 
 eoiarpr0: # cool fireball
 	idle:
+		Filename: eoiarpr0.spr
 		Start: 0
 		Facings: 24
 		Length: 5
@@ -218,6 +361,7 @@ eoiarpr0: # cool fireball
 
 eolaspr0: # Animated dual red bolt
 	idle:
+		Filename: eolaspr0.spr
 		Start: 0
 		Facings: 24
 		Length: 3
@@ -225,11 +369,13 @@ eolaspr0: # Animated dual red bolt
 
 eolaspr1: # Non-Animated dual red bolt
 	idle:
+		Filename: eolaspr1.spr
 		Start: 0
 		Facings: 24
 
 eolaspr2: # Small red bolt (laser rifle)
 	idle:
+		Filename: eolaspr2.spr
 		Start: 0
 		Facings: 24
 		Length: 3
@@ -237,6 +383,7 @@ eolaspr2: # Small red bolt (laser rifle)
 
 eolaspr3: # Large red bolt
 	idle:
+		Filename: eolaspr3.spr
 		Start: 0
 		Facings: 24
 		Length: 3
@@ -244,11 +391,13 @@ eolaspr3: # Large red bolt
 
 eolaspr4: # Non-Animated dual red bolt, stubby
 	idle:
+		Filename: eolaspr4.spr
 		Start: 0
 		Facings: 24
 
 eomadpr0: # MAD projectile
 	idle:
+		Filename: eomadpr0.spr
 		Start: 0
 		Facings: 16
 		Length: 4
@@ -256,6 +405,7 @@ eomadpr0: # MAD projectile
 
 eomispr0: # missile
 	idle:
+		Filename: eomispr0.spr
 		Start: 0
 		Facings: 24
 		Length: 3
@@ -263,6 +413,7 @@ eomispr0: # missile
 
 eomispr1: # missile, dual
 	idle:
+		Filename: eomispr1.spr
 		Start: 0
 		Facings: 16
 		Length: 3
@@ -270,6 +421,7 @@ eomispr1: # missile, dual
 
 eomispr2: # missile, large grey
 	idle:
+		Filename: eomispr2.spr
 		Start: 0
 		Facings: 24
 		Length: 3
@@ -277,6 +429,7 @@ eomispr2: # missile, large grey
 
 eomispr3: # missile, medium turqoise
 	idle:
+		Filename: eomispr3.spr
 		Start: 0
 		Facings: 24
 		Length: 3
@@ -284,6 +437,7 @@ eomispr3: # missile, medium turqoise
 
 eomispr4: # missile, stumpy
 	idle:
+		Filename: eomispr4.spr
 		Start: 0
 		Facings: 24
 		Length: 3
@@ -291,6 +445,7 @@ eomispr4: # missile, stumpy
 
 eoncnpr0: # NCN projectile, blue fireball. Cyclone?
 	idle:
+		Filename: eoncnpr0.spr
 		Start: 0
 		Facings: 24
 		Length: 4
@@ -298,6 +453,7 @@ eoncnpr0: # NCN projectile, blue fireball. Cyclone?
 
 eoncnpr1: # NCN projectile, blue spark
 	idle:
+		Filename: eoncnpr1.spr
 		Start: 0
 		Facings: 1
 		Length: 6
@@ -305,6 +461,7 @@ eoncnpr1: # NCN projectile, blue spark
 
 eoorbpr0: # orb projectile?
 	idle:
+		Filename: eoorbpr0.spr
 		Start: 0
 		Facings: 16
 		Length: 4
@@ -312,6 +469,7 @@ eoorbpr0: # orb projectile?
 
 eoplspr0: # small green booger with wiggly tail
 	idle:
+		Filename: eoplspr0.spr
 		Start: 0
 		Facings: 24
 		Length: 4
@@ -319,6 +477,7 @@ eoplspr0: # small green booger with wiggly tail
 
 eoplspr1: # medium green booger with wiggly tail
 	idle:
+		Filename: eoplspr1.spr
 		Start: 0
 		Facings: 24
 		Length: 4
@@ -326,6 +485,7 @@ eoplspr1: # medium green booger with wiggly tail
 
 eoplspr2: # large green booger with wiggly tail
 	idle:
+		Filename: eoplspr2.spr
 		Start: 0
 		Facings: 24
 		Length: 4
@@ -333,11 +493,13 @@ eoplspr2: # large green booger with wiggly tail
 
 eorfgpr0: # small green-eyed probe
 	idle:
+		Filename: eorfgpr0.spr
 		Start: 0
 		Facings: 24
 
 eorgnpr0: # Small white bolt 
 	idle:
+		Filename: eorgnpr0.spr
 		Start: 0
 		Facings: 24
 		Length: 3
@@ -345,6 +507,7 @@ eorgnpr0: # Small white bolt
 
 eorgnpr1: # Medium white bolt (Sniper weapon)
 	idle:
+		Filename: eorgnpr1.spr
 		Start: 0
 		Facings: 24
 		Length: 4
@@ -352,11 +515,13 @@ eorgnpr1: # Medium white bolt (Sniper weapon)
 
 eorgnpr2: # Triple white bolt
 	idle:
+		Filename: eorgnpr2.spr
 		Start: 0
 		Facings: 24
 
 eorgnpr3: # Double small white bolt
 	idle:
+		Filename: eorgnpr3.spr
 		Start: 0
 		Facings: 24
 		Length: 3
@@ -364,6 +529,7 @@ eorgnpr3: # Double small white bolt
 
 eorgnpr4: # Tiny white bolt
 	idle:
+		Filename: eorgnpr4.spr
 		Start: 0
 		Facings: 24
 		Length: 3
@@ -371,6 +537,7 @@ eorgnpr4: # Tiny white bolt
 
 eorgnpr5: # Large white bolt (Merc weapon)
 	idle:
+		Filename: eorgnpr5.spr
 		Start: 0
 		Facings: 24
 		Length: 4
@@ -378,18 +545,21 @@ eorgnpr5: # Large white bolt (Merc weapon)
 
 eoskypr0: # sky fortress
 	idle:
+		Filename: eoskypr0.spr
 		Start: 0
 		Length: 10
 		Tick: 20
 
 eotacpr0: # Tachion bolt?
 	idle:
+		Filename: eotacpr0.spr
 		Start: 0
 		Length: 6
 		Tick: 20
 
 eothnpr0: # Tank Hunter, Grendel
 	idle:
+		Filename: eothnpr0.spr
 		Start: 0
 		Length: 7
 		Tick: 20
@@ -398,6 +568,7 @@ eothnpr0: # Tank Hunter, Grendel
 
 ecprj000: # generic red greenish orb
 	idle:
+		Filename: ecprj000.spr
 		Start: 0
 		Facings: 24
 		Length: 3
@@ -405,21 +576,25 @@ ecprj000: # generic red greenish orb
 
 ecprj001: # cool white blue laser bolt
 	idle:
+		Filename: ecprj001.spr
 		Start: 0
 		Facings: 24
 
 ecprj003: # small purple bolt
 	idle:
+		Filename: ecprj003.spr
 		Start: 0
 		Facings: 24
 
 ecprj004: # blue teardrop bolt
 	idle:
+		Filename: ecprj004.spr
 		Start: 0
 		Facings: 24
 
 ecprj005: # explosion effect: bullet ricochet, marked as projectile for some reason. Flak?
 	idle:
+		Filename: ecprj005.spr
 		Start: 0
 		Facings: 1
 		Length: 6
@@ -427,11 +602,13 @@ ecprj005: # explosion effect: bullet ricochet, marked as projectile for some rea
 
 ecprj006: # large purple bolt
 	idle:
+		Filename: ecprj006.spr
 		Start: 0
 		Facings: 24
 
 ecprj007: # arrow
 	idle:
+		Filename: ecprj007.spr
 		Start: 24 # hacked
 		Facings: 24
 		#Length: 3
@@ -439,6 +616,7 @@ ecprj007: # arrow
 
 ecprjsp0: # chicken nugget
 	idle:
+		Filename: ecprjsp0.spr
 		Start: 0
 		Facings: 24
 		Length: 5
@@ -446,6 +624,7 @@ ecprjsp0: # chicken nugget
 
 ecprjsp1: # sparkly electric explosion that's not really a projectile
 	idle:
+		Filename: ecprjsp1.spr
 		Start: 0
 		Facings: 24
 		Length: 8
@@ -453,6 +632,7 @@ ecprjsp1: # sparkly electric explosion that's not really a projectile
 
 ecprjsp2: # smaller greenish electric explosion that's not really a projectile
 	idle:
+		Filename: ecprjsp2.spr
 		Start: 0
 		Facings: 24
 		Length: 8
@@ -460,6 +640,7 @@ ecprjsp2: # smaller greenish electric explosion that's not really a projectile
 
 ecprjsp3: # small blue bolt
 	idle:
+		Filename: ecprjsp3.spr
 		Start: 0
 		Facings: 24
 		Length: 6
@@ -467,6 +648,7 @@ ecprjsp3: # small blue bolt
 
 ecprjsp5: # big widely spaced dual bolts
 	idle:
+		Filename: ecprjsp5.spr
 		Start: 0
 		Facings: 24
 
@@ -474,6 +656,7 @@ ecprjsp5: # big widely spaced dual bolts
 
 eosmlfl0: # Flames 1
 	idle:
+		Filename: eosmlfl0.spr
 		Start: 0
 		Length: 8
 		Tick: 70
@@ -481,6 +664,7 @@ eosmlfl0: # Flames 1
 
 eosmlfl1: # Flames 2
 	idle:
+		Filename: eosmlfl1.spr
 		Start: 0
 		Length: 8
 		Tick: 70
@@ -488,6 +672,7 @@ eosmlfl1: # Flames 2
 
 eosmlfl2: # Flames 3
 	idle:
+		Filename: eosmlfl2.spr
 		Start: 0
 		Length: 8
 		Tick: 70
@@ -495,6 +680,7 @@ eosmlfl2: # Flames 3
 
 eosmlfl3: # Flames 4
 	idle:
+		Filename: eosmlfl3.spr
 		Start: 0
 		Length: 8
 		Tick: 70
@@ -502,6 +688,7 @@ eosmlfl3: # Flames 4
 
 eosmlfl4: # Flames 5
 	idle:
+		Filename: eosmlfl4.spr
 		Start: 0
 		Length: 8
 		Tick: 70
@@ -509,6 +696,7 @@ eosmlfl4: # Flames 5
 
 eosmoke1: # Smoke 1
 	idle:
+		Filename: eosmoke1.spr
 		Start: 0
 		Length: 11
 		Tick: 140
@@ -516,6 +704,7 @@ eosmoke1: # Smoke 1
 
 eosmoke2: # Smoke 2
 	idle:
+		Filename: eosmoke2.spr
 		Start: 0
 		Length: 11
 		Tick: 140
@@ -523,6 +712,7 @@ eosmoke2: # Smoke 2
 
 eosmoke3: # Smoke 3
 	idle:
+		Filename: eosmoke3.spr
 		Start: 0
 		Length: 11
 		Tick: 140
@@ -530,6 +720,7 @@ eosmoke3: # Smoke 3
 
 eosmoke4: # Smoke 4
 	idle:
+		Filename: eosmoke4.spr
 		Start: 0
 		Length: 11
 		Tick: 140
@@ -537,6 +728,7 @@ eosmoke4: # Smoke 4
 
 eosmoke5: # Smoke 5
 	idle:
+		Filename: eosmoke5.spr
 		Start: 0
 		Length: 4 # Should be 6 but this is rectangular
 		Tick: 240
@@ -544,6 +736,7 @@ eosmoke5: # Smoke 5
 
 eosmopf0: # Smoke puff 1
 	idle:
+		Filename: eosmopf0.spr
 		Start: 0
 		Length: 11 # Should be 13 but this is rectangular
 		Tick: 240
@@ -551,6 +744,7 @@ eosmopf0: # Smoke puff 1
 
 eosmopf1: # Smoke puff 2
 	idle:
+		Filename: eosmopf1.spr
 		Start: 0
 		Length: 10 # Should be 13 but this is rectangular
 		Tick: 240
@@ -560,6 +754,7 @@ eosmopf1: # Smoke puff 2
 
 eosmopf6: # Smoke puff 3
 	idle:
+		Filename: eosmopf6.spr
 		Start: 0
 		Length: 10 # Should be 13 but this is rectangular
 		Tick: 240
@@ -567,6 +762,7 @@ eosmopf6: # Smoke puff 3
 
 eosmopf7: # Smoke puff 4
 	idle:
+		Filename: eosmopf7.spr
 		Start: 0
 		Length: 10 # Should be 13 but this is rectangular
 		Tick: 240
@@ -574,6 +770,7 @@ eosmopf7: # Smoke puff 4
 
 eosmopf8: # Smoke puff 5
 	idle:
+		Filename: eosmopf8.spr
 		Start: 0
 		Length: 10 # Should be 13 but this is rectangular
 		Tick: 240
@@ -581,6 +778,7 @@ eosmopf8: # Smoke puff 5
 
 eosmopf9: # Smoke puff 6
 	idle:
+		Filename: eosmopf9.spr
 		Start: 0
 		Length: 10 # Should be 13 but this is rectangular
 		Tick: 240
@@ -588,6 +786,7 @@ eosmopf9: # Smoke puff 6
 
 eosmosm0: # Smoke move 0
 	idle:
+		Filename: eosmosm0.spr
 		Start: 0
 		Length: 15 # Should be 15 but this is rectangular
 		Tick: 240
@@ -595,6 +794,7 @@ eosmosm0: # Smoke move 0
 
 eosmosm1: # Smoke move 1
 	idle:
+		Filename: eosmosm1.spr
 		Start: 0
 		Length: 16 # Should be 16 but this is rectangular
 		Tick: 240
@@ -602,6 +802,7 @@ eosmosm1: # Smoke move 1
 
 eosmosm2: # Smoke move 2
 	idle:
+		Filename: eosmosm2.spr
 		Start: 0
 		Length: 20 # Should be 22 but this is rectangular
 		Tick: 240

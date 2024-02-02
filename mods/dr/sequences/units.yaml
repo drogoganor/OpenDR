@@ -4,9 +4,11 @@ ufradst0:
 	Inherits: humansplat
 	run:
 		Combine:
-			ufradst0:
+			0:
+				Filename: ufradst0.spr
 				Length: 96
-			ufradsh0:
+			1:
+				Filename: ufradsh0.spr
 				Length: 96
 		Facings: 16
 		Length: 6
@@ -14,10 +16,12 @@ ufradst0:
 		ShadowStart: 96
 	shoot:
 		Combine:
-			ufradst0:
+			0:
+				Filename: ufradst0.spr
 				Start: 96
 				Length: 32
-			ufradsh0:
+			1:
+				Filename: ufradsh0.spr
 				Start: 96
 				Length: 32
 		Facings: 16
@@ -25,10 +29,12 @@ ufradst0:
 		Tick: 25
 	idle:
 		Combine:
-			ufradst0:
+			0:
+				Filename: ufradst0.spr
 				Start: 128
 				Length: 112
-			ufradsh0:
+			1:
+				Filename: ufradsh0.spr
 				Start: 128
 				Length: 112
 		Facings: 16
@@ -37,20 +43,25 @@ ufradst0:
 		ShadowStart: 112
 	stand:
 		Combine:
-			ufradst0:
+			0:
+				Filename: ufradst0.spr
 				Start: 240
 				Length: 16
-			ufradsh0:
+			1:
+				Filename: ufradsh0.spr
 				Start: 240
 				Length: 16
 		Facings: 16
 		Length: 1
 		ShadowStart: 16
-	icon: ufradmn0
+	icon:
+		Filename: ufradmn0.spr
 
 # Mercenary
 ufmrcst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: ufmrcst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -74,15 +85,19 @@ ufmrcst0:
 	stand:
 		Start: 288
 		Facings: 16
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.spr
 		Length: 1
 		Offset: 9, 8
 		ZOffset: -8192
-	icon: ufmrcmn0
+	icon:
+		Filename: ufmrcmn0.spr
 
 # Sniper
 ufsnpst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: ufsnpst0.spr
 	run:
 		Start: 0
 		Facings: 24
@@ -106,15 +121,19 @@ ufsnpst0:
 		Start: 480
 		Facings: 24
 		Length: 1
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.spr
 		Length: 1
 		Offset: 9, 4
 		ZOffset: -8192
-	icon: ufsnpmn0
+	icon:
+		Filename: ufsnpmn0.spr
 
 # Scout
 ufsctst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: ufsctst0.spr
 	run:
 		Start: 0
 		Facings: 8
@@ -136,15 +155,19 @@ ufsctst0:
 	stand:
 		Start: 152
 		Facings: 8
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.spr
 		Length: 1
 		Offset: 9, 7
 		ZOffset: -8192
-	icon: ufsctmn0
+	icon:
+		Filename: ufsctmn0.spr
 
 # Field Medic
 ufmedst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: ufmedst0.spr
 	run:
 		Start: 0
 		Facings: 8
@@ -163,15 +186,19 @@ ufmedst0:
 	stand:
 		Start: 176
 		Facings: 8
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.spr
 		Length: 1
 		Offset: 10, 3
 		ZOffset: -8192
-	icon: ufmedmn0
+	icon:
+		Filename: ufmedmn0.spr
 
 # Mechanic
 ufmecst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: ufmecst0.spr
 	run:
 		Start: 0
 		Facings: 8
@@ -193,16 +220,21 @@ ufmecst0:
 	stand:
 		Start: 192
 		Facings: 8
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.spr
 		Length: 1
 		Offset: 10, 2
 		ZOffset: -8192
-	icon: ufmecmn0
-	icon-saboteur: ufsabmn0
+	icon:
+		Filename: ufmecmn0.spr
+	icon-saboteur:
+		Filename: ufsabmn0.spr
 
 # Martyr
 ufmtrst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: ufmtrst0.spr
 	run:
 		Start: 0
 		Facings: 8
@@ -221,15 +253,19 @@ ufmtrst0:
 	stand:
 		Start: 202
 		Facings: 8
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.spr
 		Length: 1
 		Offset: 9, 3
 		ZOffset: -8192
-	icon: ufmtrmn0
+	icon:
+		Filename: ufmtrmn0.spr
 
 # Infiltrator
 ucinfst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: ucinfst0.spr
 	run:
 		Start: 0
 		Facings: 8
@@ -243,17 +279,21 @@ ucinfst0:
 	stand:
 		Start: 64
 		Facings: 8
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.spr
 		Length: 1
 		Offset: 9, 4
 		ZOffset: -8192
-	icon: ucinfmn0
+	icon:
+		Filename: ucinfmn0.spr
 
 # Imperium
 
 # Guardian
 uigrdst0:
 	Inherits: aliensplat
+	Defaults:
+		Filename: uigrdst0.spr
 	run:
 		Start: 0
 		Facings: 8
@@ -270,15 +310,19 @@ uigrdst0:
 	stand:
 		Start: 64
 		Facings: 8
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.spr
 		Length: 1
 		Offset: 10, 3
 		ZOffset: -8192
-	icon: uigrdmn0
+	icon:
+		Filename: uigrdmn0.spr
 
 # Bion
 uibonst0:
 	Inherits: aliensplat
+	Defaults:
+		Filename: uibonst0.spr
 	run:
 		Start: 0
 		Facings: 8
@@ -302,15 +346,19 @@ uibonst0:
 	stand:
 		Start: 200
 		Facings: 8
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.spr
 		Length: 1
 		Offset: 9, 7
 		ZOffset: -8192
-	icon: uibonmn0
+	icon:
+		Filename: uibonmn0.spr
 
 # Exterminator
 uiextst0:
 	Inherits: aliensplat
+	Defaults:
+		Filename: uiextst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -325,7 +373,8 @@ uiextst0:
 	stand:
 		Start: 0
 		Facings: 16
-	icon: uiextmn0
+	icon:
+		Filename: uiextmn0.spr
 
 # Vehicles
 
@@ -333,9 +382,11 @@ uiextst0:
 ucfcnst0:
 	run:
 		Combine:
-			ucfcnst0:
+			0:
+				Filename: ucfcnst0.spr
 				Length: 48
-			ucfcnsh0:
+			1:
+				Filename: ucfcnsh0.spr
 				Length: 48
 		Facings: 8
 		Length: 6
@@ -343,10 +394,12 @@ ucfcnst0:
 		ShadowStart: 48
 	stand:
 		Combine:
-			ucfcnst0:
+			0:
+				Filename: ucfcnst0.spr
 				Start: 48
 				Length: 8
-			ucfcnsh0:
+			1:
+				Filename: ucfcnsh0.spr
 				Start: 48
 				Length: 8
 		Facings: 8
@@ -354,19 +407,24 @@ ucfcnst0:
 		ShadowStart: 8
 	idle:
 		Combine:
-			ucfcnst0:
+			0:
+				Filename: ucfcnst0.spr
 				Start: 48
 				Length: 8
-			ucfcnsh0:
+			1:
+				Filename: ucfcnsh0.spr
 				Start: 48
 				Length: 8
 		Facings: 8
 		Length: 1
 		ShadowStart: 8
-	icon: ucfcnmn0
+	icon:
+		Filename: ucfcnmn0.spr
 
 # Freighter
 ucfrgst0:
+	Defaults:
+		Filename: ucfrgst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -399,10 +457,13 @@ ucfrgst0:
 		Facings: 16
 		Length: 15
 		Tick: 100
-	icon: ucfrgmn0
+	icon:
+		Filename: ucfrgmn0.spr
 
 # Hover Freighter
 uchfrst0:
+	Defaults:
+		Filename: uchfrst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -427,25 +488,30 @@ uchfrst0:
 		Facings: 1
 		Length: 16
 		Tick: 100
-	icon: uchfrmn0
+	icon:
+		Filename: uchfrmn0.spr
 
 # Spider Bike
 ufspbst0:
 	idle:
 		Combine:
-			ufspbst0:
+			0:
+				Filename: ufspbst0.spr
 				Start: 64
 				Length: 16
-			ufspbsh0:
+			1:
+				Filename: ufspbsh0.spr
 				Start: 64
 				Length: 16
 		Facings: 16
 		ShadowStart: 16
 	run:
 		Combine:
-			ufspbst0:
+			0:
+				Filename: ufspbst0.spr
 				Length: 48
-			ufspbsh0:
+			1:
+				Filename: ufspbsh0.spr
 				Length: 48
 		Facings: 16
 		Length: 3
@@ -453,10 +519,12 @@ ufspbst0:
 		ShadowStart: 48
 	shoot:
 		Combine:
-			ufspbst0:
+			0:
+				Filename: ufspbst0.spr
 				Start: 48
 				Length: 16
-			ufspbsh0:
+			1:
+				Filename: ufspbsh0.spr
 				Start: 48
 				Length: 16
 		Facings: 16
@@ -465,19 +533,24 @@ ufspbst0:
 		ShadowStart: 16
 	stand:
 		Combine:
-			ufspbst0:
+			0:
+				Filename: ufspbst0.spr
 				Start: 64
 				Length: 16
-			ufspbsh0:
+			1:
+				Filename: ufspbsh0.spr
 				Start: 64
 				Length: 16
 		Facings: 16
 		Length: 1
 		ShadowStart: 16
-	icon: ufspbmn0
+	icon:
+		Filename: ufspbmn0.spr
 
 # Rapid Armored Transport
 ufratst0:
+	Defaults:
+		Filename: ufratst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -495,10 +568,13 @@ ufratst0:
 		Length: 1
 		Stride: 3
 		Tick: 100
-	icon: ufratmn0
+	icon:
+		Filename: ufratmn0.spr
 
 # Skirmish Tank
 ufsktst0:
+	Defaults:
+		Filename: ufsktst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -521,18 +597,23 @@ ufsktst0:
 		Length: 1
 		Stride: 3
 		Tick: 100
-	muzzle: ufsktac0
+	muzzle:
+		Filename: ufsktac0.spr
 		Start: 16
 		Facings: 16
 		Length: 3
 		Tick: 40
-	turret: ufsktac0
+	turret:
+		Filename: ufsktac0.spr
 		Start: 0
 		Facings: 16
-	icon: ufsktmn0
+	icon:
+		Filename: ufsktmn0.spr
 
 # Tank Hunter
 ufthnst0:
+	Defaults:
+		Filename: ufthnst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -555,10 +636,13 @@ ufthnst0:
 		Length: 1
 		Stride: 3
 		Tick: 100
-	icon: ufthnmn0
+	icon:
+		Filename: ufthnmn0.spr
 
 # Phase Tank
 ufphtst0:
+	Defaults:
+		Filename: ufphtst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -580,10 +664,13 @@ ufphtst0:
 		Facings: 16
 		Length: 1
 		Stride: 3
-	icon: ufphtmn0
+	icon:
+		Filename: ufphtmn0.spr
 
 # Flak Jack
 ufflkst0:
+	Defaults:
+		Filename: ufflkst0.spr
 	run:
 		Start: 0
 		Facings: 8
@@ -605,10 +692,13 @@ ufflkst0:
 		Facings: 8
 		Length: 1
 		Stride: 8
-	icon: ufflkmn0
+	icon:
+		Filename: ufflkmn0.spr
 
 # Triple Rail Hover Tank
 uftrtst0:
+	Defaults:
+		Filename: uftrtst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -621,18 +711,23 @@ uftrtst0:
 	idle:
 		Start: 0
 		Facings: 16
-	muzzle: uftrtac0
+	muzzle:
+		Filename: uftrtac0.spr
 		Start: 16
 		Facings: 16
 		Length: 3
 		Tick: 40
-	turret: uftrtac0
+	turret:
+		Filename: uftrtac0.spr
 		Start: 0
 		Facings: 16
-	icon: uftrtmn0
+	icon:
+		Filename: uftrtmn0.spr
 
 # Hellstorm Artillery
 uffarst0:
+	Defaults:
+		Filename: uffarst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -655,10 +750,13 @@ uffarst0:
 		Length: 1
 		Stride: 3
 		Tick: 100
-	icon: uffarmn0
+	icon:
+		Filename: uffarmn0.spr
 
 # Sky Bike
 ufskbst0:
+	Defaults:
+		Filename: ufskbst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -671,10 +769,13 @@ ufskbst0:
 	idle:
 		Start: 0
 		Facings: 16
-	icon: ufskbmn0
+	icon:
+		Filename: ufskbmn0.spr
 
 # Outrider
 ufoutst0:
+	Defaults:
+		Filename: ufoutst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -687,10 +788,13 @@ ufoutst0:
 	idle:
 		Start: 0
 		Facings: 16
-	icon: ufoutmn0
+	icon:
+		Filename: ufoutmn0.spr
 
 # Shock Wave
 ufswvst0:
+	Defaults:
+		Filename: ufswvst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -713,13 +817,17 @@ ufswvst0:
 		Length: 1
 		Stride: 3
 		Tick: 100
-	turret: ufswvac0
+	turret:
+		Filename: ufswvac0.spr
 		Start: 0
 		Facings: 16
-	icon: ufswvmn0
+	icon:
+		Filename: ufswvmn0.spr
 
 # Water Contaminator
 ucwcost0:
+	Defaults:
+		Filename: ucwcost0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -742,10 +850,13 @@ ucwcost0:
 		Length: 1
 		Stride: 4
 		Tick: 100
-	icon: ucwcomn0
+	icon:
+		Filename: ucwcomn0.spr
 
 # Phase Runner
 ufphrst0:
+	Defaults:
+		Filename: ufphrst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -768,10 +879,13 @@ ufphrst0:
 		Length: 1
 		Stride: 3
 		Tick: 100
-	icon: ufphrmn0
+	icon:
+		Filename: ufphrmn0.spr
 
 # Scout Runner
 uisttst0:
+	Defaults:
+		Filename: uisttst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -786,10 +900,13 @@ uisttst0:
 	idle:
 		Start: 0
 		Facings: 16
-	icon: uisttmn0
+	icon:
+		Filename: uisttmn0.spr
 
 # Invader Troop Transport
 uiittst0:
+	Defaults:
+		Filename: uiittst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -804,17 +921,22 @@ uiittst0:
 		Facings: 16
 		Length: 1
 		Tick: 100
-	muzzle: uchfrac0
+	muzzle:
+		Filename: uchfrac0.spr
 		Start: 16
 		Facings: 16
 		Tick: 90
-	turret: uchfrac0
+	turret:
+		Filename: uchfrac0.spr
 		Start: 0
 		Facings: 16
-	icon: uiittmn0
+	icon:
+		Filename: uiittmn0.spr
 
 # Plasma Tank
 uipltst0:
+	Defaults:
+		Filename: uipltst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -827,18 +949,23 @@ uipltst0:
 	idle:
 		Start: 0
 		Facings: 16
-	muzzle: uipltac0
+	muzzle:
+		Filename: uipltac0.spr
 		Start: 16
 		Facings: 16
 		Length: 3
 		Tick: 40
-	turret: uipltac0
+	turret:
+		Filename: uipltac0.spr
 		Start: 0
 		Facings: 16
-	icon: uipltmn0
+	icon:
+		Filename: uipltmn0.spr
 
 # Amper
 uiampst0:
+	Defaults:
+		Filename: uiampst0.spr
 	run:
 		Start: 0
 		Facings: 8
@@ -862,10 +989,13 @@ uiampst0:
 	stand:
 		Start: 120
 		Facings: 8
-	icon: uiampmn0
+	icon:
+		Filename: uiampmn0.spr
 
 # Mobile Air Defense
 uimadst0:
+	Defaults:
+		Filename: uimadst0.spr
 	idle:
 		Start: 0
 		Facings: 16
@@ -878,10 +1008,13 @@ uimadst0:
 	shoot:
 		Start: 0
 		Facings: 16
-	icon: uimadmn0
+	icon:
+		Filename: uimadmn0.spr
 
 # Recon Drone
 uirdrst0:
+	Defaults:
+		Filename: uirdrst0.spr
 	idle:
 		Start: 0
 		Facings: 12
@@ -896,10 +1029,13 @@ uirdrst0:
 		Facings: 12
 		Length: 7
 		Tick: 100
-	icon: uirdrmn0
+	icon:
+		Filename: uirdrmn0.spr
 
 # Shredder
 uishrst0:
+	Defaults:
+		Filename: uishrst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -922,10 +1058,13 @@ uishrst0:
 		Length: 1
 		Stride: 4
 		Tick: 100
-	icon: uishrmn0
+	icon:
+		Filename: uishrmn0.spr
 
 # Hostage Taker
 uihosst0:
+	Defaults:
+		Filename: uihosst0.spr
 	run:
 		Start: 0
 		Facings: 16
@@ -948,10 +1087,13 @@ uihosst0:
 		Length: 1
 		Stride: 3
 		Tick: 100
-	icon: uihosmn0
+	icon:
+		Filename: uihosmn0.spr
 
 # Tachion Tank
 uitctst0:
+	Defaults:
+		Filename: uitctst0.spr
 	idle:
 		Start: 0
 		Facings: 16
@@ -964,10 +1106,13 @@ uitctst0:
 	shoot:
 		Start: 0
 		Facings: 16
-	icon: uitctmn0
+	icon:
+		Filename: uitctmn0.spr
 
 # S.C.A.R.A.B. scarab
 uiiarst0:
+	Defaults:
+		Filename: uiiarst0.spr
 	idle:
 		Start: 0
 		Facings: 16
@@ -982,10 +1127,13 @@ uiiarst0:
 		Facings: 16
 		Length: 3
 		Tick: 100
-	icon: uiiarmn0
+	icon:
+		Filename: uiiarmn0.spr
 
 # Cyclone
 uicycst0:
+	Defaults:
+		Filename: uicycst0.spr
 	idle:
 		Start: 0
 		Facings: 16
@@ -1000,10 +1148,13 @@ uicycst0:
 		Facings: 16
 		Length: 1
 		Tick: 100
-	icon: uicycmn0
+	icon:
+		Filename: uicycmn0.spr
 
 # Sky Fortress
 uiskyst0:
+	Defaults:
+		Filename: uiskyst0.spr
 	idle:
 		Start: 0
 		Facings: 8
@@ -1018,4 +1169,5 @@ uiskyst0:
 		Facings: 8
 		Length: 3
 		Tick: 100
-	icon: uiskymn0
+	icon:
+		Filename: uiskymn0.spr

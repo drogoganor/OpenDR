@@ -201,7 +201,8 @@ namespace OpenRA.Mods.Dr.Traits.Render
 
 		void IRenderOverlay.Render(WorldRenderer wr)
 		{
-			spriteLayer.Draw(wr.Viewport);
+			// TODO: Fix
+			//spriteLayer.Draw(wr.Viewport);
 		}
 	}
 }

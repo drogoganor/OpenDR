@@ -1,137 +1,173 @@
 
 overlay:
-	Defaults:
-		AddExtension: False
-	build-valid-barren: overlay.png
-	build-valid-aust: overlay.png
-	build-valid-alien: overlay.png
-	build-valid-asteroid: overlay.png
-	build-valid-auralien: overlay.png
-	build-valid-volcanic: overlay.png
-	build-valid-snow: overlay.png
-	build-valid-jungle: overlay.png
-	build-invalid: overlay.png
+	build-valid-barren:
+		Filename: overlay.png
+	build-valid-aust:
+		Filename: overlay.png
+	build-valid-alien:
+		Filename: overlay.png
+	build-valid-asteroid:
+		Filename: overlay.png
+	build-valid-auralien:
+		Filename: overlay.png
+	build-valid-volcanic:
+		Filename: overlay.png
+	build-valid-snow:
+		Filename: overlay.png
+	build-valid-jungle:
+		Filename: overlay.png
+	build-invalid:
+		Filename: overlay.png
 		Start: 1
-	target-select: overlay.png
-	target-valid-barren: overlay.png
-	target-valid-aust: overlay.png
-	target-valid-alien: overlay.png
-	target-valid-asteroid: overlay.png
-	target-valid-auralien: overlay.png
-	target-valid-volcanic: overlay.png
-	target-valid-snow: overlay.png
-	target-valid-jungle: overlay.png
-	target-invalid: overlay.png
+	target-select:
+		Filename: overlay.png
+	target-valid-barren:
+		Filename: overlay.png
+	target-valid-aust:
+		Filename: overlay.png
+	target-valid-alien:
+		Filename: overlay.png
+	target-valid-asteroid:
+		Filename: overlay.png
+	target-valid-auralien:
+		Filename: overlay.png
+	target-valid-volcanic:
+		Filename: overlay.png
+	target-valid-snow:
+		Filename: overlay.png
+	target-valid-jungle:
+		Filename: overlay.png
+	target-invalid:
+		Filename: overlay.png
 		Start: 1
 
 icon:
-	bitrcmn0: bitrcmn0
-	bitgtmn0: bitgtmn0
+	bitrcmn0:
+		Filename: bitrcmn0.spr
+	bitgtmn0:
+		Filename: bitgtmn0.spr
 
 editor-overlay:
-	Defaults:
-		AddExtension: False
-	copy: overlay.png
-	paste: overlay.png
+	copy:
+		Filename: overlay.png
+	paste:
+		Filename: overlay.png
 
 shroud:
-	shroud: shadow.shp
-		AddExtension: False
+	shroud:
+		Filename: shadow.shp
 		Length: *
 
 resources:
-	water1: tileset|ncwel1l0
+	water1:
+		Filename: ncwel1l0.spr
 		ZOffset: -8196
 		Length: *
-	taelon1: tileset|ncmin1l0
+	taelon1:
+		Filename: ncmin1l0.spr
 		ZOffset: -8196
 		Length: *
 
 mpspawn:
-	idle: mpspawn.png
-		AddExtension: False
+	idle:
+		Filename: mpspawn.png
 		Length: *
 		Offset: 0, -5
 
 waypoint:
-	idle: waypoint.png
-		AddExtension: False
+	idle:
+		Filename: waypoint.png
 		Length: *
 
 clock:
-	idle: clock.png
-		AddExtension: False
+	idle:
+		Filename: clock.png
 		Length: *
 
 moveflsh:
-	idle: cursortarget.png
-		AddExtension: False
+	idle:
+		Filename: cursortarget.png
 		Length: *
 
 beacon:
 	Defaults:
-		AddExtension: False
 		ZOffset: 2535
 		Length: *
 		Offset: 0, -5
-	arrow: mpspawn.png
-	circles: mpspawn.png
-	atomicon: mpspawn.png
-	pbmbicon: mpspawn.png
-	camicon: mpspawn.png
-	pinficon: mpspawn.png
-	clock: mpspawn.png
+	arrow:
+		Filename: mpspawn.png
+	circles:
+		Filename: mpspawn.png
+	atomicon:
+		Filename: mpspawn.png
+	pbmbicon:
+		Filename: mpspawn.png
+	camicon:
+		Filename: mpspawn.png
+	pinficon:
+		Filename: mpspawn.png
+	clock:
+		Filename: mpspawn.png
 
 allyrepair:
-	repair: repricon
+	repair:
+		Filename: repricon.spr
 		Length: 8
 		Tick: 30
 		ZOffset: 2047
 
 rallypoint:
-	flag: mpspawn.png
-		AddExtension: False
+	flag:
+		Filename: mpspawn.png
 		Length: *
 		ZOffset: 2535
 		Offset: 0, -5
-	circles: mpspawn.png
-		AddExtension: False
+	circles:
+		Filename: mpspawn.png
 		Length: *
 		ZOffset: 2047
 		Offset: 0, -5
 
 pips:
-	Defaults:
-		AddExtension: False
-	groups: pips.png # TODO: Create 0-9 pips
+	groups: # TODO: Create 0-9 pips
+		Filename: pips.png
 		Start: 3
-	pip-empty: pips.png
+	pip-empty:
+		Filename: pips.png
 		Start: 0
-	pip-red: pips.png
+	pip-red:
+		Filename: pips.png
 		Start: 1
-	pip-green: pips.png
+	pip-green:
+		Filename: pips.png
 		Start: 2
-	pip-blue: pips.png
+	pip-blue:
+		Filename: pips.png
 		Start: 3
-	pip-yellow: pips.png
+	pip-yellow:
+		Filename: pips.png
 		Start: 4
 
 rank:
-	Defaults:
-		AddExtension: False
-	rank-veteran-1: ranks.png
-	rank-veteran-2: ranks.png
+	rank-veteran-1:
+		Filename: ranks.png
+	rank-veteran-2:
+		Filename: ranks.png
 		Start: 1
-	rank-veteran-3: ranks.png
+	rank-veteran-3:
+		Filename: ranks.png
 		Start: 2
-	rank-veteran-4: ranks.png
+	rank-veteran-4:
+		Filename: ranks.png
 		Start: 3
-	rank-elite: ranks.png
+	rank-elite:
+		Filename: ranks.png
 		Start: 4
 
 crate-effects:
 	Defaults:
 		ZOffset: 2047
 		Length: *
-	levelup: eoncnpr1
+	levelup:
+		Filename: eoncnpr1.spr
 		Tick: 50

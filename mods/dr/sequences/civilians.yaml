@@ -2,6 +2,8 @@
 # Civilian
 uocvmst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: uocvmst0.spr
 	run:
 		Start: 0
 		Facings: 8
@@ -20,15 +22,19 @@ uocvmst0:
 	stand:
 		Start: 176
 		Facings: 8
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.spr
 		Length: 1
 		Offset: 9, 5
 		ZOffset: -8192
-	icon: uocvmmn0
+	icon:
+		Filename: uocvmmn0.spr
 
 # Rowdy Civilian
 uorcmst0:
 	Inherits: humansplat
+	Defaults:
+		Filename: uorcmst0.spr
 	run:
 		Start: 0
 		Facings: 8
@@ -55,16 +61,19 @@ uorcmst0:
 	stand:
 		Start: 184
 		Facings: 8
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.spr
 		Length: 1
 		Offset: 9, 7
 		ZOffset: -8192
-	icon: uorcmmn0
+	icon:
+		Filename: uorcmmn0.spr
 
 # Karoch
 uocspst0:
 	Inherits: humansplat
 	Defaults:
+		Filename: uocspst0.spr
 	run:
 		Start: 0
 		Facings: 8
@@ -76,27 +85,32 @@ uocspst0:
 	stand:
 		Start: 0
 		Facings: 8
-	shadow: ucmensh0
+	shadow:
+		Filename: ucmensh0.spr
 		Length: 1
 		Offset: 11, 3
 		ZOffset: -8192
-	icon: uocspmn0
+	icon:
+		Filename: uocspmn0.spr
 
 # Dessicator transport
 uohtrst0:
 	Defaults:
+		Filename: uohtrst0.spr
 		Start: 0
 		Facings: 16
 	idle:
 	stand:
 	run:
 	shoot:
-	icon: uohtrmn0
+	icon:
+		Filename: uohtrmn0.spr
 		Facings: 1
 
 # Civ Troop Transport
 uowtrst0:
 	Defaults:
+		Filename: uowtrst0.spr
 		Start: 0
 		Facings: 16
 		Length: 3
@@ -105,6 +119,7 @@ uowtrst0:
 	shoot:
 	stand:
 	idle:
-	icon: uowtrmn0
+	icon:
+		Filename: uowtrmn0.spr
 		Facings: 1
 		Length: 1

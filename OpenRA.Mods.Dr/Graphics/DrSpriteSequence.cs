@@ -57,8 +57,8 @@ namespace OpenRA.Mods.Dr.Graphics
 
 		public override Sprite GetSprite(int frame, WAngle facing)
 		{
-			if (facing.Facing >= 245 && facing.Facing <= 250) // receiving a facing of 320 when unloading an APC
-				facing = WAngle.Zero;
+			//if (facing.Facing >= 245 && facing.Facing <= 250) // receiving a facing of 320 when unloading an APC
+			//	facing = WAngle.Zero;
 
 			return base.GetSprite(frame, facing);
 		}

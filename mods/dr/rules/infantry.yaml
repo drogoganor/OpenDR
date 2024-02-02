@@ -235,7 +235,7 @@ Saboteur:
 		Speed: 102
 	Armor:
 		Type: ToughHuman
-	EngineerRepair:
+	InstantlyRepairs:
 	CaptureManager:
 	Captures:
 		CaptureTypes: building
@@ -451,7 +451,6 @@ Infiltrator:
 	Infiltrates:
 		ValidRelationships: Enemy
 		Types: SpyInfiltrate
-		PlayerExperience: 50
 		Notification: BuildingInfiltrated
 	AutoTarget:
 		InitialStance: HoldFire

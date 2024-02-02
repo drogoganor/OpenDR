@@ -1,225 +1,274 @@
 
 splash-barren:
 	Defaults:
-		AddExtension: False
 		Tick: 50
-	splash1: BARREN/BARREN.TIL
+	splash1:
+		Filename: BARREN/BARREN.TIL
 		Length: 8
 		Frames: 128, 136, 144, 152, 160, 168, 176, 184
-	splash2: BARREN/BARREN.TIL
+	splash2:
+		Filename: BARREN/BARREN.TIL
 		Length: 8
 		Frames: 129, 137, 145, 153, 161, 169, 177, 185
-	splash3: BARREN/BARREN.TIL
+	splash3:
+		Filename: BARREN/BARREN.TIL
 		Length: 8
 		Frames: 130, 138, 146, 154, 162, 170, 178, 186
-	splash4: BARREN/BARREN.TIL
+	splash4:
+		Filename: BARREN/BARREN.TIL
 		Length: 8
 		Frames: 131, 139, 147, 155, 163, 171, 179, 187
-	splash5: BARREN/BARREN.TIL
+	splash5:
+		Filename: BARREN/BARREN.TIL
 		Length: 8
 		Frames: 132, 140, 148, 156, 164, 172, 180, 188
-	splash6: BARREN/BARREN.TIL
+	splash6:
+		Filename: BARREN/BARREN.TIL
 		Length: 8
 		Frames: 133, 141, 149, 157, 165, 173, 181, 189
-	splash7: BARREN/BARREN.TIL
+	splash7:
+		Filename: BARREN/BARREN.TIL
 		Length: 8
 		Frames: 134, 142, 150, 158, 166, 174, 182, 190
-	splash8: BARREN/BARREN.TIL
+	splash8:
+		Filename: BARREN/BARREN.TIL
 		Length: 8
 		Frames: 135, 143, 151, 159, 167, 175, 183, 191
 
 splash-jungle:
-	Defaults:
-		AddExtension: False
-	splash1: JUNGLE/JUNGLE.TIL
+	splash1:
+		Filename: JUNGLE/JUNGLE.TIL
 		Length: 8
 		Frames: 128, 136, 144, 152, 160, 168, 176, 184
-	splash2: JUNGLE/JUNGLE.TIL
+	splash2:
+		Filename: JUNGLE/JUNGLE.TIL
 		Length: 8
 		Frames: 129, 137, 145, 153, 161, 169, 177, 185
-	splash3: JUNGLE/JUNGLE.TIL
+	splash3:
+		Filename: JUNGLE/JUNGLE.TIL
 		Length: 8
 		Frames: 130, 138, 146, 154, 162, 170, 178, 186
-	splash4: JUNGLE/JUNGLE.TIL
+	splash4:
+		Filename: JUNGLE/JUNGLE.TIL
 		Length: 8
 		Frames: 131, 139, 147, 155, 163, 171, 179, 187
-	splash5: JUNGLE/JUNGLE.TIL
+	splash5:
+		Filename: JUNGLE/JUNGLE.TIL
 		Length: 8
 		Frames: 132, 140, 148, 156, 164, 172, 180, 188
-	splash6: JUNGLE/JUNGLE.TIL
+	splash6:
+		Filename: JUNGLE/JUNGLE.TIL
 		Length: 8
 		Frames: 133, 141, 149, 157, 165, 173, 181, 189
-	splash7: JUNGLE/JUNGLE.TIL
+	splash7:
+		Filename: JUNGLE/JUNGLE.TIL
 		Length: 8
 		Frames: 134, 142, 150, 158, 166, 174, 182, 190
-	splash8: JUNGLE/JUNGLE.TIL
+	splash8:
+		Filename: JUNGLE/JUNGLE.TIL
 		Length: 8
 		Frames: 135, 143, 151, 159, 167, 175, 183, 191
 
 splash-auralien:
-	Defaults:
-		AddExtension: False
-	splash1: auralien.til
+	splash1:
+		Filename: auralien.til
 		Length: 8
 		Frames: 128, 136, 144, 152, 160, 168, 176, 184
-	splash2: auralien.til
+	splash2:
+		Filename: auralien.til
 		Length: 8
 		Frames: 129, 137, 145, 153, 161, 169, 177, 185
-	splash3: auralien.til
+	splash3:
+		Filename: auralien.til
 		Length: 8
 		Frames: 130, 138, 146, 154, 162, 170, 178, 186
-	splash4: auralien.til
+	splash4:
+		Filename: auralien.til
 		Length: 8
 		Frames: 131, 139, 147, 155, 163, 171, 179, 187
-	splash5: auralien.til
+	splash5:
+		Filename: auralien.til
 		Length: 8
 		Frames: 132, 140, 148, 156, 164, 172, 180, 188
-	splash6: auralien.til
+	splash6:
+		Filename: auralien.til
 		Length: 8
 		Frames: 133, 141, 149, 157, 165, 173, 181, 189
-	splash7: auralien.til
+	splash7:
+		Filename: auralien.til
 		Length: 8
 		Frames: 134, 142, 150, 158, 166, 174, 182, 190
-	splash8: auralien.til
+	splash8:
+		Filename: auralien.til
 		Length: 8
 		Frames: 135, 143, 151, 159, 167, 175, 183, 191
 
 splash-asteroid:
-	Defaults:
-		AddExtension: False
-	splash1: asteroid.til
+	splash1:
+		Filename: asteroid.til
 		Length: 8
 		Frames: 128, 136, 144, 152, 160, 168, 176, 184
-	splash2: asteroid.til
+	splash2:
+		Filename: asteroid.til
 		Length: 8
 		Frames: 129, 137, 145, 153, 161, 169, 177, 185
-	splash3: asteroid.til
+	splash3:
+		Filename: asteroid.til
 		Length: 8
 		Frames: 130, 138, 146, 154, 162, 170, 178, 186
-	splash4: asteroid.til
+	splash4:
+		Filename: asteroid.til
 		Length: 8
 		Frames: 131, 139, 147, 155, 163, 171, 179, 187
-	splash5: asteroid.til
+	splash5:
+		Filename: asteroid.til
 		Length: 8
 		Frames: 132, 140, 148, 156, 164, 172, 180, 188
-	splash6: asteroid.til
+	splash6:
+		Filename: asteroid.til
 		Length: 8
 		Frames: 133, 141, 149, 157, 165, 173, 181, 189
-	splash7: asteroid.til
+	splash7:
+		Filename: asteroid.til
 		Length: 8
 		Frames: 134, 142, 150, 158, 166, 174, 182, 190
-	splash8: asteroid.til
+	splash8:
+		Filename: asteroid.til
 		Length: 8
 		Frames: 135, 143, 151, 159, 167, 175, 183, 191
 
 splash-aust:
-	Defaults:
-		AddExtension: False
-	splash1: aust.til
+	splash1:
+		Filename: aust.til
 		Length: 8
 		Frames: 128, 136, 144, 152, 160, 168, 176, 184
-	splash2: aust.til
+	splash2:
+		Filename: aust.til
 		Length: 8
 		Frames: 129, 137, 145, 153, 161, 169, 177, 185
-	splash3: aust.til
+	splash3:
+		Filename: aust.til
 		Length: 8
 		Frames: 130, 138, 146, 154, 162, 170, 178, 186
-	splash4: aust.til
+	splash4:
+		Filename: aust.til
 		Length: 8
 		Frames: 131, 139, 147, 155, 163, 171, 179, 187
-	splash5: aust.til
+	splash5:
+		Filename: aust.til
 		Length: 8
 		Frames: 132, 140, 148, 156, 164, 172, 180, 188
-	splash6: aust.til
+	splash6:
+		Filename: aust.til
 		Length: 8
 		Frames: 133, 141, 149, 157, 165, 173, 181, 189
-	splash7: aust.til
+	splash7:
+		Filename: aust.til
 		Length: 8
 		Frames: 134, 142, 150, 158, 166, 174, 182, 190
-	splash8: aust.til
+	splash8:
+		Filename: aust.til
 		Length: 8
 		Frames: 135, 143, 151, 159, 167, 175, 183, 191
 
 splash-volcanic:
-	Defaults:
-		AddExtension: False
-	splash1: volcanic.til
+	splash1:
+		Filename: volcanic.til
 		Length: 8
 		Frames: 128, 136, 144, 152, 160, 168, 176, 184
-	splash2: volcanic.til
+	splash2:
+		Filename: volcanic.til
 		Length: 8
 		Frames: 129, 137, 145, 153, 161, 169, 177, 185
-	splash3: volcanic.til
+	splash3:
+		Filename: volcanic.til
 		Length: 8
 		Frames: 130, 138, 146, 154, 162, 170, 178, 186
-	splash4: volcanic.til
+	splash4:
+		Filename: volcanic.til
 		Length: 8
 		Frames: 131, 139, 147, 155, 163, 171, 179, 187
-	splash5: volcanic.til
+	splash5:
+		Filename: volcanic.til
 		Length: 8
 		Frames: 132, 140, 148, 156, 164, 172, 180, 188
-	splash6: volcanic.til
+	splash6:
+		Filename: volcanic.til
 		Length: 8
 		Frames: 133, 141, 149, 157, 165, 173, 181, 189
-	splash7: volcanic.til
+	splash7:
+		Filename: volcanic.til
 		Length: 8
 		Frames: 134, 142, 150, 158, 166, 174, 182, 190
-	splash8: volcanic.til
+	splash8:
+		Filename: volcanic.til
 		Length: 8
 		Frames: 135, 143, 151, 159, 167, 175, 183, 191
 
-splash-alien:
-	Defaults:
-		AddExtension: False
-	splash1: ALIEN/ALIEN.TIL
-		Length: 8
-		Frames: 128, 136, 144, 152, 160, 168, 176, 184
-	splash2: ALIEN/ALIEN.TIL
-		Length: 8
-		Frames: 129, 137, 145, 153, 161, 169, 177, 185
-	splash3: ALIEN/ALIEN.TIL
-		Length: 8
-		Frames: 130, 138, 146, 154, 162, 170, 178, 186
-	splash4: ALIEN/ALIEN.TIL
-		Length: 8
-		Frames: 131, 139, 147, 155, 163, 171, 179, 187
-	splash5: ALIEN/ALIEN.TIL
-		Length: 8
-		Frames: 132, 140, 148, 156, 164, 172, 180, 188
-	splash6: ALIEN/ALIEN.TIL
-		Length: 8
-		Frames: 133, 141, 149, 157, 165, 173, 181, 189
-	splash7: ALIEN/ALIEN.TIL
-		Length: 8
-		Frames: 134, 142, 150, 158, 166, 174, 182, 190
-	splash8: ALIEN/ALIEN.TIL
-		Length: 8
-		Frames: 135, 143, 151, 159, 167, 175, 183, 191
+#splash-alien:
+#	splash1:
+#		Filename: ALIEN/ALIEN.TIL
+#		Length: 8
+#		Frames: 128, 136, 144, 152, 160, 168, 176, 184
+#	splash2:
+#		Filename: ALIEN/ALIEN.TIL
+#		Length: 8
+#		Frames: 129, 137, 145, 153, 161, 169, 177, 185
+#	splash3:
+#		Filename: ALIEN/ALIEN.TIL
+#		Length: 8
+#		Frames: 130, 138, 146, 154, 162, 170, 178, 186
+#	splash4:
+#		Filename: ALIEN/ALIEN.TIL
+#		Length: 8
+#		Frames: 131, 139, 147, 155, 163, 171, 179, 187
+#	splash5:
+#		Filename: ALIEN/ALIEN.TIL
+#		Length: 8
+#		Frames: 132, 140, 148, 156, 164, 172, 180, 188
+#	splash6:
+#		Filename: ALIEN/ALIEN.TIL
+#		Length: 8
+#		Frames: 133, 141, 149, 157, 165, 173, 181, 189
+#	splash7:
+#		Filename: ALIEN/ALIEN.TIL
+#		Length: 8
+#		Frames: 134, 142, 150, 158, 166, 174, 182, 190
+#	splash8:
+#		Filename: ALIEN/ALIEN.TIL
+#		Length: 8
+#		Frames: 135, 143, 151, 159, 167, 175, 183, 191
 
-splash-snow:
-	Defaults:
-		AddExtension: False
-	splash1: SNOW/SNOW.TIL
-		Length: 8
-		Frames: 128, 136, 144, 152, 160, 168, 176, 184
-	splash2: SNOW/SNOW.TIL
-		Length: 8
-		Frames: 129, 137, 145, 153, 161, 169, 177, 185
-	splash3: SNOW/SNOW.TIL
-		Length: 8
-		Frames: 130, 138, 146, 154, 162, 170, 178, 186
-	splash4: SNOW/SNOW.TIL
-		Length: 8
-		Frames: 131, 139, 147, 155, 163, 171, 179, 187
-	splash5: SNOW/SNOW.TIL
-		Length: 8
-		Frames: 132, 140, 148, 156, 164, 172, 180, 188
-	splash6: SNOW/SNOW.TIL
-		Length: 8
-		Frames: 133, 141, 149, 157, 165, 173, 181, 189
-	splash7: SNOW/SNOW.TIL
-		Length: 8
-		Frames: 134, 142, 150, 158, 166, 174, 182, 190
-	splash8: SNOW/SNOW.TIL
-		Length: 8
-		Frames: 135, 143, 151, 159, 167, 175, 183, 191
+#splash-snow:
+#	splash1:
+#		Filename: SNOW/SNOW.TIL
+#		Length: 8
+#		Frames: 128, 136, 144, 152, 160, 168, 176, 184
+#	splash2:
+#		Filename: SNOW/SNOW.TIL
+#		Length: 8
+#		Frames: 129, 137, 145, 153, 161, 169, 177, 185
+#	splash3:
+#		Filename: SNOW/SNOW.TIL
+#		Length: 8
+#		Frames: 130, 138, 146, 154, 162, 170, 178, 186
+#	splash4:
+#		Filename: SNOW/SNOW.TIL
+#		Length: 8
+#		Frames: 131, 139, 147, 155, 163, 171, 179, 187
+#	splash5:
+#		Filename: SNOW/SNOW.TIL
+#		Length: 8
+#		Frames: 132, 140, 148, 156, 164, 172, 180, 188
+#	splash6:
+#		Filename: SNOW/SNOW.TIL
+#		Length: 8
+#		Frames: 133, 141, 149, 157, 165, 173, 181, 189
+#	splash7:
+#		Filename: SNOW/SNOW.TIL
+#		Length: 8
+#		Frames: 134, 142, 150, 158, 166, 174, 182, 190
+#	splash8:
+#		Filename: SNOW/SNOW.TIL
+#		Length: 8
+#		Frames: 135, 143, 151, 159, 167, 175, 183, 191

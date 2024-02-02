@@ -1,6 +1,6 @@
 Metadata:
 	Title: Mod Content Manager
-	Version: 5bf7fe8
+	Version: {DEV_VERSION}
 	Hidden: true
 
 Packages:
@@ -71,5 +71,3 @@ SpriteFormats: PngSheet
 TerrainFormat: DefaultTerrain
 
 SpriteSequenceFormat: DefaultSpriteSequence
-
-ModelSequenceFormat: PlaceholderModelSequence

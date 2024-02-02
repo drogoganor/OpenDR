@@ -2,280 +2,363 @@
 aotre000:
 	Defaults:
 		Offset: -4,-19
-	idle: tileset|aotre000
-	run: tileset|aotre000 # for sniper and scout disguise
-	attack: tileset|aotre000
-	stand: tileset|aotre000
-	shadow: tileset|aotre0sh
+	idle:
+		Filename: aotre000.spr
+	run: # for sniper and scout disguise
+		Filename: aotre000.spr
+	attack:
+		Filename: aotre000.spr
+	stand:
+		Filename: aotre000.spr
+	shadow:
+		Filename: aotre0sh.spr
 		Offset: 21, 10
 
 aotre001:
 	Defaults:
 		Offset: 0,-10
-	idle: tileset|aotre001
-	run: tileset|aotre001 # for sniper and scout disguise
-	attack: tileset|aotre001
-	stand: tileset|aotre001
-	shadow: tileset|aotre1sh
+	idle:
+		Filename: aotre001.spr
+	run: # for sniper and scout disguise
+		Filename: aotre001.spr
+	attack:
+		Filename: aotre001.spr
+	stand:
+		Filename: aotre001.spr
+	shadow:
+		Filename: aotre1sh.spr
 		Offset: 15, 9
 
 aotre002:
 	Defaults:
 		Offset: -1,-14
-	idle: tileset|aotre002
-	run: tileset|aotre002 # for sniper and scout disguise
-	attack: tileset|aotre002
-	stand: tileset|aotre002
-	shadow: tileset|aotre2sh
+	idle:
+		Filename: aotre002.spr
+	run: # for sniper and scout disguise
+		Filename: aotre002.spr
+	attack:
+		Filename: aotre002.spr
+	stand:
+		Filename: aotre002.spr
+	shadow:
+		Filename: aotre2sh.spr
 		Offset: 19, 11
 
 aotre003:
 	Defaults:
 		Offset: 3,-15
-	idle: tileset|aotre003
-	run: tileset|aotre003 # for sniper and scout disguise
-	attack: tileset|aotre003
-	stand: tileset|aotre003
-	shadow: tileset|aotre3sh
+	idle:
+		Filename: aotre003.spr
+	run: # for sniper and scout disguise
+		Filename: aotre003.spr
+	attack:
+		Filename: aotre003.spr
+	stand:
+		Filename: aotre003.spr
+	shadow:
+		Filename: aotre3sh.spr
 		Offset: 23, 11
 
 aotre004:
 	Defaults:
 		Offset: 1,-10
-	idle: tileset|aotre004
-	run: tileset|aotre004 # for sniper and scout disguise
-	attack: tileset|aotre004
-	stand: tileset|aotre004
-	shadow: tileset|aotre4sh
+	idle:
+		Filename: aotre004.spr
+	run: # for sniper and scout disguise
+		Filename: aotre004.spr
+	attack:
+		Filename: aotre004.spr
+	stand:
+		Filename: aotre004.spr
+	shadow:
+		Filename: aotre4sh.spr
 		Offset: 10, 8
 
 aotre005:
 	Defaults:
 		Offset: 2,-9
-	idle: tileset|aotre005
-	run: tileset|aotre005 # for sniper and scout disguise
-	attack: tileset|aotre005
-	stand: tileset|aotre005
-	shadow: tileset|aotre5sh
+	idle:
+		Filename: aotre005.spr
+	run: # for sniper and scout disguise
+		Filename: aotre005.spr
+	attack:
+		Filename: aotre005.spr
+	stand:
+		Filename: aotre005.spr
+	shadow:
+		Filename: aotre5sh.spr
 		Offset: 13, 6
 
 # Plant
 aopln000:
 	Defaults:
 		Offset: -2,-4
-	idle: tileset|aopln000
-	shadow: tileset|aopln0sh
+	idle:
+		Filename: aopln000.spr
+	shadow:
+		Filename: aopln0sh.spr
 		Offset: -4, -3
 
 aopln001:
 	Defaults:
 		Offset: 1,1
-	idle: tileset|aopln001
-	shadow: tileset|aopln1sh
+	idle:
+		Filename: aopln001.spr
+	shadow:
+		Filename: aopln1sh.spr
 		Offset: 1, 1
 
 aopln002:
 	Defaults:
 		Offset: 4,2
-	idle: tileset|aopln002
-	shadow: tileset|aopln2sh
+	idle:
+		Filename: aopln002.spr
+	shadow:
+		Filename: aopln2sh.spr
 		Offset: 6, 7
 
 # Rocks
 aoroc000:
 	Defaults:
 		Offset: 0,0
-	idle: tileset|aoroc000
-	shadow: tileset|aoroc0sh
+	idle:
+		Filename: aoroc000.spr
+	shadow:
+		Filename: aoroc0sh.spr
 		Offset: 5, 1
 
 aoroc001:
 	Defaults:
 		Offset: 0,0
-	idle: tileset|aoroc001
-	shadow: tileset|aoroc1sh
+	idle:
+		Filename: aoroc001.spr
+	shadow:
+		Filename: aoroc1sh.spr
 		Offset: 6, 3
 
 aoroc002:
 	Defaults:
 		Offset: 0,0
-	idle: tileset|aoroc002
-	shadow: tileset|aoroc2sh
+	idle:
+		Filename: aoroc002.spr
+	shadow:
+		Filename: aoroc2sh.spr
 		Offset: 8, 7
 
 aoroc003:
 	Defaults:
 		Offset: 0,2
-	idle: tileset|aoroc003
-	shadow: tileset|aoroc3sh
+	idle:
+		Filename: aoroc003.spr
+	shadow:
+		Filename: aoroc3sh.spr
 		Offset: 7, 20
 
 aoroc004:
 	Defaults:
 		Offset: 2,2
-	idle: tileset|aoroc004
-	shadow: tileset|aoroc4sh
+	idle:
+		Filename: aoroc004.spr
+	shadow:
+		Filename: aoroc4sh.spr
 		Offset: 10, 25
 
 aoroc005:
 	Defaults:
 		Offset: 1,0
-	idle: tileset|aoroc005
-	shadow: tileset|aoroc5sh
+	idle:
+		Filename: aoroc005.spr
+	shadow:
+		Filename: aoroc5sh.spr
 		Offset: 12, 35
 
 # Cliff
 aoclf000:
 	Defaults:
 		Offset: -3, -2
-	idle: tileset|aoclf000
-	shadow: tileset|aoclf0sh
+	idle:
+		Filename: aoclf000.spr
+	shadow:
+		Filename: aoclf0sh.spr
 		Offset: 9, 11
 
 aoclf001:
 	Defaults:
 		Offset: -3, -1
-	idle: tileset|aoclf001
-	shadow: tileset|aoclf1sh
+	idle:
+		Filename: aoclf001.spr
+	shadow:
+		Filename: aoclf1sh.spr
 		Offset: 12, 23
 
 aoclf002:
-	Defaults:
-	idle: tileset|aoclf002
-	shadow: tileset|aoclf2sh
+	idle:
+		Filename: aoclf002.spr
+	shadow:
+		Filename: aoclf2sh.spr
 		Offset: 12, 25
 
 aoclf003:
-	Defaults:
-	idle: tileset|aoclf003
-	shadow: tileset|aoclf3sh
+	idle:
+		Filename: aoclf003.spr
+	shadow:
+		Filename: aoclf3sh.spr
 		Offset: 13, 23
 
 aoclf004:
-	Defaults:
-	idle: tileset|aoclf004
-	shadow: tileset|aoclf4sh
+	idle:
+		Filename: aoclf004.spr
+	shadow:
+		Filename: aoclf4sh.spr
 		Offset: 11, 15
 
 aoclf005:
-	Defaults:
-	idle: tileset|aoclf005
-	shadow: tileset|aoclf5sh
+	idle:
+		Filename: aoclf005.spr
+	shadow:
+		Filename: aoclf5sh.spr
 		Offset: 8, 25
 
 # Rubble
 aorub000:
 	idle:
-	shadow: aorub0sh
+		Filename: aorub000.spr
+	shadow:
+		Filename: aorub0sh.spr
 		Offset: 0, 0
 		ZOffset: -8192
 
 aorub001:
 	idle:
-	shadow: aorub1sh
+		Filename: aorub001.spr
+	shadow:
+		Filename: aorub1sh.spr
 		Offset: 0, 0
 		ZOffset: -8192
 
 aorub002:
 	idle:
+		Filename: aorub002.spr
 		Length: 1
-	shadow: aorub2sh
+	shadow:
+		Filename: aorub2sh.spr
 		Offset: 0, 0
 		ZOffset: -8192
 
 # Scoring
 aomsc000:
 	idle:
+		Filename: aomsc000.spr
 		Length: *
 
 aomsc001:
 	Defaults:
+		Filename: aomsc001.spr
 	idle:
 
 aomsc002:
 	Defaults:
+		Filename: aomsc002.spr
 	idle:
 
 # Crater
 aoctr000:
 	Defaults:
+		Filename: aoctr000.spr
 	idle:
 
 aoctr001:
 	Defaults:
+		Filename: aoctr001.spr
 	idle:
 
 aoctr002:
 	Defaults:
+		Filename: aoctr002.spr
 	idle:
 
 aoctr003:
 	Defaults:
+		Filename: aoctr003.spr
 		Offset: 0,4
 	idle:
 
 aoctr004:
 	Defaults:
+		Filename: aoctr004.spr
 		Offset: 0,-2
 	idle:
 
 aoctr005:
 	Defaults:
+		Filename: aoctr005.spr
 		Offset: 0,-2
 	idle:
 
 aoctr006:
 	Defaults:
+		Filename: aoctr006.spr
 		Offset: 0,-2
 	idle:
 
 aoctr007:
 	Defaults:
+		Filename: aoctr007.spr
 		Offset: 0,-2
 	idle:
 
 aoctr008:
 	Defaults:
+		Filename: aoctr008.spr
 		Offset: 0,-2
 	idle:
 
 aoctr009:
 	Defaults:
+		Filename: aoctr009.spr
 		Offset: 0,-2
 	idle:
 
 # Crashed space ship
 aospc000:
 	Defaults:
+		Filename: aospc000.spr
 	idle:
 
 # Water rocks
 aowtr000:
 	Defaults:
+		Filename: aowtr000.spr
 	idle:
 
 aowtr001:
 	Defaults:
+		Filename: aowtr001.spr
 	idle:
 
 aowtr002:
 	Defaults:
+		Filename: aowtr002.spr
 	idle:
 
 # Wrecks
 aowrk000:
 	Defaults:
+		Filename: aowrk000.spr
 	idle:
 
 aowrk001:
 	Defaults:
+		Filename: aowrk001.spr
 	idle:
 
 aowrk002:
 	Defaults:
+		Filename: aowrk002.spr
 	idle:
 
 # contaminated water
 eowcocr0:
 	Defaults:
+		Filename: eowcocr0.spr
 	idle:

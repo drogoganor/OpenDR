@@ -995,7 +995,7 @@ TemporalRiftCreator:
 	SupportPowerChargeBar:
 	DetonateWeaponPower@temporalrift:
 		#Cursor: ioncannon
-		Icon: bitrcmn0
+		Icon: bitrcmn0.shp
 		ActivationSequence:
 		Name: Temporal Rift
 		Description: Opens a temporal rift at the target location.
