@@ -139,6 +139,7 @@ ChromeLayout:
 	dr|chrome/mainmenu-prerelease-notification.yaml
 	common|chrome/ingame-perf.yaml
 	common|chrome/ingame-debug.yaml
+	common|chrome/ingame-debug-hpf.yaml
 	common|chrome/ingame-debuginfo.yaml
 	common|chrome/ingame-infochat.yaml
 	#common|chrome/mainmenu.yaml
