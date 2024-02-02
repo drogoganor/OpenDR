@@ -8,7 +8,7 @@
 		Queue: Upgrade
 		BuildLimit: 1
 		Description: Unlocks additional construction options
-		BuildDuration: 52
+		#BuildDuration: 52
 
 ^upgrade.hq1:
 	Inherits: ^Upgrade
@@ -18,7 +18,7 @@
 		BuildPaletteOrder: 50
 		Queue: Upgrade
 		Description: Unlocks additional construction options
-		BuildDuration: 52
+		#BuildDuration: 52
 		Prerequisites: ~hq, ~barracks, ~vehicles
 	Valued:
 		Cost: 2050
@@ -47,7 +47,7 @@ upgrade.hq2:
 		BuildPaletteOrder: 50
 		Prerequisites: ~hq, ~upgrade.hq1, ~vehicles, ~barracks, ~upgrade.barracks1, ~upgrade.assemblyplant1
 		Description: Unlocks additional construction options
-		BuildDuration: 89
+		#BuildDuration: 89
 	Valued:
 		Cost: 3300
 	Power:
@@ -64,7 +64,7 @@ upgrade.barracks1:
 		BuildPaletteOrder: 50
 		Prerequisites: ~hq, ~upgrade.hq1, ~barracks
 		Description: Unlocks additional construction options
-		BuildDuration: 68
+		#BuildDuration: 68
 	Valued:
 		Cost: 2550
 	Power:
@@ -80,7 +80,7 @@ upgrade.assemblyplant1:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: ~hq, ~upgrade.hq1, ~vehicles
-		BuildDuration: 141
+		#BuildDuration: 141
 		Description: Unlocks additional construction options
 	Valued:
 		Cost: 5000
@@ -97,7 +97,7 @@ upgrade.phasing:
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: ~hq, ~upgrade.hq1, ~phasing
-		BuildDuration: 72
+		#BuildDuration: 72
 		Description: Unlocks additional construction options
 	Valued:
 		Cost: 2700

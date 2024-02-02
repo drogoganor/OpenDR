@@ -22,9 +22,8 @@ namespace OpenRA.Mods.Dr.Terrain
 {
 	public sealed class DrTileCache : IDisposable
 	{
-		readonly Dictionary<ushort, TheaterTemplate> templates = new Dictionary<ushort, TheaterTemplate>();
+		readonly Dictionary<ushort, TheaterTemplate> templates = new();
 		readonly Cache<SheetType, SheetBuilder> sheetBuilders;
-		readonly Sprite missingTile;
 		readonly MersenneTwister random;
 
 		public DrTileCache(DrTerrain terrainInfo, Action<uint, string> onMissingImage = null)
@@ -85,7 +84,7 @@ namespace OpenRA.Mods.Dr.Terrain
 					}
 
 					var frameCount = terrainInfo.EnableDepth && depthFrames == null ? allFrames.Length / 2 : allFrames.Length;
-					var indices = templateInfo.Frames != null ? templateInfo.Frames : Exts.MakeArray(t.Value.TilesCount, j => j);
+					var indices = templateInfo.Frames ?? Exts.MakeArray(t.Value.TilesCount, j => j);
 
 					var start = indices.Min();
 					var end = indices.Max();
@@ -104,14 +103,14 @@ namespace OpenRA.Mods.Dr.Terrain
 						var type = SheetBuilder.FrameTypeToSheetType(f.Type);
 
 						var s = sheetBuilders[type].Allocate(f.Size, zRamp, offset);
-						OpenRA.Graphics.Util.FastCopyIntoChannel(s, f.Data, f.Type);
+						Util.FastCopyIntoChannel(s, f.Data, f.Type);
 
 						if (terrainInfo.EnableDepth)
 						{
 							var depthFrame = depthFrames != null ? depthFrames[j] : allFrames[j + frameCount];
 							var depthType = SheetBuilder.FrameTypeToSheetType(depthFrame.Type);
 							var ss = sheetBuilders[depthType].Allocate(depthFrame.Size, zRamp, offset);
-							OpenRA.Graphics.Util.FastCopyIntoChannel(ss, depthFrame.Data, depthFrame.Type);
+							Util.FastCopyIntoChannel(ss, depthFrame.Data, depthFrame.Type);
 							s = new SpriteWithSecondaryData(s, ss.Sheet, ss.Bounds, ss.Channel);
 						}
 
@@ -145,29 +144,29 @@ namespace OpenRA.Mods.Dr.Terrain
 				missingSheetType = SheetType.BGRA;
 			}
 
-			missingTile = sheetBuilders[missingSheetType].Add(new byte[missingDataLength], missingFrameType, new Size(1, 1));
+			MissingTile = sheetBuilders[missingSheetType].Add(new byte[missingDataLength], missingFrameType, new Size(1, 1));
 			foreach (var sb in sheetBuilders.Values)
 				sb.Current.ReleaseBuffer();
 		}
 
 		public bool HasTileSprite(TerrainTile r, int? variant = null)
 		{
-			return TileSprite(r, variant) != missingTile;
+			return TileSprite(r, variant) != MissingTile;
 		}
 
 		public Sprite TileSprite(TerrainTile r, int? variant = null)
 		{
 			if (!templates.TryGetValue(r.Type, out var template))
-				return missingTile;
+				return MissingTile;
 
 			if (r.Index >= template.Stride)
-				return missingTile;
+				return MissingTile;
 
-			var start = template.Variants > 1 ? variant.HasValue ? variant.Value : random.Next(template.Variants) : 0;
-			return template.Sprites[(start * template.Stride) + r.Index];
+			var start = template.Variants > 1 ? variant ?? random.Next(template.Variants) : 0;
+			return template.Sprites[start * template.Stride + r.Index];
 		}
 
-		public Sprite MissingTile => missingTile;
+		public Sprite MissingTile { get; }
 
 		public void Dispose()
 		{

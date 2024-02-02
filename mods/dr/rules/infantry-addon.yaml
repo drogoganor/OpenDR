@@ -11,7 +11,7 @@ ShockTrooper:
 		Description: Base trooper of the Togran.
 		Prerequisites: ~infantry.togran
 		BuildPaletteOrder: 10
-		BuildDuration: 6
+		#BuildDuration: 6
 	Selectable:
 		Class: E1
 	Voiced:
@@ -42,7 +42,7 @@ GoreHunter:
 		Description: Heavy trooper of the Tograns.
 		Prerequisites: ~infantry.togran
 		BuildPaletteOrder: 10
-		BuildDuration: 11
+		#BuildDuration: 11
 	Selectable:
 		Class: E2
 	Voiced:
@@ -75,7 +75,7 @@ LardriddenTerroristSoldierVeteran:
 		Description: Equivalent to a Merc
 		Prerequisites: ~infantry.terrorist
 		BuildPaletteOrder: 10
-		BuildDuration: 11
+		#BuildDuration: 11
 	Selectable:
 		Class: E2
 	Voiced:

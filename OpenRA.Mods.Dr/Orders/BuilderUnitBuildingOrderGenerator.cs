@@ -90,7 +90,7 @@ namespace OpenRA.Mods.Dr.Orders
 
 			var variants = new List<VariantWrapper>()
 			{
-				new VariantWrapper(worldRenderer, queue, world.Map.Rules.Actors[name])
+				new(worldRenderer, queue, world.Map.Rules.Actors[name])
 			};
 
 			foreach (var v in variants[0].ActorInfo.TraitInfos<PlaceBuildingVariantsInfo>())
@@ -100,13 +100,12 @@ namespace OpenRA.Mods.Dr.Orders
 			this.variants = variants.ToArray();
 
 			var map = world.Map;
-			var tileset = world.Map.Tileset.ToLowerInvariant();
 
 			actorInfo = map.Rules.Actors[name];
 			buildingInfo = actorInfo.TraitInfo<BuildingInfo>();
 		}
 
-		PlaceBuildingCellType MakeCellType(bool valid, bool lineBuild = false)
+		static PlaceBuildingCellType MakeCellType(bool valid, bool lineBuild = false)
 		{
 			var cell = valid ? PlaceBuildingCellType.Valid : PlaceBuildingCellType.Invalid;
 			if (lineBuild)
@@ -154,28 +153,33 @@ namespace OpenRA.Mods.Dr.Orders
 				var orderType = "BuildUnitPlaceBuilding";
 				var topLeft = TopLeft;
 				var notification = queue.Info.CannotPlaceAudio ?? placeBuildingInfo.CannotPlaceNotification;
+				var ai = variants[variant].ActorInfo;
+				var bi = variants[variant].BuildingInfo;
 
-				if (!world.CanPlaceBuilding(topLeft, actorInfo, buildingInfo, queue.Actor))
+				if (!world.CanPlaceBuilding(topLeft, actorInfo, buildingInfo, queue.Actor)
+					|| !bi.IsCloseEnoughToBase(world, owner, ai, topLeft))
 				{
 					Game.Sound.PlayNotification(world.Map.Rules, owner, "Speech", notification, owner.Faction.InternalName);
 					TextNotificationsManager.AddTransientLine(placeBuildingInfo.CannotPlaceTextNotification, owner);
 
 					yield break;
 				}
-
-				yield return new Order(orderType, owner.PlayerActor, Target.FromCell(world, topLeft), false)
+				else
 				{
-					// Building to place
-					TargetString = actorInfo.Name,
+					yield return new Order(orderType, owner.PlayerActor, Target.FromCell(world, topLeft), false)
+					{
+						// Building to place
+						TargetString = actorInfo.Name,
 
-					// Actor ID to associate with placement may be quite large, so it gets its own uint
-					ExtraData = queue.Actor.ActorID,
+						// Actor ID to associate with placement may be quite large, so it gets its own uint
+						ExtraData = queue.Actor.ActorID,
 
-					// Actor variant will always be small enough to safely pack in a CPos
-					ExtraLocation = topLeft,
+						// Actor variant will always be small enough to safely pack in a CPos
+						ExtraLocation = topLeft,
 
-					SuppressVisualFeedback = true
-				};
+						SuppressVisualFeedback = true
+					};
+				}
 			}
 		}
 

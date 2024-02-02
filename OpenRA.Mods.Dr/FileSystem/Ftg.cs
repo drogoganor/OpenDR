@@ -31,7 +31,7 @@ namespace OpenRA.Mods.Dr.FileSystem
 			public string Name { get; private set; }
 			public IEnumerable<string> Contents { get { return index.Keys; } }
 
-			readonly Dictionary<string, FtgEntry> index = new Dictionary<string, FtgEntry>();
+			readonly Dictionary<string, FtgEntry> index = new();
 			readonly Stream stream;
 
 			public FtgFile(Stream stream, string filename)
@@ -46,7 +46,7 @@ namespace OpenRA.Mods.Dr.FileSystem
 					var fileCount = BitConverter.ToInt32(stream.ReadBytes(4), 0);
 
 					stream.Seek(directoryOffset, SeekOrigin.Begin);
-					for (int i = 0; i < fileCount; i++)
+					for (var i = 0; i < fileCount; i++)
 					{
 						var entryFilename = stream.ReadASCII(28);
 						entryFilename = entryFilename.Replace("\0", string.Empty);
@@ -71,12 +71,11 @@ namespace OpenRA.Mods.Dr.FileSystem
 
 			public Stream GetStream(string filename)
 			{
-				FtgEntry entry;
-				if (!index.TryGetValue(filename, out entry))
+				if (!index.TryGetValue(filename, out var entry))
 					return null;
 
 				stream.Seek(entry.Offset, SeekOrigin.Begin);
-				var data = stream.ReadBytes((int)entry.Size);
+				var data = stream.ReadBytes(entry.Size);
 				return new MemoryStream(data);
 			}
 

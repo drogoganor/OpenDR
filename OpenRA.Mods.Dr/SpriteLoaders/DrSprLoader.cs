@@ -83,7 +83,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 				var pixindex = new Func<int, int, int>((x, y) =>
 				{
-					int vr = (y * sph.Szx) + x;
+					var vr = y * sph.Szx + x;
 					return vr;
 				});
 
@@ -102,7 +102,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 							{
 								for (i = 0; i < cnt; ++i, ++curr)
 								{
-									int newIndex = pixindex(currx + i, l);
+									var newIndex = pixindex(currx + i, l);
 									Data[newIndex] = tempData[curr];
 								}
 							}
@@ -110,7 +110,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 							{
 								for (i = 0; i < cnt; ++i)
 								{
-									int newIndex = pixindex(currx + i, l);
+									var newIndex = pixindex(currx + i, l);
 									Data[newIndex] = 47;
 								}
 							}
@@ -179,7 +179,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 			metadata = new TypeDictionary();
 			var frames = new List<DrSprFrame>();
-			for (int sect = 0; sect < header.Nsects; ++sect)
+			for (var sect = 0; sect < header.Nsects; ++sect)
 			{
 				s.Position = header.OffSections + 16 * sect;
 				var firstanim = s.ReadInt32();
@@ -223,24 +223,24 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					off_hotspots = header.OffBits;
 					for (h = 0; h < numhotspots; ++h)
 					{
-						int frameindex = 0;
-						for (int r = 0; r < header.Nrots; ++r)
+						var frameindex = 0;
+						for (var r = 0; r < header.Nrots; ++r)
 						{
-							for (int a = firstanim; a <= lastanim; ++a)
+							for (var a = firstanim; a <= lastanim; ++a)
 							{
-								int picindex = a * header.Nrots + r;
+								var picindex = a * header.Nrots + r;
 								var read_int = new Func<int, int>((off) =>
 								{
 									s.Position = off;
 									return s.ReadInt32();
 								});
 
-								int headersize = 32;
-								int picnr = read_int(headersize + picindex * 4);
-								int hotoff = read_int(header.OffPicoffs + 8 * picnr + 4);
+								var headersize = 32;
+								var picnr = read_int(headersize + picindex * 4);
+								var hotoff = read_int(header.OffPicoffs + 8 * picnr + 4);
 								s.Position = off_hotspots + 4 + 3 * (hotoff + h);
-								byte hx = s.ReadUInt8();
-								byte hy = s.ReadUInt8();
+								var hx = s.ReadUInt8();
+								var hy = s.ReadUInt8();
 
 								metadata.Add(new DrFrameMetadata()
 								{

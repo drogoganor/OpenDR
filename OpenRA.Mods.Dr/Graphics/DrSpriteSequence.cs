@@ -11,12 +11,14 @@
 
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Graphics;
+using Util = OpenRA.Mods.Common.Util;
 
 namespace OpenRA.Mods.Dr.Graphics
 {
 	public class DrSpriteSequenceLoader : DefaultSpriteSequenceLoader
 	{
-		public DrSpriteSequenceLoader(ModData modData) : base(modData) { }
+		public DrSpriteSequenceLoader(ModData modData)
+			: base(modData) { }
 
 		public override ISpriteSequence CreateSequence(ModData modData, string tileSet, SpriteCache cache, string image, string sequence,
 			MiniYaml data, MiniYaml defaults)
@@ -30,6 +32,11 @@ namespace OpenRA.Mods.Dr.Graphics
 		public DrSpriteSequence(ModData modData, string tileSet, SpriteCache cache, ISpriteSequenceLoader loader, string image, string sequence, MiniYaml data, MiniYaml defaults)
 			: base(cache, loader, image, sequence, data, defaults)
 		{
+		}
+
+		protected override int GetFacingFrameOffset(WAngle facing)
+		{
+			return Util.IndexFacing(facing, facings) % facings;
 		}
 	}
 }

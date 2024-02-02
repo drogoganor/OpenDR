@@ -8,7 +8,7 @@ Power.Constructing:
 		Queue: Building
 		Description: Provides power for other structures. Refines Taelon into credits.
 		BuildPaletteOrder: 20
-		BuildDuration: 30
+		#BuildDuration: 30
 	SelfConstructing:
 		Steps: 20
 		Becomes: Power
@@ -26,7 +26,7 @@ Power.Constructing:
 		Dimensions: 3,4
 		LocalCenterOffset: 0,0,0
 	Valued:
-		Cost: 2000
+		Cost: 300
 	Health:
 		HP: 1450
 	Armor:
@@ -51,11 +51,11 @@ WaterLaunchPad.Constructing:
 	RenderSprites:
 		Image: nclnc1l0
 	Buildable:
-		Queue: Building
-		BuildPaletteOrder: 10
 		Prerequisites: ~rig
+		Queue: Building
 		Description: Refines spring water into credits.
-		BuildDuration: 37
+		BuildPaletteOrder: 10
+		#BuildDuration: 37
 	SelfConstructing:
 		Steps: 20
 		Becomes: WaterLaunchPad
@@ -79,7 +79,7 @@ WaterLaunchPad.Constructing:
 			TopLeft: -2048, -1536
 			BottomRight: 2048, 1536
 	Valued:
-		Cost: 2500
+		Cost: 1400
 	CustomSellValue:
 		Value: 600
 	Health:
@@ -190,7 +190,7 @@ TrainingFacility.fguard.Constructing:
 		Name: Training Facility
 	Buildable:
 		Queue: Building
-		Prerequisites: ~rig.fguard, hq.fguard
+		Prerequisites: ~rig.fguard, hq.fguard, anypower
 	SelfConstructing:
 		Steps: 20
 		Becomes: TrainingFacility.fguard
@@ -220,7 +220,7 @@ TrainingFacility.cyborg.Constructing:
 		Name: Training Facility
 	Buildable:
 		Queue: Building
-		Prerequisites: ~rig.cyborg, hq.cyborg
+		Prerequisites: ~rig.cyborg, hq.cyborg, anypower
 	SelfConstructing:
 		Steps: 20
 		Becomes: TrainingFacility.cyborg
@@ -251,7 +251,7 @@ AssemblyPlant.human.Constructing:
 		Name: Assembly Plant
 	Buildable:
 		Queue: Building
-		Prerequisites: ~rig.human, hq.human
+		Prerequisites: ~rig.human, hq.human, anypower, barracks
 	SelfConstructing:
 		Steps: 20
 		Becomes: AssemblyPlant.human
@@ -274,7 +274,7 @@ AssemblyPlant.cyborg.Constructing:
 		Name: Assembly Plant
 	Buildable:
 		Queue: Building
-		Prerequisites: ~rig.cyborg, hq.cyborg
+		Prerequisites: ~rig.cyborg, hq.cyborg, anypower, barracks
 	SelfConstructing:
 		Steps: 20
 		Becomes: AssemblyPlant.cyborg
@@ -307,11 +307,11 @@ LaserTurret.Constructing:
 	Tooltip:
 		Name: Laser Turret
 	Buildable:
-		Prerequisites: ~rig.human
+		Prerequisites: ~rig.human, anypower, barracks
 		Queue: Building
 		Description: Laser Defense Turret
 		BuildPaletteOrder: 50
-		BuildDuration: 22
+		#BuildDuration: 22
 	SelfConstructing:
 		Steps: 20
 		Becomes: LaserTurret
@@ -332,11 +332,11 @@ PlasmaTurret.Constructing:
 	Tooltip:
 		Name: Plasma Turret
 	Buildable:
-		Prerequisites: ~rig.cyborg
+		Prerequisites: ~rig.cyborg, anypower, barracks
 		Queue: Building
 		Description: Plasma Defense Turret
 		BuildPaletteOrder: 50
-		BuildDuration: 22
+		#BuildDuration: 22
 	SelfConstructing:
 		Steps: 20
 		Becomes: PlasmaTurret
@@ -364,7 +364,7 @@ AntiAirTurret.human.Constructing:
 		Queue: Building
 		Description: Anti-Air Turret
 		BuildPaletteOrder: 50
-		BuildDuration: 30
+		#BuildDuration: 30
 	SelfConstructing:
 		Steps: 20
 		Becomes: AntiAirTurret.human
@@ -393,7 +393,7 @@ AntiAirTurret.cyborg.Constructing:
 		Queue: Building
 		Description: Anti-Air Turret
 		BuildPaletteOrder: 50
-		BuildDuration: 30
+		#BuildDuration: 30
 	SelfConstructing:
 		Steps: 20
 		Becomes: AntiAirTurret.cyborg
@@ -426,7 +426,7 @@ HeavyRailTurret.Constructing:
 		Queue: Building
 		Description: Heavy Rail Turret
 		BuildPaletteOrder: 50
-		BuildDuration: 51
+		#BuildDuration: 51
 	SelfConstructing:
 		Steps: 20
 		Becomes: HeavyRailTurret
@@ -461,7 +461,7 @@ NeutronAccelerator.Constructing:
 		Queue: Building
 		Description: Neutron Accelerator
 		BuildPaletteOrder: 50
-		BuildDuration: 51
+		#BuildDuration: 51
 	SelfConstructing:
 		Steps: 20
 		Becomes: NeutronAccelerator
@@ -500,7 +500,7 @@ CameraTower.Constructing:
 		Queue: Building
 		Description: Camera Tower
 		BuildPaletteOrder: 50
-		BuildDuration: 6
+		#BuildDuration: 6
 	SelfConstructing:
 		Steps: 20
 		Becomes: CameraTower
@@ -533,7 +533,7 @@ Hospital.human.Constructing:
 	Buildable:
 		Prerequisites: ~rig.human, hq.human, barracks
 		BuildPaletteOrder: 50
-		BuildDuration: 15
+		#BuildDuration: 15
 	SelfConstructing:
 		Steps: 20
 		Becomes: Hospital.human
@@ -576,7 +576,7 @@ Hospital.cyborg.Constructing:
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, barracks
 		BuildPaletteOrder: 50
-		BuildDuration: 15
+		#BuildDuration: 15
 	SelfConstructing:
 		Steps: 20
 		Becomes: Hospital.cyborg
@@ -612,7 +612,7 @@ Repair.human.Constructing:
 	Buildable:
 		Prerequisites: ~rig.human, hq.human, vehicles
 		BuildPaletteOrder: 50
-		BuildDuration: 24
+		#BuildDuration: 24
 	SelfConstructing:
 		Steps: 20
 		Becomes: Repair.human
@@ -662,7 +662,7 @@ Repair.cyborg.Constructing:
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, vehicles
 		BuildPaletteOrder: 50
-		BuildDuration: 24
+		#BuildDuration: 24
 	SelfConstructing:
 		Steps: 20
 		Becomes: Repair.cyborg
@@ -700,7 +700,7 @@ PhasingFacility.Constructing:
 	Buildable:
 		Prerequisites: ~rig.human, hq.human
 		BuildPaletteOrder: 50
-		BuildDuration: 36
+		#BuildDuration: 36
 	SelfConstructing:
 		Steps: 20
 		Becomes: PhasingFacility
@@ -741,7 +741,7 @@ RearmingDeck.human.Constructing:
 	Buildable:
 		Prerequisites: ~rig.human, hq.human, upgrade.hq2, vehicles, barracks
 		BuildPaletteOrder: 50
-		BuildDuration: 30
+		#BuildDuration: 30
 	SelfConstructing:
 		Steps: 20
 		Becomes: RearmingDeck.human
@@ -789,7 +789,7 @@ RearmingDeck.cyborg.Constructing:
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
 		BuildPaletteOrder: 50
-		BuildDuration: 30
+		#BuildDuration: 30
 	SelfConstructing:
 		Steps: 20
 		Becomes: RearmingDeck.cyborg
@@ -832,7 +832,7 @@ TemporalGate.Constructing:
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
 		BuildPaletteOrder: 50
-		BuildDuration: 54
+		#BuildDuration: 54
 	SelfConstructing:
 		Steps: 20
 		Becomes: TemporalGate
@@ -873,7 +873,7 @@ TemporalRiftCreator.Constructing:
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
 		BuildPaletteOrder: 60
-		BuildDuration: 240
+		#BuildDuration: 240
 	SelfConstructing:
 		Steps: 20
 		Becomes: TemporalRiftCreator

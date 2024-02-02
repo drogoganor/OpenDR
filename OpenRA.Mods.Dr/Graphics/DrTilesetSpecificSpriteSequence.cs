@@ -18,9 +18,7 @@ namespace OpenRA.Mods.Dr.Graphics
 	public class DrTilesetSpecificSpriteSequenceLoader : DrSpriteSequenceLoader
 	{
 		public DrTilesetSpecificSpriteSequenceLoader(ModData modData)
-			: base(modData)
-		{
-		}
+			: base(modData) { }
 
 		public override ISpriteSequence CreateSequence(ModData modData, string tileSet, SpriteCache cache, string image, string sequence,
 			MiniYaml data, MiniYaml defaults)
@@ -33,11 +31,6 @@ namespace OpenRA.Mods.Dr.Graphics
 	{
 		public DrTilesetSpecificSpriteSequence(ModData modData, string tileSet, SpriteCache cache, ISpriteSequenceLoader loader, string image, string sequence, MiniYaml data, MiniYaml defaults)
 			: base(modData, tileSet, cache, loader, image, sequence, data, defaults) { }
-
-		public override Sprite GetSprite(int frame, WAngle facing)
-		{
-			return base.GetSprite(frame, facing);
-		}
 
 		protected override IEnumerable<ReservationInfo> ParseFilenames(ModData modData, string tileset, int[] frames, MiniYaml data, MiniYaml defaults)
 		{

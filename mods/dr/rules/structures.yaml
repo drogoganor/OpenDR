@@ -691,7 +691,7 @@ Hospital.cyborg:
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, barracks
 		BuildPaletteOrder: 50
-		BuildDuration: 15
+		#BuildDuration: 15
 	ProvidesPrerequisite@hospital:
 		Prerequisite: hospital
 	RepairsUnits:
@@ -995,7 +995,7 @@ TemporalRiftCreator:
 	SupportPowerChargeBar:
 	DetonateWeaponPower@temporalrift:
 		#Cursor: ioncannon
-		Icon: bitrcmn0.shp
+		Icon: bitrcmn0.spr
 		ActivationSequence:
 		Name: Temporal Rift
 		Description: Opens a temporal rift at the target location.

@@ -26,7 +26,6 @@ namespace OpenRA.Mods.Dr.Terrain
 
 	public class DrTerrainLoader : ITerrainLoader
 	{
-		[System.Diagnostics.CodeAnalysis.SuppressMessage("Usage", "IDE0060:Remove unused parameter", Justification = "Load game API")]
 		public DrTerrainLoader(ModData modData) { }
 
 		public ITerrainInfo ParseTerrain(IReadOnlyFileSystem fileSystem, string path)
@@ -56,7 +55,7 @@ namespace OpenRA.Mods.Dr.Terrain
 
 		[FieldLoader.Ignore]
 		public readonly TerrainTypeInfo[] TerrainInfo;
-		readonly Dictionary<string, byte> terrainIndexByType = new Dictionary<string, byte>();
+		readonly Dictionary<string, byte> terrainIndexByType = new();
 		readonly byte defaultWalkableTerrainIndex;
 
 		public DrTerrain(IReadOnlyFileSystem fileSystem, string filepath)
@@ -146,7 +145,7 @@ namespace OpenRA.Mods.Dr.Terrain
 		IEnumerable<Color> ITerrainInfo.RestrictedPlayerColors { get { return TerrainInfo.Where(ti => ti.RestrictPlayerColor).Select(ti => ti.Color); } }
 		float ITerrainInfo.MinHeightColorBrightness => MinHeightColorBrightness;
 		float ITerrainInfo.MaxHeightColorBrightness => MaxHeightColorBrightness;
-		TerrainTile ITerrainInfo.DefaultTerrainTile => new TerrainTile(Templates.First().Key, 0);
+		TerrainTile ITerrainInfo.DefaultTerrainTile => new(Templates.First().Key, 0);
 
 		string[] ITemplatedTerrainInfo.EditorTemplateOrder => EditorTemplateOrder;
 		IReadOnlyDictionary<ushort, TerrainTemplateInfo> ITemplatedTerrainInfo.Templates => Templates;

@@ -20,8 +20,8 @@ notification-silos-needed = Silos needed.
 
 ## world.yaml
 options-starting-units =
-    .one-rig = One Rig
-    .three-rigs = Three Rigs
+    .hq-only = HQ Only
+    .two-rigs = HQ & 2 Rigs
 
 ## aircraft.yaml
 actor-badr-name = Badger

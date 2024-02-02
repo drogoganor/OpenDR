@@ -65,7 +65,7 @@
 	Inherits@3: ^SpriteActor
 	ActorPreviewPlaceBuildingPreview:
 	Buildable:
-		BuildDurationModifier: 2486 # DR build rate
+		#BuildDurationModifier: 2486 # DR build rate
 	Huntable:
 	UpdatesPlayerStatistics:
 	#FootprintPlaceBuildingPreview:
@@ -84,7 +84,10 @@
 		Dimensions: 1,1
 		Footprint: x
 		TerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
+		RequiresBaseProvider: True
 		BuildSounds: Building
+	RequiresBuildableArea:
+		AreaTypes: building
 	RevealsShroud:
 		Range: 3c0
 	WithSpriteBody:
@@ -124,6 +127,10 @@
 		RepairingNotification: Repairing
 	InstantlyRepairable:
 	CaptureManager:
+	GivesBuildableArea:
+		AreaTypes: building
+	RequiresBuildableArea:
+		AreaTypes: building
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	Capturable:
@@ -172,7 +179,8 @@
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 0
-		BuildDuration: 22
+		Prerequisites: anypower
+		#BuildDuration: 22
 		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
 	Building:
 		Footprint: _xx_ xxxx xxxx xxx_
@@ -193,11 +201,11 @@
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 0
-		BuildDuration: 22
+		#BuildDuration: 22
 		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
 	BaseBuilding:
 	Valued:
-		Cost: 750
+		Cost: 2000
 	Armor:
 		Type: BuildingArmour
 
@@ -247,7 +255,7 @@
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		BuildDurationModifier: 2486 # DR build rate
+		#BuildDurationModifier: 2486 # DR build rate
 		LowPowerModifier: 300
 	ParallelProductionQueue@Upgrade:
 		Type: Upgrade
@@ -255,7 +263,7 @@
 		QueuedAudio: Upgrading
 		ReadyAudio: ConstructionComplete
 		BlockedAudio: Upgrading
-		BuildDurationModifier: 2486 # DR build rate
+		#BuildDurationModifier: 2486 # DR build rate
 		LowPowerModifier: 300
 	ProductionBar@Economy:
 		ProductionType: Economy
@@ -263,11 +271,11 @@
 		ProductionType: Upgrade
 		Color: FEEC56
 	Valued:
-		Cost: 750
+		Cost: 2000
 	RevealsShroud:
 		Range: 8c0
 	Power:
-		Amount: -100
+		Amount: 0
 	ProvidesRadar:
 	GrantConditionOnPrerequisite@con1:
 		Prerequisites: upgrade.hq1
@@ -290,8 +298,8 @@
 	BaseBuilding:
 	BaseProvider:
 		Range: 18c0
-	GivesBuildableArea:
-		AreaTypes: building
+	#GivesBuildableArea:
+	#	AreaTypes: building
 	GrantConditionOnBotOwner:
 		Condition: enable-ai-cash
 		Bots: normal
@@ -313,11 +321,11 @@
 	Buildable:
 		Queue: Building
 		Description: Trains infantry.
-		Prerequisites: hq
+		Prerequisites: ~anypower, hq
 		BuildPaletteOrder: 30
-		BuildDuration: 45
+		#BuildDuration: 45
 	Valued:
-		Cost: 1500
+		Cost: 500
 	Armor:
 		Type: Building
 	Building:
@@ -335,7 +343,7 @@
 	Tooltip:
 		Name: Training Facility
 	Valued:
-		Cost: 1500
+		Cost: 500
 	RevealsShroud:
 		Range: 8c0
 	Power:
@@ -357,7 +365,7 @@
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		BuildDurationModifier: 2486 # DR build rate
+		#BuildDurationModifier: 2486 # DR build rate
 		LowPowerModifier: 300
 	ProductionBar:
 		ProductionType: Infantry
@@ -409,8 +417,9 @@
 		Path: 0,5
 	Buildable:
 		Queue: Building
+		Prerequisites: ~anypower, barracks, hq
 		BuildPaletteOrder: 40
-		BuildDuration: 66
+		#BuildDuration: 66
 		Description: Produces vehicles.
 	Building:
 		Footprint: ===__ =xx== xxxxx ==xxx ==xx=
@@ -420,7 +429,7 @@
 		Bounds: 5120, 5120, 0, 0
 		DecorationBounds: 5120, 5120, 0, 0
 	Valued:
-		Cost: 2200
+		Cost: 2000
 	Armor:
 		Type: BuildingArmour
 	Targetable:
@@ -439,7 +448,7 @@
 	Tooltip:
 		Name: Assembly Plant
 	Valued:
-		Cost: 2200
+		Cost: 2000
 	RevealsShroud:
 		Range: 8c0
 	Power:
@@ -461,7 +470,7 @@
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		BuildDurationModifier: 2486 # DR build rate
+		#BuildDurationModifier: 2486 # DR build rate
 		LowPowerModifier: 300
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@vehicles:
@@ -508,6 +517,7 @@
 		RequiredForShortGame: false
 	Inherits@shape: ^2x2Shape
 	Building:
+		Prerequisites: ~anypower, barracks
 		Footprint: xx xx
 		Dimensions: 2,2
 	Selectable:
@@ -555,9 +565,9 @@
 	Buildable:
 		Queue: Building
 		Description: Generic
-		Prerequisites: hq
+		Prerequisites: ~anypower
 		BuildPaletteOrder: 30
-		BuildDuration: 45
+		#BuildDuration: 45
 	Valued:
 		Cost: 1500
 	RevealsShroud:

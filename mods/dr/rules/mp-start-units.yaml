@@ -2,51 +2,48 @@
 	SpawnStartingUnits:
 		StartingUnitsClass: light
 		DropdownDisplayOrder: 0
-	StartingUnits@mcvonly:
+	StartingUnits@hq-only:
 		Class: none
-		ClassName: options-starting-units.one-rig
+		ClassName: options-starting-units.hq-only
 		Factions: fguard, xenite, terrorist
 		BaseActor: HQ.human
-		SupportActors: ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
-	StartingUnits@mcvonlyimp:
+	StartingUnits@hq-only-imp:
 		Class: none
-		ClassName: options-starting-units.one-rig
+		ClassName: options-starting-units.hq-only
 		Factions: imperium, shadowhand
 		BaseActor: HQ.cyborg
-		SupportActors: ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
-	StartingUnits@mcvonlytogran:
+	StartingUnits@hq-only-tog:
 		Class: none
-		ClassName: options-starting-units.one-rig
+		ClassName: options-starting-units.hq-only
 		Factions: togran
 		BaseActor: HQ.togran
-		SupportActors: ConstructionRig
 		InnerSupportRadius: 2
 		OuterSupportRadius: 4
-	StartingUnits@threerigs:
+	StartingUnits@two-rigs:
 		Class: light
-		ClassName: options-starting-units.three-rigs
+		ClassName: options-starting-units.two-rigs
 		Factions: fguard, xenite, terrorist
-		BaseActor: ConstructionRig
+		BaseActor: HQ.human
 		SupportActors: ConstructionRig,ConstructionRig
-		InnerSupportRadius: 2
-		OuterSupportRadius: 4
-	StartingUnits@threerigsimp:
+		InnerSupportRadius: 4
+		OuterSupportRadius: 6
+	StartingUnits@two-rigs-imp:
 		Class: light
-		ClassName: options-starting-units.three-rigs
+		ClassName: options-starting-units.two-rigs
 		Factions: imperium, shadowhand
-		BaseActor: ConstructionRig
+		BaseActor: HQ.cyborg
 		SupportActors: ConstructionRig,ConstructionRig
-		InnerSupportRadius: 2
-		OuterSupportRadius: 4
-	StartingUnits@threerigstogran:
+		InnerSupportRadius: 4
+		OuterSupportRadius: 6
+	StartingUnits@two-rigs-tog:
 		Class: light
-		ClassName: options-starting-units.three-rigs
+		ClassName: options-starting-units.two-rigs
 		Factions: togran
-		BaseActor: ConstructionRig
+		BaseActor: HQ.togran
 		SupportActors: ConstructionRig,ConstructionRig
-		InnerSupportRadius: 2
-		OuterSupportRadius: 4
+		InnerSupportRadius: 4
+		OuterSupportRadius: 6

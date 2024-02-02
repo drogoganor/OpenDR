@@ -141,10 +141,10 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			{
 				if (maskType % 4 == 0)
 				{
-					var something1 = s.ReadUInt8(); // ???
-					var something2 = s.ReadUInt8(); // ???
-					var something3 = s.ReadUInt8(); // ???
-					var something4 = s.ReadUInt8(); // ???
+					s.ReadUInt8(); // ???
+					s.ReadUInt8(); // ???
+					s.ReadUInt8(); // ???
+					s.ReadUInt8(); // ???
 				}
 
 				var frame = new DrTilFrame(s, isMask: true);
@@ -154,22 +154,22 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			// Editor mask select tiles (discard)
 			for (var maskTemplateType = 0; maskTemplateType < 4; maskTemplateType++)
 			{
-				var frame = new DrTilFrame(s, isMask: true);
+				new DrTilFrame(s, isMask: true);
 			}
 
 			var cornerIndices = new List<List<int>>
 			{
 				// Rough
-				new List<int> { 0, 1, 2, 3 },
+				new() { 0, 1, 2, 3 },
 
 				// Crumbled
-				new List<int> { 64, 65, 66, 67 },
+				new() { 64, 65, 66, 67 },
 
 				// Square
-				new List<int> { 128, 129, 130, 131 },
+				new() { 128, 129, 130, 131 },
 
 				// Blob
-				new List<int> { 192, 193, 194, 195 },
+				new() { 192, 193, 194, 195 },
 			};
 
 			foreach (var cornerSet in cornerIndices)
@@ -225,20 +225,20 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			var seaTiles = new List<int> { 4, 9, 18, 35, 12, 25, 50, 36, 44, 28, 57, 52, 20, 41 };
 			var seaTileMasks = new List<List<int>>
 			{
-				new List<int> { 192, 206, 220, 234 }, // 4
-				new List<int> { 193, 207, 221, 235 }, // 9
-				new List<int> { 195, 209, 223, 237 }, // 18
-				new List<int> { 199, 213, 227, 241 }, // 35
-				new List<int> { 194, 208, 222, 236 }, // 12
-				new List<int> { 197, 211, 225, 239 }, // 25
-				new List<int> { 203, 217, 231, 245 }, // 50
-				new List<int> { 200, 214, 228, 242 }, // 36
-				new List<int> { 202, 216, 230, 244 }, // 44
-				new List<int> { 198, 212, 226, 240 }, // 28
-				new List<int> { 205, 219, 233, 247 }, // 57
-				new List<int> { 204, 218, 232, 246 }, // 52
-				new List<int> { 196, 210, 224, 238 }, // 20
-				new List<int> { 201, 215, 229, 243 }, // 41
+				new() { 192, 206, 220, 234 }, // 4
+				new() { 193, 207, 221, 235 }, // 9
+				new() { 195, 209, 223, 237 }, // 18
+				new() { 199, 213, 227, 241 }, // 35
+				new() { 194, 208, 222, 236 }, // 12
+				new() { 197, 211, 225, 239 }, // 25
+				new() { 203, 217, 231, 245 }, // 50
+				new() { 200, 214, 228, 242 }, // 36
+				new() { 202, 216, 230, 244 }, // 44
+				new() { 198, 212, 226, 240 }, // 28
+				new() { 205, 219, 233, 247 }, // 57
+				new() { 204, 218, 232, 246 }, // 52
+				new() { 196, 210, 224, 238 }, // 20
+				new() { 201, 215, 229, 243 }, // 41
 			};
 
 			for (var maskIndex = 0; maskIndex < seaTiles.Count; maskIndex++)
@@ -317,7 +317,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					newFrame.Data[newIndex] = color;
 					newFrame.Data[newIndex + 1] = color;
 					newFrame.Data[newIndex + 2] = color;
-					newFrame.Data[newIndex + 3] = (byte)Math.Min(alpha, mask.Data[i]);
+					newFrame.Data[newIndex + 3] = Math.Min(alpha, mask.Data[i]);
 				}
 
 				return newFrame;
@@ -332,7 +332,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 					newFrame.Data[newIndex] = color;
 					newFrame.Data[newIndex + 1] = color;
 					newFrame.Data[newIndex + 2] = color;
-					newFrame.Data[newIndex + 3] = (byte)Math.Min(alpha, (byte)255);
+					newFrame.Data[newIndex + 3] = Math.Min(alpha, (byte)255);
 				}
 
 				return newFrame;
