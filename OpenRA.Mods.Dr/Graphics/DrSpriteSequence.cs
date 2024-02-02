@@ -9,7 +9,6 @@
  */
 #endregion
 
-using System.Collections.Generic;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Graphics;
 
@@ -29,38 +28,39 @@ namespace OpenRA.Mods.Dr.Graphics
 			}
 		}
 
-		public override ISpriteSequence CreateSequence(ModData modData, string tileSet, SpriteCache cache, string sequence, string animation,
-			MiniYaml info)
+		public override ISpriteSequence CreateSequence(ModData modData, string tileSet, SpriteCache cache, string image, string sequence,
+			MiniYaml data, MiniYaml defaults)
 		{
-			return new DrSpriteSequence(modData, tileSet, cache, this, sequence, animation, info);
+			return new DrSpriteSequence(modData, tileSet, cache, this, image, sequence, data, defaults);
 		}
 	}
 
 	public class DrSpriteSequence : DefaultSpriteSequence
 	{
-		protected override string GetSpriteSrc(ModData modData, string tileSet, string sequence, string animation, string sprite, Dictionary<string, MiniYaml> d)
+		// TODO: Fix
+		//protected override string GetSpriteSrc(ModData modData, string tileSet, string image, string sequence, string sprite, Dictionary<string, MiniYaml> d)
+		//{
+		//	var loader = (DrSpriteSequenceLoader)Loader;
+
+		//	if (LoadField(d, "AddExtension", true))
+		//	{
+		//		return (sprite ?? image) + loader.DefaultSpriteExtension;
+		//	}
+
+		//	return sprite ?? image;
+		//}
+
+		public DrSpriteSequence(ModData modData, string tileSet, SpriteCache cache, ISpriteSequenceLoader loader, string image, string sequence, MiniYaml data, MiniYaml defaults)
+			: base(cache, loader, image, sequence, data, defaults)
 		{
-			var loader = (DrSpriteSequenceLoader)Loader;
-
-			if (LoadField(d, "AddExtension", true))
-			{
-				return (sprite ?? sequence) + loader.DefaultSpriteExtension;
-			}
-
-			return sprite ?? sequence;
 		}
 
-		public DrSpriteSequence(ModData modData, string tileSet, SpriteCache cache, ISpriteSequenceLoader loader, string sequence, string animation, MiniYaml info)
-			: base(modData, tileSet, cache, loader, sequence, animation, info)
-		{
-		}
-
-		protected override Sprite GetSprite(int start, int frame, WAngle facing)
+		public override Sprite GetSprite(int frame, WAngle facing)
 		{
 			if (facing.Facing >= 245 && facing.Facing <= 250) // receiving a facing of 320 when unloading an APC
 				facing = WAngle.Zero;
 
-			return base.GetSprite(start, frame, facing);
+			return base.GetSprite(frame, facing);
 		}
 	}
 }

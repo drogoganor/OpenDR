@@ -82,14 +82,17 @@ namespace OpenRA.Mods.Dr.Traits.Render
 		void IWorldLoaded.WorldLoaded(World w, WorldRenderer wr)
 		{
 			var splashImageName = $"{info.SequencePrefix}-{self.World.Map.Tileset.ToLowerInvariant()}";
-			var sequences = w.Map.Rules.Sequences;
+			//var sequences = w.Map.Rules.Sequences;
 			palette = wr.Palette("terrain");
+
+			// TODO: Fix
+			return;
 
 			if (spriteLayer == null)
 			{
-				var first = sequences.GetSequence(splashImageName, $"{info.SequencePrefix}1").GetSprite(0);
-				var emptySprite = new Sprite(first.Sheet, Rectangle.Empty, TextureChannel.Alpha);
-				spriteLayer = new TerrainSpriteLayer(w, wr, emptySprite, first.BlendMode, wr.World.Type != WorldType.Editor);
+				//var first = sequences.GetSequence(splashImageName, $"{info.SequencePrefix}1").GetSprite(0);
+				//var emptySprite = new Sprite(first.Sheet, Rectangle.Empty, TextureChannel.Alpha);
+				//spriteLayer = new TerrainSpriteLayer(w, wr, emptySprite, BlendMode.None, wr.World.Type != WorldType.Editor);
 			}
 
 			// Get all sea tiles
@@ -123,15 +126,15 @@ namespace OpenRA.Mods.Dr.Traits.Render
 				var animation = new Animation(self.World, splashImageName);
 				animation.Play(splashSequenceName);
 
-				var sequence = sequences.GetSequence(splashImageName, splashSequenceName);
-				splashes.Add(new SeaTileSplash
-				{
-					Animation = animation,
-					Cell = selectedSeaTile.Cell,
-					SequenceName = splashSequenceName,
-					Sequence = sequence,
-					Delay = self.World.LocalRandom.Next(info.RandomMax)
-				});
+				//var sequence = sequences.GetSequence(splashImageName, splashSequenceName);
+				//splashes.Add(new SeaTileSplash
+				//{
+				//	Animation = animation,
+				//	Cell = selectedSeaTile.Cell,
+				//	SequenceName = splashSequenceName,
+				//	Sequence = sequence,
+				//	Delay = self.World.LocalRandom.Next(info.RandomMax)
+				//});
 			}
 		}
 

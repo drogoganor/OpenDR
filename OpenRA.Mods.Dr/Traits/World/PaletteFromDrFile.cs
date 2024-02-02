@@ -103,7 +103,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 			if (headerVersion != 0x0102)
 			{
-				throw new InvalidDataException("Palette version `{0}` was incorrect (expected `0x0102`)".F(headerVersion));
+				throw new InvalidDataException($"Palette version `{headerVersion}` was incorrect (expected `0x0102`)");
 			}
 
 			// Data is made up of 3x256 bytes, each ranging 0-63. Data is grouped by channel.

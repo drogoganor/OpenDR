@@ -98,7 +98,7 @@ namespace OpenRA.Mods.Dr.Traits.Production
 			Player owner = self.Owner;
 			ActorInfo ai;
 			if (!owner.World.Map.Rules.Actors.TryGetValue(actorType, out ai))
-				throw new LuaException("Unknown actor type '{0}'".F(actorType));
+				throw new LuaException($"Unknown actor type '{actorType}'");
 
 			var actor = self.World.CreateActor(addToWorld, actorType, new TypeDictionary
 			{

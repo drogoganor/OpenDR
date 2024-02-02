@@ -22,55 +22,56 @@ namespace OpenRA.Mods.Dr.Graphics
 		{
 		}
 
-		public override ISpriteSequence CreateSequence(ModData modData, string tileSet, SpriteCache cache, string sequence, string animation,
-			MiniYaml info)
+		public override ISpriteSequence CreateSequence(ModData modData, string tileSet, SpriteCache cache, string image, string sequence,
+			MiniYaml data, MiniYaml defaults)
 		{
-			return new DrTilesetSpecificSpriteSequence(modData, tileSet, cache, this, sequence, animation, info);
+			return new DrTilesetSpecificSpriteSequence(modData, tileSet, cache, this, image, sequence, data, defaults);
 		}
 	}
 
 	public class DrTilesetSpecificSpriteSequence : DrSpriteSequence
 	{
-		public DrTilesetSpecificSpriteSequence(ModData modData, string tileSet, SpriteCache cache, ISpriteSequenceLoader loader, string sequence, string animation, MiniYaml info)
-			: base(modData, tileSet, cache, loader, sequence, animation, info) { }
+		public DrTilesetSpecificSpriteSequence(ModData modData, string tileSet, SpriteCache cache, ISpriteSequenceLoader loader, string image, string sequence, MiniYaml data, MiniYaml defaults)
+			: base(modData, tileSet, cache, loader, image, sequence, data, defaults) { }
 
-		protected override Sprite GetSprite(int start, int frame, WAngle facing)
+		public override Sprite GetSprite(int frame, WAngle facing)
 		{
-			return base.GetSprite(start, frame, facing);
+			return base.GetSprite(frame, facing);
 		}
 
-		protected override string GetSpriteSrc(ModData modData, string tileSet, string sequence, string animation, string sprite, Dictionary<string, MiniYaml> d)
-		{
-			var loader = (DrTilesetSpecificSpriteSequenceLoader)Loader;
+		// TODO: Fix
+		//protected override string GetSpriteSrc(ModData modData, string tileSet, string image, string sequence, string sprite, Dictionary<string, MiniYaml> d)
+		//{
+		//	var loader = (DrTilesetSpecificSpriteSequenceLoader)Loader;
 
-			var spriteName = sprite ?? sequence;
+		//	var spriteName = sprite ?? image;
 
-			var validTilesetIds = new string[] { "BARREN", "JUNGLE", "SNOW" }; // Alien?
+		//	var validTilesetIds = new string[] { "BARREN", "JUNGLE", "SNOW" };
 
-			if (!spriteName.EndsWith(".shp"))
-			{
-				if (spriteName.StartsWith("tileset|"))
-				{
-					if (validTilesetIds.Contains(tileSet))
-						spriteName = spriteName.Replace("tileset", tileSet.ToLower());
-					else
-						spriteName = spriteName.Replace("tileset", "barren");
-				}
-				else if (spriteName.StartsWith("tilesetEx|"))
-				{
-					if (validTilesetIds.Contains(tileSet))
-						spriteName = spriteName.Replace("tilesetEx", tileSet.ToLower() + "Ex");
-					else
-						spriteName = spriteName.Replace("tilesetEx", "barrenEx");
-				}
-			}
+		//	if (!spriteName.EndsWith(".shp"))
+		//	{
+		//		if (spriteName.StartsWith("tileset|"))
+		//		{
+		//			if (validTilesetIds.Contains(tileSet))
+		//				spriteName = spriteName.Replace("tileset", tileSet.ToLower());
+		//			else
+		//				spriteName = spriteName.Replace("tileset", "barren");
+		//		}
+		//		else if (spriteName.StartsWith("tilesetEx|"))
+		//		{
+		//			if (validTilesetIds.Contains(tileSet))
+		//				spriteName = spriteName.Replace("tilesetEx", tileSet.ToLower() + "Ex");
+		//			else
+		//				spriteName = spriteName.Replace("tilesetEx", "barrenEx");
+		//		}
+		//	}
 
-			if (LoadField(d, "AddExtension", true))
-			{
-				return spriteName + loader.DefaultSpriteExtension;
-			}
+		//	if (LoadField(d, "AddExtension", true))
+		//	{
+		//		return spriteName + loader.DefaultSpriteExtension;
+		//	}
 
-			return spriteName;
-		}
+		//	return spriteName;
+		//}
 	}
 }

@@ -30,7 +30,7 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 			MiniYaml yaml;
 			if (logicArgs.TryGetValue("ProductionParent", out yaml))
 				if (string.IsNullOrWhiteSpace(yaml.Value))
-					throw new YamlException("Invalid value for ProductionParent: {0}".F(yaml.Value));
+					throw new YamlException($"Invalid value for ProductionParent: {yaml.Value}");
 
 			productionParentName = yaml.Value;
 
