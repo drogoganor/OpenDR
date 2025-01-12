@@ -46,14 +46,14 @@ namespace OpenRA.Mods.Dr.Traits
 		void INotifyOwnerChanged.OnOwnerChanged(Actor self, Player oldOwner, Player newOwner)
 		{
 			// Unlink any harvesters
-			foreach (var harv in GetLinkedHarvesters())
-				harv.Trait.UnlinkProc(harv.Actor, self);
+			//foreach (var harv in GetLinkedHarvesters())
+			//	harv.Trait.UnlinkProc(harv.Actor, self);
 
 			drPlayerResources = newOwner.PlayerActor.Trait<DrPlayerResources>();
 			playerResources = newOwner.PlayerActor.Trait<PlayerResources>();
 		}
 
-		int IAcceptResources.AcceptResources(string resourceType, int count)
+		int IAcceptResources.AcceptResources(Actor self, string resourceType, int count)
 		{
 			if (!playerResources.Info.ResourceValues.TryGetValue(resourceType, out var resourceValue))
 				return 0;

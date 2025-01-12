@@ -67,11 +67,11 @@
 			Water:
 				Sequences: water1
 				Palette: terrain
-				Name: Water
+				Name: resource-water
 			Taelon:
 				Sequences: taelon1
 				Palette: terrain
-				Name: Taelon
+				Name: resource-taelon
 
 World:
 	Inherits: ^BaseWorld
@@ -147,7 +147,7 @@ World:
 		PanelName: SKIRMISH_STATS
 	RadarPings:
 	LoadWidgetAtGameStart:
-		ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
+	#	ShellmapRoot: MAINMENU_PRERELEASE_NOTIFICATION
 	DrResourceLayer:
 		ResourceValueMultiplier: 1000
 		ResourceTypes:
@@ -190,7 +190,6 @@ EditorWorld:
 				TerrainType: Clear
 				AllowedTerrainTypes: Clear, Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase
 				MaxDensity: 9000000
-	EditorSelectionLayer:
 	LoadWidgetAtGameStart:
 	EditorActionManager:
 	BuildableTerrainOverlay:

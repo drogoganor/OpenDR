@@ -115,7 +115,7 @@ namespace OpenRA.Mods.Dr.Traits
 		void PlayNotification(Actor self)
 		{
 			Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", info.NewOptionsNotification, self.Owner.Faction.InternalName);
-			TextNotificationsManager.AddTransientLine(info.NewOptionsTextNotification, self.Owner);
+			TextNotificationsManager.AddTransientLine(self.Owner, info.NewOptionsTextNotification);
 
 			triggerNotification = false;
 			tick = 0;

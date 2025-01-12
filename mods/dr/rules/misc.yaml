@@ -32,6 +32,8 @@ freighter.colorpicker:
 	-Buildable:
 	-MapEditorData:
 	-Repairable:
+	-FireProjectilesOnDeath:
+	-Harvester:
 	RenderSprites:
 		Image: ucfrgst0
 		Palette: colorpicker

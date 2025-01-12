@@ -436,12 +436,14 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 			foreach (var a in actorDefs)
 			{
-				Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + ++actorIndex, a.Save()));
+				// TODO: Broken in playtest-20241116
+				//Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + ++actorIndex, a.Save()));
 			}
 
 			foreach (var a in removeActors)
 			{
-				Map.ActorDefinitions.Remove(a);
+				// TODO: Broken in playtest-20241116
+				//Map.ActorDefinitions.Remove(a);
 			}
 
 			if (multiCount > 0)

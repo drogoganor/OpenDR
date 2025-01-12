@@ -76,7 +76,7 @@ namespace OpenRA.Mods.Dr.Traits
 				Water = 0;
 				resources.GiveCash(total);
 				Game.Sound.PlayNotification(owner.World.Map.Rules, owner, "Sounds", "CreditsReceived", null);
-				TextNotificationsManager.AddTransientLine($"Sold credits: ${total.ToString()}", owner);
+				TextNotificationsManager.AddTransientLine(owner, $"Sold credits: ${total.ToString()}");
 			}
 
 			return amount;

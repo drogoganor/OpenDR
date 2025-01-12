@@ -1,75 +1,85 @@
 EditorUndo: Z Ctrl
-	Description: Undo
+	Description: hotkey-description-editorundo
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
 	Platform:
 		OSX: Z Meta
 
 EditorRedo: Y Ctrl
-	Description: Redo
+	Description: hotkey-description-editorredo
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
 	Platform:
 		OSX: Z Meta, Shift
 		Linux: Z Ctrl, Shift
 
 EditorCopy: C Ctrl
-	Description: Copy
+	Description: hotkey-description-editorcopy
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
 	Platform:
 		OSX: C Meta
 
 EditorQuickSave: S Ctrl
-	Description: Save Map
+	Description: hotkey-description-editorquicksave
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
 	Platform:
 		OSX: S Meta
 
 EditorPaste: V Ctrl
-	Description: Paste
+	Description: hotkey-description-editorpaste
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
 	Platform:
 		OSX: V Meta
 
-EditorTilesTab: E
-	Description: Tiles Tab
+EditorSelectTab: E
+	Description: hotkey-description-editorselecttab
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
 
-EditorOverlaysTab: R
-	Description: Overlays Tab
+EditorTilesTab: R
+	Description: hotkey-description-editortilestab
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
 
-EditorActorsTab: T
-	Description: Actors Tab
+EditorOverlaysTab: T
+	Description: hotkey-description-editoroverlaystab
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
 
-EditorToolsTab: Y
-	Description: Tools Tab
+EditorActorsTab: Y
+	Description: hotkey-description-editoractorstab
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
 
-EditorHistoryTab: U
-	Description: History Tab
+EditorToolsTab: U
+	Description: hotkey-description-editortoolstab
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
 
-EditorSettingsTab: I
-	Description: Settings Tab
+EditorHistoryTab: I
+	Description: hotkey-description-editorhistorytab
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
+
+EditorSettingsTab: O
+	Description: hotkey-description-editorsettingstab
+	Types: Editor
+	Contexts: editor
 
 EditorToggleGridOverlay: F1
-	Description: Grid Overlay
+	Description: hotkey-description-editortogglegridoverlay
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
 
 EditorToggleBuildableOverlay: F2
-	Description: Buildable Terrain Overlay
+	Description: hotkey-description-editortogglebuildableoverlay
 	Types: Editor
-	Contexts: Editor
+	Contexts: editor
+
+EditorToggleMarkerOverlay: F3
+	Description: hotkey-description-editortogglemarkeroverlay
+	Types: Editor
+	Contexts: editor

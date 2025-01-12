@@ -160,7 +160,7 @@ namespace OpenRA.Mods.Dr.Orders
 					|| !bi.IsCloseEnoughToBase(world, owner, ai, topLeft))
 				{
 					Game.Sound.PlayNotification(world.Map.Rules, owner, "Speech", notification, owner.Faction.InternalName);
-					TextNotificationsManager.AddTransientLine(placeBuildingInfo.CannotPlaceTextNotification, owner);
+					TextNotificationsManager.AddTransientLine(owner, placeBuildingInfo.CannotPlaceTextNotification);
 
 					yield break;
 				}

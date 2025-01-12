@@ -74,7 +74,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 				for (int i = 0; i < resourceActors.Length; i++)
 				{
-					Map.ActorDefinitions.Remove(resourceActors[i]);
+					// TODO: Broken in playtest-20241116
+					//Map.ActorDefinitions.Remove(resourceActors[i]);
 				}
 
 				Map.Save(new Folder(packedMapFile));

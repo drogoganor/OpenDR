@@ -314,8 +314,8 @@ Martyr:
 		Condition: triggered
 	KillsSelf:
 		RequiresCondition: triggered
-	Explodes:
-		Weapon: SuicideNuke
+	FireProjectilesOnDeath:
+		Weapons: SuicideNuke
 		EmptyWeapon: SuicideNuke
 		DamageSource: Killer
 	WithIdleOverlay@SHADOW: # No animated shadow

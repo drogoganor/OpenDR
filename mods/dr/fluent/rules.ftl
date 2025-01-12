@@ -18,6 +18,9 @@ notification-base-under-attack = Base under attack.
 notification-ally-under-attack = Our ally is under attack.
 notification-silos-needed = Silos needed.
 
+resource-water = Water Spring
+resource-taelon = Taelon
+
 ## world.yaml
 options-starting-units =
     .hq-only = HQ Only

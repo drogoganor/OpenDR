@@ -1,4 +1,5 @@
 drdemo: DR Demo
+	Type: ZipFile
 	MirrorList: http://drogoganor.net/dr/dr-demo-mirrors.txt
 	Extract:
 		^SupportDir|Content/dr/SPRITES.FTG: Dark Reign/DATA/DARK/GRAPHICS/SPRITES.FTG
@@ -12,6 +13,7 @@ drdemo: DR Demo
 		^SupportDir|Content/dr/shell/SOUNDS.FTG: Dark Reign/DATA/DARK/SHELL/SOUNDS.FTG
 		^SupportDir|Content/dr/mouse.crs: Dark Reign/DATA/DARK/GRAPHICS/INTFACE/MOUSE.CRS
 drauranext: Auran Extra Content
+	Type: ZipFile
 	MirrorList: http://drogoganor.net/dr/dr-auranext-mirrors.txt
 	Extract:
 		^SupportDir|Content/dr/aust/AUST.FTG: aust/AUST.FTG

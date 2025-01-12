@@ -9,18 +9,18 @@ button-quit = Quit
 notification-custom-rules = This map contains custom rules. Game experience may change.
 notification-map-bots-disabled = Bots have been disabled on this map.
 notification-two-humans-required = This server requires at least two human players to start a match.
-notification-unknown-server-command = Unknown server command: { $command }
+notification-unknown-server-command = Unknown server command: { $command }.
 notification-admin-start-game = Only the host can start the game.
 notification-no-start-until-required-slots-full = Unable to start the game until required slots are full.
-notification-no-start-without-players = Unable to start the game with no players.
+notification-no-start-without-players = Game cannot start without players.
 notification-insufficient-enabled-spawn-points = Unable to start the game until more spawn points are enabled.
-notification-malformed-command = Malformed { $command } command
+notification-malformed-command = Malformed { $command } command.
 notification-state-unchanged-ready = Cannot change state when marked as ready.
-notification-invalid-faction-selected = Invalid faction selected: { $faction }
-notification-supported-factions = Supported values: { $factions }
-notification-state-unchanged-game-started = Cannot change state when game started. ({ $command })
+notification-invalid-faction-selected = Invalid faction selected: { $faction }.
+notification-supported-factions = Supported values: { $factions }.
+notification-state-unchanged-game-started = State cannot be changed once the game has started ({ $command }).
 notification-requires-host = Only the host can do that.
-notification-invalid-bot-slot = Can't add bots to a slot with another client.
+notification-invalid-bot-slot = Cannot add bots to a slot with another client.
 notification-invalid-bot-type = Invalid bot type.
 notification-admin-change-map = Only the host can change the map.
 notification-player-disconnected = { $player } has disconnected.
@@ -29,7 +29,7 @@ notification-observer-disconnected = { $player } (Spectator) has disconnected.
 notification-unknown-map = Map was not found on server.
 notification-searching-map = Searching for map on the Resource Center...
 notification-admin-change-configuration = Only the host can change the configuration.
-notification-changed-map = { $player } changed the map to { $map }
+notification-changed-map = { $player } changed the map to { $map }.
 notification-option-changed = { $player } changed { $name } to { $value }.
 notification-you-were-kicked = You have been kicked from the server.
 notification-admin-kicked = { $admin } kicked { $player } from the server.
@@ -37,7 +37,7 @@ notification-kicked = { $player } was kicked from the server.
 notification-temp-ban = { $admin } temporarily banned { $player } from the server.
 notification-admin-transfer-admin = Only admins can transfer admin to another player.
 notification-admin-move-spectators = Only the host can move players to spectators.
-notification-empty-slot = No-one in that slot.
+notification-empty-slot = No one in that slot.
 notification-move-spectators = { $admin } moved { $player } to spectators.
 notification-nick-changed = { $player } is now known as { $name }.
 notification-player-dropped = A player has been dropped after timing out.
@@ -61,10 +61,10 @@ notification-new-admin = { $player } is now the admin.
 notification-option-locked = { $option } cannot be changed.
 notification-invalid-configuration-command = Invalid configuration command.
 notification-admin-option = Only the host can set that option.
-notification-error-number-teams = Number of teams could not be parsed: { $raw }
+notification-error-number-teams = Could not parse the number of teams: { $raw }.
 notification-admin-kick = Only the host can kick players.
-notification-kick-self = The host is not allowed to kick themselves.
-notification-kick-none = No-one in that slot.
+notification-kick-self = The host cannot kick themselves.
+notification-kick-none = No one in that slot.
 notification-no-kick-game-started = Only spectators and defeated players can be kicked after the game has started.
 notification-admin-clear-spawn = Only admins can clear spawn points.
 notification-spawn-occupied = You cannot occupy the same spawn point as another player.
@@ -76,13 +76,16 @@ notification-player-color-player = Color was adjusted to be less similar to anot
 notification-invalid-player-color = Unable to determine a valid player color. A random color has been selected.
 notification-invalid-error-code = Failed to parse error message.
 notification-master-server-connected = Master server communication established.
-notification-master-server-error = "Master server communication failed."
+notification-master-server-error = Master server communication failed.
 notification-game-offline = Game has not been advertised online.
 notification-no-port-forward = Server port is not accessible from the internet.
 notification-blacklisted-server-name = Server name contains a blacklisted word.
 notification-requires-authentication = Server requires players to have an OpenRA forum account.
 notification-no-permission-to-join = You do not have permission to join this server.
 notification-slot-closed = Your slot was closed by the host.
+
+## LobbySettingsNotification
+notification-lobby-option = { $name }: { $value }.
 
 ## ServerOrders, UnitOrders
 notification-joined = { $player } has joined the game.
@@ -91,11 +94,11 @@ notification-lobby-disconnected = { $player } has left.
 ## UnitOrders
 notification-game-has-started = The game has started.
 notification-game-saved = Game saved.
-notification-game-paused = The game is paused by { $player }
-notification-game-unpaused = The game is un-paused by { $player }
+notification-game-paused = The game has been paused by { $player }.
+notification-game-unpaused = The game has been un-paused by { $player }.
 
 ## Server
-notification-game-started = Game started
+notification-game-started = Game started.
 
 ## PlayerMessageTracker
 notification-chat-temp-disabled =
@@ -144,7 +147,7 @@ dialog-overwrite-map-failed =
 dialog-overwrite-map-outside-edit =
     .title = Warning
     .prompt = The map has been edited from outside the editor.
-    By saving you may overwrite progress
+    By saving you may overwrite progress.
     .confirm = Save
 
 notification-save-current-map = Saved current map.
@@ -244,14 +247,14 @@ dialog-error-max-player =
 dialog-exit-map-editor =
     .title = Exit Map Editor
     .prompt-unsaved = Exit and lose all unsaved changes?
-    .prompt-deleted = The map may have been deleted outside the editor.
+    .prompt-deleted = The map may have been deleted outside the editor
     .confirm-anyway = Exit anyway
     .confirm = Exit
 
 dialog-play-map-warning =
     .title = Warning
-    .prompt = The map may have been deleted or has
-    errors preventing it from being loaded.
+    .prompt = The map may have been deleted or contains
+    errors that prevent it from being loaded.
     .cancel = Okay
 
 dialog-exit-to-map-editor =
@@ -296,6 +299,7 @@ label-fetching-mirror-list = Fetching list of mirrors...
 label-downloading-from = Downloading from { $host } { $received } { $suffix }
 label-downloading-from-progress = Downloading from { $host } { $received } / { $total } { $suffix } ({ $progress }%)
 label-unknown-host = unknown host
+label-download-failed = Download failed
 label-verifying-archive = Verifying archive...
 label-archive-validation-failed = Archive validation failed
 label-extracting-archive = Extracting...
@@ -349,7 +353,7 @@ options-slot-admin =
 button-general-chat = All
 button-team-chat = Team
 
-## LobbyOptionsLogic
+## LobbyOptionsLogic, MissionBrowserLogic
 label-not-available = Not Available
 
 ## LobbyUtils
@@ -402,6 +406,7 @@ checkbox-frame-limiter = Enable Frame Limiter ({ $fps } FPS)
 ## HotkeysSettingsLogic
 label-original-notice = The default is "{ $key }"
 label-duplicate-notice = This is already used for "{ $key }" in the { $context } context
+hotkey-context-any = Any
 
 ## InputSettingsLogic
 options-mouse-scroll-type =
@@ -414,13 +419,6 @@ options-mouse-scroll-type =
 options-control-scheme =
     .classic = Classic
     .modern = Modern
-
-options-zoom-modifier =
-    .alt = Alt
-    .ctrl = Ctrl
-    .meta = Meta
-    .shift = Shift
-    .none = None
 
 ## SettingsLogic
 dialog-settings-save =
@@ -463,7 +461,7 @@ dialog-rename-save =
 
 dialog-delete-save =
     .title = Delete selected game save?
-    .prompt = Delete '{ $save }'
+    .prompt = Delete '{ $save }'.
     .confirm = Delete
 
 dialog-delete-all-saves =
@@ -543,7 +541,7 @@ dialog-cant-play-video =
 
 ## MusicPlayerLogic
 label-sound-muted = Audio has been muted in settings.
-label-no-song-playing = No song playing
+label-no-song-playing = No song is playing
 
 ## MuteHotkeyLogic
 label-audio-muted = Audio muted.
@@ -553,8 +551,8 @@ label-audio-unmuted = Audio unmuted.
 label-loading-player-profile = Loading player profile...
 label-loading-player-profile-failed = Failed to load player profile.
 
-## ProductionTooltipLogic
-label-requires = Requires { $prequisites }
+## ProductionTooltipLogic, EncyclopediaLogic
+label-requires = Requires { $prerequisites }.
 
 ## ReplayBrowserLogic
 label-duration = Duration: { $time }
@@ -641,9 +639,9 @@ label-internet-server-nat-C = ):
 label-local-server = Local Server:
 
 dialog-server-creation-failed =
-    .prompt = Could not listen on port { $port }
+    .prompt = Could not listen on port { $port }.
     .prompt-port-used = Check if the port is already being used.
-    .prompt-error = Error is: "{ $message }" ({ $code })
+    .prompt-error = Error is: "{ $message }" ({ $code }).
     .title = Server Creation Failed
     .cancel = Back
 
@@ -727,34 +725,34 @@ description-actor-tags-overlay = toggles actor tags overlay.
 
 ## DevCommands
 notification-cheats-disabled = Cheats are disabled.
-notification-invalid-cash-amount = Invalid amount of cash.
+notification-invalid-cash-amount = Invalid cash amount.
 description-toggle-visibility = toggles visibility checks and minimap.
 description-give-cash = gives the default or specified amount of money.
-description-give-cash-all = gives the default or specified amount of money to all players and ai.
+description-give-cash-all = gives the default or specified amount of money to all players and AI.
 description-instant-building = toggles instant building.
 description-build-anywhere = toggles the ability to build anywhere.
 description-unlimited-power = toggles infinite power.
 description-enable-tech = toggles the ability to build everything.
-description-fast-charge = toggles almost instant support power charging.
+description-fast-charge = toggles near-instant support power charging.
 description-dev-cheat-all = toggles all cheats and gives you some cash for your trouble.
 description-dev-crash = crashes the game.
 description-levelup-actor = adds a specified number of levels to the selected actors.
 description-player-experience = adds a specified amount of player experience to the owner(s) of selected actors.
-description-power-outage = causes owner(s) of selected actors to have a 5 second power outage.
+description-power-outage = causes a 5-second power outage for the owner(s) of selected actors.
 description-kill-selected-actors = kills selected actors.
 description-dispose-selected-actors = disposes selected actors.
 
 ## HelpCommands
 notification-available-commands = Here are the available commands:
 description-no-description = no description available.
-description-help-description = provides useful info about various commands
+description-help-description = provides useful info about various commands.
 
 ## PlayerCommands
-description-pause-description = pause or unpause the game
-description-surrender-description = self-destruct everything and lose the game
+description-pause-description = pause or unpause the game.
+description-surrender-description = self-destruct everything and lose the game.
 
 ## DeveloperMode
-notification-cheat-used = Cheat used: { $cheat } by { $player }{ $suffix }
+notification-cheat-used = Cheat used: { $cheat } by { $player }{ $suffix }.
 
 ## CustomTerrainDebugOverlay
 description-custom-terrain-debug-overlay = toggles the custom terrain debug overlay.
@@ -810,6 +808,7 @@ notification-selected-actor = Selected actor { $id }
 notification-cleared-selection = Cleared selection
 notification-removed-actor = Removed { $name } ({ $id })
 notification-removed-resource = Removed { $type }
+notification-moved-actor = Moved { $id } from { $x1 },{ $y1 } to { $x2 },{ $y2 }
 
 ## EditorResourceBrush
 notification-added-resource =
@@ -822,11 +821,32 @@ notification-added-resource =
 notification-added-tile = Added tile { $id }
 notification-filled-tile = Filled with tile { $id }
 
+## EditorMarkerLayerBrush
+notification-added-marker-tiles =
+    { $amount ->
+       [one] Added one marker tile of type { $type }
+      *[other] Added { $amount } marker tiles of type { $type }
+    }
+notification-removed-marker-tiles =
+    { $amount ->
+       [one] Removed one marker tile
+      *[other] Removed { $amount } marker tiles
+    }
+notification-cleared-selected-marker-tiles = Cleared { $amount } marker tiles of type { $type }
+notification-cleared-all-marker-tiles = Cleared { $amount } marker tiles
+
 ## EditorActionManager
 notification-opened = Opened
 
+## MapOverlaysLogic
+mirror-mode =
+    .none = None
+    .flip = Flip
+    .rotate = Rotate
+
 ## ActorEditLogic
 notification-edited-actor = Edited { $name } ({ $id })
+notification-edited-actor-id = Edited { $name } ({ $old-id }-> { $new-id })
 
 ## ConquestVictoryConditions, StrategicVictoryConditions
 notification-player-is-victorious = { $player } is victorious.
@@ -835,3 +855,267 @@ notification-player-is-defeated = { $player } is defeated.
 ## OrderManager
 notification-desync-compare-logs = Out of sync in frame { $frame }.
     Compare syncreport.log with other players.
+
+## SupportPowerTimerWidget
+support-power-timer = { $player }'s { $support-power }: { $time }
+
+## WidgetUtils
+label-win-state-won = Won
+label-win-state-lost = Lost
+
+## Player
+enumerated-bot-name =
+    { $name } { $number ->
+       *[zero] {""}
+        [other] { $number }
+    }
+
+## ModifiersExts
+keycode-modifier =
+    .alt = Alt
+    .ctrl = Ctrl
+    .meta = Meta
+    .cmd = Cmd
+    .shift = Shift
+    .none = None
+
+## KeycodeExts
+keycode =
+    .unknown = Undefined
+    .return = Return
+    .escape = Escape
+    .backspace = Backspace
+    .tab = Tab
+    .space = Space
+    .exclaim = !
+    .quotedbl = "
+    .hash = #
+    .percent = %
+    .dollar = $
+    .ampersand = &
+    .quote = '
+    .leftparen = (
+    .rightparen = )
+    .asterisk = *
+    .plus = +
+    .comma = ,
+    .minus = -
+    .period = .
+    .slash = /
+    .number_0 = 0
+    .number_1 = 1
+    .number_2 = 2
+    .number_3 = 3
+    .number_4 = 4
+    .number_5 = 5
+    .number_6 = 6
+    .number_7 = 7
+    .number_8 = 8
+    .number_9 = 9
+    .colon = :
+    .semicolon = ;
+    .less = <
+    .equals = =
+    .greater = >
+    .question = ?
+    .at = @
+    .leftbracket = [
+    .backslash = \
+    .rightbracket = ]
+    .caret = ^
+    .underscore = _
+    .backquote = `
+    .a = A
+    .b = B
+    .c = C
+    .d = D
+    .e = E
+    .f = F
+    .g = G
+    .h = H
+    .i = I
+    .j = J
+    .k = K
+    .l = L
+    .m = M
+    .n = N
+    .o = O
+    .p = P
+    .q = Q
+    .r = R
+    .s = S
+    .t = T
+    .u = U
+    .v = V
+    .w = W
+    .x = X
+    .y = Y
+    .z = Z
+    .capslock = CapsLock
+    .f1 = F1
+    .f2 = F2
+    .f3 = F3
+    .f4 = F4
+    .f5 = F5
+    .f6 = F6
+    .f7 = F7
+    .f8 = F8
+    .f9 = F9
+    .f10 = F10
+    .f11 = F11
+    .f12 = F12
+    .printscreen = PrintScreen
+    .scrolllock = ScrollLock
+    .pause = Pause
+    .insert = Insert
+    .home = Home
+    .pageup = PageUp
+    .delete = Delete
+    .end = End
+    .pagedown = PageDown
+    .right = Right
+    .left = Left
+    .down = Down
+    .up = Up
+    .numlockclear = Numlock
+    .kp_divide = Keypad /
+    .kp_multiply = Keypad *
+    .kp_minus = Keypad -
+    .kp_plus = Keypad +
+    .kp_enter = Keypad Enter
+    .kp_1 = Keypad 1
+    .kp_2 = Keypad 2
+    .kp_3 = Keypad 3
+    .kp_4 = Keypad 4
+    .kp_5 = Keypad 5
+    .kp_6 = Keypad 6
+    .kp_7 = Keypad 7
+    .kp_8 = Keypad 8
+    .kp_9 = Keypad 9
+    .kp_0 = Keypad 0
+    .kp_period = Keypad .
+    .application = Application
+    .power = Power
+    .kp_equals = Keypad =
+    .f13 = F13
+    .f14 = F14
+    .f15 = F15
+    .f16 = F16
+    .f17 = F17
+    .f18 = F18
+    .f19 = F19
+    .f20 = F20
+    .f21 = F21
+    .f22 = F22
+    .f23 = F23
+    .f24 = F24
+    .execute = Execute
+    .help = Help
+    .menu = Menu
+    .select = Select
+    .stop = Stop
+    .again = Again
+    .undo = Undo
+    .cut = Cut
+    .copy = Copy
+    .paste = Paste
+    .find = Find
+    .mute = Mute
+    .volumeup = VolumeUp
+    .volumedown = VolumeDown
+    .kp_comma = Keypad ,
+    .kp_equalsas400 = Keypad (AS400)
+    .alterase = AltErase
+    .sysreq = SysReq
+    .cancel = Cancel
+    .clear = Clear
+    .prior = Prior
+    .return2 = Return
+    .separator = Separator
+    .out = Out
+    .oper = Oper
+    .clearagain = Clear / Again
+    .crsel = CrSel
+    .exsel = ExSel
+    .kp_00 = Keypad 00
+    .kp_000 = Keypad 000
+    .thousandsseparator = ThousandsSeparator
+    .decimalseparator = DecimalSeparator
+    .currencyunit = CurrencyUnit
+    .currencysubunit = CurrencySubUnit
+    .kp_leftparen = Keypad (
+    .kp_rightparen = Keypad )
+    .kp_leftbrace = Keypad {"{"}
+    .kp_rightbrace = Keypad {"}"}
+    .kp_tab = Keypad Tab
+    .kp_backspace = Keypad Backspace
+    .kp_a = Keypad A
+    .kp_b = Keypad B
+    .kp_c = Keypad C
+    .kp_d = Keypad D
+    .kp_e = Keypad E
+    .kp_f = Keypad F
+    .kp_xor = Keypad XOR
+    .kp_power = Keypad ^
+    .kp_percent = Keypad %
+    .kp_less = Keypad <
+    .kp_greater = Keypad >
+    .kp_ampersand = Keypad &
+    .kp_dblampersand = Keypad &&
+    .kp_verticalbar = Keypad |
+    .kp_dblverticalbar = Keypad ||
+    .kp_colon = Keypad :
+    .kp_hash = Keypad #
+    .kp_space = Keypad Space
+    .kp_at = Keypad @
+    .kp_exclam = Keypad !
+    .kp_memstore = Keypad MemStore
+    .kp_memrecall = Keypad MemRecall
+    .kp_memclear = Keypad MemClear
+    .kp_memadd = Keypad MemAdd
+    .kp_memsubtract = Keypad MemSubtract
+    .kp_memmultiply = Keypad MemMultiply
+    .kp_memdivide = Keypad MemDivide
+    .kp_plusminus = Keypad +/-
+    .kp_clear = Keypad Clear
+    .kp_clearentry = Keypad ClearEntry
+    .kp_binary = Keypad Binary
+    .kp_octal = Keypad Octal
+    .kp_decimal = Keypad Decimal
+    .kp_hexadecimal = Keypad Hexadecimal
+    .lctrl = Left Ctrl
+    .lshift = Left Shift
+    .lalt = Left Alt
+    .lgui = Left GUI
+    .rctrl = Right Ctrl
+    .rshift = Right Shift
+    .ralt = Right Alt
+    .rgui = Right GUI
+    .mode = ModeSwitch
+    .audionext = AudioNext
+    .audioprev = AudioPrev
+    .audiostop = AudioStop
+    .audioplay = AudioPlay
+    .audiomute = AudioMute
+    .mediaselect = MediaSelect
+    .www = WWW
+    .mail = Mail
+    .calculator = Calculator
+    .computer = Computer
+    .ac_search = AC Search
+    .ac_home = AC Home
+    .ac_back = AC Back
+    .ac_forward = AC Forward
+    .ac_stop = AC Stop
+    .ac_refresh = AC Refresh
+    .ac_bookmarks = AC Bookmarks
+    .brightnessdown = BrightnessDown
+    .brightnessup = BrightnessUp
+    .displayswitch = DisplaySwitch
+    .kbdillumtoggle = KBDIllumToggle
+    .kbdillumdown = KBDIllumDown
+    .kbdillumup = KBDIllumUp
+    .eject = Eject
+    .sleep = Sleep
+    .mouse4 = Mouse 4
+    .mouse5 = Mouse 5

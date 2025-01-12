@@ -3,48 +3,54 @@ Metadata:
 	Version: playtest-20221224
 	Website: https://github.com/drogoganor/OpenDR
 	WebIcon32: https://www.drogoganor.net/dr/dr_32x32.png
+	WindowTitle: mod-windowtitle
 
 PackageFormats: FtgFile
 
-Packages:
-	~^SupportDir|Content/dr/
-	^EngineDir|
-	$dr: dr
-	^EngineDir|mods/common: common
-	~BARREN/BARREN.TIL
-	~BARREN/BARREN.PAL
-	~BARREN/SPRITES.FTG: barren
-	~BARREN/spriteEx.ftg: barrenEx
-	~JUNGLE/JUNGLE.TIL
-	~JUNGLE/JUNGLE.PAL
-	~JUNGLE/SPRITES.FTG: jungle
-	~JUNGLE/spriteEx.ftg: jungleEx
-	#~SNOW/SNOW.TIL
-	#~SNOW/SNOW.PAL
-	#~SNOW/SPRITES.FTG: snow
-	#~SNOW/spriteEx.ftg: snowEx
-	#~ALIEN/ALIEN.TIL
-	#~ALIEN/ALIEN.PAL
-	#~ALIEN/spriteEx.ftg: alien
-	~asteroid/ASTEROID.FTG
-	~aust/AUST.FTG
-	~volcanic/VOLCANIC.FTG
-	~auralien/AURALIEN.FTG
-	~SPRITES.FTG: base
-	#~spriteEx.ftg
-	~SOUNDS.FTG
-	#~soundsEx.ftg
-	~mouse.crs
-	~music.zip
-	~addon/aurunits/aursound.ftg
-	~addon/aurunits/aursprite.ftg
-	~addon/terrorist/terrsound.ftg
-	~addon/terrorist/terrsprite.ftg
-	dr|bits
-	dr|uibits
+FileSystem: ContentInstallerFileSystem
+	Packages:
+		^EngineDir
+		$dr: dr
+		^EngineDir|mods/common: common
+		~^SupportDir|Content/dr/: content
+		common|scripts
+		dr|bits
+		dr|uibits
+	ContentPackages:
+		content|SPRITES.FTG: base
+#		~content|spriteEx.ftg
+		content|SOUNDS.FTG
+#		~content|music.zip
+#		~content|soundsEx.ftg
+		content|BARREN/SPRITES.FTG: barren
+		content|JUNGLE/SPRITES.FTG: jungle
+#		~content|JUNGLE/spriteEx.ftg: jungleEx
+#		~content|SNOW/SNOW.TIL
+#		~content|SNOW/SNOW.PAL
+#		~content|SNOW/SPRITES.FTG: snow
+#		~content|SNOW/spriteEx.ftg: snowEx
+#		~content|ALIEN/ALIEN.TIL
+#		~content|ALIEN/ALIEN.PAL
+#		~content|ALIEN/spriteEx.ftg: alien
+		content|asteroid/ASTEROID.FTG
+		content|aust/AUST.FTG
+		content|volcanic/VOLCANIC.FTG
+		content|auralien/AURALIEN.FTG
+		content|addon/aurunits/aursound.ftg
+		content|addon/aurunits/aursprite.ftg
+		content|addon/terrorist/terrsound.ftg
+		content|addon/terrorist/terrsprite.ftg
+	ContentFiles:
+		content|BARREN/BARREN.PAL
+		content|BARREN/BARREN.TIL
+		content|JUNGLE/JUNGLE.PAL
+		content|JUNGLE/JUNGLE.TIL
+		content|mouse.crs
+	ContentInstallerMod: dr-content
 
 MapFolders:
 	dr|maps: System
+	~^SupportDir|maps/dr/playtest-20241116: User
 
 Rules:
 	dr|rules/palettes.yaml
@@ -114,10 +120,7 @@ Cursors:
 Chrome:
 	dr|chrome.yaml
 
-Assemblies:
-	^BinDir|OpenRA.Mods.Dr.dll
-	^BinDir|OpenRA.Mods.Common.dll
-	^BinDir|OpenRA.Mods.Cnc.dll
+Assemblies: OpenRA.Mods.Dr.dll, OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll
 
 ChromeLayout:
 	common|chrome/ingame.yaml
@@ -136,7 +139,7 @@ ChromeLayout:
 	dr|chrome/ingame-player.yaml
 	dr|chrome/ingame-observer.yaml
 	#dr|chrome/color-picker.yaml
-	dr|chrome/mainmenu-prerelease-notification.yaml
+	#dr|chrome/mainmenu-prerelease-notification.yaml
 	common|chrome/ingame-perf.yaml
 	common|chrome/ingame-debug.yaml
 	common|chrome/ingame-debug-hpf.yaml
@@ -177,12 +180,17 @@ ChromeLayout:
 	common|chrome/playerprofile.yaml
 	common|chrome/text-notifications.yaml
 
-Translations:
-	common|languages/en.ftl
-	#common|languages/chrome/en.ftl
-	common|languages/rules/en.ftl
-	dr|languages/chrome/en.ftl
-	dr|languages/rules/en.ftl
+FluentMessages:
+	common|fluent/common.ftl
+	common|fluent/chrome.ftl
+	common|fluent/hotkeys.ftl
+	common|fluent/rules.ftl
+	dr|fluent/dr.ftl
+	dr|fluent/chrome.ftl
+	#dr|fluent/hotkeys.ftl
+	dr|fluent/rules.ftl
+
+AllowUnusedFluentMessagesInExternalPackages: false
 
 Weapons:
 	dr|weapons/weapons.yaml
@@ -202,7 +210,6 @@ Hotkeys:
 	common|hotkeys/game.yaml
 	common|hotkeys/observer.yaml
 	common|hotkeys/production-common.yaml
-	common|hotkeys/production-peractor.yaml
 	common|hotkeys/supportpowers.yaml
 	common|hotkeys/viewport.yaml
 	common|hotkeys/chat.yaml
@@ -214,7 +221,6 @@ LoadScreen: LogoStripeLoadScreen
 	Image: dr|uibits/loadscreen.png
 	Image2x: dr|uibits/loadscreen-2x.png
 	Image3x: dr|uibits/loadscreen-3x.png
-	Text: Charging tachyon weapon..., Beaming lasers..., Painting Taelon green..., Seeding beautiful vortexes...
 
 ServerTraits:
 	LobbyCommands
@@ -282,8 +288,6 @@ TerrainFormat: DrTerrain
 
 SpriteSequenceFormat: DrTilesetSpecificSpriteSequence
 
-ModelSequenceFormat: PlaceholderModelSequence
-
 GameSpeeds:
 	DefaultSpeed: default
 	Speeds:
@@ -311,45 +315,6 @@ GameSpeeds:
 			Name: options-game-speed.fastest
 			Timestep: 20
 			OrderLatency: 6
-
-ModContent:
-	InstallPromptMessage: OpenDR requires artwork and audio from the original demo.\n\nClick 'Quick Install' to automatically download and install this content.
-	QuickDownload: drdemo
-	HeaderMessage: Download Game Content
-	Packages:
-		demo: DR Demo
-			TestFiles: ^SupportDir|Content/dr/SPRITES.FTG, ^SupportDir|Content/dr/SOUNDS.FTG, ^SupportDir|Content/dr/shell/SOUNDS.FTG, ^SupportDir|Content/dr/BARREN/BARREN.PAL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL, ^SupportDir|Content/dr/BARREN/BARREN.TIL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL, ^SupportDir|Content/dr/BARREN/SPRITES.FTG, ^SupportDir|Content/dr/JUNGLE/SPRITES.FTG, ^SupportDir|Content/dr/mouse.crs
-			Download: drdemo
-			Required: true
-		auran: Auran Extras
-			TestFiles: ^SupportDir|Content/dr/aust/AUST.FTG, ^SupportDir|Content/dr/volcanic/VOLCANIC.FTG, ^SupportDir|Content/dr/auralien/AURALIEN.FTG, ^SupportDir|Content/dr/asteroid/ASTEROID.FTG, ^SupportDir|Content/dr/addon/aurunits/aursound.ftg, ^SupportDir|Content/dr/addon/aurunits/aursprite.ftg, ^SupportDir|Content/dr/addon/terrorist/terrsound.ftg, ^SupportDir|Content/dr/addon/terrorist/terrsprite.ftg, ^SupportDir|Content/dr/legal.txt
-			Download: drauranext
-			Required: false
-		#devtest: Dev Test Package (Full)
-		#	TestFiles: ^SupportDir|Content/dr/SPRITES.FTG, ^SupportDir|Content/dr/SOUNDS.FTG, ^SupportDir|Content/dr/shell/SOUNDS.FTG, ^SupportDir|Content/dr/BARREN/BARREN.PAL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL, ^SupportDir|Content/dr/SNOW/SNOW.PAL, ^SupportDir|Content/dr/BARREN/BARREN.TIL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL, ^SupportDir|Content/dr/SNOW/SNOW.TIL, ^SupportDir|Content/dr/BARREN/SPRITES.FTG, ^SupportDir|Content/dr/JUNGLE/SPRITES.FTG, ^SupportDir|Content/dr/SNOW/SPRITES.FTG, ^SupportDir|Content/dr/spriteEx.ftg, ^SupportDir|Content/dr/soundsEx.ftg, ^SupportDir|Content/dr/ALIEN/ALIEN.TIL, ^SupportDir|Content/dr/ALIEN/ALIEN.PAL, ^SupportDir|Content/dr/ALIEN/SPRITEEX.FTG, ^SupportDir|Content/dr/BARREN/spriteEx.ftg, ^SupportDir|Content/dr/JUNGLE/spriteEx.ftg, ^SupportDir|Content/dr/SNOW/spriteEx.ftg, ^SupportDir|Content/dr/mouse.crs
-		#	Download: drdevtest
-		#	Required: true
-		#gog: Dark Reign + Exp. (GOG)
-		#	TestFiles: ^SupportDir|Content/dr/SPRITES.FTG, ^SupportDir|Content/dr/SOUNDS.FTG, ^SupportDir|Content/dr/shell/SOUNDS.FTG, ^SupportDir|Content/dr/BARREN/BARREN.PAL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL, ^SupportDir|Content/dr/SNOW/SNOW.PAL, ^SupportDir|Content/dr/BARREN/BARREN.TIL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL, ^SupportDir|Content/dr/SNOW/SNOW.TIL, ^SupportDir|Content/dr/BARREN/SPRITES.FTG, ^SupportDir|Content/dr/JUNGLE/SPRITES.FTG, ^SupportDir|Content/dr/SNOW/SPRITES.FTG, ^SupportDir|Content/dr/spriteEx.ftg, ^SupportDir|Content/dr/soundsEx.ftg, ^SupportDir|Content/dr/ALIEN/ALIEN.TIL, ^SupportDir|Content/dr/ALIEN/ALIEN.PAL, ^SupportDir|Content/dr/ALIEN/SPRITEEX.FTG, ^SupportDir|Content/dr/BARREN/spriteEx.ftg, ^SupportDir|Content/dr/JUNGLE/spriteEx.ftg, ^SupportDir|Content/dr/SNOW/spriteEx.ftg, ^SupportDir|Content/dr/mouse.crs
-		#	Sources: drgog
-		#	Required: true
-		#base: Dark Reign (Disc)
-		#	TestFiles: ^SupportDir|Content/dr/SPRITES.FTG, ^SupportDir|Content/dr/SOUNDS.FTG, ^SupportDir|Content/dr/shell/SOUNDS.FTG, ^SupportDir|Content/dr/BARREN/BARREN.PAL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL, ^SupportDir|Content/dr/SNOW/SNOW.PAL, ^SupportDir|Content/dr/BARREN/BARREN.TIL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL, ^SupportDir|Content/dr/SNOW/SNOW.TIL, ^SupportDir|Content/dr/BARREN/SPRITES.FTG, ^SupportDir|Content/dr/JUNGLE/SPRITES.FTG, ^SupportDir|Content/dr/SNOW/SPRITES.FTG, ^SupportDir|Content/dr/mouse.crs
-		#	Sources: drorig
-		#	Required: true
-		#expansion: Dark Reign Expansion (Disc)
-		#	TestFiles: ^SupportDir|Content/dr/spriteEx.ftg, ^SupportDir|Content/dr/soundsEx.ftg, ^SupportDir|Content/dr/ALIEN/ALIEN.TIL, ^SupportDir|Content/dr/ALIEN/ALIEN.PAL, ^SupportDir|Content/dr/ALIEN/SPRITEEX.FTG, ^SupportDir|Content/dr/BARREN/spriteEx.ftg, ^SupportDir|Content/dr/JUNGLE/spriteEx.ftg, ^SupportDir|Content/dr/SNOW/spriteEx.ftg, ^SupportDir|Content/dr/mouse.crs
-		#	Sources: drexp
-		#	Required: true
-		#music: Music
-		#	TestFiles: ^SupportDir|Content/dr/music.zip
-		#	Download: drmusic
-	Downloads:
-		dr|installer/downloads.yaml
-		#dr|installer/downloads-retail.yaml
-	#Sources:
-	#	dr|installer/drcd.yaml
-	#	dr|installer/gog.yaml
 
 DiscordService:
 	ApplicationId: 811571076660199444

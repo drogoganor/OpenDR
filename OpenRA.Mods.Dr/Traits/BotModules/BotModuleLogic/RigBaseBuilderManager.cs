@@ -135,17 +135,17 @@ namespace OpenRA.Mods.Dr.Traits
 		public int NumBuildingsBuildingOrOrdered(ActorInfo building)
 		{
 			var nameComparisons = new HashSet<string>() { building.Name.ToLowerInvariant() };
-			var numBuildings = AIUtils.CountBuildingByCommonName(nameComparisons, player);
+			using var results = new ActorIndex.OwnerAndNamesAndTrait<BuildingInfo>(world, nameComparisons, player);
 
-			return numBuildings + NumBuildingsOrdered(building);
+			return results.Actors.Count + NumBuildingsOrdered(building);
 		}
 
 		public int NumBuildingsBuiltBuildingOrOrdered(ActorInfo building)
 		{
 			var nameComparisons = new HashSet<string>() { building.Name.ToLowerInvariant(), building.Name.ToLowerInvariant().Replace(".constructing", string.Empty) };
-			var numBuildings = AIUtils.CountBuildingByCommonName(nameComparisons, player);
+			using var results = new ActorIndex.OwnerAndNamesAndTrait<BuildingInfo>(world, nameComparisons, player);
 
-			return numBuildings + NumBuildingsOrdered(building);
+			return results.Actors.Count + NumBuildingsOrdered(building);
 		}
 
 		ActorInfo GetProducibleBuilding(HashSet<string> actors, IEnumerable<ActorInfo> buildables, Func<ActorInfo, int> orderBy = null)
@@ -368,7 +368,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 					// Build near the closest enemy structure
 					var closestEnemy = world.ActorsHavingTrait<Building>().Where(a => !a.Disposed && !player.IsAlliedWith(a.Owner))
-						.ClosestTo(world.Map.CenterOfCell(baseBuilder.DefenseCenter));
+						.ClosestToIgnoringPath(world.Map.CenterOfCell(baseBuilder.DefenseCenter));
 
 					var targetCell = closestEnemy != null ? closestEnemy.Location : baseCenter;
 					return findPos(baseBuilder.DefenseCenter, targetCell, baseBuilder.Info.MinimumDefenseRadius, baseBuilder.Info.MaximumDefenseRadius);

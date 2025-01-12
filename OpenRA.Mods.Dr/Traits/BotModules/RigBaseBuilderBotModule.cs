@@ -143,7 +143,7 @@ namespace OpenRA.Mods.Dr.Traits
 	}
 
 	public class RigBaseBuilderBotModule : ConditionalTrait<RigBaseBuilderBotModuleInfo>, IGameSaveTraitData,
-		IBotTick, IBotPositionsUpdated, IBotRespondToAttack, IBotRequestPauseUnitProduction
+		IBotTick, IBotPositionsUpdated, IBotRespondToAttack, IBotRequestPauseUnitProduction, INotifyActorDisposing
 	{
 		public CPos GetRandomBaseCenter()
 		{
@@ -165,11 +165,20 @@ namespace OpenRA.Mods.Dr.Traits
 		CPos defenseCenter;
 		RigBaseBuilderManager builder;
 
+		readonly ActorIndex.OwnerAndNamesAndTrait<BuildingInfo> refineryBuildings;
+		readonly ActorIndex.OwnerAndNamesAndTrait<BuildingInfo> powerBuildings;
+		readonly ActorIndex.OwnerAndNamesAndTrait<BuildingInfo> constructionYardBuildings;
+		readonly ActorIndex.OwnerAndNamesAndTrait<BuildingInfo> barracksBuildings;
+
 		public RigBaseBuilderBotModule(Actor self, RigBaseBuilderBotModuleInfo info)
 			: base(info)
 		{
 			world = self.World;
 			player = self.Owner;
+			refineryBuildings = new ActorIndex.OwnerAndNamesAndTrait<BuildingInfo>(world, info.RefineryTypes, player);
+			powerBuildings = new ActorIndex.OwnerAndNamesAndTrait<BuildingInfo>(world, info.PowerTypes, player);
+			constructionYardBuildings = new ActorIndex.OwnerAndNamesAndTrait<BuildingInfo>(world, info.HQTypes, player);
+			barracksBuildings = new ActorIndex.OwnerAndNamesAndTrait<BuildingInfo>(world, info.BarracksTypes, player);
 		}
 
 		protected override void TraitEnabled(Actor self)
@@ -193,7 +202,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		bool IBotRequestPauseUnitProduction.PauseUnitProduction
 		{
-			get { return !IsTraitDisabled && !HasAdequateRefineryCount; }
+			get { return !IsTraitDisabled && !HasAdequateRefineryCount(); }
 		}
 
 		void IBotTick.BotTick(IBot bot)
@@ -257,13 +266,16 @@ namespace OpenRA.Mods.Dr.Traits
 		}
 
 		// Require at least one refinery, unless we can't build it.
-		public bool HasAdequateRefineryCount =>
+		public bool HasAdequateRefineryCount() =>
 			Info.RefineryTypes.Count == 0 ||
-			AIUtils.CountBuildingByCommonName(Info.RefineryTypes, player) >= MinimumRefineryCount ||
-			AIUtils.CountBuildingByCommonName(Info.PowerTypes, player) == 0 ||
-			AIUtils.CountBuildingByCommonName(Info.HQTypes, player) == 0;
+			AIUtils.CountActorByCommonName(refineryBuildings) >= MinimumRefineryCount() ||
+			AIUtils.CountActorByCommonName(powerBuildings) == 0 ||
+			AIUtils.CountActorByCommonName(constructionYardBuildings) == 0;
 
-		int MinimumRefineryCount => AIUtils.CountBuildingByCommonName(Info.BarracksTypes, player) > 0 ? Info.InititalMinimumRefineryCount + Info.AdditionalMinimumRefineryCount : Info.InititalMinimumRefineryCount;
+		int MinimumRefineryCount() =>
+			AIUtils.CountActorByCommonName(barracksBuildings) > 0
+			? Info.InititalMinimumRefineryCount + Info.AdditionalMinimumRefineryCount
+			: Info.InititalMinimumRefineryCount;
 
 		List<MiniYamlNode> IGameSaveTraitData.IssueTraitData(Actor self)
 		{
@@ -277,18 +289,26 @@ namespace OpenRA.Mods.Dr.Traits
 			};
 		}
 
-		void IGameSaveTraitData.ResolveTraitData(Actor self, List<MiniYamlNode> data)
+		void IGameSaveTraitData.ResolveTraitData(Actor self, MiniYaml data)
 		{
 			if (self.World.IsReplay)
 				return;
 
-			var initialBaseCenterNode = data.FirstOrDefault(n => n.Key == "InitialBaseCenter");
+			var initialBaseCenterNode = data.Nodes.FirstOrDefault(n => n.Key == "InitialBaseCenter");
 			if (initialBaseCenterNode != null)
 				initialBaseCenter = FieldLoader.GetValue<CPos>("InitialBaseCenter", initialBaseCenterNode.Value.Value);
 
-			var defenseCenterNode = data.FirstOrDefault(n => n.Key == "DefenseCenter");
+			var defenseCenterNode = data.Nodes.FirstOrDefault(n => n.Key == "DefenseCenter");
 			if (defenseCenterNode != null)
 				defenseCenter = FieldLoader.GetValue<CPos>("DefenseCenter", defenseCenterNode.Value.Value);
+		}
+
+		void INotifyActorDisposing.Disposing(Actor self)
+		{
+			refineryBuildings.Dispose();
+			powerBuildings.Dispose();
+			constructionYardBuildings.Dispose();
+			barracksBuildings.Dispose();
 		}
 	}
 }

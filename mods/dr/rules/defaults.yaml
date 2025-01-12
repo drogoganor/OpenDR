@@ -217,8 +217,8 @@
 		Categories: Vehicle
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
-	Explodes:
-		Weapon: GenericExplode
+	FireProjectilesOnDeath:
+		Weapons: GenericExplode
 		EmptyWeapon: GenericExplode
 	WithFlamesOverlay@Flames1:
 		Image: eosmlfl0
@@ -323,8 +323,8 @@
 	HitShape:
 	MapEditorData:
 		Categories: Aircraft
-	Explodes:
-		Weapon: GenericExplode
+	FireProjectilesOnDeath:
+		Weapons: GenericExplode
 		EmptyWeapon: GenericExplode
 		RequiresCondition: !airborne
 	Repairable:
@@ -392,8 +392,8 @@
 		Categories: Naval
 	#ProducibleWithLevel:
 	#	Prerequisites: barracks.upgraded
-	Explodes:
-		Weapon: GenericExplode
+	FireProjectilesOnDeath:
+		Weapons: GenericExplode
 		EmptyWeapon: GenericExplode
 	WithFlamesOverlay@Flames1:
 		Image: eosmlfl0

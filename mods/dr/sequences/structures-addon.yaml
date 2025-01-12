@@ -211,11 +211,11 @@ nnmth1l0:
 	turret:
 		Filename: bnmthst0.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 	turret-fire: # Unused
 		Filename: bnmthst0.spr
 		Start: 24
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 	underlay-building:
@@ -254,11 +254,11 @@ nnflh1l0:
 	turret:
 		Filename: bnflhst0.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 	turret-fire: # Unused
 		Filename: bnflhst0.spr
 		Start: 24
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 	underlay-building:
@@ -297,11 +297,11 @@ ntgth1l0:
 	turret:
 		Filename: btgtfst0.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 	turret-fire: # Unused
 		Filename: btgtfst0.spr
 		Start: 24
-		Facings: 24
+		Facings: 16 # 24
 		Length: 2
 		Tick: 40
 	underlay-building:

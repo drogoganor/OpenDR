@@ -104,12 +104,14 @@ Freighter:
 	WithDockingAnimation:
 	WithFacingSpriteBody:
 	Harvester:
-		Capacity: 8
-		Resources: Water, Taelon
+		Resources: Water,Taelon
 		BaleLoadDelay: 20
 		BaleUnloadDelay: 20
 		SearchFromProcRadius: 30
 		SearchFromHarvesterRadius: 11
+	StoresResources:
+		Capacity: 8
+		Resources: Water,Taelon
 	-Armament:
 
 HoverFreighter:
@@ -146,12 +148,14 @@ HoverFreighter:
 	WithInfantryBody:
 		DefaultAttackSequence: stand
 	Harvester:
-		Capacity: 8
-		Resources: water,taelon
+		Resources: Water,Taelon
 		BaleLoadDelay: 20
 		BaleUnloadDelay: 18
 		SearchFromProcRadius: 30
 		SearchFromHarvesterRadius: 11
+	StoresResources:
+		Capacity: 8
+		Resources: Water,Taelon
 
 SpiderBike:
 	Inherits: ^Vehicle

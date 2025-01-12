@@ -45,8 +45,8 @@
 	ProximityCaptor:
 		Types: Building
 	CaptureNotification:
-	Explodes:
-		Weapon: GenericExplode
+	FireProjectilesOnDeath:
+		Weapons: GenericExplode
 		EmptyWeapon: GenericExplode
 	Demolishable:
 	#	Condition: being-demolished
@@ -140,8 +140,8 @@
 	ProximityCaptor:
 		Types: Building
 	CaptureNotification:
-	Explodes:
-		Weapon: GenericExplode
+	FireProjectilesOnDeath:
+		Weapons: GenericExplode
 		EmptyWeapon: GenericExplode
 	ActorLostNotification:
 		Notification: BuildingDestroyed

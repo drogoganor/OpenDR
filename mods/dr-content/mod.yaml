@@ -1,0 +1,95 @@
+Metadata:
+	Title: mod-title
+	Version: playtest-20241116
+	Hidden: true
+
+FileSystem: DefaultFileSystem
+	Packages:
+		^EngineDir
+		^EngineDir|mods/common-content: content
+		^EngineDir|mods/common: common
+		$dr-content: drcontent
+
+Rules:
+	content|rules.yaml
+
+Cursors:
+	content|cursors.yaml
+
+Chrome:
+	content|chrome.yaml
+
+Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll
+
+ChromeLayout:
+	content|content.yaml
+
+Notifications:
+	content|notifications.yaml
+
+LoadScreen: ModContentLoadScreen
+	Image: ^EngineDir|mods/common-content/chrome.png
+	Image2x: ^EngineDir|mods/common-content/chrome-2x.png
+	Image3x: ^EngineDir|mods/common-content/chrome-3x.png
+
+ChromeMetrics:
+	common|metrics.yaml
+	content|metrics.yaml
+
+FluentMessages:
+	common|fluent/common.ftl
+	content|fluent/content.ftl
+	content|fluent/chrome.ftl
+	drcontent|fluent/chrome.ftl
+
+Fonts:
+	Tiny:
+		Font: common|FreeSans.ttf
+		Size: 10
+		Ascender: 8
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size: 10
+		Ascender: 8
+	Regular:
+		Font: common|FreeSans.ttf
+		Size: 14
+		Ascender: 11
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size: 14
+		Ascender: 11
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size: 18
+		Ascender: 14
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size: 24
+		Ascender: 18
+
+ModContent:
+	Mod: dr
+	Packages:
+		ContentPackage@demo:
+			Title: modcontent-package-demo
+			Identifier: demo
+			TestFiles: ^SupportDir|Content/dr/SPRITES.FTG, ^SupportDir|Content/dr/SOUNDS.FTG, ^SupportDir|Content/dr/shell/SOUNDS.FTG, ^SupportDir|Content/dr/BARREN/BARREN.PAL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL, ^SupportDir|Content/dr/BARREN/BARREN.TIL, ^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL, ^SupportDir|Content/dr/BARREN/SPRITES.FTG, ^SupportDir|Content/dr/JUNGLE/SPRITES.FTG, ^SupportDir|Content/dr/mouse.crs
+			Download: drdemo
+			Required: true
+		ContentPackage@auran:
+			Title: modcontent-package-auran
+			Identifier: auran
+			TestFiles: ^SupportDir|Content/dr/aust/AUST.FTG, ^SupportDir|Content/dr/volcanic/VOLCANIC.FTG, ^SupportDir|Content/dr/auralien/AURALIEN.FTG, ^SupportDir|Content/dr/asteroid/ASTEROID.FTG, ^SupportDir|Content/dr/addon/aurunits/aursound.ftg, ^SupportDir|Content/dr/addon/aurunits/aursprite.ftg, ^SupportDir|Content/dr/addon/terrorist/terrsound.ftg, ^SupportDir|Content/dr/addon/terrorist/terrsprite.ftg, ^SupportDir|Content/dr/legal.txt
+			Download: drauranext
+			Required: true
+	Downloads:
+		drcontent|installer/downloads.yaml
+
+SoundFormats:
+
+SpriteFormats: PngSheet
+
+TerrainFormat: DefaultTerrain
+
+SpriteSequenceFormat: DefaultSpriteSequence

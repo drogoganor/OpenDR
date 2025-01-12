@@ -333,13 +333,13 @@ explosion:
 eoambex1: # Unused, dual red bolt, named explosion nonetheless (ex)
 	idle:
 		Filename: eoambex1.spr
-		Facings: 24
+		Facings: 16 # 24
 
 eochfpr0: # dual rockets 2
 	idle:
 		Filename: eochfpr0.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 
@@ -347,7 +347,7 @@ eofarpr0: # big honkin rocket
 	idle:
 		Filename: eofarpr0.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 
@@ -355,7 +355,7 @@ eoiarpr0: # cool fireball
 	idle:
 		Filename: eoiarpr0.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 5
 		Tick: 40
 
@@ -363,7 +363,7 @@ eolaspr0: # Animated dual red bolt
 	idle:
 		Filename: eolaspr0.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 
@@ -371,13 +371,13 @@ eolaspr1: # Non-Animated dual red bolt
 	idle:
 		Filename: eolaspr1.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 
 eolaspr2: # Small red bolt (laser rifle)
 	idle:
 		Filename: eolaspr2.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 
@@ -385,7 +385,7 @@ eolaspr3: # Large red bolt
 	idle:
 		Filename: eolaspr3.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 
@@ -393,7 +393,7 @@ eolaspr4: # Non-Animated dual red bolt, stubby
 	idle:
 		Filename: eolaspr4.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 
 eomadpr0: # MAD projectile
 	idle:
@@ -407,7 +407,7 @@ eomispr0: # missile
 	idle:
 		Filename: eomispr0.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 
@@ -423,7 +423,7 @@ eomispr2: # missile, large grey
 	idle:
 		Filename: eomispr2.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 
@@ -431,7 +431,7 @@ eomispr3: # missile, medium turqoise
 	idle:
 		Filename: eomispr3.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 
@@ -439,7 +439,7 @@ eomispr4: # missile, stumpy
 	idle:
 		Filename: eomispr4.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 
@@ -447,7 +447,7 @@ eoncnpr0: # NCN projectile, blue fireball. Cyclone?
 	idle:
 		Filename: eoncnpr0.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 4
 		Tick: 40
 
@@ -471,7 +471,7 @@ eoplspr0: # small green booger with wiggly tail
 	idle:
 		Filename: eoplspr0.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 4
 		Tick: 40
 
@@ -479,7 +479,7 @@ eoplspr1: # medium green booger with wiggly tail
 	idle:
 		Filename: eoplspr1.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 4
 		Tick: 40
 
@@ -487,7 +487,7 @@ eoplspr2: # large green booger with wiggly tail
 	idle:
 		Filename: eoplspr2.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 4
 		Tick: 40
 
@@ -495,13 +495,13 @@ eorfgpr0: # small green-eyed probe
 	idle:
 		Filename: eorfgpr0.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 
 eorgnpr0: # Small white bolt 
 	idle:
 		Filename: eorgnpr0.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 
@@ -509,7 +509,7 @@ eorgnpr1: # Medium white bolt (Sniper weapon)
 	idle:
 		Filename: eorgnpr1.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 4
 		Tick: 40
 
@@ -517,13 +517,13 @@ eorgnpr2: # Triple white bolt
 	idle:
 		Filename: eorgnpr2.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 
 eorgnpr3: # Double small white bolt
 	idle:
 		Filename: eorgnpr3.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 
@@ -531,7 +531,7 @@ eorgnpr4: # Tiny white bolt
 	idle:
 		Filename: eorgnpr4.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 
@@ -539,7 +539,7 @@ eorgnpr5: # Large white bolt (Merc weapon)
 	idle:
 		Filename: eorgnpr5.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 4
 		Tick: 40
 
@@ -570,7 +570,7 @@ ecprj000: # generic red greenish orb
 	idle:
 		Filename: ecprj000.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 3
 		Tick: 40
 
@@ -578,19 +578,19 @@ ecprj001: # cool white blue laser bolt
 	idle:
 		Filename: ecprj001.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 
 ecprj003: # small purple bolt
 	idle:
 		Filename: ecprj003.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 
 ecprj004: # blue teardrop bolt
 	idle:
 		Filename: ecprj004.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 
 ecprj005: # explosion effect: bullet ricochet, marked as projectile for some reason. Flak?
 	idle:
@@ -604,13 +604,13 @@ ecprj006: # large purple bolt
 	idle:
 		Filename: ecprj006.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 
 ecprj007: # arrow
 	idle:
 		Filename: ecprj007.spr
 		Start: 24 # hacked
-		Facings: 24
+		Facings: 16 # 24
 		#Length: 3
 		#Tick: 40
 
@@ -618,7 +618,7 @@ ecprjsp0: # chicken nugget
 	idle:
 		Filename: ecprjsp0.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 5
 		Tick: 40
 
@@ -626,7 +626,7 @@ ecprjsp1: # sparkly electric explosion that's not really a projectile
 	idle:
 		Filename: ecprjsp1.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 8
 		Tick: 40
 
@@ -634,7 +634,7 @@ ecprjsp2: # smaller greenish electric explosion that's not really a projectile
 	idle:
 		Filename: ecprjsp2.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 8
 		Tick: 40
 
@@ -642,7 +642,7 @@ ecprjsp3: # small blue bolt
 	idle:
 		Filename: ecprjsp3.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 6
 		Tick: 40
 
@@ -650,7 +650,7 @@ ecprjsp5: # big widely spaced dual bolts
 	idle:
 		Filename: ecprjsp5.spr
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 
 # Flames and Smoke
 

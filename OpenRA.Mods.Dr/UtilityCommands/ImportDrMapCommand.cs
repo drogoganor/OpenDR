@@ -418,7 +418,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 								new OwnerInit("Neutral")
 							};
 
-							Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
+							// TODO: Broken in playtest-20241116
+							//Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 						}
 					}
 
@@ -447,7 +448,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 								new OwnerInit("Neutral")
 							};
 
-							Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
+							// TODO: Broken in playtest-20241116
+							//Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 						}
 					}
 
@@ -488,7 +490,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 									new OwnerInit(MapPlayers.Players.Values.First(p => p.Team == playerIndex).Name)
 								};
 
-								Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
+								// TODO: Broken in playtest-20241116
+								//Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 							}
 						}
 
@@ -527,7 +530,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 									new OwnerInit(ownerName)
 								};
 
-								Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
+								// TODO: Broken in playtest-20241116
+								//Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 							}
 						}
 					}

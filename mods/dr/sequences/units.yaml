@@ -100,26 +100,26 @@ ufsnpst0:
 		Filename: ufsnpst0.spr
 	run:
 		Start: 0
-		Facings: 24
+		Facings: 16 # 24
 		Length: 6
 		Tick: 100
 	shoot:
 		Start: 144
-		Facings: 24
+		Facings: 16 # 24
 		Length: 4
 		Tick: 100
 	idle:
 		Start: 480
-		Facings: 24
+		Facings: 16 # 24
 		Length: 1
 	idle2:
 		Start: 240
-		Facings: 24
+		Facings: 16 # 24
 		Length: 10
 		Tick: 100
 	stand:
 		Start: 480
-		Facings: 24
+		Facings: 16 # 24
 		Length: 1
 	shadow:
 		Filename: ucmensh0.spr
@@ -1017,16 +1017,16 @@ uirdrst0:
 		Filename: uirdrst0.spr
 	idle:
 		Start: 0
-		Facings: 12
+		Facings: 8 # 12
 	stand:
 		Start: 0
-		Facings: 12
+		Facings: 8 # 12
 	run:
 		Start: 0
-		Facings: 12
+		Facings: 8 # 12
 	shoot:
 		Start: 12
-		Facings: 12
+		Facings: 8 # 12
 		Length: 7
 		Tick: 100
 	icon:
