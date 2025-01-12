@@ -1,6 +1,6 @@
 #region Copyright & License Information
 /*
- * Copyright 2007-2022 The OpenRA Developers (see AUTHORS)
+ * Copyright (c) The OpenRA Developers and Contributors
  * This file is part of OpenRA, which is free software. It is made
  * available to you under the terms of the GNU General Public License
  * as published by the Free Software Foundation, either version 3 of
@@ -12,45 +12,47 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using OpenRA.Mods.Common;
-using OpenRA.Mods.Common.Traits;
+using OpenRA.Mods.Common.Effects;
+using OpenRA.Mods.Common.Traits.Render;
+using OpenRA.Mods.Dr.Traits;
 using OpenRA.Traits;
 
-namespace OpenRA.Mods.Dr.Traits
+namespace OpenRA.Mods.Common.Traits
 {
-	public class DrRefineryInfo : RefineryInfo
+	public class DrRefineryInfo : TraitInfo, Requires<WithSpriteBodyInfo>, Requires<IDockHostInfo>
 	{
+		[Desc("Store resources in silos. Adds cash directly without storing if set to false.")]
+		public readonly bool UseStorage = true;
+
+		[Desc("Discard resources once silo capacity has been reached.")]
+		public readonly bool DiscardExcessResources = false;
+
+		public readonly bool ShowTicks = true;
+		public readonly int TickRate = 10;
+
 		public override object Create(ActorInitializer init) { return new DrRefinery(init.Self, this); }
 	}
 
-	public class DrRefinery : Refinery, INotifyCreated, IAcceptResources, INotifyOwnerChanged
+	public class DrRefinery : IAcceptResources, INotifyCreated, ITick, INotifyOwnerChanged
 	{
 		readonly DrRefineryInfo info;
 		PlayerResources playerResources;
 		IEnumerable<int> resourceValueModifiers;
 		DrPlayerResources drPlayerResources;
 
+		int currentDisplayTick = 0;
+		int currentDisplayValue = 0;
 		public DrRefinery(Actor self, DrRefineryInfo info)
-            : base(self, info)
 		{
 			this.info = info;
 			playerResources = self.Owner.PlayerActor.Trait<PlayerResources>();
+			currentDisplayTick = info.TickRate;
 			drPlayerResources = self.Owner.PlayerActor.Trait<DrPlayerResources>();
 		}
 
 		void INotifyCreated.Created(Actor self)
 		{
 			resourceValueModifiers = self.TraitsImplementing<IResourceValueModifier>().ToArray().Select(m => m.GetResourceValueModifier());
-		}
-
-		void INotifyOwnerChanged.OnOwnerChanged(Actor self, Player oldOwner, Player newOwner)
-		{
-			// Unlink any harvesters
-			//foreach (var harv in GetLinkedHarvesters())
-			//	harv.Trait.UnlinkProc(harv.Actor, self);
-
-			drPlayerResources = newOwner.PlayerActor.Trait<DrPlayerResources>();
-			playerResources = newOwner.PlayerActor.Trait<PlayerResources>();
 		}
 
 		int IAcceptResources.AcceptResources(Actor self, string resourceType, int count)
@@ -77,14 +79,36 @@ namespace OpenRA.Mods.Dr.Traits
 			else
 				drPlayerResources.AddWater(value);
 
-			// foreach (var notify in self.World.ActorsWithTrait<INotifyResourceAccepted>())
-			// {
-			// 	if (notify.Actor.Owner != self.Owner)
-			// 		continue;
+			foreach (var notify in self.World.ActorsWithTrait<INotifyResourceAccepted>())
+			{
+				if (notify.Actor.Owner != self.Owner)
+					continue;
 
-			// 	notify.Trait.OnResourceAccepted(notify.Actor, self, resourceType, count, value);
-			// }
+				notify.Trait.OnResourceAccepted(notify.Actor, self, resourceType, count, value);
+			}
+
+			if (info.ShowTicks)
+				currentDisplayValue += value;
+
 			return count;
+		}
+
+		void ITick.Tick(Actor self)
+		{
+			if (info.ShowTicks && currentDisplayValue > 0 && --currentDisplayTick <= 0)
+			{
+				var temp = currentDisplayValue;
+				if (self.Owner.IsAlliedWith(self.World.RenderPlayer))
+					self.World.AddFrameEndTask(w => w.Add(new FloatingText(self.CenterPosition, self.OwnerColor(), FloatingText.FormatCashTick(temp), 30)));
+				currentDisplayTick = info.TickRate;
+				currentDisplayValue = 0;
+			}
+		}
+
+		void INotifyOwnerChanged.OnOwnerChanged(Actor self, Player oldOwner, Player newOwner)
+		{
+			playerResources = newOwner.PlayerActor.Trait<PlayerResources>();
+			drPlayerResources = newOwner.PlayerActor.Trait<DrPlayerResources>();
 		}
 	}
 }

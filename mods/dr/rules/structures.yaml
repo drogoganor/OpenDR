@@ -14,11 +14,11 @@ Power:
 	Power:
 		Amount: 500
 	ScalePowerWithHealth:
-	DrRefinery:
-		DockAngle: 32
-		DockOffset: 0,2
-	StoresResources:
-		Capacity: 3000
+	#DrRefinery:
+	#	DockAngle: 32
+	#	DockOffset: 0,2
+	#StoresResources:
+	#	Capacity: 3000
 	#FreeActor:
 	#	Actor: Freighter
 	#	SpawnOffset: 0,2
@@ -59,8 +59,11 @@ WaterLaunchPad:
 	Power:
 		Amount: -100
 	DrRefinery:
-		DockAngle: 32
-		DockOffset: 1,2
+		UseStorage: false
+	DockHost:
+		Type: Unload
+		DockAngle: 0 # 32
+		DockOffset: -1c0,1c0,0
 	StoresResources:
 		Capacity: 3000
 	FreeActor:

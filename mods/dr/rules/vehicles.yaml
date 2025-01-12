@@ -112,6 +112,7 @@ Freighter:
 	StoresResources:
 		Capacity: 8
 		Resources: Water,Taelon
+	DockClientManager:
 	-Armament:
 
 HoverFreighter:

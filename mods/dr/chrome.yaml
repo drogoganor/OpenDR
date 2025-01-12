@@ -49,8 +49,8 @@ sidebar-fguard:
 	Regions:
 		radar: 5, 172, 228, 257
 		background-top: 0, 167, 238, 329
-		#background-moneybin: 0, 85, 238, 28
-		#background-iconbg: 12, 227, 190, 47
+		background-moneybin: 0, 85, 238, 28
+		background-iconbg: 12, 227, 190, 47
 		background-iconrow: 0, 495, 238, 49
 		background-bottom: 0, 546, 238, 6
 		background-supportoverlay: 0, 75, 64, 48
@@ -107,8 +107,8 @@ sidebar-imperium:
 	Regions:
 		radar: 279, 172, 228, 257
 		background-top: 274, 167, 238, 329
-		#background-moneybin: 0, 54, 238, 28
-		#background-iconbg: 12, 275, 190, 47
+		background-moneybin: 0, 54, 238, 28
+		background-iconbg: 12, 275, 190, 47
 		background-iconrow: 274, 495, 238, 49
 		background-bottom: 274, 546, 238, 6
 		background-supportoverlay: 64, 75, 64, 48
