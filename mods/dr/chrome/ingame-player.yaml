@@ -422,6 +422,19 @@ Container@PLAYER_WIDGETS:
 							Width: 220
 							Height: 220
 							Skippable: false
+				ProgressBar@WATER_BAR:
+					Logic: DrResourcesDisplayLogic
+					X: 26
+					Y: 284
+					Width: 86
+					Height: 16
+					Bar: progressbar-water
+				ProgressBar@POWER_BAR:
+					X: 130
+					Y: 284
+					Width: 86
+					Height: 16
+					Bar: progressbar-power
 
 		Container@SIDEBAR_BACKGROUND: # Unit main panel?
 			X: WINDOW_WIDTH - 250
