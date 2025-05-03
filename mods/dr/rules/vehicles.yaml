@@ -11,7 +11,7 @@ ConstructionRig:
 		Description: The workhorse of any military operation, this unit\nconstructs all buildings and bridges.
 		Prerequisites: ~techlevel.infonly
 		BuildPaletteOrder: 80
-		#BuildDuration: 9
+		BuildDuration: 9
 	Selectable:
 		Priority: 4
 		Class: C1
@@ -81,7 +81,7 @@ Freighter:
 		Description: These vehicles haul the vital resources that feed\nthe ravenous war machine. The multi-purpose\nFreighter is able to carry fresh water or Taelon.
 		Prerequisites: vehicles
 		BuildPaletteOrder: 80
-		#BuildDuration: 30
+		BuildDuration: 30
 	Selectable:
 		Priority: 5
 		Class: F1
@@ -126,7 +126,7 @@ HoverFreighter:
 		Description: Serves the same function as the Freighter, but its\nhover drive allows movement over a broader range of\nterrain types. It is armed with a laser cannon.
 		Prerequisites: vehicles, barracks, hq, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 80
-		#BuildDuration: 45
+		BuildDuration: 45
 	Selectable:
 		Priority: 5
 		Class: F2
@@ -168,7 +168,7 @@ SpiderBike:
 		Description: This all-terrain vehicle is the cornerstone of the\nFreedom Guard ground force. Fast and inexpensive,\nit is able to tackle all types of terrain. Armed\nwith a double rail gun, it is fairly effective\nagainst armour but somewhat vulnerable to infantry.
 		Prerequisites: ~vehicles.human
 		BuildPaletteOrder: 90
-		#BuildDuration: 15
+		BuildDuration: 15
 	Selectable:
 		Class: V1
 	Voiced:
@@ -198,7 +198,7 @@ RAT:
 		Description: The Freedom Guard troop transport has the ability\nto camouflage itself to match the surrounding terrain.\nThe R.A.T. is unarmed, but is able to carry up to\nfive infantry units at a time and can move over water,\nalthough at a considerably reduced speed.
 		Prerequisites: ~vehicles.fguard
 		BuildPaletteOrder: 90
-		#BuildDuration: 14
+		BuildDuration: 14
 	Selectable:
 		Class: V2
 		Bounds: 1536, 1536, 0, 0
@@ -239,7 +239,7 @@ SkirmishTank:
 		Description: The Skirmish Tank is the foundation upon which any\nsuccessful military outfit is built. Properly\naccessorised, the Skirmish Tank can make a splash at\nan intimate midnight raid, a small summer skirmish,\nor even a full-scale gala massacre.
 		Prerequisites: ~vehicles.human
 		BuildPaletteOrder: 90
-		#BuildDuration: 18
+		BuildDuration: 18
 	Selectable:
 		Class: V3
 	Turreted:
@@ -276,7 +276,7 @@ TankHunter:
 		Description: This quick, deadly vehicle emits a massive short\nrange electric discharge. The Tank Hunter is\ndevastating in close combat but has no ranged weapon\nand is vulnerable in situations where it cannot close\non its prey.
 		Prerequisites: ~vehicles.fguard
 		BuildPaletteOrder: 100
-		#BuildDuration: 21
+		BuildDuration: 21
 	Selectable:
 		Class: V4
 	Voiced:
@@ -304,7 +304,7 @@ PhaseTank:
 		Description: Using limited phasing technology, the Phase Tank\ncan bury itself underground in order to ambush\nenemy units. However, the Phase Tank must surface\nto move or fire and can be fired upon and take damage\nwhile submerged. Although the phased energy shield\nsurrounding the vehicle serves to protect it and\nminimise damage, the Phase Tank is essentially\ndefenceless while underground.
 		Prerequisites: ~vehicles.human, phasing
 		BuildPaletteOrder: 100
-		#BuildDuration: 18
+		BuildDuration: 18
 	Selectable:
 		Class: V5
 	Voiced:
@@ -333,7 +333,7 @@ FlakJack:
 		Description: A revamped Construction Rig outfitted with two\nshoulder-mounted particle launchers. The Flak Jack\nsalvages metal from the battlefield and converts\nit into microscopic metallic particles that it fires\nin clouds which cause sustained damage to air units.\nThe unit has no defensive capability against ground\nattack, and should be protected at all times.
 		Prerequisites: ~vehicles.human, hq, upgrade.hq1
 		BuildPaletteOrder: 100
-		#BuildDuration: 15
+		BuildDuration: 15
 	Selectable:
 		Class: V6
 	Voiced:
@@ -361,7 +361,7 @@ TripleRailHoverTank:
 		Description: The pinnacle of Freedom Guard armour, the Triple\nRail uses hover technology stolen from the Imperium\nto allow movement over a broader range of terrain\ntypes. Hauling three electro magnetic projectile\naccelerator cannons, or rail guns, this tank is a\nsavage consumer of Imperium armour.
 		Prerequisites: ~vehicles.fguard, hq, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 110
-		#BuildDuration: 39
+		BuildDuration: 39
 	Selectable:
 		Class: V7
 		Bounds: 1877, 1877, 0, 170
@@ -402,7 +402,7 @@ HellstormArtillery:
 		Description: The Hellstorm Artillery fires a long-range,\narea-effect explosive. Its range is more than four\ntimes longer than any other unit. A battery of\nArtillery is capable of single-handedly destroying\nan enemy base, but, the vehicle is slow and lightly\narmoured, so undefended Artillery is fodder in\nclose combat.
 		Prerequisites: ~vehicles.human, hq, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 110
-		#BuildDuration: 33
+		BuildDuration: 33
 	Selectable:
 		Class: V8
 		Bounds: 1536, 1536, 0, 170
@@ -432,7 +432,7 @@ ShockWave:
 		Description: A single-use unit that creates an immense earth wave\nthat travels across the map, causing severe damage\nto everything in its wake. The unit is armed by\ndouble-clicking on it and then fired at an enemy\ntarget to determine the direction of the wave. The\nShock Wave unit then embeds in the ground and\ndetonates, self-destructing in the discharge. The\nShock Wave is expensive and slow to build but well\nworth the wait.
 		Prerequisites: ~vehicles.human, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1, phasing, upgrade.phasing
 		BuildPaletteOrder: 200
-		#BuildDuration: 120
+		BuildDuration: 120
 	Selectable:
 		Class: V9
 	Voiced:
@@ -475,7 +475,7 @@ WaterContaminator:
 		Description: This vehicle can pollute and permanently destroy\nfreshwater springs. It is slow and extremely expensive,\nbut once you have cut off your enemies’ resources,\ntheir ruin is inevitable.
 		Prerequisites: ~vehicles, hq, ~upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
 		BuildPaletteOrder: 200
-		#BuildDuration: 150
+		BuildDuration: 150
 	Selectable:
 		Class: V10
 	Voiced:
@@ -541,7 +541,7 @@ ScoutRunner:
 		Description: This fast moving hover vehicle is armed with a\nlaser and is fairly effective against both infantry\nand armour. However, it is not very sturdy, and is\nused primarily for front line reconnaissance.
 		Prerequisites: ~vehicles.cyborg, hq
 		BuildPaletteOrder: 130
-		#BuildDuration: 15
+		BuildDuration: 15
 	Selectable:
 		Class: V12
 	Voiced:
@@ -569,7 +569,7 @@ ITT:
 		Description: Armed with a laser rifle, the Troop Transport can\ncarry up to five infantry units at a time.
 		Prerequisites: ~vehicles.cyborg, hq
 		BuildPaletteOrder: 130
-		#BuildDuration: 18
+		BuildDuration: 18
 	Selectable:
 		Class: V13
 		Bounds: 1536, 1536, 0, 0
@@ -620,7 +620,7 @@ PlasmaTank:
 		Description: Backbone of the Imperium war effort, the Plasma Tank\nis tough and packs a formidable plasma cannon. The\nImperium overruns the enemy with endless waves of\nthese ruinous machines.
 		Prerequisites: ~vehicles.imperium, hq
 		BuildPaletteOrder: 130
-		#BuildDuration: 21
+		BuildDuration: 21
 	Selectable:
 		Class: V14
 	Voiced:
@@ -661,7 +661,7 @@ Amper:
 		Description: The Imperium's version of first aid, this lunatic\ncyborg fires darts into dying infantry units that\nboost the target’s health to full, but leave the\nunit poisoned so that its health will steadily\ndecrease until the unit dies. The Amper can also be\nused as an offensive weapon, bringing slow death\nto enemy infantry.
 		Prerequisites: ~vehicles.imperium, hq, barracks, hospital
 		BuildPaletteOrder: 140
-		#BuildDuration: 15
+		BuildDuration: 15
 	Selectable:
 		Class: V15
 	Voiced:
@@ -692,7 +692,7 @@ MAD:
 		Description: The M.A.D. fires bladed orbs at enemy air units.\nLike the Freedom Guard Flak Jack, it cannot fire\nat ground units and should be defended against land\nattack.
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1
 		BuildPaletteOrder: 140
-		#BuildDuration: 24
+		BuildDuration: 24
 	Selectable:
 		Class: V6
 		Bounds: 1536, 1536, 0, 0
@@ -722,7 +722,7 @@ Shredder:
 		Description: A huge, hovering nightmare, the Shredder tears through\ninfantry like a runaway saw. Although it has no ranged\nattack, it is fast, heavily armoured, and inflicts\nsevere damage on any infantry units foolish enough\nto get near it.
 		Prerequisites: ~vehicles.imperium, hq
 		BuildPaletteOrder: 150
-		#BuildDuration: 21
+		BuildDuration: 21
 	Selectable:
 		Class: V16
 	Voiced:
@@ -750,7 +750,7 @@ HostageTaker:
 		Description: This diabolical Imperium vehicle snatches infantry\nunits, lobotomises them and converts them into Suicide\nZombies. Shortly after the infantry unit is run over\nand captured, it is released, now under the player’s\ncontrol and with a high-powered explosive strapped\nto its back.
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
-		#BuildDuration: 18
+		BuildDuration: 18
 	Selectable:
 		Class: V17
 		Bounds: 1536, 1536, 0, 0
@@ -778,7 +778,7 @@ TachionTank:
 		Description: The Tachion Tank is the largest, most heavily armed\nbeast on the battlefield. It’s a ponderous mountain\nof havoc that has the last word in any argument.\nWhen the enemy does manage to overpower one of these\njuggernaughts, it has the ability to self-destruct\nand take any nearby units down with it.
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
-		#BuildDuration: 45
+		BuildDuration: 45
 	Selectable:
 		Class: V18
 		Bounds: 1536, 1536, 0, 0
@@ -808,7 +808,7 @@ Scarab:
 		Description: This long range weapon fires a fragmenting projectile\nthat breaks into numerous burning particles over its\ntarget. This vehicle is slow and lightly armoured,\nbut it can enclose itself in a retractable armoured\nexoskeleton when it gets in trouble. The unit cannot\nfire while this armour is engaged, but can weather\na considerable beating while waiting for reinforcements.
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
-		#BuildDuration: 39
+		BuildDuration: 39
 	Selectable:
 		Class: V8
 		Bounds: 1536, 1536, 0, 170
@@ -840,7 +840,7 @@ SkyBike:
 		Description: Using a modified Spider Bike chassis, the Freedom\nGuard were able to produce cheap, fast aerial units\nwhich could attack enemy ground troops and other\nflyers. Although quicker than the Imperium Cyclone,\nthe Sky Bike is not as heavily armoured and is\noutgunned in even combat. The speed of the Sky Bike,\nhowever, allows it to dictate the circumstance of\nconflict. This unit fires high-velocity mini-missiles\nand, like the Outrider, must re-arm at the Re-Arming\nDeck.
 		Prerequisites: ~vehicles.human, air, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
 		BuildPaletteOrder: 120
-		#BuildDuration: 24
+		BuildDuration: 24
 	Voiced:
 		VoiceSet: AirUnitVoice
 	Valued:
@@ -879,7 +879,7 @@ Outrider:
 		Description: This ground attack aerial unit is slower and less\nmanoeuvrable than the Sky Bike, but considerably\ntougher and fires air to ground missiles. Deadly\neffective against Imperium armour, it cannot engage\nother air units and should be escorted by air defence\nunits. The Outrider has limited ammunition and must\nre-arm at the Re-Arming Deck.
 		Prerequisites: ~vehicles.fguard, air, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
 		BuildPaletteOrder: 120
-		#BuildDuration: 42
+		BuildDuration: 42
 	Voiced:
 		VoiceSet: AirUnitVoice
 	Valued:
@@ -918,7 +918,7 @@ ReconDrone:
 		Description: This small unmanned drone is lightly armoured and\nhas no offensive capability. It is used solely to\nscout enemy targets.
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1
 		BuildPaletteOrder: 150
-		#BuildDuration: 12
+		BuildDuration: 12
 	Voiced:
 		VoiceSet: ReconDroneVoice
 	Valued:
@@ -945,7 +945,7 @@ Cyclone:
 		Description: The Cyclone embodies the core of the Imperium aerial\nforce. The unit is fairly rugged and can engage both\nair and ground units. However, the Cyclone’s neutron\ncannon has a limited energy source and must recharge\nat the Re-Arming Deck.
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
-		#BuildDuration: 45
+		BuildDuration: 45
 	Voiced:
 		VoiceSet: CycloneVoice
 	Valued:
@@ -983,7 +983,7 @@ SkyFortress:
 		Description: Death from above. This floating platform of wreckage\nhouses the largest plasma cannon known to humanity.\nIt's slow to recharge but makes a lasting impact.
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
-		#BuildDuration: 75
+		BuildDuration: 75
 	Selectable:
 		Bounds: 1194, 1194, 0, 0
 		DecorationBounds: 1365, 1365, 0, 0

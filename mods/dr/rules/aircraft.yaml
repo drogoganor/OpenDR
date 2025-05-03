@@ -10,7 +10,7 @@ SkyBike:
 		Description: Using a modified Spider Bike chassis, the Freedom\nGuard were able to produce cheap, fast aerial units\nwhich could attack enemy ground troops and other\nflyers. Although quicker than the Imperium Cyclone,\nthe Sky Bike is not as heavily armoured and is\noutgunned in even combat. The speed of the Sky Bike,\nhowever, allows it to dictate the circumstance of\nconflict. This unit fires high-velocity mini-missiles\nand, like the Outrider, must re-arm at the Re-Arming\nDeck.
 		Prerequisites: ~vehicles.human, air, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
 		BuildPaletteOrder: 120
-		#BuildDuration: 24
+		BuildDuration: 24
 	Voiced:
 		VoiceSet: AirUnitVoice
 	Valued:
@@ -49,7 +49,7 @@ Outrider:
 		Description: This ground attack aerial unit is slower and less\nmanoeuvrable than the Sky Bike, but considerably\ntougher and fires air to ground missiles. Deadly\neffective against Imperium armour, it cannot engage\nother air units and should be escorted by air defence\nunits. The Outrider has limited ammunition and must\nre-arm at the Re-Arming Deck.
 		Prerequisites: ~vehicles.fguard, air, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
 		BuildPaletteOrder: 120
-		#BuildDuration: 42
+		BuildDuration: 42
 	Voiced:
 		VoiceSet: AirUnitVoice
 	Valued:
@@ -88,7 +88,7 @@ ReconDrone:
 		Description: This small unmanned drone is lightly armoured and\nhas no offensive capability. It is used solely to\nscout enemy targets.
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1
 		BuildPaletteOrder: 150
-		#BuildDuration: 12
+		BuildDuration: 12
 	Voiced:
 		VoiceSet: ReconDroneVoice
 	Valued:
@@ -115,7 +115,7 @@ Cyclone:
 		Description: The Cyclone embodies the core of the Imperium aerial\nforce. The unit is fairly rugged and can engage both\nair and ground units. However, the Cyclone’s neutron\ncannon has a limited energy source and must recharge\nat the Re-Arming Deck.
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
-		#BuildDuration: 45
+		BuildDuration: 45
 	Voiced:
 		VoiceSet: CycloneVoice
 	Valued:
@@ -153,7 +153,7 @@ SkyFortress:
 		Description: Death from above. This floating platform of wreckage\nhouses the largest plasma cannon known to humanity.\nIt's slow to recharge but makes a lasting impact.
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
-		#BuildDuration: 75
+		BuildDuration: 75
 	Selectable:
 		Bounds: 1194, 1194, 0, 0
 		DecorationBounds: 1365, 1365, 0, 0

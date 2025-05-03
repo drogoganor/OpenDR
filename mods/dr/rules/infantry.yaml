@@ -9,7 +9,7 @@ Raider:
 		Description: Stalwart of the Freedom Guard cause, the Raider is\narmed with a laser rifle. Once the Phasing Facility\nis constructed, the Raider gains the ability to\nphase underground.
 		Prerequisites: ~infantry.human
 		BuildPaletteOrder: 10
-		#BuildDuration: 6
+		BuildDuration: 6
 	Selectable:
 		Class: E1
 	Voiced:
@@ -38,7 +38,7 @@ Mercenary:
 		Description: Recruited from outside the Freedom Guard ranks,\nthese paid guns carry a massive shoulder-mounted\nrail gun. Highly trained and ruthless, the Mercenary\nis tougher and deadlier than the Raider.
 		Prerequisites: ~infantry.fguard
 		BuildPaletteOrder: 10
-		#BuildDuration: 11
+		BuildDuration: 11
 	Selectable:
 		Class: E2
 	Voiced:
@@ -70,7 +70,7 @@ Sniper:
 		Description: With a long range electro magnetic needle gun, the\nSniper is lethal against infantry targets. Like the\nScout, the Sniper can morph into objects for\ncamouflage.
 		Prerequisites: ~infantry.human, hq, upgrade.hq1, vehicles, barracks, upgrade.barracks1
 		BuildPaletteOrder: 10
-		#BuildDuration: 21
+		BuildDuration: 21
 	Selectable:
 		Class: E3
 	Voiced:
@@ -126,7 +126,7 @@ Scout:
 		Description: Used mainly for front line surveillance, the Scout\nis able to morph into inanimate objects such as\ntrees and rocks to conceal her position. The Scout\nis relatively fast but wears no body armour, so\ncombat is not her speciality.
 		Prerequisites: ~infantry.human
 		BuildPaletteOrder: 20
-		#BuildDuration: 9
+		BuildDuration: 9
 	Selectable:
 		Class: E4
 	Voiced:
@@ -180,7 +180,7 @@ Medic:
 		Description: The Field Medic can restore the health of wounded\ninfantry units and administer an antitoxin to\ncounteract the effects of the Amper. The Field Medic\nwill automatically heal damaged units that are nearby\nor can be directed to heal a specific unit. The\nField Medic has no attack capability and does not\nwear body armour.
 		Prerequisites: ~infantry.human, hospital
 		BuildPaletteOrder: 20
-		#BuildDuration: 15
+		BuildDuration: 15
 	Selectable:
 		Class: E5
 		Bounds: 1109, 1194, 85, -42
@@ -219,7 +219,7 @@ Saboteur:
 		Description: The Saboteur can damage any building to half its\nmaximum health.
 		Prerequisites: ~infantry.fguard, hq, upgrade.hq1, vehicles, barracks, upgrade.barracks1
 		BuildPaletteOrder: 20
-		#BuildDuration: 24
+		BuildDuration: 24
 		Icon: icon-saboteur
 	Selectable:
 		Class: E6
@@ -252,7 +252,7 @@ Mechanic:
 		Description: The Mechanic functions similarly to the Field Medic,\nrepairing damaged vehicles in the field. The Mechanic\nhas no attack capability.
 		Prerequisites: ~infantry.human, vehicles, repair
 		BuildPaletteOrder: 30
-		#BuildDuration: 15
+		BuildDuration: 15
 	Selectable:
 		Class: E7
 	Voiced:
@@ -289,7 +289,7 @@ Martyr:
 		Description: Freedom Guard soldiers who are approaching their\n25th birthday, and therefore certain death, are\noutfitted with a high-powered explosive device and\nthen sent screaming into the enemy to die for the\ncause. Sometimes soldiers not popular with their\ncommanding officers are "volunteered" for this service\nbefore their 25th birthday.
 		Prerequisites: ~infantry.fguard
 		BuildPaletteOrder: 30
-		#BuildDuration: 18
+		BuildDuration: 18
 	Selectable:
 		Class: E8
 	Voiced:
@@ -331,7 +331,7 @@ Guardian:
 		Description: Known as the Guardians of Order in the peaceful era\nbefore the Freedom Guard uprising, the basic Imperium\ninfantry unit is armed with a laser rifle and wears\na powered armour suit.
 		Prerequisites: ~infantry.imperium
 		BuildPaletteOrder: 10
-		#BuildDuration: 6
+		BuildDuration: 6
 	Selectable:
 		Class: E1
 	Voiced:
@@ -362,7 +362,7 @@ Bion:
 		Description: A fearless mechanical killer, the Bion is armoured\nlike a walking tank. This one-man cyborg death\nsquad carries a massive plasma rifle, and can fire\nat both ground and air units.
 		Prerequisites: ~infantry.cyborg
 		BuildPaletteOrder: 20
-		#BuildDuration: 12
+		BuildDuration: 12
 	Selectable:
 		Class: E2
 	Voiced:
@@ -395,7 +395,7 @@ Exterminator:
 		Description: These infantry units are equipped with anti-gravity\ngenerators which allow them to hover over water.\nAs infantry, they can also move over steep gradients\nthat are generally inaccessible to hover vehicles.\nExterminators are armed with chemical grenades that\ndissolve metal. They are very effective at attacking\narmour.
 		Prerequisites: ~infantry.cyborg, hq, upgrade.hq1, barracks, vehicles, upgrade.assemblyplant1
 		BuildPaletteOrder: 30
-		#BuildDuration: 15
+		BuildDuration: 15
 	Selectable:
 		Class: E9
 	Voiced:
@@ -425,7 +425,7 @@ Infiltrator:
 	Buildable:
 		Description: The Infiltrator can morph into enemy infantry and\nis able to steal plans for enemy units and buildings.\nThe unit can also observe the opponent’s Minimap\nat the HQ building. Plans for units are obtained\nat the building where that unit is produced. The\nInfiltrator must return safely to his own HQ with\nall stolen plans.
 		BuildPaletteOrder: 40
-		#BuildDuration: 30
+		BuildDuration: 30
 		Prerequisites: hq, upgrade.hq1, vehicles, barracks, upgrade.barracks1
 	Selectable:
 		Class: E10

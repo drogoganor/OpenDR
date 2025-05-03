@@ -9,7 +9,7 @@ TickTank:
 		Description: Togran light tank.
 		Prerequisites: ~vehicles.togran
 		BuildPaletteOrder: 90
-		#BuildDuration: 15
+		BuildDuration: 15
 	Selectable:
 		Class: V1
 	Voiced:
@@ -49,7 +49,7 @@ WalkerScout:
 		Description: Fast scout and infantry carrier for two.
 		Prerequisites: ~vehicles.togran
 		BuildPaletteOrder: 90
-		#BuildDuration: 14
+		BuildDuration: 14
 	Selectable:
 		Class: V2
 	Voiced:
@@ -101,7 +101,7 @@ HoverAssaultTank:
 		Description: Togran alt light tank
 		Prerequisites: ~vehicles.togran
 		BuildPaletteOrder: 90
-		#BuildDuration: 18
+		BuildDuration: 18
 	Selectable:
 		Class: V14
 	Voiced:
@@ -141,7 +141,7 @@ FlamingDeath:
 		Description: Togran medium tank
 		Prerequisites: ~vehicles.togran, hq, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 110
-		#BuildDuration: 39
+		BuildDuration: 39
 	Selectable:
 		Class: V2
 	Voiced:
@@ -181,7 +181,7 @@ VortexTank:
 		Description: Togran heavy tank
 		Prerequisites: ~vehicles.togran, hq, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 110
-		#BuildDuration: 33
+		BuildDuration: 33
 	Selectable:
 		Class: V14
 	Voiced:
@@ -221,7 +221,7 @@ SonicThumper:
 		Description: Togran special tank.
 		Prerequisites: ~vehicles.togran, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1, phasing, upgrade.phasing
 		BuildPaletteOrder: 200
-		#BuildDuration: 120
+		BuildDuration: 120
 	Selectable:
 		Class: E1
 	Voiced:

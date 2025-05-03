@@ -25,7 +25,7 @@ Player:
 	ClassicProductionQueue@DummyQueue:
 		Type: Dummy
 		Group: Dummy
-		#BuildDurationModifier: 100 # DR build rate 2486
+		BuildDurationModifier: 2486 # DR build rate 2486
 		LowPowerModifier: 100
 	Shroud:
 		FogCheckboxDisplayOrder: 3

@@ -694,7 +694,7 @@ Hospital.cyborg:
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, barracks
 		BuildPaletteOrder: 50
-		#BuildDuration: 15
+		BuildDuration: 15
 	ProvidesPrerequisite@hospital:
 		Prerequisite: hospital
 	RepairsUnits:

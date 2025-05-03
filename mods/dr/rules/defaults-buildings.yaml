@@ -65,7 +65,7 @@
 	Inherits@3: ^SpriteActor
 	ActorPreviewPlaceBuildingPreview:
 	Buildable:
-		#BuildDurationModifier: 2486 # DR build rate
+		BuildDurationModifier: 2486 # DR build rate
 	Huntable:
 	UpdatesPlayerStatistics:
 	#FootprintPlaceBuildingPreview:
@@ -84,10 +84,10 @@
 		Dimensions: 1,1
 		Footprint: x
 		TerrainTypes: Clear,Road,Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, RoadBase
-		RequiresBaseProvider: True
+		RequiresBaseProvider: False
 		BuildSounds: Building
-	RequiresBuildableArea:
-		AreaTypes: building
+	#RequiresBuildableArea:
+	#	AreaTypes: building
 	RevealsShroud:
 		Range: 3c0
 	WithSpriteBody:
@@ -127,10 +127,10 @@
 		RepairingNotification: Repairing
 	InstantlyRepairable:
 	CaptureManager:
-	GivesBuildableArea:
-		AreaTypes: building
-	RequiresBuildableArea:
-		AreaTypes: building
+	#GivesBuildableArea:
+	#	AreaTypes: building
+	#RequiresBuildableArea:
+	#	AreaTypes: building
 	MustBeDestroyed:
 		RequiredForShortGame: false
 	Capturable:
@@ -180,7 +180,7 @@
 		Queue: Building
 		BuildPaletteOrder: 0
 		Prerequisites: anypower
-		#BuildDuration: 22
+		BuildDuration: 22
 		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
 	Building:
 		Footprint: _xx_ xxxx xxxx xxx_
@@ -201,11 +201,11 @@
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 0
-		#BuildDuration: 22
+		BuildDuration: 22
 		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
 	BaseBuilding:
 	Valued:
-		Cost: 2000
+		Cost: 750
 	Armor:
 		Type: BuildingArmour
 
@@ -255,7 +255,7 @@
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		#BuildDurationModifier: 2486 # DR build rate
+		BuildDurationModifier: 2486 # DR build rate
 		LowPowerModifier: 300
 	ParallelProductionQueue@Upgrade:
 		Type: Upgrade
@@ -263,7 +263,7 @@
 		QueuedAudio: Upgrading
 		ReadyAudio: ConstructionComplete
 		BlockedAudio: Upgrading
-		#BuildDurationModifier: 2486 # DR build rate
+		BuildDurationModifier: 2486 # DR build rate
 		LowPowerModifier: 300
 	ProductionBar@Economy:
 		ProductionType: Economy
@@ -271,7 +271,7 @@
 		ProductionType: Upgrade
 		Color: FEEC56
 	Valued:
-		Cost: 2000
+		Cost: 750
 	RevealsShroud:
 		Range: 8c0
 	Power:
@@ -323,9 +323,9 @@
 		Description: Trains infantry.
 		Prerequisites: ~anypower, hq
 		BuildPaletteOrder: 30
-		#BuildDuration: 45
+		BuildDuration: 45
 	Valued:
-		Cost: 500
+		Cost: 1500
 	Armor:
 		Type: Building
 	Building:
@@ -343,7 +343,7 @@
 	Tooltip:
 		Name: Training Facility
 	Valued:
-		Cost: 500
+		Cost: 1500
 	RevealsShroud:
 		Range: 8c0
 	Power:
@@ -365,7 +365,7 @@
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		#BuildDurationModifier: 2486 # DR build rate
+		BuildDurationModifier: 2486 # DR build rate
 		LowPowerModifier: 300
 	ProductionBar:
 		ProductionType: Infantry
@@ -419,7 +419,7 @@
 		Queue: Building
 		Prerequisites: ~anypower, barracks, hq
 		BuildPaletteOrder: 40
-		#BuildDuration: 66
+		BuildDuration: 66
 		Description: Produces vehicles.
 	Building:
 		Footprint: ===__ =xx== xxxxx ==xxx ==xx=
@@ -429,7 +429,7 @@
 		Bounds: 5120, 5120, 0, 0
 		DecorationBounds: 5120, 5120, 0, 0
 	Valued:
-		Cost: 2000
+		Cost: 2200
 	Armor:
 		Type: BuildingArmour
 	Targetable:
@@ -448,7 +448,7 @@
 	Tooltip:
 		Name: Assembly Plant
 	Valued:
-		Cost: 2000
+		Cost: 2200
 	RevealsShroud:
 		Range: 8c0
 	Power:
@@ -470,7 +470,7 @@
 		QueuedAudio: Building
 		OnHoldAudio: OnHold
 		CancelledAudio: Cancelled
-		#BuildDurationModifier: 2486 # DR build rate
+		BuildDurationModifier: 2486 # DR build rate
 		LowPowerModifier: 300
 	ProvidesPrerequisite@buildingname:
 	ProvidesPrerequisite@vehicles:
@@ -567,7 +567,7 @@
 		Description: Generic
 		Prerequisites: ~anypower
 		BuildPaletteOrder: 30
-		#BuildDuration: 45
+		BuildDuration: 45
 	Valued:
 		Cost: 1500
 	RevealsShroud:
