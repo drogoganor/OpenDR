@@ -8,7 +8,7 @@ Metadata:
 PackageFormats: FtgFile
 
 FileSystem: ContentInstallerFileSystem
-	Packages:
+	SystemPackages:
 		^EngineDir
 		$dr: dr
 		^EngineDir|mods/common: common
@@ -40,7 +40,7 @@ FileSystem: ContentInstallerFileSystem
 		content|addon/aurunits/aursprite.ftg
 		content|addon/terrorist/terrsound.ftg
 		content|addon/terrorist/terrsprite.ftg
-	ContentFiles:
+	RequiredContentFiles:
 		content|BARREN/BARREN.PAL
 		content|BARREN/BARREN.TIL
 		content|JUNGLE/JUNGLE.PAL

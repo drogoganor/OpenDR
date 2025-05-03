@@ -194,3 +194,4 @@ EditorWorld:
 	EditorActionManager:
 	BuildableTerrainOverlay:
 		AllowedTerrainTypes: Clear, Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase
+	MarkerLayerOverlay:
