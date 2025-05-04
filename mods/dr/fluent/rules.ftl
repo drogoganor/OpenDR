@@ -594,7 +594,6 @@ actor-terroristhospitalunit-name = Terrorist Hospital Unit
 
 ## structures-addon.yaml
 
-
 actor-windpowergenerator-name = Wind Power Generator
 
 actor-pulseblasterturret-name = Pulse Blaster Turret
@@ -607,6 +606,13 @@ actor-terroristfieldhospital-name = Terrorist Field Hospital
 actor-terroristrepairbay-name = Terrorist Repair Bay
 actor-terroristrearmingdeck-name = Terrorist Rearming Deck
 
+
+## ships-addon.yaml
+
+actor-terroristwaterbornetroopcarrier-name = Terrorist Water-borne Troop Carrier
+actor-terroristwaa-name = Terrorist WAA
+actor-terroristwatertank-name = Terrorist Water Tank
+actor-terroristwatershock-name = Terrorist Water Shock
 
 ## defaults.yaml
 
@@ -694,3 +700,5 @@ temporal-gate-power =
     .name = Temporal Gate
     .description = Teleports a group of units across
     the map for 20 seconds.
+
+build-cancel-button-label = Cancel

@@ -691,7 +691,7 @@ Container@PLAYER_WIDGETS:
 					Height: 26
 					X: 5
 					Y: 0
-					Text: Cancel
+					Text: build-cancel-button-label
 		Container@HPF_ROOT:
 			Logic: LoadIngameHierarchicalPathFinderOverlayLogic
 			X: WINDOW_WIDTH - WIDTH - 260

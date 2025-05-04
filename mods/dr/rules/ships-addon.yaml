@@ -4,7 +4,7 @@ TerroristWaterborneTroopCarrier:
 	RenderSprites:
 		Image: uttwtst0
 	Tooltip:
-		Name: Terrorist Water-borne Troop Carrier
+		Name: actor-terroristwaterbornetroopcarrier-name
 	Selectable:
 		Class: N2
 	Voiced:
@@ -25,7 +25,7 @@ TerroristWAA:
 	RenderSprites:
 		Image: unwaast0
 	Tooltip:
-		Name: Terrorist WAA
+		Name: actor-terroristwaa-name
 	Selectable:
 		Class: N3
 	Voiced:
@@ -46,7 +46,7 @@ TerroristWaterTank:
 	RenderSprites:
 		Image: unwtkst0
 	Tooltip:
-		Name: Terrorist Water Tank
+		Name: actor-terroristwatertank-name
 	Selectable:
 		Class: N4
 	Voiced:
@@ -67,7 +67,7 @@ TerroristWaterShock:
 	RenderSprites:
 		Image: unwswst0
 	Tooltip:
-		Name: Terrorist Water Shock
+		Name: actor-terroristwatershock-name
 	Selectable:
 		Class: E1
 	Voiced:

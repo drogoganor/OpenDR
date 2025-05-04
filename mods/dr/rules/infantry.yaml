@@ -96,8 +96,8 @@ Sniper:
 		RevealDisguiseOn: Move, Attack
 	-Tooltip:
 	DisguiseTooltip:
-		Name: Sniper
-		GenericName: Tree
+		Name: actor-sniper.name
+		GenericName: actor-tree-name
 	-Guard:
 	AutoTarget:
 		InitialStance: HoldFire
@@ -150,8 +150,8 @@ Scout:
 		RevealDisguiseOn: Move
 	-Tooltip:
 	DisguiseTooltip:
-		Name: Scout
-		GenericName: Tree
+		Name: actor-scout.name
+		GenericName: actor-tree-name
 	-Guard:
 	AutoTarget:
 		InitialStance: HoldFire
@@ -423,7 +423,7 @@ Infiltrator:
 	-Tooltip:
 	DisguiseTooltip:
 		Name: actor-infiltrator.name
-		GenericName: Soldier
+		GenericName: actor-soldier-name
 	Buildable:
 		Description: actor-infiltrator.description
 		BuildPaletteOrder: 40
