@@ -176,7 +176,7 @@ SpiderBike:
 	Valued:
 		Cost: 500
 	Health:
-		HP: 133
+		HP: 266
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -206,7 +206,7 @@ RAT:
 	Valued:
 		Cost: 450
 	Health:
-		HP: 200
+		HP: 400
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -258,7 +258,7 @@ SkirmishTank:
 	Valued:
 		Cost: 600
 	Health:
-		HP: 133
+		HP: 450
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -628,7 +628,7 @@ PlasmaTank:
 	Valued:
 		Cost: 700
 	Health:
-		HP: 250
+		HP: 350
 	RevealsShroud:
 		Range: 9c0
 	Mobile:

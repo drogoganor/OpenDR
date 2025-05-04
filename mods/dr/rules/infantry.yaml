@@ -17,7 +17,7 @@ Raider:
 	Valued:
 		Cost: 150
 	Health:
-		HP: 100
+		HP: 200
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
@@ -46,7 +46,7 @@ Mercenary:
 	Valued:
 		Cost: 300
 	Health:
-		HP: 125
+		HP: 300
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
@@ -134,7 +134,7 @@ Scout:
 	Valued:
 		Cost: 300
 	Health:
-		HP: 66
+		HP: 225
 	RevealsShroud:
 		Range: 12c0
 	Mobile:
@@ -190,7 +190,7 @@ Medic:
 	Valued:
 		Cost: 500
 	Health:
-		HP: 66
+		HP: 150
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
@@ -228,7 +228,7 @@ Saboteur:
 	Valued:
 		Cost: 800
 	Health:
-		HP: 100
+		HP: 150
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -339,7 +339,7 @@ Guardian:
 	Valued:
 		Cost: 150
 	Health:
-		HP: 100
+		HP: 200
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
@@ -370,7 +370,7 @@ Bion:
 	Valued:
 		Cost: 350
 	Health:
-		HP: 150
+		HP: 300
 	-Crushable:
 	RevealsShroud:
 		Range: 8c0

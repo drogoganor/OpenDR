@@ -384,7 +384,7 @@ Chaff: # Flack Jack
 
 LaserRifle:
 	Inherits: ^E2
-	ReloadDelay: 11
+	ReloadDelay: 44
 	Range: 4c0
 	Report: gxlgnwc0.wav
 	ValidTargets: Ground
@@ -432,7 +432,7 @@ LaserRifleOriginal:
 
 RailGun:
 	Inherits: ^E1
-	ReloadDelay: 15
+	ReloadDelay: 30
 	Range: 5c0
 	Report: gxmrcwc0.wav
 	Projectile: Bullet
@@ -448,7 +448,7 @@ RailGun:
 
 DoubleRailGun:
 	Inherits: ^E1
-	ReloadDelay: 18
+	ReloadDelay: 36
 	Range: 5c0
 	Report: gxspbwc0.wav
 	Projectile: Bullet
@@ -464,7 +464,7 @@ DoubleRailGun:
 		
 TripleRailGun:
 	Inherits: ^E1
-	ReloadDelay: 28
+	ReloadDelay: 56
 	Range: 8c0
 	Report: gxtrtwc0.wav
 	Projectile: Bullet
@@ -480,7 +480,7 @@ TripleRailGun:
 
 SkirmishGun1:
 	Inherits: ^M2
-	ReloadDelay: 28
+	ReloadDelay: 56
 	Range: 6c0
 	Burst: 2
 	BurstDelays: 9
@@ -518,7 +518,7 @@ SniperRifle:
 
 PlasmaCannon:
 	Inherits: ^E3
-	ReloadDelay: 21
+	ReloadDelay: 42
 	Range: 5c0
 	Report: gxpltwc0.wav
 	Projectile: Bullet
@@ -534,7 +534,7 @@ PlasmaCannon:
 
 PlasmaRifle: # Bion
 	Inherits: ^E3
-	ReloadDelay: 11
+	ReloadDelay: 22
 	Range: 4c0
 	Report: gxbonwc0.wav
 	ValidTargets: Air, Ground
