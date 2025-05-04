@@ -150,7 +150,7 @@ namespace OpenRA.Mods.Dr.Orders
 			var owner = queue.Actor.Owner;
 			if (mi.Button == MouseButton.Left)
 			{
-				var orderType = "BuildUnitPlaceBuilding";
+				const string OrderType = "BuildUnitPlaceBuilding";
 				var topLeft = TopLeft;
 				var notification = queue.Info.CannotPlaceAudio ?? placeBuildingInfo.CannotPlaceNotification;
 				var ai = variants[variant].ActorInfo;
@@ -161,12 +161,10 @@ namespace OpenRA.Mods.Dr.Orders
 				{
 					Game.Sound.PlayNotification(world.Map.Rules, owner, "Speech", notification, owner.Faction.InternalName);
 					TextNotificationsManager.AddTransientLine(owner, placeBuildingInfo.CannotPlaceTextNotification);
-
-					yield break;
 				}
 				else
 				{
-					yield return new Order(orderType, owner.PlayerActor, Target.FromCell(world, topLeft), false)
+					yield return new Order(OrderType, owner.PlayerActor, Target.FromCell(world, topLeft), false)
 					{
 						// Building to place
 						TargetString = actorInfo.Name,
@@ -202,7 +200,9 @@ namespace OpenRA.Mods.Dr.Orders
 
 			var isCloseEnough = buildingInfo.IsCloseEnoughToBase(world, world.LocalPlayer, actorInfo, topLeft);
 			foreach (var t in buildingInfo.Tiles(topLeft))
-				footprint.Add(t, MakeCellType(isCloseEnough && world.IsCellBuildable(t, actorInfo, buildingInfo) && (resourceLayer == null || resourceLayer.GetResource(t).Type == null)));
+				footprint.Add(
+					t,
+					MakeCellType(isCloseEnough && world.IsCellBuildable(t, actorInfo, buildingInfo) && (resourceLayer == null || resourceLayer.GetResource(t).Type == null)));
 
 			return preview?.Render(wr, topLeft, footprint) ?? Enumerable.Empty<IRenderable>();
 		}

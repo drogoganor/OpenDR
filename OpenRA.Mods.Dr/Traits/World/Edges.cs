@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace OpenRA.Mods.Dr.Traits
@@ -32,11 +33,13 @@ namespace OpenRA.Mods.Dr.Traits
 		[FieldLoader.LoadUsing("LoadNeighbors")]
 		public Dictionary<string, DrEdgeNeighborInfo> Neighbors;
 
+#pragma warning disable IDE0051 // Remove unused private members
 		static object LoadNeighbors(MiniYaml yaml)
+#pragma warning restore IDE0051 // Remove unused private members
 		{
 			var retList = new Dictionary<string, DrEdgeNeighborInfo>();
 			var neighbors = yaml.Nodes.First(x => x.Key == "Neighbors");
-			foreach (var node in neighbors.Value.Nodes.Where(n => n.Key.StartsWith("NeighborMatch")))
+			foreach (var node in neighbors.Value.Nodes.Where(n => n.Key.StartsWith("NeighborMatch", StringComparison.InvariantCulture)))
 			{
 				var ret = new DrEdgeNeighborInfo();
 				FieldLoader.Load(ret, node.Value);

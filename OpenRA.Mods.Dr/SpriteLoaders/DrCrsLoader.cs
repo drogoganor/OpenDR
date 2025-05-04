@@ -30,10 +30,10 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 		class DrCrsFrame : ISpriteFrame
 		{
-			public SpriteFrameType Type { get; private set; }
-			public Size Size { get; private set; }
-			public Size FrameSize { get; private set; }
-			public float2 Offset { get; private set; }
+			public SpriteFrameType Type { get; }
+			public Size Size { get; }
+			public Size FrameSize { get; }
+			public float2 Offset { get; }
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
 

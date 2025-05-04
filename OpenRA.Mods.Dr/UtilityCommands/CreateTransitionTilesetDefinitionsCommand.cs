@@ -25,9 +25,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		public ModData ModData;
 
-		protected bool ValidateArguments(string[] args)
+		protected static bool ValidateArguments(string[] _)
 		{
-			return args.Length >= 0;
+			return true;
 		}
 
 		protected void Run(Utility utility)
@@ -35,18 +35,18 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			// HACK: The engine code assumes that Game.modData is set.
 			Game.ModData = ModData = utility.ModData;
 
-			var startId = 240;
-			var startFrame = 1088;
-			var numberOfTransitionTiles = 1;
-			var numberOfValidTiles = 14;
+			const int StartId = 240;
+			const int StartFrame = 1088;
+			const int NumberOfTransitionTiles = 1;
+			const int NumberOfValidTiles = 14;
 
-			var targetPath = "..\\..\\";
+			const string TargetPath = "..\\..\\";
 
 			var sb = new StringBuilder();
-			for (int i = 0; i < (numberOfTransitionTiles * numberOfValidTiles); i++)
+			for (var i = 0; i < NumberOfTransitionTiles * NumberOfValidTiles; i++)
 			{
-				var id = startId + i;
-				var frame = startFrame + i;
+				var id = StartId + i;
+				var frame = StartFrame + i;
 
 				sb.AppendLine($"\tTemplate@{id}:");
 				sb.AppendLine($"\t\tId: {id}");
@@ -58,14 +58,14 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				sb.AppendLine("\t\t\t0: Clear");
 			}
 
-			var outFile = "TRANSITION-TILES-OUT.txt";
-			var outPath = Path.Combine(targetPath, outFile);
+			const string OutFile = "TRANSITION-TILES-OUT.txt";
+			var outPath = Path.Combine(TargetPath, OutFile);
 			using (var outputFile = new StreamWriter(outPath))
 			{
 				outputFile.Write(sb);
 			}
 
-			Console.WriteLine(outFile + " Saved.");
+			Console.WriteLine(OutFile + " Saved.");
 		}
 	}
 }

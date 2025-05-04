@@ -4,9 +4,9 @@ ScoutAlt:
 	RenderSprites:
 		Image: unwlkac1
 	Tooltip:
-		Name: Flyer Scout
+		Name: actor-scoutalt.name
 	Buildable:
-		Description: Scout flyer.
+		Description: actor-scoutalt.description
 		Prerequisites: ~vehicles.togran, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
 		BuildPaletteOrder: 210
 		BuildDuration: 45
@@ -33,7 +33,7 @@ StealthChopper:
 	RenderSprites:
 		Image: utspnst0
 	Tooltip:
-		Name: Stealth Chopper
+		Name: actor-stealthchopper-name
 	-Buildable:
 	Selectable:
 		Class: E1
@@ -61,7 +61,7 @@ TerroristAirRifterAlternate:
 	RenderSprites:
 		Image: utardst0
 	Tooltip:
-		Name: Terrorist Air Rifter Alternate
+		Name: actor-terroristairrifteralternate-name
 	-Buildable:
 	Selectable:
 		Class: A1
@@ -86,7 +86,7 @@ TerroristAirborneTroopCarrier:
 	RenderSprites:
 		Image: utattst0
 	Tooltip:
-		Name: Terrorist Airborne Troop Carrier
+		Name: actor-terroristairbornetroopcarrier-name
 	-Buildable:
 	Selectable:
 		Class: A1
@@ -111,7 +111,7 @@ SuicideBot:
 	RenderSprites:
 		Image: unminst0
 	Tooltip:
-		Name: Suicide Bot
+		Name: actor-suicidebot-name
 	-Buildable:
 	Selectable:
 		Class: A1
@@ -142,15 +142,13 @@ SuicideBot:
 		RequiresCondition: triggered
 	FireProjectilesOnDeath:
 		Weapons: SuicideNuke
-		EmptyWeapon: SuicideNuke
-		DamageSource: Killer
 
 TerroristAirRifter:
 	Inherits: ^Aircraft
 	RenderSprites:
 		Image: utarfst0
 	Tooltip:
-		Name: Terrorist Air Rifter
+		Name: actor-terroristairrifter-name
 	-Buildable:
 	Selectable:
 		Class: A1
@@ -178,7 +176,7 @@ TerroristHospitalUnit:
 	RenderSprites:
 		Image: btpthst0
 	Tooltip:
-		Name: Terrorist Hospital Unit
+		Name: actor-terroristhospitalunit-name
 	-Buildable:
 	Selectable:
 		Class: A3

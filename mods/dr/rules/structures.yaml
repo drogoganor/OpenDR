@@ -905,8 +905,8 @@ TemporalGate:
 		#PauseOnCondition: disabled
 		Icon: bitgtmn0
 		ChargeInterval: 1000
-		Name: Temporal Gate
-		Description: Teleports a group of units across\nthe map for 20 seconds.
+		Name: temporal-gate-power.name
+		Description: temporal-gate-power.description
 		#SelectTargetSpeechNotification: SelectTarget
 		#InsufficientPowerSpeechNotification: InsufficientPower
 		#BeginChargeSpeechNotification: ChronosphereCharging
@@ -952,8 +952,8 @@ TemporalRiftCreator:
 		#Cursor: ioncannon
 		Icon: bitrcmn0
 		ActivationSequence:
-		Name: Temporal Rift
-		Description: Opens a temporal rift at the target location.
+		Name: temporal-rift-power.name
+		Description: temporal-rift-power.description
 		OrderName: TemporalRift
 		Weapon: TemporalRiftCreatorGun
 		#TargetCircleRange: 7c0

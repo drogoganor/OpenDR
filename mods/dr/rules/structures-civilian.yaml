@@ -25,7 +25,7 @@ SmallSHHorizontalBridge:
 		Bounds: 4096, 4096, 0, 0
 		DecorationBounds: 4096, 4096, 0, 0
 	Tooltip:
-		Name: Horizontal Bridge
+		Name: actor-horizontalbridge-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -47,7 +47,7 @@ SmallSHVerticalBridge:
 	Building:
 		Footprint: x__= =__= =__= =__x
 	Tooltip:
-		Name: Vertical Bridge
+		Name: actor-verticalbridge-name
 	RenderSprites:
 		Image: tcsbv1l0
 
@@ -57,7 +57,7 @@ SmallSHCentreBridge:
 	Building:
 		Footprint: x__= ____ ____ =__x
 	Tooltip:
-		Name: Center Bridge
+		Name: actor-centerbridge-name
 	RenderSprites:
 		Image: tcsbc1l0
 
@@ -76,7 +76,7 @@ SmallWall2:
 	RenderSprites:
 		Image: tcswm1l0
 	Tooltip:
-		Name: Small Wall
+		Name: actor-smallwall-name
 	Armor:
 		Type: BuildingArmour
 	WithIdleOverlay@LAYER3:
@@ -105,7 +105,7 @@ LargeWall1:
 	RenderSprites:
 		Image: tcbwl1l0
 	Tooltip:
-		Name: Big Wall
+		Name: actor-bigwall-name
 	Armor:
 		Type: BuildingArmour
 	WithIdleOverlay@LAYER3:
@@ -135,7 +135,7 @@ FreedomGuardTreatyHall:
 		Bounds: 4096, 4096, 0, 0
 		DecorationBounds: 4096, 4096, 0, 0
 	Tooltip:
-		Name: Freedom Guard Treaty Hall
+		Name: actor-fgtreatyhall-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -167,7 +167,7 @@ ImperiumDesicator:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Imperium Desicator
+		Name: actor-dessicator-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -197,7 +197,7 @@ RendezvousPoint:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Rendezvous Point
+		Name: actor-rendezvouspoint-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -229,7 +229,7 @@ ImperiumMedicalResearch:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Imperium Medical Research
+		Name: actor-imperiummedicalresearch-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -259,7 +259,7 @@ ImperiumWaterResearch:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Imperium Water Research
+		Name: actor-imperiumwaterresearch-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -289,7 +289,7 @@ ImperiumHoverResearch:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Imperium Hover Research
+		Name: actor-imperiumhoverresearch-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -319,7 +319,7 @@ FGPlanetaryDefense2:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: FG Planetary Defense 2
+		Name: actor-fgplanetarydefense2-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -349,7 +349,7 @@ ImperiumPrison:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Imperium Prison
+		Name: actor-imperiumprison-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -379,7 +379,7 @@ CivilianEntertainmentFacility:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Civilian Entertainment Facility
+		Name: actor-civilianentertainmentfacility-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -409,7 +409,7 @@ CivilianPublicShelter:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Civilian Public Shelter
+		Name: actor-civilianpublicshelter-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -439,7 +439,7 @@ CivilianSubTransit:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Civilian SubTransit
+		Name: actor-civiliansubtransit-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -469,7 +469,7 @@ CivilianTransitCentre:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Civilian Transit Centre
+		Name: actor-civiliantransitcentre-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -499,7 +499,7 @@ CivilianCommercial:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Civilian Commercial
+		Name: actor-civiliancommercial-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -529,7 +529,7 @@ CivilianFactory:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Civilian Factory
+		Name: actor-civilianfactory-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -559,7 +559,7 @@ CivilianRural:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Civilian Rural
+		Name: actor-civilianrural-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -589,7 +589,7 @@ CivilianGrainFarm:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Civilian Grain Field
+		Name: actor-civiliangrainfarm-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -616,7 +616,7 @@ CivilianHydroFarm:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Civilian Hydro Farm
+		Name: actor-civilianhydrofarm-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -643,7 +643,7 @@ CivilianFarmhouse:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Civilian Grain Fields
+		Name: actor-civilianfarmhouse-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -670,7 +670,7 @@ CivilianBridge:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Civilian Bridge
+		Name: actor-civilianbridge-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -700,7 +700,7 @@ CivilianVerticalBridge:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Civilian Bridge
+		Name: actor-civilianbridge-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -731,7 +731,7 @@ DirtBridge:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Dirt Bridge
+		Name: actor-dirtbridge-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -758,7 +758,7 @@ TogranMonolith:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Togran Monolith
+		Name: actor-togranmonolith-name
 	Health:
 		HP: 600
 	RevealsShroud:
@@ -789,7 +789,7 @@ TogranDoor:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Togran Door
+		Name: actor-tograndoor-name
 	Health:
 		HP: 600
 	RevealsShroud:

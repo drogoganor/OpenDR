@@ -28,7 +28,7 @@ namespace OpenRA.Mods.Dr.Traits
 		public readonly string Group = null;
 
 		[Desc("Only enable this queue for certain factions.")]
-		public readonly HashSet<string> Factions = new HashSet<string>();
+		public readonly HashSet<string> Factions = new();
 
 		[Desc("Notification played when you can't train another actor",
 			"when the build limit exceeded or the exit is jammed.",
@@ -48,10 +48,9 @@ namespace OpenRA.Mods.Dr.Traits
 	public class BuilderUnit : IResolveOrder, ITick, ITechTreeElement, INotifyKilled, INotifySold, ISync, INotifyTransform, INotifyCreated
 	{
 		public readonly BuilderUnitInfo Info;
-		readonly Actor self;
 
 		// A list of things we could possibly build
-		protected readonly Dictionary<ActorInfo, ProductionState> Producible = new Dictionary<ActorInfo, ProductionState>();
+		protected readonly Dictionary<ActorInfo, ProductionState> Producible = new();
 		readonly IEnumerable<ActorInfo> allProducibles;
 		readonly IEnumerable<ActorInfo> buildableProducibles;
 
@@ -60,22 +59,22 @@ namespace OpenRA.Mods.Dr.Traits
 		protected DeveloperMode developerMode;
 		protected TechTree techTree;
 
-		public Actor Actor { get { return self; } }
+		public Actor Actor { get; }
 
 		[Sync]
 		public bool Enabled { get; protected set; }
 
-		public string Faction { get; private set; }
+		public string Faction { get; }
 		[Sync]
-		public bool IsValidFaction { get; private set; }
+		public bool IsValidFaction { get; }
 
 		public BuilderUnit(ActorInitializer init, BuilderUnitInfo info)
 		{
-			self = init.Self;
+			Actor = init.Self;
 			Info = info;
 
-			Faction = init.GetValue<FactionInit, string>(self.Owner.Faction.InternalName);
-			IsValidFaction = !info.Factions.Any() || info.Factions.Contains(Faction);
+			Faction = init.GetValue<FactionInit, string>(Actor.Owner.Faction.InternalName);
+			IsValidFaction = info.Factions.Count == 0 || info.Factions.Contains(Faction);
 			Enabled = IsValidFaction;
 
 			allProducibles = Producible.Where(a => a.Value.Buildable || a.Value.Visible).Select(a => a.Key);
@@ -91,7 +90,7 @@ namespace OpenRA.Mods.Dr.Traits
 			CacheProducibles();
 		}
 
-		void INotifyKilled.Killed(Actor killed, AttackInfo e) { if (killed == self) { Enabled = false; } }
+		void INotifyKilled.Killed(Actor killed, AttackInfo e) { if (killed == Actor) { Enabled = false; } }
 		void INotifySold.Selling(Actor self) { Enabled = false; }
 		void INotifySold.Sold(Actor self) { }
 
@@ -116,7 +115,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		IEnumerable<ActorInfo> AllBuildables(string category)
 		{
-			return self.World.Map.Rules.Actors.Values
+			return Actor.World.Map.Rules.Actors.Values
 				.Where(x =>
 					x.Name[0] != '^' &&
 					x.HasTraitInfo<BuildableInfo>() &&
@@ -125,22 +124,22 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public void PrerequisitesAvailable(string key)
 		{
-			Producible[self.World.Map.Rules.Actors[key]].Buildable = true;
+			Producible[Actor.World.Map.Rules.Actors[key]].Buildable = true;
 		}
 
 		public void PrerequisitesUnavailable(string key)
 		{
-			Producible[self.World.Map.Rules.Actors[key]].Buildable = false;
+			Producible[Actor.World.Map.Rules.Actors[key]].Buildable = false;
 		}
 
 		public void PrerequisitesItemHidden(string key)
 		{
-			Producible[self.World.Map.Rules.Actors[key]].Visible = false;
+			Producible[Actor.World.Map.Rules.Actors[key]].Visible = false;
 		}
 
 		public void PrerequisitesItemVisible(string key)
 		{
-			Producible[self.World.Map.Rules.Actors[key]].Visible = true;
+			Producible[Actor.World.Map.Rules.Actors[key]].Visible = true;
 		}
 
 		public virtual IEnumerable<ActorInfo> AllItems()
@@ -163,8 +162,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public bool CanBuild(ActorInfo actor)
 		{
-			ProductionState ps;
-			if (!Producible.TryGetValue(actor, out ps))
+			if (!Producible.TryGetValue(actor, out var ps))
 				return false;
 
 			return ps.Buildable || developerMode.AllTech;
@@ -192,7 +190,7 @@ namespace OpenRA.Mods.Dr.Traits
 		// Returns the actor/trait that is most likely (but not necessarily guaranteed) to produce something in this queue
 		public virtual TraitPair<BuilderUnit> MostLikelyProducer()
 		{
-			return new TraitPair<BuilderUnit>(self, productionTraits.FirstOrDefault());
+			return new TraitPair<BuilderUnit>(Actor, productionTraits.FirstOrDefault());
 		}
 	}
 }

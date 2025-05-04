@@ -1,6 +1,6 @@
 Player:
 	ModularBot@NormalAI:
-		Name: Normal AI
+		Name: bot-normal-ai.name
 		Type: normal
 	GrantConditionOnBotOwner@normal:
 		Condition: enable-normal-ai

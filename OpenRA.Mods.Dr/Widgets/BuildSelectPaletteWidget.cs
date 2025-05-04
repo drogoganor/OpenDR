@@ -37,7 +37,7 @@ namespace OpenRA.Mods.Dr.Widgets
 		public readonly ReadyTextStyleOptions ReadyTextStyle = ReadyTextStyleOptions.AlternatingColor;
 		public readonly Color ReadyTextAltColor = Color.Gold;
 		public readonly int Columns = 3;
-		public readonly int2 IconSize = new int2(64, 48);
+		public readonly int2 IconSize = new(64, 48);
 		public readonly int2 IconMargin = int2.Zero;
 		public readonly int2 IconSpriteOffset = int2.Zero;
 
@@ -49,7 +49,7 @@ namespace OpenRA.Mods.Dr.Widgets
 		// Note: LinterHotkeyNames assumes that these are disabled by default
 		public readonly string HotkeyPrefix = null;
 		public readonly int HotkeyCount = 0;
-		public readonly HotkeyReference SelectProductionBuildingHotkey = new HotkeyReference();
+		public readonly HotkeyReference SelectProductionBuildingHotkey = new();
 
 		public readonly string ClockAnimation = "clock";
 		public readonly string ClockSequence = "idle";
@@ -103,7 +103,7 @@ namespace OpenRA.Mods.Dr.Widgets
 		}
 
 		public override Rectangle EventBounds { get { return eventBounds; } }
-		Dictionary<Rectangle, BuildSelectIcon> icons = new Dictionary<Rectangle, BuildSelectIcon>();
+		Dictionary<Rectangle, BuildSelectIcon> icons = new();
 		readonly Animation cantBuild;
 		Rectangle eventBounds = Rectangle.Empty;
 
@@ -132,7 +132,7 @@ namespace OpenRA.Mods.Dr.Widgets
 			if (string.IsNullOrEmpty(prefix))
 				emitError($"{widgetNode.Location} must define HotkeyPrefix if HotkeyCount > 0.");
 
-			return Exts.MakeArray(count, i => prefix + (i + 1).ToString("D2"));
+			return Exts.MakeArray(count, i => $"{prefix}{i + 1:D2}");
 		}
 
 		[ObjectCreator.UseCtor]
@@ -154,7 +154,7 @@ namespace OpenRA.Mods.Dr.Widgets
 			base.Initialize(args);
 
 			hotkeys = Exts.MakeArray(HotkeyCount,
-				i => modData.Hotkeys[HotkeyPrefix + (i + 1).ToString("D2")]);
+				i => modData.Hotkeys[$"{HotkeyPrefix}{i + 1:D2}"]);
 
 			Game.Renderer.Fonts.TryGetValue(SymbolsFont, out var symbolFont);
 
@@ -257,7 +257,7 @@ namespace OpenRA.Mods.Dr.Widgets
 
 		bool HandleEvent(BuildSelectIcon icon, MouseButton btn)
 		{
-			var handled = btn == MouseButton.Left ? HandleLeftClick(icon) : false;
+			var handled = btn == MouseButton.Left && HandleLeftClick(icon);
 
 			if (!handled)
 				Game.Sound.PlayNotification(World.Map.Rules, World.LocalPlayer, "Sounds", ClickDisabledSound, null);
@@ -278,7 +278,7 @@ namespace OpenRA.Mods.Dr.Widgets
 			// HACK: enable production if the shift key is pressed
 			e.Modifiers &= ~Modifiers.Shift;
 			var toBuild = icons.Values.FirstOrDefault(i => i.Hotkey != null && i.Hotkey.IsActivatedBy(e));
-			return toBuild != null ? HandleEvent(toBuild, MouseButton.Left) : false;
+			return toBuild != null && HandleEvent(toBuild, MouseButton.Left);
 		}
 
 		bool SelectProductionBuilding()
@@ -294,7 +294,7 @@ namespace OpenRA.Mods.Dr.Widgets
 			if (facility == null || facility.OccupiesSpace == null)
 				return true;
 
-			if (selection.Actors.Count() == 1 && selection.Contains(facility))
+			if (selection.Actors.Count == 1 && selection.Contains(facility))
 				viewport.Center(selection.Actors);
 			else
 				selection.Combine(World, new[] { facility }, false, true);
@@ -312,7 +312,7 @@ namespace OpenRA.Mods.Dr.Widgets
 		public void RefreshIcons()
 		{
 			icons = new Dictionary<Rectangle, BuildSelectIcon>();
-			var producer = CurrentQueue != null ? CurrentQueue.MostLikelyProducer() : default(TraitPair<BuilderUnit>);
+			var producer = CurrentQueue != null ? CurrentQueue.MostLikelyProducer() : default;
 			if (CurrentQueue == null || producer.Trait == null)
 			{
 				if (DisplayedIconCount != 0)

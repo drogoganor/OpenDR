@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using OpenRA.FileSystem;
@@ -29,13 +30,13 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		public ModData ModData;
 		public Map Map;
-		public List<string> Players = new List<string>();
+		public List<string> Players = new();
 		int numMultiStarts = 0;
 		protected bool skipActors = true;
 
-		protected bool ValidateArguments(string[] args)
+		protected static bool ValidateArguments(string[] _)
 		{
-			return args.Length >= 0;
+			return true;
 		}
 
 		protected void Run(Utility utility)
@@ -43,10 +44,10 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			// HACK: The engine code assumes that Game.modData is set.
 			Game.ModData = ModData = utility.ModData;
 
-			var targetPath = "..\\..\\mods\\dr\\maps";
+			const string TargetPath = "..\\..\\mods\\dr\\maps";
 
 			// var packedMapFiles = Directory.GetFiles(targetPath, "*.oramap");
-			var packedMapFiles = Directory.GetDirectories(targetPath);
+			var packedMapFiles = Directory.GetDirectories(TargetPath);
 
 			foreach (var packedMapFile in packedMapFiles)
 			{
@@ -65,17 +66,17 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				foreach (var resourceActor in resourceActors)
 				{
 					var locationNode = resourceActor.Value.Nodes.First(x => x.Key == "Location");
-					var resourceLocations = locationNode.Value.Value.ToString().Split(',').Select(x => Convert.ToInt32(x)).ToArray();
+					var resourceLocations = locationNode.Value.Value.ToString().Split(',').Select(x => Convert.ToInt32(x, CultureInfo.InvariantCulture)).ToArray();
 					var pos = new CPos(resourceLocations[0], resourceLocations[1]);
 
 					var resourceType = resourceActor.Value.Value == "water" ? 1 : 2;
 					Map.Resources[pos] = new ResourceTile((byte)resourceType, 255);
 				}
 
-				for (int i = 0; i < resourceActors.Length; i++)
+				for (var i = 0; i < resourceActors.Length; i++)
 				{
 					// TODO: Broken in playtest-20241116
-					//Map.ActorDefinitions.Remove(resourceActors[i]);
+					// Map.ActorDefinitions.Remove(resourceActors[i]);
 				}
 
 				Map.Save(new Folder(packedMapFile));
@@ -83,15 +84,17 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			}
 		}
 
+		/*
 		static void SetBounds(Map map, int width, int height)
 		{
 			var tl = new PPos(1, 1);
 			var br = new PPos(0 + width - 2, 0 + height - 2);
 			map.SetBounds(tl, br);
 		}
+		*/
 
 		// TODO: fix this -- will have bitrotted pretty badly.
-		protected Dictionary<string, Color> namedColorMapping = new Dictionary<string, Color>()
+		protected Dictionary<string, Color> namedColorMapping = new()
 		{
 			{ "blue", Color.FromArgb(46, 92, 244) },
 			{ "red", Color.FromArgb(255, 20, 0) },
@@ -105,12 +108,12 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "lime", Color.FromArgb(0, 255, 0) },
 		};
 
-		protected void SetNeutralPlayer(MapPlayers mapPlayers)
+		protected static void SetNeutralPlayer(MapPlayers mapPlayers)
 		{
-			var section = "Neutral";
+			const string Section = "Neutral";
 			var pr = new PlayerReference
 			{
-				Name = section,
+				Name = Section,
 				OwnsWorld = true,
 				NonCombatant = true,
 				Faction = "fguard",
@@ -118,10 +121,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			};
 
 			// Overwrite default player definitions if needed
-			if (!mapPlayers.Players.ContainsKey(section))
-				mapPlayers.Players.Add(section, pr);
-			else
-				mapPlayers.Players[section] = pr;
+			if (!mapPlayers.Players.TryAdd(Section, pr))
+				mapPlayers.Players[Section] = pr;
 		}
 
 		protected virtual int GetMatchingPlayerIndex(int index)
@@ -137,14 +138,14 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		protected virtual void SetMapPlayers(ScnFile file, List<string> players, MapPlayers mapPlayers)
 		{
-			int i = 0;
+			var i = 0;
 			foreach (var scnSection in file.Entries)
 			{
 				if (scnSection.Name != "SetStartLocation")
 					continue;
 
-				int x = Convert.ToInt32(scnSection.Values[0]);
-				int y = Convert.ToInt32(scnSection.Values[1]);
+				var x = Convert.ToInt32(scnSection.Values[0], CultureInfo.InvariantCulture);
+				var y = Convert.ToInt32(scnSection.Values[1], CultureInfo.InvariantCulture);
 				if (x != 0 && y != 0)
 				{
 					var multi = new PlayerReference

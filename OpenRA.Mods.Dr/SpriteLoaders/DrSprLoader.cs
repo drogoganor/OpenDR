@@ -52,10 +52,10 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 
 		class DrSprFrame : ISpriteFrame
 		{
-			public SpriteFrameType Type { get; private set; }
-			public Size Size { get; private set; }
-			public Size FrameSize { get; private set; }
-			public float2 Offset { get; private set; }
+			public SpriteFrameType Type { get; }
+			public Size Size { get; }
+			public Size FrameSize { get; }
+			public float2 Offset { get; }
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
 			public int2 Hotspot { get; set; }
@@ -235,8 +235,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 									return s.ReadInt32();
 								});
 
-								var headersize = 32;
-								var picnr = read_int(headersize + picindex * 4);
+								const int HeaderSize = 32;
+								var picnr = read_int(HeaderSize + picindex * 4);
 								var hotoff = read_int(header.OffPicoffs + 8 * picnr + 4);
 								s.Position = off_hotspots + 4 + 3 * (hotoff + h);
 								var hx = s.ReadUInt8();

@@ -3,8 +3,6 @@ HQ.terrorist.Constructing:
 	Inherits: HQ.human.Constructing
 	RenderSprites:
 		Image: nthqf1l0
-	Tooltip:
-		Name: Headquarters
 	-Buildable:
 	SelfConstructing:
 		Steps: 20
@@ -66,7 +64,7 @@ Power.terrorist.Constructing:
 		Steps: 20
 		Becomes: Power.terrorist
 	Tooltip:
-		Name: Wind Power Generator
+		Name: actor-windpowergenerator-name
 	Valued:
 		Cost: 2000
 	Health:
@@ -79,7 +77,7 @@ Power.terrorist:
 	RenderSprites:
 		Image: ntwpf1l0
 	Tooltip:
-		Name: Wind Power Generator
+		Name: actor-windpowergenerator-name
 	MapEditorData:
 		Categories: Addon
 
@@ -89,7 +87,7 @@ PulseBlasterTurret.Constructing:
 	RenderSprites:
 		Image: nnpbt1l0
 	Tooltip:
-		Name: Pulse Blaster Turret
+		Name: actor-pulseblasterturret-name
 	-Buildable:
 	SelfConstructing:
 		Steps: 20
@@ -110,7 +108,7 @@ PulseBlasterTurret:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	-SelfConstructing:
 	Tooltip:
-		Name: Pulse Blaster Turret
+		Name: actor-pulseblasterturret-name
 	Turreted:
 		TurnSpeed: 64
 		InitialFacing: 224
@@ -128,7 +126,7 @@ MissileTower.Constructing:
 	RenderSprites:
 		Image: nnmth1l0
 	Tooltip:
-		Name: Missile Tower
+		Name: actor-missiletower-name
 	-Buildable:
 	SelfConstructing:
 		Steps: 20
@@ -149,7 +147,7 @@ MissileTower:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	-SelfConstructing:
 	Tooltip:
-		Name: Missile Tower
+		Name: actor-missiletower-name
 	Turreted:
 		TurnSpeed: 64
 		InitialFacing: 224
@@ -167,7 +165,7 @@ TerroristFlamerTower.Constructing:
 	RenderSprites:
 		Image: nnflh1l0
 	Tooltip:
-		Name: Terrorist Flamer Tower
+		Name: actor-terroristflamertower-name
 	-Buildable:
 	SelfConstructing:
 		Steps: 20
@@ -188,7 +186,7 @@ TerroristFlamerTower:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	-SelfConstructing:
 	Tooltip:
-		Name: Terrorist Flamer Tower
+		Name: actor-terroristflamertower-name
 	Turreted:
 		TurnSpeed: 64
 		InitialFacing: 224
@@ -206,7 +204,7 @@ TerroristGuardTower.Constructing:
 	RenderSprites:
 		Image: ntgth1l0
 	Tooltip:
-		Name: Terrorist Guard Tower
+		Name: actor-terroristguardtower-name
 	-Buildable:
 	SelfConstructing:
 		Steps: 20
@@ -227,7 +225,7 @@ TerroristGuardTower:
 	Inherits@AUTOTARGET: ^AutoTargetGround
 	-SelfConstructing:
 	Tooltip:
-		Name: Terrorist Guard Tower
+		Name: actor-terroristguardtower-name
 	Turreted:
 		TurnSpeed: 64
 		InitialFacing: 224
@@ -245,7 +243,7 @@ TerroristWaterUnit.Constructing:
 	RenderSprites:
 		Image: ntwyf1l0
 	Tooltip:
-		Name: Terrorist WaterUnit Construction Facility
+		Name: actor-terroristwaterunit-name
 	-Buildable:
 	SelfConstructing:
 		Steps: 20
@@ -286,7 +284,7 @@ TerroristWaterUnit:
 	-Production:
 	-BuilderQueue@Building:
 	Tooltip:
-		Name: Terrorist WaterUnit Construction Facility
+		Name: actor-terroristwaterunit-name
 	Power:
 		Amount: -100
 	WithIdleOverlay@LAYER2:
@@ -298,7 +296,7 @@ TerroristConstructionFacility.Constructing:
 	RenderSprites:
 		Image: ntcyf1l0
 	Tooltip:
-		Name: Terrorist Construction Facility
+		Name: actor-terroristconstructionfacility-name
 	-Buildable:
 	SelfConstructing:
 		Steps: 20
@@ -337,7 +335,7 @@ TerroristConstructionFacility:
 	-SelfConstructing:
 	-BuilderQueue@Building:
 	Tooltip:
-		Name: Terrorist Construction Facility
+		Name: actor-terroristconstructionfacility-name
 
 # Terrorist Field Hospital
 TerroristFieldHospital.Constructing:
@@ -345,7 +343,7 @@ TerroristFieldHospital.Constructing:
 	RenderSprites:
 		Image: ntptf1l0
 	Tooltip:
-		Name: Terrorist Field Hospital
+		Name: actor-terroristfieldhospital-name
 	-Buildable:
 	SelfConstructing:
 		Steps: 20
@@ -384,7 +382,7 @@ TerroristFieldHospital:
 	-Production:
 	-BuilderQueue@Building:
 	Tooltip:
-		Name: Terrorist Field Hospital
+		Name: actor-terroristfieldhospital-name
 
 # Terrorist Repair Bay
 TerroristRepairBay.Constructing:
@@ -392,7 +390,7 @@ TerroristRepairBay.Constructing:
 	RenderSprites:
 		Image: ntrrf1l0
 	Tooltip:
-		Name: Terrorist Repair Bay
+		Name: actor-terroristrepairbay-name
 	-Buildable:
 	SelfConstructing:
 		Steps: 20
@@ -431,7 +429,7 @@ TerroristRepairBay:
 	-Production:
 	-BuilderQueue@Building:
 	Tooltip:
-		Name: Terrorist Repair Bay
+		Name: actor-terroristrepairbay-name
 
 # Terrorist Rearming Deck
 TerroristRearmingDeck.Constructing:
@@ -439,7 +437,7 @@ TerroristRearmingDeck.Constructing:
 	RenderSprites:
 		Image: ntrrf2l0
 	Tooltip:
-		Name: Terrorist Rearming Deck
+		Name: actor-terroristrearmingdeck-name
 	-Buildable:
 	SelfConstructing:
 		Steps: 20
@@ -478,4 +476,4 @@ TerroristRearmingDeck:
 	-Production:
 	-BuilderQueue@Building:
 	Tooltip:
-		Name: Terrorist Rearming Deck
+		Name: actor-terroristrearmingdeck-name

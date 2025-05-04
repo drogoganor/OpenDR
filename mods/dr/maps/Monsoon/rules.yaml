@@ -16,14 +16,14 @@ World:
 		ParticleColors: A5B4D3, ABBAD8, A9BAD3, B5C7E0
 		LineTailAlphaValue: 56
 		ParticleSize: 1, 1
-	GlobalLightingPaletteEffect:
+	TintPostProcessEffect:
 		Red: 0.96
 		Green: 0.92
 		Blue: 1.0
 		Ambient: 1.0
 	MusicPlaylist:
 		BackgroundMusic: rain
-	FlashPaletteEffect@LIGHTNINGSTRIKE:
+	FlashPostProcessEffect@LIGHTNINGSTRIKE:
 		Type: LightningStrike
 	LuaScript:
 		Scripts: map.lua

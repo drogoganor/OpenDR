@@ -100,9 +100,10 @@ namespace OpenRA.Mods.Dr.Traits
 
 			var targetPosition = order.Target.CenterPosition + new WVec(WDist.Zero, WDist.Zero, Info.AirburstAltitude);
 
-			Action detonateWeapon = () => self.World.AddFrameEndTask(w => Info.WeaponInfo.Impact(Target.FromPos(targetPosition), new WarheadArgs() { SourceActor = self, DamageModifiers = Array.Empty<int>() }));
+			void DetonateWeapon() => self.World.AddFrameEndTask(
+				w => Info.WeaponInfo.Impact(Target.FromPos(targetPosition), new WarheadArgs() { SourceActor = self, DamageModifiers = Array.Empty<int>() }));
 
-			self.World.AddFrameEndTask(w => w.Add(new DelayedAction(Info.ActivationDelay, detonateWeapon)));
+			self.World.AddFrameEndTask(w => w.Add(new DelayedAction(Info.ActivationDelay, DetonateWeapon)));
 
 			if (Info.CameraRange != WDist.Zero)
 			{
@@ -129,7 +130,7 @@ namespace OpenRA.Mods.Dr.Traits
 					Info.ClockSequence,
 					() => FractionComplete);
 
-				Action removeBeacon = () => self.World.AddFrameEndTask(w =>
+				void RemoveBeacon() => self.World.AddFrameEndTask(w =>
 					{
 						w.Remove(beacon);
 						beacon = null;
@@ -138,7 +139,7 @@ namespace OpenRA.Mods.Dr.Traits
 				self.World.AddFrameEndTask(w =>
 					{
 						w.Add(beacon);
-						w.Add(new DelayedAction(Info.ActivationDelay - Info.BeaconRemoveAdvance, removeBeacon));
+						w.Add(new DelayedAction(Info.ActivationDelay - Info.BeaconRemoveAdvance, RemoveBeacon));
 					});
 			}
 		}

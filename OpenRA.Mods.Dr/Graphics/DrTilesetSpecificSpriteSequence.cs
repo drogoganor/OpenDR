@@ -10,6 +10,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using OpenRA.Graphics;
 
@@ -29,7 +30,15 @@ namespace OpenRA.Mods.Dr.Graphics
 
 	public class DrTilesetSpecificSpriteSequence : DrSpriteSequence
 	{
-		public DrTilesetSpecificSpriteSequence(ModData modData, string tileSet, SpriteCache cache, ISpriteSequenceLoader loader, string image, string sequence, MiniYaml data, MiniYaml defaults)
+		public DrTilesetSpecificSpriteSequence(
+			ModData modData,
+			string tileSet,
+			SpriteCache cache,
+			ISpriteSequenceLoader loader,
+			string image,
+			string sequence,
+			MiniYaml data,
+			MiniYaml defaults)
 			: base(modData, tileSet, cache, loader, image, sequence, data, defaults) { }
 
 		protected override IEnumerable<ReservationInfo> ParseFilenames(ModData modData, string tileset, int[] frames, MiniYaml data, MiniYaml defaults)
@@ -37,10 +46,10 @@ namespace OpenRA.Mods.Dr.Graphics
 			var filename = LoadField(Filename, data, defaults, out var location);
 
 			var validTilesetIds = new string[] { "BARREN", "JUNGLE", "SNOW" };
-			if (filename.StartsWith("tileset|"))
+			if (filename.StartsWith("tileset|", System.StringComparison.InvariantCultureIgnoreCase))
 			{
 				if (validTilesetIds.Contains(tileset))
-					filename = filename.Replace("tileset", tileset.ToLower());
+					filename = filename.Replace("tileset", tileset.ToLower(CultureInfo.InvariantCulture));
 				else
 					filename = filename.Replace("tileset", "barren");
 			}

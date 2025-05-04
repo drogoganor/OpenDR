@@ -31,7 +31,7 @@ namespace OpenRA.Mods.Dr.Traits
 		readonly World world;
 
 		public DrResourceLayer(Actor self, DrResourceLayerInfo info)
-            : base(self, info)
+			: base(self, info)
 		{
 			this.info = info;
 			world = self.World;

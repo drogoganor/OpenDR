@@ -48,25 +48,22 @@ namespace OpenRA.Mods.Dr.Traits
 		[Sync]
 		public int Water;
 
-		public int WaterPercentage => (int)(((float)Water / info.WaterCapacity) * 100f);
+		public int WaterPercentage => (int)((float)Water / info.WaterCapacity * 100f);
 
 		public int AddWater(int amount)
 		{
-			if (amount >= 0)
+			if (amount >= 0 && Water < int.MaxValue)
 			{
-				if (Water < int.MaxValue)
+				try
 				{
-					try
+					checked
 					{
-						checked
-						{
-							Water += amount;
-						}
+						Water += amount;
 					}
-					catch (OverflowException)
-					{
-						Water = int.MaxValue;
-					}
+				}
+				catch (OverflowException)
+				{
+					Water = int.MaxValue;
 				}
 			}
 
@@ -76,7 +73,7 @@ namespace OpenRA.Mods.Dr.Traits
 				Water = 0;
 				resources.GiveCash(total);
 				Game.Sound.PlayNotification(owner.World.Map.Rules, owner, "Sounds", "CreditsReceived", null);
-				TextNotificationsManager.AddTransientLine(owner, $"Sold credits: ${total.ToString()}");
+				TextNotificationsManager.AddTransientLine(owner, $"Sold credits: ${total}");
 			}
 
 			return amount;

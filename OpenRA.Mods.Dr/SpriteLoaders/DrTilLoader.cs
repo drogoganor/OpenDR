@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using OpenRA.FileFormats;
 using OpenRA.Graphics;
@@ -34,9 +35,9 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 		{
 			const int TileSize = 24;
 
-			public SpriteFrameType Type { get; private set; }
-			public Size Size { get; private set; }
-			public Size FrameSize { get; private set; }
+			public SpriteFrameType Type { get; }
+			public Size Size { get; }
+			public Size FrameSize { get; }
 			public float2 Offset { get; set; }
 			public byte[] Data { get; set; }
 			public bool DisableExportPadding { get { return false; } }
@@ -154,7 +155,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			// Editor mask select tiles (discard)
 			for (var maskTemplateType = 0; maskTemplateType < 4; maskTemplateType++)
 			{
-				new DrTilFrame(s, isMask: true);
+				var _ = new DrTilFrame(s, isMask: true);
 			}
 
 			var cornerIndices = new List<List<int>>
@@ -263,8 +264,8 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			void AddShadowFrames()
 			{
 				// Shadow tiles
-				byte shadowAlpha = 35;
-				byte shadowColor = 0;
+				const byte ShadowAlpha = 35;
+				const byte ShadowColor = 0;
 
 				var cornerSet = cornerIndices[1];
 
@@ -287,25 +288,25 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 				var neSwBridge = CombineMaskTilesSubtractive(neInner, swInner);
 				var nwSeBridge = CombineMaskTilesSubtractive(nwInner, seInner);
 
-				frames.Add(ShadowTile(north, shadowColor, shadowAlpha));
-				frames.Add(ShadowTile(east, shadowColor, shadowAlpha));
-				frames.Add(ShadowTile(south, shadowColor, shadowAlpha));
-				frames.Add(ShadowTile(west, shadowColor, shadowAlpha));
+				frames.Add(ShadowTile(north, ShadowColor, ShadowAlpha));
+				frames.Add(ShadowTile(east, ShadowColor, ShadowAlpha));
+				frames.Add(ShadowTile(south, ShadowColor, ShadowAlpha));
+				frames.Add(ShadowTile(west, ShadowColor, ShadowAlpha));
 
-				frames.Add(ShadowTile(nw, shadowColor, shadowAlpha));
-				frames.Add(ShadowTile(ne, shadowColor, shadowAlpha));
-				frames.Add(ShadowTile(sw, shadowColor, shadowAlpha));
-				frames.Add(ShadowTile(se, shadowColor, shadowAlpha));
+				frames.Add(ShadowTile(nw, ShadowColor, ShadowAlpha));
+				frames.Add(ShadowTile(ne, ShadowColor, ShadowAlpha));
+				frames.Add(ShadowTile(sw, ShadowColor, ShadowAlpha));
+				frames.Add(ShadowTile(se, ShadowColor, ShadowAlpha));
 
-				frames.Add(ShadowTile(swInner, shadowColor, shadowAlpha));
-				frames.Add(ShadowTile(seInner, shadowColor, shadowAlpha));
-				frames.Add(ShadowTile(nwInner, shadowColor, shadowAlpha));
-				frames.Add(ShadowTile(neInner, shadowColor, shadowAlpha));
+				frames.Add(ShadowTile(swInner, ShadowColor, ShadowAlpha));
+				frames.Add(ShadowTile(seInner, ShadowColor, ShadowAlpha));
+				frames.Add(ShadowTile(nwInner, ShadowColor, ShadowAlpha));
+				frames.Add(ShadowTile(neInner, ShadowColor, ShadowAlpha));
 
-				frames.Add(ShadowTile(nwSeBridge, shadowColor, shadowAlpha));
-				frames.Add(ShadowTile(neSwBridge, shadowColor, shadowAlpha));
+				frames.Add(ShadowTile(nwSeBridge, ShadowColor, ShadowAlpha));
+				frames.Add(ShadowTile(neSwBridge, ShadowColor, ShadowAlpha));
 
-				frames.Add(FullShadowTile(shadowColor, shadowAlpha));
+				frames.Add(FullShadowTile(ShadowColor, ShadowAlpha));
 			}
 
 			DrTilFrame ShadowTile(DrTilFrame mask, byte color, byte alpha)
@@ -411,19 +412,19 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 			using (var paletteStream = Game.ModData.DefaultFileSystem.Open(paletteFile))
 			{
 				palette = PaletteFromDrFile.PaletteFromStream(paletteStream, new PaletteFromDrFileInfo(
-					"terrain", paletteFile, Path.GetFileNameWithoutExtension(paletteFile).ToUpper(), terrainPaletteMultiplier));
+					"terrain", paletteFile, Path.GetFileNameWithoutExtension(paletteFile).ToUpper(CultureInfo.InvariantCulture), terrainPaletteMultiplier));
 			}
 
 			frames = ParseFrames(s, palette);
 
 			if (exportPng)
 			{
-				var tileSize = 24;
+				const int TileSize = 24;
 				for (var tileIndex = 0; tileIndex < frames.Length; tileIndex++)
 				{
 					var tile = frames[tileIndex];
 					var rgbByteArray = new List<byte>();
-					for (var i = 0; i < tileSize * tileSize; i++)
+					for (var i = 0; i < TileSize * TileSize; i++)
 					{
 						if (palette == null)
 						{
@@ -437,7 +438,7 @@ namespace OpenRA.Mods.Dr.SpriteLoaders
 						}
 					}
 
-					var png = new Png(rgbByteArray.ToArray(), SpriteFrameType.Rgba32, tileSize, tileSize);
+					var png = new Png(rgbByteArray.ToArray(), SpriteFrameType.Rgba32, TileSize, TileSize);
 					png.Save($"C:\\temp\\{tileIndex:D4}-til.png");
 				}
 			}

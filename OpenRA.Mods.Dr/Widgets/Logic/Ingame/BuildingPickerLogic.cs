@@ -27,10 +27,8 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 		{
 			palette = widget.Get<BuildSelectPaletteWidget>("BUILD_SELECT_PALETTE");
 
-			MiniYaml yaml;
-			if (logicArgs.TryGetValue("ProductionParent", out yaml))
-				if (string.IsNullOrWhiteSpace(yaml.Value))
-					throw new YamlException($"Invalid value for ProductionParent: {yaml.Value}");
+			if (logicArgs.TryGetValue("ProductionParent", out var yaml) && string.IsNullOrWhiteSpace(yaml.Value))
+				throw new YamlException($"Invalid value for ProductionParent: {yaml.Value}");
 
 			productionParentName = yaml.Value;
 
@@ -54,7 +52,7 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 				if (foreground != null)
 					foregroundTemplate = foreground.Get("ROW_TEMPLATE");
 
-				Action<int, int> updateBackground = (_, icons) =>
+				void UpdateBackground(int _, int icons)
 				{
 					sidebarProductionWidget.Visible = icons == 0; // TODO: This is where the aformentioned hacking takes place.
 					widget.Visible = icons > 0;
@@ -93,12 +91,12 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 							foreground.AddChild(row);
 						}
 					}
-				};
+				}
 
-				palette.OnIconCountChanged += updateBackground;
+				palette.OnIconCountChanged += UpdateBackground;
 
 				// Set the initial palette state
-				updateBackground(0, 0);
+				UpdateBackground(0, 0);
 			}
 		}
 	}

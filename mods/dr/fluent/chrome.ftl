@@ -173,4 +173,4 @@ productionpalette-sidebar-production-palette =
 button-production-types-economy-tooltip = Economy
 button-production-types-infantry-tooltip = Infantry
 button-production-types-vehicle-tooltip = Vehicles
-
+button-production-types-upgrade-tooltip = Upgrades

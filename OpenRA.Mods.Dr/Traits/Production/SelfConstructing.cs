@@ -84,7 +84,7 @@ namespace OpenRA.Mods.Dr.Traits.Production
 				token = self.RevokeCondition(token);
 
 			var actorName = Info.Becomes.ToLowerInvariant();
-			var builtBuildingDef = rules.Actors[actorName];
+			_ = rules.Actors[actorName];
 			CreateActor(self, actorName, true);
 
 			world.Remove(self);
@@ -93,11 +93,10 @@ namespace OpenRA.Mods.Dr.Traits.Production
 			Game.Sound.PlayNotification(self.World.Map.Rules, self.Owner, "Speech", "ConstructionComplete", self.Owner.Faction.InternalName);
 		}
 
-		Actor CreateActor(Actor self, string actorType, bool addToWorld)
+		static Actor CreateActor(Actor self, string actorType, bool addToWorld)
 		{
-			Player owner = self.Owner;
-			ActorInfo ai;
-			if (!owner.World.Map.Rules.Actors.TryGetValue(actorType, out ai))
+			var owner = self.Owner;
+			if (!owner.World.Map.Rules.Actors.TryGetValue(actorType, out _))
 				throw new LuaException($"Unknown actor type '{actorType}'");
 
 			var actor = self.World.CreateActor(addToWorld, actorType, new TypeDictionary
@@ -141,8 +140,7 @@ namespace OpenRA.Mods.Dr.Traits.Production
 
 		void INotifyRemovedFromWorld.RemovedFromWorld(Actor self)
 		{
-			if (productionItem != null)
-				productionItem.Queue.EndProduction(productionItem);
+			productionItem?.Queue.EndProduction(productionItem);
 		}
 	}
 }

@@ -26,7 +26,7 @@ namespace OpenRA.Mods.Dr.Traits.Render
 
 		[Desc("Damage types that this should be used for (defined on the warheads).",
 			"Leave empty to disable all filtering.")]
-		public readonly BitSet<DamageType> DamageTypes = default(BitSet<DamageType>);
+		public readonly BitSet<DamageType> DamageTypes = default;
 
 		public readonly WVec Offset = WVec.Zero;
 

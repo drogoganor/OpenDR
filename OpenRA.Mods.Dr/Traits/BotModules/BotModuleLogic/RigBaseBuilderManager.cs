@@ -38,7 +38,7 @@ namespace OpenRA.Mods.Dr.Traits
 		int waitTicks;
 		Actor[] playerBuildings;
 
-		readonly Dictionary<uint, RigBuildOrder> rigBuildOrders = new Dictionary<uint, RigBuildOrder>();
+		readonly Dictionary<uint, RigBuildOrder> rigBuildOrders = new();
 
 		public RigBaseBuilderManager(RigBaseBuilderBotModule baseBuilder, Player p, PowerManager pm, IResourceLayer rl)
 		{
@@ -120,8 +120,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public List<Actor> GetIdleRigs()
 		{
-			var rigs = world.ActorsHavingTrait<BuilderUnit>().Where(a => a.Owner == player)
-					.Where(a => !rigBuildOrders.ContainsKey(a.ActorID));
+			var rigs = world.ActorsHavingTrait<BuilderUnit>().Where(a => a.Owner == player && !rigBuildOrders.ContainsKey(a.ActorID));
 
 			return rigs.ToList();
 		}
@@ -177,8 +176,8 @@ namespace OpenRA.Mods.Dr.Traits
 
 		bool HasSufficientPowerForActor(ActorInfo actorInfo)
 		{
-			return playerPower == null || (actorInfo.TraitInfos<PowerInfo>().Where(i => i.EnabledByDefault)
-				.Sum(p => p.Amount) + playerPower.ExcessPower) >= baseBuilder.Info.MinimumExcessPower;
+			return playerPower == null || actorInfo.TraitInfos<PowerInfo>().Where(i => i.EnabledByDefault)
+				.Sum(p => p.Amount) + playerPower.ExcessPower >= baseBuilder.Info.MinimumExcessPower;
 		}
 
 		ActorInfo ChooseBuildingToBuild(BuilderUnit queue)
@@ -217,13 +216,10 @@ namespace OpenRA.Mods.Dr.Traits
 			}
 
 			// Next is to build up a strong economy
-			if (water != null)
+			if (water != null && NumBuildingsBuiltBuildingOrOrdered(water) < 2)
 			{
-				if (NumBuildingsBuiltBuildingOrOrdered(water) < 2)
-				{
-					AIUtils.BotDebug("AI: {0} decided to build {1}: Priority override (not enough water launch pads)", queue.Actor.Owner, water.Name);
-					return water;
-				}
+				AIUtils.BotDebug("AI: {0} decided to build {1}: Priority override (not enough water launch pads)", queue.Actor.Owner, water.Name);
+				return water;
 			}
 
 			if (barracks != null)
@@ -234,13 +230,10 @@ namespace OpenRA.Mods.Dr.Traits
 					return barracks;
 				}
 
-				if (vehicles != null)
+				if (vehicles != null && NumBuildingsBuiltBuildingOrOrdered(vehicles) < 1)
 				{
-					if (NumBuildingsBuiltBuildingOrOrdered(vehicles) < 1)
-					{
-						AIUtils.BotDebug("AI: {0} decided to build {1}: Priority override (not enough assembly plants)", queue.Actor.Owner, vehicles.Name);
-						return vehicles;
-					}
+					AIUtils.BotDebug("AI: {0} decided to build {1}: Priority override (not enough assembly plants)", queue.Actor.Owner, vehicles.Name);
+					return vehicles;
 				}
 
 				if (NumBuildingsBuiltBuildingOrOrdered(barracks) < 2)
@@ -249,13 +242,10 @@ namespace OpenRA.Mods.Dr.Traits
 					return barracks;
 				}
 
-				if (vehicles != null)
+				if (vehicles != null && NumBuildingsBuiltBuildingOrOrdered(vehicles) < 2)
 				{
-					if (NumBuildingsBuiltBuildingOrOrdered(vehicles) < 2)
-					{
-						AIUtils.BotDebug("AI: {0} decided to build {1}: Priority override (not enough assembly plants)", queue.Actor.Owner, vehicles.Name);
-						return vehicles;
-					}
+					AIUtils.BotDebug("AI: {0} decided to build {1}: Priority override (not enough assembly plants)", queue.Actor.Owner, vehicles.Name);
+					return vehicles;
 				}
 			}
 
@@ -332,7 +322,7 @@ namespace OpenRA.Mods.Dr.Traits
 				return null;
 
 			// Find the buildable cell that is closest to pos and centered around center
-			Func<CPos, CPos, int, int, CPos?> findPos = (center, target, minRange, maxRange) =>
+			CPos? FindPos(CPos center, CPos target, int minRange, int maxRange)
 			{
 				var cells = world.Map.FindTilesInAnnulus(center, minRange, maxRange);
 
@@ -354,7 +344,7 @@ namespace OpenRA.Mods.Dr.Traits
 				}
 
 				return null;
-			};
+			}
 
 			var baseCenter = player.HomeLocation;
 
@@ -371,7 +361,7 @@ namespace OpenRA.Mods.Dr.Traits
 						.ClosestToIgnoringPath(world.Map.CenterOfCell(baseBuilder.DefenseCenter));
 
 					var targetCell = closestEnemy != null ? closestEnemy.Location : baseCenter;
-					return findPos(baseBuilder.DefenseCenter, targetCell, baseBuilder.Info.MinimumDefenseRadius, baseBuilder.Info.MaximumDefenseRadius);
+					return FindPos(baseBuilder.DefenseCenter, targetCell, baseBuilder.Info.MinimumDefenseRadius, baseBuilder.Info.MaximumDefenseRadius);
 
 				case BuildingTypeDr.Refinery:
 
@@ -382,16 +372,16 @@ namespace OpenRA.Mods.Dr.Traits
 
 					foreach (var r in nearbyResources)
 					{
-						var found = findPos(baseCenter, r, baseBuilder.Info.MinBaseRadius, baseBuilder.Info.MaxBaseRadius);
+						var found = FindPos(baseCenter, r, baseBuilder.Info.MinBaseRadius, baseBuilder.Info.MaxBaseRadius);
 						if (found != null)
 							return found;
 					}
 
 					// Try and find a free spot somewhere else in the base
-					return findPos(baseCenter, baseCenter, baseBuilder.Info.MinBaseRadius, baseBuilder.Info.MaxBaseRadius);
+					return FindPos(baseCenter, baseCenter, baseBuilder.Info.MinBaseRadius, baseBuilder.Info.MaxBaseRadius);
 
 				case BuildingTypeDr.Building:
-					return findPos(baseCenter, baseCenter, baseBuilder.Info.MinBaseRadius,
+					return FindPos(baseCenter, baseCenter, baseBuilder.Info.MinBaseRadius,
 						distanceToBaseIsImportant ? baseBuilder.Info.MaxBaseRadius : world.Map.Grid.MaximumTileSearchRange);
 			}
 

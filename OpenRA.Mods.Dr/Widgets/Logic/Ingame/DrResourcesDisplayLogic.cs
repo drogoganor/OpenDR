@@ -34,8 +34,7 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 		{
 			if (resources.WaterPercentage > 0)
 			{
-				int r = resources.WaterPercentage;
-				r++;
+				var _ = resources.WaterPercentage;
 			}
 		}
 	}

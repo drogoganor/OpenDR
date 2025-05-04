@@ -9,25 +9,31 @@ PreviousProductionTab: PAGEUP
 	Contexts: player
 
 ProductionTypeBuilding: E
-	Description: Building Tab
+	Description: hotkey-description-productiontypebuilding
 	Types: Production
+	Contexts: player
 
 ProductionTypeUpgrade: R
-	Description: Upgrade Tab
+	Description: hotkey-description-productiontypeupgrade
 	Types: Production
+	Contexts: player
 
 ProductionTypeInfantry: T
-	Description: Infantry Tab
+	Description: hotkey-description-productiontypeinfantry
 	Types: Production
+	Contexts: player
 
 ProductionTypeVehicle: Y
-	Description: Vehicle Tab
+	Description: hotkey-description-productiontypevehicle
 	Types: Production
+	Contexts: player
 
 ProductionTypeEconomy: U
-	Description: Economy Tab
+	Description: hotkey-description-productiontypeeconomy
 	Types: Production
+	Contexts: player
 
 PowerDown: X
-	Description: Power-down mode
+	Description: hotkey-description-powerdown
 	Types: OrderGenerator
+	Contexts: player

@@ -16,10 +16,40 @@ notification-ally-under-attack = Our ally is under attack.
 resource-water = Water Spring
 resource-taelon = Taelon
 
+## Faction
+
+faction-fguard =
+    .name = Freedom Guard
+    .description = Freedom Guard
+
+faction-imperium =
+    .name = Imperium
+    .description = Imperium
+
+faction-togran =
+    .name = Togran
+    .description = Testing a third faction...
+
+faction-terrorist =
+    .name = Terrorist
+    .description = Testing junk faction...
+
+faction-random =
+    .name = Any
+    .description = Randomly select Freedom Guard or Imperium.
+
+faction-randomall =
+    .name = Any (All)
+    .description = Randomly select any faction.
+
 ## world.yaml
 options-starting-units =
     .hq-only = HQ Only
     .two-rigs = HQ & 2 Rigs
+
+dropdown-map-creeps =
+    .label = Creep Actors
+    .description = Hostile forces spawn on the battlefield
 
 ## infantry.yaml
 actor-raider =
@@ -391,10 +421,6 @@ actor-assemblyplant =
    .description = Produces vehicles.
    .name = Assembly Plant
 
-actor-assemblyplant =
-   .description = Produces vehicles.
-   .name = Assembly Plant
-
 actor-laserturret =
    .description = Laser Defense Turret
    .name = Laser Turret
@@ -478,6 +504,110 @@ actor-skatey =
 actor-breakers =
    .name = Terrorist Breaker Boys
 
+## structures-civilian.yaml
+actor-horizontalbridge-name = Horizontal Bridge
+actor-verticalbridge-name = Vertical Bridge
+actor-centerbridge-name = Center Bridge
+actor-smallwall-name = Small Wall
+actor-bigwall-name = Big Wall
+actor-fgtreatyhall-name = Freedom Guard Treaty Hall
+actor-dessicator-name = Imperium Desicator
+actor-rendezvouspoint-name = Rendezvous Point
+actor-imperiummedicalresearch-name = Imperium Medical Research
+actor-imperiumwaterresearch-name = Imperium Water Research
+actor-imperiumhoverresearch-name = Imperium Hover Research
+actor-fgplanetarydefense2-name = FG Planetary Defense 2
+actor-imperiumprison-name = Imperium Prison
+actor-civilianentertainmentfacility-name = Civilian Entertainment Facility
+actor-civilianpublicshelter-name = Civilian Public Shelter
+actor-civiliansubtransit-name = Civilian SubTransit
+actor-civiliantransitcentre-name = Civilian Transit Centre
+actor-civiliancommercial-name = Civilian Commercial
+actor-civilianfactory-name = Civilian Factory
+actor-civilianrural-name = Civilian Rural
+actor-civiliangrainfarm-name = Civilian Grain Field
+actor-civilianhydrofarm-name = Civilian Hydro Farm
+actor-civilianfarmhouse-name = Civilian Grain Fields
+actor-civilianbridge-name = Civilian Bridge
+actor-dirtbridge-name = Dirt Bridge
+actor-togranmonolith-name = Togran Monolith
+actor-tograndoor-name = Togran Door
+actor-civilianstructure-name = Civilian Structure
+actor-structure-name = Structure
+actor-rowdycivilian-name = Rowdy Civilian
+actor-colonelmartel-name = Colonel Martel
+actor-jebradec-name = Jeb Radec
+actor-karoch-name = Karoch
+actor-dessicatortransport-name = Dessicator Transport
+actor-civwheeltransporter-name = Civilian Wheeled Transporter
+
+## vehicles-addon.yaml
+
+actor-ticktank =
+   .description = Togran light tank.
+   .name = Tick Tank
+
+actor-walkerscout =
+   .description = Fast scout and infantry carrier for two.
+   .name = Walker Scout
+
+actor-hoverassaulttank =
+   .description = Togran alt light tank
+   .name = Hover Assault Tank
+
+actor-flamingdeath =
+   .description = Togran medium tank
+   .name = Flaming Death
+
+actor-vortextank =
+   .description = Togran heavy tank
+   .name = Vortex Tank
+
+actor-sonicthumper =
+   .description = Togran special tank.
+   .name = Sonic Thumper
+
+actor-constructionbiot-name = Construction Biot
+actor-terroristwaterfreighter-name = Terrorist Water Freighter
+actor-terroristtransport-name = Terrorist Transport
+actor-terroristmissiletank-name = Terrorist Missile Tank
+actor-terroristartillery-name = Terrorist Artillery
+actor-armoredguardwalker-name = Armored Guard Walker
+actor-atatwalker-name = AT-AT Walker
+actor-constructioncrawler-name = Construction Crawler
+actor-gunwalker-name = Gun Walker
+actor-ticktankalt-name = Tick Tank Alt
+actor-sonicthumperalternate-name = Sonic Thumper Alternate
+
+## aircraft-addon.yaml
+
+actor-scoutalt =
+   .description = Scout flyer.
+   .name = Flyer Scout
+
+actor-stealthchopper-name = Stealth Chopper
+actor-terroristairrifteralternate-name = Terrorist Air Rifter Alternate
+actor-terroristairbornetroopcarrier-name = Terrorist Airborne Troop Carrier
+actor-suicidebot-name = Suicide Bot
+actor-terroristairrifter-name = Terrorist Air Rifter
+actor-terroristhospitalunit-name = Terrorist Hospital Unit
+
+## structures-addon.yaml
+
+
+actor-windpowergenerator-name = Wind Power Generator
+
+actor-pulseblasterturret-name = Pulse Blaster Turret
+actor-missiletower-name = Missile Tower
+actor-terroristflamertower-name = Terrorist Flamer Tower
+actor-terroristguardtower-name = Terrorist Guard Tower
+actor-terroristwaterunit-name = Terrorist WaterUnit Construction Facility
+actor-terroristconstructionfacility-name = Terrorist Construction Facility
+actor-terroristfieldhospital-name = Terrorist Field Hospital
+actor-terroristrepairbay-name = Terrorist Repair Bay
+actor-terroristrearmingdeck-name = Terrorist Rearming Deck
+
+
 ## defaults.yaml
 
 actor-soldier-name = Soldier
@@ -550,3 +680,17 @@ notification-unit-repaired = Unit repaired.
 notification-select-target = Select target.
 notification-insufficient-power = Insufficient power.
 notification-reinforcements-have-arrived = Reinforcements have arrived.
+
+## ai.yaml
+
+bot-normal-ai =
+    .name = Normal AI
+
+temporal-rift-power =
+    .name = Temporal Rift
+    .description = Opens a temporal rift at the target location.
+
+temporal-gate-power =
+    .name = Temporal Gate
+    .description = Teleports a group of units across
+    the map for 20 seconds.

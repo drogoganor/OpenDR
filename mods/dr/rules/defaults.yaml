@@ -219,7 +219,6 @@
 		Prerequisites: barracks.upgraded
 	FireProjectilesOnDeath:
 		Weapons: GenericExplode
-		EmptyWeapon: GenericExplode
 	WithFlamesOverlay@Flames1:
 		Image: eosmlfl0
 		Offset: 0, 0, 0
@@ -325,7 +324,6 @@
 		Categories: Aircraft
 	FireProjectilesOnDeath:
 		Weapons: GenericExplode
-		EmptyWeapon: GenericExplode
 		RequiresCondition: !airborne
 	Repairable:
 		RepairActors: repair.human, repair.cyborg
@@ -394,7 +392,6 @@
 	#	Prerequisites: barracks.upgraded
 	FireProjectilesOnDeath:
 		Weapons: GenericExplode
-		EmptyWeapon: GenericExplode
 	WithFlamesOverlay@Flames1:
 		Image: eosmlfl0
 		Offset: 0, 0, 0
@@ -630,7 +627,7 @@
 	Targetable:
 		TargetTypes: Rocks
 	Tooltip:
-		Name: Rock
+		Name: actor-rock-name
 	MapEditorData:
 		Categories: Rocks
 

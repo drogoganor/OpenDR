@@ -43,7 +43,6 @@ namespace OpenRA.Mods.Dr.Traits
 			if (ticks > info.StaysFor)
 			{
 				self.QueueActivity(new RemoveSelf());
-				return;
 			}
 		}
 	}

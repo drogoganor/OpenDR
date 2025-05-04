@@ -39,7 +39,7 @@ namespace OpenRA.Mods.Dr.Traits
 		public readonly string CannotPlaceTextNotification = null;
 
 		[Desc("Hotkey to toggle between PlaceBuildingVariants when placing a structure.")]
-		public readonly HotkeyReference ToggleVariantKey = new HotkeyReference();
+		public readonly HotkeyReference ToggleVariantKey = new();
 
 		public override object Create(ActorInitializer init) { return new BuildUnitPlaceBuilding(this); }
 	}
@@ -121,6 +121,7 @@ namespace OpenRA.Mods.Dr.Traits
 			tick = 0;
 		}
 
+		/*
 		static int GetNumBuildables(Player p)
 		{
 			// This only matters for local players.
@@ -131,5 +132,6 @@ namespace OpenRA.Mods.Dr.Traits
 				.Where(a => a.Actor.Owner == p)
 				.SelectMany(a => a.Trait.BuildableItems()).Distinct().Count();
 		}
+		*/
 	}
 }

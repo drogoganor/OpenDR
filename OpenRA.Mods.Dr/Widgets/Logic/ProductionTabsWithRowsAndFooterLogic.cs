@@ -32,16 +32,16 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 				var foreground = tabs.Parent.Get<ContainerWidget>("PALETTE_FOREGROUND");
 				var templates = foreground.Get<ImageWidget>("ROW_TEMPLATE");
 				var footer = tabs.Parent.Get<ContainerWidget>(tabs.FooterWidget);
-				int minRows = 4; // TODO: Get from attribute
+				const int MinRows = 4; // TODO: Get from attribute
 
-				Action<int, int> updateBackground = (oldCount, newCount) =>
+				void UpdateBackground(int oldCount, int newCount)
 				{
 					foreground.RemoveChildren();
 					foreground.AddChild(templates);
 
-					int numRows = (int)Math.Ceiling((double)newCount / palette.Columns);
-					if (numRows < minRows)
-						numRows = minRows;
+					var numRows = (int)Math.Ceiling((double)newCount / palette.Columns);
+					if (numRows < MinRows)
+						numRows = MinRows;
 					for (var i = 0; i < numRows; i++)
 					{
 						var bg = templates.Clone();
@@ -51,11 +51,12 @@ namespace OpenRA.Mods.Dr.Widgets.Logic
 					}
 
 					footer.Bounds.Y = numRows * palette.IconSize.Y;
-				};
-				palette.OnIconCountChanged += updateBackground;
+				}
+
+				palette.OnIconCountChanged += UpdateBackground;
 
 				// Set the initial palette state
-				updateBackground(0, 0);
+				UpdateBackground(0, 0);
 			}
 		}
 	}

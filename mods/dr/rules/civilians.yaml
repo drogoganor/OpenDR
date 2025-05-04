@@ -4,7 +4,7 @@ Civilian:
 	RenderSprites:
 		Image: uocvmst0
 	Tooltip:
-		Name: Civilian
+		Name: actor-civilian-name
 	Health:
 		HP: 40
 	Mobile:
@@ -17,7 +17,7 @@ RowdyCivilian:
 	RenderSprites:
 		Image: uorcmst0
 	Tooltip:
-		Name: Rowdy Civilian
+		Name: actor-rowdycivilian-name
 	Voiced:
 		VoiceSet: RowdyMaleCivilianVoice
 	Health:
@@ -38,7 +38,7 @@ ColonelMartel: # Campaign
 	Voiced:
 		VoiceSet: FreedomGuardVoice
 	Tooltip:
-		Name: Colonel Martel
+		Name: actor-colonelmartel-name
 	Health:
 		HP: 500
 	WithIdleOverlay@SHADOW: # No animated shadow
@@ -49,7 +49,7 @@ JebRadec: # Campaign
 	RenderSprites:
 		Image: uorcmst0
 	Tooltip:
-		Name: Jeb Radec
+		Name: actor-jebradec-name
 	Voiced:
 		VoiceSet: JebRadecVoice
 	Health:
@@ -64,7 +64,7 @@ Karoch: # Campaign
 	RenderSprites:
 		Image: uocspst0
 	Tooltip:
-		Name: Karoch
+		Name: actor-karoch-name
 	Health:
 		HP: 500
 	Voiced:
@@ -86,7 +86,7 @@ DessicatorTransport:
 	RenderSprites:
 		Image: uohtrst0
 	Tooltip:
-		Name: Dessicator Transport
+		Name: actor-dessicatortransport-name
 	-Buildable:
 	Voiced:
 		VoiceSet: ImperiumVoice
@@ -116,7 +116,7 @@ CivWheelTransporter:
 	RenderSprites:
 		Image: uowtrst0
 	Tooltip:
-		Name: Civilian Wheeled Transporter
+		Name: actor-civwheeltransporter-name
 	-Buildable:
 	Voiced:
 		VoiceSet: FreedomGuardVoice

@@ -571,8 +571,6 @@ Container@PLAYER_WIDGETS:
 					IconSize: 64, 49
 					IconMargin: 0, 0
 					IconSpriteOffset: 0, 0
-					ReadyText: Ready
-					HoldText: On Hold
 					HotkeyPrefix: Production
 					HotkeyCount: 24
 				ProductionTabsWithRowsAndFooter@PRODUCTION_TABS: # per-queue tabs

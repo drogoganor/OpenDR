@@ -28,7 +28,7 @@ namespace OpenRA.Mods.Dr.FileSystem
 
 		sealed class FtgFile : IReadOnlyPackage
 		{
-			public string Name { get; private set; }
+			public string Name { get; }
 			public IEnumerable<string> Contents { get { return index.Keys; } }
 
 			readonly Dictionary<string, FtgEntry> index = new();

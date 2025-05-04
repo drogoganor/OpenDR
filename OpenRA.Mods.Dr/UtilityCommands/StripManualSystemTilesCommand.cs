@@ -25,17 +25,17 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		public ModData ModData;
 
-		protected bool ValidateArguments(string[] args)
+		protected static bool ValidateArguments(string[] _)
 		{
-			return args.Length >= 0;
+			return true;
 		}
 
 		protected void Run(Utility utility)
 		{
 			// HACK: The engine code assumes that Game.modData is set.
 			Game.ModData = ModData = utility.ModData;
-			var targetPath = "..\\..\\mods\\dr\\maps";
-			var unpackedMapFiles = Directory.GetDirectories(targetPath);
+			const string TargetPath = "..\\..\\mods\\dr\\maps";
+			var unpackedMapFiles = Directory.GetDirectories(TargetPath);
 			foreach (var unpackedMapFile in unpackedMapFiles)
 			{
 				var package = new Folder(".").OpenPackage(unpackedMapFile, ModData.ModFiles);
@@ -51,7 +51,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				Console.WriteLine(unpackedMapFile + " saved.");
 			}
 
-			var packedMapFiles = Directory.GetFiles(targetPath, "*.oramap");
+			var packedMapFiles = Directory.GetFiles(TargetPath, "*.oramap");
 			foreach (var packedMapFile in packedMapFiles)
 			{
 				ZipFileLoader.TryParseReadWritePackage(packedMapFile, out var package);

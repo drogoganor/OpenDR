@@ -40,14 +40,13 @@
 		Range: 3c0
 	FrozenUnderFog:
 	Tooltip:
-		GenericName: Civilian Structure
+		GenericName: actor-civilianstructure-name
 	SelectionDecorations:
 	ProximityCaptor:
 		Types: Building
 	CaptureNotification:
 	FireProjectilesOnDeath:
 		Weapons: GenericExplode
-		EmptyWeapon: GenericExplode
 	Demolishable:
 	#	Condition: being-demolished
 	Armor:
@@ -101,7 +100,7 @@
 		Type: BuildingArmour
 	FrozenUnderFog:
 	Tooltip:
-		GenericName: Structure
+		GenericName: actor-structure-name
 	Demolishable:
 	#	Condition: being-demolished
 	#MapEditorData:
@@ -142,7 +141,6 @@
 	CaptureNotification:
 	FireProjectilesOnDeath:
 		Weapons: GenericExplode
-		EmptyWeapon: GenericExplode
 	ActorLostNotification:
 		Notification: BuildingDestroyed
 	WithBuildingRepairDecoration:
@@ -202,7 +200,7 @@
 		Queue: Building
 		BuildPaletteOrder: 0
 		BuildDuration: 22
-		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
+		Description: actor-hq.description
 	BaseBuilding:
 	Valued:
 		Cost: 750
@@ -519,7 +517,6 @@
 		RequiredForShortGame: false
 	Inherits@shape: ^2x2Shape
 	Building:
-		Prerequisites: ~anypower, barracks
 		Footprint: xx xx
 		Dimensions: 2,2
 	Selectable:

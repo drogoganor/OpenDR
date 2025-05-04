@@ -27,10 +27,10 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		public ModData ModData;
 		public Map Map;
-		public List<string> Players = new List<string>();
+		public List<string> Players = new();
 		protected bool skipActors = true;
 
-		protected bool ValidateArguments(string[] args)
+		protected static bool ValidateArguments(string[] args)
 		{
 			return args.Length >= 2;
 		}
@@ -40,10 +40,10 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			// HACK: The engine code assumes that Game.modData is set.
 			Game.ModData = ModData = utility.ModData;
 
-			var rootPath = "..\\..\\ArgusMaps\\";
+			const string RootPath = "..\\..\\ArgusMaps\\";
 
 			var filename = args[1];
-			using (var stream = File.OpenRead(rootPath + filename))
+			using (var stream = File.OpenRead(RootPath + filename))
 			{
 				var headerString = stream.ReadASCII(4);
 
@@ -124,7 +124,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 				var width = stream.ReadUInt16();
 				var height = stream.ReadUInt16();
-				var tilesetName = "BARREN";
+				const string TilesetName = "BARREN";
 
 				headerString = stream.ReadASCII(4);
 
@@ -215,8 +215,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 				filename = filename.ToLowerInvariant();
 
-				if (!ModData.DefaultTerrainInfo.TryGetValue(tilesetName, out var terrainInfo))
-					throw new InvalidDataException($"Unknown tileset {tilesetName}");
+				if (!ModData.DefaultTerrainInfo.TryGetValue(TilesetName, out var terrainInfo))
+					throw new InvalidDataException($"Unknown tileset {TilesetName}");
 
 				Map = new Map(ModData, terrainInfo, width + 2, height + 2)
 				{
@@ -254,12 +254,12 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			map.SetBounds(tl, br);
 		}
 
-		protected void SetNeutralPlayer(MapPlayers mapPlayers)
+		protected static void SetNeutralPlayer(MapPlayers mapPlayers)
 		{
-			var section = "Neutral";
+			const string Section = "Neutral";
 			var pr = new PlayerReference
 			{
-				Name = section,
+				Name = Section,
 				OwnsWorld = true,
 				NonCombatant = true,
 				Faction = "fguard",
@@ -267,10 +267,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			};
 
 			// Overwrite default player definitions if needed
-			if (!mapPlayers.Players.ContainsKey(section))
-				mapPlayers.Players.Add(section, pr);
-			else
-				mapPlayers.Players[section] = pr;
+			if (!mapPlayers.Players.TryAdd(Section, pr))
+				mapPlayers.Players[Section] = pr;
 		}
 	}
 }

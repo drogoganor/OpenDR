@@ -108,7 +108,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 			// Data is made up of 3x256 bytes, each ranging 0-63. Data is grouped by channel.
 			var list = new List<byte>();
-			for (int i = 0; i < Palette.Size * 6; i++)
+			for (var i = 0; i < Palette.Size * 6; i++)
 			{
 				list.Add(s.ReadUInt8());
 			}
@@ -117,33 +117,32 @@ namespace OpenRA.Mods.Dr.Traits
 			var gList = list.Skip(256).Take(256).ToList();
 			var bList = list.Skip(512).Take(256).ToList();
 
-			for (int i = 0; i < Palette.Size; i++)
+			for (var i = 0; i < Palette.Size; i++)
 			{
 				// Index 0 should always be completely transparent/background color
 				if (i == 0)
 					colors[i] = 0;
 				else if (i < 160 || i == 255)
-					colors[i] = (uint)Color.FromArgb(
-						Math.Min((rList[i] * info.StandardPaletteMultiplier) + info.Gamma, 255),
-						Math.Min((gList[i] * info.StandardPaletteMultiplier) + info.Gamma, 255),
-						Math.Min((bList[i] * info.StandardPaletteMultiplier) + info.Gamma, 255)).ToArgb();
+					colors[i] = Color.FromArgb(
+						Math.Min(rList[i] * info.StandardPaletteMultiplier + info.Gamma, 255),
+						Math.Min(gList[i] * info.StandardPaletteMultiplier + info.Gamma, 255),
+						Math.Min(bList[i] * info.StandardPaletteMultiplier + info.Gamma, 255)).ToArgb();
 				else
-					colors[i] = (uint)Color.FromArgb(
-						Math.Min((rList[i] * info.TerrainPaletteMultiplier) + info.Gamma, 255),
-						Math.Min((gList[i] * info.TerrainPaletteMultiplier) + info.Gamma, 255),
-						Math.Min((bList[i] * info.TerrainPaletteMultiplier) + info.Gamma, 255)).ToArgb();
+					colors[i] = Color.FromArgb(
+						Math.Min(rList[i] * info.TerrainPaletteMultiplier + info.Gamma, 255),
+						Math.Min(gList[i] * info.TerrainPaletteMultiplier + info.Gamma, 255),
+						Math.Min(bList[i] * info.TerrainPaletteMultiplier + info.Gamma, 255)).ToArgb();
 			}
 
 			// Shadow hack
-			colors[info.ShadowIndex] = (uint)Color.FromArgb(112, 0, 0, 0).ToArgb();
+			colors[info.ShadowIndex] = Color.FromArgb(112, 0, 0, 0).ToArgb();
 
 			return new ImmutablePalette(colors);
 		}
 
 		public void LoadPalettes(WorldRenderer wr)
 		{
-			Stream s;
-			if (!world.Map.TryOpen(info.Filename, out s))
+			if (!world.Map.TryOpen(info.Filename, out var s))
 			{
 				// throw new FileNotFoundException("Couldn't find palette file: " + info.Filename);
 				return;
@@ -151,7 +150,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 			var newPal = PaletteFromStream(s, info);
 
-			if (info.Tileset == null || info.Tileset.ToLowerInvariant() == world.Map.Tileset.ToLowerInvariant())
+			if (info.Tileset == null || info.Tileset.Equals(world.Map.Tileset, StringComparison.InvariantCultureIgnoreCase))
 				wr.AddPalette(info.Name, newPal, info.AllowModifiers);
 
 			s.Close();

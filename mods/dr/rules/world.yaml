@@ -18,15 +18,15 @@
 		Index: 255, 16, 32, 48, 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240, 20, 40, 56, 65, 97, 130, 148, 194, 24, 33, 66, 132, 28, 41, 67, 134, 1, 2, 4, 8, 3, 6, 12, 9, 7, 14, 13, 11, 5, 10, 15, 255
 		UseExtendedIndex: true
 	Faction@0:
-		Name: Freedom Guard
+		Name: faction-fguard.name
 		InternalName: fguard
 		Side: Original
-		Description: Freedom Guard
+		Description: faction-fguard.description
 	Faction@1:
-		Name: Imperium
+		Name: faction-imperium.name
 		InternalName: imperium
 		Side: Original
-		Description: Imperium
+		Description: faction-imperium.description
 	#Faction@2:
 	#	Name: Xenite
 	#	InternalName: xenite
@@ -38,30 +38,30 @@
 	#	Side: Original
 	#	Description: Shadowhand
 	Faction@4:
-		Name: Any
+		Name: faction-random.name
 		InternalName: Random
 		Side: Original
 		RandomFactionMembers: fguard, imperium
-		Description: Randomly select Freedom Guard or Imperium.
+		Description: faction-random.description
 	Faction@5:
-		Name: Togran
+		Name: faction-togran.name
 		InternalName: togran
 		Side: Addon
 		Selectable: false
-		Description: Togran
+		Description: faction-togran.description
 	Faction@6:
-		Name: Terrorist
+		Name: faction-terrorist.name
 		InternalName: terrorist
 		Side: Addon
 		Selectable: false
-		Description: Terrorist
+		Description: faction-terrorist.description
 	Faction@7:
-		Name: Any (All)
+		Name: faction-randomall.name
 		InternalName: RandomAll
 		Side: Addon
 		Selectable: false
 		RandomFactionMembers: fguard, imperium, togran
-		Description: Randomly select any faction.
+		Description: faction-randomall.description
 	ResourceRenderer:
 		ResourceTypes:
 			Water:

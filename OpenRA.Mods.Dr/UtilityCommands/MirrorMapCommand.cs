@@ -12,8 +12,6 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text.RegularExpressions;
 using OpenRA.FileSystem;
 
 namespace OpenRA.Mods.Dr.UtilityCommands
@@ -27,7 +25,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 	class TileTransform
 	{
-		static readonly Dictionary<ushort, ushort> HorizontalDictionary = new Dictionary<ushort, ushort>()
+		static readonly Dictionary<ushort, ushort> HorizontalDictionary = new()
 		{
 			{ 24, 21 }, // LR
 			{ 21, 24 },
@@ -41,7 +39,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ 28, 29 },
 		};
 
-		static readonly Dictionary<ushort, ushort> VerticalDictionary = new Dictionary<ushort, ushort>()
+		static readonly Dictionary<ushort, ushort> VerticalDictionary = new()
 		{
 			{ 27, 18 }, // TB
 			{ 18, 27 },
@@ -55,7 +53,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ 28, 26 },
 		};
 
-		static readonly Dictionary<ushort, ushort> HorizontalAndVerticalDictionary = new Dictionary<ushort, ushort>()
+		static readonly Dictionary<ushort, ushort> HorizontalAndVerticalDictionary = new()
 		{
 			{ 24, 21 }, // LR
 			{ 21, 24 },
@@ -178,7 +176,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 	class ActorTransform
 	{
-		static readonly Dictionary<string, int2> MirrorOffsets = new Dictionary<string, int2>()
+		static readonly Dictionary<string, int2> MirrorOffsets = new()
 		{
 			{ "mpspawn", new int2(3, 3) },
 			{ "power", new int2(2, 3) },
@@ -271,8 +269,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		public IEnumerable<ActorTransform> GetTransforms(Map map)
 		{
 			var offset = int2.Zero;
-			if (MirrorOffsets.ContainsKey(Actor.Type))
-				offset = MirrorOffsets[Actor.Type];
+			if (MirrorOffsets.TryGetValue(Actor.Type, out var value))
+				offset = value;
 
 			var horizontalTransform = new ActorTransform()
 			{
@@ -319,9 +317,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		public ModData ModData;
 		public Map Map;
-		int actorIndex = 0;
 
-		protected bool ValidateArguments(string[] args)
+		protected static bool ValidateArguments(string[] args)
 		{
 			return args.Length >= 2;
 		}
@@ -345,9 +342,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			if (flipHorizontal && flipVertical)
 				mirrorType = MirrorType.HorizontalAndVertical;
 
-			var targetPath = "..\\mods\\dr\\maps";
+			const string TargetPath = "..\\mods\\dr\\maps";
 
-			var package = new Folder(targetPath).OpenPackage(filename, ModData.ModFiles);
+			var package = new Folder(TargetPath).OpenPackage(filename, ModData.ModFiles);
 			if (package == null)
 			{
 				Console.WriteLine("Couldn't find map file: " + filename);
@@ -365,14 +362,14 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 					size = size.WithY(size.Y / 2);
 					break;
 				case MirrorType.HorizontalAndVertical:
-					size = size / 2;
+					size /= 2;
 					break;
 			}
 
 			// Tiles
-			for (int x = 0; x < size.X; x++)
+			for (var x = 0; x < size.X; x++)
 			{
-				for (int y = 0; y < size.Y; y++)
+				for (var y = 0; y < size.Y; y++)
 				{
 					var pos = new CPos(x, y);
 					var transformTile = new TileTransform()
@@ -391,8 +388,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			}
 
 			// Actors
-			actorIndex = GetHighestActorIndex();
-			int multiCount = 0;
+			// var actorIndex = GetHighestActorIndex();
+			var multiCount = 0;
 
 			var actorDefs = new List<ActorReference>();
 			var removeActors = new List<MiniYamlNode>();
@@ -434,17 +431,19 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				}
 			}
 
+			/*
 			foreach (var a in actorDefs)
 			{
 				// TODO: Broken in playtest-20241116
-				//Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + ++actorIndex, a.Save()));
+				// Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + ++actorIndex, a.Save()));
 			}
 
 			foreach (var a in removeActors)
 			{
 				// TODO: Broken in playtest-20241116
-				//Map.ActorDefinitions.Remove(a);
+				// Map.ActorDefinitions.Remove(a);
 			}
+			*/
 
 			if (multiCount > 0)
 			{
@@ -453,9 +452,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			}
 
 			// Resources
-			for (int x = 0; x < size.X; x++)
+			for (var x = 0; x < size.X; x++)
 			{
-				for (int y = 0; y < size.Y; y++)
+				for (var y = 0; y < size.Y; y++)
 				{
 					var pos = new CPos(x, y);
 					var resource = new ResourceTransform()
@@ -473,12 +472,13 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				}
 			}
 
-			var dest = Path.Combine(targetPath, Path.GetFileNameWithoutExtension(filename) + ".oramap");
+			var dest = Path.Combine(TargetPath, Path.GetFileNameWithoutExtension(filename) + ".oramap");
 
 			Map.Save(ZipFileLoader.Create(dest));
 			Console.WriteLine(dest + " saved.");
 		}
 
+		/*
 		int GetHighestActorIndex()
 		{
 			var pattern = new Regex(@"Actor(?<actorId>\d+)");
@@ -489,5 +489,6 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				.Select(x => int.Parse(x.Value))
 				.Max();
 		}
+		*/
 	}
 }

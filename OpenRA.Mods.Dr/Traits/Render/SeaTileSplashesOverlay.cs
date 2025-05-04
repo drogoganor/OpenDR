@@ -9,11 +9,8 @@
  */
 #endregion
 
-using System.Collections.Generic;
-using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Traits.Render;
-using OpenRA.Primitives;
 using OpenRA.Traits;
 
 namespace OpenRA.Mods.Dr.Traits.Render
@@ -50,6 +47,7 @@ namespace OpenRA.Mods.Dr.Traits.Render
 
 	public class SeaTileSplashesOverlay : ITick, IWorldLoaded, IRenderOverlay
 	{
+		/*
 		class SeaTileSplash
 		{
 			public int Delay;
@@ -64,36 +62,39 @@ namespace OpenRA.Mods.Dr.Traits.Render
 			public CPos Cell;
 			public TerrainTile Tile;
 		}
+		*/
 
-		readonly Actor self;
+		// readonly Actor self;
 		readonly SeaTileSplashesOverlayInfo info;
-		readonly List<SeaTileSplash> splashes = new List<SeaTileSplash>();
 
-		TerrainSpriteLayer spriteLayer;
-		PaletteReference palette;
+		// readonly List<SeaTileSplash> splashes = new();
+		// readonly TerrainSpriteLayer spriteLayer;
+		// PaletteReference palette;
 		int tick = 0;
 
 		public SeaTileSplashesOverlay(Actor self, SeaTileSplashesOverlayInfo info)
 		{
 			this.info = info;
-			this.self = self;
+
+			// this.self = self;
 		}
 
 		void IWorldLoaded.WorldLoaded(World w, WorldRenderer wr)
 		{
-			var splashImageName = $"{info.SequencePrefix}-{self.World.Map.Tileset.ToLowerInvariant()}";
-			//var sequences = w.Map.Rules.Sequences;
-			palette = wr.Palette("terrain");
+			// var splashImageName = $"{info.SequencePrefix}-{self.World.Map.Tileset.ToLowerInvariant()}";
+
+			// var sequences = w.Map.Rules.Sequences;
+			// palette = wr.Palette("terrain");
 
 			// TODO: Fix
-			return;
 
-			if (spriteLayer == null)
-			{
-				//var first = sequences.GetSequence(splashImageName, $"{info.SequencePrefix}1").GetSprite(0);
-				//var emptySprite = new Sprite(first.Sheet, Rectangle.Empty, TextureChannel.Alpha);
-				//spriteLayer = new TerrainSpriteLayer(w, wr, emptySprite, BlendMode.None, wr.World.Type != WorldType.Editor);
-			}
+			/*
+			// if (spriteLayer == null)
+			// {
+			// 	//var first = sequences.GetSequence(splashImageName, $"{info.SequencePrefix}1").GetSprite(0);
+			// 	//var emptySprite = new Sprite(first.Sheet, Rectangle.Empty, TextureChannel.Alpha);
+			// 	//spriteLayer = new TerrainSpriteLayer(w, wr, emptySprite, BlendMode.None, wr.World.Type != WorldType.Editor);
+			// }
 
 			// Get all sea tiles
 			var seaTiles = new List<SeaTileSample>();
@@ -136,8 +137,10 @@ namespace OpenRA.Mods.Dr.Traits.Render
 				//	Delay = self.World.LocalRandom.Next(info.RandomMax)
 				//});
 			}
+			*/
 		}
 
+		/*
 		bool IsValidSeaTile(CPos cell)
 		{
 			var map = self.World.Map;
@@ -161,6 +164,7 @@ namespace OpenRA.Mods.Dr.Traits.Render
 
 			return true;
 		}
+		*/
 
 		void ITick.Tick(Actor self)
 		{
@@ -172,6 +176,7 @@ namespace OpenRA.Mods.Dr.Traits.Render
 				tick++;
 
 			// Render
+			/*
 			for (var i = 0; i < splashes.Count; i++)
 			{
 				var splash = splashes[i];
@@ -185,8 +190,10 @@ namespace OpenRA.Mods.Dr.Traits.Render
 				splash.Animation.Tick();
 				UpdateSpriteLayers(splash.Cell, splash.Sequence, splash.Animation.CurrentFrame, palette);
 			}
+			*/
 		}
 
+		/*
 		void UpdateSpriteLayers(CPos cell, ISpriteSequence sequence, int frame, PaletteReference palette)
 		{
 			if (sequence != null)
@@ -198,11 +205,12 @@ namespace OpenRA.Mods.Dr.Traits.Render
 				spriteLayer.Clear(cell);
 			}
 		}
+		*/
 
 		void IRenderOverlay.Render(WorldRenderer wr)
 		{
 			// TODO: Fix
-			//spriteLayer.Draw(wr.Viewport);
+			// spriteLayer.Draw(wr.Viewport);
 		}
 	}
 }

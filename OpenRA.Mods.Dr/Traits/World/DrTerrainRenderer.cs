@@ -31,11 +31,13 @@ namespace OpenRA.Mods.Dr.Traits
 		[FieldLoader.LoadUsing("LoadShadowEdges")]
 		public Dictionary<string, DrTerrainEdgeInfo> ShadowEdges;
 
+#pragma warning disable IDE0051 // Remove unused private members
 		static object LoadEdges(MiniYaml yaml)
+#pragma warning restore IDE0051 // Remove unused private members
 		{
 			var retList = new Dictionary<string, DrTerrainEdgeInfo>();
 			var shorelines = yaml.Nodes.First(x => x.Key == "Edges");
-			foreach (var node in shorelines.Value.Nodes.Where(n => n.Key.StartsWith("EdgeMatch")))
+			foreach (var node in shorelines.Value.Nodes.Where(n => n.Key.StartsWith("EdgeMatch", StringComparison.InvariantCulture)))
 			{
 				var ret = new DrTerrainEdgeInfo();
 				FieldLoader.Load(ret, node.Value);
@@ -45,11 +47,13 @@ namespace OpenRA.Mods.Dr.Traits
 			return retList;
 		}
 
+#pragma warning disable IDE0051 // Remove unused private members
 		static object LoadShadowEdges(MiniYaml yaml)
+#pragma warning restore IDE0051 // Remove unused private members
 		{
 			var retList = new Dictionary<string, DrTerrainEdgeInfo>();
 			var shorelines = yaml.Nodes.First(x => x.Key == "ShadowEdges");
-			foreach (var node in shorelines.Value.Nodes.Where(n => n.Key.StartsWith("EdgeMatch")))
+			foreach (var node in shorelines.Value.Nodes.Where(n => n.Key.StartsWith("EdgeMatch", StringComparison.InvariantCulture)))
 			{
 				var ret = new DrTerrainEdgeInfo();
 				FieldLoader.Load(ret, node.Value);
@@ -63,14 +67,14 @@ namespace OpenRA.Mods.Dr.Traits
 		{
 			var missingImages = new HashSet<string>();
 			var failed = false;
-			Action<uint, string> onMissingImage = (id, f) =>
+			void OnMissingImage(uint id, string f)
 			{
 				onError($"\tTemplate `{id}` references sprite `{f}` that does not exist.");
 				missingImages.Add(f);
 				failed = true;
-			};
+			}
 
-			var tileCache = new DrTileCache((DrTerrain)terrainInfo, onMissingImage);
+			var tileCache = new DrTileCache((DrTerrain)terrainInfo, OnMissingImage);
 			foreach (var t in terrainInfo.Templates)
 			{
 				var templateInfo = (DefaultTerrainTemplateInfo)t.Value;
@@ -188,12 +192,12 @@ namespace OpenRA.Mods.Dr.Traits
 			map.Tiles.CellEntryChanged += OnCellEntryChanged;
 		}
 
-		bool CellInMap(Map map, CPos pos)
+		static bool CellInMap(Map map, CPos pos)
 		{
 			if (pos.X <= 0 || pos.Y <= 0)
 				return false;
 
-			if (pos.X >= (map.MapSize.X - 1) || pos.Y >= (map.MapSize.Y - 1))
+			if (pos.X >= map.MapSize.X - 1 || pos.Y >= map.MapSize.Y - 1)
 				return false;
 
 			return true;
@@ -201,6 +205,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		void CalculateShadowTiles(CPos cell, int shadowLayerIndex, int falloff, int minGradient)
 		{
+			const ushort ShadowTileType = 254;
 			const int MaxElevation = 10;
 			var currentElevation = 0;
 			var currentCell = cell;
@@ -223,8 +228,7 @@ namespace OpenRA.Mods.Dr.Traits
 				if (currentElevation > minGradient)
 				{
 					// Place shadow
-					ushort shadowTileType = 254;
-					var shadowTile = new TerrainTile(shadowTileType, 0);
+					var shadowTile = new TerrainTile(ShadowTileType, 0);
 
 					var shadowLayer = shadowTiles[shadowLayerIndex];
 					shadowLayer[currentCell] = shadowTile;
@@ -276,7 +280,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		void CreateShadowEdgesForMatches(EdgeTileResult[] edges, int shadowLayerIndex)
 		{
-			var self = edges.First(x => x.Self == true);
+			var self = edges.First(x => x.Self);
 			var tile = self.Tile;
 			var matchEdges = info.ShadowEdges.Values;
 
@@ -393,7 +397,7 @@ namespace OpenRA.Mods.Dr.Traits
 		{
 			ushort? shimType = null;
 			string palette = null;
-			var self = edges.First(x => x.Self == true);
+			var self = edges.First(x => x.Self);
 			var tile = self.Tile;
 			var matchEdges = info.Edges.Values;
 
@@ -475,8 +479,7 @@ namespace OpenRA.Mods.Dr.Traits
 					lowestMatchValue = tile.Type;
 
 				// If we don't have a lowest match value, it's ourself
-				if (lowestMatchValue == null)
-					lowestMatchValue = tile.Type;
+				lowestMatchValue ??= tile.Type;
 
 				// Only allow one match per tile type
 				if (usedEdges.Contains(lowestMatchValue.Value))
@@ -489,7 +492,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 				// Match is good at this point; create edge tile
 				// Get the right edge type for this tile type by adding the result tile type to the base tile type multiplied by how many edge tiles we have
-				var resultTileType = (ushort)(matchEdge.SetType + ((lowestMatchValue - NumSkipEdgeTiles) * NumEdgeTiles));
+				var resultTileType = (ushort)(matchEdge.SetType + (lowestMatchValue - NumSkipEdgeTiles) * NumEdgeTiles);
 
 				var edgeTile = new TerrainTile(resultTileType, 0);
 
@@ -514,12 +517,12 @@ namespace OpenRA.Mods.Dr.Traits
 			}
 		}
 
-		bool GetLowestEqualNeighbor(EdgeTileResult[] edges, DrTerrainEdgeInfo edgeInfo, out ushort? lowestValue)
+		static bool GetLowestEqualNeighbor(EdgeTileResult[] edges, DrTerrainEdgeInfo edgeInfo, out ushort? lowestValue)
 		{
 			lowestValue = null;
 			foreach (var edge in edges)
 			{
-				if (edge.Self == true)
+				if (edge.Self)
 					continue;
 
 				var matchedEdge = edgeInfo.Neighbors.Values
@@ -647,7 +650,7 @@ namespace OpenRA.Mods.Dr.Traits
 					var u = map.Grid.Type == MapGridType.Rectangular ? x : (x - y) / 2f;
 					var v = map.Grid.Type == MapGridType.Rectangular ? y : (x + y) / 2f;
 
-					var tl = new float2(u * tileSize.Width, (v - (0.5f * tileInfo.Height)) * tileSize.Height) - (0.5f * sprite.Size);
+					var tl = new float2(u * tileSize.Width, (v - 0.5f * tileInfo.Height) * tileSize.Height) - 0.5f * sprite.Size;
 					var rect = new Rectangle((int)(tl.X + sprite.Offset.X), (int)(tl.Y + sprite.Offset.Y), (int)sprite.Size.X, (int)sprite.Size.Y);
 					templateRect = templateRect.HasValue ? Rectangle.Union(templateRect.Value, rect) : rect;
 				}
@@ -658,7 +661,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		IEnumerable<IRenderable> ITiledTerrainRenderer.RenderUIPreview(WorldRenderer wr, TerrainTemplateInfo t, int2 origin, float scale)
 		{
-			if (!(t is DefaultTerrainTemplateInfo template))
+			if (t is not DefaultTerrainTemplateInfo template)
 				yield break;
 
 			var ts = map.Grid.TileSize;
@@ -676,7 +679,7 @@ namespace OpenRA.Mods.Dr.Traits
 					var sprite = tileCache.TileSprite(tile, 0);
 					var u = gridType == MapGridType.Rectangular ? x : (x - y) / 2f;
 					var v = gridType == MapGridType.Rectangular ? y : (x + y) / 2f;
-					var offset = (new float2(u * ts.Width, (v - (0.5f * tileInfo.Height)) * ts.Height) - (0.5f * sprite.Size.XY)).ToInt2();
+					var offset = (new float2(u * ts.Width, (v - 0.5f * tileInfo.Height) * ts.Height) - 0.5f * sprite.Size.XY).ToInt2();
 					var palette = template.Palette ?? terrainInfo.Palette;
 
 					yield return new UISpriteRenderable(sprite, WPos.Zero, origin + offset, 0, wr.Palette(palette), scale);
@@ -686,7 +689,7 @@ namespace OpenRA.Mods.Dr.Traits
 
 		IEnumerable<IRenderable> ITiledTerrainRenderer.RenderPreview(WorldRenderer wr, TerrainTemplateInfo t, WPos origin)
 		{
-			if (!(t is DefaultTerrainTemplateInfo template))
+			if (t is not DefaultTerrainTemplateInfo template)
 				yield break;
 
 			var i = 0;

@@ -34,7 +34,7 @@ namespace OpenRA.Mods.Dr.FileFormats
 			get { return entries; }
 		}
 
-		readonly List<ScnSection> entries = new List<ScnSection>();
+		readonly List<ScnSection> entries = new();
 
 		public ScnFile(Stream s)
 		{
@@ -67,7 +67,6 @@ namespace OpenRA.Mods.Dr.FileFormats
 					switch (line[0])
 					{
 						case ';':
-							break;
 						case '{':
 							break;
 						case '}':
@@ -92,7 +91,7 @@ namespace OpenRA.Mods.Dr.FileFormats
 
 			var comment = line.IndexOf(';');
 			if (comment >= 0)
-				line = line.Substring(0, comment);
+				line = line[..comment];
 
 			line = line.Trim();
 			if (line.Length == 0)
@@ -100,10 +99,10 @@ namespace OpenRA.Mods.Dr.FileFormats
 
 			var scnEntry = new ScnSection(line);
 
-			if (acceptableEntries.Any(x => line.StartsWith(x)))
+			if (acceptableEntries.Any(x => line.StartsWith(x, StringComparison.InvariantCultureIgnoreCase)))
 				entries.Add(scnEntry);
 
-			if (line.StartsWith(SpecialForcesStr))
+			if (line.StartsWith(SpecialForcesStr, StringComparison.InvariantCultureIgnoreCase))
 			{
 				skipNextBlock = true;
 				return false;
@@ -115,16 +114,16 @@ namespace OpenRA.Mods.Dr.FileFormats
 
 	public class ScnSection
 	{
-		public string Name { get; private set; }
-		public string ValuesStr { get; private set; }
-		public string[] Values { get; private set; }
+		public string Name { get; }
+		public string ValuesStr { get; }
+		public string[] Values { get; }
 
 		public ScnSection(string raw)
 		{
-			var openBracketIndex = raw.IndexOf("(");
-			var closeBracketIndex = raw.IndexOf(")");
-			Name = raw.Substring(0, openBracketIndex);
-			ValuesStr = raw.Substring(openBracketIndex + 1, (closeBracketIndex - openBracketIndex) - 1);
+			var openBracketIndex = raw.IndexOf("(", StringComparison.InvariantCulture);
+			var closeBracketIndex = raw.IndexOf(")", StringComparison.InvariantCulture);
+			Name = raw[..openBracketIndex];
+			ValuesStr = raw.Substring(openBracketIndex + 1, closeBracketIndex - openBracketIndex - 1);
 
 			Values = ValuesStr.Split(new[] { ' ' });
 		}

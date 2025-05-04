@@ -36,7 +36,7 @@ namespace OpenRA.Mods.Dr.Traits
 	public class Vortex : ConditionalTrait<VortexInfo>, ITick
 	{
 		readonly VortexInfo info;
-		readonly WVec targetVec = new WVec(8192, 0, 0);
+		readonly WVec targetVec = new(8192, 0, 0);
 		int rotation = 0;
 		int ticks = 0;
 

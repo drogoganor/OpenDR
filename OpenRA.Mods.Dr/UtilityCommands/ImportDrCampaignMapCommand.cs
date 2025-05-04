@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using OpenRA.Mods.Dr.FileFormats;
 using OpenRA.Primitives;
@@ -44,12 +45,12 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		{
 			var teamHasUnits = new Func<int, bool>(playerIndex =>
 			{
-				bool correctPlayer = false;
+				var correctPlayer = false;
 				foreach (var scnSection in file.Entries)
 				{
 					if (scnSection.Name == "SetDefaultTeam")
 					{
-						int defaultTeam = Convert.ToInt32(scnSection.Values[0]);
+						var defaultTeam = Convert.ToInt32(scnSection.Values[0], CultureInfo.InvariantCulture);
 						correctPlayer = defaultTeam == playerIndex;
 						continue;
 					}
@@ -64,9 +65,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			});
 
 			// Single player, examine sides
-			int teamIndex = 0;
-			int sideIndex = 0;
-			int[] allianceArray = new[] { 0, 0, 0, 0, 0, 0, 0, 0 };
+			var teamIndex = 0;
+			var sideIndex = 0;
+			var allianceArray = new[] { 0, 0, 0, 0, 0, 0, 0, 0 };
 			var nameFactionDict = new Dictionary<string, string>()
 			{
 				{ "Freedom Guard", "fguard" },
@@ -81,13 +82,13 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{
 				if (scnSection.Name == "SetTeam")
 				{
-					teamIndex = Convert.ToInt32(scnSection.Values[0]); // to skip creeps and normal
+					teamIndex = Convert.ToInt32(scnSection.Values[0], CultureInfo.InvariantCulture); // to skip creeps and normal
 					continue;
 				}
 
 				if (scnSection.Name == "SetTeamSide")
 				{
-					sideIndex = Convert.ToInt32(scnSection.Values[0]);
+					sideIndex = Convert.ToInt32(scnSection.Values[0], CultureInfo.InvariantCulture);
 					if (sideIndex > 1) // No togran yet.
 						sideIndex = 0;
 
@@ -99,14 +100,14 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 					if (teamIndex == 8)
 						continue; // It's just creeps
 
-					for (int allianceI = 0; allianceI < 8; allianceI++)
+					for (var allianceI = 0; allianceI < 8; allianceI++)
 					{
-						allianceArray[allianceI] = Convert.ToInt32(scnSection.Values[allianceI]);
+						allianceArray[allianceI] = Convert.ToInt32(scnSection.Values[allianceI], CultureInfo.InvariantCulture);
 					}
 
 					var enemyIndices = new List<int>();
 					var allyIndices = new List<int>();
-					for (int ei = 0; ei < 8; ei++)
+					for (var ei = 0; ei < 8; ei++)
 					{
 						if (allianceArray[ei] == 0)
 							enemyIndices.Add(ei);
@@ -115,14 +116,14 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 					}
 
 					// Create player at this point
-					PlayerReference newPlayer = new PlayerReference
+					var newPlayer = new PlayerReference
 					{
 						Team = teamIndex,
-						Name = sideIndex.ToString(),
+						Name = sideIndex.ToString(CultureInfo.InvariantCulture),
 						Faction = nameFactionDict.Values.ToArray()[sideIndex],
 						Color = factionColors[sideIndex],
-						Enemies = enemyIndices.Select(x => x.ToString()).ToArray(),
-						Allies = allyIndices.Select(x => x.ToString()).ToArray(),
+						Enemies = enemyIndices.Select(x => x.ToString(CultureInfo.InvariantCulture)).ToArray(),
+						Allies = allyIndices.Select(x => x.ToString(CultureInfo.InvariantCulture)).ToArray(),
 					};
 
 					if (teamIndex == 0)
@@ -149,9 +150,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			foreach (var newPlayer in newPlayers)
 			{
 				// Sort out unique names
-				sideIndex = Convert.ToInt32(newPlayer.Name);
+				sideIndex = Convert.ToInt32(newPlayer.Name, CultureInfo.InvariantCulture);
 				var sideName = nameFactionDict.Keys.ToArray()[sideIndex];
-				int currentFactionCount = factionCountIndex[newPlayer.Faction];
+				var currentFactionCount = factionCountIndex[newPlayer.Faction];
 				if (currentFactionCount > 0)
 				{
 					sideName += " " + currentFactionCount;
@@ -164,7 +165,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				// And unique colors
 				if (newPlayer.Team > 1 && newPlayer.Team != 8)
 				{
-					int newColorIndex = newPlayer.Team - 2;
+					var newColorIndex = newPlayer.Team - 2;
 					newPlayer.Color = namedColorMapping.Values.ToArray()[newColorIndex];
 				}
 			}
@@ -180,9 +181,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 					if (allyOrEnemy.Team == teamIndex)
 						continue;
 
-					if (newPlayer.Allies.Contains(allyOrEnemy.Team.ToString()))
+					if (newPlayer.Allies.Contains(allyOrEnemy.Team.ToString(CultureInfo.InvariantCulture)))
 						allyNames.Add(allyOrEnemy.Name);
-					else if (newPlayer.Enemies.Contains(allyOrEnemy.Team.ToString()))
+					else if (newPlayer.Enemies.Contains(allyOrEnemy.Team.ToString(CultureInfo.InvariantCulture)))
 						enemyNames.Add(allyOrEnemy.Name);
 				}
 

@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using OpenRA.FileSystem;
@@ -29,7 +30,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		public ModData ModData;
 		public Map Map;
-		public List<string> Players = new List<string>();
+		public List<string> Players = new();
 		public MapPlayers MapPlayers;
 		int numMultiStarts = 0;
 		protected bool skipActors = true;
@@ -74,7 +75,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		static readonly string[] KnownUnknownUnits = Array.Empty<string>();
 
-		static readonly Dictionary<string, string> ThingNames = new Dictionary<string, string>()
+		static readonly Dictionary<string, string> ThingNames = new()
 		{
 			{ "tree1", "aotre000" },
 			{ "tree2", "aotre001" },
@@ -115,7 +116,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "watercrater", "eowcocr0" },
 		};
 
-		static readonly Dictionary<string, string> UnitNames = new Dictionary<string, string>
+		static readonly Dictionary<string, string> UnitNames = new()
 		{
 			{ "FGConstructionCrew", "ConstructionRig" },
 			{ "FGGroundTransporter", "Freighter" },
@@ -188,7 +189,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "TConstructionCrew", "ConstructionRig" }
 		};
 
-		static readonly Dictionary<string, string> BuildingNames = new Dictionary<string, string>
+		static readonly Dictionary<string, string> BuildingNames = new()
 		{
 			{ "fgpp", "Power" },
 			{ "imppp", "Power" },
@@ -261,7 +262,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "timpre", "Repair.cyborg" },
 		};
 
-		protected bool ValidateArguments(string[] args)
+		protected static bool ValidateArguments(string[] args)
 		{
 			return args.Length >= 2;
 		}
@@ -401,15 +402,14 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 					SetMapPlayers(scnFile, Players, MapPlayers);
 
 					// Place start locations
-					var i = 0;
 					foreach (var scnSection in scnFile.Entries)
 					{
 						if (scnSection.Name != "SetStartLocation")
 							continue;
 
-						var divisor = 24;
-						var x = Convert.ToInt32(scnSection.Values[0]) / divisor;
-						var y = Convert.ToInt32(scnSection.Values[1]) / divisor;
+						const int Divisor = 24;
+						var x = Convert.ToInt32(scnSection.Values[0], CultureInfo.InvariantCulture) / Divisor;
+						var y = Convert.ToInt32(scnSection.Values[1], CultureInfo.InvariantCulture) / Divisor;
 						if (x != 0 && y != 0)
 						{
 							var ar = new ActorReference("mpspawn")
@@ -419,7 +419,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							};
 
 							// TODO: Broken in playtest-20241116
-							//Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
+							// Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 						}
 					}
 
@@ -430,13 +430,13 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							continue;
 
 						var type = scnSection.Values[1];
-						var x = Convert.ToInt32(scnSection.Values[2]);
-						var y = Convert.ToInt32(scnSection.Values[3]);
+						var x = Convert.ToInt32(scnSection.Values[2], CultureInfo.InvariantCulture);
+						var y = Convert.ToInt32(scnSection.Values[3], CultureInfo.InvariantCulture);
 
 						var matchingActor = string.Empty;
 
-						if (ThingNames.ContainsKey(type))
-							matchingActor = ThingNames[type];
+						if (ThingNames.TryGetValue(type, out var value))
+							matchingActor = value;
 						else if (!KnownUnknownThings.Contains(type))
 							throw new Exception("Unknown thing name: " + type);
 
@@ -449,7 +449,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							};
 
 							// TODO: Broken in playtest-20241116
-							//Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
+							// Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 						}
 					}
 
@@ -462,7 +462,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						{
 							if (scnSection.Name == "SetDefaultTeam")
 							{
-								currentTeam = Convert.ToInt32(scnSection.ValuesStr);
+								currentTeam = Convert.ToInt32(scnSection.ValuesStr, CultureInfo.InvariantCulture);
 								continue;
 							}
 
@@ -472,8 +472,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							var playerIndex = GetMatchingPlayerIndex(currentTeam); // to skip creeps and neutral if necessary
 
 							var type = scnSection.Values[1];
-							var x = Convert.ToInt32(scnSection.Values[2]);
-							var y = Convert.ToInt32(scnSection.Values[3]);
+							var x = Convert.ToInt32(scnSection.Values[2], CultureInfo.InvariantCulture);
+							var y = Convert.ToInt32(scnSection.Values[3], CultureInfo.InvariantCulture);
 
 							var matchingActor = string.Empty;
 
@@ -491,7 +491,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 								};
 
 								// TODO: Broken in playtest-20241116
-								//Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
+								// Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 							}
 						}
 
@@ -500,7 +500,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						{
 							if (scnSection.Name == "SetDefaultTeam")
 							{
-								currentTeam = Convert.ToInt32(scnSection.ValuesStr);
+								currentTeam = Convert.ToInt32(scnSection.ValuesStr, CultureInfo.InvariantCulture);
 								continue;
 							}
 
@@ -510,8 +510,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							var playerIndex = GetMatchingPlayerIndex(currentTeam); // to skip creeps and neutral if necessary
 
 							var type = scnSection.Values[1];
-							var x = Convert.ToInt32(scnSection.Values[2]);
-							var y = Convert.ToInt32(scnSection.Values[3]);
+							var x = Convert.ToInt32(scnSection.Values[2], CultureInfo.InvariantCulture);
+							var y = Convert.ToInt32(scnSection.Values[3], CultureInfo.InvariantCulture);
 
 							var matchingActor = string.Empty;
 
@@ -531,7 +531,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 								};
 
 								// TODO: Broken in playtest-20241116
-								//Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
+								// Map.ActorDefinitions.Add(new MiniYamlNode("Actor" + i++, ar.Save()));
 							}
 						}
 					}
@@ -542,8 +542,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 							continue;
 
 						var type = scnSection.Values[1];
-						var x = Convert.ToInt32(scnSection.Values[2]);
-						var y = Convert.ToInt32(scnSection.Values[3]);
+						var x = Convert.ToInt32(scnSection.Values[2], CultureInfo.InvariantCulture);
+						var y = Convert.ToInt32(scnSection.Values[3], CultureInfo.InvariantCulture);
 
 						if (type == "impww")
 						{
@@ -581,7 +581,7 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		}
 
 		// TODO: fix this -- will have bitrotted pretty badly.
-		protected Dictionary<string, Color> namedColorMapping = new Dictionary<string, Color>()
+		protected Dictionary<string, Color> namedColorMapping = new()
 		{
 			{ "blue", Color.FromArgb(46, 92, 244) },
 			{ "red", Color.FromArgb(255, 20, 0) },
@@ -595,12 +595,12 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			{ "lime", Color.FromArgb(0, 255, 0) },
 		};
 
-		protected void SetNeutralPlayer(MapPlayers mapPlayers)
+		protected static void SetNeutralPlayer(MapPlayers mapPlayers)
 		{
-			var section = "Neutral";
+			const string Section = "Neutral";
 			var pr = new PlayerReference
 			{
-				Name = section,
+				Name = Section,
 				OwnsWorld = true,
 				NonCombatant = true,
 				Faction = "fguard",
@@ -608,10 +608,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			};
 
 			// Overwrite default player definitions if needed
-			if (!mapPlayers.Players.ContainsKey(section))
-				mapPlayers.Players.Add(section, pr);
-			else
-				mapPlayers.Players[section] = pr;
+			if (!mapPlayers.Players.TryAdd(Section, pr))
+				mapPlayers.Players[Section] = pr;
 		}
 
 		protected virtual int GetMatchingPlayerIndex(int index)
@@ -627,14 +625,14 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 		protected virtual void SetMapPlayers(ScnFile file, List<string> players, MapPlayers mapPlayers)
 		{
-			int i = 0;
+			var i = 0;
 			foreach (var scnSection in file.Entries)
 			{
 				if (scnSection.Name != "SetStartLocation")
 					continue;
 
-				var x = Convert.ToInt32(scnSection.Values[0]);
-				var y = Convert.ToInt32(scnSection.Values[1]);
+				var x = Convert.ToInt32(scnSection.Values[0], CultureInfo.InvariantCulture);
+				var y = Convert.ToInt32(scnSection.Values[1], CultureInfo.InvariantCulture);
 				if (x != 0 && y != 0)
 				{
 					var multi = new PlayerReference

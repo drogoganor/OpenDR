@@ -29,7 +29,15 @@ namespace OpenRA.Mods.Dr.Graphics
 
 	public class DrSpriteSequence : DefaultSpriteSequence
 	{
-		public DrSpriteSequence(ModData modData, string tileSet, SpriteCache cache, ISpriteSequenceLoader loader, string image, string sequence, MiniYaml data, MiniYaml defaults)
+		public DrSpriteSequence(
+			ModData modData,
+			string tileSet,
+			SpriteCache cache,
+			ISpriteSequenceLoader loader,
+			string image,
+			string sequence,
+			MiniYaml data,
+			MiniYaml defaults)
 			: base(cache, loader, image, sequence, data, defaults)
 		{
 		}
