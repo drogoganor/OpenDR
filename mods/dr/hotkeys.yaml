@@ -1,3 +1,13 @@
+NextProductionTab: PAGEDOWN
+	Description: hotkey-description-nextproductiontab
+	Types: Production
+	Contexts: player
+
+PreviousProductionTab: PAGEUP
+	Description: hotkey-description-previousproductiontab
+	Types: Production
+	Contexts: player
+
 ProductionTypeBuilding: E
 	Description: Building Tab
 	Types: Production

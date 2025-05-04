@@ -6,9 +6,9 @@ ShockTrooper:
 	RenderSprites:
 		Image: unskst0
 	Tooltip:
-		Name: Shock Trooper
+		Name: actor-shocktrooper.name
 	Buildable:
-		Description: Base trooper of the Togran.
+		Description: actor-shocktrooper.description
 		Prerequisites: ~infantry.togran
 		BuildPaletteOrder: 10
 		BuildDuration: 6
@@ -37,9 +37,9 @@ GoreHunter:
 	RenderSprites:
 		Image: unhvst0
 	Tooltip:
-		Name: Gore Hunter
+		Name: actor-gorehunter.name
 	Buildable:
-		Description: Heavy trooper of the Tograns.
+		Description: actor-gorehunter.description
 		Prerequisites: ~infantry.togran
 		BuildPaletteOrder: 10
 		BuildDuration: 11
@@ -70,9 +70,9 @@ LardriddenTerroristSoldierVeteran:
 	RenderSprites:
 		Image: utfatst0
 	Tooltip:
-		Name: Eliminator
+		Name: actor-eliminator.name
 	Buildable:
-		Description: Equivalent to a Merc
+		Description: actor-eliminator.description
 		Prerequisites: ~infantry.terrorist
 		BuildPaletteOrder: 10
 		BuildDuration: 11
@@ -101,7 +101,7 @@ RastaTerroristSoldierVeteran:
 	RenderSprites:
 		Image: utravst0
 	Tooltip:
-		Name: Rasta Terrorist Soldier Veteran
+		Name: actor-rasta.name
 	-Buildable:
 	Selectable:
 		Class: E1
@@ -128,7 +128,7 @@ RastaTerroristSoldier:
 	RenderSprites:
 		Image: utrasst0
 	Tooltip:
-		Name: Rasta Terrorist Soldier
+		Name: actor-rasta2.name
 	-Buildable:
 	Selectable:
 		Class: E2
@@ -157,7 +157,7 @@ AlternateLardriddenTerroristSoldier:
 	RenderSprites:
 		Image: utfadst0
 	Tooltip:
-		Name: Alternate Lardridden Terrorist Soldier
+		Name: actor-blue.name
 	-Buildable:
 	Selectable:
 		Class: E9
@@ -190,7 +190,7 @@ Santa:
 	RenderSprites:
 		Image: unsanst0
 	Tooltip:
-		Name: Satan Clawz
+		Name: actor-santa.name
 	-Buildable:
 	Selectable:
 		Class: E3
@@ -218,7 +218,7 @@ GoreBeast:
 	RenderSprites:
 		Image: unmonst0
 	Tooltip:
-		Name: Gore Beast
+		Name: actor-gorebeast.name
 	-Buildable:
 	Selectable:
 		Class: E4
@@ -248,7 +248,7 @@ SkateyScout:
 	RenderSprites:
 		Image: utagsst0
 	Tooltip:
-		Name: Skatey Scout
+		Name: actor-skatey.name
 	-Buildable:
 	Selectable:
 		Class: E4
@@ -274,7 +274,7 @@ TerroristBreakerBoys:
 	RenderSprites:
 		Image: utboyst0
 	Tooltip:
-		Name: Terrorist Breaker Boys
+		Name: actor-breakers.name
 	-Buildable:
 	Selectable:
 		Class: E1

@@ -170,12 +170,7 @@ productionpalette-sidebar-production-palette =
    .ready = READY
    .hold = ON HOLD
 
-button-production-types-building-tooltip = Buildings
-button-production-types-defense-tooltip = Defense
+button-production-types-economy-tooltip = Economy
 button-production-types-infantry-tooltip = Infantry
 button-production-types-vehicle-tooltip = Vehicles
-button-production-types-aircraft-tooltip = Aircraft
-button-production-types-naval-tooltip = Naval
-button-production-types-scroll-up-tooltip = Scroll up
-button-production-types-scroll-down-tooltip = Scroll down
 

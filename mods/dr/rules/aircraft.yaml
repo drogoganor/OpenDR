@@ -5,9 +5,9 @@ SkyBike:
 	RenderSprites:
 		Image: ufskbst0
 	Tooltip:
-		Name: Sky Bike
+		Name: actor-skybike.name
 	Buildable:
-		Description: Using a modified Spider Bike chassis, the Freedom\nGuard were able to produce cheap, fast aerial units\nwhich could attack enemy ground troops and other\nflyers. Although quicker than the Imperium Cyclone,\nthe Sky Bike is not as heavily armoured and is\noutgunned in even combat. The speed of the Sky Bike,\nhowever, allows it to dictate the circumstance of\nconflict. This unit fires high-velocity mini-missiles\nand, like the Outrider, must re-arm at the Re-Arming\nDeck.
+		Description: actor-skybike.description
 		Prerequisites: ~vehicles.human, air, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
 		BuildPaletteOrder: 120
 		BuildDuration: 24
@@ -16,7 +16,7 @@ SkyBike:
 	Valued:
 		Cost: 800
 	Health:
-		HP: 100
+		HP: 200
 	RevealsShroud:
 		Range: 9c0
 	Armor:
@@ -44,9 +44,9 @@ Outrider:
 	RenderSprites:
 		Image: ufoutst0
 	Tooltip:
-		Name: Outrider
+		Name: actor-outrider.name
 	Buildable:
-		Description: This ground attack aerial unit is slower and less\nmanoeuvrable than the Sky Bike, but considerably\ntougher and fires air to ground missiles. Deadly\neffective against Imperium armour, it cannot engage\nother air units and should be escorted by air defence\nunits. The Outrider has limited ammunition and must\nre-arm at the Re-Arming Deck.
+		Description: actor-outrider.description
 		Prerequisites: ~vehicles.fguard, air, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
 		BuildPaletteOrder: 120
 		BuildDuration: 42
@@ -55,7 +55,7 @@ Outrider:
 	Valued:
 		Cost: 1400
 	Health:
-		HP: 200
+		HP: 400
 	RevealsShroud:
 		Range: 9c0
 	Armor:
@@ -83,9 +83,9 @@ ReconDrone:
 	RenderSprites:
 		Image: uirdrst0
 	Tooltip:
-		Name: Recon Drone
+		Name: actor-recondrone.name
 	Buildable:
-		Description: This small unmanned drone is lightly armoured and\nhas no offensive capability. It is used solely to\nscout enemy targets.
+		Description: actor-recondrone.description
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1
 		BuildPaletteOrder: 150
 		BuildDuration: 12
@@ -94,7 +94,7 @@ ReconDrone:
 	Valued:
 		Cost: 400
 	Health:
-		HP: 66
+		HP: 133
 	RevealsShroud:
 		Range: 9c0
 	Armor:
@@ -110,9 +110,9 @@ Cyclone:
 	RenderSprites:
 		Image: uicycst0
 	Tooltip:
-		Name: Cyclone
+		Name: actor-cyclone.name
 	Buildable:
-		Description: The Cyclone embodies the core of the Imperium aerial\nforce. The unit is fairly rugged and can engage both\nair and ground units. However, the Cyclone’s neutron\ncannon has a limited energy source and must recharge\nat the Re-Arming Deck.
+		Description: actor-cyclone.description
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
 		BuildDuration: 45
@@ -121,7 +121,7 @@ Cyclone:
 	Valued:
 		Cost: 1500
 	Health:
-		HP: 150
+		HP: 300
 	RevealsShroud:
 		Range: 9c0
 	Armor:
@@ -148,9 +148,9 @@ SkyFortress:
 	RenderSprites:
 		Image: uiskyst0
 	Tooltip:
-		Name: Sky Fortress
+		Name: actor-skyfortress.name
 	Buildable:
-		Description: Death from above. This floating platform of wreckage\nhouses the largest plasma cannon known to humanity.\nIt's slow to recharge but makes a lasting impact.
+		Description: actor-skyfortress.description
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
 		BuildPaletteOrder: 160
 		BuildDuration: 75
@@ -162,7 +162,7 @@ SkyFortress:
 	Valued:
 		Cost: 2500
 	Health:
-		HP: 266
+		HP: 533
 	RevealsShroud:
 		Range: 9c0
 	Armor:

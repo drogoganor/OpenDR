@@ -6,17 +6,12 @@ options-tech-level =
     .no-superweapons = No Superweapons
     .unrestricted = Unrestricted
 
-checkbox-kill-bounties =
-    .label = Kill Bounties
-    .description = Players receive cash bonuses when killing enemy units
-
 notification-insufficient-funds = Insufficient funds.
 notification-new-construction-options = New construction options.
 notification-cannot-deploy-here = Cannot deploy here.
 notification-low-power = Low power.
 notification-base-under-attack = Base under attack.
 notification-ally-under-attack = Our ally is under attack.
-notification-silos-needed = Silos needed.
 
 resource-water = Water Spring
 resource-taelon = Taelon
@@ -26,73 +21,482 @@ options-starting-units =
     .hq-only = HQ Only
     .two-rigs = HQ & 2 Rigs
 
-## aircraft.yaml
-actor-badr-name = Badger
+## infantry.yaml
+actor-raider =
+   .description = Stalwart of the Freedom Guard cause, the Raider is
+   armed with a laser rifle. Once the Phasing Facility
+   is constructed, the Raider gains the ability to
+   phase underground.
+   .name = Raider
 
-actor-mig =
-   .description = Fast Ground-Attack Plane.
-      Strong vs Buildings, Vehicles
-      Weak vs Infantry, Aircraft
-   .name = MiG Attack Plane
+actor-mercenary =
+   .description = Recruited from outside the Freedom Guard ranks,
+   these paid guns carry a massive shoulder-mounted
+   rail gun. Highly trained and ruthless, the Mercenary
+   is tougher and deadlier than the Raider.
+   .name = Mercenary
 
-actor-yak =
-   .description = Attack Plane armed with
-    dual machine guns.
-      Strong vs Infantry, Light armor
-      Weak vs Tanks, Aircraft
-   .name = Yak Attack Plane
+actor-sniper =
+   .description = With a long range electro magnetic needle gun, the
+   Sniper is lethal against infantry targets. Like the
+   Scout, the Sniper can morph into objects for
+   camouflage.
+   .name = Sniper
 
-actor-tran =
-   .description = Fast Infantry Transport Helicopter.
-      Unarmed
-   .name = Chinook
+actor-scout =
+   .description = Used mainly for front line surveillance, the Scout
+   is able to morph into inanimate objects such as
+   trees and rocks to conceal her position. The Scout
+   is relatively fast but wears no body armour, so
+   combat is not her speciality.
+   .name = Scout
 
-actor-heli =
-   .description = Helicopter gunship armed
-    with multi-purpose missiles.
-      Strong vs Buildings, Vehicles, Aircraft
-      Weak vs Infantry
-   .name = Longbow
+actor-medic =
+   .description = The Field Medic can restore the health of wounded
+   infantry units and administer an antitoxin to
+   counteract the effects of the Amper. The Field Medic
+   will automatically heal damaged units that are nearby
+   or can be directed to heal a specific unit. The
+   Field Medic has no attack capability and does not
+   wear body armour.
+   .name = Field Medic
 
-actor-hind =
-   .description = Helicopter gunship armed
-    with dual chainguns.
-      Strong vs Infantry, Light armor
-      Weak vs Tanks, Aircraft
-   .name = Hind
+actor-saboteur =
+   .description = The Saboteur can damage any building to half its
+   maximum health.
+   .name = Saboteur
 
-actor-u2-name = Spy Plane
+actor-mechanic =
+   .description = The Mechanic functions similarly to the Field Medic,
+   repairing damaged vehicles in the field. The Mechanic
+   has no attack capability.
+   .name = Mechanic
 
-actor-mh60 =
-   .description = Helicopter gunship armed
-    with dual chainguns.
-      Strong vs Infantry, Light armor
-      Weak vs Tanks, Aircraft
-   .name = Black Hawk
+actor-martyr =
+   .description = Freedom Guard soldiers who are approaching their
+   25th birthday, and therefore certain death, are
+   outfitted with a high-powered explosive device and
+   then sent screaming into the enemy to die for the
+   cause. Sometimes soldiers not popular with their
+   commanding officers are "volunteered" for this service
+   before their 25th birthday.
+   .name = Martyr
 
-## civilian.yaml
-actor-c10-name = Scientist
-actor-tecn-name = Technician
-actor-tecn2-name = Technician
-actor-v01-name = Church
-actor-v19-name = Oil Pump
-actor-v19-husk-name = Husk (Oil Pump)
-actor-barl-name = Explosive Barrel
-actor-brl3-name = Explosive Barrel
-actor-v25-name = Church
-actor-lhus-name = Lighthouse
-actor-windmill-name = Windmill
+actor-guardian =
+   .description = Known as the Guardians of Order in the peaceful era
+   before the Freedom Guard uprising, the basic Imperium
+   infantry unit is armed with a laser rifle and wears
+   a powered armour suit.
+   .name = Guardian
 
-## decoration.yaml
-actor-ice01-name = Ice Floe
-actor-ice02-name = Ice Floe
-actor-ice03-name = Ice Floe
-actor-ice04-name = Ice Floe
-actor-ice05-name = Ice Floe
-actor-utilpol1-name = Utility Pole
-actor-utilpol2-name = Utility Pole
-actor-tanktrap1-name = Tank Trap
-actor-tanktrap2-name = Tank Trap
+actor-bion =
+   .description = A fearless mechanical killer, the Bion is armoured
+   like a walking tank. This one-man cyborg death
+   squad carries a massive plasma rifle, and can fire
+   at both ground and air units.
+   .name = Bion
+
+actor-exterminator =
+   .description = These infantry units are equipped with anti-gravity
+   generators which allow them to hover over water.
+   As infantry, they can also move over steep gradients
+   that are generally inaccessible to hover vehicles.
+   Exterminators are armed with chemical grenades that
+   dissolve metal. They are very effective at attacking
+   armour.
+   .name = Exterminator
+
+actor-infiltrator =
+   .description = The Infiltrator can morph into enemy infantry and
+   is able to steal plans for enemy units and buildings.
+   The unit can also observe the opponent’s Minimap
+   at the HQ building. Plans for units are obtained
+   at the building where that unit is produced. The
+   Infiltrator must return safely to his own HQ with
+   all stolen plans.
+   .name = Infiltrator
+
+## upgrades.yaml
+upgrade-hq1 =
+   .description = Unlocks additional construction options
+   .name = Headquarters 2
+
+upgrade-hq2 =
+   .description = Unlocks additional construction options
+   .name = Headquarters 3
+
+upgrade-barracks1 =
+   .description = Unlocks additional construction options
+   .name = Advanced Training Facility
+
+upgrade-assemblyplant1 =
+   .description = Unlocks additional construction options
+   .name = Advanced Assembly Plant
+
+upgrade-phasing =
+   .description = Unlocks additional construction options
+   .name = Advanced Phasing Facility Upgrade
+
+## vehicles.yaml
+
+actor-constructionrig =
+   .description = The workhorse of any military operation, this unit
+   constructs all buildings and bridges.
+   .name = Construction Rig
+
+actor-freighter =
+   .description = These vehicles haul the vital resources that feed
+   the ravenous war machine. The multi-purpose
+   Freighter is able to carry fresh water or Taelon.
+   .name = Freighter
+
+actor-hoverfreighter =
+   .description = Serves the same function as the Freighter, but its
+   hover drive allows movement over a broader range of
+   terrain types. It is armed with a laser cannon.
+   .name = Hover Freighter
+
+actor-spiderbike =
+   .description = This all-terrain vehicle is the cornerstone of the
+   Freedom Guard ground force. Fast and inexpensive,
+   it is able to tackle all types of terrain. Armed
+   with a double rail gun, it is fairly effective
+   against armour but somewhat vulnerable to infantry.
+   .name = Spider Bike
+
+actor-rat =
+   .description = The Freedom Guard troop transport has the ability
+   to camouflage itself to match the surrounding terrain.
+   The R.A.T. is unarmed, but is able to carry up to
+   five infantry units at a time and can move over water,
+   although at a considerably reduced speed.
+   .name = Rapid Armored Transport
+
+actor-skirmishtank =
+   .description = The Skirmish Tank is the foundation upon which any
+   successful military outfit is built. Properly
+   accessorised, the Skirmish Tank can make a splash at
+   an intimate midnight raid, a small summer skirmish,
+   or even a full-scale gala massacre.
+   .name = Skirmish Tank
+
+actor-tankhunter =
+   .description = This quick, deadly vehicle emits a massive short
+   range electric discharge. The Tank Hunter is
+   devastating in close combat but has no ranged weapon
+   and is vulnerable in situations where it cannot close
+   on its prey.
+   .name = Tank Hunter
+
+actor-phasetank =
+   .description = Using limited phasing technology, the Phase Tank
+   can bury itself underground in order to ambush
+   enemy units. However, the Phase Tank must surface
+   to move or fire and can be fired upon and take damage
+   while submerged. Although the phased energy shield
+   surrounding the vehicle serves to protect it and
+   minimise damage, the Phase Tank is essentially
+   defenceless while underground.
+   .name = Phase Tank
+
+actor-flakjack =
+   .description = A revamped Construction Rig outfitted with two
+   shoulder-mounted particle launchers. The Flak Jack
+   salvages metal from the battlefield and converts
+   it into microscopic metallic particles that it fires
+   in clouds which cause sustained damage to air units.
+   The unit has no defensive capability against ground
+   attack, and should be protected at all times.
+   .name = Flak Jack
+
+actor-triplerailhovertank =
+   .description = The pinnacle of Freedom Guard armour, the Triple
+   Rail uses hover technology stolen from the Imperium
+   to allow movement over a broader range of terrain
+   types. Hauling three electro magnetic projectile
+   accelerator cannons, or rail guns, this tank is a
+   savage consumer of Imperium armour.
+   .name = Triple Rail Hover Tank
+
+actor-hellstormartillery =
+   .description = The Hellstorm Artillery fires a long-range,
+   area-effect explosive. Its range is more than four
+   times longer than any other unit. A battery of
+   Artillery is capable of single-handedly destroying
+   an enemy base, but, the vehicle is slow and lightly
+   armoured, so undefended Artillery is fodder in
+   close combat.
+   .name = Hellstorm Artillery
+
+actor-shockwave =
+   .description = A single-use unit that creates an immense earth wave
+   that travels across the map, causing severe damage
+   to everything in its wake. The unit is armed by
+   double-clicking on it and then fired at an enemy
+   target to determine the direction of the wave. The
+   Shock Wave unit then embeds in the ground and
+   detonates, self-destructing in the discharge. The
+   Shock Wave is expensive and slow to build but well
+   worth the wait.
+   .name = Shock Wave
+
+actor-watercontaminator =
+   .description = This vehicle can pollute and permanently destroy
+   freshwater springs. It is slow and extremely expensive,
+   but once you have cut off your enemies’ resources,
+   their ruin is inevitable.
+   .name = Water Contaminator
+
+actor-phaserunner =
+   .description = The Phase Runner troop transport has the ability
+   to travel while phased.
+   .name = Phase Runner
+
+actor-scoutrunner =
+   .description = This fast moving hover vehicle is armed with a
+   laser and is fairly effective against both infantry
+   and armour. However, it is not very sturdy, and is
+   used primarily for front line reconnaissance.
+   .name = Scout Runner
+
+actor-itt =
+   .description = Armed with a laser rifle, the Troop Transport can
+   carry up to five infantry units at a time.
+   .name = Invader Troop Transport
+
+actor-plasmatank =
+   .description = Backbone of the Imperium war effort, the Plasma Tank
+   is tough and packs a formidable plasma cannon. The
+   Imperium overruns the enemy with endless waves of
+   these ruinous machines.
+   .name = Plasma Tank
+
+actor-amper =
+   .description = The Imperium's version of first aid, this lunatic
+   cyborg fires darts into dying infantry units that
+   boost the target’s health to full, but leave the
+   unit poisoned so that its health will steadily
+   decrease until the unit dies. The Amper can also be
+   used as an offensive weapon, bringing slow death
+   to enemy infantry.
+   .name = Amper
+
+actor-mad =
+   .description = The M.A.D. fires bladed orbs at enemy air units.
+   Like the Freedom Guard Flak Jack, it cannot fire
+   at ground units and should be defended against land
+   attack.
+   .name = Mobile Air Defense
+
+actor-shredder =
+   .description = A huge, hovering nightmare, the Shredder tears through
+   infantry like a runaway saw. Although it has no ranged
+   attack, it is fast, heavily armoured, and inflicts
+   severe damage on any infantry units foolish enough
+   to get near it.
+   .name = Shredder
+
+actor-hostagetaker =
+   .description = This diabolical Imperium vehicle snatches infantry
+   units, lobotomises them and converts them into Suicide
+   Zombies. Shortly after the infantry unit is run over
+   and captured, it is released, now under the player’s
+   control and with a high-powered explosive strapped
+   to its back.
+   .name = Hostage Taker
+
+actor-tachiontank =
+   .description = The Tachion Tank is the largest, most heavily armed
+   beast on the battlefield. It’s a ponderous mountain
+   of havoc that has the last word in any argument.
+   When the enemy does manage to overpower one of these
+   juggernaughts, it has the ability to self-destruct
+   and take any nearby units down with it.
+   .name = Tachion Tank
+
+actor-scarab =
+   .description = This long range weapon fires a fragmenting projectile
+   that breaks into numerous burning particles over its
+   target. This vehicle is slow and lightly armoured,
+   but it can enclose itself in a retractable armoured
+   exoskeleton when it gets in trouble. The unit cannot
+   fire while this armour is engaged, but can weather
+   a considerable beating while waiting for reinforcements.
+   .name = S.C.A.R.A.B.
+
+actor-skybike =
+   .description = Using a modified Spider Bike chassis, the Freedom
+   Guard were able to produce cheap, fast aerial units
+   which could attack enemy ground troops and other
+   flyers. Although quicker than the Imperium Cyclone,
+   the Sky Bike is not as heavily armoured and is
+   outgunned in even combat. The speed of the Sky Bike,
+   however, allows it to dictate the circumstance of
+   conflict. This unit fires high-velocity mini-missiles
+   and, like the Outrider, must re-arm at the Re-Arming
+   Deck.
+   .name = Sky Bike
+
+actor-outrider =
+   .description = This ground attack aerial unit is slower and less
+   manoeuvrable than the Sky Bike, but considerably
+   tougher and fires air to ground missiles. Deadly
+   effective against Imperium armour, it cannot engage
+   other air units and should be escorted by air defence
+   units. The Outrider has limited ammunition and must
+   re-arm at the Re-Arming Deck.
+   .name = Outrider
+
+actor-recondrone =
+   .description = This small unmanned drone is lightly armoured and
+   has no offensive capability. It is used solely to
+   scout enemy targets.
+   .name = Recon Drone
+
+actor-cyclone =
+   .description = The Cyclone embodies the core of the Imperium aerial
+   force. The unit is fairly rugged and can engage both
+   air and ground units. However, the Cyclone’s neutron
+   cannon has a limited energy source and must recharge
+   at the Re-Arming Deck.
+   .name = Cyclone
+
+actor-skyfortress =
+   .description = Death from above. This floating platform of wreckage
+   houses the largest plasma cannon known to humanity.
+   It's slow to recharge but makes a lasting impact.
+   .name = Sky Fortress
+
+## structures.yaml
+
+actor-hq =
+   .description = Creates construction rigs and freighters.
+   Required to build some buildings.
+   Can be upgraded.
+   .name = Headquarters
+
+actor-power =
+   .description = Provides power for other structures. Refines Taelon into credits.
+   .name = Taelon Power Generator
+
+actor-waterlaunchpad =
+   .description = Refines spring water into credits.
+   .name = Water Launch Pad
+
+actor-trainingfacility =
+   .description = Trains infantry.
+   .name = Training Facility
+
+actor-assemblyplant =
+   .description = Produces vehicles.
+   .name = Assembly Plant
+
+actor-assemblyplant =
+   .description = Produces vehicles.
+   .name = Assembly Plant
+
+actor-laserturret =
+   .description = Laser Defense Turret
+   .name = Laser Turret
+
+actor-plasmaturret =
+   .description = Plasma Defense Turret
+   .name = Plasma Turret
+
+actor-antiairturret =
+   .description = Anti-Air Turret
+   .name = Anti-Air Turret
+
+actor-heavyrailturret =
+   .description = Heavy Rail Turret
+   .name = Heavy Rail Turret
+
+actor-neutronaccelerator =
+   .description = Neutron Accelerator
+   .name = Neutron Accelerator
+
+actor-cameratower =
+   .description = Camera Tower
+   .name = Camera Tower
+
+actor-hospital =
+   .description = Heals infantry units.
+   .name = Field Hospital
+
+actor-repair =
+   .description = Repairs vehicles.
+   .name = Repair Pad
+
+actor-phasing =
+   .description = Phasing Facility
+   .name = Phasing Facility
+
+actor-rearmingdeck =
+   .description = Rearm and repair aircraft.
+   .name = Rearming Deck
+
+actor-temporalgate =
+   .description = Temporal Gate
+   .name = Temporal Gate
+
+actor-temporalriftcreator =
+   .description = Temporal Rift Creator
+   .name = Temporal Rift Creator
+   
+## infantry-addon.yaml
+
+actor-shocktrooper =
+   .description = Base trooper of the Togran.
+   .name = Shock Trooper
+
+actor-gorehunter =
+   .description = Heavy trooper of the Tograns.
+   .name = Gore Hunter
+
+actor-eliminator =
+   .description = Equivalent to a Merc
+   .name = Eliminator
+
+actor-rasta =
+   .name = Terrorist Soldier Veteran
+
+actor-rasta2 =
+   .name = Rasta Terrorist Soldier
+
+actor-blue =
+   .name = Unknown Blue Soldier
+
+actor-santa =
+   .name = Satan Clawz
+
+actor-gorebeast =
+   .name = Satan Clawz
+
+actor-skatey =
+   .name = Skatey Scout
+
+actor-breakers =
+   .name = Terrorist Breaker Boys
+
+## defaults.yaml
+
+actor-soldier-name = Soldier
+actor-civilian-name = Civilian
+actor-vehicle-name = Vehicle
+actor-civilianvehicle-name = Civilian Vehicle
+actor-aircraft-name = Aircraft
+actor-ship-name = Ship
+actor-tree-name = Tree
+actor-rock-name = Rock
+actor-crater-name = Crater
+actor-plant-name = Plant
+actor-rubble-name = Rubble
+
+## misc.yaml
+
+actor-mpspawn-name = (multiplayer starting point)
+actor-waypoint-name = (waypoint for scripted behavior)
+actor-ctflag-name = Flag
 
 ## defaults.yaml
 notification-unit-lost = Unit lost.
@@ -133,259 +537,8 @@ meta-crate =
 
 meta-mine-name = Mine
 
-## fakes.yaml
-actor-fpwr =
-   .description = Looks like a Power Plant.
-   .name = Fake Power Plant
-   .generic-name = Power Plant
-
-actor-tenf =
-   .description = Looks like an Allied Barracks.
-   .name = Fake Allied Barracks
-   .generic-name = Allied Barracks
-
-actor-syrf =
-   .description = Looks like a Naval Yard.
-   .name = Fake Naval Yard
-   .generic-name = Naval Yard
-
-actor-spef =
-   .description = Looks like a Sub Pen.
-   .name = Fake Sub Pen
-   .generic-name = Sub Pen
-
-actor-weaf =
-   .description = Looks like a War Factory.
-   .name = Fake War Factory
-   .generic-name = War Factory
-
-actor-domf =
-   .name = Fake Radar Dome
-   .generic-name = Radar Dome
-   .description = Looks like a Radar Dome.
-
-actor-fixf =
-   .description = Looks like a Service Depot.
-   .name = Fake Service Depot
-   .generic-name = Service Depot
-
-actor-fapw =
-   .description = Looks like an Advanced Power Plant.
-   .name = Fake Advanced Power Plant
-   .generic-name = Advanced Power Plant
-
-actor-atef =
-   .name = Fake Allied Tech Center
-   .generic-name = Allied Tech Center
-   .description = Looks like an Allied Tech Center.
-
-actor-pdof =
-   .name = Fake Chronosphere
-   .generic-name = Chronosphere
-   .description = Looks like a Chronosphere.
-    Maximum 1 can be built.
-
-actor-mslf =
-   .name = Fake Missile Silo
-   .generic-name = Missile Silo
-   .description = Looks like a Missile Silo.
-    Maximum 1 can be built.
-
-actor-facf =
-   .description = Looks like a Construction Yard.
-   .name = Fake Construction Yard
-   .generic-name = Construction Yard
-
-## husks.yaml
-actor-2tnk-husk-name = Husk (Medium Tank)
-actor-3tnk-husk-name = Husk (Heavy Tank)
-actor-4tnk-husk-name = Husk (Mammoth Tank)
-actor-harv-fullhusk-name = Husk (Ore Truck)
-actor-harv-emptyhusk-name = Husk (Ore Truck)
-actor-mcv-husk-name = Husk (Mobile Construction Vehicle)
-actor-mgg-husk-name = Husk (Mobile Gap Generator)
-actor-tran-husk-name = Chinook
-actor-tran-husk1-name = Husk (Chinook)
-actor-tran-husk2-name = Husk (Chinook)
-actor-badr-husk-name = Badger
-actor-mig-husk-name = MiG Attack Plane
-actor-yak-husk-name = Yak Attack Plane
-actor-heli-husk-name = Longbow
-actor-hind-husk-name = Hind
-actor-u2-husk-name = Husk (Spy Plane)
-actor-mh60-husk-name = Black Hawk
-
 ## infantry.yaml
 notification-building-infiltrated = Building infiltrated.
-
-actor-dog =
-   .description = Anti-infantry unit.
-    Can detect spies.
-      Strong vs Infantry
-      Weak vs Vehicles, Aircraft
-   .name = Attack Dog
-   .generic-name = Dog
-
-actor-e1 =
-   .description = General-purpose infantry.
-      Strong vs Infantry
-      Weak vs Vehicles, Aircraft
-   .name = Rifle Infantry
-
-actor-e2 =
-   .description = Infantry armed with grenades.
-      Strong vs Buildings, Infantry
-      Weak vs Vehicles, Aircraft
-   .name = Grenadier
-
-actor-e3 =
-   .description = Anti-tank/Anti-aircraft infantry.
-      Strong vs Vehicles, Aircraft
-      Weak vs Infantry
-   .name = Rocket Soldier
-
-actor-e4 =
-   .description = Advanced anti-structure unit.
-      Strong vs Infantry, Buildings
-      Weak vs Vehicles, Aircraft
-   .name = Flamethrower
-
-actor-e6 =
-   .description = Infiltrates and captures
-    enemy structures.
-      Unarmed
-   .name = Engineer
-
-actor-spy =
-   .description = Infiltrates enemy structures for intel or
-    sabotage. Exact effect depends on the
-    building infiltrated.
-    Loses disguise when attacking.
-    Can detect spies.
-      Strong vs Infantry
-      Weak vs Vehicles, Aircraft
-      Special Ability: Disguised
-   .disguisetooltip-name = Spy
-   .disguisetooltip-generic-name = Soldier
-
-actor-spy-england-disguisetooltip-name = British Spy
-
-actor-e7 =
-   .description = Elite commando infantry. Armed with
-    dual pistols and C4.
-    Maximum 1 can be trained.
-      Strong vs Infantry, Buildings
-      Weak vs Vehicles, Aircraft
-      Special Ability: Destroy Building with C4
-   .name = Tanya
-
-actor-medi =
-   .description = Heals nearby infantry.
-      Unarmed
-   .name = Medic
-
-actor-mech =
-   .description = Repairs nearby vehicles and restores
-    husks to working condition by capturing them.
-      Unarmed
-   .name = Mechanic
-
-actor-einstein-name = Prof. Einstein
-actor-delphi-name = Agent Delphi
-actor-chan-name = Scientist
-actor-gnrl-name = General
-
-actor-thf =
-   .description = Steals enemy credits.
-    Hijacks enemy vehicles.
-      Unarmed
-   .name = Thief
-
-actor-shok =
-   .description = Elite infantry with portable Tesla coils.
-      Strong vs Infantry, Vehicles
-      Weak vs Aircraft
-   .name = Shock Trooper
-
-actor-zombie =
-   .name = Zombie
-   .description = Slow undead. Attacks in close combat.
-
-actor-ant =
-   .name = Giant Ant
-   .generic-name = Ant
-   .description = Irradiated insect that grew oversize.
-
-actor-fireant-name = Fire Ant
-actor-scoutant-name = Scout Ant
-actor-warriorant-name = Warrior Ant
-
-## misc.yaml
-notification-sonar-pulse-ready = Sonar pulse ready.
-
-actor-moneycrate-name = Money Crate
-actor-healcrate-name = Heal Crate
-actor-wcrate-name = Wooden Crate
-actor-scrate-name = Steel Crate
-actor-camera-name = (reveals area to owner)
-actor-camera-paradrop-name = (support power proxy camera)
-actor-camera-spyplane-name = (support power proxy camera)
-actor-sonar-name = (support power proxy camera)
-actor-flare-name = Flare
-actor-mine-name = Ore Mine
-actor-gmine-name = Gem Mine
-actor-railmine-name = Abandoned Mine
-actor-quee-name = Queen Ant
-actor-lar1-name = Ant Larva
-actor-lar2-name = Ant Larvae
-actor-mpspawn-name = (multiplayer player starting point)
-actor-waypoint-name = (waypoint for scripted behavior)
-actor-ctflag-name = Flag
-
-## ships.yaml
-actor-ss =
-   .description = Submerged anti-ship unit
-    armed with torpedoes.
-    Can detect other submarines.
-      Strong vs Naval units
-      Weak vs Ground units, Aircraft
-      Special Ability: Submerge
-   .name = Submarine
-
-actor-msub =
-   .description = Submerged anti-ground siege unit
-    with anti-air capabilities.
-    Can detect other submarines.
-      Strong vs Buildings, Ground units, Aircraft
-      Weak vs Naval units
-      Special Ability: Submerge
-   .name = Missile Submarine
-
-actor-dd =
-   .description = Fast multi-role ship.
-    Can detect submarines.
-      Strong vs Naval units, Vehicles, Aircraft
-      Weak vs Infantry
-   .name = Destroyer
-
-actor-ca =
-   .description = Very slow long-range ship.
-      Strong vs Buildings, Ground units
-      Weak vs Naval units, Aircraft
-   .name = Cruiser
-
-actor-lst =
-   .description = General-purpose naval transport.
-    Can carry infantry and tanks.
-      Unarmed
-   .name = Transport
-
-actor-pt =
-   .description = Light scout & support ship.
-    Can detect submarines.
-      Strong vs Naval units
-      Weak vs Ground units, Aircraft
-   .name = Gunboat
 
 ## structures.yaml
 notification-construction-complete = Construction complete.
@@ -397,356 +550,3 @@ notification-unit-repaired = Unit repaired.
 notification-select-target = Select target.
 notification-insufficient-power = Insufficient power.
 notification-reinforcements-have-arrived = Reinforcements have arrived.
-notification-abomb-prepping = A-bomb prepping.
-notification-abomb-ready = A-bomb ready.
-notification-abomb-launch-detected = A-bomb launch detected.
-notification-iron-curtain-charging = Iron curtain charging.
-notification-iron-curtain-ready = Iron curtain ready.
-notification-chronosphere-charging = Chronosphere charging.
-notification-chronosphere-ready = Chronosphere ready.
-notification-satellite-launched = Satellite launched.
-notification-credits-stolen = Credits stolen.
-notifcation-spy-plane-ready = Spy plane ready.
-
-actor-mslo =
-   .name = Missile Silo
-   .description = Provides an atomic bomb.
-    Requires power to operate.
-    Maximum 1 can be built.
-      Special Ability: Atom Bomb
-
-actor-gap =
-   .name = Gap Generator
-   .description = Obscures the enemy's view with shroud.
-    Requires power to operate.
-
-actor-spen =
-   .name = Sub Pen
-   .description = Produces and repairs
-    submarines and transports.
-
-actor-syrd =
-   .description = Produces and repairs
-    ships and transports.
-   .name = Naval Yard
-
-actor-iron =
-   .description = Makes a group of units invulnerable
-    for a short time.
-    Requires power to operate.
-    Maximum 1 can be built.
-      Special Ability: Invulnerability
-   .name = Iron Curtain
-
-actor-pdox =
-   .description = Teleports a group of units across the
-    map for a short time.
-    Requires power to operate.
-    Maximum 1 can be built.
-      Special Ability: Chronoshift
-   .name = Chronosphere
-
-actor-tsla =
-   .description = Advanced base defense.
-    Requires power to operate.
-    Can detect cloaked units.
-      Strong vs Vehicles, Infantry
-      Weak vs Aircraft
-   .name = Tesla Coil
-
-actor-agun =
-   .description = Anti-Air base defense.
-    Requires power to operate.
-      Strong vs Aircraft
-      Weak vs Ground units
-   .name = AA Gun
-
-actor-dome =
-   .description = Provides an overview
-    of the battlefield.
-    Requires power to operate.
-   .name = Radar Dome
-
-actor-pbox =
-   .name = Pillbox
-   .description = Static defense with a fireport for
-    a garrisoned soldier.
-    Can detect cloaked units.
-      Strong vs Infantry, Light armor
-      Weak vs Tanks, Aircraft
-
-actor-hbox =
-   .name = Camo Pillbox
-   .description = Camouflaged static defense with a fireport
-    for a garrisoned soldier.
-    Can detect cloaked units.
-      Strong vs Infantry, Light armor
-      Weak vs Tanks, Aircraft
-
-actor-gun =
-   .description = Anti-Armor base defense.
-    Can detect cloaked units.
-      Strong vs Vehicles
-      Weak vs Infantry, Aircraft
-   .name = Turret
-
-actor-ftur =
-   .description = Anti-Infantry base defense.
-    Can detect cloaked units.
-      Strong vs Infantry, Light armor
-      Weak vs Tanks, Aircraft
-   .name = Flame Tower
-
-actor-sam =
-   .description = Anti-Air base defense.
-    Requires power to operate.
-      Strong vs Aircraft
-      Weak vs Ground units
-   .name = SAM Site
-
-actor-atek =
-   .description = Provides Allied advanced technologies.
-      Special Ability: GPS Satellite
-   .name = Allied Tech Center
-
-actor-weap =
-   .description = Produces vehicles.
-   .name = War Factory
-
-actor-fact =
-   .description = Produces structures.
-   .name = Construction Yard
-
-actor-proc =
-   .description = Refines Ore and Gems
-    into credits.
-   .name = Ore Refinery
-
-actor-silo =
-   .description = Stores excess refined
-    Ore and Gems.
-   .name = Silo
-
-actor-hpad =
-   .description = Produces and reloads
-    helicopters.
-   .name = Helipad
-
-actor-afld =
-   .description = Produces and reloads aircraft.
-      Special Ability: Spy Plane
-      Special Ability: Paratroopers
-   .name = Airfield
-
-actor-afld-ukraine-description = Produces and reloads aircraft.
-      Special Ability: Spy Plane
-      Special Ability: Paratroopers
-      Special Ability: Parabombs
-
-actor-powr =
-   .description = Provides power for other structures.
-   .name = Power Plant
-
-actor-apwr =
-   .description = Provides double the power of
-    a standard Power Plant.
-   .name = Advanced Power Plant
-
-actor-stek =
-   .description = Provides Soviet advanced technologies.
-   .name = Soviet Tech Center
-
-actor-barr =
-   .description = Trains infantry.
-   .name = Soviet Barracks
-
-actor-kenn =
-   .description = Trains Attack Dogs.
-   .name = Kennel
-
-actor-tent =
-   .description = Trains infantry.
-   .name = Allied Barracks
-
-actor-fix =
-   .description = Repairs vehicles for credits.
-   .name = Service Depot
-
-actor-sbag =
-   .description = Stops infantry and light vehicles.
-    Can be crushed by tanks.
-   .name = Sandbag Wall
-
-actor-fenc =
-   .description = Stops infantry and light vehicles.
-    Can be crushed by tanks.
-   .name = Wire Fence
-
-actor-brik =
-   .description = Stop units and blocks enemy fire.
-   .name = Concrete Wall
-
-actor-cycl-name = Chain-Link Barrier
-actor-barb-name = Barbed-Wire Fence
-actor-wood-name = Wooden Fence
-actor-barracks-name = Infantry Production
-actor-techcenter-name = Tech Center
-actor-anypower-name = Any Power Generation
-
-## vehicles.yaml
-actor-v2rl =
-   .description = Long-range rocket artillery.
-      Strong vs Infantry, Buildings
-      Weak vs Vehicles, Aircraft
-   .name = V2 Rocket Launcher
-
-actor-1tnk =
-   .description = Fast tank, good for scouting.
-      Strong vs Light armor
-      Weak vs Infantry, Tanks, Aircraft
-   .name = Light Tank
-   .generic-name = Tank
-
-actor-2tnk =
-   .description = Allied Main Battle Tank.
-      Strong vs Vehicles
-      Weak vs Infantry, Aircraft
-   .name = Medium Tank
-   .generic-name = Tank
-
-actor-3tnk =
-   .description = Soviet Main Battle Tank, with dual cannons
-      Strong vs Vehicles
-      Weak vs Infantry, Aircraft
-   .name = Heavy Tank
-   .generic-name = Tank
-
-actor-4tnk =
-   .description = Big and slow tank, with anti-air capability.
-    Can crush concrete walls.
-      Strong vs Vehicles, Infantry, Aircraft
-      Weak vs Nothing
-   .name = Mammoth Tank
-   .generic-name = Tank
-
-actor-arty =
-   .description = Long-range artillery.
-      Strong vs Infantry, Buildings
-      Weak vs Vehicles, Aircraft
-   .name = Artillery
-
-actor-harv =
-   .description = Collects Ore and Gems for processing.
-      Unarmed
-   .name = Ore Truck
-   .generic-name = Harvester
-
-actor-mcv =
-   .description = Deploys into another Construction Yard.
-      Unarmed
-   .name = Mobile Construction Vehicle
-
-actor-jeep =
-   .description = Fast scout & anti-infantry vehicle.
-    Can carry one infantry.
-      Strong vs Infantry
-      Weak vs Vehicles, Aircraft
-   .name = Ranger
-
-actor-apc =
-   .description = Tough infantry transport.
-      Strong vs Infantry, Light armor
-      Weak vs Tanks, Aircraft
-   .name = Armored Personnel Carrier
-
-actor-mnly =
-   .description = Lays mines to destroy
-    unwary enemy units.
-    Can detect mines.
-      Unarmed
-   .name = Minelayer
-
-actor-truk =
-   .description = Transports cash to other players.
-      Unarmed
-   .name = Supply Truck
-
-actor-mgg =
-   .description = Regenerates the shroud nearby,
-    obscuring the area.
-      Unarmed
-   .name = Mobile Gap Generator
-
-actor-mrj =
-   .name = Mobile Radar Jammer
-   .description = Jams nearby enemy radar domes
-    and deflects incoming missiles.
-      Unarmed
-
-actor-ttnk =
-   .description = Tank with mounted Tesla coil.
-      Strong vs Infantry, Vehicles, Buildings
-      Weak vs Aircraft
-   .name = Tesla Tank
-   .generic-name = Tank
-
-actor-ftrk =
-   .description = Mobile unit with mounted Flak cannon.
-      Strong vs Infantry, Light armor, Aircraft
-      Weak vs Tanks
-   .name = Mobile Flak
-
-actor-dtrk =
-   .description = Truck with actively armed nuclear
-    explosives. Has very weak armor.
-   .name = Demolition Truck
-
-actor-ctnk =
-   .description = Armed with anti-ground missiles.
-    Teleports to areas within range.
-      Strong vs Vehicles, Buildings
-      Weak vs Infantry, Aircraft
-      Special ability: Can teleport
-   .name = Chrono Tank
-   .generic-name = Tank
-
-actor-qtnk =
-   .description = Deals seismic damage to nearby vehicles
-    and structures.
-      Strong vs Vehicles, Buildings
-      Weak vs Infantry, Aircraft
-   .name = MAD Tank
-   .generic-name = Tank
-
-actor-stnk =
-   .description = Lightly armored infantry transport which
-    can cloak. Armed with anti-ground missiles.
-      Strong vs Light armor
-      Weak vs Infantry, Tanks, Aircraft
-   .name = Phase Transport
-
-## Civilian Tech
-actor-hosp =
-   .name = Hospital
-   .captured-desc = Provides infantry with self-healing.
-   .capturable-desc = Capture to enable self-healing for infantry.
-
-actor-fcom =
-   .name = Forward Command
-   .captured-desc = Provides buildable area.
-   .capturable-desc =Capture to give buildable area.
-
-actor-miss =
-   .name = Communications Center
-   .captured-desc = Provides range of vision.
-   .capturable-desc = Capture to give visual range.
-
-actor-bio =
-   .name = Biological Lab
-   .captured-desc = Provides prerequisite for Bio-Lab units.
-   .capturable-desc = Capture to produce Bio-Lab units.
-
-actor-oilb = 
-   .name = Oil Derrick
-   .captured-desc = Provides additional funds.
-   .capturable-desc =  Capture to receive additional funds.

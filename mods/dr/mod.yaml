@@ -170,6 +170,7 @@ ChromeLayout:
 	common|chrome/connection.yaml
 	common|chrome/replaybrowser.yaml
 	common|chrome/gamesave-browser.yaml
+	dr|chrome/gamesave-loading.yaml
 	common|chrome/dropdowns.yaml
 	common|chrome/musicplayer.yaml
 	common|chrome/tooltips.yaml
@@ -187,7 +188,7 @@ FluentMessages:
 	common|fluent/rules.ftl
 	dr|fluent/dr.ftl
 	dr|fluent/chrome.ftl
-	#dr|fluent/hotkeys.ftl
+	dr|fluent/hotkeys.ftl
 	dr|fluent/rules.ftl
 
 AllowUnusedFluentMessagesInExternalPackages: false

@@ -112,7 +112,7 @@
 	RevealsShroud:
 		Range: 8c0
 	Tooltip:
-		GenericName: Soldier
+		GenericName: actor-soldier-name
 	UpdatesPlayerStatistics:
 	ActorLostNotification:
 	MustBeDestroyed:
@@ -136,7 +136,7 @@
 	Selectable:
 		Class: Civ
 	Tooltip:
-		GenericName: Civilian
+		GenericName: actor-civilian-name
 	MapEditorData:
 		Categories: Civilian
 	WithInfantryBody:
@@ -196,7 +196,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Vehicle
+		GenericName: actor-vehicle-name
 	DeathSounds@NORMAL:
 		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath
 	#Capturable:
@@ -257,7 +257,7 @@
 	RevealsShroud:
 		Range: 4c0
 	Tooltip:
-		GenericName: Civilian Vehicle
+		GenericName: actor-civilianvehicle-name
 	MapEditorData:
 		Categories: Civilian
 
@@ -318,7 +318,7 @@
 	ProximityCaptor:
 		Types: Plane
 	Tooltip:
-		GenericName: Plane
+		GenericName: actor-aircraft-name
 	WithFacingSpriteBody:
 	HitShape:
 	MapEditorData:
@@ -377,7 +377,7 @@
 	Guard:
 	Guardable:
 	Tooltip:
-		GenericName: Ship
+		GenericName: actor-ship-name
 	DeathSounds@NORMAL:
 		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath
 	#MustBeDestroyed:
@@ -601,7 +601,7 @@
 	Inherits@shape: ^1x1Shape
 	Interactable:
 	Tooltip:
-		Name: Tree
+		Name: actor-tree-name
 		ShowOwnerRow: false
 	RenderSprites:
 	WithSpriteBody:
@@ -626,7 +626,7 @@
 ^Rock:
 	Inherits: ^Tree
 	RadarColorFromTerrain:
-		Terrain: Rock
+		Terrain: actor-rock-name
 	Targetable:
 		TargetTypes: Rocks
 	Tooltip:
@@ -641,14 +641,14 @@
 	Targetable:
 		TargetTypes: Craters
 	Tooltip:
-		Name: Crater
+		Name: actor-crater-name
 	MapEditorData:
 		Categories: Craters
 
 ^Plant:
 	Inherits: ^Tree
 	Tooltip:
-		Name: Plant
+		Name: actor-plant-name
 	Targetable:
 		TargetTypes: Plants
 	MapEditorData:
@@ -661,7 +661,7 @@
 	Targetable:
 		TargetTypes: Rubble
 	Tooltip:
-		Name: Rubble
+		Name: actor-rubble-name
 	-HitShape:
 	MapEditorData:
 		Categories: Rocks

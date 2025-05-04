@@ -12,11 +12,6 @@ checkbox-debug-menu =
     .label = Debug Menu
     .description = Enables cheats and developer commands
 
-## CrateSpawner
-checkbox-crates =
-    .label = Crates
-    .description = Collect crates with units to receive random bonuses or penalties
-
 ## MapBuildRadius
 checkbox-ally-build-radius =
     .label = Build Off Allies

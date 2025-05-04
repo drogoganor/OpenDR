@@ -13,11 +13,11 @@
 ^upgrade.hq1:
 	Inherits: ^Upgrade
 	Tooltip:
-		Name: Headquarters 2
+		Name: upgrade-hq1.name
 	Buildable:
 		BuildPaletteOrder: 50
 		Queue: Upgrade
-		Description: Unlocks additional construction options
+		Description: upgrade-hq1.description
 		BuildDuration: 52
 		Prerequisites: ~hq, ~barracks, ~vehicles
 	Valued:
@@ -42,11 +42,11 @@ upgrade.hq1.imperium:
 upgrade.hq2:
 	Inherits: ^Upgrade
 	Tooltip:
-		Name: Headquarters 3
+		Name: upgrade-hq2.name
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: ~hq, ~upgrade.hq1, ~vehicles, ~barracks, ~upgrade.barracks1, ~upgrade.assemblyplant1
-		Description: Unlocks additional construction options
+		Description: upgrade-hq2.description
 		BuildDuration: 89
 	Valued:
 		Cost: 3300
@@ -59,11 +59,11 @@ upgrade.hq2:
 upgrade.barracks1:
 	Inherits: ^Upgrade
 	Tooltip:
-		Name: Advanced Training Facility
+		Name: upgrade-barracks1.name
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: ~hq, ~upgrade.hq1, ~barracks
-		Description: Unlocks additional construction options
+		Description: upgrade-barracks1.description
 		BuildDuration: 68
 	Valued:
 		Cost: 2550
@@ -76,12 +76,12 @@ upgrade.barracks1:
 upgrade.assemblyplant1:
 	Inherits: ^Upgrade
 	Tooltip:
-		Name: Advanced Assembly Plant
+		Name: upgrade-assemblyplant1.name
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: ~hq, ~upgrade.hq1, ~vehicles
 		BuildDuration: 141
-		Description: Unlocks additional construction options
+		Description: upgrade-assemblyplant1.description
 	Valued:
 		Cost: 5000
 	Power:
@@ -93,12 +93,12 @@ upgrade.assemblyplant1:
 upgrade.phasing:
 	Inherits: ^Upgrade
 	Tooltip:
-		Name: Advanced Phasing Facility Upgrade
+		Name: upgrade-phasing.name
 	Buildable:
 		BuildPaletteOrder: 50
 		Prerequisites: ~hq, ~upgrade.hq1, ~phasing
 		BuildDuration: 72
-		Description: Unlocks additional construction options
+		Description: upgrade-phasing.description
 	Valued:
 		Cost: 2700
 	RenderSprites:

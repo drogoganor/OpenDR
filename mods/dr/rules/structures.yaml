@@ -9,8 +9,6 @@ Power:
 		Image: ncpow1l0
 	ProvidesPrerequisite:
 		Prerequisite: anypower
-	Tooltip:
-		Name: Taelon Power Generator
 	Power:
 		Amount: 500
 	ScalePowerWithHealth:
@@ -90,8 +88,6 @@ HQ.human:
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Headquarters
 	Health:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
@@ -146,8 +142,6 @@ HQ.cyborg:
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Headquarters
 	Health:
 		HP: 1440
 	RallyPoint:
@@ -210,8 +204,6 @@ HQ.togran:
 	-BuilderQueue@Building:
 	RenderSprites:
 		Image: tothq1l0
-	Tooltip:
-		Name: Headquarters
 	Health:
 		HP: 1200
 	WithIdleOverlay@LAYER1:
@@ -229,8 +221,6 @@ TrainingFacility.fguard:
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Training Facility
 	Health:
 		HP: 750
 	-WithIdleOverlay@REPEAT:
@@ -274,8 +264,6 @@ TrainingFacility.cyborg:
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Training Facility
 	Health:
 		HP: 900
 	Building:
@@ -325,8 +313,6 @@ AssemblyPlant.human:
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Assembly Plant
 	Health:
 		HP: 1000
 	RallyPoint:
@@ -370,8 +356,6 @@ AssemblyPlant.cyborg:
 	-SelfConstructing:
 	-Buildable:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Assembly Plant
 	Exit@1:
 		SpawnOffset: -768,768,0
 		ExitCell: 0,3
@@ -420,8 +404,6 @@ LaserTurret:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Laser Turret
 	Turreted:
 		TurnSpeed: 64
 		InitialFacing: 224
@@ -440,8 +422,6 @@ PlasmaTurret:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Plasma Turret
 	Turreted:
 		TurnSpeed: 48
 		InitialFacing: 224
@@ -465,8 +445,6 @@ AntiAirTurret.human:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Anti-Air Turret
 	Valued:
 		Cost: 1000
 	Health:
@@ -498,8 +476,6 @@ AntiAirTurret.cyborg:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Anti-Air Turret
 	Valued:
 		Cost: 1000
 	Health:
@@ -540,8 +516,6 @@ HeavyRailTurret:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Heavy Rail Turret
 	Valued:
 		Cost: 1700
 	Health:
@@ -575,8 +549,6 @@ NeutronAccelerator:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Neutron Accelerator
 	Valued:
 		Cost: 1700
 	Health:
@@ -616,8 +588,6 @@ CameraTower:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Camera Tower
 	Valued:
 		Cost: 200
 	Health:
@@ -656,8 +626,6 @@ Hospital.human:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Field Hospital
 	ProvidesPrerequisite@hospital:
 		Prerequisite: hospital
 	RepairsUnits:
@@ -689,8 +657,6 @@ Hospital.cyborg:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Field Hospital
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, barracks
 		BuildPaletteOrder: 50
@@ -726,8 +692,6 @@ Repair.human:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Repair Station
 	ProvidesPrerequisite@repair:
 		Prerequisite: repair
 	SelectionDecorations:
@@ -765,8 +729,6 @@ Repair.cyborg:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Repair Station
 	ProvidesPrerequisite@repair:
 		Prerequisite: repair
 	Reservable:
@@ -802,8 +764,6 @@ PhasingFacility:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Phasing Facility
 	ProvidesPrerequisite@phasing:
 		Prerequisite: phasing
 	Valued:
@@ -861,8 +821,6 @@ RearmingDeck.human:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Rearming Deck
 	ProvidesPrerequisite@air:
 		Prerequisite: air
 	Valued:
@@ -893,8 +851,6 @@ RearmingDeck.cyborg:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Rearming Deck
 	ProvidesPrerequisite@air:
 		Prerequisite: air
 	Valued:
@@ -925,8 +881,6 @@ TemporalGate:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Temporal Gate
 	ProvidesPrerequisite@temporal:
 		Prerequisite: temporal
 	Valued:
@@ -973,8 +927,6 @@ TemporalRiftCreator:
 	-Buildable:
 	-Production:
 	-BuilderQueue@Building:
-	Tooltip:
-		Name: Temporal Rift Creator
 	ProvidesPrerequisite@temporal:
 		Prerequisite: temporal
 	Valued:
@@ -998,7 +950,7 @@ TemporalRiftCreator:
 	SupportPowerChargeBar:
 	DetonateWeaponPower@temporalrift:
 		#Cursor: ioncannon
-		Icon: bitrcmn0.spr
+		Icon: bitrcmn0
 		ActivationSequence:
 		Name: Temporal Rift
 		Description: Opens a temporal rift at the target location.

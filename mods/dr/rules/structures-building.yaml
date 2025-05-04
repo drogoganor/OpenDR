@@ -3,10 +3,12 @@ Power.Constructing:
 	Inherits: ^SelfConstructingBuilding
 	RenderSprites:
 		Image: ncpow1l0
+	Tooltip:
+		Name: actor-power.name
 	Buildable:
+		Description: actor-power.description
 		Prerequisites: ~rig
 		Queue: Building
-		Description: Provides power for other structures. Refines Taelon into credits.
 		BuildPaletteOrder: 20
 		BuildDuration: 30
 	SelfConstructing:
@@ -14,8 +16,6 @@ Power.Constructing:
 		Becomes: Power
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	Tooltip:
-		Name: Taelon Power Generator
 	Inherits@shape: ^3x4Shape
 	SelectionDecorations:
 	Selectable:
@@ -50,10 +50,12 @@ WaterLaunchPad.Constructing:
 	Inherits: ^SelfConstructingBuilding
 	RenderSprites:
 		Image: nclnc1l0
+	Tooltip:
+		Name: actor-waterlaunchpad.name
 	Buildable:
+		Description: actor-waterlaunchpad.description
 		Prerequisites: ~rig
 		Queue: Building
-		Description: Refines spring water into credits.
 		BuildPaletteOrder: 10
 		BuildDuration: 37
 	SelfConstructing:
@@ -61,8 +63,6 @@ WaterLaunchPad.Constructing:
 		Becomes: WaterLaunchPad
 	MustBeDestroyed:
 		RequiredForShortGame: false
-	Tooltip:
-		Name: Water Launch Pad
 	Inherits@shape: ^4x3Shape
 	SelectionDecorations:
 	Selectable:
@@ -103,8 +103,6 @@ HQ.human.Constructing:
 	Inherits: ^Headquarters.Constructing
 	RenderSprites:
 		Image: nfhqt1l0
-	Tooltip:
-		Name: Headquarters
 	Buildable:
 		Queue: Building
 		Prerequisites: ~rig.human
@@ -130,8 +128,6 @@ HQ.cyborg.Constructing:
 	Inherits: ^Headquarters.Constructing
 	RenderSprites:
 		Image: nihqt1l0
-	Tooltip:
-		Name: Headquarters
 	Building:
 		Footprint: x==x xxxx xxxx =xxx
 	Buildable:
@@ -161,8 +157,6 @@ HQ.togran.Constructing:
 	Inherits: ^Headquarters.Constructing
 	RenderSprites:
 		Image: tothq1l0
-	Tooltip:
-		Name: Headquarters
 	Buildable:
 		Queue: Building
 		Prerequisites: ~rig.togran
@@ -186,8 +180,6 @@ TrainingFacility.fguard.Constructing:
 	Inherits: ^TrainingFacility.Constructing
 	RenderSprites:
 		Image: nfutf1l0
-	Tooltip:
-		Name: Training Facility
 	Buildable:
 		Queue: Building
 		Prerequisites: ~rig.fguard, hq.fguard, anypower
@@ -216,8 +208,6 @@ TrainingFacility.cyborg.Constructing:
 	Inherits@shape: ^5x4Shape
 	RenderSprites:
 		Image: niutf1l0
-	Tooltip:
-		Name: Training Facility
 	Buildable:
 		Queue: Building
 		Prerequisites: ~rig.cyborg, hq.cyborg, anypower
@@ -247,8 +237,6 @@ AssemblyPlant.human.Constructing:
 	Inherits: ^AssemblyPlant.Constructing
 	RenderSprites:
 		Image: nfvcy1l0
-	Tooltip:
-		Name: Assembly Plant
 	Buildable:
 		Queue: Building
 		Prerequisites: ~rig.human, hq.human, anypower, barracks
@@ -270,8 +258,6 @@ AssemblyPlant.cyborg.Constructing:
 	Inherits: ^AssemblyPlant.Constructing
 	RenderSprites:
 		Image: nivcy1l0
-	Tooltip:
-		Name: Assembly Plant
 	Buildable:
 		Queue: Building
 		Prerequisites: ~rig.cyborg, hq.cyborg, anypower, barracks
@@ -305,11 +291,11 @@ LaserTurret.Constructing:
 		Image: nfgdt1l0 # Manually set to barren here along with Imperium repair pad and Imp AA.
 		#Palette: terrain
 	Tooltip:
-		Name: Laser Turret
+		Name: actor-laserturret.name
 	Buildable:
 		Prerequisites: ~rig.human, anypower, barracks
 		Queue: Building
-		Description: Laser Defense Turret
+		Description: actor-laserturret.description
 		BuildPaletteOrder: 50
 		BuildDuration: 22
 	SelfConstructing:
@@ -330,11 +316,11 @@ PlasmaTurret.Constructing:
 	RenderSprites:
 		Image: nigdt1l0
 	Tooltip:
-		Name: Plasma Turret
+		Name: actor-plasmaturret.name
 	Buildable:
 		Prerequisites: ~rig.cyborg, anypower, barracks
 		Queue: Building
-		Description: Plasma Defense Turret
+		Description: actor-plasmaturret.description
 		BuildPaletteOrder: 50
 		BuildDuration: 22
 	SelfConstructing:
@@ -358,11 +344,11 @@ AntiAirTurret.human.Constructing:
 	RenderSprites:
 		Image: nfaar1l0 # Manually set to barren here along with Imperium repair pad and Imp AA.
 	Tooltip:
-		Name: Anti-Air Turret
+		Name: actor-antiairturret.name
 	Buildable:
 		Prerequisites: ~rig.human, hq.human, upgrade.hq1, vehicles, barracks
 		Queue: Building
-		Description: Anti-Air Turret
+		Description: actor-antiairturret.description
 		BuildPaletteOrder: 50
 		BuildDuration: 30
 	SelfConstructing:
@@ -387,11 +373,11 @@ AntiAirTurret.cyborg.Constructing:
 	RenderSprites:
 		Image: niaar1l0
 	Tooltip:
-		Name: Anti-Air Turret
+		Name: actor-antiairturret.name
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
 		Queue: Building
-		Description: Anti-Air Turret
+		Description: actor-antiairturret.description
 		BuildPaletteOrder: 50
 		BuildDuration: 30
 	SelfConstructing:
@@ -416,7 +402,7 @@ HeavyRailTurret.Constructing:
 	RenderSprites:
 		Image: nfagt1l0
 	Tooltip:
-		Name: Heavy Rail Turret
+		Name: actor-heavyrailturret.name
 	Inherits@shape: ^3x3Shape
 	Building:
 		Footprint: =x_ xxx xx=
@@ -424,7 +410,7 @@ HeavyRailTurret.Constructing:
 	Buildable:
 		Prerequisites: ~rig.human, hq.human, upgrade.hq1, vehicles, barracks
 		Queue: Building
-		Description: Heavy Rail Turret
+		Description: actor-heavyrailturret.description
 		BuildPaletteOrder: 50
 		BuildDuration: 51
 	SelfConstructing:
@@ -450,7 +436,7 @@ NeutronAccelerator.Constructing:
 	RenderSprites:
 		Image: niagt1l0
 	Tooltip:
-		Name: Neutron Accelerator
+		Name: actor-neutronaccelerator.name
 	Inherits@shape: ^3x3Shape
 	Building:
 		Footprint: =x= xxx xxx
@@ -459,7 +445,7 @@ NeutronAccelerator.Constructing:
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq1, vehicles, barracks
 		Queue: Building
-		Description: Neutron Accelerator
+		Description: actor-neutronaccelerator.description
 		BuildPaletteOrder: 50
 		BuildDuration: 51
 	SelfConstructing:
@@ -494,11 +480,11 @@ CameraTower.Constructing:
 		Bounds: 1024, 1621, 0, -341
 		DecorationBounds: 1024, 1621, 0, -341
 	Tooltip:
-		Name: Camera Tower
+		Name: actor-cameratower.name
 	Buildable:
 		Prerequisites: ~rig, hq, upgrade.hq1, vehicles, barracks
 		Queue: Building
-		Description: Camera Tower
+		Description: actor-cameratower.description
 		BuildPaletteOrder: 50
 		BuildDuration: 6
 	SelfConstructing:
@@ -529,9 +515,10 @@ Hospital.human.Constructing:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Field Hospital
+		Name: actor-hospital.name
 	Buildable:
 		Prerequisites: ~rig.human, hq.human, barracks
+		Description: actor-hospital.description
 		BuildPaletteOrder: 50
 		BuildDuration: 15
 	SelfConstructing:
@@ -572,9 +559,10 @@ Hospital.cyborg.Constructing:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Field Hospital
+		Name: actor-hospital.name
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, barracks
+		Description: actor-hospital.description
 		BuildPaletteOrder: 50
 		BuildDuration: 15
 	SelfConstructing:
@@ -608,9 +596,10 @@ Repair.human.Constructing:
 	RenderSprites:
 		Image: nfrep1l0
 	Tooltip:
-		Name: Repair Station
+		Name: actor-repair.name
 	Buildable:
 		Prerequisites: ~rig.human, hq.human, vehicles
+		Description: actor-repair.description
 		BuildPaletteOrder: 50
 		BuildDuration: 24
 	SelfConstructing:
@@ -658,9 +647,10 @@ Repair.cyborg.Constructing:
 		Bounds: 4096, 3072, 0, 0
 		DecorationBounds: 4096, 3072, 0, 0
 	Tooltip:
-		Name: Repair Station
+		Name: actor-repair.name
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, vehicles
+		Description: actor-repair.description
 		BuildPaletteOrder: 50
 		BuildDuration: 24
 	SelfConstructing:
@@ -696,9 +686,10 @@ PhasingFacility.Constructing:
 	RenderSprites:
 		Image: nfphf1l0
 	Tooltip:
-		Name: Phasing Facility
+		Name: actor-phasing.name
 	Buildable:
 		Prerequisites: ~rig.human, hq.human
+		Description: actor-phasing.description
 		BuildPaletteOrder: 50
 		BuildDuration: 36
 	SelfConstructing:
@@ -737,9 +728,10 @@ RearmingDeck.human.Constructing:
 	RenderSprites:
 		Image: nfrrm1l0
 	Tooltip:
-		Name: Rearming Deck
+		Name: actor-rearmingdeck.name
 	Buildable:
 		Prerequisites: ~rig.human, hq.human, upgrade.hq2, vehicles, barracks
+		Description: actor-rearmingdeck.description
 		BuildPaletteOrder: 50
 		BuildDuration: 30
 	SelfConstructing:
@@ -785,9 +777,10 @@ RearmingDeck.cyborg.Constructing:
 	RenderSprites:
 		Image: nirrm1l0
 	Tooltip:
-		Name: Rearming Deck
+		Name: actor-rearmingdeck.name
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
+		Description: actor-rearmingdeck.description
 		BuildPaletteOrder: 50
 		BuildDuration: 30
 	SelfConstructing:
@@ -828,9 +821,10 @@ TemporalGate.Constructing:
 	RenderSprites:
 		Image: nitgt1l0
 	Tooltip:
-		Name: Temporal Gate
+		Name: actor-temporalgate.name
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
+		Description: actor-temporalgate.description
 		BuildPaletteOrder: 50
 		BuildDuration: 54
 	SelfConstructing:
@@ -869,9 +863,10 @@ TemporalRiftCreator.Constructing:
 	RenderSprites:
 		Image: nitrc1l0
 	Tooltip:
-		Name: Temporal Rift Creator
+		Name: actor-temporalriftcreator.name
 	Buildable:
 		Prerequisites: ~rig.cyborg, hq.cyborg, upgrade.hq2, vehicles, barracks
+		Description: actor-temporalriftcreator.description
 		BuildPaletteOrder: 60
 		BuildDuration: 240
 	SelfConstructing:

@@ -35,6 +35,8 @@ Player:
 		NewOptionsNotificationDelay: 0
 		NewOptionsNotification: NewOptions
 		CannotPlaceNotification: BuildingCannotPlaceAudio
+		NewOptionsTextNotification: notification-new-construction-options
+		CannotPlaceTextNotification: notification-cannot-deploy-here
 	BuildUnitPlaceBuilding:
 	SupportPowerManager:
 	ScriptTriggers:
@@ -46,9 +48,12 @@ Player:
 	ConquestVictoryConditions:
 	PowerManager:
 		SpeechNotification: LowPower
+		TextNotification: notification-low-power
 	AllyRepair:
 	FrozenActorLayer:
 	BaseAttackNotifier:
+		TextNotification: notification-base-under-attack
+		AllyTextNotification: notification-ally-under-attack
 	PlayerStatistics:
 	PlaceBeacon:
 	ProvidesTechPrerequisite@infonly:

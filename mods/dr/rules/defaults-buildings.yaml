@@ -175,13 +175,13 @@
 ^Headquarters.Constructing:
 	Inherits: ^SelfConstructingBuilding
 	Tooltip:
-		Name: Headquarters
+		Name: actor-hq.name
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 0
 		Prerequisites: anypower
 		BuildDuration: 22
-		Description: Creates construction rigs and freighters.\nRequired to build some buildings.\nCan be upgraded.
+		Description: actor-hq.description
 	Building:
 		Footprint: _xx_ xxxx xxxx xxx_
 		Dimensions: 4,4
@@ -211,6 +211,8 @@
 
 ^Headquarters:
 	Inherits: ^ConstructedBuildingCommon
+	Tooltip:
+		Name: actor-hq.name
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	ProvidesPrerequisite@buildingname:
@@ -312,7 +314,7 @@
 ^TrainingFacility.Constructing:
 	Inherits: ^SelfConstructingBuilding
 	Tooltip:
-		Name: Training Facility
+		Name: actor-trainingfacility.name
 	Inherits@shape: ^5x4Shape
 	MustBeDestroyed:
 		RequiredForShortGame: true
@@ -320,7 +322,7 @@
 		Path: 4,4
 	Buildable:
 		Queue: Building
-		Description: Trains infantry.
+		Description: actor-trainingfacility.description
 		Prerequisites: ~anypower, hq
 		BuildPaletteOrder: 30
 		BuildDuration: 45
@@ -341,7 +343,7 @@
 ^TrainingFacility:
 	Inherits: ^ConstructedBuildingCommon
 	Tooltip:
-		Name: Training Facility
+		Name: actor-trainingfacility.name
 	Valued:
 		Cost: 1500
 	RevealsShroud:
@@ -409,7 +411,7 @@
 ^AssemblyPlant.Constructing:
 	Inherits: ^SelfConstructingBuilding
 	Tooltip:
-		Name: Assembly Plant
+		Name: actor-assemblyplant.name
 	Inherits@shape: ^5x5Shape
 	MustBeDestroyed:
 		RequiredForShortGame: true
@@ -420,7 +422,7 @@
 		Prerequisites: ~anypower, barracks, hq
 		BuildPaletteOrder: 40
 		BuildDuration: 66
-		Description: Produces vehicles.
+		Description: actor-assemblyplant.description
 	Building:
 		Footprint: ===__ =xx== xxxxx ==xxx ==xx=
 		Dimensions: 5,5
@@ -446,7 +448,7 @@
 ^AssemblyPlant:
 	Inherits: ^ConstructedBuildingCommon
 	Tooltip:
-		Name: Assembly Plant
+		Name: actor-assemblyplant.name
 	Valued:
 		Cost: 2200
 	RevealsShroud:

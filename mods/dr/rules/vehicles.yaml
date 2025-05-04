@@ -5,10 +5,10 @@ ConstructionRig:
 	RenderSprites:
 		Image: ucfcnst0
 	Tooltip:
-		Name: Construction Rig
+		Name: actor-constructionrig.name
 	Buildable:
 		Queue: Economy
-		Description: The workhorse of any military operation, this unit\nconstructs all buildings and bridges.
+		Description: actor-constructionrig.description
 		Prerequisites: ~techlevel.infonly
 		BuildPaletteOrder: 80
 		BuildDuration: 9
@@ -75,10 +75,10 @@ Freighter:
 	RenderSprites:
 		Image: ucfrgst0
 	Tooltip:
-		Name: Freighter
+		Name: actor-freighter.name
 	Buildable:
 		Queue: Economy
-		Description: These vehicles haul the vital resources that feed\nthe ravenous war machine. The multi-purpose\nFreighter is able to carry fresh water or Taelon.
+		Description: actor-freighter.description
 		Prerequisites: vehicles
 		BuildPaletteOrder: 80
 		BuildDuration: 30
@@ -120,10 +120,10 @@ HoverFreighter:
 	RenderSprites:
 		Image: uchfrst0
 	Tooltip:
-		Name: Hover Freighter
+		Name: actor-hoverfreighter.name
 	Buildable:
 		Queue: Economy
-		Description: Serves the same function as the Freighter, but its\nhover drive allows movement over a broader range of\nterrain types. It is armed with a laser cannon.
+		Description: actor-hoverfreighter.description
 		Prerequisites: vehicles, barracks, hq, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 80
 		BuildDuration: 45
@@ -157,15 +157,16 @@ HoverFreighter:
 	StoresResources:
 		Capacity: 8
 		Resources: Water,Taelon
+	DockClientManager:
 
 SpiderBike:
 	Inherits: ^Vehicle
 	RenderSprites:
 		Image: ufspbst0
 	Tooltip:
-		Name: Spider Bike
+		Name: actor-spiderbike.name
 	Buildable:
-		Description: This all-terrain vehicle is the cornerstone of the\nFreedom Guard ground force. Fast and inexpensive,\nit is able to tackle all types of terrain. Armed\nwith a double rail gun, it is fairly effective\nagainst armour but somewhat vulnerable to infantry.
+		Description: actor-spiderbike.description
 		Prerequisites: ~vehicles.human
 		BuildPaletteOrder: 90
 		BuildDuration: 15
@@ -191,11 +192,9 @@ RAT:
 	RenderSprites:
 		Image: ufratst0
 	Tooltip:
-		Name: Rapid Armored Transport
-	Voiced:
-		VoiceSet: FreedomGuardVehicleVoice
+		Name: actor-rat.name
 	Buildable:
-		Description: The Freedom Guard troop transport has the ability\nto camouflage itself to match the surrounding terrain.\nThe R.A.T. is unarmed, but is able to carry up to\nfive infantry units at a time and can move over water,\nalthough at a considerably reduced speed.
+		Description: actor-rat.description
 		Prerequisites: ~vehicles.fguard
 		BuildPaletteOrder: 90
 		BuildDuration: 14
@@ -203,6 +202,8 @@ RAT:
 		Class: V2
 		Bounds: 1536, 1536, 0, 0
 		DecorationBounds: 1536, 1536, 0, 0
+	Voiced:
+		VoiceSet: FreedomGuardVehicleVoice
 	Valued:
 		Cost: 450
 	Health:
@@ -232,16 +233,16 @@ SkirmishTank:
 	RenderSprites:
 		Image: ufsktst0
 	Tooltip:
-		Name: Skirmish Tank
-	Voiced:
-		VoiceSet: FreedomGuardVehicleVoice
+		Name: actor-skirmishtank.name
 	Buildable:
-		Description: The Skirmish Tank is the foundation upon which any\nsuccessful military outfit is built. Properly\naccessorised, the Skirmish Tank can make a splash at\nan intimate midnight raid, a small summer skirmish,\nor even a full-scale gala massacre.
+		Description: actor-skirmishtank.description
 		Prerequisites: ~vehicles.human
 		BuildPaletteOrder: 90
 		BuildDuration: 18
 	Selectable:
 		Class: V3
+	Voiced:
+		VoiceSet: FreedomGuardVehicleVoice
 	Turreted:
 		TurnSpeed: 20
 	Armament:
@@ -271,9 +272,9 @@ TankHunter:
 	RenderSprites:
 		Image: ufthnst0
 	Tooltip:
-		Name: Tank Hunter
+		Name: actor-tankhunter.name
 	Buildable:
-		Description: This quick, deadly vehicle emits a massive short\nrange electric discharge. The Tank Hunter is\ndevastating in close combat but has no ranged weapon\nand is vulnerable in situations where it cannot close\non its prey.
+		Description: actor-tankhunter.description
 		Prerequisites: ~vehicles.fguard
 		BuildPaletteOrder: 100
 		BuildDuration: 21
@@ -299,9 +300,9 @@ PhaseTank:
 	RenderSprites:
 		Image: ufphtst0
 	Tooltip:
-		Name: Phase Tank
+		Name: actor-phasetank.name
 	Buildable:
-		Description: Using limited phasing technology, the Phase Tank\ncan bury itself underground in order to ambush\nenemy units. However, the Phase Tank must surface\nto move or fire and can be fired upon and take damage\nwhile submerged. Although the phased energy shield\nsurrounding the vehicle serves to protect it and\nminimise damage, the Phase Tank is essentially\ndefenceless while underground.
+		Description: actor-phasetank.description
 		Prerequisites: ~vehicles.human, phasing
 		BuildPaletteOrder: 100
 		BuildDuration: 18
@@ -328,9 +329,9 @@ FlakJack:
 	RenderSprites:
 		Image: ufflkst0
 	Tooltip:
-		Name: Flak Jack
+		Name: actor-flakjack.name
 	Buildable:
-		Description: A revamped Construction Rig outfitted with two\nshoulder-mounted particle launchers. The Flak Jack\nsalvages metal from the battlefield and converts\nit into microscopic metallic particles that it fires\nin clouds which cause sustained damage to air units.\nThe unit has no defensive capability against ground\nattack, and should be protected at all times.
+		Description: actor-flakjack.description
 		Prerequisites: ~vehicles.human, hq, upgrade.hq1
 		BuildPaletteOrder: 100
 		BuildDuration: 15
@@ -356,9 +357,9 @@ TripleRailHoverTank:
 	RenderSprites:
 		Image: uftrtst0
 	Tooltip:
-		Name: Triple Rail Hover Tank
+		Name: actor-triplerailhovertank.name
 	Buildable:
-		Description: The pinnacle of Freedom Guard armour, the Triple\nRail uses hover technology stolen from the Imperium\nto allow movement over a broader range of terrain\ntypes. Hauling three electro magnetic projectile\naccelerator cannons, or rail guns, this tank is a\nsavage consumer of Imperium armour.
+		Description: actor-triplerailhovertank.description
 		Prerequisites: ~vehicles.fguard, hq, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 110
 		BuildDuration: 39
@@ -397,9 +398,9 @@ HellstormArtillery:
 	RenderSprites:
 		Image: uffarst0
 	Tooltip:
-		Name: Hellstorm Artillery
+		Name: actor-hellstormartillery.name
 	Buildable:
-		Description: The Hellstorm Artillery fires a long-range,\narea-effect explosive. Its range is more than four\ntimes longer than any other unit. A battery of\nArtillery is capable of single-handedly destroying\nan enemy base, but, the vehicle is slow and lightly\narmoured, so undefended Artillery is fodder in\nclose combat.
+		Description: actor-hellstormartillery.description
 		Prerequisites: ~vehicles.human, hq, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 110
 		BuildDuration: 33
@@ -427,9 +428,9 @@ ShockWave:
 	RenderSprites:
 		Image: ufswvst0
 	Tooltip:
-		Name: Shock Wave
+		Name: actor-shockwave.name
 	Buildable:
-		Description: A single-use unit that creates an immense earth wave\nthat travels across the map, causing severe damage\nto everything in its wake. The unit is armed by\ndouble-clicking on it and then fired at an enemy\ntarget to determine the direction of the wave. The\nShock Wave unit then embeds in the ground and\ndetonates, self-destructing in the discharge. The\nShock Wave is expensive and slow to build but well\nworth the wait.
+		Description: actor-shockwave.description
 		Prerequisites: ~vehicles.human, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1, phasing, upgrade.phasing
 		BuildPaletteOrder: 200
 		BuildDuration: 120
@@ -470,9 +471,9 @@ WaterContaminator:
 	RenderSprites:
 		Image: ucwcost0
 	Tooltip:
-		Name: Water Contaminator
+		Name: actor-watercontaminator.name
 	Buildable:
-		Description: This vehicle can pollute and permanently destroy\nfreshwater springs. It is slow and extremely expensive,\nbut once you have cut off your enemies’ resources,\ntheir ruin is inevitable.
+		Description: actor-watercontaminator.description
 		Prerequisites: ~vehicles, hq, ~upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
 		BuildPaletteOrder: 200
 		BuildDuration: 150
@@ -497,14 +498,16 @@ PhaseRunner:
 	RenderSprites:
 		Image: ufphrst0
 	Tooltip:
-		Name: Phase Runner
-	Voiced:
-		VoiceSet: FreedomGuardVehicleVoice
+		Name: actor-phaserunner.name
+	Buildable:
+		Description: actor-phaserunner.description
 	-Buildable:
-	#	Description: The Phase Runner troop transport has the ability\nto travel while phased.
+	#	Description: actor-phaserunner.description
 	#	Prerequisites: ~vehicles.fguard
 	#	BuildPaletteOrder: 210
 	#	BuildDuration: 40
+	Voiced:
+		VoiceSet: FreedomGuardVehicleVoice
 	Selectable:
 		Class: V11
 	Valued:
@@ -536,9 +539,9 @@ ScoutRunner:
 	RenderSprites:
 		Image: uisttst0
 	Tooltip:
-		Name: Scout Runner
+		Name: actor-scoutrunner.name
 	Buildable:
-		Description: This fast moving hover vehicle is armed with a\nlaser and is fairly effective against both infantry\nand armour. However, it is not very sturdy, and is\nused primarily for front line reconnaissance.
+		Description: actor-scoutrunner.description
 		Prerequisites: ~vehicles.cyborg, hq
 		BuildPaletteOrder: 130
 		BuildDuration: 15
@@ -564,9 +567,9 @@ ITT:
 	RenderSprites:
 		Image: uiittst0
 	Tooltip:
-		Name: Invader Troop Transport
+		Name: actor-itt.name
 	Buildable:
-		Description: Armed with a laser rifle, the Troop Transport can\ncarry up to five infantry units at a time.
+		Description: actor-itt.description
 		Prerequisites: ~vehicles.cyborg, hq
 		BuildPaletteOrder: 130
 		BuildDuration: 18
@@ -615,9 +618,9 @@ PlasmaTank:
 	RenderSprites:
 		Image: uipltst0
 	Tooltip:
-		Name: Plasma Tank
+		Name: actor-plasmatank.name
 	Buildable:
-		Description: Backbone of the Imperium war effort, the Plasma Tank\nis tough and packs a formidable plasma cannon. The\nImperium overruns the enemy with endless waves of\nthese ruinous machines.
+		Description: actor-plasmatank.description
 		Prerequisites: ~vehicles.imperium, hq
 		BuildPaletteOrder: 130
 		BuildDuration: 21
@@ -656,9 +659,9 @@ Amper:
 	RenderSprites:
 		Image: uiampst0
 	Tooltip:
-		Name: Amper
+		Name: actor-amper.name
 	Buildable:
-		Description: The Imperium's version of first aid, this lunatic\ncyborg fires darts into dying infantry units that\nboost the target’s health to full, but leave the\nunit poisoned so that its health will steadily\ndecrease until the unit dies. The Amper can also be\nused as an offensive weapon, bringing slow death\nto enemy infantry.
+		Description: actor-amper.description
 		Prerequisites: ~vehicles.imperium, hq, barracks, hospital
 		BuildPaletteOrder: 140
 		BuildDuration: 15
@@ -687,9 +690,9 @@ MAD:
 	RenderSprites:
 		Image: uimadst0
 	Tooltip:
-		Name: Mobile Air Defense
+		Name: actor-mad.name
 	Buildable:
-		Description: The M.A.D. fires bladed orbs at enemy air units.\nLike the Freedom Guard Flak Jack, it cannot fire\nat ground units and should be defended against land\nattack.
+		Description: actor-mad.description
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1
 		BuildPaletteOrder: 140
 		BuildDuration: 24
@@ -717,9 +720,9 @@ Shredder:
 	RenderSprites:
 		Image: uishrst0
 	Tooltip:
-		Name: Shredder
+		Name: actor-shredder.name
 	Buildable:
-		Description: A huge, hovering nightmare, the Shredder tears through\ninfantry like a runaway saw. Although it has no ranged\nattack, it is fast, heavily armoured, and inflicts\nsevere damage on any infantry units foolish enough\nto get near it.
+		Description: actor-shredder.description
 		Prerequisites: ~vehicles.imperium, hq
 		BuildPaletteOrder: 150
 		BuildDuration: 21
@@ -745,9 +748,9 @@ HostageTaker:
 	RenderSprites:
 		Image: uihosst0
 	Tooltip:
-		Name: Hostage Taker
+		Name: actor-hostagetaker.name
 	Buildable:
-		Description: This diabolical Imperium vehicle snatches infantry\nunits, lobotomises them and converts them into Suicide\nZombies. Shortly after the infantry unit is run over\nand captured, it is released, now under the player’s\ncontrol and with a high-powered explosive strapped\nto its back.
+		Description: actor-hostagetaker.description
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
 		BuildDuration: 18
@@ -773,9 +776,9 @@ TachionTank:
 	RenderSprites:
 		Image: uitctst0
 	Tooltip:
-		Name: Tachion Tank
+		Name: actor-tachiontank.name
 	Buildable:
-		Description: The Tachion Tank is the largest, most heavily armed\nbeast on the battlefield. It’s a ponderous mountain\nof havoc that has the last word in any argument.\nWhen the enemy does manage to overpower one of these\njuggernaughts, it has the ability to self-destruct\nand take any nearby units down with it.
+		Description: actor-tachiontank.description
 		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
 		BuildDuration: 45
@@ -803,9 +806,9 @@ Scarab:
 	RenderSprites:
 		Image: uiiarst0
 	Tooltip:
-		Name: S.C.A.R.A.B.
+		Name: actor-scarab.name
 	Buildable:
-		Description: This long range weapon fires a fragmenting projectile\nthat breaks into numerous burning particles over its\ntarget. This vehicle is slow and lightly armoured,\nbut it can enclose itself in a retractable armoured\nexoskeleton when it gets in trouble. The unit cannot\nfire while this armour is engaged, but can weather\na considerable beating while waiting for reinforcements.
+		Description: actor-scarab.description
 		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1, upgrade.assemblyplant1
 		BuildPaletteOrder: 150
 		BuildDuration: 39
@@ -827,189 +830,3 @@ Scarab:
 		Type: TankPlating
 	Armament:
 		Weapon: IMPArtilleryShell
-
-# Aircraft
-
-SkyBike:
-	Inherits: ^Aircraft
-	RenderSprites:
-		Image: ufskbst0
-	Tooltip:
-		Name: Sky Bike
-	Buildable:
-		Description: Using a modified Spider Bike chassis, the Freedom\nGuard were able to produce cheap, fast aerial units\nwhich could attack enemy ground troops and other\nflyers. Although quicker than the Imperium Cyclone,\nthe Sky Bike is not as heavily armoured and is\noutgunned in even combat. The speed of the Sky Bike,\nhowever, allows it to dictate the circumstance of\nconflict. This unit fires high-velocity mini-missiles\nand, like the Outrider, must re-arm at the Re-Arming\nDeck.
-		Prerequisites: ~vehicles.human, air, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
-		BuildPaletteOrder: 120
-		BuildDuration: 24
-	Voiced:
-		VoiceSet: AirUnitVoice
-	Valued:
-		Cost: 800
-	Health:
-		HP: 200
-	RevealsShroud:
-		Range: 9c0
-	Armor:
-		Type: FlyingArmour
-	Armament:
-		Weapon: BkLaser
-		PauseOnCondition: !ammo
-	AmmoPool:
-		Ammo: 20
-		AmmoCondition: ammo
-		ReloadDelay: 10 # Hack attribute to be removed, see AmmoPool.cs
-	Aircraft:
-		Speed: 198
-	AttackAircraft:
-		FacingTolerance: 80
-		AttackType: Hover
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
-		PipCount: 5
-		FullSequence: pip-red
-
-Outrider:
-	Inherits: ^Aircraft
-	RenderSprites:
-		Image: ufoutst0
-	Tooltip:
-		Name: Outrider
-	Buildable:
-		Description: This ground attack aerial unit is slower and less\nmanoeuvrable than the Sky Bike, but considerably\ntougher and fires air to ground missiles. Deadly\neffective against Imperium armour, it cannot engage\nother air units and should be escorted by air defence\nunits. The Outrider has limited ammunition and must\nre-arm at the Re-Arming Deck.
-		Prerequisites: ~vehicles.fguard, air, hq, upgrade.hq1, upgrade.hq2, barracks, upgrade.barracks1, upgrade.assemblyplant1
-		BuildPaletteOrder: 120
-		BuildDuration: 42
-	Voiced:
-		VoiceSet: AirUnitVoice
-	Valued:
-		Cost: 1400
-	Health:
-		HP: 400
-	RevealsShroud:
-		Range: 9c0
-	Armor:
-		Type: FlyingArmour
-	Armament:
-		Weapon: OutriderMissile
-		PauseOnCondition: !ammo
-	AmmoPool:
-		Ammo: 10
-		AmmoCondition: ammo
-		ReloadDelay: 20 # Hack attribute to be removed, see AmmoPool.cs
-	Aircraft:
-		Speed: 174
-	AttackAircraft:
-		FacingTolerance: 80
-		AttackType: Hover
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
-		PipCount: 5
-		FullSequence: pip-red
-
-ReconDrone:
-	Inherits: ^Aircraft
-	RenderSprites:
-		Image: uirdrst0
-	Tooltip:
-		Name: Recon Drone
-	Buildable:
-		Description: This small unmanned drone is lightly armoured and\nhas no offensive capability. It is used solely to\nscout enemy targets.
-		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1
-		BuildPaletteOrder: 150
-		BuildDuration: 12
-	Voiced:
-		VoiceSet: ReconDroneVoice
-	Valued:
-		Cost: 400
-	Health:
-		HP: 133
-	RevealsShroud:
-		Range: 9c0
-	Armor:
-		Type: FlyingArmour
-	Aircraft:
-		Speed: 126
-	AttackAircraft:
-		FacingTolerance: 80
-		AttackType: Hover
-
-Cyclone:
-	Inherits: ^Aircraft
-	RenderSprites:
-		Image: uicycst0
-	Tooltip:
-		Name: Cyclone
-	Buildable:
-		Description: The Cyclone embodies the core of the Imperium aerial\nforce. The unit is fairly rugged and can engage both\nair and ground units. However, the Cyclone’s neutron\ncannon has a limited energy source and must recharge\nat the Re-Arming Deck.
-		Prerequisites: ~vehicles.cyborg, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
-		BuildPaletteOrder: 160
-		BuildDuration: 45
-	Voiced:
-		VoiceSet: CycloneVoice
-	Valued:
-		Cost: 1500
-	Health:
-		HP: 300
-	RevealsShroud:
-		Range: 9c0
-	Armor:
-		Type: FlyingArmour
-	Armament:
-		Weapon: CycloneCannon
-		PauseOnCondition: !ammo
-	AmmoPool:
-		Ammo: 5
-		AmmoCondition: ammo
-		ReloadDelay: 40 # Hack attribute to be removed, see AmmoPool.cs
-	Aircraft:
-		Speed: 174
-	AttackAircraft:
-		FacingTolerance: 80
-		AttackType: Hover
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
-		FullSequence: pip-red
-
-SkyFortress:
-	Inherits: ^Aircraft
-	RenderSprites:
-		Image: uiskyst0
-	Tooltip:
-		Name: Sky Fortress
-	Buildable:
-		Description: Death from above. This floating platform of wreckage\nhouses the largest plasma cannon known to humanity.\nIt's slow to recharge but makes a lasting impact.
-		Prerequisites: ~vehicles.imperium, hq, barracks, upgrade.hq1, upgrade.hq2, upgrade.barracks1, upgrade.assemblyplant1, air
-		BuildPaletteOrder: 160
-		BuildDuration: 75
-	Selectable:
-		Bounds: 1194, 1194, 0, 0
-		DecorationBounds: 1365, 1365, 0, 0
-	Voiced:
-		VoiceSet: SkyFortressVoice
-	Valued:
-		Cost: 2500
-	Health:
-		HP: 533
-	RevealsShroud:
-		Range: 9c0
-	Armor:
-		Type: FlyingArmour
-	Armament:
-		Weapon: SkyFortressWeapon
-		PauseOnCondition: !ammo
-	AmmoPool:
-		Ammo: 1
-		AmmoCondition: ammo
-		ReloadDelay: 200 # Hack attribute to be removed, see AmmoPool.cs
-	Aircraft:
-		Speed: 90
-	AttackAircraft:
-		FacingTolerance: 80
-		AttackType: Hover
-	WithAmmoPipsDecoration:
-		Position: BottomLeft
-		RequiresSelection: true
-		FullSequence: pip-red
