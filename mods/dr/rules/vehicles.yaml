@@ -22,7 +22,7 @@ ConstructionRig:
 	Valued:
 		Cost: 300
 	Health:
-		HP: 100
+		HP: 200
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -284,7 +284,7 @@ TankHunter:
 	Valued:
 		Cost: 700
 	Health:
-		HP: 150
+		HP: 300
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -312,7 +312,7 @@ PhaseTank:
 	Valued:
 		Cost: 600
 	Health:
-		HP: 166
+		HP: 333
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -341,7 +341,7 @@ FlakJack:
 	Valued:
 		Cost: 500
 	Health:
-		HP: 100
+		HP: 200
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -371,7 +371,7 @@ TripleRailHoverTank:
 	Valued:
 		Cost: 1300
 	Health:
-		HP: 200
+		HP: 600
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -412,7 +412,7 @@ HellstormArtillery:
 	Valued:
 		Cost: 1100
 	Health:
-		HP: 133
+		HP: 266
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -440,7 +440,7 @@ ShockWave:
 	Valued:
 		Cost: 4000
 	Health:
-		HP: 166
+		HP: 333
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -483,7 +483,7 @@ WaterContaminator:
 	Valued:
 		Cost: 10000
 	Health:
-		HP: 166
+		HP: 333
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -510,7 +510,7 @@ PhaseRunner:
 	Valued:
 		Cost: 900
 	Health:
-		HP: 300
+		HP: 600
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -549,7 +549,7 @@ ScoutRunner:
 	Valued:
 		Cost: 500
 	Health:
-		HP: 150
+		HP: 300
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -579,7 +579,7 @@ ITT:
 	Valued:
 		Cost: 600
 	Health:
-		HP: 150
+		HP: 300
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -669,7 +669,7 @@ Amper:
 	Valued:
 		Cost: 500
 	Health:
-		HP: 66
+		HP: 133
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -702,7 +702,7 @@ MAD:
 	Valued:
 		Cost: 800
 	Health:
-		HP: 150
+		HP: 300
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -730,7 +730,7 @@ Shredder:
 	Valued:
 		Cost: 700
 	Health:
-		HP: 100
+		HP: 200
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -760,7 +760,7 @@ HostageTaker:
 	Valued:
 		Cost: 600
 	Health:
-		HP: 450
+		HP: 900
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -788,7 +788,7 @@ TachionTank:
 	Valued:
 		Cost: 1500
 	Health:
-		HP: 410
+		HP: 820
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -818,7 +818,7 @@ Scarab:
 	Valued:
 		Cost: 1300
 	Health:
-		HP: 133
+		HP: 233
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
@@ -846,7 +846,7 @@ SkyBike:
 	Valued:
 		Cost: 800
 	Health:
-		HP: 100
+		HP: 200
 	RevealsShroud:
 		Range: 9c0
 	Armor:
@@ -885,7 +885,7 @@ Outrider:
 	Valued:
 		Cost: 1400
 	Health:
-		HP: 200
+		HP: 400
 	RevealsShroud:
 		Range: 9c0
 	Armor:
@@ -924,7 +924,7 @@ ReconDrone:
 	Valued:
 		Cost: 400
 	Health:
-		HP: 66
+		HP: 133
 	RevealsShroud:
 		Range: 9c0
 	Armor:
@@ -951,7 +951,7 @@ Cyclone:
 	Valued:
 		Cost: 1500
 	Health:
-		HP: 150
+		HP: 300
 	RevealsShroud:
 		Range: 9c0
 	Armor:
@@ -992,7 +992,7 @@ SkyFortress:
 	Valued:
 		Cost: 2500
 	Health:
-		HP: 266
+		HP: 533
 	RevealsShroud:
 		Range: 9c0
 	Armor:

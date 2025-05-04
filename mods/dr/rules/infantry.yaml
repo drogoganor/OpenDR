@@ -78,7 +78,7 @@ Sniper:
 	Valued:
 		Cost: 700
 	Health:
-		HP: 100
+		HP: 200
 	RevealsShroud:
 		Range: 12c0
 	Mobile:
@@ -260,7 +260,7 @@ Mechanic:
 	Valued:
 		Cost: 500
 	Health:
-		HP: 66
+		HP: 150
 	RevealsShroud:
 		Range: 8c0
 	Mobile:
@@ -406,7 +406,7 @@ Exterminator:
 		Offset: 111, 64, 0
 		ZOffset: -129
 	Health:
-		HP: 75
+		HP: 150
 	-Crushable:
 	RevealsShroud:
 		Range: 8c0
@@ -434,7 +434,7 @@ Infiltrator:
 	Valued:
 		Cost: 1000
 	Health:
-		HP: 66
+		HP: 150
 	RevealsShroud:
 		Range: 9c0
 	Mobile:
