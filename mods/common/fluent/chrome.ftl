@@ -52,7 +52,6 @@ label-save-map-panel-directory = Directory:
 label-save-map-panel-filename = Filename:
 button-save-map-panel = Save
 label-actor-edit-panel-id = ID
-button-container-delete = Delete
 button-container-ok = OK
 label-tiles-bg-search = Search:
 label-bg-filter = Filter:
@@ -61,12 +60,12 @@ label-actor-bg-owner = Owner:
 label-area-selection = Area Selection
 label-area-info = Area Info
 label-selected-area-diagonal = Diagonal:
-label-selected-area-resources= Resources:
-label-copy-filters = Copy Filters
+label-selected-area-resources = Resources:
+label-selection-filters = Filters
 label-filter-terrain = Terrain
 label-filter-resources = Resources
 label-filter-actors = Actors
-label-tools-bg-categories = Tool:
+label-tool-bg-category = Tool:
 button-marker-tiles-clear-current = Clear Current
 button-marker-tiles-clear-all = Clear All
 label-marker-layer-num-sides = Number of Sides
@@ -81,25 +80,33 @@ button-map-editor-tab-container-actors-tooltip = Actors
 button-map-editor-tab-container-tools-tooltip = Tools
 button-map-editor-tab-container-history-tooltip = History
 
+button-delete-area =
+    .label = Delete
+    .tooltip = Remove everything in the selected area
+
+button-delete-actor =
+    .label = Delete
+    .tooltip = Remove the selected actor
+
 button-editor-world-root-options =
-   .label = Menu
-   .tooltip = Menu
+    .label = Menu
+    .tooltip = Menu
 
 button-editor-world-root-copy =
-   .label = Copy
-   .tooltip = Copy the selected area
+    .label = Copy
+    .tooltip = Copy the selected area
 
 button-editor-world-root-paste =
-   .label = Paste
-   .tooltip = Paste the saved area
+    .label = Paste
+    .tooltip = Paste the saved area
 
 button-editor-world-root-undo =
-   .label = Undo
-   .tooltip = Undo last step
+    .label = Undo
+    .tooltip = Undo last step
 
 button-editor-world-root-redo =
-   .label = Redo
-   .tooltip = Redo last step
+    .label = Redo
+    .tooltip = Redo last step
 
 dropdownbutton-editor-world-root-overlay-button = Overlays
 button-select-categories-buttons-all = All
@@ -119,8 +126,8 @@ button-gamesave-browser-panel-save = Save
 
 ## ingame-chat.yaml, ingame-infochat.yaml
 button-chat-chrome-mode =
-   .label = Team
-   .tooltip = Toggle chat mode
+    .label = Team
+    .tooltip = Toggle chat mode
 
 ## ingame-debug-hpf.yaml
 dropdownbutton-hpf-overlay-locomotor = Select Locomotor
@@ -156,8 +163,8 @@ label-script-error-panel-desc-b = The details of the error have been saved to lu
 label-script-error-panel-desc-c = Please send this file to the map author so that they can fix this issue.
 
 ## ingame-infostats.yaml
-label-objective-mission = Mission:
-checkbox-objective-stats = Destroy all opposition!
+label-mission-objective = Mission:
+checkbox-stats-objective = Destroy all opposition!
 label-stats-player = Player
 label-stats-faction = Faction
 label-stats-score = Score
@@ -167,15 +174,15 @@ label-stats-actions = Actions
 label-menu-buttons-title = Options
 
 ## lobby-kickdialogs.yaml
-label-kick-client-dialog-texta = You may also apply a temporary ban, preventing
-label-kick-client-dialog-textb = them from joining for the remainder of this game.
+label-kick-client-dialog-text-a = You may also apply a temporary ban, preventing
+label-kick-client-dialog-text-b = them from joining for the remainder of this game.
 checkbox-kick-client-dialog-prevent-rejoining = Temporarily Ban
 button-kick-client-dialog = Kick
 label-kick-spectators-dialog-title = Kick Spectators
 button-kick-spectators-dialog-ok = Ok
 label-force-start-dialog-title = Start Game?
-label-force-start-dialog-texta = One or more players are not yet ready.
-label-force-start-dialog-textb = Are you sure that you want to force start the game?
+label-force-start-dialog-text-a = One or more players are not yet ready.
+label-force-start-dialog-text-b = Are you sure that you want to force start the game?
 label-kick-warning-a = One or more clients are missing the selected
 label-kick-warning-b = map, and will be kicked from the server.
 button-force-start-dialog-start = Start
@@ -251,8 +258,8 @@ button-multiplayer-tabs-servers-tab = Servers
 button-server-lobby-changemap = Change Map
 
 button-lobbychat-chat-mode =
-   .label = Team
-   .tooltip = Toggle chat mode
+    .label = Team
+    .tooltip = Toggle chat mode
 
 button-server-lobby-start-game = Start Game
 button-server-lobby-disconnect = Leave Game
@@ -343,6 +350,12 @@ button-missionbrowser-panel-stop-info-video = Stop Info Video
 button-missionbrowser-panel-play = Play
 button-missionbrowser-panel-mission-info = Mission Info
 button-missionbrowser-panel-mission-options = Options
+dropdown-missionbrowser-difficulty =
+    .label = Difficulty
+    .description = The difficulty of the mission
+
+dropdown-missionbrowser-gamespeed = Speed:
+label-missionbrowser-normal-difficulty = Normal
 
 ## multiplayer-browser.yaml
 image-multiplayer-panel-password-protected-tooltip = Requires Password
@@ -454,8 +467,8 @@ checkbox-mute-sound-container = Mute Sound
 label-sound-volume-container = Sound Volume:
 
 checkbox-mute-background-music-container =
-   .label = Mute Menu Music
-   .tooltip = Mute background music when no specific track is playing
+    .label = Mute Menu Music
+    .tooltip = Mute background music when no specific track is playing
 
 label-music-title-volume-container = Music Volume:
 label-audio-device-container = Audio Device:
@@ -467,16 +480,16 @@ label-target-lines-dropdown-container = Target Lines:
 label-status-bar-dropdown-container-bars = Status Bars:
 
 checkbox-player-stance-colors-container =
-   .label = Player Relationship Colors
-   .tooltip = Change player colors based on relationship (own, enemy, ally, neutral)
+    .label = Player Relationship Colors
+    .tooltip = Change player colors based on relationship (own, enemy, ally, neutral)
 
 checkbox-ui-feedback-container =
-   .label = Show UI Feedback Notifications
-   .tooltip = Show transient text notifications for UI events
+    .label = Show UI Feedback Notifications
+    .tooltip = Show transient text notifications for UI events
 
 checkbox-transients-container =
-   .label = Show Game Event Notifications
-   .tooltip = Show transient text notifications for game events
+    .label = Show Game Event Notifications
+    .tooltip = Show transient text notifications for game events
 
 checkbox-pause-shellmap-container = Pause Menu Background
 checkbox-hide-replay-chat-container = Hide Chat in Replays
@@ -511,12 +524,12 @@ label-notices-readonly-notice = This hotkey cannot be modified
 button-hotkey-remap-dialog-override = Override
 
 button-hotkey-remap-dialog-clear =
-   .label = Clear
-   .tooltip = Unbind the hotkey
+    .label = Clear
+    .tooltip = Unbind the hotkey
 
 button-hotkey-remap-dialog-reset =
-   .label = Reset
-   .tooltip = Reset to default
+    .label = Reset
+    .tooltip = Reset to default
 
 ## settings-input.yaml
 label-zoom-modifier-container = Zoom Modifier:

@@ -17,7 +17,6 @@ notification-insufficient-enabled-spawn-points = Unable to start the game until 
 notification-malformed-command = Malformed { $command } command.
 notification-state-unchanged-ready = Cannot change state when marked as ready.
 notification-invalid-faction-selected = Invalid faction selected: { $faction }.
-notification-supported-factions = Supported values: { $factions }.
 notification-state-unchanged-game-started = State cannot be changed once the game has started ({ $command }).
 notification-requires-host = Only the host can do that.
 notification-invalid-bot-slot = Cannot add bots to a slot with another client.
@@ -205,6 +204,9 @@ label-chat-availability =
         [one] Chat available in { $seconds } second...
        *[other] Chat available in { $seconds } seconds...
     }
+
+## LobbyLogic, ServerListLogic
+label-bot-player = AI Player
 
 ## IngameMenuLogic
 menu-ingame =
@@ -804,6 +806,7 @@ notification-copied-tiles =
 
 ## EditorDefaultBrush
 notification-selected-area = Selected area { $x },{ $y } ({ $width },{ $height })
+notification-removed-area = Removed area { $x },{ $y } ({ $width },{ $height })
 notification-selected-actor = Selected actor { $id }
 notification-cleared-selection = Cleared selection
 notification-removed-actor = Removed { $name } ({ $id })
