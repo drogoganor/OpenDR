@@ -623,7 +623,7 @@
 ^Rock:
 	Inherits: ^Tree
 	RadarColorFromTerrain:
-		Terrain: actor-rock-name
+		Terrain: Rock
 	Targetable:
 		TargetTypes: Rocks
 	Tooltip:
