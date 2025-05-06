@@ -314,8 +314,10 @@ Martyr:
 		Condition: triggered
 	KillsSelf:
 		RequiresCondition: triggered
-	FireProjectilesOnDeath:
-		Weapons: SuicideNuke
+	FireWarheadsOnDeath:
+		Weapon: SuicideNuke
+		EmptyWeapon: SuicideNuke
+		DamageSource: Killer
 	WithIdleOverlay@SHADOW: # No animated shadow
 		Sequence: shadow
 
