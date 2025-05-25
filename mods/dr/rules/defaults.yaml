@@ -74,7 +74,7 @@
 	DeathSounds@NORMAL:
 		DeathTypes: DefaultDeath, BulletDeath, SmallExplosionDeath, ExplosionDeath, FireDeath, ElectricityDeath
 	Voiced:
-		VoiceSet: GenericVoice
+		VoiceSet: GenericHumanVoice
 	HitShape:
 		Type: Circle
 			Radius: 256

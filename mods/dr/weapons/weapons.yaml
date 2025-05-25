@@ -360,7 +360,7 @@ GenericExplode:
 
 Chaff: # Flack Jack
 	Inherits: ^C1
-	ReloadDelay: 42
+	ReloadDelay: 30
 	Range: 8c0
 	Report: gxflkwc0.wav
 	ValidTargets: Air
@@ -371,7 +371,7 @@ Chaff: # Flack Jack
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Air
 		Spread: 400
-		Damage: 8
+		Damage: 12
 	Warhead@3Eff: CreateEffect
 		Explosions: eochfex0
 		ValidTargets: Air, Trees
@@ -384,9 +384,9 @@ Chaff: # Flack Jack
 
 LaserRifle:
 	Inherits: ^E2
-	ReloadDelay: 22
+	ReloadDelay: 14
 	Range: 4c0
-	Report: gxlgnwc0.wav
+	Report: gxfgtwc0.wav # gxlgnwc0.wav
 	ValidTargets: Ground
 	#Projectile: LaserZap
 	#	Inaccuracy: 1c0
@@ -404,7 +404,7 @@ LaserRifle:
 		Shadow: False
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 11
+		Damage: 14
 	Warhead@3Eff: CreateEffect
 		Explosions: eolasex1
 		ValidTargets: Ground, Ship, Trees
@@ -432,7 +432,7 @@ LaserRifleOriginal:
 
 RailGun:
 	Inherits: ^E1
-	ReloadDelay: 30
+	ReloadDelay: 16
 	Range: 5c0
 	Report: gxmrcwc0.wav
 	Projectile: Bullet
@@ -448,7 +448,7 @@ RailGun:
 
 DoubleRailGun:
 	Inherits: ^E1
-	ReloadDelay: 36
+	ReloadDelay: 24
 	Range: 5c0
 	Report: gxspbwc0.wav
 	Projectile: Bullet
@@ -464,7 +464,7 @@ DoubleRailGun:
 		
 TripleRailGun:
 	Inherits: ^E1
-	ReloadDelay: 56
+	ReloadDelay: 42
 	Range: 8c0
 	Report: gxtrtwc0.wav
 	Projectile: Bullet
@@ -480,7 +480,7 @@ TripleRailGun:
 
 SkirmishGun1:
 	Inherits: ^M2
-	ReloadDelay: 56
+	ReloadDelay: 36
 	Range: 6c0
 	Burst: 2
 	BurstDelays: 9
@@ -518,7 +518,7 @@ SniperRifle:
 
 PlasmaCannon:
 	Inherits: ^E3
-	ReloadDelay: 42
+	ReloadDelay: 32
 	Range: 5c0
 	Report: gxpltwc0.wav
 	Projectile: Bullet
@@ -534,7 +534,7 @@ PlasmaCannon:
 
 PlasmaRifle: # Bion
 	Inherits: ^E3
-	ReloadDelay: 22
+	ReloadDelay: 38
 	Range: 4c0
 	Report: gxbonwc0.wav
 	ValidTargets: Air, Ground
@@ -658,7 +658,7 @@ PhaseTankCannon:
 
 LaserCannon:
 	Inherits: ^E2
-	ReloadDelay: 36
+	ReloadDelay: 24
 	Range: 6c0
 	Report: gxsttwc0.wav
 	Projectile: Bullet
@@ -763,7 +763,7 @@ BkLaser:
 
 GatLaser:
 	Inherits: ^E2
-	ReloadDelay: 8
+	ReloadDelay: 24
 	Range: 5c0
 	Report: gxfgtwc0.wav
 	ValidTargets: Ground
@@ -774,14 +774,14 @@ GatLaser:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground
 		Spread: 64
-		Damage: 10
+		Damage: 180
 	Warhead@3Eff: CreateEffect
 		Explosions: eolasex0
 		ValidTargets: Ground, Ship, Trees
 
 GatPlasma:
 	Inherits: ^E3
-	ReloadDelay: 8
+	ReloadDelay: 24
 	Range: 5c0
 	Report: gxigtwc0.wav
 	ValidTargets: Ground
@@ -792,7 +792,7 @@ GatPlasma:
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Ground
 		Spread: 64
-		Damage: 10
+		Damage: 180
 	Warhead@3Eff: CreateEffect
 		Explosions: eoplsex2
 		ValidTargets: Ground, Ship, Trees
