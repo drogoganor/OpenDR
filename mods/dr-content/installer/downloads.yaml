@@ -9,7 +9,7 @@ drdemo: DR Demo
 		^SupportDir|Content/dr/JUNGLE/JUNGLE.TIL: Dark Reign/DATA/DARK/GRAPHICS/JUNGLE/JUNGLE.TIL
 		^SupportDir|Content/dr/JUNGLE/JUNGLE.PAL: Dark Reign/DATA/DARK/GRAPHICS/JUNGLE/JUNGLE.PAL
 		^SupportDir|Content/dr/JUNGLE/SPRITES.FTG: Dark Reign/DATA/DARK/GRAPHICS/JUNGLE/SPRITES.FTG
-		^SupportDir|Content/dr/SOUNDS.FTG: Dark Reign/DATA/DARK/sndfx/SOUNDS.FTG
+		^SupportDir|Content/dr/SOUNDS.FTG: Dark Reign/DATA/DARK/SNDFX/SOUNDS.FTG
 		^SupportDir|Content/dr/shell/SOUNDS.FTG: Dark Reign/DATA/DARK/SHELL/SOUNDS.FTG
 		^SupportDir|Content/dr/mouse.crs: Dark Reign/DATA/DARK/GRAPHICS/INTFACE/MOUSE.CRS
 drauranext: Auran Extra Content
