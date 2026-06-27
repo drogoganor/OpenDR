@@ -12,7 +12,6 @@
 	Building:
 		Dimensions: 1,1
 		Footprint: =
-	AlwaysVisible:
 	MapEditorData:
 		Categories: Resources
 

@@ -3,7 +3,6 @@ mpspawn:
 	Interactable:
 	EditorOnlyTooltip:
 		Name: actor-mpspawn-name
-	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
 	WithSpriteBody:
@@ -17,7 +16,6 @@ waypoint:
 	Interactable:
 	EditorOnlyTooltip:
 		Name: actor-waypoint-name
-	AlwaysVisible:
 	Immobile:
 		OccupiesSpace: false
 	WithSpriteBody:
@@ -42,7 +40,6 @@ detonationspy:
 	Interactable:
 	WithSpriteBody:
 	QuantizeFacingsFromSequence:
-	AlwaysVisible:
 	BodyOrientation:
 	Mobile:
 		Speed: 96
@@ -68,7 +65,6 @@ temporalriftspewer:
 	Interactable:
 	WithSpriteBody:
 	QuantizeFacingsFromSequence:
-	AlwaysVisible:
 	BodyOrientation:
 	Mobile:
 		Speed: 96
