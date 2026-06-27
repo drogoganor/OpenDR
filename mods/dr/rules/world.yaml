@@ -154,12 +154,12 @@ World:
 				ResourceIndex: 1
 				TerrainType: Clear
 				AllowedTerrainTypes: Clear, Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase
-				MaxDensity: 9000000
+				MaxDensity: 255 # 9000000
 			Taelon:
 				ResourceIndex: 2
 				TerrainType: Clear
 				AllowedTerrainTypes: Clear, Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase
-				MaxDensity: 9000000
+				MaxDensity: 255 # 9000000
 	ColorPickerManager:
 		PreviewActor: freighter.colorpicker
 		PresetColors: F21818, F2BC18, DAF218, 18F26F, 18BEF2, 1821F2, BA18F2, F218BC, F29191, F2DF79, CDF291, 79F2BF, 91DBF2, 7997F2, CD91F2, F279E6
@@ -183,12 +183,12 @@ EditorWorld:
 				ResourceIndex: 1
 				TerrainType: Clear
 				AllowedTerrainTypes: Clear, Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase
-				MaxDensity: 9000000
+				MaxDensity: 255 # 9000000
 			Taelon:
 				ResourceIndex: 2
 				TerrainType: Clear
 				AllowedTerrainTypes: Clear, Normal2, Normal3, Muddy1, Muddy2, Rough1, Rough2, Road, RoadBase
-				MaxDensity: 9000000
+				MaxDensity: 255 # 9000000
 	LoadWidgetAtGameStart:
 	EditorActionManager:
 	BuildableTerrainOverlay:

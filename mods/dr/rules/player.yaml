@@ -50,9 +50,11 @@ Player:
 		TextNotification: notification-low-power
 	AllyRepair:
 	FrozenActorLayer:
-	BaseAttackNotifier:
+	DamageNotifier:
 		TextNotification: notification-base-under-attack
 		AllyTextNotification: notification-ally-under-attack
+		ValidTargets: BaseBuilding
+		Notification: BaseAttack
 	PlayerStatistics:
 	PlaceBeacon:
 	ProvidesTechPrerequisite@infonly:
