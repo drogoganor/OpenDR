@@ -330,6 +330,12 @@ observer-scrollitem-highlighted:
 observer-scrollitem-hover:
 	Inherits: observer-scrollpanel-button
 
+observer-scrollitem-pressed:
+	Inherits: observer-scrollpanel-button
+
+observer-scrollitem-highlighted:
+	Inherits: observer-scrollpanel-button-pressed
+
 # Used for the main menu frame
 dialog:
 	Inherits: ^Dialog
@@ -547,7 +553,7 @@ checkmark-tick:
 		unchecked: 0, 0, 0, 0
 		unchecked-pressed: 204, 0, 16, 16
 
-checkmark-highlighted-tick:
+checkmark-tick-highlighted:
 	Inherits: checkmark-tick
 
 checkmark-cross:
@@ -558,8 +564,19 @@ checkmark-cross:
 		unchecked: 0, 0, 0, 0
 		unchecked-pressed: 238, 0, 16, 16
 
-checkmark-highlighted-cross:
+checkmark-cross-highlighted:
 	Inherits: checkmark-cross
+
+checkmark-mute:
+	Inherits: ^Glyphs
+	Regions:
+		unchecked: 0, 170, 16, 16
+		unchecked-pressed: 17, 170, 16, 16
+		checked: 17, 170, 16, 16
+		checked-pressed: 0, 170, 16, 16
+
+checkmark-mute-highlighted:
+	Inherits: checkmark-mute
 
 checkbox-hover:
 	Inherits: ^Dialog
@@ -604,6 +621,9 @@ checkbox-toggle-highlighted-pressed:
 scrollitem:
 
 scrollitem-hover:
+	Inherits: button
+
+scrollitem-pressed:
 	Inherits: button
 
 scrollitem-highlighted:
@@ -674,3 +694,7 @@ editor:
 		tools: 136, 68, 16, 16
 		history: 136, 51, 16, 16
 		erase: 50, 187, 16, 16
+		copy: 67, 187, 16, 16
+		paste: 84, 187, 16, 16
+		undo: 101, 187, 16, 16
+		redo: 118, 187, 16, 16
