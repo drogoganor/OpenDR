@@ -38,7 +38,7 @@ label-credits-title = Credits
 
 ## editor.yaml
 label-new-map-bg-title = New Map
-label-new-map-bg-tileset = Tileset:
+label-new-map-bg-tileset = Environment:
 label-new-map-bg-width = Width:
 label-new-map-bg-height = Height:
 button-new-map-bg-create = Create
@@ -72,6 +72,17 @@ label-marker-layer-num-sides = Number of Sides
 label-marker-alpha = Tile Alpha
 label-marker-mirror-mode = Mirror Mode
 label-marker-axis-angle = Axis Angle
+button-map-generator-generate = Generate
+button-map-generator-generate-random = Generate Random
+label-tiling-path-type-start = Start type
+label-tiling-path-type-inner = Inner type
+label-tiling-path-type-end = End type
+label-tiling-path-deviation = Deviation limit
+checkbox-tiling-path-closed-loops = Loops use only inner types
+button-tiling-path-reverse = Reverse path
+button-tiling-path-reset = Discard path
+button-tiling-path-randomize = Re-randomize tiling
+button-tiling-path-paint = Paint tiling to map
 
 button-map-editor-tab-container-select-tooltip = Selection
 button-map-editor-tab-container-tiles-tooltip = Tiles
@@ -92,27 +103,20 @@ button-editor-world-root-options =
     .label = Menu
     .tooltip = Menu
 
-button-editor-world-root-copy =
-    .label = Copy
-    .tooltip = Copy the selected area
+button-editor-world-root-copy-tooltip = Copy the selected area
 
-button-editor-world-root-paste =
-    .label = Paste
-    .tooltip = Paste the saved area
+button-editor-world-root-paste-tooltip = Paste the saved area
 
-button-editor-world-root-undo =
-    .label = Undo
-    .tooltip = Undo last step
+button-editor-world-root-undo-tooltip = Undo last step
 
-button-editor-world-root-redo =
-    .label = Redo
-    .tooltip = Redo last step
+button-editor-world-root-redo-tooltip = Redo last step
 
 dropdownbutton-editor-world-root-overlay-button = Overlays
 button-select-categories-buttons-all = All
 button-select-categories-buttons-none = None
 
 label-tool-marker-tiles = Marker Tiles
+label-tool-tiling-path = Path Tiler
 
 ## gamesave-browser.yaml
 label-gamesave-browser-panel-load-title = Load game
@@ -191,6 +195,7 @@ button-force-start-dialog-start = Start
 label-map-incompatible-status-a = This map is not compatible
 label-map-incompatible-status-b = with this version of OpenRA
 label-map-validating-status = Validating...
+label-map-generating-status = Generating...
 button-map-download-available-install = Install Map
 button-map-preview-update = Update Map
 button-map-update-download-available-install = Install Map
@@ -215,6 +220,145 @@ label-container-title = Track
 label-no-music-title = Music Not Installed
 label-no-music-desc-a = The game music can be installed
 label-no-music-desc-b = from the "Manage Content" menu.
+
+## ingame-observer.yaml
+button-replay-pause-tooltip = Pause
+button-replay-play-tooltip = Play
+
+button-replay-slow =
+    .tooltip = Slow speed
+    .label = 50%
+
+button-replay-regular =
+    .tooltip = Regular speed
+    .label = 100%
+
+button-replay-fast =
+    .tooltip = Fast speed
+    .label = 200%
+
+button-replay-maximum =
+    .tooltip = Maximum speed
+    .label = MAX
+
+label-basic-stats-player-header = Player
+label-basic-stats-cash-header = Cash
+label-basic-stats-power-header = Power
+label-basic-stats-kills-header = Kills
+label-basic-stats-deaths-header = Deaths
+label-basic-stats-assets-destroyed-header = Destroyed
+label-basic-stats-assets-lost-header = Lost
+label-basic-stats-experience-header = Score
+label-basic-stats-actions-min-header = APM
+label-economy-stats-player-header = Player
+label-economy-stats-cash-header = Cash
+label-economy-stats-income-header = Income
+label-economy-stats-assets-header = Assets
+label-economy-stats-earned-header = Earned
+label-economy-stats-spent-header = Spent
+label-production-stats-player-header = Player
+label-production-stats-header = Production
+label-support-powers-player-header = Player
+label-support-powers-header = Support Powers
+label-army-player-header = Player
+label-army-header = Army
+label-combat-stats-player-header = Player
+label-combat-stats-assets-destroyed-header = Destroyed
+label-combat-stats-assets-lost-header = Lost
+label-combat-stats-units-killed-header = U. Killed
+label-combat-stats-units-dead-header = U. Lost
+label-combat-stats-buildings-killed-header = B. Killed
+label-combat-stats-buildings-dead-header = B. Lost
+label-combat-stats-army-value-header = Army Value
+label-combat-stats-vision-header = Vision
+
+## ingame-observer.yaml, ingame-player.yaml
+label-mute-indicator = Audio Muted
+button-top-buttons-options-tooltip = Options
+
+## ingame-player.yaml
+supportpowers-support-powers-palette =
+    .ready = READY
+    .hold = ON HOLD
+
+button-command-bar-attack-move =
+    .tooltip = Attack Move
+    .tooltipdesc =
+    Selected units will move to the desired location
+    and attack any enemies they encounter en route.
+
+    Hold <(Ctrl)> while targeting to order an Assault Move
+    that attacks any units or structures encountered en route.
+
+    Left-click icon then right-click on target location.
+
+button-command-bar-guard =
+    .tooltip = Guard
+    .tooltipdesc =
+    Selected units will follow the targeted unit.
+
+    Left-click icon then right-click on target unit.
+
+button-command-bar-scatter =
+    .tooltip = Scatter
+    .tooltipdesc =
+    Selected units will stop their current activity
+    and move to a nearby location.
+
+    Acts immediately on selected units.
+
+button-command-bar-stop =
+    .tooltip = Stop
+    .tooltipdesc =
+    Selected units will stop their current activity.
+    Selected buildings will reset their rally point.
+
+    Acts immediately on selected targets.
+
+button-command-bar-queue-orders =
+    .tooltip = Waypoint Mode
+    .tooltipdesc =
+    Use Waypoint Mode to give multiple linking commands
+    to the selected units. Units will execute the commands
+    immediately upon receiving them.
+
+    Left-click icon then give commands in the game world.
+    Hold <(Shift)> to activate temporarily while commanding units.
+
+button-stance-bar-attackanything =
+    .tooltip = Attack Anything Stance
+    .tooltipdesc =
+    Set the selected units to Attack Anything stance:
+     - Units will attack enemy units and structures on sight
+     - Units will pursue attackers across the battlefield
+
+button-stance-bar-defend =
+    .tooltip = Defend Stance
+    .tooltipdesc =
+    Set the selected units to Defend stance:
+     - Units will attack enemy units on sight
+     - Units will not move or pursue enemies
+
+button-stance-bar-returnfire =
+    .tooltip = Return Fire Stance
+    .tooltipdesc =
+    Set the selected units to Return Fire stance:
+     - Units will retaliate against enemies that attack them
+     - Units will not move or pursue enemies
+
+button-stance-bar-holdfire =
+    .tooltip = Hold Fire Stance
+    .tooltipdesc =
+    Set the selected units to Hold Fire stance:
+     - Units will not fire upon enemies
+     - Units will not move or pursue enemies
+
+productionpalette-sidebar-production-palette =
+    .ready = READY
+    .hold = ON HOLD
+
+button-production-types-scroll-up-tooltip = Scroll up
+button-production-types-scroll-down-tooltip = Scroll down
 
 ## lobby-options.yaml
 label-lobby-options-bin-title = Map Options
@@ -273,7 +417,7 @@ label-mainmenu-system-info-prompt-text-a = We would like to collect some system 
 label-mainmenu-system-info-prompt-text-b = With your permission, the following anonymous data will be sent each game launch:
 checkbox-mainmenu-system-info-prompt-sysinfo = Send System Information
 
-## mainmenu-prompts.yaml, settings-display.yaml
+## mainmenu-prompts.yaml, settings-display.yaml, settings-gameplay.yaml
 label-profile-section-header = Profile
 label-player-container = Player Name:
 label-playercolor-container-color = Preferred Color:
@@ -287,6 +431,7 @@ label-input-section-header = Input
 label-mouse-control-container = Control Scheme:
 label-mouse-control-desc-classic-selection = - Select units using the <Left> mouse button
 label-mouse-control-desc-classic-commands = - Command units using the <Left> mouse button
+label-mouse-control-desc-classic-orders = - Confirm orders using the <Left> mouse button
 label-mouse-control-desc-classic-buildings = - Place structures using the <Left> mouse button
 label-mouse-control-desc-classic-support = - Target support powers using the <Left> mouse button
 label-mouse-control-desc-classic-zoom = - Zoom the battlefield using the <Scroll Wheel>
@@ -294,8 +439,19 @@ label-mouse-control-desc-classic-zoom-modifier = - Zoom the battlefield using <M
 label-mouse-control-desc-classic-scroll-right = - Pan the battlefield using the <Right> mouse button
 label-mouse-control-desc-classic-scroll-middle = - Pan the battlefield using the <Middle> mouse button
 label-mouse-control-desc-classic-edgescroll = or by moving the cursor to the edge of the screen
+label-mouse-control-desc-otherrts-selection = - Select units using the <Left> mouse button
+label-mouse-control-desc-otherrts-commands = - Command units using the <Right> mouse button
+label-mouse-control-desc-otherrts-orders = - Confirm orders using the <Left> mouse button
+label-mouse-control-desc-otherrts-buildings = - Place structures using the <Left> mouse button
+label-mouse-control-desc-otherrts-support = - Target support powers using the <Left> mouse button
+label-mouse-control-desc-otherrts-zoom = - Zoom the battlefield using the <Scroll Wheel>
+label-mouse-control-desc-otherrts-zoom-modifier = - Zoom the battlefield using <MODIFIER + Scroll Wheel>
+label-mouse-control-desc-otherrts-scroll-right = - Pan the battlefield using the <Right> mouse button
+label-mouse-control-desc-otherrts-scroll-middle = - Pan the battlefield using the <Middle> mouse button
+label-mouse-control-desc-otherrts-edgescroll = or by moving the cursor to the edge of the screen
 label-mouse-control-desc-modern-selection = - Select units using the <Left> mouse button
 label-mouse-control-desc-modern-commands = - Command units using the <Right> mouse button
+label-mouse-control-desc-modern-orders = - Confirm orders using the <Right> mouse button
 label-mouse-control-desc-modern-buildings = - Place structures using the <Left> mouse button
 label-mouse-control-desc-modern-support = - Target support powers using the <Left> mouse button
 label-mouse-control-desc-modern-zoom = - Zoom the battlefield using the <Scroll Wheel>
@@ -331,9 +487,6 @@ button-settings-title = Settings
 
 ## map-chooser.yaml
 label-mapchooser-panel-title = Choose Map
-button-mapchooser-panel-system-maps-tab = Official Maps
-button-mapchooser-panel-remote-maps-tab = Server Maps
-button-mapchooser-panel-user-maps-tab = Custom Maps
 label-filter-order-controls-desc = Filter:
 label-filter-order-controls-desc-joiner = in
 label-filter-order-controls-orderby = Order by:
@@ -341,6 +494,14 @@ button-mapchooser-panel-randommap = Random Map
 button-mapchooser-panel-delete-map = Delete Map
 button-mapchooser-panel-delete-all-maps = Delete All Maps
 button-mapchooser-panel-ok = Ok
+
+label-mapchooser-random-map-title = Random Map
+label-mapchooser-random-map-generating = Generating...
+label-mapchooser-random-map-error = Map Generation Failed
+button-mapchooser-random-map-generate = Generate
+label-mapchooser-random-map-tileset = Environment:
+label-mapchooser-random-map-size = Map Size:
+label-mapchooser-random-map-error-desc = Adjust the settings or try again.
 
 ## missionbrowser.yaml
 button-missionbrowser-panel-start-briefing-video = Watch Briefing
@@ -475,6 +636,12 @@ label-audio-device-container = Audio Device:
 label-video-volume-container = Video Volume:
 label-restart-required-container-audio-desc = Device changes will be applied after the game is restarted
 
+## settings-gameplay.yaml
+label-gameplay-section-header = Gameplay
+label-auto-save-interval = Auto-save frequency:
+label-auto-save-max-file-number = Auto-save limit:
+checkbox-hide-replay-chat-container = Hide Chat in Replays
+
 ## settings-display.yaml
 label-target-lines-dropdown-container = Target Lines:
 label-status-bar-dropdown-container-bars = Status Bars:
@@ -492,7 +659,6 @@ checkbox-transients-container =
     .tooltip = Show transient text notifications for game events
 
 checkbox-pause-shellmap-container = Pause Menu Background
-checkbox-hide-replay-chat-container = Hide Chat in Replays
 label-video-section-header = Video
 label-video-mode-dropdown-container = Video Mode:
 dropdownbutton-video-mode-dropdown-container = Windowed
@@ -542,6 +708,12 @@ label-ui-scrollspeed-slider-container-scroll-speed = UI Scroll Speed:
 
 ## settings.yaml
 button-settings-panel-reset = Reset
+button-panel-gameplay = Gameplay
+button-panel-input = Input
+button-panel-display = Display
+button-panel-audio = Audio
+button-panel-hotkeys = Hotkeys
+button-panel-advanced = Advanced
 
 ## tooltips.yaml
 label-latency-tooltip-prefix = Latency:

@@ -102,6 +102,23 @@ Container@MAP_PREVIEW:
 					Width: PARENT_WIDTH
 					Height: 25
 					Indeterminate: True
+		Container@MAP_GENERATING:
+			Width: PARENT_WIDTH
+			Height: PARENT_HEIGHT
+			Children:
+				Label@MAP_STATUS_GENERATING:
+					Y: 174
+					Width: PARENT_WIDTH
+					Height: 25
+					Font: Tiny
+					Align: Center
+					Text: label-map-generating-status
+					IgnoreMouseOver: true
+				ProgressBar@MAP_GENERATING_BAR:
+					Y: 194
+					Width: PARENT_WIDTH
+					Height: 25
+					Indeterminate: True
 		Container@MAP_DOWNLOAD_AVAILABLE:
 			Width: PARENT_WIDTH
 			Height: PARENT_HEIGHT

@@ -29,7 +29,6 @@ notification-unknown-map = Map was not found on server.
 notification-searching-map = Searching for map on the Resource Center...
 notification-admin-change-configuration = Only the host can change the configuration.
 notification-changed-map = { $player } changed the map to { $map }.
-notification-option-changed = { $player } changed { $name } to { $value }.
 notification-you-were-kicked = You have been kicked from the server.
 notification-admin-kicked = { $admin } kicked { $player } from the server.
 notification-kicked = { $player } was kicked from the server.
@@ -57,7 +56,6 @@ notification-you-were-banned = You have been banned from the server.
 notification-you-were-temp-banned = You have been temporarily banned from the server.
 notification-game-full = The game is full.
 notification-new-admin = { $player } is now the admin.
-notification-option-locked = { $option } cannot be changed.
 notification-invalid-configuration-command = Invalid configuration command.
 notification-admin-option = Only the host can set that option.
 notification-error-number-teams = Could not parse the number of teams: { $raw }.
@@ -82,9 +80,6 @@ notification-blacklisted-server-name = Server name contains a blacklisted word.
 notification-requires-authentication = Server requires players to have an OpenRA forum account.
 notification-no-permission-to-join = You do not have permission to join this server.
 notification-slot-closed = Your slot was closed by the host.
-
-## LobbySettingsNotification
-notification-lobby-option = { $name }: { $value }.
 
 ## ServerOrders, UnitOrders
 notification-joined = { $player } has joined the game.
@@ -165,7 +160,6 @@ label-mission-accomplished = Accomplished
 label-mission-failed = Failed
 
 ## GameInfoStatsLogic
-label-client-state-disconnected = Gone
 label-mute-player = Mute this player
 label-unmute-player = Unmute this player
 button-kick-player = Kick this player
@@ -207,6 +201,10 @@ label-chat-availability =
 
 ## LobbyLogic, ServerListLogic
 label-bot-player = AI Player
+
+## LobbyLogic
+notification-lobby-option = { $name }: { $value }.
+notification-lobby-option-changed = { $name } changed to { $value }.
 
 ## IngameMenuLogic
 menu-ingame =
@@ -295,40 +293,6 @@ options-observer-stats =
 ## WorldTooltipLogic
 label-unrevealed-terrain = Unrevealed Terrain
 
-## DownloadPackageLogic
-label-downloading = Downloading { $title }
-label-fetching-mirror-list = Fetching list of mirrors...
-label-downloading-from = Downloading from { $host } { $received } { $suffix }
-label-downloading-from-progress = Downloading from { $host } { $received } / { $total } { $suffix } ({ $progress }%)
-label-unknown-host = unknown host
-label-download-failed = Download failed
-label-verifying-archive = Verifying archive...
-label-archive-validation-failed = Archive validation failed
-label-extracting-archive = Extracting...
-label-extracting-archive-entry = Extracting { $entry }
-label-archive-extraction-failed = Archive extraction failed
-label-mirror-selection-failed = Online mirror is not available. Please install from an original disc.
-
-## InstallFromSourceLogic
-label-detecting-sources = Detecting drives
-label-checking-sources = Checking Sources
-label-searching-source-for = Searching for { $title }
-label-content-package-installation = Select which content packages you want to install:
-label-game-sources = Game Sources
-label-digital-installs = Digital Installs
-label-game-content-not-found = Game Content Not Found
-label-alternative-content-sources = Please insert or install one of the following content sources:
-label-installing-content = Installing Content
-label-copying-filename = Copying { $filename }
-label-copying-filename-progress = Copying { $filename } ({ $progress }%)
-label-installation-failed = Installation Failed
-label-check-install-log = Refer to install.log in the logs directory for details.
-label-extracting-filename = Extracting { $filename }
-label-extracting-filename-progress = Extracting { $filename } ({ $progress }%)
-
-## ModContentLogic
-button-manual-install = Manual Install
-
 ## KickClientLogic
 dialog-kick-client =
     .prompt = Kick { $player }?
@@ -410,6 +374,22 @@ label-original-notice = The default is "{ $key }"
 label-duplicate-notice = This is already used for "{ $key }" in the { $context } context
 hotkey-context-any = Any
 
+## GameplaySettingsLogic
+auto-save-interval =
+    .disabled = Disabled
+    .options =
+        { $seconds ->
+            [one] 1 second
+           *[other] { $seconds } seconds
+        }
+    .minute-options =
+        { $minutes ->
+            [one] 1 minute
+           *[other] { $minutes } minutes
+        }
+
+auto-save-max-file-number = { $saves } saves
+
 ## InputSettingsLogic
 options-mouse-scroll-type =
     .disabled = Disabled
@@ -421,6 +401,7 @@ options-mouse-scroll-type =
 options-control-scheme =
     .classic = Classic
     .modern = Modern
+    .otherrts = Other RTS
 
 ## SettingsLogic
 dialog-settings-save =
@@ -496,10 +477,10 @@ label-player-count =
         [one] { $players } Player
        *[other] { $players } Players
     }
-label-map-size-huge = (Huge)
-label-map-size-large = (Large)
-label-map-size-medium = (Medium)
-label-map-size-small = (Small)
+label-map-size-huge = Huge
+label-map-size-large = Large
+label-map-size-medium = Medium
+label-map-size-small = Small
 label-map-searching-count =
     { $count ->
         [one] Searching the OpenRA Resource Center for { $count } map...
@@ -529,11 +510,17 @@ options-order-maps =
     .date = Date
     .size = Size
 
+button-mapchooser-system-maps-tab = Official Maps
+button-mapchooser-remote-maps-tab = Server Maps
+button-mapchooser-user-maps-tab = Custom Maps
+button-mapchooser-generated-maps-tab = Generate Map
+
 ## MissionBrowserLogic
 dialog-no-video =
     .title = Video not installed
-    .prompt = The game videos can be installed from the
-    "Manage Content" menu in the mod chooser.
+    .prompt =
+        The game videos can be installed from the
+        "Manage Content" menu.
     .cancel = Back
 
 dialog-cant-play-video =
@@ -762,9 +749,6 @@ description-custom-terrain-debug-overlay = toggles the custom terrain debug over
 ## CellTriggerOverlay
 description-cell-triggers-overlay = toggles the script triggers overlay.
 
-## ExitsDebugOverlay
-description-exits-overlay = Displays exits for factories.
-
 ## HierarchicalPathFinderOverlay
 description-hpf-debug-overlay = toggles the hierarchical pathfinder overlay.
 
@@ -773,6 +757,9 @@ description-path-debug-overlay = toggles a visualization of path searching.
 
 ## TerrainGeometryOverlay
 description-terrain-geometry-overlay = toggles the terrain geometry overlay.
+
+## ActorMapOverlay
+description-actor-map-overlay = toggles the actor map overlay.
 
 ## MapOptions, MissionBrowserLogic
 options-game-speed =
@@ -798,11 +785,9 @@ notification-time-limit-expired = Time limit has expired.
 notification-added-actor = Added { $name } ({ $id })
 
 ## EditorCopyPasteBrush
-notification-copied-tiles =
-    { $amount ->
-       [one] Copied one tile
-      *[other] Copied { $amount } tiles
-    }
+notification-copied-tiles = Copied { $tiles } tiles
+notification-copied-actors = Copied { $actors } actors
+notification-copied-tiles-actors = Copied { $tiles } tiles and { $actors } actors
 
 ## EditorDefaultBrush
 notification-selected-area = Selected area { $x },{ $y } ({ $width },{ $height })
@@ -815,9 +800,9 @@ notification-moved-actor = Moved { $id } from { $x1 },{ $y1 } to { $x2 },{ $y2 }
 
 ## EditorResourceBrush
 notification-added-resource =
-    { $amount ->
+    { $count ->
        [one] Added one cell of { $type }
-      *[other] Added { $amount } cells of { $type }
+      *[other] Added { $count } cells of { $type }
     }
 
 ## EditorTileBrush
@@ -825,18 +810,31 @@ notification-added-tile = Added tile { $id }
 notification-filled-tile = Filled with tile { $id }
 
 ## EditorMarkerLayerBrush
+notification-added-marker-tiles-markers =
+    .red = red
+    .orange = orange
+    .yellow = yellow
+    .green = green
+    .cyan = cyan
+    .blue = blue
+    .purple = purple
+    .magenta = magenta
 notification-added-marker-tiles =
-    { $amount ->
-       [one] Added one marker tile of type { $type }
-      *[other] Added { $amount } marker tiles of type { $type }
+    { $count ->
+       [one] Added { $type } marker tile
+      *[other] Added { $count } { $type } marker tiles
     }
 notification-removed-marker-tiles =
-    { $amount ->
-       [one] Removed one marker tile
-      *[other] Removed { $amount } marker tiles
+    { $count ->
+       [one] Removed marker tile
+      *[other] Removed { $count } marker tiles
     }
-notification-cleared-selected-marker-tiles = Cleared { $amount } marker tiles of type { $type }
-notification-cleared-all-marker-tiles = Cleared { $amount } marker tiles
+notification-cleared-selected-marker-tiles =
+    { $count ->
+       [one] Cleared { $type } marker tile
+      *[other] Cleared { $count } { $type } marker tiles
+    }
+notification-cleared-all-marker-tiles = Cleared { $count } marker tiles
 
 ## EditorActionManager
 notification-opened = Opened
@@ -859,12 +857,10 @@ notification-player-is-defeated = { $player } is defeated.
 notification-desync-compare-logs = Out of sync in frame { $frame }.
     Compare syncreport.log with other players.
 
-## SupportPowerTimerWidget
-support-power-timer = { $player }'s { $support-power }: { $time }
-
 ## WidgetUtils
 label-win-state-won = Won
 label-win-state-lost = Lost
+label-client-state-disconnected = Gone
 
 ## Player
 enumerated-bot-name =
@@ -1122,3 +1118,17 @@ keycode =
     .sleep = Sleep
     .mouse4 = Mouse 4
     .mouse5 = Mouse 5
+
+## MapGeneratorToolLogic
+notification-map-generator-generated = Generated using { $name }
+
+dialog-notification-map-generator-failed =
+    .title = Map generation failed
+    .prompt = See debug.log for details.
+    .cancel = Dismiss
+
+## EditorTilingPathBrush
+notification-tiling-path-started = Started tiling path
+notification-tiling-path-updated = Updated tiling path
+notification-tiling-path-reset = Discarded tiling path
+notification-tiling-path-painted = Painted tiling path
