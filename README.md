@@ -28,7 +28,6 @@ When running OpenRA.Utility, set the environment variables to the following:
 * [OpenRA](http://www.openra.net/) and associates
 * IceReaper and friends for [KKnD](https://www.kknd-game.com/) and [PixelMagic](https://eiveo.net/pixelmagic.html)
 * Nolt and friends for [Shattered Paradise](https://www.moddb.com/mods/shattered-paradise/downloads)
-* Nolt and friends for [Shattered Paradise](https://www.moddb.com/mods/shattered-paradise/downloads)
 * dr_zaphod for readspr.c
 * btigi for [drExplorer](https://github.com/btigi/drExplorer)
 * My family and friends
