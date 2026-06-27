@@ -435,7 +435,6 @@ Container@PLAYER_WIDGETS:
 					Width: 86
 					Height: 16
 					Bar: progressbar-power
-
 		Container@SIDEBAR_BACKGROUND: # Unit main panel?
 			X: WINDOW_WIDTH - 250
 			Y: 320

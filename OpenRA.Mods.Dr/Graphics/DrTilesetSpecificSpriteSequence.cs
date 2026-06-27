@@ -19,9 +19,6 @@ namespace OpenRA.Mods.Dr.Graphics
 {
 	public class DrTilesetSpecificSpriteSequenceLoader : DrSpriteSequenceLoader
 	{
-		public DrTilesetSpecificSpriteSequenceLoader(ModData modData)
-			: base(modData) { }
-
 		public override ISpriteSequence CreateSequence(ModData modData, string tileSet, SpriteCache cache, string image, string sequence,
 			MiniYaml data, MiniYaml defaults)
 		{
