@@ -106,7 +106,8 @@ namespace OpenRA.Mods.Dr.Terrain
 				.Select(n => (TerrainTemplateInfo)new DefaultTerrainTemplateInfo(this, n.Value))
 				.ToImmutableArray();
 			Templates = TemplatesInDefinitionOrder
-				.Take(NumTemplatesVisibleInEditor)
+
+				// .Take(NumTemplatesVisibleInEditor)
 				.ToFrozenDictionary(t => t.Id);
 
 			EdgeTemplates = TemplatesInDefinitionOrder

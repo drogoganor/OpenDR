@@ -1,6 +1,6 @@
 Metadata:
 	Title: mod-title
-	Version: release-20250330
+	Version: playtest-20260222
 	Website: https://github.com/drogoganor/OpenDR
 	WebIcon32: https://www.drogoganor.net/dr/dr_32x32.png
 	WindowTitle: mod-windowtitle
@@ -50,7 +50,7 @@ FileSystem: ContentInstallerFileSystem
 
 MapFolders:
 	dr|maps: System
-	~^SupportDir|maps/dr/playtest-20241116: User
+	~^SupportDir|maps/dr/playtest-20260222: User
 
 Rules:
 	dr|rules/palettes.yaml
@@ -134,24 +134,21 @@ ChromeLayout:
 	common|chrome/ingame-infostats.yaml
 	common|chrome/ingame-info-lobby-options.yaml
 	common|chrome/ingame-menu.yaml
-	common|chrome/mainmenu.yaml
-	#dr|chrome/mainmenu.yaml
-	dr|chrome/ingame-player.yaml
 	dr|chrome/ingame-observer.yaml
-	#dr|chrome/color-picker.yaml
-	#dr|chrome/mainmenu-prerelease-notification.yaml
+	dr|chrome/ingame-player.yaml
 	common|chrome/ingame-perf.yaml
 	common|chrome/ingame-debug.yaml
 	common|chrome/ingame-debug-hpf.yaml
 	common|chrome/ingame-debuginfo.yaml
 	common|chrome/ingame-infochat.yaml
-	#common|chrome/mainmenu.yaml
+	common|chrome/mainmenu.yaml
 	common|chrome/mainmenu-prompts.yaml
 	common|chrome/settings.yaml
 	common|chrome/settings-display.yaml
 	common|chrome/settings-audio.yaml
 	common|chrome/settings-input.yaml
 	common|chrome/settings-hotkeys.yaml
+	common|chrome/settings-gameplay.yaml
 	common|chrome/settings-advanced.yaml
 	common|chrome/credits.yaml
 	common|chrome/lobby.yaml
@@ -170,6 +167,7 @@ ChromeLayout:
 	common|chrome/connection.yaml
 	common|chrome/replaybrowser.yaml
 	common|chrome/gamesave-browser.yaml
+	#common|chrome/load-game-browser.yaml
 	dr|chrome/gamesave-loading.yaml
 	common|chrome/dropdowns.yaml
 	common|chrome/musicplayer.yaml
@@ -184,6 +182,7 @@ ChromeLayout:
 FluentMessages:
 	common|fluent/common.ftl
 	common|fluent/chrome.ftl
+	#common|fluent/ingame-debug.ftl
 	common|fluent/hotkeys.ftl
 	common|fluent/rules.ftl
 	dr|fluent/dr.ftl
@@ -228,7 +227,6 @@ ServerTraits:
 	SkirmishLogic
 	PlayerPinger
 	MasterServerPinger
-	LobbySettingsNotification
 
 ChromeMetrics:
 	common|metrics.yaml
@@ -236,37 +234,37 @@ ChromeMetrics:
 
 Fonts:
 	Tiny:
-		Font: common|FreeSansBold.ttf
-		Size: 9
-		Ascender: 7
+		Font: common|FreeSans.ttf
+		Size: 10
+		Ascender: 8
 	TinyBold:
-		Font: common|FreeSansBold.ttf
-		Size: 9
-		Ascender: 7
-	Small:
 		Font: common|FreeSansBold.ttf
 		Size: 10
 		Ascender: 8
-	MediumBold:
-		Font: common|FreeSansBold.ttf
-		Size: 11
-		Ascender: 8
-	Regular:
-		Font: common|FreeSansBold.ttf
+	Small:
+		Font: common|FreeSans.ttf
 		Size: 12
 		Ascender: 9
+	Regular:
+		Font: common|FreeSans.ttf
+		Size: 14
+		Ascender: 11
 	Bold:
 		Font: common|FreeSansBold.ttf
 		Size: 14
 		Ascender: 11
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size: 18
+		Ascender: 14
 	BigBold:
 		Font: common|FreeSansBold.ttf
 		Size: 24
 		Ascender: 18
 	Title:
 		Font: common|FreeSansBold.ttf
-		Size: 32
-		Ascender: 24
+		Size: 48
+		Ascender: 26
 
 Missions:
 	dr|missions.yaml
