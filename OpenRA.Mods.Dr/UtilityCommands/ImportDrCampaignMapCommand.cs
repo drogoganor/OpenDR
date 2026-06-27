@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Globalization;
 using System.Linq;
 using OpenRA.Mods.Dr.FileFormats;
@@ -122,8 +123,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						Name = sideIndex.ToString(CultureInfo.InvariantCulture),
 						Faction = nameFactionDict.Values.ToArray()[sideIndex],
 						Color = factionColors[sideIndex],
-						Enemies = enemyIndices.Select(x => x.ToString(CultureInfo.InvariantCulture)).ToArray(),
-						Allies = allyIndices.Select(x => x.ToString(CultureInfo.InvariantCulture)).ToArray(),
+						Enemies = enemyIndices.Select(x => x.ToString(CultureInfo.InvariantCulture)).ToImmutableArray(),
+						Allies = allyIndices.Select(x => x.ToString(CultureInfo.InvariantCulture)).ToImmutableArray(),
 					};
 
 					if (teamIndex == 0)
@@ -187,8 +188,8 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 						enemyNames.Add(allyOrEnemy.Name);
 				}
 
-				newPlayer.Allies = allyNames.ToArray();
-				newPlayer.Enemies = enemyNames.ToArray();
+				newPlayer.Allies = allyNames.ToImmutableArray();
+				newPlayer.Enemies = enemyNames.ToImmutableArray();
 			}
 
 			// Increase the team indices by two to skip creeps and neutral.

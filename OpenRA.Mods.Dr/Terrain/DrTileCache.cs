@@ -9,14 +9,15 @@
  */
 #endregion
 
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using OpenRA.Graphics;
 using OpenRA.Mods.Common.Terrain;
 using OpenRA.Primitives;
 using OpenRA.Support;
+using System;
+using System.Collections.Generic;
+using System.Collections.Immutable;
+using System.IO;
+using System.Linq;
 
 namespace OpenRA.Mods.Dr.Terrain
 {
@@ -84,7 +85,7 @@ namespace OpenRA.Mods.Dr.Terrain
 					}
 
 					var frameCount = terrainInfo.EnableDepth && depthFrames == null ? allFrames.Length / 2 : allFrames.Length;
-					var indices = templateInfo.Frames ?? Exts.MakeArray(t.Value.TilesCount, j => j);
+					var indices = templateInfo.Frames != null ? templateInfo.Frames : Exts.MakeArray(t.Value.TilesCount, j => j).ToImmutableArray();
 
 					var start = indices.Min();
 					var end = indices.Max();

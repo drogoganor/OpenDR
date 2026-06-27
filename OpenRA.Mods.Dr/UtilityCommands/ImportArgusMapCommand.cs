@@ -218,7 +218,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 				if (!ModData.DefaultTerrainInfo.TryGetValue(TilesetName, out var terrainInfo))
 					throw new InvalidDataException($"Unknown tileset {TilesetName}");
 
-				Map = new Map(ModData, terrainInfo, width + 2, height + 2)
+				var mapSize = new Size(width + 2, height + 2);
+
+				Map = new Map(ModData, terrainInfo, mapSize)
 				{
 					Title = Path.GetFileNameWithoutExtension(filename),
 					Author = "Dark Reign",

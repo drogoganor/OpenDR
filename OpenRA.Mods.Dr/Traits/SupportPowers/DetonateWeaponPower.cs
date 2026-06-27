@@ -152,7 +152,7 @@ namespace OpenRA.Mods.Dr.Traits
 		public override void SelectTarget(Actor self, string order, SupportPowerManager manager)
 		{
 			Game.Sound.PlayToPlayer(SoundType.UI, manager.Self.Owner, Info.SelectTargetSound);
-			self.World.OrderGenerator = new SelectDetonateWeaponPowerTarget(order, manager, this);
+			self.World.OrderGenerator = new SelectDetonateWeaponPowerTarget(self.World, order, manager, this);
 		}
 
 		float FractionComplete { get { return ticks * 1f / Info.ActivationDelay; } }
@@ -160,15 +160,20 @@ namespace OpenRA.Mods.Dr.Traits
 
 	public class SelectDetonateWeaponPowerTarget : OrderGenerator
 	{
+		protected override MouseActionType ActionType => MouseActionType.PlaceBuilding;
+
 		readonly SupportPowerManager manager;
 		readonly string order;
 		readonly DetonateWeaponPower power;
+		readonly GameSettings gameSettings;
 
-		public SelectDetonateWeaponPowerTarget(string order, SupportPowerManager manager, DetonateWeaponPower power)
+		public SelectDetonateWeaponPowerTarget(World world, string order, SupportPowerManager manager, DetonateWeaponPower power)
+			: base(world)
 		{
-			// Clear selection if using Left-Click Orders
-			if (Game.Settings.Game.UseClassicMouseStyle)
-				manager.Self.World.Selection.Clear();
+			gameSettings = Game.Settings.Game;
+
+			if (gameSettings.MouseControlStyle == MouseControlStyle.Classic)
+				world.Selection.Clear();
 
 			this.manager = manager;
 			this.order = order;

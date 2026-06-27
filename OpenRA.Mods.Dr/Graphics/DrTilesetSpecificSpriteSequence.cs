@@ -10,6 +10,7 @@
 #endregion
 
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Globalization;
 using System.Linq;
 using OpenRA.Graphics;
@@ -41,7 +42,7 @@ namespace OpenRA.Mods.Dr.Graphics
 			MiniYaml defaults)
 			: base(modData, tileSet, cache, loader, image, sequence, data, defaults) { }
 
-		protected override IEnumerable<ReservationInfo> ParseFilenames(ModData modData, string tileset, int[] frames, MiniYaml data, MiniYaml defaults)
+		protected override IEnumerable<ReservationInfo> ParseFilenames(ModData modData, string tileset, ImmutableArray<int> frames, MiniYaml data, MiniYaml defaults)
 		{
 			var filename = LoadField(Filename, data, defaults, out var location);
 

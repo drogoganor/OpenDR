@@ -74,6 +74,7 @@ namespace OpenRA.Mods.Dr.Orders
 		readonly IResourceLayer resourceLayer;
 		readonly Viewport viewport;
 		readonly VariantWrapper[] variants;
+		readonly GameSettings gameSettings;
 		int variant;
 
 		public BuilderUnitBuildingOrderGenerator(BuilderUnit queue, string name, WorldRenderer worldRenderer)
@@ -83,9 +84,9 @@ namespace OpenRA.Mods.Dr.Orders
 			placeBuildingInfo = queue.Actor.Owner.PlayerActor.Info.TraitInfo<PlaceBuildingInfo>();
 			resourceLayer = world.WorldActor.TraitOrDefault<IResourceLayer>();
 			viewport = worldRenderer.Viewport;
+			gameSettings = Game.Settings.Game;
 
-			// Clear selection if using Left-Click Orders
-			if (Game.Settings.Game.UseClassicMouseStyle)
+			if (gameSettings.MouseControlStyle == MouseControlStyle.Classic)
 				world.Selection.Clear();
 
 			var variants = new List<VariantWrapper>()
@@ -141,6 +142,8 @@ namespace OpenRA.Mods.Dr.Orders
 				return viewport.ViewToWorld(offsetPos);
 			}
 		}
+
+		public MouseButton ActionButton => gameSettings.ResolveActionButton(MouseActionType.PlaceBuilding);
 
 		protected virtual IEnumerable<Order> InnerOrder(World world, CPos cell, MouseInput mi)
 		{

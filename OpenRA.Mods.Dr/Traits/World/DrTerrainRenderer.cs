@@ -197,7 +197,7 @@ namespace OpenRA.Mods.Dr.Traits
 			if (pos.X <= 0 || pos.Y <= 0)
 				return false;
 
-			if (pos.X >= map.MapSize.X - 1 || pos.Y >= map.MapSize.Y - 1)
+			if (pos.X >= map.MapSize.Width - 1 || pos.Y >= map.MapSize.Height - 1)
 				return false;
 
 			return true;
@@ -635,7 +635,7 @@ namespace OpenRA.Mods.Dr.Traits
 		Rectangle ITiledTerrainRenderer.TemplateBounds(TerrainTemplateInfo template)
 		{
 			Rectangle? templateRect = null;
-			var tileSize = map.Grid.TileSize;
+			var tileSize = map.Rules.TerrainInfo.TileSize;
 
 			var i = 0;
 			for (var y = 0; y < template.Size.Y; y++)
@@ -664,7 +664,7 @@ namespace OpenRA.Mods.Dr.Traits
 			if (t is not DefaultTerrainTemplateInfo template)
 				yield break;
 
-			var ts = map.Grid.TileSize;
+			var ts = map.Rules.TerrainInfo.TileSize;
 			var gridType = map.Grid.Type;
 
 			var i = 0;
@@ -708,6 +708,17 @@ namespace OpenRA.Mods.Dr.Traits
 					yield return new SpriteRenderable(sprite, origin, offset, 0, palette, 1f, 1f, float3.Ones, TintModifiers.None, false);
 				}
 			}
+		}
+
+		public IEnumerable<IRenderable> RenderPreview(WorldRenderer wr, TerrainTile tile, WPos origin)
+		{
+			if (!terrainInfo.Templates.TryGetValue(tile.Type, out var template) || !template.Contains(tile.Index))
+				yield break;
+
+			var sprite = tileCache.TileSprite(tile, 0);
+			var palette = wr.Palette(((DefaultTerrainTemplateInfo)template)?.Palette ?? terrainInfo.Palette);
+
+			yield return new SpriteRenderable(sprite, origin, WVec.Zero, 0, palette, 1f, 1f, float3.Ones, TintModifiers.None, false);
 		}
 	}
 }

@@ -61,11 +61,11 @@ namespace OpenRA.Mods.Dr.Traits
 
 		public Actor Actor { get; }
 
-		[Sync]
+		[VerifySync]
 		public bool Enabled { get; protected set; }
 
 		public string Faction { get; }
-		[Sync]
+		[VerifySync]
 		public bool IsValidFaction { get; }
 
 		public BuilderUnit(ActorInitializer init, BuilderUnitInfo info)

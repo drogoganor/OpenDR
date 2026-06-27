@@ -45,7 +45,7 @@ namespace OpenRA.Mods.Dr.Traits
 			resources = self.Trait<PlayerResources>();
 		}
 
-		[Sync]
+		[VerifySync]
 		public int Water;
 
 		public int WaterPercentage => (int)((float)Water / info.WaterCapacity * 100f);

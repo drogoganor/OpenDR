@@ -48,7 +48,7 @@ namespace OpenRA.Mods.Dr.Traits
 				if (!AllowResourceAt(resourceType, cell))
 					continue;
 
-				Content[cell] = new ResourceLayerContents(resourceType, resource.Index * info.ResourceValueMultiplier);
+				Content[cell] = new ResourceLayerContents(resourceType, 255); // resource.Index * info.ResourceValueMultiplier);
 			}
 		}
 	}

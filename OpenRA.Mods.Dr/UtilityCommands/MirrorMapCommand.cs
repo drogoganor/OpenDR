@@ -77,19 +77,19 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		{
 			var horizontalTransform = new TileTransform()
 			{
-				Position = new CPos(map.MapSize.X - Position.X - 1, Position.Y),
+				Position = new CPos(map.MapSize.Width - Position.X - 1, Position.Y),
 				Tile = GetFlippedTerrainTile(MirrorType.Horizontal)
 			};
 
 			var verticalTransform = new TileTransform()
 			{
-				Position = new CPos(Position.X, map.MapSize.Y - Position.Y - 1),
+				Position = new CPos(Position.X, map.MapSize.Height - Position.Y - 1),
 				Tile = GetFlippedTerrainTile(MirrorType.Vertical)
 			};
 
 			var horizontalAndVerticalTransform = new TileTransform()
 			{
-				Position = new CPos(map.MapSize.X - Position.X - 1, map.MapSize.Y - Position.Y - 1),
+				Position = new CPos(map.MapSize.Width - Position.X - 1, map.MapSize.Height - Position.Y - 1),
 				Tile = GetFlippedTerrainTile(MirrorType.HorizontalAndVertical)
 			};
 
@@ -141,19 +141,19 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 		{
 			var horizontalTransform = new ResourceTransform()
 			{
-				Position = new CPos(map.MapSize.X - Position.X - 1, Position.Y),
+				Position = new CPos(map.MapSize.Width - Position.X - 1, Position.Y),
 				Tile = Tile
 			};
 
 			var verticalTransform = new ResourceTransform()
 			{
-				Position = new CPos(Position.X, map.MapSize.Y - Position.Y - 1),
+				Position = new CPos(Position.X, map.MapSize.Height - Position.Y - 1),
 				Tile = Tile
 			};
 
 			var horizontalAndVerticalTransform = new ResourceTransform()
 			{
-				Position = new CPos(map.MapSize.X - Position.X - 1, map.MapSize.Y - Position.Y - 1),
+				Position = new CPos(map.MapSize.Width - Position.X - 1, map.MapSize.Height - Position.Y - 1),
 				Tile = Tile
 			};
 
@@ -274,19 +274,19 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 
 			var horizontalTransform = new ActorTransform()
 			{
-				Position = new CPos(map.MapSize.X - Position.X - offset.X - 1, Position.Y),
+				Position = new CPos(map.MapSize.Width - Position.X - offset.X - 1, Position.Y),
 				Actor = Actor
 			};
 
 			var verticalTransform = new ActorTransform()
 			{
-				Position = new CPos(Position.X, map.MapSize.Y - Position.Y - offset.Y - 1),
+				Position = new CPos(Position.X, map.MapSize.Height - Position.Y - offset.Y - 1),
 				Actor = Actor
 			};
 
 			var horizontalAndVerticalTransform = new ActorTransform()
 			{
-				Position = new CPos(map.MapSize.X - Position.X - offset.X - 1, map.MapSize.Y - Position.Y - offset.Y - 1),
+				Position = new CPos(map.MapSize.Width - Position.X - offset.X - 1, map.MapSize.Height - Position.Y - offset.Y - 1),
 				Actor = Actor
 			};
 
@@ -356,20 +356,20 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			switch (mirrorType)
 			{
 				case MirrorType.Horizontal:
-					size = size.WithX(size.X / 2);
+					size = new(size.Width / 2, size.Height); // size.WithX(size.Width / 2);
 					break;
 				case MirrorType.Vertical:
-					size = size.WithY(size.Y / 2);
+					size = new(size.Width, size.Height / 2); // size.WithY(size.Height / 2);
 					break;
 				case MirrorType.HorizontalAndVertical:
-					size /= 2;
+					size = new(size.Width / 2, size.Height / 2); // /= 2;
 					break;
 			}
 
 			// Tiles
-			for (var x = 0; x < size.X; x++)
+			for (var x = 0; x < size.Width; x++)
 			{
-				for (var y = 0; y < size.Y; y++)
+				for (var y = 0; y < size.Height; y++)
 				{
 					var pos = new CPos(x, y);
 					var transformTile = new TileTransform()
@@ -395,12 +395,12 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			var removeActors = new List<MiniYamlNode>();
 			foreach (var a in Map.ActorDefinitions)
 			{
-				var existing = new ActorReference(a.Value.Value, a.Value.ToDictionary());
+				var existing = new ActorReference(a.Value.Value, a.Value);
 				var pos = existing.GetOrDefault<LocationInit>().Value;
 				var owner = existing.Get<OwnerInit>();
 
-				if (pos.X < 0 || pos.X >= size.X ||
-					pos.Y < 0 || pos.Y >= size.Y)
+				if (pos.X < 0 || pos.X >= size.Width ||
+					pos.Y < 0 || pos.Y >= size.Height)
 				{
 					removeActors.Add(a);
 					continue;
@@ -452,9 +452,9 @@ namespace OpenRA.Mods.Dr.UtilityCommands
 			}
 
 			// Resources
-			for (var x = 0; x < size.X; x++)
+			for (var x = 0; x < size.Width; x++)
 			{
-				for (var y = 0; y < size.Y; y++)
+				for (var y = 0; y < size.Height; y++)
 				{
 					var pos = new CPos(x, y);
 					var resource = new ResourceTransform()
