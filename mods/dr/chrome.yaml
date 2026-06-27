@@ -284,18 +284,18 @@ sidebar-button-observershroud-hover:
 
 sidebar-button-observer:
 	Inherits: ^Sidebar
-	PanelRegion: 260, 397, 5, 5, 18, 18, 5, 5
+	PanelRegion: 112, 0, 5, 5, 18, 18, 5, 5
 sidebar-button-observer-hover:
 	Inherits: ^Sidebar
-	PanelRegion: 260, 368, 5, 5, 18, 18, 5, 5
+	PanelRegion: 196, 0, 5, 5, 18, 18, 5, 5
 sidebar-button-observer-pressed:
 	Inherits: sidebar-button-observer
 sidebar-button-observer-highlighted:
 	Inherits: ^Sidebar
-	PanelRegion: 260, 455, 5, 5, 18, 18, 5, 5
+	PanelRegion: 140, 0, 5, 5, 18, 18, 5, 5
 sidebar-button-observer-highlighted-hover:
 	Inherits: ^Sidebar
-	PanelRegion: 260, 426, 5, 5, 18, 18, 5, 5
+	PanelRegion: 140, 0, 5, 5, 18, 18, 5, 5
 sidebar-button-observer-highlighted-pressed:
 	Inherits: sidebar-button-observer-highlighted
 sidebar-button-observer-disabled:

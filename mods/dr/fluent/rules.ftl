@@ -13,11 +13,24 @@ notification-low-power = Low power.
 notification-base-under-attack = Base under attack.
 notification-ally-under-attack = Our ally is under attack.
 
+## world.yaml
+notification-game-saved = Game saved.
+
+options-starting-units =
+    .hq-only = HQ Only
+    .two-rigs = HQ & 2 Rigs
+
+dropdown-map-creeps =
+    .label = Creep Actors
+    .description = Hostile forces spawn on the battlefield
+
 resource-water = Water Spring
 resource-taelon = Taelon
 
-## Faction
+map-generator-classic = Map Generator
+map-generator-clear = Clear Terrain
 
+## Faction
 faction-fguard =
     .name = Freedom Guard
     .description = Freedom Guard
@@ -41,15 +54,6 @@ faction-random =
 faction-randomall =
     .name = Any (All)
     .description = Randomly select any faction.
-
-## world.yaml
-options-starting-units =
-    .hq-only = HQ Only
-    .two-rigs = HQ & 2 Rigs
-
-dropdown-map-creeps =
-    .label = Creep Actors
-    .description = Hostile forces spawn on the battlefield
 
 ## infantry.yaml
 actor-raider =
