@@ -3,6 +3,8 @@ Metadata:
 	Version: release-20250330
 	Hidden: true
 
+PackageFormats: ExeFile
+
 FileSystem: DefaultFileSystem
 	Packages:
 		^EngineDir
@@ -18,7 +20,7 @@ Cursors:
 Chrome:
 	content|chrome.yaml
 
-Assemblies: OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll
+Assemblies: OpenRA.Mods.Dr.dll, OpenRA.Mods.Common.dll, OpenRA.Mods.Cnc.dll
 
 ChromeLayout:
 	content|content.yaml

@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32519.379
+# Visual Studio Version 18
+VisualStudioVersion = 18.7.11919.86 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenRA.Mods.Dr", "OpenRA.Mods.Dr\OpenRA.Mods.Dr.csproj", "{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}"
 EndProject
@@ -14,6 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenRA.Launcher", "engine\OpenRA.Launcher\OpenRA.Launcher.csproj", "{BDB0A758-C2E3-4C0A-B1BF-1F90DA295E41}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50} = {D9154FC7-6D27-43A3-A9EB-6CB61E235C50}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenRA.Utility", "engine\OpenRA.Utility\OpenRA.Utility.csproj", "{F9445C7A-EDE3-4DF5-A9C1-C43AFDB0984B}"
 EndProject
@@ -24,6 +27,12 @@ Global
 		Release-x86|Any CPU = Release-x86|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Release-x86|Any CPU.ActiveCfg = Release|Any CPU
+		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Release-x86|Any CPU.Build.0 = Release|Any CPU
 		{0DFB103F-2962-400F-8C6D-E2C28CCBA633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0DFB103F-2962-400F-8C6D-E2C28CCBA633}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DFB103F-2962-400F-8C6D-E2C28CCBA633}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,12 +51,6 @@ Global
 		{BDB0A758-C2E3-4C0A-B1BF-1F90DA295E41}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BDB0A758-C2E3-4C0A-B1BF-1F90DA295E41}.Release-x86|Any CPU.ActiveCfg = Release|Any CPU
 		{BDB0A758-C2E3-4C0A-B1BF-1F90DA295E41}.Release-x86|Any CPU.Build.0 = Release|Any CPU
-		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Release-x86|Any CPU.ActiveCfg = Release|Any CPU
-		{D9154FC7-6D27-43A3-A9EB-6CB61E235C50}.Release-x86|Any CPU.Build.0 = Release|Any CPU
 		{F9445C7A-EDE3-4DF5-A9C1-C43AFDB0984B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F9445C7A-EDE3-4DF5-A9C1-C43AFDB0984B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9445C7A-EDE3-4DF5-A9C1-C43AFDB0984B}.Release|Any CPU.ActiveCfg = Release|Any CPU
