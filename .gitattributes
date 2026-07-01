@@ -5,6 +5,7 @@
 *.csproj eol=lf
 *.sln eol=lf
 * text=lf
+*.sh text eol=lf
 
 # Custom for Visual Studio
 *.cs     diff=csharp

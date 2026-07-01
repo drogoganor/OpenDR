@@ -53,7 +53,7 @@ Player:
 	DamageNotifier:
 		TextNotification: notification-base-under-attack
 		AllyTextNotification: notification-ally-under-attack
-		ValidTargets: BaseBuilding
+		ValidTargets: ConstructedBuildingCommon, SelfConstructingBuilding
 		Notification: BaseAttack
 	PlayerStatistics:
 	PlaceBeacon:
