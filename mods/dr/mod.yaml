@@ -288,6 +288,10 @@ TerrainFormat: DrTerrain
 
 SpriteSequenceFormat: DrTilesetSpecificSpriteSequence
 
+AssetBrowser:
+	SpriteExtensions: .spr
+	AudioExtensions: .wav
+
 GameSpeeds:
 	DefaultSpeed: default
 	Speeds:

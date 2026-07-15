@@ -9,6 +9,7 @@ ncpow1l0:
 		Length: 1
 		Tick: 900000
 	idle:
+		Filename: base|ncpow1l0.spr
 		Start: 1
 	underlay-building:
 		Filename: tileset|ncpow1l0.spr
@@ -51,6 +52,7 @@ nclnc1l0:
 	building:
 		Start: 0
 	idle:
+		Filename: base|nclnc1l0.spr
 		Start: 1
 	underlay-building:
 		Filename: tileset|nclnc1l0.spr
@@ -61,10 +63,10 @@ nclnc1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tclnc1l0.spr
+		Filename: base|tclnc1l0.spr
 		Start: 0
 	top:
-		Filename: tclnc1l0.spr
+		Filename: base|tclnc1l0.spr
 		Start: 1
 	shadow-building:
 		Filename: bclncsh0.spr
@@ -87,18 +89,19 @@ nfhqt1l0:
 	building:
 		Start: 0
 	building2:
-		Filename: nfhqt2l0.spr
+		Filename: base|nfhqt2l0.spr
 		Start: 0
 	building3:
-		Filename: nfhqt3l0.spr
+		Filename: base|nfhqt3l0.spr
 		Start: 0
 	idle:
+		Filename: base|nfhqt1l0.spr
 		Start: 1
 	idle2:
-		Filename: nfhqt2l0.spr
+		Filename: base|nfhqt2l0.spr
 		Start: 1
 	idle3:
-		Filename: nfhqt3l0.spr
+		Filename: base|nfhqt3l0.spr
 		Start: 1
 	underlay-building:
 		Filename: tileset|nfhqt1l0.spr
@@ -117,16 +120,16 @@ nfhqt1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tfhqt1l0.spr
+		Filename: base|tfhqt1l0.spr
 		Start: 0
 	top:
-		Filename: tfhqt1l0.spr
+		Filename: base|tfhqt1l0.spr
 		Start: 1
 	top2:
-		Filename: tfhqt2l0.spr
+		Filename: base|tfhqt2l0.spr
 		Start: 1
 	top3:
-		Filename: tfhqt3l0.spr
+		Filename: base|tfhqt3l0.spr
 		Start: 1
 	shadow-building:
 		Filename: bfhqtsh0.spr
@@ -159,7 +162,7 @@ nihqt1l0:
 		Filename: nihqt1l0.spr
 		Start: 0
 	idle:
-		Filename: nihqt1l0.spr
+		Filename: base|nihqt1l0.spr
 		Start: 1
 	building2:
 		Filename: nihqt2l0.spr
@@ -230,7 +233,7 @@ tothq1l0:
 		Filename: tothq1l0.spr
 		Start: 0
 	idle:
-		Filename: tothq1l0.spr
+		Filename: base|tothq1l0.spr
 		Start: 1
 	building2:
 		Filename: tothq1l0.spr
@@ -309,12 +312,13 @@ nfutf1l0:
 	building:
 		Start: 0
 	idle:
+		Filename: base|nfutf1l0.spr
 		Start: 1
 	building2:
-		Filename: nfutf2l0.spr
+		Filename: base|nfutf2l0.spr
 		Start: 0
 	idle2:
-		Filename: nfutf2l0.spr
+		Filename: base|nfutf2l0.spr
 		Start: 1
 	underlay-building:
 		Filename: tileset|nfutf1l0.spr
@@ -329,20 +333,20 @@ nfutf1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tfutf1l0.spr
+		Filename: base|tfutf1l0.spr
 		Start: 0
 	top:
-		Filename: tfutf1l0.spr
+		Filename: base|tfutf1l0.spr
 		Start: 1
 	top2:
-		Filename: tfutf2l0.spr
+		Filename: base|tfutf2l0.spr
 		Start: 1
 	up2base:
-		Filename: nfutf2l0.spr
+		Filename: base|nfutf2l0.spr
 		ZOffset: -8192
 		Start: 1
 	animation: # flag
-		Filename: tfutf2l0.spr
+		Filename: base|tfutf2l0.spr
 		Start: 3
 		Length: 14
 		Tick: 150
@@ -373,6 +377,7 @@ niutf1l0:
 	building:
 		Start: 0
 	idle:
+		Filename: base|niutf1l0.spr
 		Start: 1
 	building2:
 		Filename: niutf2l0.spr
@@ -437,12 +442,13 @@ nfvcy1l0:
 	building:
 		Start: 0
 	idle:
+		Filename: base|nfvcy1l0.spr
 		Start: 1
 	building2:
 		Filename: nfvcy2l0.spr
 		Start: 0
 	idle2:
-		Filename: nfvcy2l0.spr
+		Filename: base|nfvcy2l0.spr
 		Start: 1
 	underlay-building:
 		Filename: tileset|nfvcy1l0.spr
@@ -457,13 +463,13 @@ nfvcy1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tfvcy1l0.spr
+		Filename: base|tfvcy1l0.spr
 		Start: 0
 	top:
-		Filename: tfvcy1l0.spr
+		Filename: base|tfvcy1l0.spr
 		Start: 1
 	top2:
-		Filename: tfvcy2l0.spr
+		Filename: base|tfvcy2l0.spr
 		Start: 1
 	#animation: tfvcy2l0 # chimney; retail only
 	#	Start: 3
@@ -495,12 +501,13 @@ nivcy1l0:
 	building:
 		Start: 0
 	idle:
+		Filename: base|nivcy1l0.spr
 		Start: 1
 	building2:
-		Filename: nivcy2l0.spr
+		Filename: base|nivcy2l0.spr
 		Start: 0
 	idle2:
-		Filename: nivcy2l0.spr
+		Filename: base|nivcy2l0.spr
 		Start: 1
 	underlay-building:
 		Filename: tileset|nivcy1l0.spr
@@ -515,16 +522,16 @@ nivcy1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tivcy1l0.spr
+		Filename: base|tivcy1l0.spr
 		Start: 0
 	top:
-		Filename: tivcy1l0.spr
+		Filename: base|tivcy1l0.spr
 		Start: 1
 	top2:
-		Filename: tivcy2l0.spr
+		Filename: base|tivcy2l0.spr
 		Start: 1
 	up2top:
-		Filename: tivcy2l0.spr
+		Filename: base|tivcy2l0.spr
 		Start: 1
 	shadow-building:
 		Filename: bivcysh0.spr

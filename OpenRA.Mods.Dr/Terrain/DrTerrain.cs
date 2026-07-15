@@ -102,12 +102,15 @@ namespace OpenRA.Mods.Dr.Terrain
 			var allTemplates = yaml["Templates"].ToDictionary().Values;
 
 			// Templates
-			TemplatesInDefinitionOrder = yaml["Templates"].Nodes
+			var templates = yaml["Templates"].Nodes
 				.Select(n => (TerrainTemplateInfo)new DefaultTerrainTemplateInfo(this, n.Value))
 				.ToImmutableArray();
-			Templates = TemplatesInDefinitionOrder
 
-				// .Take(NumTemplatesVisibleInEditor)
+			TemplatesInDefinitionOrder = templates
+				.Take(NumTemplatesVisibleInEditor)
+				.ToImmutableArray();
+
+			Templates = templates
 				.ToFrozenDictionary(t => t.Id);
 
 			EdgeTemplates = TemplatesInDefinitionOrder
