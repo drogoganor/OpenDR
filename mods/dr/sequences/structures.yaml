@@ -230,22 +230,22 @@ nihqt1l0:
 # Togran HQ
 tothq1l0:
 	building:
-		Filename: tothq1l0.spr
+		Filename: base|tothq1l0.spr
 		Start: 0
 	idle:
 		Filename: base|tothq1l0.spr
 		Start: 1
 	building2:
-		Filename: tothq1l0.spr
+		Filename: base|tothq1l0.spr
 		Start: 0
 	idle2:
-		Filename: tothq1l0.spr
+		Filename: base|tothq1l0.spr
 		Start: 1
 	building3:
-		Filename: tothq1l0.spr
+		Filename: base|tothq1l0.spr
 		Start: 0
 	idle3:
-		Filename: tothq1l0.spr
+		Filename: base|tothq1l0.spr
 		Start: 1
 	underlay-building: # no xx..
 		Filename: nothq1l0.spr
@@ -264,22 +264,22 @@ tothq1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tothq1l0.spr
+		Filename: base|tothq1l0.spr
 		Start: 3
 		Length: 3
 		Tick: 100
 	top:
-		Filename: tothq1l0.spr
+		Filename: base|tothq1l0.spr
 		Start: 3
 		Length: 3
 		Tick: 100
 	top2:
-		Filename: tothq1l0.spr
+		Filename: base|tothq1l0.spr
 		Start: 3
 		Length: 3
 		Tick: 100
 	top3:
-		Filename: tothq1l0.spr
+		Filename: base|tothq1l0.spr
 		Start: 3
 		Length: 3
 		Tick: 100
@@ -559,11 +559,11 @@ nfgdt1l0:
 		Filename: nfgdt1l0_01fixed.png
 		Start: 0
 	recoil:
-		Filename: bfgdtsp0.spr
+		Filename: base|bfgdtsp0.spr
 		Start: 0
 		Facings: 16
 	turret:
-		Filename: bfgdtsp0.spr
+		Filename: base|bfgdtsp0.spr
 		Start: 0
 		Facings: 16
 	underlay-building:
@@ -604,11 +604,11 @@ nigdt1l0:
 		Start: 1
 		ZOffset: -128
 	recoil:
-		Filename: bigdtsp0.spr
+		Filename: base|bigdtsp0.spr
 		Start: 0
 		Facings: 16
 	turret:
-		Filename: bigdtsp0.spr
+		Filename: base|bigdtsp0.spr
 		Start: 0
 		Facings: 16
 	underlay-building:
@@ -620,10 +620,10 @@ nigdt1l0:
 		ZOffset: 128
 		Start: 1
 	top-building:
-		Filename: tigdt1l0.spr
+		Filename: base|tigdt1l0.spr
 		Start: 0
 	top:
-		Filename: tigdt1l0.spr
+		Filename: base|tigdt1l0.spr
 		Start: 1
 	shadow-building:
 		Filename: bigdtsh0.spr
@@ -645,13 +645,14 @@ nfaar1l0:
 	building:
 		Start: 0
 	idle:
+		Filename: base|nfaar1l0.spr
 		Start: 1
 	recoil:
-		Filename: bfaarsp0.spr
+		Filename: base|bfaarsp0.spr
 		Start: 0
 		Facings: 16
 	turret:
-		Filename: bfaarsp0.spr
+		Filename: base|bfaarsp0.spr
 		Start: 0
 		Facings: 16
 	underlay-building:
@@ -663,10 +664,10 @@ nfaar1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tfaar1l0.spr
+		Filename: base|tfaar1l0.spr
 		Start: 0
 	top:
-		Filename: tfaar1l0.spr
+		Filename: base|tfaar1l0.spr
 		Start: 1
 	shadow-building:
 		Filename: bfaarsh0.spr
@@ -689,13 +690,14 @@ niaar1l0:
 	building:
 		Start: 0
 	idle:
+		Filename: base|niaar1l0.spr
 		Start: 1
 	recoil:
-		Filename: biaarsp0.spr
+		Filename: base|biaarsp0.spr
 		Start: 0
 		Length: 1
 	turret:
-		Filename: biaarsp0.spr
+		Filename: base|biaarsp0.spr
 		Start: 0
 		Length: 1
 	underlay-building:
@@ -707,10 +709,10 @@ niaar1l0:
 		#ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tiaar1l0.spr
+		Filename: base|tiaar1l0.spr
 		Start: 0
 	top:
-		Filename: tiaar1l0.spr
+		Filename: base|tiaar1l0.spr
 		Start: 1
 	shadow-building:
 		Filename: biaarsh0.spr
@@ -740,7 +742,7 @@ nfagt1l0:
 		Start: 0
 		Facings: 16
 	turret:
-		Filename: bfagtsp0.spr
+		Filename: base|bfagtsp0.spr
 		Start: 0
 		Facings: 16
 	underlay-building:
@@ -779,11 +781,11 @@ niagt1l0:
 		Filename: tileset|niagt1l0.spr
 		Start: 1
 	recoil:
-		Filename: biagtsp0.spr
+		Filename: base|biagtsp0.spr
 		Start: 0
 		Facings: 16
 	turret:
-		Filename: biagtsp0.spr
+		Filename: base|biagtsp0.spr
 		Start: 0
 		Facings: 16
 	underlay-building:
@@ -852,7 +854,7 @@ nccam1l0:
 # FG Field hospital
 nfhsp1l0:
 	Defaults:
-		Filename: nfhsp1l0.spr
+		Filename: base|nfhsp1l0.spr
 		Offset: -6, 0
 	building:
 		Start: 0
@@ -875,10 +877,10 @@ nfhsp1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tfhsp1l0.spr
+		Filename: base|tfhsp1l0.spr
 		Start: 0
 	top:
-		Filename: tfhsp1l0.spr
+		Filename: base|tfhsp1l0.spr
 		Start: 1
 	shadow-building:
 		Filename: bfhspsh0.spr
@@ -898,7 +900,7 @@ nfhsp1l0:
 # Imperium field hospital
 nihsp1l0:
 	Defaults:
-		Filename: nihsp1l0.spr
+		Filename: base|nihsp1l0.spr
 	building:
 		Start: 0
 	idle:
@@ -920,10 +922,10 @@ nihsp1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tihsp1l0.spr
+		Filename: base|tihsp1l0.spr
 		Start: 0
 	top:
-		Filename: tihsp1l0.spr
+		Filename: base|tihsp1l0.spr
 		Start: 1
 	shadow-building:
 		Filename: bihspsh0.spr
@@ -941,7 +943,7 @@ nihsp1l0:
 # FG Repair
 nfrep1l0:
 	Defaults:
-		Filename: nfrep1l0.spr
+		Filename: base|nfrep1l0.spr
 	building:
 		Start: 0
 	idle:
@@ -963,10 +965,10 @@ nfrep1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tfrep1l0.spr
+		Filename: base|tfrep1l0.spr
 		Start: 0
 	top:
-		Filename: tfrep1l0.spr
+		Filename: base|tfrep1l0.spr
 		Start: 1
 	shadow-building:
 		Filename: bfrepsh0.spr
@@ -984,7 +986,7 @@ nfrep1l0:
 # Imperium repair
 tirep1l0:
 	Defaults:
-		Filename: tirep1l0.spr
+		Filename: base|tirep1l0.spr
 	building:
 		Start: 0
 	idle:
@@ -1006,10 +1008,10 @@ tirep1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tirep1l0.spr
+		Filename: base|tirep1l0.spr
 		Start: 0
 	top:
-		Filename: tirep1l0.spr
+		Filename: base|tirep1l0.spr
 		Start: 1
 	shadow-building:
 		Filename: birepsh0.spr
@@ -1027,17 +1029,17 @@ tirep1l0:
 # Phasing facility
 nfphf1l0:
 	Defaults:
-		Filename: nfphf1l0.spr
+		Filename: base|nfphf1l0.spr
 		Offset: 0, -6
 	building:
 		Start: 0
 	idle:
 		Start: 1
 	building2:
-		Filename: nfphf2l0.spr
+		Filename: base|nfphf2l0.spr
 		Start: 0
 	idle2:
-		Filename: nfphf2l0.spr
+		Filename: base|nfphf2l0.spr
 		Start: 1
 	underlay-building:
 		Filename: tileset|nfphf1l0.spr
@@ -1052,13 +1054,13 @@ nfphf1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tfphf1l0.spr
+		Filename: base|tfphf1l0.spr
 		Start: 0
 	top:
-		Filename: tfphf1l0.spr
+		Filename: base|tfphf1l0.spr
 		Start: 1
 	top2:
-		Filename: tfphf2l0.spr
+		Filename: base|tfphf2l0.spr
 		Start: 1
 	shadow-building:
 		Filename: bfphfsh0.spr
@@ -1082,7 +1084,7 @@ nfphf1l0:
 # FG Rearming deck
 nfrrm1l0:
 	Defaults:
-		Filename: nfrrm1l0.spr
+		Filename: base|nfrrm1l0.spr
 		Offset: 0, 16
 		ZOffset: -1024
 	building:
@@ -1104,10 +1106,10 @@ nfrrm1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tfrrm1l0.spr
+		Filename: base|tfrrm1l0.spr
 		Start: 0
 	top:
-		Filename: tfrrm1l0.spr
+		Filename: base|tfrrm1l0.spr
 		Start: 1
 	shadow-building:
 		Filename: bfrrmsh0.spr
@@ -1127,7 +1129,7 @@ nfrrm1l0:
 # Imperium rearming deck
 nirrm1l0:
 	Defaults:
-		Filename: nirrm1l0.spr
+		Filename: base|nirrm1l0.spr
 		Offset: 0, 16
 		ZOffset: -1024
 	building:
@@ -1143,10 +1145,10 @@ nirrm1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: tirrm1l0.spr
+		Filename: base|tirrm1l0.spr
 		Start: 0
 	top:
-		Filename: tirrm1l0.spr
+		Filename: base|tirrm1l0.spr
 		Start: 1
 	shadow-building:
 		Filename: birrmsh0.spr
@@ -1166,7 +1168,7 @@ nirrm1l0:
 # Imperium temporal gate
 nitgt1l0:
 	Defaults:
-		Filename: nitgt1l0.spr
+		Filename: base|nitgt1l0.spr
 	building:
 		Start: 0
 	idle:
@@ -1180,10 +1182,10 @@ nitgt1l0:
 		ZOffset: -8192
 		Start: 1
 	top-building:
-		Filename: titgt1l0.spr
+		Filename: base|titgt1l0.spr
 		Start: 0
 	top:
-		Filename: titgt1l0.spr
+		Filename: base|titgt1l0.spr
 		Start: 1
 	shadow-building:
 		Filename: bitgtsh0.spr
@@ -1201,7 +1203,7 @@ nitgt1l0:
 # Imperium temporal rift creator
 nitrc1l0:
 	Defaults:
-		Filename: nitrc1l0.spr
+		Filename: base|nitrc1l0.spr
 	building:
 		Start: 0
 	idle:
